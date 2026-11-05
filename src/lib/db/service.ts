@@ -1,4 +1,5 @@
 import { db } from './db';
+import { newId } from '../utils/id';
 import {
   LocalCheckin,
   LocalSymptomEntry,
@@ -36,7 +37,7 @@ export const LocalDataService = {
   // Checkins & Symptoms
   async saveCheckin(input: CheckinInput): Promise<string> {
     const existing = await db.checkins.where('date').equals(input.date).first();
-    const checkinId = existing ? existing.id : `chk_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
+    const checkinId = existing ? existing.id : newId('chk');
     const now = Date.now();
 
     await db.transaction('rw', db.checkins, db.symptoms, async () => {
@@ -133,7 +134,7 @@ export const LocalDataService = {
 
   async addCustomSymptom(name: string, category = 'custom', categoryLabel = 'Custom Symptom'): Promise<LocalCustomSymptom> {
     const record: LocalCustomSymptom = {
-      id: `custom_${Date.now()}_${name.toLowerCase().replace(/[^a-z0-9]/g, '_')}`,
+      id: newId('custom'),
       name: name.trim(),
       category,
       categoryLabel,
@@ -171,7 +172,7 @@ export const LocalDataService = {
   },
 
   async logTreatmentEvent(event: Omit<LocalTreatmentEvent, 'id' | 'timestamp'>): Promise<string> {
-    const id = `te_${Date.now()}`;
+    const id = newId('te');
     await db.treatmentEvents.put({
       ...event,
       id,
@@ -254,7 +255,9 @@ export const LocalDataService = {
     );
   },
 
-  // Populate Demo Data (useful for testing or one-tap demo loading)
+  // Sample data for automated tests ONLY. Never call from UI: it writes a sample
+  // HRT regimen (with doses) into the real journal, which would then appear in
+  // the user's doctor report. See DECISIONS.md D-006.
   async seedDemoDataIfEmpty(): Promise<boolean> {
     const count = await db.checkins.count();
     if (count > 0) return false;

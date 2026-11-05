@@ -25,6 +25,9 @@ import { AppHeader } from '@/components/app/app-header';
 import { STANDARD_SYMPTOMS } from '@/lib/config/symptoms';
 import { LocalDataService } from '@/lib/db/service';
 import { SeverityLevel, FlowLevel, LocalCustomSymptom } from '@/lib/db/schema';
+import { evaluateUrgentTriggers } from '@/lib/safety/urgent-triggers';
+import { UrgentGuidance } from '@/components/safety/urgent-guidance';
+import { markToolUsed } from '@/lib/pwa/install-gate';
 
 export default function CheckinPage() {
   const router = useRouter();
@@ -35,8 +38,8 @@ export default function CheckinPage() {
   const [overallFeeling, setOverallFeeling] = useState<1 | 2 | 3 | 4 | 5>(3);
   const [journalText, setJournalText] = useState('');
   const [sleepHours, setSleepHours] = useState<number>(7);
-  const [wokeAtNight, setWokeAtNight] = useState<boolean>(true);
-  const [hotFlashCount, setHotFlashCount] = useState<number>(2);
+  const [wokeAtNight, setWokeAtNight] = useState<boolean>(false);
+  const [hotFlashCount, setHotFlashCount] = useState<number>(0);
   const [flow, setFlow] = useState<FlowLevel>('none');
   const [caffeine, setCaffeine] = useState(false);
   const [alcohol, setAlcohol] = useState(false);
@@ -47,10 +50,7 @@ export default function CheckinPage() {
   const [showLifestyle, setShowLifestyle] = useState(false);
 
   // Symptoms tracking
-  const [selectedSymptoms, setSelectedSymptoms] = useState<{ [id: string]: number }>({
-    hot_flashes: 3,
-    waking_early: 3,
-  });
+  const [selectedSymptoms, setSelectedSymptoms] = useState<{ [id: string]: number }>({});
 
   // Custom symptoms
   const [customSymptomsList, setCustomSymptomsList] = useState<LocalCustomSymptom[]>([]);
@@ -157,9 +157,19 @@ export default function CheckinPage() {
 
     setIsSaving(false);
     setSavedSuccess(true);
-    setTimeout(() => {
-      router.push('/dashboard');
-    }, 1000);
+    markToolUsed();
+
+    // Keep her on this screen if urgent guidance is showing, so it is not lost.
+    const urgent = evaluateUrgentTriggers({
+      flow,
+      symptomIds: Object.keys(selectedSymptoms),
+      notes: journalText,
+    });
+    if (urgent.length === 0) {
+      setTimeout(() => {
+        router.push('/dashboard');
+      }, 1000);
+    }
   };
 
   // Pinned symptoms (top 6 standard symptoms) vs extended list
@@ -567,11 +577,20 @@ export default function CheckinPage() {
               rows={3}
               value={journalText}
               onChange={(e) => setJournalText(e.target.value)}
-              placeholder="e.g. Took progesterone 30 mins before bed, morning was calm, headache started around 2 PM..."
+              placeholder="e.g. Morning was calm, headache started around 2 PM..."
               className="w-full text-sm text-[#231F1D] placeholder:text-[#9A938C] bg-transparent resize-none border-none focus:outline-none leading-relaxed"
             />
           </Card>
         </section>
+
+        {/* Urgent guidance: shown live, before saving, from the clinician-reviewed trigger file */}
+        <UrgentGuidance
+          triggers={evaluateUrgentTriggers({
+            flow,
+            symptomIds: Object.keys(selectedSymptoms),
+            notes: journalText,
+          })}
+        />
 
         {/* Bottom Save Action */}
         <div className="pt-2 pb-8 space-y-3">

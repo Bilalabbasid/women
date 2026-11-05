@@ -12,6 +12,7 @@ import { Badge } from '@/components/ui/badge';
 import { AppHeader } from '@/components/app/app-header';
 import { LocalDataService } from '@/lib/db/service';
 import { LocalTreatment, LocalCheckin, LocalSymptomEntry } from '@/lib/db/schema';
+import { DOCTOR_QUESTION_STARTERS } from '@/lib/config/doctor-questions';
 import { InsightsEngine, SymptomStats, SleepStats, HotFlashStats } from '@/lib/insights/calculations';
 
 export default function DoctorModePage() {
@@ -23,10 +24,7 @@ export default function DoctorModePage() {
   const [hotFlashStats, setHotFlashStats] = useState<HotFlashStats | null>(null);
 
   const [customQuestion, setCustomQuestion] = useState('');
-  const [questions, setQuestions] = useState<string[]>([
-    'I’ve noticed night waking around 3 AM persists despite patch adherence. Is my current progesterone timing something we should review?',
-    'My hot flashes have decreased since August. Are there baseline labs or symptom markers you recommend re-checking?',
-  ]);
+  const [questions, setQuestions] = useState<string[]>([]);
 
   useEffect(() => {
     async function loadReport() {
@@ -59,6 +57,10 @@ export default function DoctorModePage() {
     if (!customQuestion.trim()) return;
     setQuestions((q) => [...q, customQuestion.trim()]);
     setCustomQuestion('');
+  };
+
+  const addStarter = (q: string) => {
+    setQuestions((prev) => (prev.includes(q) ? prev : [...prev, q]));
   };
 
   const removeQuestion = (idx: number) => {
@@ -253,9 +255,31 @@ export default function DoctorModePage() {
               ))}
             </ul>
 
+            {questions.length === 0 && (
+              <p className="text-xs text-[#554E48] print:hidden">
+                No questions yet. Add your own below, or tap a starter to add it.
+              </p>
+            )}
+
+            {/* Optional neutral starters: never pre-filled (DECISIONS.md D-006) */}
+            <div className="flex flex-wrap gap-2 print:hidden" aria-label="Question starters">
+              {DOCTOR_QUESTION_STARTERS.filter((q) => !questions.includes(q)).map((q) => (
+                <button
+                  key={q}
+                  type="button"
+                  onClick={() => addStarter(q)}
+                  className="text-left text-xs px-3 py-2 min-h-[44px] rounded-xl border border-[#D9D1C7] bg-white text-[#3E3834] hover:border-[#965342] focus-visible:outline-2 focus-visible:outline-offset-2"
+                >
+                  + {q}
+                </button>
+              ))}
+            </div>
+
             {/* Add question form */}
             <form onSubmit={addQuestion} className="flex gap-2 print:hidden pt-1">
+              <label htmlFor="custom-question" className="sr-only">Your question</label>
               <input
+                id="custom-question"
                 type="text"
                 value={customQuestion}
                 onChange={(e) => setCustomQuestion(e.target.value)}

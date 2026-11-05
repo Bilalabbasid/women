@@ -8,7 +8,6 @@ import {
   Flame,
   Info,
   PlusCircle,
-  Database,
   BarChart3,
 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
@@ -64,21 +63,6 @@ export default function InsightsPage() {
     };
   }, [selectedRange]);
 
-  const handleSeedDemo = async () => {
-    await LocalDataService.seedDemoDataIfEmpty();
-    setSelectedRange((r) => (r === '30' ? '30' : '30'));
-    const days = parseInt(selectedRange, 10);
-    const end = new Date().toISOString().split('T')[0];
-    const start = new Date(Date.now() - days * 86400000).toISOString().split('T')[0];
-    const checkinsWithSymptoms = await LocalDataService.getCheckinsForRange(start, end);
-    setRecordCount(checkinsWithSymptoms.length);
-    if (checkinsWithSymptoms.length > 0) {
-      const allSymptoms = checkinsWithSymptoms.flatMap((c) => c.symptoms);
-      setSymptomStats(InsightsEngine.calculateSymptomStats(checkinsWithSymptoms, allSymptoms));
-      setSleepStats(InsightsEngine.calculateSleepStats(checkinsWithSymptoms));
-      setHotFlashStats(InsightsEngine.calculateHotFlashStats(checkinsWithSymptoms));
-    }
-  };
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -143,10 +127,6 @@ export default function InsightsPage() {
                   <span>Log Check-in</span>
                 </Button>
               </Link>
-              <Button size="sm" variant="outline" onClick={handleSeedDemo} className="gap-1.5 text-xs">
-                <Database className="w-3.5 h-3.5" />
-                <span>Load Sample Records</span>
-              </Button>
             </div>
           </Card>
         ) : (

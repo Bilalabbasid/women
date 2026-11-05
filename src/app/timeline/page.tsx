@@ -11,7 +11,6 @@ import {
   ChevronDown,
   ChevronUp,
   PlusCircle,
-  Database,
   Calendar,
   Sparkles,
   RotateCcw,
@@ -77,10 +76,6 @@ export default function TimelinePage() {
     }
   };
 
-  const handleSeedDemo = async () => {
-    await LocalDataService.seedDemoDataIfEmpty();
-    setReloadTrigger((n) => n + 1);
-  };
 
   const handleOpenComparison = (evt: LocalTreatmentEvent, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -213,10 +208,6 @@ export default function TimelinePage() {
                   <span>Log Check-in</span>
                 </Button>
               </Link>
-              <Button size="sm" variant="outline" onClick={handleSeedDemo} className="gap-1.5 text-xs">
-                <Database className="w-3.5 h-3.5" />
-                <span>Load Sample Logs</span>
-              </Button>
             </div>
           </Card>
         ) : (

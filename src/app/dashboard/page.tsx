@@ -12,7 +12,6 @@ import {
   Check,
   Stethoscope,
   PlusCircle,
-  Database,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -104,10 +103,6 @@ export default function DashboardPage() {
     setReloadTrigger((n) => n + 1);
   };
 
-  const handleSeedDemo = async () => {
-    await LocalDataService.seedDemoDataIfEmpty();
-    setReloadTrigger((n) => n + 1);
-  };
 
   const formattedToday = new Date().toLocaleDateString('en-US', {
     weekday: 'long',
@@ -313,10 +308,6 @@ export default function DashboardPage() {
                     <span>Log First Check-in</span>
                   </Button>
                 </Link>
-                <Button size="sm" variant="outline" onClick={handleSeedDemo} className="gap-1.5 text-xs">
-                  <Database className="w-3.5 h-3.5" />
-                  <span>Load Sample Records</span>
-                </Button>
               </div>
             </Card>
           ) : (

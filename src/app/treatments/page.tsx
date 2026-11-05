@@ -49,6 +49,7 @@ import {
   TreatmentComparisonEngine,
   TreatmentComparisonResult,
 } from '@/lib/insights/treatment-comparison';
+import { newId } from '@/lib/utils/id';
 
 const TREATMENT_TYPES: Array<{ value: TreatmentType; label: string; icon: string; category: string }> = [
   { value: 'patch', label: 'Transdermal Patch (e.g. Estradiol, Combipatch)', icon: '🩹', category: 'HRT / Transdermal' },
@@ -200,7 +201,7 @@ export default function TreatmentsPage() {
     if (!formName.trim()) return;
 
     const treatmentRecord: LocalTreatment = {
-      id: editingTreatmentId || `trt_${Date.now()}`,
+      id: editingTreatmentId || newId('trt'),
       name: formName.trim(),
       type: formType,
       dosage: formDosage.trim() || undefined,

@@ -85,14 +85,15 @@ No application code was changed for this audit.
 
 | Severity | Finding | Location |
 |---|---|---|
-| **High** | **Demo data is auto-seeded into the user's real journal.** On first visit, the dashboard, timeline and insights pages call `seedDemoDataIfEmpty()`, which writes an estradiol patch "0.05 mg/day", micronized progesterone "100 mg" and fake check-ins into *her* IndexedDB. Her doctor report would then list hormone regimens and doses she never entered. This also breaks the "never give a dose" rule in spirit | `src/lib/db/service.ts:258`, called from `dashboard/page.tsx:108`, `insights/page.tsx:68`, `timeline/page.tsx:81` |
+| Medium *(corrected 2026-11-06: originally logged as High "auto-seeded")* | **Sample data goes into the user's real journal.** On empty screens, a "Load Sample Records" button calls `seedDemoDataIfEmpty()`. It is opt-in, not automatic, but it writes an estradiol patch "0.05 mg/day", micronized progesterone "100 mg" and fake check-ins into *her* IndexedDB. These then mix with her own records and appear in her doctor report | `src/lib/db/service.ts:258`; buttons in `dashboard`, `insights`, `timeline` |
+| **High** *(found in Phase 2)* | **Check-in pre-selects symptoms.** Hot flashes (3/5), night waking (3/5), "woke at night" and a hot-flash count of 2 are preset, so a quick save records symptoms she never reported | `check-in/page.tsx:38-53` |
 | **High** | **No urgent-symptom handling.** Check-in records bleeding, palpitations, low mood and anxiety, but there are no urgent triggers: nothing for postmenopausal bleeding, heavy bleeding, chest pain, fainting or thoughts of self-harm, and no crisis resources (988 in the US, Samaritans in the UK) | `check-in/page.tsx`, `lib/config/symptoms.ts` |
 | **High** | **Data-loss bug.** Treatment event IDs are `te_${Date.now()}`, so two events in the same millisecond overwrite each other. This causes the failing test | `src/lib/db/service.ts:174`, `src/test/treatments.test.ts:103` |
 | Medium | Doctor report pre-fills HRT-specific questions ("…despite patch adherence. Is my current progesterone timing…") for every user, whether or not she uses HRT | `doctor/page.tsx:27-30` |
 | Medium | Unsupported claim on the homepage: "Most health apps monetize your intimate records through data brokers or advertising SDKs." There's no source, and it reads as fear-based copy (rules 1 and 8) | `page.tsx` privacy section |
 | Medium | "Talk or Type Quickly … *'Woke at 3 AM hot, headache…'*" implies natural-language parsing. Check-in actually has a free-text notes box and structured inputs, and does no parsing | `page.tsx` flow section |
 | Medium | Treatment-comparison insight compares symptom averages before and after a treatment starts. The causation disclaimer is good ✓, but a clinician must review whether this view invites self-adjusting | `lib/insights/treatment-comparison.ts` |
-| Low | Lock-screen reminder notifications include the medication name and dose unless privacy mode is on. Default should be private | `lib/notifications/treatment-reminders.ts` |
+| ~~Low~~ | ~~Lock-screen reminders show medication names by default.~~ *Corrected 2026-11-06: the default is already `discrete` mode, so no change is needed* | `lib/notifications/treatment-reminders.ts:18` |
 | Info | Disclaimer copy is sound and appears on every screen ✓. The banner is dismissible and sits above content, so on articles it will push the opening answer down | `medical-disclaimer.tsx` |
 | Info | No diagnostic phrasing ("you have", "you should take") found. No medical claims or citations exist yet, so there are no sources to verify | grep across `src/` |
 
@@ -149,7 +150,7 @@ Against the brief's design rules:
 **P0: blocks everything else**
 1. **Content layer is missing.** Add Markdown content with validated frontmatter (all 29 required fields), a status gate that excludes non-`clinician_approved`/`published` medical pages from production, and a source registry. *(Phase 2)*
 2. **URL architecture conflicts.** Move the private tracker app from `/dashboard`, `/treatments` and so on to a single noindexed prefix, so `/treatments/` and `/tools/` become content hubs. Set a trailing-slash rule. *(Phase 2)*
-3. **Safety fixes in the existing tool:** stop auto-seeding demo data into real journals, add a clinician-reviewable urgent-trigger file with crisis resources, fix the ID-collision data-loss bug, and remove the pre-filled HRT questions. *(Phase 2; small and should land first)*
+3. **Safety fixes in the existing tool:** stop writing sample data into real journals, remove preset symptom values, add a clinician-reviewable urgent-trigger file with crisis resources, fix the ID-collision data-loss bug, and remove the pre-filled HRT questions. *(Phase 2; small and should land first)*
 4. **No clinician reviewer.** No medical page can publish. All content stays draft until `{{CLINICAL_REVIEWER_NAME}}` exists. *(Owner)*
 5. **Placeholders unfilled:** site name, domain, reviewer, email provider, legal entity and contact email. *(Owner. Defaults in DECISIONS.md)*
 

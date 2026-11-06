@@ -20,6 +20,8 @@ reviewer: null
 updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Initial launch of the symptoms directory", material: true }
+  - { date: "2026-11-06", summary: "Linked 10 new symptom pages and added a specialist-situations section", material: true }
+  - { date: "2026-11-06", summary: "Linked bloating, breast tenderness, hair thinning, and dry/itchy skin pages", material: true }
 evidence_grade: null
 claims:
   - id: core-symptom-diversity
@@ -43,30 +45,44 @@ Hot flashes and nocturnal sweating stem from altered temperature regulation in t
 
 - [Hot flashes (vasomotor symptoms)](/symptoms/hot-flashes/): sudden sensations of intense heat, flushed skin, and rapid heartbeat.
 - [Night sweats and nocturnal awakenings](/symptoms/night-sweats/): waking soaked in perspiration, often followed by chills around 3 a.m.
+- [Heart palpitations in perimenopause](/symptoms/heart-palpitations/): pounding or fluttering heartbeats around vasomotor surges, and when palpitations are an emergency.
 
 ## Sleep and energy changes
 
 Sleep difficulties during perimenopause often result from combined temperature spikes, waking cortisol shifts, and primary insomnia:
 
-- **Insomnia and fragmented sleep**: difficulty falling asleep or returning to sleep after midnight. Many readers explore whether [magnesium improves sleep](/does-it-work/magnesium/).
-- **Fatigue and morning exhaustion**: waking unrefreshed despite remaining in bed for seven or eight hours.
+- **[Menopause insomnia and fragmented sleep](/symptoms/insomnia/)**: difficulty falling asleep or returning to sleep after midnight. Many readers also explore whether [magnesium improves sleep](/does-it-work/magnesium/).
+- **[Waking at 3 a.m.](/symptoms/waking-at-3am/)**: a consistent middle-of-the-night awakening, sometimes without any noticeable sweating.
+- **[Fatigue](/symptoms/fatigue/)**: waking unrefreshed despite remaining in bed for seven or eight hours, often linked to disrupted sleep rather than tiredness alone.
 
 ## Cognitive and mood shifts
 
 Hormonal fluctuations affect central neurotransmitter pathways, contributing to noticeable emotional and cognitive variability:
 
-- **Brain fog**: momentary lapses in word recall, concentration challenges, and memory slips.
-- **Sudden anger and irritability**: rapid mood fluctuations that feel uncharacteristic or disproportionate.
-- **Heightened anxiety**: unexplained surges of apprehension, nervous tension, or panic-like sensations.
+- **[Menopause brain fog](/symptoms/brain-fog/)** and **[memory problems](/symptoms/memory-problems/)**: momentary lapses in word recall, concentration challenges, and memory slips — and what the research says about whether this signals anything more serious.
+- **[Irritability and rage](/symptoms/irritability/)**: rapid mood fluctuations that feel uncharacteristic or disproportionate.
+- **[Menopause anxiety](/symptoms/anxiety/)** and **[panic attacks](/symptoms/panic-attacks/)**: unexplained surges of apprehension, nervous tension, or panic-like sensations, and how to tell them apart from a cardiac or vasomotor event.
+- **[Low mood and depression](/symptoms/depression/)**: a heavier, more persistent low mood that NICE guidance treats as distinct from an ordinary diagnosis of depression.
+- **[Headaches](/symptoms/headaches/)** and **[migraines](/symptoms/migraines/)**: changing headache patterns, and why migraine with aura changes hormone therapy safety specifically.
 
-## Musculoskeletal and tissue comfort
+## Musculoskeletal, metabolic, and tissue comfort
 
 Estrogen receptors are located throughout connective tissues, joints, and mucous membranes:
 
-- **Joint stiffness and aches**: morning stiffness in hands, knees, shoulders, and hips.
+- **[Joint and muscle pain](/symptoms/joint-pain/)**: morning stiffness and aching in hands, knees, shoulders, and hips.
+- **[Weight gain and belly fat in menopause](/symptoms/weight-gain/)**: why body composition shifts toward abdominal fat and how resistance training protects muscle and bone.
+- **[Bloating](/symptoms/bloating/)**: digestive changes and a feeling of fullness, and what the evidence does (and doesn't yet) explain.
+- **[Breast tenderness](/symptoms/breast-tenderness/)**: cyclical, non-cyclical, and chest-wall pain patterns, and which breast changes need a check.
+- **[Hair thinning](/symptoms/hair-thinning/)** and **[dry, itchy skin](/symptoms/dry-itchy-skin/)**: what's actually driven by estrogen loss, and what evidence-based options exist.
 - **[Vaginal dryness (GSM)](/symptoms/vaginal-dryness/)**: tissue thinning, reduced natural lubrication, and burning or irritation.
 - **[Painful sex (dyspareunia)](/symptoms/painful-sex/)**: friction and discomfort during intimacy caused by thinning mucosal layers.
-- **[Bladder leaks and urgency](/symptoms/incontinence/)**: stress and urge incontinence driven by weakened urethral closure pressure and pelvic floor tone.
+- **[Low libido](/symptoms/low-libido/)**: a drop in sex drive that NICE guidance recognizes as a core menopause symptom in its own right.
+- **[Bladder urgency](/symptoms/bladder-urgency/)** and **[bladder leaks and incontinence](/symptoms/incontinence/)**: stress and urge symptoms driven by weakened urethral closure pressure and pelvic floor tone.
+- **[Recurrent UTIs after menopause](/symptoms/recurrent-utis/)**: why urinary tract infections recur when vaginal pH changes, and how local care helps prevent them.
+
+## When your situation isn't the standard one
+
+Most of this guide assumes a natural transition in your 40s or 50s. If menopause happened suddenly after surgery, before age 40, or during cancer treatment, standard timing and treatment trade-offs can change — see our [specialist situation guides](/groups/) for [surgical menopause](/groups/surgical-menopause/), [premature ovarian insufficiency](/groups/premature-ovarian-insufficiency/), and [menopause after breast cancer](/groups/breast-cancer-survivors/).
 
 ## Tracking your personal pattern
 

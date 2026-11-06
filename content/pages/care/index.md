@@ -20,13 +20,14 @@ reviewer: null
 updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Initial publication of menopause care hub", material: true }
+  - { date: "2026-11-06", summary: "Added links to new find-a-specialist and doctor-dismissal guides", material: true }
 evidence_grade: null
 claims: []
 safety_flags: []
 cta_profile: care_access
 hub: null
 sources: [nams-2022-hormone-therapy, nice-ng23]
-related: [/symptoms/, /treatments/, /tools/symptom-tracker/, /perimenopause/]
+related: [/care/find-a-menopause-specialist/, /care/when-your-doctor-dismisses-you/, /symptoms/, /treatments/, /tools/symptom-tracker/, /perimenopause/]
 affiliate_disclosure: false
 ---
 
@@ -36,6 +37,8 @@ Whether you are preparing for a first discussion about hormone therapy, looking 
 
 ## Care guides and practical support
 
+- **[How to find a menopause specialist](/care/find-a-menopause-specialist/)**: What the MSCP credential means, and when it's worth seeking one out specifically.
+- **[What to say if your doctor dismisses your symptoms](/care/when-your-doctor-dismisses-you/)**: Specific language to use, and when to seek a second opinion.
 - **[Vaginal moisturisers and lubricants](/care/moisturizers-and-lubricants/)**: How continuous tissue hydrators and intercourse lubricants differ, how to choose pH-balanced formulas, and when prescription treatment is needed.
 - **[Evidence-based menopause books](/care/menopause-books/)**: Thorough reviews of doctor-authored guides that break down the science of perimenopause, hormones, and fitness without wellness marketing.
 - **[How to do pelvic floor exercises correctly](/care/pelvic-floor-exercises/)**: A step-by-step method for muscle training at home, common mistakes to avoid, and guidance on biofeedback devices.

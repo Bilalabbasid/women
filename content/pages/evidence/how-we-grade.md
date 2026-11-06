@@ -51,3 +51,9 @@ When reviewing options, we prioritize sources in the following order:
 - **Harm concern**: Credible evidence indicates that potential adverse effects (e.g., hepatotoxicity, increased thrombosis risk) outweigh potential benefits.
 - **Per option**: Used on symptom hub pages where multiple treatment choices are compared side-by-side in a graded summary table.
 
+## Where to use these grades on MenoVerdict
+
+- Look up any treatment or supplement by symptom and evidence grade in our interactive [Does it work? evidence checker](/tools/does-it-work-checker/).
+- Browse our full [Does It Work? evidence directory](/does-it-work/) and [editorial policy](/evidence/editorial-policy/).
+- Read how our [medical review process](/evidence/medical-review/) and [commercial independence rules](/about/how-we-make-money/) keep commissions separate from evidence grades.
+

@@ -56,11 +56,11 @@ Symptoms often appear while periods are still relatively regular. Common early i
 - Premenstrual mood swings or anxiety that feel more intense than past years.
 - Slower cognitive processing or word retrieval during busy workdays.
 
-Read our detailed breakdown in the [Early signs of perimenopause guide](/perimenopause/early-signs/).
+Read our detailed breakdown in the [Early signs of perimenopause guide](/perimenopause/early-signs/) and compare how the transition differs from the final period in [Perimenopause vs menopause: what is the difference?](/perimenopause/vs-menopause/).
 
 ## Diagnosing perimenopause: do you need a blood test?
 
-A common question is whether a blood test can prove you are in perimenopause. Major clinical guidelines, including NICE and The Menopause Society, advise against routine hormone blood tests (such as FSH or estradiol) in women aged 45 and over [@nice-ng23-recommendations]. 
+A common question is whether a blood test can prove you are in perimenopause. Major clinical guidelines, including NICE and The Menopause Society, advise against routine hormone blood tests (such as FSH or estradiol) in women aged 45 and over [@nice-ng23-recommendations]. See our full guide on [Is there a blood test for perimenopause?](/perimenopause/blood-tests/). 
 
 Because hormone levels fluctuate widely from day to day and even hour to hour during perimenopause, a single blood draw does not provide a reliable diagnosis. Instead, diagnosis is based on your age, cycle history, and symptom patterns [@nice-ng23-recommendations].
 

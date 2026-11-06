@@ -54,4 +54,4 @@ Our evidence grades are determined strictly by clinical trial literature, meta-a
 
 ## 3. Our long-term commitment
 
-We exist to answer real questions and solve real problems for women experiencing perimenopause and menopause. If a product does not serve your real-world comfort or clinical care, it has no place on this site.
+We exist to answer real questions and solve real problems for women experiencing perimenopause and menopause. Read more in our [editorial policy](/evidence/editorial-policy/), see [how we grade clinical evidence](/evidence/how-we-grade/), and explore our [free on-device menopause tools](/tools/). If a product does not serve your real-world comfort or clinical care, it has no place on this site.

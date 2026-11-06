@@ -42,17 +42,17 @@ Selecting an approach depends on your most disruptive symptoms, personal medical
 
 ## 1. Menopausal Hormone Therapy (MHT / HRT)
 
-Systemic hormone therapy replaces declining estrogen and, for women with an intact uterus, adds a progestogen to protect the uterine lining:
+Systemic [hormone therapy (HRT)](/treatments/hormone-therapy/) replaces declining estrogen and, for women with an intact uterus, adds a progestogen to protect the uterine lining:
 
 - **Efficacy**: Strong clinical evidence proves systemic hormone therapy is the most effective approach for reducing hot flash frequency and severity, stopping night sweats, and preventing rapid bone mineral loss [@nams-2022-hormone-therapy].
-- **Forms**: Available as transdermal patches, topical gels, sprays, and oral tablets. Transdermal estrogen is associated with lower thromboembolic risks compared to oral formulations.
+- **Forms**: Available as transdermal patches, topical gels, sprays, and oral tablets, plus low-dose local [vaginal estrogen](/treatments/hormone-therapy/vaginal-estrogen/) for genitourinary symptoms. Transdermal estrogen is associated with lower thromboembolic risks compared to oral formulations.
 - **Safety and modern labels**: Read our detailed breakdown of recent regulatory updates in [The FDA HRT boxed warning change, explained](/treatments/hormone-therapy/boxed-warning/).
 
 ## 2. Non-hormonal prescription options
 
-For women who have contraindications to hormones (such as estrogen-sensitive breast cancer or unexplained vaginal bleeding) or who choose not to use them, several non-hormonal medications demonstrate proven efficacy [@nams-2023-nonhormone-therapy]:
+For women who have contraindications to hormones (such as estrogen-sensitive [breast cancer](/groups/breast-cancer-survivors/) or unexplained vaginal bleeding) or who choose not to use them, several [non-hormonal treatments for hot flashes](/treatments/nonhormonal/) demonstrate proven efficacy [@nams-2023-nonhormone-therapy]:
 
-- **Neurokinin 3 (NK3) receptor antagonists**: Specifically target KNDy neurons in the hypothalamus to restore normal temperature regulation without systemic hormone exposure.
+- **Neurokinin 3 (NK3) receptor antagonists**: Specifically target KNDy neurons in the hypothalamus to restore normal temperature regulation without systemic hormone exposure, including [Veozah (fezolinetant)](/treatments/nonhormonal/fezolinetant/) and dual NK1/NK3 blocker [Lynkuet (elinzanetant)](/treatments/nonhormonal/elinzanetant/).
 - **Selective serotonin and norepinephrine reuptake inhibitors (SSRIs/SNRIs)**: Low-dose paroxetine, venlafaxine, or desvenlafaxine reduce vasomotor frequency in clinical trials.
 - **Gabapentinoids**: Modestly reduce nocturnal hot flashes and promote continuous sleep.
 

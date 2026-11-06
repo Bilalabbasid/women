@@ -51,5 +51,5 @@ Science and regulatory guidance evolve continuously. When health authorities rel
 
 ## Submitting a correction
 
-If you spot a factual error, broken link, or outdated citation in any article, please email our editorial team. Material corrections are updated within 48 hours and documented in the relevant article&apos;s change log.
+If you spot a factual error, broken link, or outdated citation in any article, please [contact our editorial team](/contact/). Material corrections are updated within 48 hours and documented in the relevant article&apos;s change log, alongside updates to our [interactive evidence checker tool](/tools/does-it-work-checker/).
 

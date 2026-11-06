@@ -68,7 +68,7 @@ Over the subsequent two decades, re-analyses by major endocrine and gynecologica
 
 ## What this means for your appointment
 
-If your clinician previously cited the black box warning as a reason to avoid discussing hormone therapy, these updated labels provide a clear basis for a fresh conversation.
+If your clinician previously cited the black box warning as a reason to avoid discussing [hormone therapy](/treatments/hormone-therapy/), these updated labels provide a clear basis for a fresh conversation. You can also build a printable appointment sheet with our [treatment conversation builder](/tools/treatment-questions/) and compare non-prescription options in our [Does It Work? directory](/does-it-work/).
 
 :::questions
 - How does the recent FDA removal of cardiovascular and dementia language from the boxed warning apply to my treatment options?

@@ -1,7 +1,7 @@
 ---
-title: "Best menopause telehealth: compared by credentials, cost, and insurance"
-seo_title: "Menopause Telehealth Compared: Midi, Allara, Alloy, Hers & Sesame"
-meta_description: "Compare online menopause telehealth clinics (Midi, Allara, Alloy, Hers, Sesame Care) by clinician credentials, insurance coverage, upfront cost, and evidence."
+title: "Best menopause telehealth: compared by situation"
+seo_title: "Menopause Telehealth Compared: Midi, Alloy & More"
+meta_description: "Compare online menopause telehealth clinics (Midi, Allara, Alloy, Hers, Sesame) by clinician credentials, insurance coverage, and upfront cost."
 cluster: compare
 primary_keyword: best menopause telehealth
 slug: compare
@@ -22,6 +22,7 @@ reviewer: null
 updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Published objective menopause telehealth comparison ranked by clinician credentials, insurance acceptance, and prescribing standards", material: true }
+  - { date: "2026-11-06", summary: "Added links to 5 new standalone provider reviews", material: true }
 evidence_grade: per_option
 claims:
   - id: mht-most-effective-vms-gsm
@@ -37,7 +38,7 @@ safety_flags: [urgent_symptoms, bleeding, medication_interactions]
 cta_profile: care_comparison
 hub: null
 sources: [nams-2022-hormone-therapy, nams-2023-nonhormone-therapy, nice-ng23-recommendations, nhs-postmenopausal-bleeding, nhs-heart-palpitations, jmir-online-menopause-information-2025]
-related: [/care/, /treatments/, /perimenopause/questions-for-your-doctor/, /tools/symptom-tracker/]
+related: [/care/, /treatments/, /perimenopause/questions-for-your-doctor/, /tools/symptom-tracker/, /compare/midi-review/, /compare/alloy-review/, /compare/evernow-review/, /compare/winona-review/, /compare/hers-review/]
 affiliate_disclosure: true
 faq:
   - q: Do online menopause clinics require hormone blood tests before prescribing?
@@ -72,6 +73,10 @@ We never rank a telehealth provider based on whether they pay a referral fee. In
 | **Hers** | Primarily asynchronous online assessment reviewed by licensed clinicians | Cash-pay subscription model bundled with medication delivery (no insurance billing) | Offers select non-hormonal and hormonal options shipped by mail; narrower customization for complex histories | Readers seeking a simple asynchronous cash-pay subscription who do not need insurance billing or local pharmacy pickups |
 
 ::product-slot{id="telehealth-consultation"}
+
+## Full individual reviews
+
+For a deeper look at any one service — including exactly what we could and couldn't verify ourselves — see our standalone reviews: [Midi Health](/compare/midi-review/), [Alloy](/compare/alloy-review/), [Evernow](/compare/evernow-review/), [Winona](/compare/winona-review/), and [Hers](/compare/hers-review/).
 
 ---
 
@@ -121,4 +126,4 @@ If you are in emotional crisis or having thoughts of self-harm, call or text **9
 
 1. **Log 14 days of symptoms first:** Telehealth visits typically last 15 to 30 minutes. Use our free, on-device [symptom tracker and doctor report](/tools/symptom-tracker/) or [perimenopause symptoms checklist](/tools/symptoms-checklist/) so you can read out your exact frequency and severity scores.
 2. **Know your recent blood pressure and screening dates:** Online clinicians will almost always ask for a recent blood pressure reading and the date of your last mammogram and cervical screening before prescribing systemic hormone therapy [@nams-2022-hormone-therapy].
-3. **Review practical care options:** Explore our [getting care hub](/care/) and [evidence-based menopause books](/care/menopause-books/) to understand what guidelines say before your visit.
+3. **Review practical care options:** Explore our [getting care hub](/care/), [evidence-based menopause books](/care/menopause-books/), and the [Does It Work? evidence directory](/does-it-work/) to understand what guidelines say before your visit.

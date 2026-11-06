@@ -37,5 +37,5 @@ We are an independent health resource dedicated to providing clear, evidence-gra
 1. **Website first**: No login walls to read articles, understand treatments, or use core decision tools.
 2. **On-device privacy**: Health and symptom tracking entries remain on your device by default.
 3. **Evidence before commission**: We evaluate options against peer-reviewed clinical research and consensus guidelines before any commercial link is considered. Learn more about [how we make money](/about/how-we-make-money/).
-4. **Honesty and transparency**: We do not claim medical review unless a qualified, verified clinician has approved that specific version. Read our [methodology for grading evidence](/evidence/how-we-grade/).
+4. **Honesty and transparency**: We do not claim medical review unless a qualified, verified clinician has approved that specific version. Read our [methodology for grading evidence](/evidence/how-we-grade/), our [medical review process](/evidence/medical-review/), and our [privacy policy](/privacy/).
 

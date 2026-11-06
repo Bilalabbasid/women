@@ -34,7 +34,7 @@ claims:
 safety_flags: [urgent_symptoms]
 cta_profile: vasomotor
 hub: /symptoms/
-sources: [nams-2022-hormone-therapy, veozah-prescribing-information, nams-2023-nonhormone-therapy, nice-ng23-recommendations]
+sources: [nams-2022-hormone-therapy, veozah-prescribing-information, nams-2023-nonhormone-therapy, nice-ng23-recommendations, khalifey-hrt-cardiovascular-2026]
 related: [/symptoms/night-sweats/, /treatments/hormone-therapy/boxed-warning/, /tools/symptoms-checklist/, /tools/symptom-tracker/]
 affiliate_disclosure: true
 ---
@@ -77,6 +77,8 @@ Clinical research grades hot flash therapies by how effectively they reduce dail
 When evaluating clothing for temperature regulation, focus on breathable weaves and quick-drying fabrics:
 
 <ProductSlot id="moisture-wicking-sleepwear" />
+
+Frequent hot flashes are also linked with higher cardiovascular risk, not just discomfort [@khalifey-hrt-cardiovascular-2026] — see our [heart health after menopause](/postmenopause/heart-health/) guide for what that means and what doesn't change about how HRT is used.
 
 ## What you can do today
 

@@ -20,6 +20,8 @@ reviewer: null
 updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Initial publication of the Does It Work directory", material: true }
+  - { date: "2026-11-06", summary: "Added links to 5 new verdict pages (paced breathing, diet, acupuncture, yoga, cannabis/CBD)", material: true }
+  - { date: "2026-11-06", summary: "Added links to 5 more verdict pages (red clover, evening primrose oil, vitamin D, calcium, omega-3)", material: true }
 evidence_grade: null
 claims:
   - id: nonhormone-guideline-consensus
@@ -27,9 +29,11 @@ claims:
     sources: [nams-2023-nonhormone-therapy]
 safety_flags: [medication_interactions]
 cta_profile: diw_pending
+banned_phrase_overrides:
+  - { phrase: "hormone balance", reason: "Quoted in scare-quotes to debunk the marketing claim, linking to our evidence verdict that rejects it." }
 hub: null
 sources: [nams-2023-nonhormone-therapy]
-related: [/does-it-work/magnesium/, /does-it-work/cooling-products/, /does-it-work/exercise/, /tools/symptoms-checklist/]
+related: [/does-it-work/magnesium/, /does-it-work/cooling-products/, /does-it-work/exercise/, /does-it-work/paced-breathing/, /does-it-work/diet/, /does-it-work/acupuncture/, /does-it-work/yoga/, /does-it-work/cannabis-cbd/, /does-it-work/red-clover/, /does-it-work/evening-primrose-oil/, /does-it-work/vitamin-d/, /does-it-work/calcium/, /does-it-work/omega-3/, /tools/symptoms-checklist/]
 affiliate_disclosure: false
 ---
 
@@ -51,8 +55,18 @@ We examine each product and ingredient using four criteria:
 - **[Does magnesium help menopause symptoms?](/does-it-work/magnesium/)**: An honest review of sleep and relaxation benefits, trial limits, and optimal forms.
 - **[Do cooling products help night sweats and hot flashes?](/does-it-work/cooling-products/)**: How cooling sheets, bedside fans, and convective bed climate systems perform against vasomotor episodes.
 - **[Does strength training help menopause?](/does-it-work/exercise/)**: What the LIFTMOR clinical trials prove about heavy lifting, impact exercise, bone mineral density, and muscle preservation.
-- **Black cohosh and botanical extracts**: One of the most studied herbs for hot flashes; evidence remains mixed with notable placebo response rates.
-- **Red clover and soy isoflavones**: Phytoestrogens with modest, variable effects on mild hot flashes.
+- **[Does black cohosh work for hot flashes?](/does-it-work/black-cohosh/)**: Why The Menopause Society (2023) does not recommend black cohosh (Levels I–II) and how placebo responses affect unblinded studies.
+- **[Do soy and isoflavones help hot flashes?](/does-it-work/soy-isoflavones/)**: How whole soy foods compare with concentrated isoflavone and S-equol pills (Level II).
+- **[Do "hormone balance" supplements work?](/does-it-work/hormone-balance-supplements/)**: Why multi-ingredient botanical gummies and capsules cannot "balance" perimenopausal hormone fluctuations.
+- **[Does paced breathing help hot flashes?](/does-it-work/paced-breathing/)**: Why this widely suggested technique is specifically not recommended (Level I).
+- **[Do diets help hot flashes?](/does-it-work/diet/)**: What dietary modification does and doesn't change about hot flash frequency.
+- **[Does acupuncture help hot flashes?](/does-it-work/acupuncture/)**: Why real vs. sham acupuncture trials haven't shown a meaningful difference.
+- **[Does yoga help menopause symptoms?](/does-it-work/yoga/)**: Why it's not recommended specifically for hot flashes, even though it may still have other benefits.
+- **[Do cannabis and CBD help menopause symptoms?](/does-it-work/cannabis-cbd/)**: The evidence gap, plus the product-quality problem worth knowing about.
+- **[Does red clover help menopause symptoms?](/does-it-work/red-clover/)**: What a 2013 Cochrane review of 43 trials found.
+- **[Does evening primrose oil help hot flashes?](/does-it-work/evening-primrose-oil/)**: Why hot flashes and night sweats didn't show the same result.
+- **[Vitamin D in menopause](/does-it-work/vitamin-d/)** and **[calcium after menopause](/does-it-work/calcium/)**: What the USPSTF actually concludes about supplementing for fracture prevention.
+- **[Does omega-3 help menopause symptoms?](/does-it-work/omega-3/)**: What a well-powered MsFLASH trial found.
 
 You can look up any treatment or supplement by symptom and evidence grade in our interactive [Does it work? evidence checker](/tools/does-it-work-checker/), or record your active symptoms with our [printable symptoms checklist](/tools/symptoms-checklist/).
 

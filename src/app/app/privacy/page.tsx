@@ -15,7 +15,8 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { AppHeader } from '@/components/app/app-header';
-import { LocalDataService } from '@/lib/db/service';
+import Link from 'next/link';
+import { clearEverything } from '@/lib/storage/manager';
 import { ExportService } from '@/lib/export/export-data';
 import { db } from '@/lib/db/db';
 
@@ -58,10 +59,8 @@ export default function PrivacyCenterPage() {
   };
 
   const handleClearLocal = async () => {
-    await LocalDataService.purgeAllData();
-    if (typeof window !== 'undefined') {
-      localStorage.clear();
-    }
+    // Every table plus this site's own localStorage keys (not other sites' or unrelated keys).
+    await clearEverything();
     setReloadTrigger((n) => n + 1);
     setDeletedSuccess(true);
     setShowDeleteModal(false);
@@ -204,6 +203,16 @@ export default function PrivacyCenterPage() {
             </Card>
           </div>
         </section>
+
+        <Link
+          href="/app/storage/"
+          className="block rounded-2xl border border-[#1F5A4C] bg-[#FDF9F7] p-4 text-sm hover:bg-[#E6EFEB]"
+        >
+          <span className="block font-semibold text-[#231F1D]">Manage storage</span>
+          <span className="block text-xs text-[#554E48]">
+            Restore a backup, see how much space is used, or delete only older entries or one tool&apos;s data.
+          </span>
+        </Link>
 
         {/* Philosophy Statement */}
         <Card variant="muted" className="p-4 text-xs text-[#554E48] leading-relaxed">

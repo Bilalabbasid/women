@@ -47,6 +47,8 @@ export interface CategorySummary {
   id: CategoryId;
   /** Main record count shown to her (check-ins, log entries, saved entries...). */
   records: number;
+  /** True when anything at all is stored, including undated items (treatment plans, a tool's current answers). */
+  hasData: boolean;
   /** Extra detail, e.g. "12 symptom ratings" or "2 treatment plans". */
   detail?: string;
   oldest?: string;
@@ -73,7 +75,7 @@ export async function summarizeCategory(id: CategoryId): Promise<CategorySummary
         db.checkins.orderBy('date').first(),
         db.checkins.orderBy('date').last(),
       ]);
-      return { id, records, detail: `${ratings} symptom rating${ratings === 1 ? '' : 's'}`, oldest: first?.date, newest: last?.date };
+      return { id, records, hasData: records > 0, detail: records ? `${ratings} symptom rating${ratings === 1 ? '' : 's'}` : undefined, oldest: first?.date, newest: last?.date };
     }
     case 'treatments': {
       const [plans, records, first, last] = await Promise.all([
@@ -82,7 +84,7 @@ export async function summarizeCategory(id: CategoryId): Promise<CategorySummary
         db.treatmentEvents.orderBy('date').first(),
         db.treatmentEvents.orderBy('date').last(),
       ]);
-      return { id, records, detail: `${plans} treatment plan${plans === 1 ? '' : 's'}`, oldest: first?.date, newest: last?.date };
+      return { id, records, hasData: records + plans > 0, detail: `${plans} treatment plan${plans === 1 ? '' : 's'}`, oldest: first?.date, newest: last?.date };
     }
     case 'periods': {
       const [records, first, last] = await Promise.all([
@@ -90,18 +92,22 @@ export async function summarizeCategory(id: CategoryId): Promise<CategorySummary
         db.cycles.orderBy('startDate').first(),
         db.cycles.orderBy('startDate').last(),
       ]);
-      return { id, records, oldest: first?.startDate, newest: last?.startDate };
+      return { id, records, hasData: records > 0, oldest: first?.startDate, newest: last?.startDate };
     }
     case 'appointments':
     case 'journal': {
       const table = id === 'appointments' ? db.appointments : db.journal;
       const [records, first, last] = await Promise.all([table.count(), table.orderBy('date').first(), table.orderBy('date').last()]);
-      return { id, records, oldest: first?.date, newest: last?.date };
+      return { id, records, hasData: records > 0, oldest: first?.date, newest: last?.date };
     }
-    case 'customSymptoms':
-      return { id, records: await db.customSymptoms.count() };
-    case 'preferences':
-      return { id, records: await db.settings.count() };
+    case 'customSymptoms': {
+      const records = await db.customSymptoms.count();
+      return { id, records, hasData: records > 0 };
+    }
+    case 'preferences': {
+      const records = await db.settings.count();
+      return { id, records, hasData: records > 0 };
+    }
     default: {
       const rows = await db.toolRecords.where('tool').equals(id).toArray();
       const entries = rows.filter((r) => r.kind === 'entry');
@@ -109,6 +115,7 @@ export async function summarizeCategory(id: CategoryId): Promise<CategorySummary
       return {
         id,
         records: entries.length,
+        hasData: rows.length > 0,
         detail: hasDraft ? 'plus your current unsaved answers' : undefined,
         ...(await datedRange(entries.map((e) => e.date))),
       };

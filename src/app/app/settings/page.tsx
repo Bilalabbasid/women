@@ -1,29 +1,14 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import {
-  HardDrive,
-  Cloud,
-  Check,
-} from 'lucide-react';
+import { HardDrive, ChevronRight } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { AppHeader } from '@/components/app/app-header';
 import { PWAInstallBanner } from '@/components/app/pwa-install-banner';
 import { APP_CONFIG } from '@/lib/config/constants';
 
 export default function SettingsPage() {
-  const [storageMode, setStorageMode] = useState<'device_only' | 'temporary_cloud'>('device_only');
-  const [retentionDays, setRetentionDays] = useState<number>(30);
-  const [notifications, setNotifications] = useState<boolean>(true);
-  const [savedToast, setSavedToast] = useState(false);
-
-  const handleSave = () => {
-    setSavedToast(true);
-    setTimeout(() => setSavedToast(false), 2000);
-  };
-
   return (
     <div className="flex flex-col min-h-screen">
       <AppHeader
@@ -36,133 +21,52 @@ export default function SettingsPage() {
       />
 
       <div className="flex-1 max-w-2xl mx-auto w-full px-4 py-5 space-y-6">
-        {savedToast && (
-          <div className="bg-[#EFF7F2] border border-[#CDE0D4] rounded-2xl p-3 text-xs text-[#2C6E49] flex items-center gap-2">
-            <Check className="w-4 h-4" />
-            <span>Preferences updated locally on this device.</span>
-          </div>
-        )}
-
-        {/* Section 1: Storage & Cloud Policy */}
-        <section className="space-y-3">
-          <div className="flex items-center justify-between">
-            <h2 className="font-serif font-semibold text-base text-[#231F1D]">
-              Data Storage Preference
-            </h2>
-            <Link href="/app/privacy/" className="text-xs text-[#1F5A4C] hover:underline font-medium">
-              Privacy Dashboard
-            </Link>
-          </div>
-
-          <div className="space-y-2.5">
-            <button
-              type="button"
-              onClick={() => {
-                setStorageMode('device_only');
-                handleSave();
-              }}
-              className={`w-full text-left p-4 rounded-2xl border transition-all ${
-                storageMode === 'device_only'
-                  ? 'border-[#1F5A4C] bg-[#FDF9F7] shadow-xs ring-1 ring-[#1F5A4C]'
-                  : 'border-[#E5DED5] bg-white hover:border-[#D0C7BC]'
-              }`}
-            >
-              <div className="flex items-center justify-between">
-                <span className="font-semibold text-sm text-[#231F1D] flex items-center gap-2">
-                  <HardDrive className="w-4 h-4 text-[#1F5A4C]" />
-                  Option A — Device Only (Default)
-                </span>
-                <Badge variant="success">100% Local</Badge>
-              </div>
-              <p className="text-xs text-[#68615C] mt-1">
-                Zero health records persisted in cloud database. Stored in IndexedDB.
-              </p>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => {
-                setStorageMode('temporary_cloud');
-                handleSave();
-              }}
-              className={`w-full text-left p-4 rounded-2xl border transition-all ${
-                storageMode === 'temporary_cloud'
-                  ? 'border-[#1F5A4C] bg-[#FDF9F7] shadow-xs ring-1 ring-[#1F5A4C]'
-                  : 'border-[#E5DED5] bg-white hover:border-[#D0C7BC]'
-              }`}
-            >
-              <div className="flex items-center justify-between">
-                <span className="font-semibold text-sm text-[#231F1D] flex items-center gap-2">
-                  <Cloud className="w-4 h-4 text-[#1F5A4C]" />
-                  Option B — Temporary Encrypted Cloud
-                </span>
-                <Badge variant="warning">Auto-Purge</Badge>
-              </div>
-              <p className="text-xs text-[#68615C] mt-1">
-                Client-encrypted with automated hard deletion after your chosen retention window.
-              </p>
-            </button>
-          </div>
+        {/* Your data: stored on this device only. There is no cloud option to choose. */}
+        <section className="space-y-3" aria-labelledby="data-heading">
+          <h2 id="data-heading" className="font-serif font-semibold text-base text-[#231F1D]">
+            Your data
+          </h2>
+          <Card className="p-4 bg-white space-y-2">
+            <p className="font-semibold text-sm text-[#231F1D] flex items-center gap-2">
+              <HardDrive className="w-4 h-4 text-[#1F5A4C]" />
+              Saved in this browser on this device
+            </p>
+            <p className="text-xs text-[#554E48] leading-relaxed">
+              Your tracker and tool entries are kept in this browser&apos;s storage. Nothing is uploaded and nothing is
+              deleted automatically. It isn&apos;t synced to other devices, and clearing browsing data can remove it, so
+              keep a backup.
+            </p>
+          </Card>
+          <Link
+            href="/app/storage/"
+            className="flex items-center justify-between gap-3 rounded-2xl border border-[#1F5A4C] bg-[#FDF9F7] p-4 hover:bg-[#E6EFEB]"
+          >
+            <span>
+              <span className="block font-semibold text-sm text-[#231F1D]">Manage storage</span>
+              <span className="block text-xs text-[#554E48]">
+                See what&apos;s stored, back up or restore, delete old entries or everything.
+              </span>
+            </span>
+            <ChevronRight className="w-5 h-5 shrink-0 text-[#1F5A4C]" aria-hidden="true" />
+          </Link>
+          <Link href="/app/privacy/" className="inline-block text-xs text-[#1F5A4C] hover:underline font-medium">
+            Privacy center
+          </Link>
         </section>
 
-        {/* Section 2: Retention Window (if cloud enabled) */}
-        {storageMode === 'temporary_cloud' && (
-          <section className="space-y-3 p-4 bg-white rounded-2xl border border-[#E5DED5]">
-            <h3 className="font-semibold text-sm text-[#231F1D]">
-              Cloud Retention Window
-            </h3>
-            <p className="text-xs text-[#68615C]">
-              Records older than this window are permanently purged by the backend deletion engine.
-            </p>
-
-            <div className="grid grid-cols-5 gap-2 pt-1">
-              {[7, 14, 30, 60, 90].map((days) => (
-                <button
-                  key={days}
-                  onClick={() => {
-                    setRetentionDays(days);
-                    handleSave();
-                  }}
-                  className={`py-2 rounded-xl text-xs font-semibold border transition ${
-                    retentionDays === days
-                      ? 'bg-[#1F5A4C] border-[#1F5A4C] text-white'
-                      : 'bg-[#F7F6F2] border-[#E5DED5] text-[#554E48]'
-                  }`}
-                >
-                  {days}d
-                </button>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Section 3: Reminders & Notifications */}
-        <section className="space-y-3">
-          <h2 className="font-serif font-semibold text-base text-[#231F1D]">
+        {/* Reminders: only treatment reminders exist, and they are set up on the Treatments page. */}
+        <section className="space-y-3" aria-labelledby="reminders-heading">
+          <h2 id="reminders-heading" className="font-serif font-semibold text-base text-[#231F1D]">
             Reminders
           </h2>
-
-          <Card className="p-4 bg-white flex items-center justify-between">
-            <div className="space-y-0.5">
-              <p className="font-semibold text-sm text-[#231F1D]">Daily Check-in Reminder</p>
-              <p className="text-xs text-[#68615C]">Gentle prompt at 8:30 PM</p>
-            </div>
-            <button
-              onClick={() => {
-                setNotifications(!notifications);
-                handleSave();
-              }}
-              className={`w-12 h-6 rounded-full transition-colors relative ${
-                notifications ? 'bg-[#1F5A4C]' : 'bg-[#D9D1C7]'
-              }`}
-              aria-label="Toggle notifications"
-            >
-              <span
-                className={`w-4 h-4 rounded-full bg-white absolute top-1 transition-transform ${
-                  notifications ? 'left-7' : 'left-1'
-                }`}
-              />
-            </button>
+          <Card className="p-4 bg-white space-y-2">
+            <p className="text-xs text-[#554E48] leading-relaxed">
+              Reminders for treatments you log (such as a patch change) are set up on the Treatments page, where you can
+              allow notifications and choose whether they show the treatment name.
+            </p>
+            <Link href="/app/treatments/" className="inline-block text-xs text-[#1F5A4C] hover:underline font-semibold">
+              Set up treatment reminders
+            </Link>
           </Card>
         </section>
 
@@ -182,7 +86,7 @@ export default function SettingsPage() {
           </div>
           <div className="flex items-center justify-between py-1">
             <span>Storage Status:</span>
-            <span className="text-[#2C6E49] font-medium">Local-First (IndexedDB ready)</span>
+            <span className="text-[#2C6E49] font-medium">This device only</span>
           </div>
 
           <p className="text-xs text-[#5C554F] pt-3 leading-relaxed">

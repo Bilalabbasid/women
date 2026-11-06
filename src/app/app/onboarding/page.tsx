@@ -7,7 +7,6 @@ import {
   Check,
   ArrowRight,
   HardDrive,
-  Cloud,
   ChevronLeft,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -18,12 +17,8 @@ import { STANDARD_SYMPTOMS } from '@/lib/config/symptoms';
 export default function OnboardingPage() {
   const router = useRouter();
   const [step, setStep] = useState<1 | 2 | 3>(1);
-  const [storageMode, setStorageMode] = useState<'device_only' | 'temporary_cloud'>('device_only');
-  const [selectedSymptoms, setSelectedSymptoms] = useState<string[]>([
-    'hot_flashes',
-    'waking_early',
-    'brain_fog',
-  ]);
+  // Nothing pre-selected: only symptoms she picks are pinned (DECISIONS.md D-006).
+  const [selectedSymptoms, setSelectedSymptoms] = useState<string[]>([]);
 
   const toggleSymptom = (id: string) => {
     setSelectedSymptoms((prev) =>
@@ -32,11 +27,14 @@ export default function OnboardingPage() {
   };
 
   const handleFinish = () => {
-    // In Phase 1, save preference flag to localStorage for immediate UI flow
-    if (typeof window !== 'undefined') {
+    try {
       localStorage.setItem('menowell_onboarding_completed', 'true');
-      localStorage.setItem('menowell_storage_mode', storageMode);
-      localStorage.setItem('menowell_pinned_symptoms', JSON.stringify(selectedSymptoms));
+      // Add to any symptoms she already pinned (e.g. from the symptoms checklist); never replace them.
+      const existing: unknown = JSON.parse(localStorage.getItem('menowell_pinned_symptoms') ?? '[]');
+      const kept = Array.isArray(existing) ? existing.filter((x): x is string => typeof x === 'string') : [];
+      localStorage.setItem('menowell_pinned_symptoms', JSON.stringify([...new Set([...kept, ...selectedSymptoms])]));
+    } catch {
+      // Storage blocked: the tracker still works, pins just aren't remembered.
     }
     router.push('/app/today/');
   };
@@ -77,74 +75,32 @@ export default function OnboardingPage() {
           <div>
             <Badge variant="primary" className="mb-2">Step 1 of 3 • Privacy First</Badge>
             <h1 className="text-2xl sm:text-3xl font-serif font-semibold text-[#231F1D] mb-2">
-              Where should your health records live?
+              Where your health records live
             </h1>
             <p className="text-sm text-[#554E48] leading-relaxed">
-              We believe your intimate health journey belongs to you alone. Choose your storage preference now — you can adjust this anytime in Settings.
+              Your health journal belongs to you alone. Here is exactly where it is kept.
             </p>
           </div>
 
           <div className="space-y-3">
-            {/* Option A: Device Only */}
-            <div
-              onClick={() => setStorageMode('device_only')}
-              className={`cursor-pointer rounded-2xl border-2 p-4 transition-all ${
-                storageMode === 'device_only'
-                  ? 'border-[#1F5A4C] bg-[#FDF9F7] shadow-xs'
-                  : 'border-[#E5DED5] bg-white hover:border-[#D0C7BC]'
-              }`}
-            >
+            <div className="rounded-2xl border-2 border-[#1F5A4C] bg-[#FDF9F7] p-4">
               <div className="flex items-start gap-3">
-                <div
-                  className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${
-                    storageMode === 'device_only' ? 'bg-[#1F5A4C] text-white' : 'bg-[#EEF1EF] text-[#68615C]'
-                  }`}
-                >
+                <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 bg-[#1F5A4C] text-white">
                   <HardDrive className="w-5 h-5" />
                 </div>
-                <div className="flex-1">
-                  <div className="flex items-center justify-between">
-                    <p className="font-semibold text-sm text-[#231F1D]">
-                      Option A — Device Only (Recommended)
-                    </p>
-                    <Badge variant="success">100% Local</Badge>
+                <div className="flex-1 space-y-2">
+                  <div className="flex items-center justify-between gap-2">
+                    <p className="font-semibold text-sm text-[#231F1D]">In this browser, on this device</p>
+                    <Badge variant="success">No account</Badge>
                   </div>
-                  <p className="text-xs text-[#554E48] mt-1 leading-relaxed">
-                    Records stay purely in your device&apos;s IndexedDB. Zero cloud uploads, zero account required.
+                  <p className="text-xs text-[#554E48] leading-relaxed">
+                    Everything you log is saved in this browser&apos;s own storage. Nothing is uploaded, and nothing is
+                    deleted automatically. It stays until you delete it.
                   </p>
-                  <p className="text-xs text-[#5C554F] mt-2 bg-[#EEF1EF] p-2 rounded-lg">
-                    Note: Clearing your browser data will delete local logs. You can export encrypted backups anytime.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Option B: Temporary Encrypted Cloud */}
-            <div
-              onClick={() => setStorageMode('temporary_cloud')}
-              className={`cursor-pointer rounded-2xl border-2 p-4 transition-all ${
-                storageMode === 'temporary_cloud'
-                  ? 'border-[#1F5A4C] bg-[#FDF9F7] shadow-xs'
-                  : 'border-[#E5DED5] bg-white hover:border-[#D0C7BC]'
-              }`}
-            >
-              <div className="flex items-start gap-3">
-                <div
-                  className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${
-                    storageMode === 'temporary_cloud' ? 'bg-[#1F5A4C] text-white' : 'bg-[#EEF1EF] text-[#68615C]'
-                  }`}
-                >
-                  <Cloud className="w-5 h-5" />
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center justify-between">
-                    <p className="font-semibold text-sm text-[#231F1D]">
-                      Option B — Temporary Encrypted Cloud
-                    </p>
-                    <Badge variant="warning">Auto-Purged</Badge>
-                  </div>
-                  <p className="text-xs text-[#554E48] mt-1 leading-relaxed">
-                    Encrypted on your device before transfer, with automated hard deletion after your chosen retention window (30 days default).
+                  <p className="text-xs text-[#5C554F] bg-[#EEF1EF] p-2 rounded-lg leading-relaxed">
+                    It isn&apos;t synced to other devices or browsers, and clearing your browsing data or using private
+                    browsing can remove it. You can download a backup and restore it any time from Settings → Manage
+                    storage.
                   </p>
                 </div>
               </div>
@@ -218,10 +174,8 @@ export default function OnboardingPage() {
 
           <Card variant="muted" className="text-left text-xs space-y-2 max-w-sm mx-auto p-4">
             <div className="flex items-center justify-between pb-2 border-b border-[#E5DED5]">
-              <span className="text-[#68615C]">Storage Mode:</span>
-              <span className="font-semibold text-[#231F1D]">
-                {storageMode === 'device_only' ? 'Device Only (IndexedDB)' : 'Temporary Cloud (Encrypted)'}
-              </span>
+              <span className="text-[#68615C]">Stored:</span>
+              <span className="font-semibold text-[#231F1D]">This browser, this device</span>
             </div>
             <div className="flex items-center justify-between pb-2 border-b border-[#E5DED5]">
               <span className="text-[#68615C]">Selected Symptoms:</span>

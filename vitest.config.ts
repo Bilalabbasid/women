@@ -8,6 +8,10 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     setupFiles: ['./src/test/setup.ts'],
+    // .claude/worktrees/* are separate git worktrees for parallel UI sessions, each
+    // a full copy of the repo at its own branch tip — exclude them or every test
+    // here runs 1 + N(worktrees) times and failures get misattributed to this checkout.
+    exclude: ['**/node_modules/**', '**/.claude/**', '**/dist/**'],
   },
   resolve: {
     alias: {

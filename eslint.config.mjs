@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // .claude/worktrees/* are separate git worktrees (each a full repo copy,
+    // own node_modules) for parallel UI sessions — not part of this checkout's source.
+    ".claude/**",
   ]),
 ]);
 

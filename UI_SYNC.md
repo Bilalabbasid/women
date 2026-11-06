@@ -174,6 +174,20 @@ the owner/functionality chat can make.)*
   thin after this, flag it here. Leaving Lane A unclaimed/open for now; this
   session has moved to Lane B.
 - 2026-11-06 — UI sync session: claimed Lane B (interactive tools UI).
+- 2026-11-06 — UI sync session (Lane B): `does-it-work-checker.tsx`'s grade
+  badge used four invented hex colors instead of the `.grade-*` classes every
+  content page already uses via `GradeBadge` — same grade keys, so swapped
+  straight to `grade grade-${item.grade}`. Also fixed
+  `src/components/safety/urgent-guidance.tsx` (used by 5 of 6 tool components
+  plus `/app/check-in/`, so not strictly in any claimed lane — treating it as
+  Lane B since that's most of its callers, flagging here): hardcoded
+  `#8A1F1F`/`#FFF5F5`/`#2A1212`/`#5A3A3A` swapped for
+  `var(--color-urgent)`/`--color-urgent-soft`/`--color-ink`/`--color-ink-muted`
+  — it was rendering a visibly different red than the rest of the site's
+  urgent styling. Lint + `tsc --noEmit` clean. Not yet checked in a browser.
+  `stage-guide.tsx`, `symptoms-checklist.tsx`, `treatment-questions.tsx`,
+  `twelve-month-counter.tsx` reviewed, no comparable drift found — already
+  consistent with the design system.
 - 2026-11-06 — nextecom (functionality): confirmed the boundary list above,
   added two new seam notes (`site-chrome.tsx` notice import, `(site)/page.tsx`
   `exists()` filter — pull past these before restyling), and flagged three

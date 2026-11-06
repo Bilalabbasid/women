@@ -44,7 +44,16 @@ worktree is already on its own branch, branched from `site-rebuild` at commit
 - Lane A — `src/components/ui/{badge,button,card}.tsx` — 2026-11-06 — done: replaced
   hardcoded hex (several off-brand/drifted, including a peach badge border not in
   BRAND.md's palette) with the `--color-*` tokens from `globals.css`. No API/props
-  changes, so nothing else needs to adjust call sites.
+  changes, so nothing else needs to adjust call sites. PR: https://github.com/Bilalabbasid/women/pull/1
+- Lane A — `src/app/(site)/page.tsx` ("Latest articles & evidence updates") —
+  2026-11-06 — done: the homepage's recent-updates feed only excluded
+  `page_type: legal`, so the two `page_type: about` pages (About us, How we make
+  money) showed up next to real evidence content. Added `about` to the same
+  exclusion. Owner-requested ("remove these blogs they are useless"). Not
+  live-verified in a browser — port 3000's dev server belongs to another session
+  (root checkout, PID visible in Next's own lock message), so didn't want to
+  kill it; lint is clean and the fix is a one-line filter addition matching the
+  existing `legal` exclusion pattern.
 
 ## Cross-lane requests
 

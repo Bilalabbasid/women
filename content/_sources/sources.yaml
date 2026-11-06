@@ -552,3 +552,161 @@
   key_finding: "Compounding pharmacies market 'bioidentical hormone' preparations as natural, safer, and more effective than FDA-approved menopausal hormone therapy, but evidence to support those safety and effectiveness claims is lacking. ACOG recommends against routinely prescribing compounded bioidentical MHT when FDA-approved formulations exist; clinicians should counsel patients who request it anyway on the lack of FDA approval and the risks specific to compounding (no standardized testing for purity, potency, or sterility). High-quality randomized controlled trials comparing compounded with FDA-approved MHT are still needed."
   funding_conflict: null
   verified: true
+
+- id: kamp-menopause-hair-disorders-2022
+  title: "Menopause, skin and common dermatoses. Part 1: hair disorders"
+  authors: [Kamp E, Ashraf M, Musbahi E, DeGiovanni C]
+  publisher: Clinical and Experimental Dermatology
+  year: 2022
+  type: other
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10092469/
+  doi: 10.1111/ced.15327
+  accessed: "2026-11-06"
+  population: Peri- and postmenopausal women with hair changes
+  key_finding: "Literature review. A reduction in anagen (growth-phase) hairs is seen in postmenopausal women, more apparent frontally than occipitally. Female pattern hair loss (FPHL): frontovertical thinning with a preserved frontal hairline; most patients have normal androgen levels; testosterone/prolactin testing is warranted only if other signs of androgen excess (hirsutism, severe acne, irregular menses) are present. There is insufficient evidence to support the role of HRT in FPHL; first-line treatment is topical minoxidil (2% solution 1-2 times/day, or 5% foam once daily). Frontal fibrosing alopecia is also associated with the perimenopausal state. Facial hirsutism is seen in about 50% of postmenopausal women, usually with normal androgen levels."
+  funding_conflict: null
+  verified: true
+  notes: "Confirmed against the full open-access text (PMC), not just the abstract, since the specific treatment/prevalence figures aren't in the abstract."
+
+- id: viscomi-menopausal-skin-hrt-2025
+  title: "Managing Menopausal Skin Changes: A Narrative Review of Skin Quality Changes, Their Aesthetic Impact, and the Actual Role of Hormone Replacement Therapy in Improvement"
+  authors: [Viscomi B, Muniz M, Sattler S]
+  publisher: Journal of Cosmetic Dermatology
+  year: 2025
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/40847905/
+  doi: 10.1111/jocd.70393
+  accessed: "2026-11-06"
+  population: Menopausal and perimenopausal women with skin concerns
+  key_finding: "Declining estrogen contributes to decreased collagen production, reduced elasticity, and moisture loss, causing dryness and wrinkling. Most studies report positive associations between HRT and improved menopausal skin aging, but findings are inconsistent, and clinical guidelines do not support HRT use solely for estrogen-deficient skin, due to a lack of robust skin-specific clinical trials. Few aesthetics studies stratify by menopausal or HRT status."
+  funding_conflict: null
+  verified: true
+
+- id: hubbard-breast-pain-assessment-2020
+  title: "Breast pain: assessment, management, and referral criteria"
+  authors: [Hubbard TJE, Sharma A, Ferguson DJ]
+  publisher: British Journal of General Practice
+  year: 2020
+  type: other
+  url: https://bjgp.org/content/70/697/419
+  doi: 10.3399/bjgp20X712133
+  accessed: "2026-11-06"
+  population: Women presenting with breast pain (mastalgia) in primary care
+  key_finding: "Mastalgia affects up to 70% of women in their lifetime. Cyclical pain (two-thirds of true mastalgia) is hormone-related, worsening in the week before menses and relieved at onset; non-cyclical (one-third) includes cysts, pregnancy, trauma, and mastitis/abscess (erythema, swelling, focal pain). Extra-mammary chest-wall pain (e.g. costochondritis) is now the commonest type referred to breast clinics, treated with NSAIDs. Per NICE: breast pain alone is not a criterion for urgent cancer referral (positive predictive value under 3%); routine referral is considered if cyclical pain affects quality of life or sleep for more than 3 months and is unresponsive to first-line care. A well-fitting bra can fully resolve symptoms per multiple studies. Topical NSAIDs (diclofenac/piroxicam) are first-line treatment. Evening primrose oil, vitamin E, pyridoxine, and diuretics have no proven efficacy and are not recommended by NICE."
+  funding_conflict: null
+  verified: true
+  notes: "PMC and Europe PMC both flag this article as not open access, and automated fetches of the publisher page were blocked (plain HTTP fetch returned only the page header). Confirmed by reading the full article text in a real browser session instead."
+
+- id: heitkemper-chang-ibs-hormones-2009
+  title: "Do Fluctuations in Ovarian Hormones Affect Gastrointestinal Symptoms in Women With Irritable Bowel Syndrome?"
+  authors: [Heitkemper MM, Chang L]
+  publisher: Gender Medicine
+  year: 2009
+  type: other
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3322543/
+  doi: 10.1016/j.genm.2009.03.004
+  accessed: "2026-11-06"
+  population: Women with and without IBS, across the menstrual cycle and perimenopause
+  key_finding: "Literature review (18 papers, Jan 1980-Sep 2008) on increased GI symptoms (bowel discomfort, abdominal pain, bloating, altered bowel patterns) reported during the premenstrual/menstrual phase and the perimenopause period, in women with and without IBS. Proposes declining or low ovarian hormone levels (estrogen/progesterone withdrawal) as one possible mechanism, directly or indirectly, but explicitly states the review 'highlights the need for confirmatory preclinical and clinical studies' — the mechanism is not established, only an association."
+  funding_conflict: null
+  verified: true
+
+- id: khalifey-hrt-cardiovascular-2026
+  title: "The impact of hormone replacement therapy on cardiovascular health in postmenopausal women: a narrative review"
+  authors: [Khalifey HT, Mahereen R, Adwan R, Chahine R, Kaidali M, Mirza SF, Tullah SN, Shaikh S, Hammad S, Sukkarieh HH]
+  publisher: Frontiers in Reproductive Health
+  year: 2026
+  type: other
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12872825/
+  doi: 10.3389/frph.2026.1745210
+  accessed: "2026-11-06"
+  population: Postmenopausal women, cardiovascular disease risk and HRT
+  key_finding: "The menopause transition is accompanied by substantially increased cardiovascular disease (CVD) risk; vasomotor symptoms correlate with increased cardiovascular risk. CV risk intensifies after age 50, with the proportion of women at intermediate-to-high CV risk nearly doubling between ages 51 and 55. 'Timing hypothesis': HRT started within 10 years of menopause onset or before age 60 may confer cardiovascular benefit; later initiation may increase risk. The modern approach emphasizes individualized selection, lower-dose regimens, and transdermal delivery. Significant uncertainties persist due to trial heterogeneity and underrepresentation of diverse populations."
+  funding_conflict: null
+  verified: true
+
+- id: ftc-health-products-compliance-guidance-2022
+  title: "Health Products Compliance Guidance"
+  authors: []
+  publisher: Federal Trade Commission
+  year: 2022
+  type: regulator_statement
+  url: https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance
+  doi: null
+  accessed: "2026-11-06"
+  population: Marketers of dietary supplements and health-related products (US)
+  key_finding: "FTC staff guidance (replacing the 1998 dietary supplements advertising guide) requires health/safety claims about dietary supplements and other health-related products to be truthful, not misleading, and backed by competent and reliable scientific evidence before the ad runs — advertisers must have adequate substantiation for every objective claim made, expressly or by implication. This is guidance only, without the force of law, but reflects FTC Act Section 5/12 enforcement principles drawn from over 200 settled or adjudicated cases since 1998."
+  funding_conflict: null
+  verified: true
+
+- id: menopause-society-choosing-practitioner
+  title: "Choosing a Healthcare Practitioner"
+  authors: []
+  publisher: The Menopause Society
+  year: 2026
+  type: patient_information
+  url: https://menopause.org/patient-education/choosing-a-healthcare-practitioner
+  doi: null
+  accessed: "2026-11-06"
+  population: Women seeking a menopause-knowledgeable healthcare provider
+  key_finding: "The Menopause Society Certified Practitioner (MSCP) credential is awarded to licensed healthcare professionals who pass a competency examination demonstrating expertise in midlife women's health; valid for 3 years, renewable by re-examination or continuing education credits. The Society maintains a searchable 'Find a Menopause Clinician' database including MDs, DOs, nurse practitioners, PAs, nurse midwives, pharmacists, nurses, physical therapists, social workers, and PhDs who provide care for women from perimenopause onward."
+  funding_conflict: null
+  verified: true
+
+- id: lethaby-cochrane-phytoestrogens-2013
+  title: "Phytoestrogens for menopausal vasomotor symptoms"
+  authors: [Lethaby A, Marjoribanks J, Kronenberg F, Roberts H, Eden J, Brown J]
+  publisher: Cochrane Database of Systematic Reviews
+  year: 2013
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/24323914/
+  doi: 10.1002/14651858.CD001395.pub4
+  accessed: "2026-11-06"
+  population: "Perimenopausal and postmenopausal women with vasomotor symptoms; 43 RCTs, 4,364 participants (breast cancer history excluded)"
+  key_finding: "Pooled meta-analysis of 5 trials of Promensil (a red clover extract) found no significant difference vs. placebo in hot flush frequency (mean difference -0.93, 95% CI -1.95 to 0.10). Authors' conclusion: no conclusive evidence shows phytoestrogen supplements effectively reduce the frequency or severity of hot flushes and night sweats, though high-genistein extracts (over 30mg/day) in 4 unpooled trials showed more consistent reduction and should be further investigated. A strong placebo effect was noted (1-59% reduction with placebo). No evidence of estrogenic stimulation of the endometrium or vagina, or other adverse effects, up to 2 years."
+  funding_conflict: "Lethaby disclosed advising the author of one unpublished included study (Bicca 2004), on which she is a co-author; Eden is an author of two included studies (Knight 1999, 2001) — both disclosed in the review."
+  verified: true
+
+- id: kazemi-evening-primrose-oil-2021
+  title: "The Effect of Evening Primrose Oil Capsule on Hot Flashes and Night Sweats in Postmenopausal Women: A Single-Blind Randomized Controlled Trial"
+  authors: [Kazemi F, Masoumi SZ, Shayan A, Oshvandi K]
+  publisher: Journal of Menopausal Medicine
+  year: 2021
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/33942584/
+  doi: 10.6118/jmm.20033
+  accessed: "2026-11-06"
+  population: "Postmenopausal women, Hamadan health centers, single-blind RCT (evening primrose oil 1000mg capsule twice daily vs. placebo, 8 weeks)"
+  key_finding: "No statistically significant difference in hot flash duration, frequency, or severity vs. placebo (P>0.05). Night sweats frequency and severity were significantly lower in the intervention group (P<0.05)."
+  funding_conflict: null
+  verified: true
+  notes: "Single-blind, single small trial — not strong enough alone to establish a night-sweats-specific benefit, but worth noting the hot-flash/night-sweat distinction rather than treating EPO as uniformly ineffective."
+
+- id: uspstf-vitamin-d-calcium-fractures-2018
+  title: "Vitamin D, Calcium, or Combined Supplementation for the Primary Prevention of Fractures in Community-Dwelling Adults: Preventive Medication"
+  authors: []
+  publisher: US Preventive Services Task Force
+  year: 2018
+  type: guideline
+  url: https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/vitamin-d-calcium-or-combined-supplementation-for-the-primary-prevention-of-fractures-in-adults-preventive-medication
+  doi: null
+  accessed: "2026-11-06"
+  population: "Community-dwelling postmenopausal women, men, and premenopausal women (US)"
+  key_finding: "USPSTF recommends against daily supplementation with 400 IU or less of vitamin D and 1000mg or less of calcium for primary fracture prevention in postmenopausal women (Grade D). Evidence is insufficient (Grade I) to assess benefit or harm at higher doses in postmenopausal women, and insufficient for men or premenopausal women at any dose. The page explicitly flags that this topic is being updated, with a successor review in progress on vitamin D/calcium for falls and fractures — check for a newer statement before treating this as the final word."
+  funding_conflict: null
+  verified: true
+  notes: "Correction to a claim first proposed for this entry: the current (2018) USPSTF position, read directly on this page's 'Other Relevant USPSTF Recommendations' row, is that USPSTF RECOMMENDS AGAINST vitamin D supplementation to prevent falls in community-dwelling adults 65+ — the opposite of the for-fall-prevention claim first drafted here, which was the superseded 2012-era position. Dropped that sub-claim from key_finding rather than publish it backwards; do not cite this source for a fall-prevention recommendation."
+
+- id: cohen-omega3-vms-rct-2014
+  title: "Efficacy of Omega-3 Treatment for Vasomotor Symptoms: A Randomized Controlled Trial"
+  authors: [Cohen LS, Joffe H, Guthrie KA, Ensrud KE, Freeman M, Carpenter JS, Learman LA, Newton KM, Reed SD, Manson JE, Sternfeld B, Caan B, Freeman EW, LaCroix AZ, Tinker LF, Booth LaForce C, Larson JC, Anderson GL]
+  publisher: Menopause (MsFLASH network trial)
+  year: 2014
+  type: rct
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4072122/
+  doi: 10.1097/GME.0b013e31829e40b8
+  accessed: "2026-11-06"
+  population: "Peri- and postmenopausal women with VMS, MsFLASH network, 3x2 factorial 12-week RCT (omega-3 n=177 vs. placebo n=178, crossed with yoga/exercise/usual activity)"
+  key_finding: "1.8g/day omega-3 (EPA 425mg + DHA 100mg + other omega-3s 90mg per capsule) for 12 weeks did not significantly reduce VMS frequency vs. placebo (relative difference of 0.3 fewer hot flashes/day, 95% CI -0.5 to 1.0, p=0.28) or VMS bother (p=0.36). No improvement in self-reported sleep or mood vs. placebo (p>0.09 for all comparisons). Confirmed against the full open-access text (PMC), not just the abstract."
+  funding_conflict: null
+  verified: true

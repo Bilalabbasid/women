@@ -785,3 +785,119 @@
   funding_conflict: null
   notes: "Confirmed the block is real: forhers.com returns a Cloudflare interactive challenge (HTTP 403, 'Just a moment...') to a real browser session, not just to an API-based fetch. Do not state a specific Hers price, insurance policy, or prescribing detail anywhere without reading the real page first."
   verified: true
+
+- id: owada-suzuki-dizziness-menopause-2014
+  title: "The relationship between vasomotor symptoms and menopause-associated dizziness"
+  authors: [Owada S, Suzuki M]
+  publisher: Acta Otolaryngol
+  year: 2014
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/24138120/
+  doi: 10.3109/00016489.2013.841991
+  accessed: "2026-11-07"
+  population: "85 women aged 40-59 with diagnosed menopause-related dizziness, retrospective chart review (29 with vasomotor symptoms, 38 without)"
+  key_finding: "Recovery from menopause-related dizziness (diagnosed by neuro-otological exam, followed until improvement) was significantly slower in women with vasomotor symptoms than those without. Within the VMS group, those treated with HRT (n=7) recovered faster than those not treated (n=22), but this HRT difference was not statistically significant."
+  funding_conflict: null
+  verified: true
+  notes: "Corrected from the first-drafted entry: first author's initial is S (Owada S), not T, confirmed directly on PubMed. The finding is about recovery rate from a diagnosed dizziness episode, not a correlation between symptom severity scores — tightened the key_finding to match what the abstract actually reports."
+
+- id: castillo-bustamante-vestibular-menopause-2024
+  title: "Balance in Transition: Unraveling the Link Between Menopause and Vertigo"
+  authors: [Castillo-Bustamante M, Celebisoy N, Echavarria LG, Franco I, Valencia S, Gonzalez S, Garcia A]
+  publisher: Cureus
+  year: 2024
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/38813338/
+  doi: 10.7759/cureus.59277
+  accessed: "2026-11-07"
+  population: Perimenopausal and postmenopausal women with vestibular/vertigo symptoms
+  key_finding: "Narrative review proposing estrogen's modulatory role in neurosensory function, including the vestibular system, as a plausible mechanism linking the menopausal hormonal decline to increased vertigo symptoms. Describes this as a developing research area with clinical implications for diagnosis and treatment of postmenopausal vestibular disorders."
+  funding_conflict: null
+  verified: true
+  notes: "Narrative review, not a primary study — typed 'other'. The abstract itself doesn't name vestibular migraine as a specific overlapping diagnosis; that detail (if used in the article) should be attributed to the full text, not this abstract-level entry."
+
+- id: reinke-frozen-shoulder-hrt-2026
+  title: "A preliminary pilot study to address design issues related to research on potential association of hormone therapy and adhesive capsulitis"
+  authors: [Reinke EK, Ford AC, Wahl E, Kennedy J, Poehlein E, Green CL, Saltzman E, Wittstein JR]
+  publisher: Climacteric
+  year: 2026
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/41614260/
+  doi: 10.1080/13697137.2026.2615391
+  accessed: "2026-11-07"
+  population: "1,952 postmenopausal women aged 40-60 at a single US health maintenance organization (152 on hormone therapy, 1,800 not)"
+  key_finding: "Adhesive capsulitis (frozen shoulder) was diagnosed in 7.65% of women not on hormone therapy versus 3.95% of those on hormone therapy (odds ratio 1.99, 95% CI 0.86-4.58, p=0.10) — not statistically significant. Explicitly framed by the authors as a pilot study to establish sample-size needs for a larger prospective trial, not a conclusive finding either way."
+  funding_conflict: null
+  verified: true
+
+- id: baharvand-burning-mouth-syndrome-2013
+  title: "Comparison of Burning Mouth Syndrome Prevalence and its Related Factors between Menopausal and Non-Menopausal Women"
+  authors: [Baharvand M, Eshghpour M, Mortazavi H, Fallah Z]
+  publisher: Journal of Dental Materials and Techniques
+  year: 2013
+  type: small_study
+  url: "https://jdmt.mums.ac.ir/article_2052.html"
+  doi: 10.22038/jdmt.2013.2052
+  accessed: "2026-11-07"
+  population: "450 female patients aged 30-60 attending dental clinics in Gorgan, Iran"
+  key_finding: "13.8% of patients (n=62) had burning mouth syndrome (BMS). Logistic regression found educational level, menopausal status, antidepressant use, and systemic disease significantly related to BMS; menopause was associated with an odds ratio of 4.45 for BMS."
+  funding_conflict: null
+  verified: true
+
+- id: gagliano-dry-eye-hormones-2014
+  title: "Low levels of 17-β-oestradiol, oestrone and testosterone correlate with severe evaporative dysfunctional tear syndrome in postmenopausal women: a case-control study"
+  authors: [Gagliano C, Caruso S, Napolitano G, Malaguarnera G, Cicinelli MV, Amato R, Reibaldi M, Incarbone G, Bucolo C, Drago F, Avitabile T]
+  publisher: British Journal of Ophthalmology
+  year: 2014
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/24390165/
+  doi: 10.1136/bjophthalmol-2012-302705
+  accessed: "2026-11-07"
+  population: "44 postmenopausal women: 22 with severe evaporative dry eye syndrome, 22 controls"
+  key_finding: "Serum 17-beta-oestradiol, oestrone, and total testosterone were all significantly lower in the dry-eye group than controls (p<0.05). Within the dry-eye group, all three hormones were inversely correlated with tear film osmolarity (r=-0.70, -0.88, and -0.81 respectively). Schirmer test and tear film break-up time were also significantly lower in the dry-eye group (p<0.001)."
+  funding_conflict: null
+  verified: true
+  notes: "Small case-control study (n=44) — weigh accordingly."
+
+- id: khunger-mehrotra-menopausal-acne-2019
+  title: "Menopausal Acne - Challenges And Solutions"
+  authors: [Khunger N, Mehrotra K]
+  publisher: International Journal of Women's Health
+  year: 2019
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/31754313/
+  doi: 10.2147/IJWH.S174292
+  accessed: "2026-11-07"
+  population: Menopausal women with acne
+  key_finding: "Menopausal acne has a multifactorial etiology, with a relative rise in androgens (clinical hyperandrogenism) as the major driver, also manifesting as hirsutism and androgenetic alopecia. Most menopausal women with isolated, limited acne have normal (normoandrogenic) serum levels and don't need extensive investigation, though baseline total testosterone is useful. Prolonged topical therapy is the mainstay for mild acne without virilization; combined oral contraceptives are effective but relatively contraindicated postmenopause; spironolactone is the first-choice oral anti-androgen when one is needed."
+  funding_conflict: null
+  verified: true
+
+- id: orendorz-fraczkowska-hearing-balance-menopause-2020
+  title: "Organ of hearing and balance in peri- and postmenopausal women. Effects of hormone replacement therapy on hearing and balance in peri- and post-menopausal women: The current state of knowledge"
+  authors: [Orendorz-Fraczkowska K, Temporale H]
+  publisher: Advances in Clinical and Experimental Medicine
+  year: 2020
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/32589823/
+  doi: 10.17219/acem/121935
+  accessed: "2026-11-07"
+  population: Peri- and postmenopausal women
+  key_finding: "Worldwide published data on hearing loss and dizziness in perimenopausal women is inconsistent, and reports on sex hormones' effects on the ear and its aging are similarly controversial. This review concludes that hearing and balance impairment is significantly related to osteoporosis resulting from estrogen deficiency at menopause, and calls for further detailed study of HRT's effect on hearing and balance, accounting for HRT type, serum hormone levels, and osteoporosis status."
+  funding_conflict: null
+  verified: true
+  notes: "Narrative review explicitly describing the underlying evidence as inconsistent/controversial — cite as 'evidence is mixed', not as a settled mechanism."
+
+- id: liu-menopausal-symptoms-nurses-2015
+  title: "Factors associated with menopausal symptoms among middle-aged registered nurses in Beijing"
+  authors: [Liu P, Yuan Y, Liu M, Wang Y, Li X, Yang M, Xi S, Ding Y, Liu JE, Xu G, Guo X, Ren Z, Bai W, Yao C]
+  publisher: Gynecological Endocrinology
+  year: 2015
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/25310028/
+  doi: 10.3109/09513590.2014.971237
+  accessed: "2026-11-07"
+  population: "2,100 registered nurses aged 40-55 at 20 hospitals in Beijing, China (self-administered questionnaire survey)"
+  key_finding: "Menopausal status was the factor most strongly associated with menopausal symptoms overall (p<0.01), including hot flashes and sweating (strongest association), paresthesiae, insomnia, arthralgia/myalgia, palpitations, skin formication (crawling-skin sensation), and unsatisfactory sexual life. Psychosocial factors (recent upsetting events, pessimism) were also significantly associated with most symptoms."
+  funding_conflict: null
+  verified: true

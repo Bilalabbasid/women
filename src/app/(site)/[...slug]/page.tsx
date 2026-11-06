@@ -121,7 +121,22 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
           if (part.type === 'tool') return <ToolIsland key={`tool-${i}`} id={part.tool} />;
           if (part.type === 'product-slot') return <ProductSlotView key={`slot-${i}`} id={part.slot} />;
           if (part.type === 'product') return <ProductBlock key={`product-${i}`} id={part.product} />;
-          return <div key={`html-${i}`} className="prose" dangerouslySetInnerHTML={{ __html: part.html }} />;
+          // The opening paragraph is the page's stand-alone answer (symptom
+          // "quick answer", does-it-work verdict, comparison "quick answer: ...").
+          // Give it a distinct card so it reads as the answer at a glance,
+          // without changing or duplicating any wording.
+          const isLead = i === 0;
+          return (
+            <div
+              key={`html-${i}`}
+              className={
+                isLead
+                  ? 'prose [&>p:first-of-type]:rounded-xl [&>p:first-of-type]:border [&>p:first-of-type]:border-[var(--color-rule)] [&>p:first-of-type]:bg-[var(--color-paper-raised)] [&>p:first-of-type]:p-4 [&>p:first-of-type]:text-lg [&>p:first-of-type]:leading-relaxed'
+                  : 'prose'
+              }
+              dangerouslySetInnerHTML={{ __html: part.html }}
+            />
+          );
         })}
         {rendered.questionLists > 0 && <QuestionTools />}
 
@@ -129,15 +144,18 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
         <EmailCapture title={`Get the ${fm.title.toLowerCase()} doctor question sheet`} />
 
         {children.length > 0 && (
-          <section aria-labelledby="in-this-section" className="space-y-2">
+          <section aria-labelledby="in-this-section" className="space-y-3">
             <h2 id="in-this-section" className="text-2xl">
               In this section
             </h2>
-            <ul className="space-y-1">
+            <ul className="grid gap-3 sm:grid-cols-2">
               {children.map((c) => (
                 <li key={c.url}>
-                  <Link href={c.url} className="tap text-[var(--color-link)] underline">
-                    {c.fm.title}
+                  <Link
+                    href={c.url}
+                    className="tap block rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-3 font-semibold text-[var(--color-link)] no-underline hover:bg-[var(--color-accent-soft)]"
+                  >
+                    {c.fm.title} →
                   </Link>
                 </li>
               ))}
@@ -150,25 +168,30 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
             <h2 id="faq" className="text-2xl">
               Questions people ask
             </h2>
-            {faq.map((f) => (
-              <div key={f.q}>
-                <h3 className="text-xl">{f.q}</h3>
-                <p>{f.a}</p>
-              </div>
-            ))}
+            <div className="space-y-3">
+              {faq.map((f) => (
+                <div key={f.q} className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
+                  <h3 className="text-lg font-semibold">{f.q}</h3>
+                  <p className="mt-1.5 text-[var(--color-ink-muted)]">{f.a}</p>
+                </div>
+              ))}
+            </div>
           </section>
         )}
 
         {related.length > 0 && (
-          <section aria-labelledby="related" className="space-y-2">
+          <section aria-labelledby="related" className="space-y-3">
             <h2 id="related" className="text-2xl">
               Related pages
             </h2>
-            <ul className="space-y-1">
+            <ul className="grid gap-3 sm:grid-cols-2">
               {related.map((r) => (
                 <li key={r.url}>
-                  <Link href={r.url} className="tap text-[var(--color-link)] underline">
-                    {r.fm.title}
+                  <Link
+                    href={r.url}
+                    className="tap block rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-3 font-semibold text-[var(--color-link)] no-underline hover:bg-[var(--color-accent-soft)]"
+                  >
+                    {r.fm.title} →
                   </Link>
                 </li>
               ))}

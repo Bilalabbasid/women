@@ -33,7 +33,7 @@ export function AppHeader({
   };
 
   return (
-    <header className="no-print sticky top-0 z-30 bg-[#F7F6F2]/90 backdrop-blur-md border-b border-[#EBE3D8] transition-all">
+    <header className="no-print sticky top-0 z-30 bg-[var(--color-paper)]/90 backdrop-blur-md border-b border-[var(--color-rule)] transition-all">
       <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
         {/* Left: Back or Brand Icon */}
         <div className="flex items-center gap-2.5">
@@ -41,7 +41,7 @@ export function AppHeader({
             <button
               onClick={handleBack}
               aria-label="Go back"
-              className="w-10 h-10 -ml-1 rounded-xl flex items-center justify-center text-[#554E48] hover:bg-[#EEF1EF] active:scale-95 transition"
+              className="w-10 h-10 -ml-1 rounded-xl flex items-center justify-center text-[var(--color-ink-muted)] hover:bg-[var(--color-accent-soft)] active:scale-95 transition"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
@@ -51,18 +51,18 @@ export function AppHeader({
               className="flex items-center gap-2 group"
               aria-label="MenoVerdict Dashboard"
             >
-              <div className="w-8 h-8 rounded-lg bg-[#1F5A4C] flex items-center justify-center shadow-xs">
+              <div className="w-8 h-8 rounded-lg bg-[var(--color-accent)] flex items-center justify-center shadow-xs">
                 <span className="text-white font-serif font-bold text-base leading-none">MV</span>
               </div>
             </Link>
           )}
 
           <div>
-            <h1 className="text-base sm:text-lg font-serif font-semibold text-[#231F1D] leading-tight">
+            <h1 className="text-base sm:text-lg font-serif font-semibold text-[var(--color-ink)] leading-tight">
               {title}
             </h1>
             {subtitle && (
-              <p className="text-xs text-[#68615C] mt-0.5 line-clamp-1">{subtitle}</p>
+              <p className="text-xs text-[var(--color-ink-muted)] mt-0.5 line-clamp-1">{subtitle}</p>
             )}
           </div>
         </div>
@@ -72,10 +72,10 @@ export function AppHeader({
           {showPrivacyBadge && (
             <Link
               href="/app/privacy/"
-              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-[#EDF3EF] text-[#2C6E49] border border-[#CFDFD5] hover:bg-[#E2ECE5] transition"
+              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-[var(--color-accent-soft)] text-[var(--color-accent)] border border-[var(--color-accent)]/30 hover:bg-[var(--color-accent)]/15 transition"
               title="Your health data stays on this device"
             >
-              <ShieldCheck className="w-3.5 h-3.5 text-[#2C6E49]" />
+              <ShieldCheck className="w-3.5 h-3.5 text-[var(--color-accent)]" />
               <span className="hidden xs:inline">Device Only</span>
             </Link>
           )}
@@ -84,7 +84,7 @@ export function AppHeader({
             <Link
               href="/app/settings/"
               aria-label="App Settings"
-              className="w-9 h-9 rounded-xl flex items-center justify-center text-[#68615C] hover:bg-[#EEF1EF] hover:text-[#231F1D] transition"
+              className="w-9 h-9 rounded-xl flex items-center justify-center text-[var(--color-ink-muted)] hover:bg-[var(--color-accent-soft)] hover:text-[var(--color-ink)] transition"
             >
               <Settings className="w-4 h-4" />
             </Link>

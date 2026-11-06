@@ -408,14 +408,6 @@ export function DoesItWorkChecker({ liveUrls }: { liveUrls: string[] }) {
           <ul className="space-y-4">
             {filtered.map((item) => {
               const saved = state.bookmarkedIds.includes(item.id);
-              const badgeColor =
-                item.grade === 'strong'
-                  ? 'bg-[#1D5B4C] text-white'
-                  : item.grade === 'moderate'
-                    ? 'bg-[#2B4C6F] text-white'
-                    : item.grade === 'limited'
-                      ? 'bg-[#6B5322] text-white'
-                      : 'bg-[#7A2E2E] text-white';
               return (
                 <li
                   key={item.id}
@@ -428,7 +420,9 @@ export function DoesItWorkChecker({ liveUrls }: { liveUrls: string[] }) {
                       </span>
                       <h3 className="text-xl font-semibold">{item.name}</h3>
                     </div>
-                    <span className={`rounded-full px-3 py-1 text-xs font-bold ${badgeColor}`}>{item.gradeLabel}</span>
+                    {/* Same .grade-* classes the article pages use (globals.css) — one
+                        evidence-grade color system site-wide, not a one-off palette. */}
+                    <span className={`grade grade-${item.grade}`}>{item.gradeLabel}</span>
                   </div>
                   <p>{item.verdictSummary}</p>
                   <p className="text-sm text-[var(--color-ink-muted)]">

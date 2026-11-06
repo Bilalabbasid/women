@@ -77,21 +77,21 @@ export function PWAInstallBanner({ variant = 'banner' }: { variant?: 'banner' | 
       aria-labelledby="ios-install-title"
       className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 p-3 sm:items-center"
     >
-      <div className="w-full max-w-sm space-y-5 rounded-3xl border border-[#E5DED5] bg-white p-6 shadow-2xl">
+      <div className="w-full max-w-sm space-y-5 rounded-3xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-6 shadow-2xl">
         <div className="flex items-start justify-between">
-          <h3 id="ios-install-title" className="font-serif text-lg font-semibold text-[#231F1D]">
+          <h3 id="ios-install-title" className="font-serif text-lg font-semibold text-[var(--color-ink)]">
             Install on iPhone or iPad
           </h3>
           <button
             type="button"
             onClick={() => setShowIOSModal(false)}
             aria-label="Close install instructions"
-            className="min-h-[44px] min-w-[44px] p-2 text-[#5C554F] hover:text-[#231F1D]"
+            className="min-h-[44px] min-w-[44px] p-2 text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]"
           >
             <X className="h-5 w-5" aria-hidden="true" />
           </button>
         </div>
-        <ol className="list-decimal space-y-3 pl-5 text-[#3E3834]">
+        <ol className="list-decimal space-y-3 pl-5 text-[var(--color-ink-muted)]">
           <li>
             In Safari, tap <strong>Share</strong> <Share2 className="mx-0.5 inline h-4 w-4" aria-hidden="true" />.
           </li>
@@ -103,7 +103,7 @@ export function PWAInstallBanner({ variant = 'banner' }: { variant?: 'banner' | 
             Tap <strong>Add</strong>.
           </li>
         </ol>
-        <p className="text-[#3E3834]">No App Store account needed. Your journal stays on this device.</p>
+        <p className="text-[var(--color-ink-muted)]">No App Store account needed. Your journal stays on this device.</p>
         <Button variant="outline" fullWidth onClick={() => setShowIOSModal(false)}>
           Got it
         </Button>
@@ -115,14 +115,14 @@ export function PWAInstallBanner({ variant = 'banner' }: { variant?: 'banner' | 
     return (
       <div className="space-y-2">
         {isStandalone ? (
-          <p className="text-[#3E3834]">The app is already installed on this device.</p>
+          <p className="text-[var(--color-ink-muted)]">The app is already installed on this device.</p>
         ) : canInstall ? (
           <Button variant="outline" onClick={handleInstallClick} className="gap-2">
             <Download className="h-4 w-4" aria-hidden="true" />
             Install on this device
           </Button>
         ) : (
-          <p className="text-[#3E3834]">
+          <p className="text-[var(--color-ink-muted)]">
             Your browser doesn&apos;t offer installation here. In Chrome or Edge, use the browser menu
             and choose &ldquo;Install app&rdquo;. On iPhone, use Safari&apos;s Share menu.
           </p>
@@ -136,9 +136,9 @@ export function PWAInstallBanner({ variant = 'banner' }: { variant?: 'banner' | 
 
   return (
     <>
-      <div role="region" aria-label="Install the app" className="border-b border-[#C9DCD4] bg-[#E6EFEB] px-4 py-2.5">
+      <div role="region" aria-label="Install the app" className="border-b border-[var(--color-accent)]/30 bg-[var(--color-accent-soft)] px-4 py-2.5">
         <div className="mx-auto flex max-w-2xl items-center justify-between gap-3">
-          <p className="text-[#231F1D]">
+          <p className="text-[var(--color-ink)]">
             <strong>Install the tracker</strong> so it opens from your home screen and works offline.
           </p>
           <div className="flex items-center gap-2">
@@ -149,7 +149,7 @@ export function PWAInstallBanner({ variant = 'banner' }: { variant?: 'banner' | 
               type="button"
               onClick={() => setBannerDismissed(true)}
               aria-label="Dismiss install banner"
-              className="min-h-[44px] min-w-[44px] p-2 text-[#5C554F] hover:text-[#231F1D]"
+              className="min-h-[44px] min-w-[44px] p-2 text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]"
             >
               <X className="h-4 w-4" aria-hidden="true" />
             </button>

@@ -74,6 +74,7 @@
 
   h1, h2, h3, h4 {
     font-family: var(--font-serif);
+    font-weight: 600;
     line-height: 1.25;
     color: var(--color-ink);
     text-wrap: balance;

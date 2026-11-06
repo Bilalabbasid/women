@@ -35,7 +35,7 @@ export function AppNavigation() {
       {/* Mobile Bottom Navigation (screens < 768px) */}
       <nav
         aria-label="Bottom Navigation"
-        className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#F7F6F2]/95 backdrop-blur-lg border-t border-[#E5DED5] pb-[env(safe-area-inset-bottom,0px)]"
+        className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[var(--color-paper)]/95 backdrop-blur-lg border-t border-[var(--color-rule)] pb-[env(safe-area-inset-bottom,0px)]"
       >
         <div className="grid grid-cols-5 h-16 max-w-lg mx-auto px-1">
           {NAV_ITEMS.map((item) => {
@@ -51,14 +51,14 @@ export function AppNavigation() {
                 className={clsx(
                   'flex flex-col items-center justify-center gap-1 transition-colors select-none group min-h-[48px]',
                   isActive
-                    ? 'text-[#1F5A4C] font-semibold'
-                    : 'text-[#5C554F] hover:text-[#231F1D]'
+                    ? 'text-[var(--color-accent)] font-semibold'
+                    : 'text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]'
                 )}
               >
                 <div
                   className={clsx(
                     'w-9 h-7 rounded-full flex items-center justify-center transition-all',
-                    isActive ? 'bg-[#E6EFEB]' : 'group-hover:bg-[#EEF1EF]'
+                    isActive ? 'bg-[var(--color-accent-soft)]' : 'group-hover:bg-[var(--color-accent-soft)]'
                   )}
                 >
                   <Icon
@@ -76,7 +76,7 @@ export function AppNavigation() {
       </nav>
 
       {/* Desktop / Tablet Sub-Header Navigation (screens >= 768px) */}
-      <div className="hidden md:block border-b border-[#E5DED5] bg-white">
+      <div className="hidden md:block border-b border-[var(--color-rule)] bg-[var(--color-paper-raised)]">
         <div className="max-w-2xl mx-auto px-4 flex items-center gap-1">
           {NAV_ITEMS.map((item) => {
             const Icon = item.icon;
@@ -91,8 +91,8 @@ export function AppNavigation() {
                 className={clsx(
                   'flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors',
                   isActive
-                    ? 'border-[#1F5A4C] text-[#1F5A4C]'
-                    : 'border-transparent text-[#68615C] hover:text-[#231F1D] hover:border-[#D9D1C7]'
+                    ? 'border-[var(--color-accent)] text-[var(--color-accent)]'
+                    : 'border-transparent text-[var(--color-ink-muted)] hover:text-[var(--color-ink)] hover:border-[var(--color-rule)]'
                 )}
               >
                 <Icon className="w-4 h-4" />

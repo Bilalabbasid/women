@@ -24,7 +24,7 @@ export function OfflineIndicator() {
     <div
       role="status"
       aria-live="polite"
-      className="flex items-center justify-center gap-2 bg-[#231F1D] px-4 py-1.5 text-center text-white"
+      className="flex items-center justify-center gap-2 bg-[var(--color-ink)] px-4 py-1.5 text-center text-white"
     >
       <WifiOff className="h-4 w-4" aria-hidden="true" />
       <span>You&apos;re offline. Your journal is still saved on this device.</span>

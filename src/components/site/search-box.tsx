@@ -56,7 +56,7 @@ export function SearchBox() {
           value={q}
           onChange={(e) => setQ(e.target.value)}
           autoComplete="off"
-          className="mt-1 min-h-[48px] w-full rounded-xl border border-[var(--color-rule)] bg-white px-4 text-lg"
+          className="mt-1 min-h-[48px] w-full rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] px-4 text-lg"
           placeholder="For example: night sweats, HRT patch"
         />
       </form>

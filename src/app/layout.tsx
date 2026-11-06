@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: { default: SITE.name, template: `%s | ${SITE.name}` },
   applicationName: SITE.name,
-  manifest: '/manifest.json',
+  manifest: '/manifest.webmanifest',
   // Only production is ever indexable (D-005). Pages may tighten this further.
   robots: isIndexable() ? undefined : { index: false, follow: false },
   appleWebApp: { capable: true, statusBarStyle: 'default', title: SITE.name },

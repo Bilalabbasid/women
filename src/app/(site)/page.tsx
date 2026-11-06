@@ -76,7 +76,7 @@ export default function HomePage() {
   const stages = STAGES.filter((st) => exists(st.href));
   const tools = CORE_TOOLS.filter((t) => exists(t.href));
   const recent = [...pages]
-    .filter((p) => p.fm.page_type !== 'legal')
+    .filter((p) => p.fm.page_type !== 'legal' && p.fm.page_type !== 'about')
     .sort((a, b) => b.fm.updated_at.localeCompare(a.fm.updated_at))
     .slice(0, 6);
 

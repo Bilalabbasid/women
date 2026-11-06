@@ -13,10 +13,10 @@ export function Card({
   ...props
 }: CardProps) {
   const variants = {
-    default: 'bg-white border-[#E5DED5] text-[#231F1D]',
-    muted: 'bg-[#F9F6F0] border-[#E8E1D8] text-[#231F1D]',
-    accent: 'bg-[#E6EFEB] border-[#C9DCD4] text-[#231F1D]',
-    highlight: 'bg-[#EFF5F0] border-[#D1E2D7] text-[#231F1D]',
+    default: 'bg-[var(--color-paper-raised)] border-[var(--color-rule)] text-[var(--color-ink)]',
+    muted: 'bg-[var(--color-paper)] border-[var(--color-rule)] text-[var(--color-ink)]',
+    accent: 'bg-[var(--color-accent-soft)] border-transparent text-[var(--color-ink)]',
+    highlight: 'bg-[var(--color-accent-soft)] border-[var(--color-accent)] text-[var(--color-ink)]',
   };
 
   return (

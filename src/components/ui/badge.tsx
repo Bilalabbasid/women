@@ -13,12 +13,12 @@ export function Badge({
   ...props
 }: BadgeProps) {
   const variants = {
-    neutral: 'bg-[#F0EBE3] text-[#554E48]',
-    primary: 'bg-[#E6EFEB] text-[#1F5A4C] font-medium border border-[#EACFC3]',
-    secondary: 'bg-[#EDF3EF] text-[#3D5646] font-medium border border-[#CDE0D4]',
-    success: 'bg-[#EFF7F2] text-[#2C6E49] font-medium',
-    warning: 'bg-[#FDF7ED] text-[#9A6218] font-medium',
-    outline: 'border border-[#D9D1C7] text-[#68615C] bg-white',
+    neutral: 'bg-[var(--color-rule)] text-[var(--color-ink-muted)]',
+    primary: 'bg-[var(--color-accent-soft)] text-[var(--color-accent)] font-medium',
+    secondary: 'bg-[var(--color-paper-raised)] text-[var(--color-ink-muted)] font-medium border border-[var(--color-rule)]',
+    success: 'bg-[var(--color-accent-soft)] text-[var(--color-accent)] font-medium',
+    warning: 'bg-[var(--color-draft-soft)] text-[var(--color-draft)] font-medium',
+    outline: 'border border-[var(--color-rule)] text-[var(--color-ink-muted)] bg-[var(--color-paper-raised)]',
   };
 
   return (

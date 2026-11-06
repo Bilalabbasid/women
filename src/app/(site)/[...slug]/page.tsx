@@ -45,7 +45,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     // Drafts (dev/staging only) are always noindex.
     noindex: page.fm.noindex || !isPublishable(page, store),
     type: 'article',
-    modified: page.fm.updated_at,
   });
 }
 

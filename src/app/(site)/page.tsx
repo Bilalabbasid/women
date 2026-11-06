@@ -209,7 +209,7 @@ export default function HomePage() {
                   {p.fm.title}
                 </Link>
                 <span className="text-xs text-[var(--color-ink-muted)]">
-                  {CLUSTER_LABELS[p.fm.cluster] ?? p.fm.cluster} · Updated {p.fm.updated_at}
+                  {CLUSTER_LABELS[p.fm.cluster] ?? p.fm.cluster}
                 </span>
               </li>
             ))}

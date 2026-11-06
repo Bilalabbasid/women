@@ -10,6 +10,12 @@ import type { Person } from '../content/schema';
  *    author and BreadcrumbList.
  *  - reviewedBy and lastReviewed ONLY when the page passes the publish gate
  *    with a verified clinical reviewer (never fake review).
+ *  - No dateModified/datePublished (owner decision, 2026-11-06, see
+ *    DECISIONS.md): a freshness date on ~90+ pages launching in the same
+ *    short window would read identically across the whole site in search
+ *    results, which can look like batch-produced content. Omitted for
+ *    everyone, not hidden from crawlers only (that would be cloaking) and
+ *    not faked with invented dates (that would be fabrication, rule 1).
  *  - FAQPage only for FAQs rendered visibly on the page.
  *  - WebApplication on tools where accurate.
  *  - Never Review, AggregateRating or Product ratings. assertNoRatings() enforces this.
@@ -83,7 +89,6 @@ export function contentPageLd(page: ContentPage, store: Pick<ContentStore, 'sour
   const { fm } = page;
   const url = absoluteUrl(page.url, c);
   const type = page.isMedical ? 'MedicalWebPage' : fm.page_type === 'legal' ? 'WebPage' : 'Article';
-  const firstDate = [...fm.change_log].sort((a, b) => a.date.localeCompare(b.date))[0]?.date;
   const reviewer = fm.reviewer ? store.people.get(fm.reviewer) : undefined;
   // isMedicallyReviewed() is the single source of truth for this — never imply review from
   // "is this page live" (AGENTS.md rule 4). See gate.ts.
@@ -101,8 +106,6 @@ export function contentPageLd(page: ContentPage, store: Pick<ContentStore, 'sour
     isPartOf: { '@id': siteId(c) },
     publisher: { '@id': orgId(c) },
     author: personOrOrg(store.people.get(fm.author), c),
-    dateModified: fm.updated_at,
-    ...(firstDate ? { datePublished: firstDate } : {}),
   };
   if (reviewIsReal) {
     ld.lastReviewed = fm.reviewed_at;

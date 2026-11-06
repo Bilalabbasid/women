@@ -31,8 +31,19 @@ export const displayName = (p: Person | undefined) =>
   !p ? 'Unknown' : p.name ?? `${SITE.name} editorial team`;
 
 /**
- * Updated/Reviewed line. The reviewer is shown only when the page has passed the
- * publish gate (`approved`). Otherwise the line says plainly that it is not yet reviewed.
+ * Author/Reviewed line. The reviewer is shown only when isMedicallyReviewed() is true.
+ * Otherwise the line says plainly that it is not yet reviewed.
+ *
+ * Deliberately does not show an "Updated <date>" stamp (owner decision,
+ * 2026-11-06, see DECISIONS.md): with ~90+ pages launching in the same short
+ * window, a visible per-page update date would make every page's date read
+ * identically in search results, which can look like batch-produced content.
+ * This omits the date for everyone (readers and crawlers alike) rather than
+ * hiding it from crawlers only, which would be cloaking, or inventing varied
+ * dates, which would be fabrication (AGENTS.md rule 1) — both were considered
+ * and rejected. The genuine "Medically reviewed by X on <date>" stamp below is
+ * unaffected: it only ever appears on a page an actual clinician has approved,
+ * so it can't cluster the same way.
  */
 export function ReviewLine({
   page,
@@ -49,7 +60,7 @@ export function ReviewLine({
   const { fm } = page;
   return (
     <p className="text-[var(--color-ink-muted)]">
-      By {displayName(author)} · Updated <time dateTime={fm.updated_at}>{fmtDate(fm.updated_at)}</time>
+      By {displayName(author)}
       {page.isMedical &&
         (reviewed && reviewer && fm.reviewed_at ? (
           <>

@@ -9,8 +9,6 @@ export interface PageMetaInput {
   path: string;
   noindex?: boolean;
   type?: 'website' | 'article';
-  /** ISO date of the last material change, for article:modified_time. */
-  modified?: string;
 }
 
 /**
@@ -39,7 +37,8 @@ export function buildMetadata(input: PageMetaInput, config: SiteConfig = SITE): 
       siteName: config.name,
       locale: 'en_US',
       images: [{ url: ogImage, width: 1200, height: 630, alt: `${config.name} — ${config.tagline}` }],
-      ...(input.type === 'article' && input.modified ? { modifiedTime: input.modified } : {}),
+      // No article:modified_time (owner decision, 2026-11-06, see DECISIONS.md):
+      // same reasoning as jsonld.ts omitting dateModified/datePublished.
     },
     twitter: {
       card: 'summary_large_image',

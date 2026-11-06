@@ -257,5 +257,13 @@
   body {
     background: #fff;
     font-size: 12pt;
+    /* Without this, Chrome/most browsers strip element background colors by
+       default when printing — so the evidence .grade-* badges and the
+       safety-red UrgentGuidance box (the printed tools' whole purpose: a
+       page to bring to an appointment) would print as plain white. Every
+       grade/urgent message also carries a text label, never color alone
+       (AGENTS.md), so this is a legibility fix, not a correctness one. */
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
 }

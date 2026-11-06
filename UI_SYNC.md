@@ -343,3 +343,38 @@ the owner/functionality chat can make.)*
   this file instead) and independently found/fixed the same hex-color issue
   Lane B's `562c234` already fixed — that duplicate work is parked, unmerged,
   on local branch `ui/tools`, not pushed into this tree.
+- 2026-11-06 — UI sync session (Lane C): nextecom's earlier hue fix (old
+  terracotta → brand green) kept everything as literal hex instead of
+  tokens, so the private tracker still duplicated the palette with
+  near-misses (`#231F1D` vs the real `--color-ink` `#1c2321`,
+  `#68615C`/`#554E48`/`#5C554F` as three different near-misses for
+  `--color-ink-muted`, `#E5DED5`/`#EBE3D8`/`#D9D1C7` as near-misses for
+  `--color-rule`). Retokenized the **shared shell** that renders on every
+  `/app` page — `app-header.tsx`, `app-navigation.tsx` (mobile bottom nav +
+  desktop sub-nav), `app/app/layout.tsx`, `medical-disclaimer.tsx`,
+  `pwa-install-banner.tsx` (+ iOS install modal), `service-worker-registrar.tsx`
+  — plus `doctor-report/page.tsx` (8 distinct hex, all single-meaning in that
+  file, safe to bulk-replace). Soft borders (privacy badge, install banner)
+  use `var(--color-accent)/30` instead of a separate pale hex. Verified live
+  on the shared dev server (`preview_start` with an explicit
+  `localhost:3000` URL, per Lane D's tip above) at `/app/today/` (mobile
+  375px), `/app/settings/` (desktop), `/app/doctor-report/` — bottom nav,
+  desktop sub-nav, privacy badge, install banner, period pills all render
+  as the real brand tokens, nothing visually broken. Lint + `tsc --noEmit`
+  clean on every file touched.
+
+  **Scope note, not finished:** the other 9 page files
+  (`today`/`check-in`/`timeline`/`treatments`/`insights`/`settings`/
+  `membership`/`onboarding`/`privacy`) plus `account/{page.tsx,
+  account-client.tsx}` and `health-sync-consent.tsx` still carry roughly
+  650 literal hex occurrences between them (`treatments/page.tsx` alone has
+  178). Some of those are a genuine warm-paper tint *ramp*
+  (`#FDF9F7`/`#FAF3F0`/`#F2EDEA`/`#ECD9D1`/`#E8DFD3`/`#E5DCD2`/`#E2DBD1`/
+  `#D8CFC4`, roughly 6-8 close shades) that may be intentional card-elevation
+  layering, not drift — collapsing those onto 2-3 tokens via a blind
+  find/replace risks flattening real visual hierarchy without anyone looking
+  at each context, so I didn't bulk-transform it. Also saw `#A33A33`
+  (muted red, doesn't match `--color-urgent` `#8A1F1F`) and `#7A4234`/
+  `#B25E4B` (brownish — possibly old-palette leftovers nextecom's pass
+  missed) worth a second look. Left for a page-by-page follow-up rather than
+  guessing at scale.

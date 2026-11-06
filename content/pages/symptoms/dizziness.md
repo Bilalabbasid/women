@@ -20,10 +20,11 @@ reviewer: null
 updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-07", summary: "Published evidence guide on dizziness in perimenopause", material: true }
+  - { date: "2026-11-07", summary: "Corrected the Owada & Suzuki claim to match the verified source: it's about recovery time from diagnosed dizziness, not a correlation between hot flash severity and dizziness scores", material: true }
 evidence_grade: per_option
 claims:
-  - id: owada-dizziness-vms-correlation
-    text: "A 2014 study found dizziness and related equilibrium complaints are commonly reported alongside vasomotor symptoms in peri- and postmenopausal women, and explored a correlation between hot flash severity and dizziness/vertigo symptom scores."
+  - id: owada-dizziness-recovery-vms
+    text: "In a retrospective chart review of women aged 40-59 with diagnosed menopause-related dizziness, recovery from the dizziness episode was significantly slower in the women who also had vasomotor symptoms (n=29) than in those who didn't (n=38). Within the vasomotor-symptom group, the small subset treated with HRT (n=7) recovered faster than those not treated (n=22), but this difference was not statistically significant."
     sources: [owada-suzuki-dizziness-menopause-2014]
   - id: castillo-bustamante-vestibular-review
     text: "A 2024 narrative review on vestibular symptoms in the perimenopausal transition describes estrogen and progesterone receptors in the inner ear and vestibular system as a plausible biological basis for menopause-related dizziness and vertigo, while noting the clinical picture overlaps substantially with vestibular migraine and other causes that must be ruled out."
@@ -36,7 +37,7 @@ related: [/symptoms/, /symptoms/heart-palpitations/, /symptoms/headaches/, /symp
 affiliate_disclosure: false
 faq:
   - q: Is dizziness a normal perimenopause symptom?
-    a: "Dizziness and a sense of imbalance are commonly reported during perimenopause and menopause, and research has found a correlation between hot flash severity and dizziness symptom scores. A 2024 review also points to estrogen and progesterone receptors in the inner ear and vestibular system as a plausible mechanism. But dizziness has many possible causes, and a new or worsening pattern still deserves a medical check rather than being assumed to be hormonal."
+    a: "Dizziness and a sense of imbalance are commonly reported during perimenopause and menopause. A retrospective study of women with diagnosed menopause-related dizziness found that those who also had vasomotor symptoms (hot flashes and night sweats) took significantly longer to recover than those without. A 2024 review also points to estrogen and progesterone receptors in the inner ear and vestibular system as a plausible mechanism. But dizziness has many possible causes, and a new or worsening pattern still deserves a medical check rather than being assumed to be hormonal."
   - q: When is dizziness an emergency?
     a: "Get urgent medical care for dizziness that comes with chest pain, slurred speech, one-sided weakness or numbness, double vision, a severe sudden headache, fainting, or a fall. These combinations need immediate evaluation and are never just a menopause symptom."
 ---
@@ -45,7 +46,9 @@ A spinning, lightheaded, or off-balance feeling is a symptom many women first no
 
 ## What the evidence actually says
 
-A 2014 study looking at peri- and postmenopausal women found that dizziness and related equilibrium complaints were commonly reported alongside vasomotor symptoms, and explored how closely hot flash severity tracked with dizziness and vertigo scores [@owada-suzuki-dizziness-menopause-2014]. A 2024 narrative review of vestibular symptoms during the menopause transition proposes a biological basis for this: estrogen and progesterone receptors exist in the inner ear and vestibular system, so hormone decline is a plausible contributor [@castillo-bustamante-vestibular-menopause-2024].
+A retrospective chart review of women aged 40–59 with diagnosed menopause-related dizziness, followed by neuro-otological exam until they improved, found that women who also had vasomotor symptoms (hot flashes and night sweats) took **significantly longer to recover** from their dizziness episode than those without vasomotor symptoms [@owada-suzuki-dizziness-menopause-2014]. Within the vasomotor-symptom group, a small subset treated with HRT recovered faster than those left untreated, but with so few women in that subgroup, the difference did not reach statistical significance [@owada-suzuki-dizziness-menopause-2014]. This tells us vasomotor symptoms are linked to a *slower recovery* from dizziness once it's diagnosed — it doesn't establish that hormone changes directly *cause* the dizziness in the first place.
+
+A 2024 narrative review of vestibular symptoms during the menopause transition proposes a biological basis for a more direct link: estrogen and progesterone receptors exist in the inner ear and vestibular system, so hormone decline is a plausible contributor to dizziness itself, not just its recovery time [@castillo-bustamante-vestibular-menopause-2024].
 
 That same review is careful to flag an important complication: the dizziness reported around perimenopause overlaps heavily with **vestibular migraine**, which also becomes more common around this life stage and can be mistaken for a purely hormonal symptom [@castillo-bustamante-vestibular-menopause-2024]. That overlap means dizziness during perimenopause isn't a diagnosis in itself — it's a symptom that still needs sorting out.
 
@@ -73,6 +76,6 @@ For dizziness without those red flags, still raise it with your doctor if it's n
 Logging when dizziness happens — with or without a hot flash, time of day, and whether it comes with a headache — in our [symptom tracker](/tools/symptom-tracker/) can help your clinician tell a vasomotor pattern apart from a vestibular or migraine one.
 
 :::questions
-- Does my dizziness track closely with hot flashes, or does it happen independently?
+- Do I also have vasomotor symptoms (hot flashes, night sweats) that might be affecting how long this takes to resolve?
 - Could this be vestibular migraine or BPPV rather than a hormonal symptom, and how would we test for that?
 :::

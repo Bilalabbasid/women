@@ -34,7 +34,7 @@ cta_profile: care_comparison
 hub: /compare/
 sources: [midi-health-own-site-2026]
 related: [/compare/, /treatments/hormone-therapy/, /care/find-a-menopause-specialist/, /tools/treatment-questions/]
-affiliate_disclosure: true
+affiliate_disclosure: false
 faq:
   - q: Does Midi Health take insurance?
     a: "Midi says it's in-network with most, though not all, major PPO plans, and recommends checking your specific plan before booking. It does not work with Medicaid, Medi-Cal, or Medicare — Medicare beneficiaries can be seen as self-pay only, without submitting claims."

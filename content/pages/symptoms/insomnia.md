@@ -36,7 +36,7 @@ cta_profile: sleep
 hub: /symptoms/
 sources: [nams-2023-nonhormone-therapy, nams-2022-hormone-therapy, nice-ng23-recommendations]
 related: [/symptoms/, /symptoms/night-sweats/, /care/sleepwear-for-night-sweats/, /does-it-work/magnesium/]
-affiliate_disclosure: true
+affiliate_disclosure: false
 faq:
   - q: Why do I wake up at 2 or 3 a.m. in perimenopause even when I don't feel hot?
     a: Nocturnal vasomotor episodes (night sweats or brief thermoregulatory surges) frequently trigger an awakening just before or without noticeable drenching sweat, alongside shifting hormone levels and primary sleep disorders such as sleep apnea.

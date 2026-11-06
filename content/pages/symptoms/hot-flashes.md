@@ -36,7 +36,7 @@ cta_profile: vasomotor
 hub: /symptoms/
 sources: [nams-2022-hormone-therapy, veozah-prescribing-information, nams-2023-nonhormone-therapy, nice-ng23-recommendations, khalifey-hrt-cardiovascular-2026]
 related: [/symptoms/night-sweats/, /treatments/hormone-therapy/boxed-warning/, /tools/symptoms-checklist/, /tools/symptom-tracker/]
-affiliate_disclosure: true
+affiliate_disclosure: false
 ---
 
 A hot flash (vasomotor symptom) is a sudden feeling of intense heat that spreads rapidly through your chest, neck, and face, often accompanied by flushed skin, sweating, and a racing pulse [@nams-2022-hormone-therapy]. In our comprehensive [symptoms list](/symptoms/), vasomotor episodes are among the most frequently reported.

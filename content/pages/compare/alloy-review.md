@@ -34,7 +34,7 @@ cta_profile: care_comparison
 hub: /compare/
 sources: [alloy-own-site-2026]
 related: [/compare/, /treatments/hormone-therapy/, /treatments/hormone-therapy/patch-vs-pill/, /tools/treatment-questions/]
-affiliate_disclosure: true
+affiliate_disclosure: false
 faq:
   - q: Does Alloy accept insurance?
     a: "No. Alloy markets itself specifically as a cash-pay model, explicitly positioning this as avoiding insurance billing and pre-authorization delays. FSA and HSA cards are accepted, which can offset some of the cost through pre-tax funds if your plan allows it."

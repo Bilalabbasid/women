@@ -30,7 +30,7 @@ cta_profile: care_comparison
 hub: /compare/
 sources: [hims-hers-health-public-company-2026]
 related: [/compare/, /compare/midi-review/, /compare/alloy-review/, /treatments/hormone-therapy/, /tools/treatment-questions/]
-affiliate_disclosure: true
+affiliate_disclosure: false
 faq:
   - q: Is Hers a specialized menopause clinic?
     a: "Hers is a broader direct-to-consumer telehealth brand (alongside its counterpart, Hims) covering several areas of women's health, with menopause as one category rather than its sole focus. If you specifically want a clinic whose entire model is built around menopause and midlife care, that's worth weighing against Hers' broader scope."

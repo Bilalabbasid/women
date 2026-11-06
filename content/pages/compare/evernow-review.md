@@ -33,7 +33,7 @@ cta_profile: care_comparison
 hub: /compare/
 sources: [evernow-own-site-2026]
 related: [/compare/, /treatments/hormone-therapy/, /treatments/nonhormonal/, /tools/treatment-questions/]
-affiliate_disclosure: true
+affiliate_disclosure: false
 faq:
   - q: Does Evernow take insurance?
     a: "Evernow states it now accepts insurance for video visits, and describes both visits as insurance-eligible, as of our check in November 2026. Coverage still depends on your specific plan, so confirm your actual out-of-pocket cost with Evernow directly before booking."

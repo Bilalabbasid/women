@@ -39,7 +39,7 @@ cta_profile: care_comparison
 hub: null
 sources: [nams-2022-hormone-therapy, nams-2023-nonhormone-therapy, nice-ng23-recommendations, nhs-postmenopausal-bleeding, nhs-heart-palpitations, jmir-online-menopause-information-2025]
 related: [/care/, /treatments/, /perimenopause/questions-for-your-doctor/, /tools/symptom-tracker/, /compare/midi-review/, /compare/alloy-review/, /compare/evernow-review/, /compare/winona-review/, /compare/hers-review/]
-affiliate_disclosure: true
+affiliate_disclosure: false
 faq:
   - q: Do online menopause clinics require hormone blood tests before prescribing?
     a: "A quality clinic usually should not require expensive hormone panels if you are 45 or older with typical symptoms. Clinical guidelines from NICE and The Menopause Society state that perimenopause at 45+ is diagnosed by symptoms and cycle history, though a clinician may order targeted blood work (such as thyroid, iron, or liver function tests) to rule out other conditions."

@@ -36,7 +36,7 @@ cta_profile: sleep
 hub: /symptoms/
 sources: [nice-ng23-recommendations, nams-2023-nonhormone-therapy, nams-2022-hormone-therapy, stute-nonhormonal-transition-2026]
 related: [/symptoms/, /symptoms/insomnia/, /symptoms/night-sweats/, /care/sleepwear-for-night-sweats/, /tools/symptom-tracker/]
-affiliate_disclosure: true
+affiliate_disclosure: false
 faq:
   - q: Why do I wake up at almost exactly the same time every night, even when I don't feel hot?
     a: "A brief vasomotor surge can trigger an awakening before you notice any sweating, so the 'no sweat, still waking' pattern doesn't rule out hot flashes as a cause. NICE guidance recommends menopause-specific CBT as an option for this type of night-time awakening, alongside or instead of hormone therapy."

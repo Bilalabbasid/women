@@ -116,7 +116,7 @@ export async function summarizeCategory(id: CategoryId): Promise<CategorySummary
         id,
         records: entries.length,
         hasData: rows.length > 0,
-        detail: hasDraft ? 'plus your current unsaved answers' : undefined,
+        detail: hasDraft ? 'plus your current answers' : undefined,
         ...(await datedRange(entries.map((e) => e.date))),
       };
     }

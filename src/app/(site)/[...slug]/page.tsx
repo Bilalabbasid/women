@@ -71,6 +71,8 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
   const faq = fm.faq ?? [];
   const parts = splitContentIslands(rendered.html);
   const toolIds = parts.flatMap((p) => (p.type === 'tool' ? [p.tool] : []));
+  const firstToolIndex = parts.findIndex((p) => p.type === 'tool' && isToolLive(p.tool));
+  const hasTool = firstToolIndex >= 0;
   const ld = [
     contentPageLd(page, store),
     breadcrumbLd(crumbs),
@@ -90,6 +92,13 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
         </div>
         <header className="space-y-3">
           <h1 className="text-3xl sm:text-4xl">{fm.title}</h1>
+          {hasTool && (
+            <p className="no-print">
+              <a href="#tool" className="tap font-semibold text-[var(--color-link)] underline">
+                Go straight to the tool ↓
+              </a>
+            </p>
+          )}
           <ReviewLine page={page} author={author} reviewer={reviewer} reviewed={reviewed} />
           {page.isMedical && <StandardNotice />}
           {fm.evidence_grade && (
@@ -117,10 +126,19 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
         </header>
 
         <SavedCopyNotice reviewedAt={approved ? fm.reviewed_at : null} isMedical={page.isMedical} />
-        <Toc headings={rendered.headings} />
+        {/* On tool pages the table of contents moves below the tool, so the tool itself is reached first. */}
+        {!hasTool && <Toc headings={rendered.headings} />}
 
         {parts.map((part, i) => {
-          if (part.type === 'tool') return <ToolIsland key={`tool-${i}`} id={part.tool} />;
+          if (part.type === 'tool') {
+            const first = i === firstToolIndex;
+            return (
+              <div key={`tool-${i}`} id={first ? 'tool' : undefined} className="scroll-mt-4 space-y-6">
+                <ToolIsland id={part.tool} />
+                {first && <Toc headings={rendered.headings} />}
+              </div>
+            );
+          }
           if (part.type === 'product-slot') return <ProductSlotView key={`slot-${i}`} id={part.slot} />;
           if (part.type === 'product') return <ProductBlock key={`product-${i}`} id={part.product} />;
           // The opening paragraph is the page's stand-alone answer (symptom

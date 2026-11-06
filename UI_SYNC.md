@@ -72,14 +72,25 @@ nextecom owns.)*
 | Lane | Scope (files/dirs) | Claimed by | Status |
 |---|---|---|---|
 | **Foundation** | `src/app/globals.css`, `src/components/ui/{button,badge,card}.tsx`, `src/components/site/site-chrome.tsx` (header/footer/breadcrumbs), `BRAND.md` (reference, don't rewrite without flagging) | this session (UI sync) | In progress |
-| **A — Public shell & homepage** | `src/app/(site)/page.tsx`, `src/app/(site)/layout.tsx`, `src/app/(site)/[...slug]/page.tsx`, `src/app/(site)/search/page.tsx`, `src/app/(site)/tools/page.tsx`, `src/app/(site)/urgent-help/page.tsx`, `src/app/not-found.tsx`, `src/app/error.tsx`, `src/app/offline/page.tsx`, `src/components/site/{evidence,next-steps,email-capture,standard-notice,cookie-banner,search-box}.tsx` | *open* | Not started |
+| **A — Public shell & homepage** | `src/app/(site)/page.tsx`, `src/app/(site)/layout.tsx`, `src/app/(site)/search/page.tsx`, `src/app/(site)/tools/page.tsx`, `src/app/(site)/urgent-help/page.tsx`, `src/app/not-found.tsx`, `src/app/error.tsx`, `src/app/offline/page.tsx`, `src/components/site/{cookie-banner,search-box}.tsx` | *open* | Not started |
 | **B — Interactive tools UI** | `src/components/tools/*` (does-it-work-checker, stage-guide, symptoms-checklist, tool-island, treatment-questions, twelve-month-counter) — markup/styling only, logic stays in `src/lib/tools/` | *open* | Not started |
 | **C — Private `/app` tracker shell** | `src/app/app/**/page.tsx` (today, check-in, timeline, treatments, insights, doctor-report, settings, membership, onboarding, privacy, account), `src/components/app/{app-header,app-navigation,medical-disclaimer,pwa-install-banner,service-worker-registrar}.tsx`, `src/components/account/health-sync-consent.tsx` | *open* | Not started |
+| **D — Content page templates (by page_type)** | `src/app/(site)/[...slug]/page.tsx` — the single shared renderer for every symptom/treatment/does-it-work/comparison/hub page — plus `src/components/site/{evidence,next-steps,email-capture,standard-notice,client-islands}.tsx` | this session — 2026-11-06 | In progress |
 
-When a 4th UI chat opens, it can either sub-split one of A/B/C (note the split
-here) or take on a cross-cutting pass (accessibility sweep, responsive/mobile
-pass, print styles) once A–C have a first draft — note that explicitly below
-rather than silently editing files inside someone else's claimed lane.
+Lane A originally included `[...slug]/page.tsx` and the evidence/next-steps/
+email-capture/standard-notice/client-islands components; it's split out into
+Lane D above because the per-`page_type` *shape* (quick-answer callout, "what
+can help" table, urgent-vs-routine split, verdict-first layout, comparison
+provider cards) lives there, not in the site-wide shell. Noted here per rule 7
+rather than silently re-filing it. D proposes any `.prose`/markdown styling
+change in Foundation's `globals.css` as a diff/note rather than editing it
+directly, since Foundation is already claimed.
+
+When a 5th UI chat opens, it can either sub-split one of A/B/C/D (note the
+split here) or take on a cross-cutting pass (accessibility sweep,
+responsive/mobile pass, print styles) once A–D have a first draft — note that
+explicitly below rather than silently editing files inside someone else's
+claimed lane.
 
 ## Cross-lane notes
 
@@ -97,3 +108,7 @@ the owner/functionality chat can make.)*
 - 2026-11-06 — UI sync session: wrote this file, claimed Foundation lane,
   messaged nextecom to confirm the functionality boundary. No visual changes
   yet.
+- 2026-11-06 — New chat: split Lane A, claimed Lane D (content page templates
+  — `[...slug]/page.tsx` + evidence/next-steps/email-capture/standard-notice/
+  client-islands). About to audit current rendering per `page_type` before
+  making visual changes.

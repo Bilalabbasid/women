@@ -13,7 +13,10 @@ export function EmailCapture({
 }: EmailCaptureProps) {
   const [email, setEmail] = useState('');
   const [consented, setConsented] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  // 'confirmed' only when a provider is actually connected and really sends something;
+  // 'queued' when the signup was recorded but nothing can be emailed yet (no provider
+  // configured) - two different honest states, never a single blanket "success".
+  const [result, setResult] = useState<'confirmed' | 'queued' | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -37,25 +40,40 @@ export function EmailCapture({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, consented }),
       });
-      if (res.ok) {
-        setSubmitted(true);
-      } else {
-        // Fallback gracefully on static or offline
-        setSubmitted(true);
+      const data = (await res.json().catch(() => null)) as { status?: string; providerConfigured?: boolean; error?: string } | null;
+      if (!res.ok) {
+        setError(data?.error ?? 'Could not submit that right now. Please try again.');
+        return;
       }
+      setResult(data?.providerConfigured ? 'confirmed' : 'queued');
     } catch {
-      setSubmitted(true);
+      setError('Could not reach the server. Please check your connection and try again.');
     } finally {
       setLoading(false);
     }
   };
 
-  if (submitted) {
+  if (result === 'confirmed') {
     return (
       <aside aria-label="Email confirmation" className="my-8 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-6 text-[var(--color-ink)]">
         <h3 className="font-serif text-xl font-semibold mb-2">Check your inbox</h3>
         <p className="text-sm text-[var(--color-ink-muted)] mb-3">
           We&apos;ve sent your guide to <strong>{email}</strong>. Every email includes a one-click unsubscribe link.
+        </p>
+        <p className="text-xs text-[var(--color-ink-muted)]">
+          Your email is never shared or matched with private health tracker data.
+        </p>
+      </aside>
+    );
+  }
+
+  if (result === 'queued') {
+    return (
+      <aside aria-label="Signup received" className="my-8 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-6 text-[var(--color-ink)]">
+        <h3 className="font-serif text-xl font-semibold mb-2">Thanks — you&apos;re on the list</h3>
+        <p className="text-sm text-[var(--color-ink-muted)] mb-3">
+          Email delivery isn&apos;t live yet, so nothing has been sent to <strong>{email}</strong> yet. We&apos;ll send the
+          guide as soon as it is.
         </p>
         <p className="text-xs text-[var(--color-ink-muted)]">
           Your email is never shared or matched with private health tracker data.

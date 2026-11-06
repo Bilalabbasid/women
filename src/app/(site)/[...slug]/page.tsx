@@ -167,7 +167,10 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
         {rendered.questionLists > 0 && <QuestionTools />}
 
         <NextSteps />
-        <EmailCapture title={`Get the ${fm.title.toLowerCase()} doctor question sheet`} />
+        {/* A "doctor question sheet" makes sense for a symptom/treatment page, not
+            for a legal or about-the-site page ("Get the terms of use doctor question
+            sheet" was a real, nonsensical result of running this on every page). */}
+        {page.isMedical && <EmailCapture title={`Get the ${fm.title.toLowerCase()} doctor question sheet`} />}
 
         {children.length > 0 && (
           <section aria-labelledby="in-this-section" className="space-y-3">

@@ -180,7 +180,9 @@ function createOgPng() {
 fs.mkdirSync('./public/icons', { recursive: true });
 
 // 1. Multi-resolution favicon.ico (16, 32, 48 px)
-fs.writeFileSync('./public/favicon.ico', createIco([16, 32, 48]));
+const icoBuf = createIco([16, 32, 48]);
+fs.writeFileSync('./public/favicon.ico', icoBuf);
+fs.writeFileSync('./src/app/favicon.ico', icoBuf);
 
 // 2. apple-touch-icon.png (180x180)
 const apple180 = encodePng(180, 180, (x, y, w, h) => markPixel((x + 0.5) / w, (y + 0.5) / h, 0.05));

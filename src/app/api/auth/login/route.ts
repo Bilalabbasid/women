@@ -1,14 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { SITE } from '@/lib/site/config';
+import { accountsBlocked, userIdFrom } from '@/lib/account/guard';
 import { accountService } from '@/lib/account/service';
 
 export async function POST(req: NextRequest) {
-  if (!SITE.flags.login) {
-    return NextResponse.json(
-      { error: 'User accounts and login are not enabled at this time.' },
-      { status: 403 }
-    );
-  }
+  const blocked = accountsBlocked();
+  if (blocked) return blocked;
 
   try {
     const body = await req.json();

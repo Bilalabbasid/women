@@ -28,6 +28,7 @@ import { SeverityLevel, FlowLevel, LocalCustomSymptom } from '@/lib/db/schema';
 import { evaluateUrgentTriggers } from '@/lib/safety/urgent-triggers';
 import { UrgentGuidance } from '@/components/safety/urgent-guidance';
 import { markToolUsed } from '@/lib/pwa/install-gate';
+import { requestPersistentStorage } from '@/lib/pwa/persist-storage';
 
 const subscribeNoop = () => () => {};
 function readPinned(): string {
@@ -172,6 +173,8 @@ export default function CheckinPage() {
     setIsSaving(false);
     setSavedSuccess(true);
     markToolUsed();
+    // Ask the browser to keep her journal rather than clear it under storage pressure.
+    void requestPersistentStorage();
 
     // Keep her on this screen if urgent guidance is showing, so it is not lost.
     const urgent = evaluateUrgentTriggers({

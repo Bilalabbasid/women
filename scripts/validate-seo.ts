@@ -8,10 +8,11 @@
  *  - no duplicate titles, descriptions or canonicals across public pages
  *  - no Review / AggregateRating / Product schema anywhere
  *  - the private tracker (/app/) and /search/ are noindex
- *  - production builds (SITE_ENV=production) are indexable; other builds are noindex
+ *  - production builds (getSiteEnv() === "production") are indexable; other builds are noindex
  *  - title and description lengths (warnings: about 60 and 155 characters)
  */
 import { builtPages } from './lib/built-pages';
+import { getSiteEnv } from '../src/lib/site/config';
 import { Report } from './lib/report';
 
 const r = new Report('validate:seo');
@@ -22,7 +23,8 @@ if (pages.length === 0) {
   process.exit();
 }
 
-const prod = process.env.SITE_ENV === 'production';
+// Same rule as the site itself (src/lib/site/config.ts), so the two can never disagree.
+const prod = getSiteEnv() === 'production';
 const decode = (s: string) => s.replace(/&amp;/g, '&').replace(/&#x27;|&#39;/g, "'").replace(/&quot;/g, '"');
 const attr = (html: string, re: RegExp) => {
   const m = re.exec(html);

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { accountService } from '@/lib/account/service';
+import { getSiteEnv } from '@/lib/site/config';
 
 export async function GET(req: NextRequest) {
   return handleDeletion(req);
@@ -11,6 +12,11 @@ export async function POST(req: NextRequest) {
 
 async function handleDeletion(req: NextRequest) {
   const cronSecret = process.env.CRON_SECRET;
+
+  // In production the job must be authenticated: without a secret it fails closed.
+  if (!cronSecret && getSiteEnv() === 'production') {
+    return NextResponse.json({ error: 'CRON_SECRET is not configured.' }, { status: 401 });
+  }
 
   if (cronSecret) {
     const authHeader = req.headers.get('authorization');

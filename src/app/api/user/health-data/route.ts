@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { accountsBlocked, userIdFrom } from '@/lib/account/guard';
 import { accountService } from '@/lib/account/service';
 
 export async function GET(req: NextRequest) {
-  const userId = req.headers.get('x-user-id') || req.nextUrl.searchParams.get('userId');
+  const blocked = accountsBlocked();
+  if (blocked) return blocked;
+  const userId = userIdFrom(req);
   if (!userId) {
     return NextResponse.json({ error: 'User ID is required.' }, { status: 400 });
   }
@@ -12,6 +15,8 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
+  const blocked = accountsBlocked();
+  if (blocked) return blocked;
   try {
     const body = await req.json();
     const { userId, payload } = body;
@@ -30,7 +35,9 @@ export async function POST(req: NextRequest) {
 }
 
 export async function DELETE(req: NextRequest) {
-  const userId = req.headers.get('x-user-id') || req.nextUrl.searchParams.get('userId');
+  const blocked = accountsBlocked();
+  if (blocked) return blocked;
+  const userId = userIdFrom(req);
   if (!userId) {
     return NextResponse.json({ error: 'User ID is required.' }, { status: 400 });
   }

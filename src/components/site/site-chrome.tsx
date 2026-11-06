@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/lib/site/config';
+import { STANDARD_NOTICE } from '@/lib/site/notice';
 import { APP_ROUTES } from '@/lib/routes';
 import { isToolLive } from '@/lib/tools/logic';
 import type { Crumb } from '@/lib/seo/jsonld';
@@ -107,12 +108,7 @@ export function SiteFooter({ links }: { links?: Array<{ href: string; label: str
       <div className="mx-auto max-w-5xl px-4 pt-10 pb-8">
         {/* Standard Notice */}
         <div className="mb-8 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper)] p-4 text-xs leading-relaxed text-[var(--color-ink-muted)]">
-          <p>
-            <strong>Standard Notice:</strong> General information based on published sources and the symptoms you searched for.
-            This isn&apos;t medical or legal advice, a diagnosis or a treatment plan. We aren&apos;t doctors, and this content
-            wasn&apos;t written by a doctor. Please consult a doctor about your own symptoms. If your symptoms are severe or sudden,
-            seek urgent care.
-          </p>
+          <p>{STANDARD_NOTICE}</p>
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2">

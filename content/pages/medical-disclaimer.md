@@ -30,7 +30,7 @@ related: [/privacy/, /terms/]
 affiliate_disclosure: false
 ---
 
-General information based on published sources and the symptoms you searched for. This isn&apos;t medical or legal advice, a diagnosis or a treatment plan. We aren&apos;t doctors, and this content wasn&apos;t written by a doctor. Please consult a doctor about your own symptoms. If your symptoms are severe or sudden, seek urgent care.
+General information based on published sources and the symptoms you searched for. This isn't medical or legal advice, a diagnosis or a treatment plan. Please consult a doctor about your own symptoms. If your symptoms are severe or sudden, seek urgent care.
 
 ## Not personal healthcare advice
 

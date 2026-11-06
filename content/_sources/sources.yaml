@@ -1075,3 +1075,62 @@
   funding_conflict: null
   verified: true
   notes: "Added to match a citation already used in content/pages/groups/chemotherapy-induced-menopause.md (the content session's own id for it) - verified independently via NCBI, not just taken from the content file's paraphrase."
+
+- id: ahn-hysterectomy-ovarian-function-2002
+  title: "Effect of hysterectomy on conserved ovarian function"
+  authors: [Ahn EH, Bai SW, Song CH, Kim JY, Jeong KA, Kim SK, Lee JS, Kwon JY, Park KH]
+  publisher: Yonsei Medical Journal
+  year: 2002
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/11854933/
+  doi: 10.3349/ymj.2002.43.1.53
+  accessed: "2026-11-07"
+  population: "94 women thoroughly followed of 510 reviewed, after total abdominal hysterectomy (with or without unilateral salpingo-oophorectomy) for benign disease, Korea, 1989-1992"
+  key_finding: "Mean menopausal age (based on patient-reported symptoms) was significantly lower in TAH-treated patients than in the control group (p<0.001), with a positive correlation between younger age at operation and earlier menopausal age. The authors concluded TAH accelerated ovarian dysfunction and that TAH patients are at risk of early menopause."
+  funding_conflict: null
+  verified: true
+  notes: "Retrospective, symptom-based menopause determination (not hormone-confirmed), and only 94 of 510 originally reviewed women were followed up closely enough to include - a real limitation worth keeping in mind alongside the newer Atay et al. 2007 study, which found no significant difference."
+
+- id: atay-hysterectomy-ovarian-preservation-2007
+  title: "Hysterectomy with preservation of both ovaries does not result in premature ovarian failure"
+  authors: [Atay V, Ceyhan T, Baser I, Gungor S, Goktolga U, Muhcu M]
+  publisher: Journal of International Medical Research
+  year: 2007
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/17593871/
+  doi: 10.1177/147323000703500317
+  accessed: "2026-11-07"
+  population: "29 women who had total abdominal hysterectomy with both ovaries preserved at age <=40, vs. 42 menopausal controls with no previous ovarian pathology"
+  key_finding: "Mean age at menopause was 49.7 years (TAH group) vs. 50.1 years (control group) - not statistically significant. The authors concluded TAH without oophorectomy does not cause premature menopause, at the cost of a higher risk of developing adnexal pathology (cysts) afterward."
+  funding_conflict: null
+  verified: true
+  notes: "The abstract's own cyst-incidence figures (31% TAH vs. 44.8% control) read as inconsistent with its stated conclusion of an 'increased incidence of cysts in the TAH group' - the content session noticed this and deliberately cited only the clean, unambiguous menopause-age finding, not the cyst figures. Flagging the same caveat here: don't cite this source's cyst-incidence numbers without reading the full text to resolve the discrepancy."
+
+- id: emas-endometriosis-menopause-guide-2025
+  title: "Endometriosis and menopausal health: An EMAS clinical guide"
+  authors: [Erel CT, Nigdelis MP, Ozcivit Erkan IB, Goulis DG, Chedraui P, Giannini A, Kiesel L, Phillips N, Simoncini T, Armeni E, Boban J, Ceausu I, Hillard T, Lambrinoudaki I, Smetnik A, Sprem Goldstajn M, Stute P, van Dijken D, Rees M]
+  publisher: "Maturitas (European Menopause and Andropause Society)"
+  year: 2025
+  type: position_statement
+  url: https://pubmed.ncbi.nlm.nih.gov/40907339/
+  doi: 10.1016/j.maturitas.2025.108715
+  accessed: "2026-11-07"
+  population: Women with a history of endometriosis, peri- or postmenopausal
+  key_finding: "Endometriosis or its treatment may cause spontaneous early/premature or surgically induced menopause, and is associated with increased risk of cardiovascular disease, ovarian/breast/thyroid cancer, and osteoporosis. Continuous combined MHT may be safer than other forms (including after hysterectomy) since it may reduce the risk of recurrence or malignant transformation of residual endometriosis tissue; estrogen-only MHT should be avoided even after hysterectomy in this group. Neurokinin-3 receptor antagonists are a non-hormonal alternative for vasomotor symptoms; antiresorptive/anabolic therapy plus calcium and vitamin D for bone protection. Surgery is preferred for symptomatic postmenopausal endometriosis. Herbal preparations are advised against (uncertain efficacy, some contain estrogenic compounds)."
+  funding_conflict: "Guideline panel of 18 authors; several disclose industry consultancy, speaker fees, or grant funding from multiple different companies (Astellas, Bayer, Gedeon Richter, Besins, and others) - typical for a specialist society guideline panel of this size, not a single-sponsor study. Several other authors declared none."
+  verified: true
+
+- id: kapoor-vms-workplace-survey-2026
+  title: "Impact of vasomotor symptoms on women in the workplace: Results from a non-interventional survey in the United States"
+  authors: [Kapoor E, Ajmera M, Shiozawa A, Chertavian E, Kim J, Renteria T, Straubing R, Mancuso S]
+  publisher: Maturitas
+  year: 2026
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/42617245/
+  doi: 10.1016/j.maturitas.2026.109084
+  accessed: "2026-11-07"
+  population: "1,011 US women aged 40-65, employed or stopped working/retired within the last year, with vasomotor symptoms (>=2 hot flash/night sweat episodes/day in the preceding 2 weeks for >=1 month); mean age 49.6, 72.9% White"
+  key_finding: "Mean 7.5 hot flashes/night sweats per day. 81.3% had never received treatment. Activity impairment, absenteeism, and presenteeism were reported by 36%, 6%, and 32% respectively, all increasing with VMS severity. Almost 80% had never discussed VMS with their employer; only 18.1% felt their employer was supportive. Top coping mechanisms at work: temperature control (71.0%), layered/breathable clothing (46.0%). Top requested accommodations: changes to benefit packages (27.9%), more workplace awareness (25.7%), more flexible working arrangements (23.2%)."
+  funding_conflict: "Disclosed: funded by/affiliated with Astellas Pharma (maker of fezolinetant/Veozah). Three authors (Ajmera, Shiozawa, Kim, Mancuso) are Astellas employees; lead author Kapoor discloses consulting fees from Astellas and several other companies (Novo Nordisk, Estetra, Fresenius Kabi, Exeltis, Dexcom, WellFound); the remaining authors are employees of a health-economics consultancy (Medicus Economics) engaged for the analysis."
+  verified: true
+  notes: "This is workplace-impact epidemiology (self-reported survey data), not a drug-efficacy claim, but the funding conflict is disclosed anyway per house style since the funder sells a treatment for the exact symptoms being surveyed."

@@ -144,15 +144,18 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
         <EmailCapture title={`Get the ${fm.title.toLowerCase()} doctor question sheet`} />
 
         {children.length > 0 && (
-          <section aria-labelledby="in-this-section" className="space-y-2">
+          <section aria-labelledby="in-this-section" className="space-y-3">
             <h2 id="in-this-section" className="text-2xl">
               In this section
             </h2>
-            <ul className="space-y-1">
+            <ul className="grid gap-3 sm:grid-cols-2">
               {children.map((c) => (
                 <li key={c.url}>
-                  <Link href={c.url} className="tap text-[var(--color-link)] underline">
-                    {c.fm.title}
+                  <Link
+                    href={c.url}
+                    className="tap block rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-3 font-semibold text-[var(--color-link)] no-underline hover:bg-[var(--color-accent-soft)]"
+                  >
+                    {c.fm.title} →
                   </Link>
                 </li>
               ))}
@@ -177,15 +180,18 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
         )}
 
         {related.length > 0 && (
-          <section aria-labelledby="related" className="space-y-2">
+          <section aria-labelledby="related" className="space-y-3">
             <h2 id="related" className="text-2xl">
               Related pages
             </h2>
-            <ul className="space-y-1">
+            <ul className="grid gap-3 sm:grid-cols-2">
               {related.map((r) => (
                 <li key={r.url}>
-                  <Link href={r.url} className="tap text-[var(--color-link)] underline">
-                    {r.fm.title}
+                  <Link
+                    href={r.url}
+                    className="tap block rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-3 font-semibold text-[var(--color-link)] no-underline hover:bg-[var(--color-accent-soft)]"
+                  >
+                    {r.fm.title} →
                   </Link>
                 </li>
               ))}

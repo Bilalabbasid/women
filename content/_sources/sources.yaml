@@ -1252,3 +1252,47 @@
   funding_conflict: null
   verified: true
   notes: "Dated August 21, 2018, and the page displays 'This topic is being updated... Update in Progress for Cervical Cancer: Screening' as of the access date - check for a newer statement before treating this as the final word, same caveat as the other 'update in progress' USPSTF pages already in this registry."
+
+- id: cagnacci-contraception-over-40-consensus-2025
+  title: "Consensus conference results on contraception in women beyond 40 years of age"
+  authors: [Cagnacci A, Fruzzetti F, Bruni V, Gambera A, Guida M, Bonaccorsi G, Londero AP]
+  publisher: European Journal of Contraception and Reproductive Health Care
+  year: 2025
+  type: position_statement
+  url: https://pubmed.ncbi.nlm.nih.gov/40838950/
+  doi: 10.1080/13625187.2025.2544754
+  accessed: "2026-11-07"
+  population: Women over 40 considering hormonal contraception during perimenopause
+  key_finding: "Italian Society of Contraception multidisciplinary consensus panel (literature review to October 2024, statements voted at a national congress, consensus defined as >=75% agreement): 7 statements endorsed at 95-99% agreement. Cardiovascular safety is the primary factor in contraceptive selection; progestogen-only methods are considered safe for cardiovascular risk; combined hormonal contraceptives using natural estrogens or 20mcg ethynylestradiol with non-androgenic progestins are considered more advantageous for cardiovascular risk. LNG-IUD, estradiol valerate/dienogest, and the combined vaginal ring are identified as most effective for menstrual bleeding management. Hormone type and route of administration can influence sexual function, with implants and vaginal rings showing positive effects. Combined hormonal contraceptives show protective effects on bone density; progestogen-only methods are neutral."
+  funding_conflict: null
+  verified: true
+  notes: "Expert consensus/position statement, not a systematic review of trial data - reflects panel judgment on existing evidence, graded accordingly."
+
+- id: greendale-swan-body-composition-2019
+  title: "Changes in body composition and weight during the menopause transition"
+  authors: [Greendale GA, Sternfeld B, Huang M, Han W, Karvonen-Gutierrez C, Ruppert K, Cauley JA, Finkelstein JS, Jiang SF, Karlamangla AS]
+  publisher: JCI Insight
+  year: 2019
+  type: cohort
+  url: https://pubmed.ncbi.nlm.nih.gov/30843880/
+  doi: 10.1172/jci.insight.124865
+  accessed: "2026-11-07"
+  population: "SWAN (Study of Women's Health Across the Nation) longitudinal cohort, DEXA-based body composition measures across the menopause transition"
+  key_finding: "Fat and lean mass both increased before the menopause transition (MT). At MT onset, the rate of fat gain doubled and lean mass began declining; both continued until 2 years after the final menstrual period (FMP), then flattened to zero slope. Weight itself climbed linearly during premenopause with no acceleration at the start of the MT, and its trajectory became flat after the MT - the authors conclude there is no discernible change in the rate of weight gain at the start of the transition, despite the real underlying shift from lean to fat mass."
+  funding_conflict: null
+  verified: true
+  notes: "NIH-funded (National Institute on Aging, National Institute of Nursing Research, NIH Office of Research on Women's Health); no conflict of interest declared."
+
+- id: kravitz-swan-postmenopause-depression-2022
+  title: "Risk of high depressive symptoms after the final menstrual period: the Study of Women's Health Across the Nation (SWAN)"
+  authors: [Kravitz HM, Colvin AB, Avis NE, Joffe H, Chen Y, Bromberger JT]
+  publisher: Menopause
+  year: 2022
+  type: cohort
+  url: https://pubmed.ncbi.nlm.nih.gov/35796553/
+  doi: 10.1097/GME.0000000000001988
+  accessed: "2026-11-07"
+  population: "1,551 midlife women, SWAN cohort, 1996-2017, median 19.0-year follow-up"
+  key_finding: "Women had higher odds of a high depressive-symptom score during postmenopause than when premenopausal (OR 1.49, 95% CI 1.09-2.04); not significantly different for perimenopause vs. premenopause. Three pre-FMP depressive-symptom trajectories were identified: consistently low (47.7% of women), moderate (39.9%), and consistently high (12.4%). Compared with the consistently-low group, both the moderate (OR 2.62, 95% CI 1.89-3.66) and high (OR 6.88, 95% CI 4.72-10.02) trajectory groups had significantly higher postmenopausal depressive symptoms. Other pre-FMP factors associated with high postmenopausal depressive symptoms: childhood trauma/maltreatment, poor physical role functioning, high anxiety, sleep problems, high vasomotor symptoms, younger age, and lower social support."
+  funding_conflict: "All authors report NIH grant funding for this study (NIA; NCI and NIMH for some). One co-author (Joffe) additionally discloses grants from Merck and Pfizer and consulting fees from NeRRe/KaNDy, Eisai, Jazz, and Bayer - unrelated to this specific analysis but disclosed for transparency. Two co-authors (Colvin, Chen) declared no conflicts of any kind."
+  verified: true

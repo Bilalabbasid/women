@@ -165,12 +165,14 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
             <h2 id="faq" className="text-2xl">
               Questions people ask
             </h2>
-            {faq.map((f) => (
-              <div key={f.q}>
-                <h3 className="text-xl">{f.q}</h3>
-                <p>{f.a}</p>
-              </div>
-            ))}
+            <div className="space-y-3">
+              {faq.map((f) => (
+                <div key={f.q} className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
+                  <h3 className="text-lg font-semibold">{f.q}</h3>
+                  <p className="mt-1.5 text-[var(--color-ink-muted)]">{f.a}</p>
+                </div>
+              ))}
+            </div>
           </section>
         )}
 

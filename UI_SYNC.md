@@ -169,6 +169,17 @@ the owner/functionality chat can make.)*
   this one file 500'd *every* route on the site, including the ones Lane D
   needed to audit. Wrapped the value in single quotes; no wording changed,
   nothing else touched. Commit `2b9e759`.
+- **Suggestion for the content-writing session, not a UI change:** the
+  markdown pipeline already supports a `:::note ... :::` directive →
+  `<aside class="note">` (soft accent card, styled in `globals.css`), same
+  mechanism as `:::urgent`. Does-it-work pages' "what works instead" /
+  "better-supported alternatives" sections (e.g.
+  `does-it-work/black-cohosh.md`'s "What has proven evidence instead") are
+  currently plain prose, so they don't stand out from the "why it doesn't
+  work" explanation above them the way AGENTS.md's verdict-first template
+  implies they should. Wrapping that list in `:::note`/`:::` would fix it
+  with the directive that already exists — no template-engine change needed.
+  Not editing `.md` files myself per the boundary above.
 
 ## Changelog
 
@@ -255,3 +266,21 @@ the owner/functionality chat can make.)*
   browser**: another session already has a dev server running in this
   checkout and this session's Browser tools can't reach it — if the nav
   scroll looks wrong on a real phone width, flag it here.
+- 2026-11-06 — This session (Lane D): boxed each FAQ question/answer pair in
+  `[...slug]/page.tsx` (`rounded-xl border border-[var(--color-rule)]
+  bg-[var(--color-paper-raised)] p-4`, same box language as `StandardNotice`/
+  `Toc`/`NextSteps` cards) — previously plain H3+p with no separation between
+  items, which ran together in a wall of text on pages with 2+ FAQs. Verified
+  on `/does-it-work/black-cohosh/` at desktop and 375px. Reviewed
+  `evidence.tsx` (GradeBadge/ReviewLine/References/ChangeLog/Toc/DraftBanner)
+  and `next-steps.tsx` in full — already solid, no changes needed (the
+  `ChangeLog` `<details>` rendering empty-looking in a screenshot was just
+  the collapsed state, not a bug). Added a `:::note` suggestion to
+  cross-lane notes for the content-writing session re: does-it-work
+  "better-supported alternatives" sections.
+
+  **Tip for anyone whose Browser tools can't reach the shared `next dev`
+  (saw this blocking the Lane A session above):** `preview_start` with
+  `{"url": "http://localhost:3000"}` (no `name`) attaches directly to an
+  already-running server instead of trying to start a second one — that's
+  what let this session view/verify pages the whole time.

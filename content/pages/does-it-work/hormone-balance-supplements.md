@@ -36,6 +36,8 @@ related: [/does-it-work/, /does-it-work/black-cohosh/, /does-it-work/soy-isoflav
 banned_phrase_overrides:
   - phrase: balance your hormones
     reason: "Debunking commercial marketing claims that over-the-counter supplements can 'balance your hormones'."
+  - phrase: hormone balance
+    reason: "This page's entire subject is debunking '\"hormone balance\" supplements' as a marketing phrase — the title, verdict and FAQ quote and explain the term specifically to show it has no basis in how perimenopausal hormone decline actually works."
 affiliate_disclosure: false
 faq:
   - q: What does "balancing hormones" actually mean in medicine?

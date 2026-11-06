@@ -20,7 +20,7 @@ reviewer: null
 updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Initial publication of evidence-evaluated menopause books guide", material: true }
-evidence_grade: null
+evidence_grade: per_option
 claims: []
 safety_flags: []
 cta_profile: books

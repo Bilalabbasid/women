@@ -435,3 +435,120 @@
   key_finding: Eight months of twice-weekly, 30-minute supervised high-intensity resistance and impact training (HiRIT) significantly improved lumbar spine and femoral neck bone mineral density, muscle strength, and functional performance compared to home-based low-intensity exercise.
   funding_conflict: null
   verified: true
+
+- id: acog-vms-sleep-mood-cpg-2026
+  title: "ACOG Clinical Practice Guideline: Management of Menopause-Related Vasomotor, Sleep, and Mood Symptoms"
+  authors: []
+  publisher: "American College of Obstetricians & Gynecologists' Committee on Clinical Practice Guidelines-Gynecology"
+  year: 2026
+  type: guideline
+  url: https://pubmed.ncbi.nlm.nih.gov/42878500/
+  doi: 10.1097/AOG.0000000000006428
+  accessed: "2026-11-06"
+  population: Perimenopausal and postmenopausal individuals assigned female sex at birth, with vasomotor, sleep, and mood symptoms related to spontaneous or induced menopause (age 40 or older)
+  key_finding: Evidence-based recommendations, graded by strength and evidence quality using a modified GRADE framework, on pharmacologic and nonpharmacologic interventions for menopause-related vasomotor, sleep, and mood symptoms.
+  funding_conflict: null
+  verified: true
+  notes: "Indexed abstract gives purpose, target population and methods only, with no specific recommendation text. Cite only the guideline's existence/scope from this entry; do not attribute a specific recommendation to it without reading the full guideline (Obstet Gynecol. 2026 Nov 1;148(5):e345-e369)."
+
+- id: korn-bernstein-migraine-menopause-2026
+  title: "Migraine across the menopausal transition and beyond: A narrative review"
+  authors: [Korn TF, Bernstein C]
+  publisher: Headache
+  year: 2026
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/41934093/
+  doi: 10.1111/head.70071
+  accessed: "2026-11-06"
+  population: Perimenopausal and postmenopausal women with migraine
+  key_finding: "Unstable estradiol and progesterone during perimenopause can worsen migraine frequency. Migraine without aura often improves after menopause; migraine with aura tends to persist and independently raises ischemic stroke risk. Oral estrogen, especially at higher doses, may worsen migraine and raise vascular risk, particularly with aura; low-dose transdermal estrogen (the route recommended by the North American Menopause Society) appears safer and better tolerated. Continuous progestogen may reduce withdrawal-related attacks versus cyclic regimens."
+  funding_conflict: null
+  verified: true
+  notes: "Narrative review, not a systematic review or trial, so typed 'other'."
+
+- id: stute-nonhormonal-transition-2026
+  title: "Managing the transition without hormones"
+  authors: [Stute P, Pavicic E, Richina SF, Thurston RC]
+  publisher: Climacteric
+  year: 2026
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/42905129/
+  doi: 10.1080/13697137.2026.2742071
+  accessed: "2026-11-06"
+  population: Perimenopausal and postmenopausal women seeking or requiring non-hormonal management
+  key_finding: "Reviews evidence-based non-hormonal strategies for vasomotor symptoms, sleep disturbance and fatigue, psychological and cognitive concerns, musculoskeletal complaints, and sexual, vulvovaginal and urinary issues, including cognitive behavioral therapy, neurokinin receptor antagonists, selected antidepressants, pelvic floor therapy, and individualized lifestyle interventions. Proposes a structured, symptom-oriented decision framework; treatment should be chosen through shared decision-making and reassessed after a defined interval."
+  funding_conflict: null
+  verified: true
+  notes: "Narrative review, not a systematic review or trial, so typed 'other'."
+
+- id: neda-stepan-vms-mood-systematic-review-2026
+  title: "Vasomotor Symptoms and Their Association with Depressive and Anxiety Symptoms in Peri- and Postmenopausal Women: A Systematic Review of Observational Studies"
+  authors: [Neda-Stepan O, Enatescu VR, Giurgi-Oncu C, Bernad ES, Neamtu R, Bernad BC, Kadas AV, Bredicean C]
+  publisher: Medicina (Kaunas)
+  year: 2026
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/42654471/
+  doi: 10.3390/medicina62081574
+  accessed: "2026-11-06"
+  population: "Peri- and postmenopausal women; 12 observational studies, about 9,900 women across 7 countries"
+  key_finding: "Greater vasomotor symptom (VMS) burden was consistently associated with higher odds of depressive symptoms, with adjusted odds ratios ranging from 1.67 to 2.99 across studies reporting adjusted estimates. Evidence for anxiety was directionally similar but considerably weaker and less certain. Certainty of evidence was rated low for depression and very low for anxiety; the predominance of cross-sectional designs, heterogeneous instruments, and largely unaddressed confounding mean these associations cannot be read as cause and effect."
+  funding_conflict: null
+  verified: true
+
+- id: maki-jaff-brain-fog-2024
+  title: "Menopause and brain fog: how to counsel and treat midlife women"
+  authors: [Maki PM, Jaff NG]
+  publisher: Menopause
+  year: 2024
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/38888619/
+  doi: 10.1097/GME.0000000000002382
+  accessed: "2026-11-06"
+  population: Midlife women reporting menopause-related subjective cognitive difficulties ("brain fog")
+  key_finding: "Longitudinal studies find small but reliable declines in objective memory performance as women transition into perimenopause, not explained by age alone; performance remains within normal limits for all but a very small number of women. Women's experience of brain fog extends beyond memory, reflecting effects on a broader range of cognitive abilities."
+  funding_conflict: null
+  verified: true
+  notes: "This is a short editorial/commentary (PubMed publication type: Journal Article only, no Review, Systematic Review or Guideline tag), not a primary study. Weight it accordingly, the same as a small study or preprint."
+
+- id: swan-vms-duration-avis-2015
+  title: "Duration of menopausal vasomotor symptoms over the menopause transition"
+  authors: [Avis NE, Crawford SL, Greendale G, Bromberger JT, Everson-Rose SA, Gold EB, Hess R, Joffe H, Kravitz HM, Tepper PG, Thurston RC]
+  publisher: JAMA Internal Medicine
+  year: 2015
+  type: cohort
+  url: https://pubmed.ncbi.nlm.nih.gov/25686030/
+  doi: 10.1001/jamainternmed.2014.8063
+  accessed: "2026-11-06"
+  population: "SWAN (Study of Women's Health Across the Nation): 3,302 multiracial/multiethnic US women at 7 sites, Feb 1996-Apr 2013, median 13 visits; 1,449 women with frequent VMS analyzed"
+  key_finding: "Median total duration of frequent vasomotor symptoms (hot flashes or night sweats, 6 or more days in the prior 2 weeks) was 7.4 years. Among 881 women with an observable final menstrual period (FMP), median persistence after the FMP was 4.5 years. Women premenopausal or early-perimenopausal when frequent VMS first began had the longest duration (median over 11.8 years) and longest post-FMP persistence (median 9.4 years); those postmenopausal at VMS onset had the shortest (median 3.4 years). African American women had the longest median duration (10.1 years) of any racial or ethnic group studied. Younger age, lower education, greater perceived stress and symptom sensitivity, and higher depressive and anxiety symptoms at first VMS report were linked to longer duration."
+  funding_conflict: null
+  verified: true
+
+- id: appiah-menopause-age-trends-2021
+  title: "Trends in Age at Natural Menopause and Reproductive Life Span Among US Women, 1959-2018"
+  authors: [Appiah D, Nwabuo CC, Ebong IA, Wellons MF, Winters SJ]
+  publisher: JAMA
+  year: 2021
+  type: cohort
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8025101/
+  doi: 10.1001/jama.2021.0278
+  accessed: "2026-11-06"
+  population: "US women aged 40-74 with natural menopause, NHANES/NHES surveys 1959-1962 through 2015-2018 (analytic sample of 7,773)"
+  key_finding: "Mean age at natural menopause rose from 48.4 to 49.9 years between 1959-1962 and 2015-2018 (p<.001 for trend); mean reproductive life span rose from 35.0 to 37.1 years; mean age at menarche fell from 13.5 to 12.7 years. Early menopause (natural menopause at age 40-45) was reported by 11.8% of women in 2015-2018. Black and Hispanic race-ethnicity, poverty, smoking, and hormone therapy use were associated with earlier menopause and shorter reproductive span in adjusted models; higher education and oral contraceptive use were associated with longer spans."
+  funding_conflict: null
+  verified: true
+  notes: "NCBI's indexed abstract for this JAMA research letter is a one-line teaser only, with no numbers, and the publisher blocks full-text retrieval through the E-utilities API. The specific figures above come from the Blog/SEO session's own read of the full text, not from anything independently pulled via API here. Independently confirmed here: title, authors, journal, year, DOI, PMCID, and that this is a real NHANES-based research letter."
+
+- id: acog-compounded-bioidentical-2023
+  title: "Compounded Bioidentical Menopausal Hormone Therapy: ACOG Clinical Consensus No. 6"
+  authors: []
+  publisher: "American College of Obstetricians and Gynecologists' Committee on Clinical Consensus-Gynecology"
+  year: 2023
+  type: guideline
+  url: https://pubmed.ncbi.nlm.nih.gov/37856860/
+  doi: 10.1097/AOG.0000000000005395
+  accessed: "2026-11-06"
+  population: Patients considering or using compounded bioidentical menopausal hormone therapy
+  key_finding: "Compounding pharmacies market 'bioidentical hormone' preparations as natural, safer, and more effective than FDA-approved menopausal hormone therapy, but evidence to support those safety and effectiveness claims is lacking. ACOG recommends against routinely prescribing compounded bioidentical MHT when FDA-approved formulations exist; clinicians should counsel patients who request it anyway on the lack of FDA approval and the risks specific to compounding (no standardized testing for purity, potency, or sterility). High-quality randomized controlled trials comparing compounded with FDA-approved MHT are still needed."
+  funding_conflict: null
+  verified: true

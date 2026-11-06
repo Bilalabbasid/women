@@ -20,7 +20,7 @@ reviewer: null
 updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "First comprehensive appointment question guide", material: true }
-evidence_grade: null
+evidence_grade: strong
 claims:
   - id: clinical-consultation-guideline
     text: "Clinical guidelines emphasize that doctor visits for perimenopause should focus on symptom severity, quality-of-life impact, and individual medical history rather than routine hormone tests."

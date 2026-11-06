@@ -20,7 +20,7 @@ reviewer: null
 updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "First comprehensive evidence guide to early perimenopause signs", material: true }
-evidence_grade: null
+evidence_grade: strong
 claims:
   - id: straw-cycle-variance
     text: "The onset of perimenopause is clinically identified by menstrual cycle changes of seven or more days between consecutive periods, often preceded by subtle sleep and mood shifts."

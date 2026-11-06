@@ -1,5 +1,6 @@
 import type { LocalCheckin, LocalSymptomEntry, LocalTreatment, FlowLevel } from '../db/schema';
 import { InsightsEngine, daysCovered, type SymptomStats } from '../insights/calculations';
+import { localDateString, localDaysAgo } from '../utils/local-date';
 
 /**
  * Builds the one-page doctor report from her own entries. Pure and local, so
@@ -33,8 +34,8 @@ export function buildDoctorReport(
   windowDays: number,
   today: Date = new Date(),
 ): DoctorReport {
-  const endDate = today.toISOString().slice(0, 10);
-  const startDate = new Date(today.getTime() - (windowDays - 1) * 86_400_000).toISOString().slice(0, 10);
+  const endDate = localDateString(today);
+  const startDate = localDaysAgo(windowDays - 1, today);
   const inWindow = checkins.filter((c) => c.date >= startDate && c.date <= endDate);
 
   const weeklyEntries = inWindow.filter((c) => daysCovered(c) === 7).length;

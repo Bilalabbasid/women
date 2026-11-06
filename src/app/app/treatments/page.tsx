@@ -46,6 +46,7 @@ import {
   TreatmentComparisonResult,
 } from '@/lib/insights/treatment-comparison';
 import { newId } from '@/lib/utils/id';
+import { useLocalToday } from '@/components/storage/use-tool-state';
 
 const TREATMENT_TYPES: Array<{ value: TreatmentType; label: string; icon: string; category: string }> = [
   { value: 'patch', label: 'Transdermal Patch (e.g. Estradiol, Combipatch)', icon: '🩹', category: 'HRT / Transdermal' },
@@ -78,7 +79,8 @@ const DAYS_OF_WEEK = [
 ];
 
 export default function TreatmentsPage() {
-  const todayStr = new Date().toISOString().split('T')[0];
+  // Her local date ('' during server render so hydration matches): an evening dose belongs to today, not UTC tomorrow.
+  const todayStr = useLocalToday();
 
   const [treatments, setTreatments] = useState<LocalTreatment[]>([]);
   const [events, setEvents] = useState<LocalTreatmentEvent[]>([]);

@@ -3,6 +3,7 @@ import { db } from '../db/db';
 import { TOOL_KEYS } from '../db/schema';
 import { APP_CONFIG } from '../config/constants';
 import { appLocalStorageKeys } from './manager';
+import { localDateString } from '../utils/local-date';
 
 /**
  * Backup and restore. A backup is a JSON file she downloads and keeps herself;
@@ -68,7 +69,7 @@ export async function createBackup(): Promise<BackupFile> {
 }
 
 export function backupFileName(now: Date = new Date()): string {
-  return `menoverdict-backup-${now.toISOString().slice(0, 10)}.json`;
+  return `menoverdict-backup-${localDateString(now)}.json`;
 }
 
 export async function downloadBackup(): Promise<{ records: number }> {

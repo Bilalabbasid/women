@@ -1,6 +1,7 @@
 import { jsPDF } from 'jspdf';
 import { autoTable } from 'jspdf-autotable';
 import type { DoctorReport } from './doctor-report';
+import { localDateString } from '../utils/local-date';
 
 /**
  * Builds the doctor report as a formatted PDF, entirely in the browser.
@@ -182,6 +183,6 @@ export function buildDoctorReportPdf(report: DoctorReport, questions: string[], 
 
 /** Builds the PDF and saves it. The file never leaves the device. */
 export function downloadDoctorReportPdf(report: DoctorReport, questions: string[]): void {
-  const today = new Date().toISOString().slice(0, 10);
+  const today = localDateString();
   buildDoctorReportPdf(report, questions, today).save(`menoverdict-doctor-report-${today}.pdf`);
 }

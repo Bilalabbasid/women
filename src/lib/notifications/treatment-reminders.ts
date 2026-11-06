@@ -3,6 +3,7 @@
 
 import { LocalTreatment, LocalTreatmentEvent } from '../db/schema';
 import { db } from '../db/db';
+import { localDateString } from '../utils/local-date';
 
 export type NotificationPermissionState = 'granted' | 'denied' | 'not_requested' | 'unsupported';
 export type NotificationPrivacyMode = 'discrete' | 'detailed';
@@ -195,7 +196,7 @@ export const NotificationService = {
   calculateDueTreatments(
     treatments: LocalTreatment[],
     todayEvents: LocalTreatmentEvent[],
-    todayDateStr: string = new Date().toISOString().split('T')[0]
+    todayDateStr: string = localDateString()
   ): {
     due: LocalTreatment[];
     completed: LocalTreatment[];

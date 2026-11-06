@@ -16,6 +16,7 @@ import { Button } from '@/components/ui/button';
 import { AppHeader } from '@/components/app/app-header';
 import { LocalDataService } from '@/lib/db/service';
 import { InsightsEngine, SymptomStats, SleepStats, HotFlashStats } from '@/lib/insights/calculations';
+import { localDateString, localDaysAgo } from '@/lib/utils/local-date';
 
 export default function InsightsPage() {
   const [selectedRange, setSelectedRange] = useState<'30' | '60' | '90'>('30');
@@ -30,8 +31,8 @@ export default function InsightsPage() {
 
     async function fetchInsights() {
       const days = parseInt(selectedRange, 10);
-      const end = new Date().toISOString().split('T')[0];
-      const start = new Date(Date.now() - days * 86400000).toISOString().split('T')[0];
+      const end = localDateString();
+      const start = localDaysAgo(days);
 
       const checkinsWithSymptoms = await LocalDataService.getCheckinsForRange(start, end);
 

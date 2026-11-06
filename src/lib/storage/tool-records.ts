@@ -2,13 +2,10 @@ import { db } from '../db/db';
 import { newId } from '../utils/id';
 import type { LocalToolRecord, ToolKey } from '../db/schema';
 
+import { localDateString } from '../utils/local-date';
+
 /** Today as YYYY-MM-DD in her local time zone (not UTC: an evening entry belongs to today). */
-export function localToday(now: Date = new Date()): string {
-  const y = now.getFullYear();
-  const m = String(now.getMonth() + 1).padStart(2, '0');
-  const d = String(now.getDate()).padStart(2, '0');
-  return `${y}-${m}-${d}`;
-}
+export const localToday = (now: Date = new Date()): string => localDateString(now);
 
 export const isIsoDate = (s: unknown): s is string => typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s);
 

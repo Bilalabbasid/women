@@ -20,9 +20,13 @@ import { AppHeader } from '@/components/app/app-header';
 import { LocalDataService } from '@/lib/db/service';
 import { LocalCheckin, LocalSymptomEntry, LocalTreatment, LocalTreatmentEvent } from '@/lib/db/schema';
 import { NotificationService } from '@/lib/notifications/treatment-reminders';
+import { describeStorageError } from '@/lib/storage/errors';
+import { useLocalToday } from '@/components/storage/use-tool-state';
 
 export default function DashboardPage() {
-  const todayStr = new Date().toISOString().split('T')[0];
+  // Her local date; '' during server render so hydration matches.
+  const todayStr = useLocalToday();
+  const [saveError, setSaveError] = useState<string | null>(null);
   const [selectedFeeling, setSelectedFeeling] = useState<number | null>(null);
   const [todayCheckin, setTodayCheckin] = useState<(LocalCheckin & { symptoms: LocalSymptomEntry[] }) | null>(null);
   const [recentCheckins, setRecentCheckins] = useState<Array<LocalCheckin & { symptoms: LocalSymptomEntry[] }>>([]);
@@ -43,6 +47,7 @@ export default function DashboardPage() {
     let isMounted = true;
 
     async function loadDashboard() {
+      if (!todayStr) return;
       const today = await LocalDataService.getCheckinByDate(todayStr);
       if (!isMounted) return;
       if (today) {
@@ -73,15 +78,36 @@ export default function DashboardPage() {
     };
   }, [todayStr, reloadTrigger]);
 
+  // Only the feeling changes: everything else already logged today is kept, and nothing is filled in for her.
   const handleQuickFeelingSelect = async (val: 1 | 2 | 3 | 4 | 5) => {
+    if (!todayStr) return;
     setSelectedFeeling(val);
-    await LocalDataService.saveCheckin({
-      date: todayStr,
-      overallFeeling: val,
-      sleepHours: todayCheckin?.sleepHours || 7,
-      hotFlashCount: todayCheckin?.hotFlashCount || 0,
-      symptoms: todayCheckin?.symptoms || [],
-    });
+    setSaveError(null);
+    const t = todayCheckin;
+    try {
+      await LocalDataService.saveCheckin({
+        date: todayStr,
+        overallFeeling: val,
+        coversDays: t?.coversDays,
+        notes: t?.notes,
+        sleepHours: t?.sleepHours,
+        sleepQuality: t?.sleepQuality,
+        wokeAtNight: t?.wokeAtNight,
+        hotFlashCount: t?.hotFlashCount,
+        flow: t?.flow,
+        lifestyle: t?.lifestyle,
+        symptoms: (t?.symptoms ?? []).map((s) => ({
+          symptomId: s.symptomId,
+          name: s.name,
+          category: s.category,
+          severity: s.severity,
+          notes: s.notes,
+        })),
+      });
+    } catch (err) {
+      setSelectedFeeling(t?.overallFeeling ?? null);
+      setSaveError(describeStorageError(err));
+    }
     setReloadTrigger((n) => n + 1);
   };
 
@@ -93,13 +119,19 @@ export default function DashboardPage() {
         ? 'taken'
         : 'applied';
 
-    await LocalDataService.logTreatmentEvent({
-      treatmentId: t.id,
-      treatmentName: t.name,
-      date: todayStr,
-      action,
-      notes: `${t.name} logged on ${todayStr}.`,
-    });
+    if (!todayStr) return;
+    setSaveError(null);
+    try {
+      await LocalDataService.logTreatmentEvent({
+        treatmentId: t.id,
+        treatmentName: t.name,
+        date: todayStr,
+        action,
+        notes: `${t.name} logged on ${todayStr}.`,
+      });
+    } catch (err) {
+      setSaveError(describeStorageError(err));
+    }
     setReloadTrigger((n) => n + 1);
   };
 
@@ -120,6 +152,11 @@ export default function DashboardPage() {
       />
 
       <div className="flex-1 max-w-2xl mx-auto w-full px-4 py-5 space-y-5">
+        {saveError && (
+          <p role="alert" className="rounded-2xl bg-[var(--color-urgent-soft)] p-3 text-sm font-semibold text-[var(--color-urgent)]">
+            {saveError}
+          </p>
+        )}
         {/* Storage status banner */}
         <div className="bg-[#F7F6F2] border border-[#E5DED5] rounded-xl px-3.5 py-1.5 flex items-center justify-between text-xs text-[#68615C]">
           <span className="flex items-center gap-1.5">

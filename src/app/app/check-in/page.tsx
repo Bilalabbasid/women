@@ -29,8 +29,15 @@ import { evaluateUrgentTriggers } from '@/lib/safety/urgent-triggers';
 import { UrgentGuidance } from '@/components/safety/urgent-guidance';
 import { markToolUsed } from '@/lib/pwa/install-gate';
 import { requestPersistentStorage } from '@/lib/pwa/persist-storage';
+import { describeStorageError } from '@/lib/storage/errors';
+import { useLocalToday } from '@/components/storage/use-tool-state';
 
 const subscribeNoop = () => () => {};
+/** ?date=YYYY-MM-DD opens that day's entry for editing (e.g. from the timeline). */
+function readDateParam(): string {
+  const d = new URLSearchParams(window.location.search).get('date') ?? '';
+  return /^\d{4}-\d{2}-\d{2}$/.test(d) ? d : '';
+}
 function readPinned(): string {
   try {
     return window.localStorage.getItem('menowell_pinned_symptoms') ?? '[]';
@@ -43,8 +50,12 @@ export default function CheckinPage() {
   const router = useRouter();
 
   // Primary state
-  const todayStr = new Date().toISOString().split('T')[0];
-  const [selectedDate, setSelectedDate] = useState<string>(todayStr);
+  // Her local date ('' during server render so hydration matches); an evening entry belongs to today, not UTC tomorrow.
+  const todayStr = useLocalToday();
+  const dateParam = useSyncExternalStore(subscribeNoop, readDateParam, () => '');
+  const [pickedDate, setSelectedDate] = useState<string>('');
+  const selectedDate = pickedDate || (dateParam && todayStr && dateParam <= todayStr ? dateParam : todayStr);
+  const [saveError, setSaveError] = useState<string | null>(null);
   const [overallFeeling, setOverallFeeling] = useState<1 | 2 | 3 | 4 | 5>(3);
   const [journalText, setJournalText] = useState('');
   const [coversDays, setCoversDays] = useState<1 | 7>(1);
@@ -90,24 +101,44 @@ export default function CheckinPage() {
 
   // Load existing check-in if editing
   useEffect(() => {
+    let alive = true;
     async function loadData() {
+      if (!selectedDate) return;
       const custom = await LocalDataService.getCustomSymptoms();
+      if (!alive) return;
       setCustomSymptomsList(custom);
 
       const existing = await LocalDataService.getCheckinByDate(selectedDate);
-      if (existing) {
+      if (!alive) return;
+      setSavedSuccess(false);
+      setSaveError(null);
+      if (!existing) {
+        // A day with no entry starts blank. Never carry the previously viewed day's answers into it.
+        setOverallFeeling(3);
+        setCoversDays(1);
+        setJournalText('');
+        setSleepHours(7);
+        setWokeAtNight(false);
+        setHotFlashCount(0);
+        setFlow('none');
+        setCaffeine(false);
+        setAlcohol(false);
+        setExercise(false);
+        setSelectedSymptoms({});
+        return;
+      }
+      {
         setOverallFeeling(existing.overallFeeling);
         setCoversDays(existing.coversDays === 7 ? 7 : 1);
-        if (existing.notes) setJournalText(existing.notes);
-        if (existing.sleepHours) setSleepHours(existing.sleepHours);
-        if (typeof existing.wokeAtNight === 'boolean') setWokeAtNight(existing.wokeAtNight);
-        if (typeof existing.hotFlashCount === 'number') setHotFlashCount(existing.hotFlashCount);
-        if (existing.flow) setFlow(existing.flow);
-        if (existing.lifestyle) {
-          setCaffeine(!!existing.lifestyle.caffeine);
-          setAlcohol(!!existing.lifestyle.alcohol);
-          setExercise(!!existing.lifestyle.exercise);
-        }
+        // Every field is set from this day's entry (or its default), so nothing from another day shows through.
+        setJournalText(existing.notes ?? '');
+        setSleepHours(typeof existing.sleepHours === 'number' ? existing.sleepHours : 7);
+        setWokeAtNight(existing.wokeAtNight === true);
+        setHotFlashCount(typeof existing.hotFlashCount === 'number' ? existing.hotFlashCount : 0);
+        setFlow(existing.flow ?? 'none');
+        setCaffeine(!!existing.lifestyle?.caffeine);
+        setAlcohol(!!existing.lifestyle?.alcohol);
+        setExercise(!!existing.lifestyle?.exercise);
 
         const symMap: { [id: string]: number } = {};
         for (const s of existing.symptoms) {
@@ -116,7 +147,10 @@ export default function CheckinPage() {
         setSelectedSymptoms(symMap);
       }
     }
-    loadData();
+    void loadData();
+    return () => {
+      alive = false;
+    };
   }, [selectedDate]);
 
   const toggleSymptomSeverity = (id: string, severity: number) => {
@@ -143,7 +177,9 @@ export default function CheckinPage() {
   };
 
   const handleSave = async () => {
+    if (!selectedDate) return;
     setIsSaving(true);
+    setSaveError(null);
 
     const symptomEntries = Object.entries(selectedSymptoms).map(([id, sev]) => {
       const std = STANDARD_SYMPTOMS.find((s) => s.id === id);
@@ -156,19 +192,25 @@ export default function CheckinPage() {
       };
     });
 
-    await LocalDataService.saveCheckin({
-      date: selectedDate,
-      overallFeeling,
-      notes: journalText.trim() || undefined,
-      coversDays,
-      sleepHours,
-      // Night waking is a per-night answer, recorded on daily entries only.
-      wokeAtNight: weekly ? undefined : wokeAtNight,
-      hotFlashCount,
-      flow,
-      lifestyle: { caffeine, alcohol, exercise },
-      symptoms: symptomEntries,
-    });
+    try {
+      await LocalDataService.saveCheckin({
+        date: selectedDate,
+        overallFeeling,
+        notes: journalText.trim() || undefined,
+        coversDays,
+        sleepHours,
+        // Night waking is a per-night answer, recorded on daily entries only.
+        wokeAtNight: weekly ? undefined : wokeAtNight,
+        hotFlashCount,
+        flow,
+        lifestyle: { caffeine, alcohol, exercise },
+        symptoms: symptomEntries,
+      });
+    } catch (err) {
+      setIsSaving(false);
+      setSaveError(describeStorageError(err));
+      return;
+    }
 
     setIsSaving(false);
     setSavedSuccess(true);
@@ -227,6 +269,12 @@ export default function CheckinPage() {
           </div>
         )}
 
+        {saveError && (
+          <p role="alert" className="rounded-2xl bg-[var(--color-urgent-soft)] p-4 text-sm font-semibold text-[var(--color-urgent)]">
+            {saveError}
+          </p>
+        )}
+
         {/* Date Selector */}
         <div className="flex items-center justify-between gap-3 bg-white p-3 rounded-2xl border border-[#E5DED5]">
           <label htmlFor="checkin-date" className="text-xs font-semibold text-[#5C554F]">Logging for</label>
@@ -234,7 +282,7 @@ export default function CheckinPage() {
             id="checkin-date"
             type="date"
             value={selectedDate}
-            max={todayStr}
+            max={todayStr || undefined}
             onChange={(e) => setSelectedDate(e.target.value)}
             className="text-xs font-medium text-[#231F1D] bg-[#F7F6F2] px-3 py-1.5 rounded-xl border border-[#E5DED5] focus:outline-none focus:border-[#1F5A4C]"
           />

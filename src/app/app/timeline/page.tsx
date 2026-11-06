@@ -26,9 +26,11 @@ import {
   TreatmentComparisonEngine,
   TreatmentComparisonResult,
 } from '@/lib/insights/treatment-comparison';
+import { localDateString, localDaysAgo } from '@/lib/utils/local-date';
 
 export default function TimelinePage() {
-  const [filterDays, setFilterDays] = useState<7 | 14 | 30 | 60 | 90>(30);
+  /** Days back to show; 0 = all time, so years of history stay reachable. */
+  const [filterDays, setFilterDays] = useState<number>(30);
   const [viewMode, setViewMode] = useState<'all' | 'checkins' | 'treatments'>('all');
   const [checkins, setCheckins] = useState<Array<LocalCheckin & { symptoms: LocalSymptomEntry[] }>>([]);
   const [treatmentEvents, setTreatmentEvents] = useState<LocalTreatmentEvent[]>([]);
@@ -47,8 +49,8 @@ export default function TimelinePage() {
     let isMounted = true;
 
     async function loadTimeline() {
-      const end = new Date().toISOString().split('T')[0];
-      const start = new Date(Date.now() - filterDays * 86400000).toISOString().split('T')[0];
+      const end = localDateString();
+      const start = filterDays > 0 ? localDaysAgo(filterDays) : '0000-01-01';
 
       const data = await LocalDataService.getCheckinsForRange(start, end);
       const events = await LocalDataService.getTreatmentEvents(start, end);
@@ -72,6 +74,15 @@ export default function TimelinePage() {
     e.stopPropagation();
     if (confirm('Delete this check-in entry from your local device?')) {
       await LocalDataService.deleteCheckin(id);
+      setReloadTrigger((n) => n + 1);
+    }
+  };
+
+  // A dose logged by mistake can be removed; the treatment plan itself is untouched.
+  const handleDeleteEvent = async (evt: LocalTreatmentEvent, e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (confirm(`Remove the "${evt.action}" entry for ${evt.treatmentName} on ${evt.date}? Your treatment plan is not affected.`)) {
+      await LocalDataService.deleteTreatmentEvent(evt.id);
       setReloadTrigger((n) => n + 1);
     }
   };
@@ -109,6 +120,9 @@ export default function TimelinePage() {
     { label: '30D', value: 30 },
     { label: '60D', value: 60 },
     { label: '90D', value: 90 },
+    { label: '6M', value: 182 },
+    { label: '1Y', value: 365 },
+    { label: 'All', value: 0 },
   ];
 
   // Unique list of dates having check-ins or treatment events
@@ -166,7 +180,7 @@ export default function TimelinePage() {
           </div>
 
           {/* Time window selector */}
-          <div className="flex items-center justify-between sm:justify-end gap-1">
+          <div className="flex flex-wrap items-center justify-between sm:justify-end gap-1">
             <span className="text-xs font-semibold text-[#68615C] pr-1 hidden sm:inline-flex items-center gap-1">
               <Filter className="w-3.5 h-3.5" />
               Window:
@@ -174,7 +188,8 @@ export default function TimelinePage() {
             {filters.map((f) => (
               <button
                 key={f.value}
-                onClick={() => setFilterDays(f.value as 7 | 14 | 30 | 60 | 90)}
+                onClick={() => setFilterDays(f.value)}
+                aria-pressed={filterDays === f.value}
                 className={`px-2.5 py-1 rounded-xl text-xs font-semibold transition ${
                   filterDays === f.value
                     ? 'bg-[#1F5A4C] text-white shadow-xs'
@@ -195,7 +210,7 @@ export default function TimelinePage() {
             </div>
             <div>
               <h3 className="font-serif font-semibold text-base text-[#231F1D]">
-                No entries in this {filterDays}-day window
+                {filterDays > 0 ? `No entries in this ${filterDays}-day window` : 'No entries yet'}
               </h3>
               <p className="text-xs text-[#68615C] mt-1 max-w-xs mx-auto">
                 Log a daily check-in or treatment to establish your personal longitudinal timeline.
@@ -261,11 +276,18 @@ export default function TimelinePage() {
                         >
                           Feeling: {entry.overallFeeling}/5
                         </Badge>
+                        <Link
+                          href={`/app/check-in/?date=${entry.date}`}
+                          className="inline-flex min-h-[44px] items-center px-2 text-xs font-semibold text-[#1F5A4C] underline"
+                          aria-label={`Edit check-in for ${formattedDate}`}
+                        >
+                          Edit
+                        </Link>
                         <button
                           onClick={(e) => handleDeleteEntry(entry.id, e)}
-                          className="text-[#5C554F] hover:text-[#A33A33] p-1 transition"
+                          className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center text-[#5C554F] hover:text-[#A33A33] transition"
                           title="Delete check-in"
-                          aria-label="Delete check-in"
+                          aria-label={`Delete check-in for ${formattedDate}`}
                         >
                           <Trash2 className="w-3.5 h-3.5" />
                         </button>
@@ -369,6 +391,7 @@ export default function TimelinePage() {
                             )}
                           </div>
 
+                          <div className="flex flex-wrap items-center gap-1.5 self-start sm:self-center">
                           <Button
                             size="sm"
                             variant="outline"
@@ -377,6 +400,16 @@ export default function TimelinePage() {
                           >
                             <Sparkles className="w-3 h-3" /> Compare Before & After
                           </Button>
+                          <button
+                            type="button"
+                            onClick={(e) => handleDeleteEvent(evt, e)}
+                            className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center text-[#5C554F] hover:text-[#A33A33] transition"
+                            title="Remove this entry"
+                            aria-label={`Remove ${evt.action} entry for ${evt.treatmentName}`}
+                          >
+                            <Trash2 className="w-3.5 h-3.5" />
+                          </button>
+                          </div>
                         </Card>
                       ))}
                     </div>

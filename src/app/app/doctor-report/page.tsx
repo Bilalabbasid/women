@@ -9,6 +9,7 @@ import type { LocalTreatment, LocalCheckin, LocalSymptomEntry } from '@/lib/db/s
 import { DOCTOR_QUESTION_STARTERS } from '@/lib/config/doctor-questions';
 import { buildDoctorReport } from '@/lib/tools/doctor-report';
 import { markToolUsed } from '@/lib/pwa/install-gate';
+import { localDateString, localDaysAgo } from '@/lib/utils/local-date';
 
 const WINDOWS = [14, 30, 60, 90] as const;
 const QUESTIONS_KEY = 'doctor_report_questions';
@@ -33,8 +34,8 @@ export default function DoctorReportPage() {
   }, []);
 
   useEffect(() => {
-    const end = new Date().toISOString().slice(0, 10);
-    const start = new Date(Date.now() - (windowDays - 1) * 86_400_000).toISOString().slice(0, 10);
+    const end = localDateString();
+    const start = localDaysAgo(windowDays - 1);
     Promise.all([LocalDataService.getTreatments(true), LocalDataService.getCheckinsForRange(start, end)]).then(([t, c]) => {
       setTreatments(t);
       setCheckins(c);
@@ -123,7 +124,7 @@ export default function DoctorReportPage() {
             <p className="text-xs text-[var(--color-ink-muted)]">
               {fmt(report.startDate)} to {fmt(report.endDate)} · {report.entries} {report.entries === 1 ? 'entry' : 'entries'}
               {report.weeklyEntries > 0 && ` (${report.dailyEntries} daily, ${report.weeklyEntries} weekly)`} covering{' '}
-              {report.daysCovered} of {report.windowDays} days · Printed {fmt(new Date().toISOString().slice(0, 10))}
+              {report.daysCovered} of {report.windowDays} days · Printed {fmt(localDateString())}
             </p>
             <p className="text-xs text-[var(--color-ink-muted)]">
               Recorded by me on my own device. Ratings are my own (1 = mild, 5 = severe); this is not a

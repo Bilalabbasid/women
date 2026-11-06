@@ -73,7 +73,7 @@ nextecom owns.)*
 |---|---|---|---|
 | **Foundation** | `src/app/globals.css`, `src/components/ui/{button,badge,card}.tsx`, `src/components/site/site-chrome.tsx` (header/footer/breadcrumbs), `BRAND.md` (reference, don't rewrite without flagging) | this session (UI sync) | In progress |
 | **A — Public shell & homepage** | `src/app/(site)/page.tsx`, `src/app/(site)/layout.tsx`, `src/app/(site)/search/page.tsx`, `src/app/(site)/tools/page.tsx`, `src/app/(site)/urgent-help/page.tsx`, `src/app/not-found.tsx`, `src/app/error.tsx`, `src/app/offline/page.tsx`, `src/components/site/{cookie-banner,search-box}.tsx` | *open* | Not started |
-| **B — Interactive tools UI** | `src/components/tools/*` (does-it-work-checker, stage-guide, symptoms-checklist, tool-island, treatment-questions, twelve-month-counter) — markup/styling only, logic stays in `src/lib/tools/` | *open* | Not started |
+| **B — Interactive tools UI** | `src/components/tools/*` (does-it-work-checker, stage-guide, symptoms-checklist, tool-island, treatment-questions, twelve-month-counter) — markup/styling only, logic stays in `src/lib/tools/` | this session — 2026-11-06 | In progress |
 | **C — Private `/app` tracker shell** | `src/app/app/**/page.tsx` (today, check-in, timeline, treatments, insights, doctor-report, settings, membership, onboarding, privacy, account), `src/components/app/{app-header,app-navigation,medical-disclaimer,pwa-install-banner,service-worker-registrar}.tsx`, `src/components/account/health-sync-consent.tsx` | *open* | Not started |
 | **D — Content page templates (by page_type)** | `src/app/(site)/[...slug]/page.tsx` — the single shared renderer for every symptom/treatment/does-it-work/comparison/hub page — plus `src/components/site/{evidence,next-steps,email-capture,standard-notice,client-islands}.tsx` | this session — 2026-11-06 | In progress |
 
@@ -112,3 +112,17 @@ the owner/functionality chat can make.)*
   — `[...slug]/page.tsx` + evidence/next-steps/email-capture/standard-notice/
   client-islands). About to audit current rendering per `page_type` before
   making visual changes.
+- 2026-11-06 — UI sync session (Foundation): fixed a site-wide bug —
+  `h1`–`h4` had no `font-weight` in the base rule, and Tailwind v4's preflight
+  resets heading `font-weight` to `inherit`, so every heading without an
+  explicit `font-semibold`/`font-bold` class (most of `[...slug]/page.tsx`,
+  `search/`, `tools/`, `urgent-help/`, and likely the `/app` pages) rendered
+  at normal weight instead of the bold serif the brand calls for. Added
+  `font-weight: 600` to the `h1,h2,h3,h4` rule in `globals.css` — fixes every
+  lane's headings at once, no per-page edits needed. Verified by reading
+  `node_modules/tailwindcss/preflight.css` directly (confirmed the
+  `font-weight: inherit` reset exists) rather than assuming. Not yet verified
+  in a browser (dev server not started this round) — if a heading still looks
+  thin after this, flag it here. Leaving Lane A unclaimed/open for now; this
+  session has moved to Lane B.
+- 2026-11-06 — UI sync session: claimed Lane B (interactive tools UI).

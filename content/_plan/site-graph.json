@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-06T16:35:15.463Z",
-  "total_pages": 34,
+  "generated_at": "2026-11-06T16:50:38.279Z",
+  "total_pages": 38,
   "nodes": {
     "/about/how-we-make-money/": {
       "url": "/about/how-we-make-money/",
@@ -342,6 +342,10 @@
         {
           "url": "/symptoms/vaginal-dryness/",
           "anchor": "vaginal moisturisers and lubricants"
+        },
+        {
+          "url": "/tools/does-it-work-checker/",
+          "anchor": "Vaginal moisturisers vs lubricants: what works for dryness"
         }
       ],
       "click_depth": 2
@@ -905,8 +909,13 @@
           "contextual": true
         },
         {
+          "url": "/tools/does-it-work-checker/",
+          "anchor": "Does it work? evidence checker",
+          "contextual": true
+        },
+        {
           "url": "/tools/symptoms-checklist/",
-          "anchor": "menopause symptoms checklist",
+          "anchor": "printable symptoms checklist",
           "contextual": true
         }
       ],
@@ -1002,6 +1011,10 @@
           "anchor": "magnesium for sleep and muscle tension"
         },
         {
+          "url": "/perimenopause/",
+          "anchor": "Does magnesium help menopause symptoms?"
+        },
+        {
           "url": "/perimenopause/questions-for-your-doctor/",
           "anchor": "magnesium for sleep"
         },
@@ -1012,6 +1025,10 @@
         {
           "url": "/symptoms/",
           "anchor": "magnesium improves sleep"
+        },
+        {
+          "url": "/tools/does-it-work-checker/",
+          "anchor": "Magnesium for menopause: sleep, anxiety and hot flashes"
         }
       ],
       "click_depth": 2
@@ -1146,6 +1163,10 @@
         {
           "url": "/evidence/",
           "anchor": "How we grade evidence"
+        },
+        {
+          "url": "/tools/does-it-work-checker/",
+          "anchor": "how we grade evidence"
         },
         {
           "url": "/",
@@ -1408,6 +1429,14 @@
           "anchor": "Early signs of perimenopause guide"
         },
         {
+          "url": "/tools/12-month-counter/",
+          "anchor": "early signs of perimenopause"
+        },
+        {
+          "url": "/tools/stage-guide/",
+          "anchor": "early signs of perimenopause"
+        },
+        {
           "url": "/tools/symptoms-checklist/",
           "anchor": "early signs of perimenopause"
         }
@@ -1463,13 +1492,28 @@
           "contextual": true
         },
         {
+          "url": "/tools/stage-guide/",
+          "anchor": "Perimenopause stage guide",
+          "contextual": true
+        },
+        {
+          "url": "/tools/12-month-counter/",
+          "anchor": "12-month period-free counter",
+          "contextual": true
+        },
+        {
           "url": "/perimenopause/questions-for-your-doctor/",
           "anchor": "What to ask your doctor about perimenopause",
           "contextual": true
         },
         {
           "url": "/tools/symptom-tracker/",
-          "anchor": "Symptom tracker and doctor report",
+          "anchor": "daily and weekly symptom log",
+          "contextual": true
+        },
+        {
+          "url": "/does-it-work/magnesium/",
+          "anchor": "Does magnesium help menopause symptoms?",
           "contextual": true
         },
         {
@@ -1486,6 +1530,14 @@
         {
           "url": "/perimenopause/questions-for-your-doctor/",
           "anchor": "perimenopause transition"
+        },
+        {
+          "url": "/tools/12-month-counter/",
+          "anchor": "perimenopause hub"
+        },
+        {
+          "url": "/tools/stage-guide/",
+          "anchor": "perimenopause overview"
         },
         {
           "url": "/",
@@ -1572,6 +1624,14 @@
         {
           "url": "/perimenopause/",
           "anchor": "What to ask your doctor about perimenopause"
+        },
+        {
+          "url": "/tools/stage-guide/",
+          "anchor": "questions to ask your doctor about perimenopause"
+        },
+        {
+          "url": "/tools/treatment-questions/",
+          "anchor": "questions to ask your doctor about perimenopause"
         }
       ],
       "click_depth": 2
@@ -1694,6 +1754,14 @@
         {
           "url": "/symptoms/",
           "anchor": "Hot flashes (vasomotor symptoms)"
+        },
+        {
+          "url": "/tools/does-it-work-checker/",
+          "anchor": "Hot flashes: hormonal and non-hormonal evidence"
+        },
+        {
+          "url": "/tools/treatment-questions/",
+          "anchor": "evidence-graded options for hot flashes"
         }
       ],
       "click_depth": 2
@@ -2141,6 +2209,233 @@
       ],
       "click_depth": 1
     },
+    "/tools/12-month-counter/": {
+      "url": "/tools/12-month-counter/",
+      "title": "12-month counter",
+      "status": "published",
+      "primary_keyword": "12 months no period menopause",
+      "intent": "transactional",
+      "cluster": "tools",
+      "hub": "/tools/",
+      "parent": "/tools/",
+      "symptom_tags": [
+        "irregular-periods",
+        "spotting"
+      ],
+      "page_type": "tool",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/tools/"
+      ],
+      "related": [
+        "/tools/stage-guide/",
+        "/tools/symptom-tracker/",
+        "/perimenopause/early-signs/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/tools/12-month-counter/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/tools/stage-guide/",
+          "anchor": "STRAW+10 perimenopause stage guide",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "private menopause symptom diary",
+          "contextual": true
+        },
+        {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "early signs of perimenopause",
+          "contextual": true
+        },
+        {
+          "url": "/perimenopause/",
+          "anchor": "perimenopause hub",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/perimenopause/",
+          "anchor": "12-month period-free counter"
+        },
+        {
+          "url": "/tools/",
+          "anchor": "12-month counter"
+        }
+      ],
+      "click_depth": 2
+    },
+    "/tools/does-it-work-checker/": {
+      "url": "/tools/does-it-work-checker/",
+      "title": "Does it work? Evidence checker",
+      "status": "published",
+      "primary_keyword": "menopause treatment evidence",
+      "intent": "transactional",
+      "cluster": "tools",
+      "hub": "/tools/",
+      "parent": "/tools/",
+      "symptom_tags": [
+        "hot-flashes",
+        "night-sweats",
+        "vaginal-dryness",
+        "painful-sex",
+        "bladder-leaks",
+        "insomnia"
+      ],
+      "page_type": "tool",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/tools/"
+      ],
+      "related": [
+        "/evidence/how-we-grade/",
+        "/symptoms/hot-flashes/",
+        "/tools/treatment-questions/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/tools/does-it-work-checker/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/evidence/how-we-grade/",
+          "anchor": "how we grade evidence",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "Hot flashes: hormonal and non-hormonal evidence",
+          "contextual": true
+        },
+        {
+          "url": "/does-it-work/magnesium/",
+          "anchor": "Magnesium for menopause: sleep, anxiety and hot flashes",
+          "contextual": true
+        },
+        {
+          "url": "/care/moisturizers-and-lubricants/",
+          "anchor": "Vaginal moisturisers vs lubricants: what works for dryness",
+          "contextual": true
+        },
+        {
+          "url": "/tools/treatment-questions/",
+          "anchor": "Prepare your appointment questions with the treatment conversation builder",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/does-it-work/",
+          "anchor": "Does it work? evidence checker"
+        },
+        {
+          "url": "/treatments/",
+          "anchor": "evidence checker tool"
+        },
+        {
+          "url": "/tools/",
+          "anchor": "Does it work? Evidence checker"
+        }
+      ],
+      "click_depth": 2
+    },
+    "/tools/stage-guide/": {
+      "url": "/tools/stage-guide/",
+      "title": "Where am I? Perimenopause stage guide",
+      "status": "published",
+      "primary_keyword": "am i in perimenopause quiz",
+      "intent": "transactional",
+      "cluster": "tools",
+      "hub": "/tools/",
+      "parent": "/tools/",
+      "symptom_tags": [
+        "irregular-periods",
+        "hot-flashes",
+        "night-sweats"
+      ],
+      "page_type": "tool",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/tools/"
+      ],
+      "related": [
+        "/perimenopause/early-signs/",
+        "/tools/symptoms-checklist/",
+        "/tools/12-month-counter/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/tools/stage-guide/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/perimenopause/",
+          "anchor": "perimenopause overview",
+          "contextual": true
+        },
+        {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "early signs of perimenopause",
+          "contextual": true
+        },
+        {
+          "url": "/perimenopause/questions-for-your-doctor/",
+          "anchor": "questions to ask your doctor about perimenopause",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptoms-checklist/",
+          "anchor": "printable symptoms checklist",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "daily and weekly symptom log",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/perimenopause/",
+          "anchor": "Perimenopause stage guide"
+        },
+        {
+          "url": "/tools/12-month-counter/",
+          "anchor": "STRAW+10 perimenopause stage guide"
+        },
+        {
+          "url": "/tools/",
+          "anchor": "Where am I? Perimenopause stage guide"
+        }
+      ],
+      "click_depth": 2
+    },
     "/tools/symptom-tracker/": {
       "url": "/tools/symptom-tracker/",
       "title": "Symptom tracker and doctor report",
@@ -2247,7 +2542,7 @@
         },
         {
           "url": "/perimenopause/",
-          "anchor": "Symptom tracker and doctor report"
+          "anchor": "daily and weekly symptom log"
         },
         {
           "url": "/perimenopause/questions-for-your-doctor/",
@@ -2266,8 +2561,20 @@
           "anchor": "symptom tracker and doctor summary"
         },
         {
+          "url": "/tools/12-month-counter/",
+          "anchor": "private menopause symptom diary"
+        },
+        {
+          "url": "/tools/stage-guide/",
+          "anchor": "daily and weekly symptom log"
+        },
+        {
           "url": "/tools/symptoms-checklist/",
           "anchor": "symptom tracker and doctor report"
+        },
+        {
+          "url": "/tools/treatment-questions/",
+          "anchor": "private symptom tracker"
         },
         {
           "url": "/treatments/hormone-therapy/boxed-warning/",
@@ -2275,7 +2582,11 @@
         },
         {
           "url": "/treatments/",
-          "anchor": "symptom tracker and doctor summary"
+          "anchor": "symptom diary and doctor summary"
+        },
+        {
+          "url": "/tools/",
+          "anchor": "Symptom tracker and doctor report"
         }
       ],
       "click_depth": 2
@@ -2364,7 +2675,7 @@
         },
         {
           "url": "/does-it-work/",
-          "anchor": "menopause symptoms checklist"
+          "anchor": "printable symptoms checklist"
         },
         {
           "url": "/perimenopause/early-signs/",
@@ -2399,8 +2710,91 @@
           "anchor": "menopause symptoms checklist"
         },
         {
+          "url": "/tools/stage-guide/",
+          "anchor": "printable symptoms checklist"
+        },
+        {
           "url": "/tools/symptom-tracker/",
           "anchor": "symptoms checklist"
+        },
+        {
+          "url": "/tools/",
+          "anchor": "Perimenopause symptoms checklist"
+        }
+      ],
+      "click_depth": 2
+    },
+    "/tools/treatment-questions/": {
+      "url": "/tools/treatment-questions/",
+      "title": "Treatment conversation builder",
+      "status": "published",
+      "primary_keyword": "questions to ask about hrt",
+      "intent": "transactional",
+      "cluster": "tools",
+      "hub": "/tools/",
+      "parent": "/tools/",
+      "symptom_tags": [
+        "hot-flashes",
+        "night-sweats",
+        "vaginal-dryness",
+        "painful-sex",
+        "bladder-leaks"
+      ],
+      "page_type": "tool",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/tools/"
+      ],
+      "related": [
+        "/perimenopause/questions-for-your-doctor/",
+        "/treatments/hormone-therapy/boxed-warning/",
+        "/tools/symptom-tracker/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/tools/treatment-questions/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "private symptom tracker",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/hormone-therapy/boxed-warning/",
+          "anchor": "what the FDA's HRT boxed-warning change means",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "evidence-graded options for hot flashes",
+          "contextual": true
+        },
+        {
+          "url": "/perimenopause/questions-for-your-doctor/",
+          "anchor": "questions to ask your doctor about perimenopause",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/tools/does-it-work-checker/",
+          "anchor": "Prepare your appointment questions with the treatment conversation builder"
+        },
+        {
+          "url": "/treatments/",
+          "anchor": "treatment conversation builder"
+        },
+        {
+          "url": "/tools/",
+          "anchor": "Treatment conversation builder"
         }
       ],
       "click_depth": 2
@@ -2460,6 +2854,10 @@
         {
           "url": "/evidence/updates/",
           "anchor": "The FDA HRT boxed warning change, explained"
+        },
+        {
+          "url": "/tools/treatment-questions/",
+          "anchor": "what the FDA's HRT boxed-warning change means"
         },
         {
           "url": "/treatments/",
@@ -2522,8 +2920,18 @@
           "contextual": true
         },
         {
+          "url": "/tools/treatment-questions/",
+          "anchor": "treatment conversation builder",
+          "contextual": true
+        },
+        {
+          "url": "/tools/does-it-work-checker/",
+          "anchor": "evidence checker tool",
+          "contextual": true
+        },
+        {
           "url": "/tools/symptom-tracker/",
-          "anchor": "symptom tracker and doctor summary",
+          "anchor": "symptom diary and doctor summary",
           "contextual": true
         }
       ],

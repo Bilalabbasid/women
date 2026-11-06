@@ -47,6 +47,38 @@ export function SymptomsChecklist({ liveUrls, trackerLive }: { liveUrls: string[
   const tickedItems = SYMPTOM_CATALOG.flatMap((g) => g.items).filter((i) => ticked.has(i.id));
   const trackable = trackerIdsFor(ticked).length;
 
+  const exportJson = () => {
+    try {
+      const payload = {
+        tool: 'symptoms-checklist',
+        app: 'MenoVerdict',
+        exportedAt: new Date().toISOString(),
+        tickedSymptoms: tickedItems.map((i) => ({ id: i.id, label: i.label, url: i.url })),
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `menoverdict-symptoms-checklist-${new Date().toISOString().slice(0, 10)}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch {
+      // ignore
+    }
+  };
+
+  const deleteAllToolData = () => {
+    setTicked(new Set());
+    setSaved(false);
+    try {
+      window.localStorage.removeItem(PINNED_KEY);
+    } catch {
+      // ignore
+    }
+  };
+
   return (
     <div className="space-y-6" data-tool-ui="symptoms-checklist">
       <form onSubmit={(e) => e.preventDefault()} className="space-y-5" aria-describedby="checklist-help">
@@ -132,15 +164,19 @@ export function SymptomsChecklist({ liveUrls, trackerLive }: { liveUrls: string[
           {ticked.size > 0 && (
             <button
               type="button"
-              onClick={() => {
-                setTicked(new Set());
-                setSaved(false);
-              }}
-              className="tap rounded-xl px-3 font-semibold text-[var(--color-link)] underline"
+              onClick={exportJson}
+              className="tap rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] px-5 font-semibold"
             >
-              Clear all
+              Export my list (JSON)
             </button>
           )}
+          <button
+            type="button"
+            onClick={deleteAllToolData}
+            className="tap rounded-xl px-3 font-semibold text-[var(--color-urgent)] underline"
+          >
+            Delete all my data
+          </button>
         </div>
         {saved && (
           <p role="status">

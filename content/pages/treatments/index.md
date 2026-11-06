@@ -69,4 +69,4 @@ The market for over-the-counter menopause supplements is large, but trial result
 
 ## Further reading on treatments and doctor discussions
 
-For an extensive doctor-authored guide to perimenopause symptoms, communication strategies for doctor visits, and modern hormone therapy discussions, read our review of [*The New Menopause* by Dr Mary Claire Haver](/care/menopause-books/). You can also prepare for discussions using our on-device [symptom tracker and doctor summary](/tools/symptom-tracker/).
+For an extensive doctor-authored guide to perimenopause symptoms, communication strategies for doctor visits, and modern hormone therapy discussions, read our review of [*The New Menopause* by Dr Mary Claire Haver](/care/menopause-books/). You can also build a customized appointment sheet with our [treatment conversation builder](/tools/treatment-questions/), compare options in the [evidence checker tool](/tools/does-it-work-checker/), and log your daily patterns using our on-device [symptom diary and doctor summary](/tools/symptom-tracker/).

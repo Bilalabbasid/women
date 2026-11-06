@@ -1,0 +1,56 @@
+# Tool logic: 12-month period-free counter.
+# Clinician review covers this description AND the code files listed under `code`.
+
+id: 12-month-counter
+name: 12-month counter
+guide_url: /tools/12-month-counter/
+app_paths: []
+
+status: draft
+reviewer: null
+reviewed_at: null
+approved_hash: null
+
+code:
+  - src/components/tools/twelve-month-counter.tsx
+  - src/lib/safety/urgent-triggers.ts
+
+purpose: >-
+  Calculates the days elapsed since the reader's last menstrual period and the
+  date of the 12-month mark used in STRAW+10 and NICE NG23, while immediately
+  flagging any bleeding after 12 months as needing medical evaluation.
+
+inputs:
+  - First day of her most recent menstrual period (YYYY-MM-DD)
+  - Whether hormonal contraception, hormone therapy, or hysterectomy affects her bleeding
+  - Whether any vaginal bleeding or spotting occurred after 12 months without a period
+  - Safety red-flag checkboxes (heavy/unusual bleeding, palpitations with red flags, self-harm thoughts)
+
+computes:
+  - "Days elapsed since the entered date, days remaining until the 12-month anniversary date, and the formatted 12-month anniversary date"
+  - "Urgent triggers, including automatic postmenopausal bleeding guidance whenever bleeding after 12 months is ticked"
+
+shows:
+  - Urgent guidance first when any safety trigger applies, including postmenopausal bleeding guidance and US/UK crisis lines
+  - Days elapsed, days remaining, and the 12-month anniversary date
+  - Notice explaining why the 12-month bleeding rule does not apply on its own when hormonal contraception or surgery affects periods
+  - Print, Export JSON, and Delete all my data actions
+
+never:
+  - Diagnose menopause or rule out pregnancy or other causes of missed periods
+  - Advise stopping contraception
+  - Show commercial content or affiliate links anywhere on the page or in the tool
+  - Send dates or inputs off the device
+
+limits:
+  - The 12-month retrospective definition of natural menopause applies to people aged 45+ not using hormonal contraception; younger people need specific medical evaluation
+  - Any return of a menstrual period before 12 months resets the count
+
+urgent_triggers: [self_harm_thoughts, palpitations_red_flags, bleeding_after_menopause, heavy_or_unusual_bleeding]
+sources: [straw-10-2012, nice-ng23-recommendations, nhs-postmenopausal-bleeding, nhs-heavy-periods, nhs-heart-palpitations, lifeline-988, samaritans-contact]
+
+privacy: >-
+  The date and checkboxes are stored only in this browser's localStorage
+  (menoverdict_12_month_counter_v1) on her device. Nothing is sent to a server,
+  analytics, or partners.
+

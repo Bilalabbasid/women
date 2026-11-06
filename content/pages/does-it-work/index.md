@@ -54,7 +54,7 @@ We examine each product and ingredient using four criteria:
 - **Black cohosh and botanical extracts**: One of the most studied herbs for hot flashes; evidence remains mixed with notable placebo response rates.
 - **Red clover and soy isoflavones**: Phytoestrogens with modest, variable effects on mild hot flashes.
 
-You can record your active symptoms with our interactive [menopause symptoms checklist](/tools/symptoms-checklist/) to see which remedies match your personal pattern.
+You can look up any treatment or supplement by symptom and evidence grade in our interactive [Does it work? evidence checker](/tools/does-it-work-checker/), or record your active symptoms with our [printable symptoms checklist](/tools/symptoms-checklist/).
 
 ## Commercial integrity notice
 

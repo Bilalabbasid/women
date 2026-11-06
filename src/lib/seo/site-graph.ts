@@ -166,6 +166,17 @@ export function buildSiteGraph(repoRoot: string = process.cwd()): SiteGraph {
     }
   }
 
+  // Code-defined /tools/ hub (at depth 1 from homepage) links to every tool guide page
+  for (const node of Object.values(nodes)) {
+    if (node.page_type === 'tool') {
+      node.incoming_links.push({ url: '/tools/', anchor: node.title });
+      if (!visited.has(node.url)) {
+        visited.add(node.url);
+        queue.push({ url: node.url, depth: 2 });
+      }
+    }
+  }
+
   while (queue.length > 0) {
     const { url, depth } = queue.shift()!;
     const node = nodes[url];

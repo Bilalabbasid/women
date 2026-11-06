@@ -65,3 +65,4 @@ All generated from the master mark and served from `public/` with HTTP `200`:
 - `/icons/icon-512.png` — `512×512` px high-resolution web app icon & Organization schema logo
 - `/icons/icon-maskable-512.png` — `512×512` px maskable icon with safe-zone padding for Android adaptive launchers
 - `/og-default.png` — `1200×630` px default Open Graph social card carrying the MenoVerdict mark, wordmark, and tagline (`"Menopause answers, graded by evidence."`).
+

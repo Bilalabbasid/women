@@ -1,0 +1,60 @@
+# Tool logic: STRAW+10 perimenopause stage guide ("Where am I?").
+# Clinician review covers this description AND the code files listed under `code`.
+
+id: stage-guide
+name: "Where am I? Perimenopause stage guide"
+guide_url: /tools/stage-guide/
+app_paths: []
+
+status: draft
+reviewer: null
+reviewed_at: null
+approved_hash: null
+
+code:
+  - src/components/tools/stage-guide.tsx
+  - src/lib/safety/urgent-triggers.ts
+
+purpose: >-
+  An educational guide that explains how the STRAW+10 reproductive aging criteria
+  and NICE NG23 clinical rules interpret cycle changes and vasomotor symptoms,
+  and when those bleeding criteria do not apply. It never diagnoses or scores.
+
+inputs:
+  - Age group (under 40, 40 to 44, 45 or over)
+  - Whether periods are affected by hormonal contraception/HRT or a prior hysterectomy/ablation
+  - Cycle pattern over the past year (regular, varying by 7+ days, skipped for 60+ days, or stopped for 12+ months)
+  - Whether hot flashes or night sweats started recently
+  - Safety red-flag checkboxes (bleeding after 12 months without a period, heavy/unusual bleeding, palpitations with red flags, self-harm thoughts)
+
+computes:
+  - "Which STRAW+10 stage description corresponds to the selected natural cycle pattern, or why STRAW+10 bleeding criteria cannot be used when hormones or surgery affect bleeding"
+  - "Whether the under-40 premature ovarian insufficiency (POI) note or the age 45+ NICE NG23 clinical note applies"
+  - "Urgent triggers from any ticked safety red flags"
+
+shows:
+  - Urgent guidance first when any safety trigger applies, including 988 (US) and Samaritans 116 123 (UK)
+  - Plain-language explanation of the STRAW+10 stage pattern and NICE NG23 guidance
+  - Explicit notice when STRAW+10 cycle rules do not apply (under 40, hysterectomy, hormonal contraception)
+  - Print, Export JSON, and Delete all my data actions
+
+never:
+  - Diagnose perimenopause, menopause, or premature ovarian insufficiency
+  - Say "you have" or assign a numerical score
+  - Recommend any medication or dose
+  - Show commercial content or affiliate links
+  - Send any input off the device
+
+limits:
+  - STRAW+10 bleeding criteria apply only to natural cycles without hormonal contraception or uterine surgery
+  - Cycle changes can have other medical causes (pregnancy, thyroid conditions, iron deficiency, gynaecological conditions) that require clinical assessment
+  - Under age 40, menopause-like symptoms need specific clinical investigation for premature ovarian insufficiency
+
+urgent_triggers: [self_harm_thoughts, palpitations_red_flags, bleeding_after_menopause, heavy_or_unusual_bleeding]
+sources: [straw-10-2012, nice-ng23-recommendations, nhs-postmenopausal-bleeding, nhs-heart-palpitations, lifeline-988, samaritans-contact]
+
+privacy: >-
+  All selections are stored in this browser's localStorage (menoverdict_stage_guide_v1)
+  on her device only. Nothing is sent to a server, analytics, or partners. She can
+  export her answers as JSON or delete them with one tap.
+

@@ -58,7 +58,13 @@ export interface RenderResult {
 }
 
 /** Interactive tools that content pages may embed with ::tool{id="..."}. */
-export const TOOL_ISLAND_IDS = ['symptoms-checklist'];
+export const TOOL_ISLAND_IDS = [
+  'symptoms-checklist',
+  'stage-guide',
+  'does-it-work-checker',
+  'treatment-questions',
+  '12-month-counter',
+];
 
 export type ContentIslandPart =
   | { type: 'html'; html: string }

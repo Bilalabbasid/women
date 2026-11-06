@@ -40,10 +40,10 @@ export function UrgentGuidance({
           <p className="leading-relaxed">{t.message[locale]}</p>
 
           {t.level === 'crisis' && (
-            <div className="space-y-1">
+            <div className="space-y-2">
               <p className="font-semibold">{crisis.emergency}</p>
-              <ul className="space-y-1">
-                {crisis.resources.map((r) => (
+              <ul className="space-y-2">
+                {[...CRISIS_RESOURCES['en-US'].resources, ...CRISIS_RESOURCES['en-GB'].resources].map((r) => (
                   <li key={r.name}>
                     <a href={r.url} className="font-semibold underline" rel="noopener" target="_blank">
                       {r.name}

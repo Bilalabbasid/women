@@ -69,8 +69,10 @@ Because hormone levels fluctuate widely from day to day and even hour to hour du
 When consulting your healthcare professional, bring concrete documentation rather than generalized impressions:
 
 - Complete the [Perimenopause symptoms checklist](/tools/symptoms-checklist/) to record all active symptoms.
+- See how STRAW+10 cycle rules apply with our [Perimenopause stage guide](/tools/stage-guide/), or track period gaps with the [12-month period-free counter](/tools/12-month-counter/).
 - Review our suggested questions in [What to ask your doctor about perimenopause](/perimenopause/questions-for-your-doctor/).
-- Track two weeks of sleep, bleeding, and vasomotor episodes with the [Symptom tracker and doctor report](/tools/symptom-tracker/).
+- Track two weeks of sleep, bleeding, and vasomotor episodes with the [daily and weekly symptom log](/tools/symptom-tracker/).
+- Check clinical trial evidence on popular supplements in [Does magnesium help menopause symptoms?](/does-it-work/magnesium/).
 
 ## Further reading
 

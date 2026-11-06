@@ -9,3 +9,4 @@
 | `/terms/` | `content/pages/terms.md` | **Draft for Lawyer Review** | Limitation of liability, educational-only scope, governing law, intellectual property, and acceptable use. | Pending Owner Legal Counsel | — |
 | `/medical-disclaimer/` | `content/pages/medical-disclaimer.md` | **Draft for Lawyer Review** | No doctor-patient relationship, no diagnosis or prescribing, emergency red flags (911/999/988/Samaritans), and standard top-of-page medical notice wording. | Pending Owner Legal Counsel | — |
 | `/about/how-we-make-money/` | `content/pages/about/how-we-make-money.md` | **Draft for Lawyer Review** | US FTC Endorsement Guides (16 CFR Part 255) clear and conspicuous adjacent disclosures, UK ASA / CAP Code affiliate labelling, and Amazon Associates Operating Agreement mandatory statement. | Pending Owner Legal Counsel | — |
+

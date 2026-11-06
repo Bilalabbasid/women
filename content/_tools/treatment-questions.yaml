@@ -1,0 +1,53 @@
+# Tool logic: Treatment conversation builder.
+# Clinician review covers this description AND the code files listed under `code`.
+
+id: treatment-questions
+name: Treatment conversation builder
+guide_url: /tools/treatment-questions/
+app_paths: []
+
+status: draft
+reviewer: null
+reviewed_at: null
+approved_hash: null
+
+code:
+  - src/components/tools/treatment-questions.tsx
+  - src/lib/safety/urgent-triggers.ts
+
+purpose: >-
+  Helps a reader build a focused, printable sheet of questions for a 10-minute
+  menopause appointment based on the topics she wants to cover and her own notes.
+
+inputs:
+  - Selected appointment topics (perimenopause assessment, systemic HRT, 2025-2026 FDA boxed-warning changes, non-hormonal options, GSM/vaginal dryness, bladder leaks, cost and follow-up)
+  - Safety red-flag checkboxes
+  - Optional free-text notes and questions in her own words
+
+computes:
+  - "Ordered list of clinician questions for the selected topics, plus her own notes"
+  - "Urgent triggers from ticked red flags and from crisis phrase matching on her free-text notes"
+
+shows:
+  - Urgent guidance first when any safety trigger applies, including 988 (US) and Samaritans 116 123 (UK)
+  - Printable appointment question sheet grouped by topic
+  - Export JSON and Delete all my data controls
+
+never:
+  - Diagnose a condition or recommend a specific drug or dose
+  - Tell her to start or stop a prescribed medication
+  - Show commercial content or affiliate links inside the tool
+  - Send her selected topics or free-text notes off the device
+
+limits:
+  - Questions are general preparation prompts; a clinician will tailor the consultation to her medical history
+  - Crisis phrase detection on free-text notes is local and keyword-based; it cannot assess clinical risk
+
+urgent_triggers: [self_harm_thoughts, palpitations_red_flags, bleeding_after_menopause, heavy_or_unusual_bleeding]
+sources: [nice-ng23-recommendations, nams-2022-hormone-therapy, nams-2023-nonhormone-therapy, fda-mht-labeling-request-2025, veozah-prescribing-information, nams-2020-gsm, nice-ng123-urinary-incontinence, nhs-postmenopausal-bleeding, nhs-heart-palpitations, lifeline-988, samaritans-contact]
+
+privacy: >-
+  Selected topics and custom notes are stored only in this browser's localStorage
+  (menoverdict_treatment_questions_v1) on her device. Nothing is transmitted over
+  the network.
+

@@ -62,7 +62,7 @@ See a doctor for bloating that is **new, persistent, or worsening**, especially 
 
 ## What to track
 
-Because the research links bloating to broader hormonal and digestive patterns rather than one single cause, logging when it happens — relative to your cycle, diet, and stress — in our [private symptom tracker](/tools/symptom-tracker/) can help you and your clinician spot a pattern worth addressing directly.
+Because the research links bloating to broader hormonal and digestive patterns rather than one single cause, logging when it happens — relative to your cycle, diet, and stress — in our [private symptom tracker](/tools/symptom-tracker/) can help you and your clinician spot a pattern worth addressing directly. See our [probiotics evidence verdict](/does-it-work/probiotics/) if you're considering a supplement for digestive or bone-related reasons.
 
 :::questions
 - Does my bloating pattern suggest a hormonal link, an underlying digestive condition like IBS, or something else worth investigating?

@@ -103,4 +103,4 @@ If you experience unexplained bleeding after sex or at any time after menopause,
 While some women use organic oils, food-grade oils are not pH-balanced, can disrupt the vaginal microbiome, and degrade latex condoms [@acog-clinical-consensus-gsm]. Medical-grade moisturisers formulated for vaginal osmolality are the safer first-line choice.
 
 ### What if neither moisturisers nor lubricants are enough?
-If over-the-counter options do not resolve discomfort after several weeks, ask your clinician about low-dose prescription vaginal estrogen [@nams-2020-gsm]. Prescription local estrogen directly stimulates tissue repair and natural lubrication with minimal systemic absorption.
+If over-the-counter options do not resolve discomfort after several weeks, ask your clinician about low-dose prescription vaginal estrogen [@nams-2020-gsm]. Prescription local estrogen directly stimulates tissue repair and natural lubrication with minimal systemic absorption. A nightly vaginal DHEA insert (prasterone) is another prescription option with real trial evidence — see our [DHEA evidence verdict](/does-it-work/dhea/) for how it compares.

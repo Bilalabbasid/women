@@ -22,6 +22,7 @@ change_log:
   - { date: "2026-11-06", summary: "Initial publication of the Does It Work directory", material: true }
   - { date: "2026-11-06", summary: "Added links to 5 new verdict pages (paced breathing, diet, acupuncture, yoga, cannabis/CBD)", material: true }
   - { date: "2026-11-06", summary: "Added links to 5 more verdict pages (red clover, evening primrose oil, vitamin D, calcium, omega-3)", material: true }
+  - { date: "2026-11-07", summary: "Added links to 9 more verdict pages (ashwagandha, maca, dong quai, DHEA, collagen, probiotics, Relizen, Amberen, Equelle)", material: true }
 evidence_grade: null
 claims:
   - id: nonhormone-guideline-consensus
@@ -33,7 +34,7 @@ banned_phrase_overrides:
   - { phrase: "hormone balance", reason: "Quoted in scare-quotes to debunk the marketing claim, linking to our evidence verdict that rejects it." }
 hub: null
 sources: [nams-2023-nonhormone-therapy]
-related: [/does-it-work/magnesium/, /does-it-work/cooling-products/, /does-it-work/exercise/, /does-it-work/paced-breathing/, /does-it-work/diet/, /does-it-work/acupuncture/, /does-it-work/yoga/, /does-it-work/cannabis-cbd/, /does-it-work/red-clover/, /does-it-work/evening-primrose-oil/, /does-it-work/vitamin-d/, /does-it-work/calcium/, /does-it-work/omega-3/, /tools/symptoms-checklist/]
+related: [/does-it-work/magnesium/, /does-it-work/cooling-products/, /does-it-work/exercise/, /does-it-work/paced-breathing/, /does-it-work/diet/, /does-it-work/acupuncture/, /does-it-work/yoga/, /does-it-work/cannabis-cbd/, /does-it-work/red-clover/, /does-it-work/evening-primrose-oil/, /does-it-work/vitamin-d/, /does-it-work/calcium/, /does-it-work/omega-3/, /does-it-work/ashwagandha/, /does-it-work/maca/, /does-it-work/dong-quai/, /does-it-work/dhea/, /does-it-work/collagen/, /does-it-work/probiotics/, /does-it-work/relizen/, /does-it-work/amberen/, /does-it-work/equelle/, /tools/symptoms-checklist/]
 affiliate_disclosure: false
 ---
 
@@ -67,6 +68,15 @@ We examine each product and ingredient using four criteria:
 - **[Does evening primrose oil help hot flashes?](/does-it-work/evening-primrose-oil/)**: Why hot flashes and night sweats didn't show the same result.
 - **[Vitamin D in menopause](/does-it-work/vitamin-d/)** and **[calcium after menopause](/does-it-work/calcium/)**: What the USPSTF actually concludes about supplementing for fracture prevention.
 - **[Does omega-3 help menopause symptoms?](/does-it-work/omega-3/)**: What a well-powered MsFLASH trial found.
+- **[Does ashwagandha help menopause symptoms?](/does-it-work/ashwagandha/)**: One genuinely positive trial, and why that's not the same as proven.
+- **[Does maca work for menopause symptoms?](/does-it-work/maca/)**: What a systematic review of 4 small trials actually concluded.
+- **[Does dong quai work for hot flashes?](/does-it-work/dong-quai/)**: Why a rigorous placebo-controlled trial found no benefit.
+- **[Does DHEA work for menopause symptoms?](/does-it-work/dhea/)**: Oral supplement vs. prescription vaginal insert — two very different evidence pictures.
+- **[Does collagen help menopause skin and joints?](/does-it-work/collagen/)**: Decent general skin evidence, no menopause-specific joint or bone claim we can verify.
+- **[Does probiotics help menopause bone health?](/does-it-work/probiotics/)**: A surprisingly solid meta-analysis on bone density.
+- **[Does Relizen work for hot flashes?](/does-it-work/relizen/)**: What happened when a 2024 review isolated only the placebo-controlled trials.
+- **[Does Amberen work for menopause symptoms?](/does-it-work/amberen/)**: Real trial data, with a disclosed industry tie worth knowing about.
+- **[Does Equelle work for hot flashes?](/does-it-work/equelle/)**: A genuinely positive single trial on its S-equol ingredient.
 
 You can look up any treatment or supplement by symptom and evidence grade in our interactive [Does it work? evidence checker](/tools/does-it-work-checker/), or record your active symptoms with our [printable symptoms checklist](/tools/symptoms-checklist/).
 

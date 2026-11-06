@@ -73,5 +73,7 @@ The Menopause Society states that [menopausal hormone therapy (HRT)](/treatments
 
 :::urgent
 - **Any vaginal bleeding or spotting after 12 months without a period** should be checked by a doctor, even a small amount or a single episode [@nhs-postmenopausal-bleeding]. Read our guide on [bleeding after menopause](/postmenopause/bleeding/).
+
+For the screenings and ongoing priorities that matter most once you're postmenopausal, see our [long-term health checklist](/postmenopause/health-checklist/) and [life after menopause](/postmenopause/life-after-menopause/) guide.
 :::
 

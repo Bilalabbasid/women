@@ -21,13 +21,14 @@ updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Initial publication of menopause care hub", material: true }
   - { date: "2026-11-06", summary: "Added links to new find-a-specialist and doctor-dismissal guides", material: true }
+  - { date: "2026-11-07", summary: "Added links to new insurance and HRT cost guides", material: true }
 evidence_grade: null
 claims: []
 safety_flags: []
 cta_profile: care_access
 hub: null
 sources: [nams-2022-hormone-therapy, nice-ng23]
-related: [/care/find-a-menopause-specialist/, /care/when-your-doctor-dismisses-you/, /symptoms/, /treatments/, /tools/symptom-tracker/, /perimenopause/]
+related: [/care/find-a-menopause-specialist/, /care/when-your-doctor-dismisses-you/, /care/insurance/, /care/hrt-cost/, /symptoms/, /treatments/, /tools/symptom-tracker/, /perimenopause/]
 affiliate_disclosure: false
 ---
 
@@ -43,6 +44,8 @@ Whether you are preparing for a first discussion about hormone therapy, looking 
 - **[Evidence-based menopause books](/care/menopause-books/)**: Thorough reviews of doctor-authored guides that break down the science of perimenopause, hormones, and fitness without wellness marketing.
 - **[How to do pelvic floor exercises correctly](/care/pelvic-floor-exercises/)**: A step-by-step method for muscle training at home, common mistakes to avoid, and guidance on biofeedback devices.
 - **[Best sleepwear for night sweats](/care/sleepwear-for-night-sweats/)**: How breathable moisture-wicking fabrics help manage post-sweat chills and nighttime comfort.
+- **[Does insurance cover menopause care?](/care/insurance/)**: What a 2026 study found about Medicaid vs. private insurance and hormone therapy access.
+- **[How much does HRT cost?](/care/hrt-cost/)**: Real, dated price ranges for medication and telehealth visits, and why your number will differ.
 
 ## Preparing for clinical appointments
 

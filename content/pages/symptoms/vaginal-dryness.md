@@ -85,7 +85,7 @@ To learn more about how moisturisers and lubricants work together, read our comp
 
 ### 3. Prescription local estrogen
 
-When over-the-counter moisturisers and lubricants do not provide enough relief, medical guidelines recommend low-dose prescription vaginal estrogen (available as creams, tablets, or flexible rings) [@nams-2020-gsm]. Local estrogen delivers minimal systemic absorption while directly restoring cellular layers, natural lubrication, and healthy acidic pH [@acog-clinical-consensus-gsm]. Discuss with your clinician whether local therapy is appropriate for your medical history.
+When over-the-counter moisturisers and lubricants do not provide enough relief, medical guidelines recommend low-dose prescription vaginal estrogen (available as creams, tablets, or flexible rings) [@nams-2020-gsm]. Local estrogen delivers minimal systemic absorption while directly restoring cellular layers, natural lubrication, and healthy acidic pH [@acog-clinical-consensus-gsm]. Discuss with your clinician whether local therapy is appropriate for your medical history. A nightly vaginal DHEA insert (prasterone) is another prescription option — see our [DHEA evidence verdict](/does-it-work/dhea/) for how its trial evidence compares.
 
 :::urgent
 If you experience any postmenopausal bleeding (even slight spotting), unusual foul-smelling discharge, severe pelvic pain, or pain when urinating, consult a doctor promptly [@nhs-postmenopausal-bleeding]. Postmenopausal bleeding is never a normal symptom of menopause and requires medical evaluation.

@@ -39,7 +39,7 @@ faq:
     a: "The main evidence-based use in menopause care is for low sexual desire that hasn't responded to HRT alone. It isn't a general energy, mood, or muscle-mass treatment in this context, and claims along those lines aren't what the guidance actually supports."
 ---
 
-Testosterone is sometimes considered as an addition to [hormone therapy](/treatments/hormone-therapy/) for women in menopause, but its evidence-based use is narrower than general marketing around it suggests. NICE guideline NG23 recommends considering testosterone specifically for **low sexual desire associated with menopause, when HRT alone is not effective** [@nice-ng23-recommendations] — see our [low libido](/symptoms/low-libido/) page for the fuller picture of that symptom.
+Testosterone is sometimes considered as an addition to [hormone therapy](/treatments/hormone-therapy/) for women in menopause, but its evidence-based use is narrower than general marketing around it suggests. NICE guideline NG23 recommends considering testosterone specifically for **low sexual desire associated with menopause, when HRT alone is not effective** [@nice-ng23-recommendations] — see our [low libido](/symptoms/low-libido/) page for the fuller picture of that symptom, and our [DHEA evidence verdict](/does-it-work/dhea/) for a related hormone sometimes discussed alongside it.
 
 ## Why it's currently "off-label"
 

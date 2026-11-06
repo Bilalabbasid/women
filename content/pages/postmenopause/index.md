@@ -21,6 +21,7 @@ updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Published postmenopause stage hub", material: true }
   - { date: "2026-11-06", summary: "Added link to new heart-health guide", material: true }
+  - { date: "2026-11-07", summary: "Added links to new sexual health, health checklist, and life-after-menopause guides", material: true }
 evidence_grade: null
 claims:
   - id: postmenopause-definition
@@ -39,7 +40,7 @@ safety_flags: [urgent_symptoms, bleeding]
 cta_profile: learn_stage
 hub: null
 sources: [straw-10-2012, nice-ng23-recommendations, nhs-postmenopausal-bleeding, liftmor-trial-bone-density, nams-2020-gsm, acog-clinical-consensus-gsm]
-related: [/postmenopause/bleeding/, /postmenopause/bone-health/, /postmenopause/heart-health/, /menopause/, /symptoms/vaginal-dryness/]
+related: [/postmenopause/bleeding/, /postmenopause/bone-health/, /postmenopause/heart-health/, /postmenopause/sexual-health/, /postmenopause/health-checklist/, /postmenopause/life-after-menopause/, /menopause/, /symptoms/vaginal-dryness/]
 affiliate_disclosure: false
 faq:
   - q: When does postmenopause start and end?
@@ -55,6 +56,9 @@ faq:
 - **[Bleeding after menopause](/postmenopause/bleeding/)**: Why any vaginal bleeding or spotting after 12 period-free months should always be checked by a clinician, and what to expect at the appointment.
 - **[Bone health after menopause](/postmenopause/bone-health/)**: Why bone mineral density changes after estrogen falls, and what clinical trials show about hormone therapy and heavy resistance training [@liftmor-trial-bone-density].
 - **[Heart health after menopause](/postmenopause/heart-health/)**: Why cardiovascular risk rises, why HRT isn't used for prevention, and the "timing hypothesis" explained.
+- **[Sexual health after menopause](/postmenopause/sexual-health/)**: Real prevalence data and the counseling approach with the strongest evidence behind it.
+- **[Long-term health checklist](/postmenopause/health-checklist/)**: Current USPSTF screening ages for breast, bone, colorectal, and cervical cancer.
+- **[Life after menopause](/postmenopause/life-after-menopause/)**: An honest timeline of what settles, what doesn't, and what to prioritize long-term.
 - **[12-month period-free counter](/tools/12-month-counter/)**: Check your 12-month anniversary date and bleeding safety rules.
 
 ## What changes in postmenopause

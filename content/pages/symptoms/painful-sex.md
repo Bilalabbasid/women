@@ -70,7 +70,7 @@ For a full breakdown of how to coordinate these two products, see our comparison
 
 When non-hormonal lubricants and moisturisers do not fully relieve pain, consult a healthcare provider about prescription medical therapies:
 - **Low-dose vaginal estrogen**: Delivered via small tablets, creams, or flexible rings directly into the vagina. It restores epithelial thickness and natural moisture with minimal systemic hormone absorption [@nams-2020-gsm].
-- **Vaginal DHEA (prasterone)**: An FDA-approved daily vaginal insert that local cells convert into estrogen and androgens to improve tissue integrity.
+- **[Vaginal DHEA (prasterone)](/does-it-work/dhea/)**: An FDA-approved daily vaginal insert that local cells convert into estrogen and androgens to improve tissue integrity.
 - **Oral ospemifene**: A non-hormonal selective estrogen receptor modulator (SERM) pill that improves vaginal tissue thickness.
 
 ### Step 4: Pelvic floor physical therapy

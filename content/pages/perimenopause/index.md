@@ -20,6 +20,7 @@ reviewer: null
 updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Initial publication of the perimenopause stage hub", material: true }
+  - { date: "2026-11-07", summary: "Added links to new contraception and year-by-year guides", material: true }
 evidence_grade: null
 claims:
   - id: straw-staging-definition
@@ -32,7 +33,7 @@ safety_flags: [urgent_symptoms]
 cta_profile: learn_stage
 hub: null
 sources: [straw-10-2012, nice-ng23-recommendations]
-related: [/perimenopause/early-signs/, /perimenopause/questions-for-your-doctor/, /care/menopause-books/, /does-it-work/magnesium/]
+related: [/perimenopause/early-signs/, /perimenopause/questions-for-your-doctor/, /perimenopause/contraception/, /perimenopause/year-by-year/, /care/menopause-books/, /does-it-work/magnesium/]
 affiliate_disclosure: false
 ---
 
@@ -56,13 +57,15 @@ Symptoms often appear while periods are still relatively regular. Common early i
 - Premenstrual mood swings or anxiety that feel more intense than past years.
 - Slower cognitive processing or word retrieval during busy workdays.
 
-Read our detailed breakdown in the [Early signs of perimenopause guide](/perimenopause/early-signs/) and compare how the transition differs from the final period in [Perimenopause vs menopause: what is the difference?](/perimenopause/vs-menopause/).
+Read our detailed breakdown in the [Early signs of perimenopause guide](/perimenopause/early-signs/) and compare how the transition differs from the final period in [Perimenopause vs menopause: what is the difference?](/perimenopause/vs-menopause/). For how symptoms actually unfold over calendar time — not just by cycle stage — see [what to expect year by year](/perimenopause/year-by-year/).
 
 ## Diagnosing perimenopause: do you need a blood test?
 
 A common question is whether a blood test can prove you are in perimenopause. Major clinical guidelines, including NICE and The Menopause Society, advise against routine hormone blood tests (such as FSH or estradiol) in women aged 45 and over [@nice-ng23-recommendations]. See our full guide on [Is there a blood test for perimenopause?](/perimenopause/blood-tests/). 
 
 Because hormone levels fluctuate widely from day to day and even hour to hour during perimenopause, a single blood draw does not provide a reliable diagnosis. Instead, diagnosis is based on your age, cycle history, and symptom patterns [@nice-ng23-recommendations].
+
+Since periods can still be happening irregularly rather than absent, [pregnancy remains possible](/perimenopause/pregnancy/) throughout this stage — see our guide to [contraception in perimenopause](/perimenopause/contraception/) for what a 2025 expert consensus recommends.
 
 ## Preparing for your appointment
 

@@ -21,6 +21,7 @@ updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Published specialist groups hub", material: true }
   - { date: "2026-11-06", summary: "Added link to new early menopause guide", material: true }
+  - { date: "2026-11-07", summary: "Added links to 4 new guides: chemotherapy-induced menopause, hysterectomy with ovaries retained, endometriosis, menopause at work", material: true }
 evidence_grade: null
 claims:
   - id: jmir-unmet-needs
@@ -36,7 +37,7 @@ safety_flags: [cancer_history, urgent_symptoms]
 cta_profile: specialist_group
 hub: null
 sources: [jmir-online-menopause-information-2025, nice-ng23, nams-2023-nonhormone-therapy]
-related: [/groups/premature-ovarian-insufficiency/, /groups/surgical-menopause/, /groups/breast-cancer-survivors/, /groups/early-menopause/, /tools/treatment-questions/]
+related: [/groups/premature-ovarian-insufficiency/, /groups/surgical-menopause/, /groups/breast-cancer-survivors/, /groups/early-menopause/, /groups/chemotherapy-induced-menopause/, /groups/hysterectomy-ovaries-retained/, /groups/endometriosis/, /groups/menopause-at-work/, /tools/treatment-questions/]
 affiliate_disclosure: false
 faq:
   - q: Why do standard menopause rules not always apply to early, surgical, or medical menopause?
@@ -53,6 +54,10 @@ This hub gathers our evidence-based guides for situations where standard rules â
 - **[Premature ovarian insufficiency (POI) â€” under age 40](/groups/premature-ovarian-insufficiency/)**: How POI is diagnosed, why hormone replacement before the average age of natural menopause plays a different role than standard midlife HRT [@nice-ng23], and what to ask a specialist.
 - **[Surgical menopause (after ovary removal)](/groups/surgical-menopause/)**: What happens when bilateral oophorectomy causes an immediate drop in ovarian hormones rather than a gradual transition, and how clinicians manage sudden vasomotor symptoms and bone health.
 - **[Menopause after breast cancer](/groups/breast-cancer-survivors/)**: Why systemic hormone therapy is generally contraindicated after hormone-sensitive breast cancer, and which Level I [non-hormonal treatments](/treatments/nonhormonal/) [@nams-2023-nonhormone-therapy] and local vaginal care options to discuss with your oncology and menopause team.
+- **[Chemotherapy-induced menopause](/groups/chemotherapy-induced-menopause/)**: How likely chemotherapy is to cause menopause, whether it's temporary or permanent, and fertility preservation timing.
+- **[Hysterectomy with ovaries retained](/groups/hysterectomy-ovaries-retained/)**: Why periods stop but menopause doesn't happen right away, and what the (conflicting) research says about timing.
+- **[Endometriosis and menopause](/groups/endometriosis/)**: Why estrogen-only hormone therapy should be avoided even after hysterectomy, per a 2025 EMAS clinical guide.
+- **[Menopause at work](/groups/menopause-at-work/)**: What a 2026 US survey found about workplace impact, and what accommodations women actually ask for.
 
 ## Preparing for a specialist appointment
 

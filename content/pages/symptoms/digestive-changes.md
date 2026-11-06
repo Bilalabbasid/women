@@ -29,7 +29,7 @@ safety_flags: []
 cta_profile: general_symptom
 hub: /symptoms/
 sources: [heitkemper-chang-ibs-hormones-2009]
-related: [/symptoms/, /symptoms/bloating/, /symptoms/weight-gain/, /does-it-work/, /tools/symptom-tracker/]
+related: [/symptoms/, /symptoms/bloating/, /symptoms/weight-gain/, /does-it-work/probiotics/, /tools/symptom-tracker/]
 affiliate_disclosure: false
 faq:
   - q: Can menopause really change your digestion?
@@ -64,7 +64,7 @@ See a doctor for digestive symptoms that are **new, persistent, or worsening ove
 
 ## What to track
 
-Because the research links this to a broader, individually variable hormonal and digestive pattern rather than one single cause, logging your symptoms against your cycle, diet, and stress in our [symptom tracker](/tools/symptom-tracker/) can help your clinician see whether a hormonal pattern, an underlying condition, or something else is driving it.
+Because the research links this to a broader, individually variable hormonal and digestive pattern rather than one single cause, logging your symptoms against your cycle, diet, and stress in our [symptom tracker](/tools/symptom-tracker/) can help your clinician see whether a hormonal pattern, an underlying condition, or something else is driving it. If bone health is also on your mind at this stage, see our [probiotics evidence verdict](/does-it-work/probiotics/) — a separate finding from digestive-symptom research.
 
 :::questions
 - Could this be an underlying condition like IBS that's flaring now, rather than a new problem?

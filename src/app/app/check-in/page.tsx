@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useSyncExternalStore } from 'react';
 import { useRouter } from 'next/navigation';
 import {
   Flame,
@@ -28,6 +28,15 @@ import { SeverityLevel, FlowLevel, LocalCustomSymptom } from '@/lib/db/schema';
 import { evaluateUrgentTriggers } from '@/lib/safety/urgent-triggers';
 import { UrgentGuidance } from '@/components/safety/urgent-guidance';
 import { markToolUsed } from '@/lib/pwa/install-gate';
+
+const subscribeNoop = () => () => {};
+function readPinned(): string {
+  try {
+    return window.localStorage.getItem('menowell_pinned_symptoms') ?? '[]';
+  } catch {
+    return '[]';
+  }
+}
 
 export default function CheckinPage() {
   const router = useRouter();
@@ -178,8 +187,19 @@ export default function CheckinPage() {
   };
 
   // Pinned symptoms (top 6 standard symptoms) vs extended list
-  const primarySymptoms = STANDARD_SYMPTOMS.slice(0, 6);
-  const remainingSymptoms = STANDARD_SYMPTOMS.slice(6);
+  // Symptoms she pinned (onboarding or the symptoms checklist) come first; otherwise the first six.
+  const pinnedRaw = useSyncExternalStore(subscribeNoop, readPinned, () => '[]');
+  const pinnedIds = useMemo<string[]>(() => {
+    try {
+      const v = JSON.parse(pinnedRaw);
+      return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : [];
+    } catch {
+      return [];
+    }
+  }, [pinnedRaw]);
+  const pinned = STANDARD_SYMPTOMS.filter((s) => pinnedIds.includes(s.id));
+  const primarySymptoms = pinned.length > 0 ? pinned : STANDARD_SYMPTOMS.slice(0, 6);
+  const remainingSymptoms = STANDARD_SYMPTOMS.filter((s) => !primarySymptoms.includes(s));
 
   return (
     <div className="flex flex-col min-h-screen">

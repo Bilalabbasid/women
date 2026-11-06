@@ -1,5 +1,8 @@
 import type { ContentPage, ContentStore } from './loader';
 import { showDrafts, type SiteEnv, SITE } from '../site/config';
+import type { PageType } from './schema';
+
+const GRADE_EXEMPT: readonly PageType[] = ['tool', 'hub'];
 
 /**
  * PUBLISH GATE (AGENTS.md rules 3 and 4).
@@ -8,7 +11,7 @@ import { showDrafts, type SiteEnv, SITE } from '../site/config';
  *  - status is clinician_approved or published
  *  - a reviewer is named, exists in people.yaml as a verified clinical reviewer
  *  - reviewed_at and review_due are set
- *  - an evidence grade is set and at least one source is cited
+ *  - an evidence grade is set (except tool guides and hubs) and at least one source is cited
  *  - every cited source exists in the registry
  *  - approved_hash matches the current content (an edit resets approval)
  *
@@ -35,7 +38,8 @@ export function publishProblems(page: ContentPage, store: Pick<ContentStore, 'so
     }
     if (!fm.reviewed_at) problems.push('no reviewed_at date');
     if (!fm.review_due) problems.push('no review_due date');
-    if (!fm.evidence_grade) problems.push('no evidence grade');
+    // Tool guides and hubs do not grade a single use, so they are exempt (DECISIONS.md D-029).
+    if (!fm.evidence_grade && !GRADE_EXEMPT.includes(fm.page_type)) problems.push('no evidence grade');
     if (fm.sources.length === 0) problems.push('no sources cited');
   } else if (fm.status !== 'owner_approved' && fm.status !== 'published') {
     problems.push(`status is "${fm.status}", needs owner_approved or published`);

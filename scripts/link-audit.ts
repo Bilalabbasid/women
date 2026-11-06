@@ -24,6 +24,7 @@ import { isPublishable } from '../src/lib/content/gate';
 import { renderMarkdown } from '../src/lib/content/markdown';
 import { NAV_HUBS, isStaticTarget, relatedFrom } from '../src/lib/content/site-data';
 import { LEGACY_APP_REDIRECTS } from '../src/lib/routes';
+import { parseKeywordMap } from '../src/lib/plan/keyword-map';
 import { Report } from './lib/report';
 
 const includeDrafts = process.argv.includes('--all');
@@ -39,6 +40,9 @@ const pages = includeDrafts ? store.pages : store.pages.filter((p) => isPublisha
 const byUrl = new Map(pages.map((p) => [p.url, p]));
 const allContentUrls = new Set(store.pages.map((p) => p.url));
 const known = new Set(pages.map((p) => p.url));
+// Pages planned in the keyword map but not written yet: links to them are dropped at render time.
+const mapFile = path.join(DEFAULT_CONTENT_ROOT, '_plan', 'keyword-map.csv');
+const plannedUrls = new Set(fs.existsSync(mapFile) ? parseKeywordMap(fs.readFileSync(mapFile, 'utf8')).rows.map((x) => x.url) : []);
 const redirectSources = new Set(LEGACY_APP_REDIRECTS.flatMap((x) => [x.source, `${x.source}/`]));
 
 type Edge = { from: string; to: string; anchor: string; kind: 'nav' | 'body' | 'hub' | 'related' | 'children' };
@@ -74,7 +78,8 @@ for (const page of pages) {
     if (redirectSources.has(target)) r.error(page.file, `links to ${target}, which redirects: link to the final URL`);
     if (l.dropped) {
       if (allContentUrls.has(target)) r.warn(page.file, `link to ${target} suppressed: that page isn't published yet`);
-      else if (!isStaticTarget(target)) r.error(page.file, `broken link to ${target}`);
+      else if (plannedUrls.has(target)) r.note(`${page.file}: link to ${target} suppressed until that planned page is written`);
+      else if (!isStaticTarget(target)) r.error(page.file, `broken link to ${target} (not a page, a planned page or a code route)`);
       continue;
     }
     add(page.url, target, l.text, 'body');

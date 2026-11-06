@@ -94,7 +94,13 @@ function readYamlList<T>(
 ): T[] {
   if (!fs.existsSync(file)) return [];
   const rel = path.relative(rootForErrors, file);
-  const data = parseYaml(fs.readFileSync(file, 'utf8')) ?? [];
+  let data: unknown;
+  try {
+    data = parseYaml(fs.readFileSync(file, 'utf8')) ?? [];
+  } catch (err) {
+    errors.push({ file: rel, message: `invalid YAML: ${(err as Error).message.split('\n')[0]}` });
+    return [];
+  }
   if (!Array.isArray(data)) {
     errors.push({ file: rel, message: 'must be a YAML list' });
     return [];
@@ -118,7 +124,14 @@ export function loadContent(root: string = DEFAULT_CONTENT_ROOT): ContentStore {
 
   for (const abs of walk(pagesDir)) {
     const file = path.relative(repoRoot, abs).replace(/\\/g, '/');
-    const split = splitFrontmatter(fs.readFileSync(abs, 'utf8'));
+    let split: ReturnType<typeof splitFrontmatter>;
+    try {
+      split = splitFrontmatter(fs.readFileSync(abs, 'utf8'));
+    } catch (err) {
+      // Report malformed YAML as a content error instead of crashing the build or validators.
+      errors.push({ file, message: `invalid YAML frontmatter: ${(err as Error).message.split('\n')[0]}` });
+      continue;
+    }
     if (!split || typeof split.data !== 'object' || split.data === null) {
       errors.push({ file, message: 'missing YAML frontmatter block' });
       continue;

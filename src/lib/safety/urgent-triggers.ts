@@ -159,7 +159,9 @@ export function evaluateUrgentTriggers(input: TriggerInput): UrgentTrigger[] {
   if (input.symptomIds.includes('palpitations')) hits.add('palpitations_red_flags');
 
   const anyBleeding = input.flow !== undefined && input.flow !== 'none';
-  if (anyBleeding || input.symptomIds.includes('spotting')) hits.add('bleeding_after_menopause');
+  if (anyBleeding || input.symptomIds.includes('spotting') || input.symptomIds.includes('postmenopausal_bleeding')) {
+    hits.add('bleeding_after_menopause');
+  }
   if (input.flow === 'heavy' || input.symptomIds.includes('heavy_flow') || input.symptomIds.includes('spotting')) {
     hits.add('heavy_or_unusual_bleeding');
   }

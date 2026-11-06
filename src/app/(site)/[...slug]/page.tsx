@@ -11,7 +11,10 @@ import {
 } from '@/lib/content/site-data';
 import { isPublishable } from '@/lib/content/gate';
 import { buildMetadata } from '@/lib/seo/metadata';
-import { contentPageLd, breadcrumbLd, faqLd } from '@/lib/seo/jsonld';
+import { contentPageLd, breadcrumbLd, faqLd, webApplicationLd } from '@/lib/seo/jsonld';
+import { splitToolIslands } from '@/lib/content/markdown';
+import { ToolIsland } from '@/components/tools/tool-island';
+import { isToolLive } from '@/lib/tools/logic';
 import { JsonLd, Breadcrumbs } from '@/components/site/site-chrome';
 import { GradeBadge, ReviewLine, References, ChangeLog, DraftBanner, Toc } from '@/components/site/evidence';
 import { QuestionTools, SavedCopyNotice } from '@/components/site/client-islands';
@@ -59,7 +62,15 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
   const related = relatedFor(page);
   const citationIds = [...rendered.citations, ...fm.sources.filter((s) => !rendered.citations.includes(s))];
   const faq = fm.faq ?? [];
-  const ld = [contentPageLd(page, store), breadcrumbLd(crumbs), ...(faq.length ? [faqLd(faq)!] : [])];
+  const parts = splitToolIslands(rendered.html);
+  const toolIds = parts.flatMap((p) => ('tool' in p ? [p.tool] : []));
+  const ld = [
+    contentPageLd(page, store),
+    breadcrumbLd(crumbs),
+    ...(faq.length ? [faqLd(faq)!] : []),
+    // WebApplication only where the tool actually renders on this page.
+    ...toolIds.filter((id) => isToolLive(id)).map(() => webApplicationLd({ name: fm.title, path: page.url, description: fm.meta_description })),
+  ];
 
   return (
     <>
@@ -97,7 +108,13 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
         <SavedCopyNotice reviewedAt={approved ? fm.reviewed_at : null} isMedical={page.isMedical} />
         <Toc headings={rendered.headings} />
 
-        <div className="prose" dangerouslySetInnerHTML={{ __html: rendered.html }} />
+        {parts.map((part, i) =>
+          'tool' in part ? (
+            <ToolIsland key={`tool-${i}`} id={part.tool} />
+          ) : (
+            <div key={`html-${i}`} className="prose" dangerouslySetInnerHTML={{ __html: part.html }} />
+          ),
+        )}
         {rendered.questionLists > 0 && <QuestionTools />}
 
         {children.length > 0 && (

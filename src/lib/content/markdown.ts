@@ -19,6 +19,7 @@ import type { Root as HRoot, Element } from 'hast';
  *  - Urgent sections: `:::urgent` … `:::` → <aside data-urgent>. Commercial
  *    content is banned inside (validate:cta).
  *  - Doctor questions: `:::questions` … `:::` → a list with copy and print controls.
+ *  - Tools: `::tool{id="symptoms-checklist"}` → an interactive island rendered in place.
  *  - Internal links to pages that aren't in this build (drafts) render as
  *    plain text, so published pages never link to drafts.
  *  - /go/ links get rel="sponsored nofollow". Other external links are followed.
@@ -56,6 +57,22 @@ export interface RenderResult {
   text: string;
 }
 
+/** Interactive tools that content pages may embed with ::tool{id="..."}. */
+export const TOOL_ISLAND_IDS = ['symptoms-checklist'];
+
+/** Splits rendered HTML around tool placeholders so a page can render the islands in place. */
+export function splitToolIslands(html: string): Array<{ html: string } | { tool: string }> {
+  const parts: Array<{ html: string } | { tool: string }> = [];
+  let last = 0;
+  for (const m of html.matchAll(/<div data-tool="([a-z0-9-]+)"><\/div>/g)) {
+    if (m.index! > last) parts.push({ html: html.slice(last, m.index) });
+    parts.push({ tool: m[1] });
+    last = m.index! + m[0].length;
+  }
+  if (last < html.length) parts.push({ html: html.slice(last) });
+  return parts;
+}
+
 const CITE_RE = /\[@([a-z0-9]+(?:-[a-z0-9]+)*)\]/g;
 
 function remarkCitations(citations: string[]) {
@@ -87,7 +104,25 @@ function remarkCitations(citations: string[]) {
 
 function remarkDirectivesToHtml() {
   return (tree: MdRoot) => {
-    visit(tree, (node) => {
+    visit(tree, (node, index, parent) => {
+      if (node.type === 'textDirective' && parent && index !== undefined) {
+        // Prose like "ratio 1:example" is parsed as a text directive; put the original text back.
+        const d = node as unknown as { name: string; children?: Array<{ value?: string }> };
+        const inner = (d.children ?? []).map((c) => c.value ?? '').join('');
+        (parent.children as unknown[]).splice(index, 1, { type: 'text', value: `:${d.name}${inner ? `[${inner}]` : ''}` });
+        return;
+      }
+      if (node.type === 'leafDirective') {
+        // ::tool{id="symptoms-checklist"} marks where an interactive tool island goes.
+        const d = node as unknown as { name: string; attributes?: Record<string, string>; data?: Record<string, unknown> };
+        if (d.name !== 'tool') throw new Error(`Unknown content directive "::${d.name}" (allowed: ::tool)`);
+        const id = d.attributes?.id ?? '';
+        if (!TOOL_ISLAND_IDS.includes(id)) throw new Error(`Unknown tool "${id}" (allowed: ${TOOL_ISLAND_IDS.join(', ')})`);
+        const data = (d.data ??= {});
+        data.hName = 'div';
+        data.hProperties = { 'data-tool': id };
+        return;
+      }
       if (node.type !== 'containerDirective') return;
       const d = node as unknown as { name: string; data?: Record<string, unknown> };
       const data = (d.data ??= {});

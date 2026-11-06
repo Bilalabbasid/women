@@ -1,0 +1,57 @@
+# Tool logic: symptoms checklist.
+# Clinician review covers this description AND the code files listed under `code`.
+# Approval: npm run tool:approve -- symptoms-checklist --reviewer <id>
+
+id: symptoms-checklist
+name: Perimenopause symptoms checklist
+guide_url: /tools/symptoms-checklist/
+app_paths: []
+
+status: draft
+reviewer: null
+reviewed_at: null
+approved_hash: null
+
+code:
+  - src/lib/tools/symptom-catalog.ts
+  - src/components/tools/symptoms-checklist.tsx
+  - src/lib/safety/urgent-triggers.ts
+
+purpose: >-
+  A printable, interactive list that helps her note symptoms she has noticed
+  and take them to an appointment, with links to each symptom page. It never
+  scores, stages or diagnoses.
+
+inputs:
+  - Ticks against 39 items in 8 plain-language groups (src/lib/tools/symptom-catalog.ts)
+
+computes:
+  - "Nothing numeric. It lists the ticked items in order"
+  - "Urgent triggers from three items: 'bleeding after 12 months without a period', 'heart palpitations' and 'low mood' (plus 'heavier periods' for the see-a-doctor bleeding message)"
+
+shows:
+  - Ticked items as a list to print
+  - Urgent guidance first when a trigger applies, including crisis lines for low mood
+  - "A fixed note: the list can't tell her whether she is in perimenopause or menopause; many symptoms have other causes"
+  - Links to each symptom page, only where that page is published
+  - "'Add these to my tracker' (only when the tracker is live): saves matching tracker symptom ids in this browser"
+
+never:
+  - Count ticks against a threshold, produce a score, or say what stage she is in
+  - Say "you have" any condition
+  - Store ticks unless she chooses to add them to her tracker
+  - Send ticks anywhere (no network calls; no analytics)
+  - Show commercial content
+
+limits:
+  - Groups are for scanning, not clinical categories
+  - "Some items are well recognised (NICE NG23 1.2.2); others are commonly reported and included so she can ask about them"
+  - Triggers depend on what she ticks; the checklist can't assess her
+
+urgent_triggers: [self_harm_thoughts, palpitations_red_flags, bleeding_after_menopause, heavy_or_unusual_bleeding]
+sources: [nice-ng23-recommendations, nhs-postmenopausal-bleeding, nhs-heart-palpitations, lifeline-988]
+
+privacy: >-
+  Ticks live in the page's memory only. If she taps "Add these to my tracker",
+  the matching symptom ids are saved in this browser's localStorage
+  (menowell_pinned_symptoms). Nothing is sent anywhere.

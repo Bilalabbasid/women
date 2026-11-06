@@ -26,7 +26,7 @@ claims:
     text: "A 2026 US survey of 1,011 employed or recently retired women aged 40-65 with vasomotor symptoms (mean 7.5 hot flashes/night sweats per day) found activity impairment in 36%, absenteeism in 6%, and presenteeism in 32%, increasing with symptom severity; 81.3% had never received treatment; almost 80% had not discussed symptoms with their employer, and only 18.1% reported employer support. Top coping strategies were temperature control (71.0%) and layered, breathable clothing (46.0%); top requested accommodations were benefit package changes (27.9%), more workplace awareness (25.7%), and flexible working arrangements (23.2%). The survey was funded by Astellas Pharma, the maker of a prescription vasomotor symptom treatment, and several authors are Astellas employees or consultants."
     sources: [kapoor-vms-workplace-survey-2026]
 safety_flags: []
-cta_profile: specialist_group
+cta_profile: learn_stage
 hub: /groups/
 sources: [kapoor-vms-workplace-survey-2026]
 related: [/groups/, /symptoms/hot-flashes/, /symptoms/brain-fog/, /tools/symptom-tracker/, /tools/treatment-questions/]

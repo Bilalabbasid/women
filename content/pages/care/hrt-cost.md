@@ -29,7 +29,7 @@ claims:
     text: "As of November 2026, Midi Health's own site lists self-pay pricing of $250 for a first visit and $150 for a follow-up (not including labs or medications), not requiring a membership; Evernow lists a membership starting at $35/month with optional insurance-eligible visits, or a one-time insurance-eligible visit with no membership; Alloy markets an explicitly cash-pay model with a specific current consult price not confirmed on its public pages."
     sources: [midi-health-own-site-2026, evernow-own-site-2026, alloy-own-site-2026]
 safety_flags: []
-cta_profile: care_comparison
+cta_profile: care_access
 hub: /care/
 sources: [goodrx-estradiol-pricing-2026, midi-health-own-site-2026, evernow-own-site-2026, alloy-own-site-2026]
 related: [/care/, /care/insurance/, /compare/, /treatments/hormone-therapy/types/, /tools/treatment-questions/]

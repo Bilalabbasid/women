@@ -29,7 +29,7 @@ claims:
     text: "A systematic review and meta-analysis of 8 studies (619 women, in menopause under 5 years) found sexual counselling/educational programs (4-10 sessions covering sexual anatomy, physiological response, stimulation methods, and common myths, some including CBT or mindfulness) produced a statistically significant improvement in total Female Sexual Function Index score versus routine care (mean difference +7.14, 95% CI 3.70-10.6, p<0.0001), with significant improvement across all domains: pain, arousal, lubrication, desire, orgasm, and satisfaction."
     sources: [silva-sexual-counseling-metaanalysis-2022]
 safety_flags: []
-cta_profile: learn_stage
+cta_profile: genitourinary_vaginal
 hub: /postmenopause/
 sources: [trento-postmenopausal-sexual-function-2021, silva-sexual-counseling-metaanalysis-2022]
 related: [/postmenopause/, /symptoms/low-libido/, /symptoms/painful-sex/, /symptoms/vaginal-dryness/, /tools/treatment-questions/]

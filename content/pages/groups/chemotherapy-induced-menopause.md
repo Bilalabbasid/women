@@ -27,7 +27,7 @@ claims:
     text: "A systematic review of 45 studies (5,607 female survivors of childhood and young adult cancer) found amenorrhoea prevalence after chemotherapy ranged from 0% to 83% depending on regimen; MVPP-protocol patients had 39-79% amenorrhoea, and breast cancer survivors on cyclophosphamide-containing regimens had 40-80% amenorrhoea. The most important risk factors for ovarian dysfunction were alkylating agents (specifically procarbazine and busulfan) and older age at treatment. All included studies had methodological limitations."
     sources: [overbeek-chemotherapy-ovarian-function-2017]
 safety_flags: [cancer_history, pregnancy]
-cta_profile: specialist_group
+cta_profile: cancer_history
 hub: /groups/
 sources: [overbeek-chemotherapy-ovarian-function-2017]
 related: [/groups/, /groups/breast-cancer-survivors/, /groups/premature-ovarian-insufficiency/, /groups/early-menopause/, /tools/treatment-questions/]

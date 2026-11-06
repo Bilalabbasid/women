@@ -30,7 +30,7 @@ claims:
     text: "A 2024 narrative review on vestibular symptoms in the perimenopausal transition describes estrogen and progesterone receptors in the inner ear and vestibular system as a plausible biological basis for menopause-related dizziness and vertigo, while noting the clinical picture overlaps substantially with vestibular migraine and other causes that must be ruled out."
     sources: [castillo-bustamante-vestibular-menopause-2024]
 safety_flags: [urgent_symptoms]
-cta_profile: general_symptom
+cta_profile: cardio_urgent
 hub: /symptoms/
 sources: [owada-suzuki-dizziness-menopause-2014, castillo-bustamante-vestibular-menopause-2024]
 related: [/symptoms/, /symptoms/heart-palpitations/, /symptoms/headaches/, /symptoms/migraines/, /tools/symptom-tracker/]

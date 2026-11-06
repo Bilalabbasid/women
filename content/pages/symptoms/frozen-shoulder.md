@@ -26,7 +26,7 @@ claims:
     text: "A 2026 pilot study found adhesive capsulitis (frozen shoulder) was diagnosed in 7.65% of women in one group versus 3.95% in a comparison group (odds ratio 1.99, 95% CI 0.86-4.58, p=0.10) — a difference that did not reach statistical significance given the pilot's sample size."
     sources: [reinke-frozen-shoulder-hrt-2026]
 safety_flags: []
-cta_profile: general_symptom
+cta_profile: musculoskeletal
 hub: /symptoms/
 sources: [reinke-frozen-shoulder-hrt-2026]
 related: [/symptoms/, /symptoms/joint-pain/, /treatments/hormone-therapy/, /tools/treatment-questions/]

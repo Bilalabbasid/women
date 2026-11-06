@@ -12,7 +12,7 @@ describe('Button Component', () => {
   it('applies primary variant styling', () => {
     render(<Button variant="primary">Submit</Button>);
     const btn = screen.getByRole('button', { name: /submit/i });
-    expect(btn.className).toContain('bg-[#965342]');
+    expect(btn.className).toContain('bg-[#1F5A4C]');
   });
 
   it('respects disabled attribute', () => {

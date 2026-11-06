@@ -60,7 +60,7 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: '/:path((?:[^/]+/)*[^/.]+)/?',
+        source: '/:path((?:[^/]+/)*[^/.]+)',
         has: [{ type: 'host', value: 'www.menoverdict.com' }],
         destination: 'https://menoverdict.com/:path/',
         permanent: true,

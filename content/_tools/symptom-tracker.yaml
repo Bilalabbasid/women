@@ -22,6 +22,7 @@ code:
   - src/app/app/check-in/page.tsx
   - src/app/app/doctor-report/page.tsx
   - src/lib/tools/doctor-report.ts
+  - src/lib/tools/doctor-report-pdf.ts
 
 purpose: >-
   A private log that helps her notice patterns over weeks and take a clear,

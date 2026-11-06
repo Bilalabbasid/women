@@ -151,9 +151,10 @@ export const NotificationService = {
     };
   },
 
+  // The test uses neutral sample text: it must never show a medicine or dose she didn't enter.
   async sendTestNotification(
-    treatmentName = 'Estradiol Patch',
-    dosage = '0.05 mg/day'
+    treatmentName = 'Test reminder',
+    dosage: string | undefined = undefined
   ): Promise<{ success: boolean; message: string }> {
     const state = this.getPermissionState();
     if (state !== 'granted') {

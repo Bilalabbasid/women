@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useMemo, useState } from 'react';
-import { Printer, Trash2 } from 'lucide-react';
+import { Download, Printer, Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { AppHeader } from '@/components/app/app-header';
 import { LocalDataService } from '@/lib/db/service';
@@ -60,9 +60,22 @@ export default function DoctorReportPage() {
     window.print();
   };
 
+  const [pdfBusy, setPdfBusy] = useState(false);
+  // jsPDF is loaded only when she asks for the PDF, so the page itself stays light.
+  const downloadPdf = async () => {
+    setPdfBusy(true);
+    try {
+      const { downloadDoctorReportPdf } = await import('@/lib/tools/doctor-report-pdf');
+      downloadDoctorReportPdf(report, questions);
+      markToolUsed();
+    } finally {
+      setPdfBusy(false);
+    }
+  };
+
   return (
     <div className="flex min-h-screen flex-col">
-      <AppHeader title="Doctor report" subtitle="A one-page summary to print or save as PDF" showPrivacyBadge showSettings />
+      <AppHeader title="Doctor report" subtitle="A one-page summary to download or print" showPrivacyBadge showSettings />
 
       <div className="mx-auto w-full max-w-2xl flex-1 space-y-6 px-4 py-5 print:max-w-none print:p-0">
         <div className="no-print space-y-3">
@@ -86,10 +99,17 @@ export default function DoctorReportPage() {
               </button>
             ))}
           </fieldset>
-          <Button variant="outline" onClick={print} className="gap-2">
-            <Printer className="h-4 w-4" aria-hidden="true" />
-            Print or save as PDF
-          </Button>
+          <div className="flex flex-wrap gap-2">
+            <Button variant="primary" onClick={downloadPdf} disabled={pdfBusy} className="gap-2">
+              <Download className="h-4 w-4" aria-hidden="true" />
+              {pdfBusy ? 'Preparing PDF…' : 'Download PDF'}
+            </Button>
+            <Button variant="outline" onClick={print} className="gap-2">
+              <Printer className="h-4 w-4" aria-hidden="true" />
+              Print
+            </Button>
+          </div>
+          <p className="text-xs text-[#5C554F]">The PDF is created on this device. Nothing is uploaded.</p>
         </div>
 
         {/* The printable page */}

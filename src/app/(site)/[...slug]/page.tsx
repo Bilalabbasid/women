@@ -70,15 +70,17 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
   const citationIds = [...rendered.citations, ...fm.sources.filter((s) => !rendered.citations.includes(s))];
   const faq = fm.faq ?? [];
   const parts = splitContentIslands(rendered.html);
-  const toolIds = parts.flatMap((p) => (p.type === 'tool' ? [p.tool] : []));
   const firstToolIndex = parts.findIndex((p) => p.type === 'tool' && isToolLive(p.tool));
   const hasTool = firstToolIndex >= 0;
   const ld = [
     contentPageLd(page, store),
     breadcrumbLd(crumbs),
     ...(faq.length ? [faqLd(faq)!] : []),
-    // WebApplication only where the tool actually renders on this page.
-    ...toolIds.filter((id) => isToolLive(id)).map(() => webApplicationLd({ name: fm.title, path: page.url, description: fm.meta_description })),
+    // One WebApplication per tool guide: where the tool renders on the page, or the
+    // tracker guide (its app lives under the private, noindexed /app/).
+    ...(fm.page_type === 'tool' && (hasTool || (page.url === '/tools/symptom-tracker/' && isToolLive('symptom-tracker')))
+      ? [webApplicationLd({ name: fm.title, path: page.url, description: fm.meta_description })]
+      : []),
   ];
 
   return (

@@ -34,6 +34,10 @@ const ALLOWED: Record<string, string> = {
   'src/app/sw.js/route.ts': 'service worker re-fetches same-origin pages and assets; never reads IndexedDB',
   'src/components/account/health-sync-consent.tsx': 'POST /api/user/consent (consent preferences; contains no health details)',
   'src/components/site/email-capture.tsx': 'email capture form for printable doctor questions guide',
+  'src/app/app/account/account-client.tsx':
+    'POST /api/auth/login (email only), POST /api/user/consent (consent/retention choice or withdrawal, no health content), ' +
+    'GET /api/user/export with userId in a header (downloads her own previously-synced data back to her own device, only after she already gave separate sync consent above - required by the account settings spec; never sent onward to anyone else), ' +
+    'POST /api/user/delete-account (userId header only)',
 };
 const sourceFiles = walk(path.join(root, 'src'), /\.(tsx?|jsx?)$/);
 for (const f of sourceFiles) {

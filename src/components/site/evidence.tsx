@@ -58,20 +58,24 @@ export function ReviewLine({
   reviewed: boolean;
 }) {
   const { fm } = page;
+  if (page.isMedical && (!reviewed || !reviewer || !fm.reviewed_at)) {
+    return (
+      <p className="text-[var(--color-ink-muted)]">
+        This is not medical advice — it is general information based on what you searched for that may help.
+      </p>
+    );
+  }
   return (
     <p className="text-[var(--color-ink-muted)]">
       By {displayName(author)}
-      {page.isMedical &&
-        (reviewed && reviewer && fm.reviewed_at ? (
-          <>
-            {' '}
-            · Medically reviewed by {displayName(reviewer)}
-            {reviewer.credentials ? `, ${reviewer.credentials}` : ''} on{' '}
-            <time dateTime={fm.reviewed_at}>{fmtDate(fm.reviewed_at)}</time>
-          </>
-        ) : (
-          <> · Not yet medically reviewed</>
-        ))}
+      {page.isMedical && reviewed && reviewer && fm.reviewed_at && (
+        <>
+          {' '}
+          · Medically reviewed by {displayName(reviewer)}
+          {reviewer.credentials ? `, ${reviewer.credentials}` : ''} on{' '}
+          <time dateTime={fm.reviewed_at}>{fmtDate(fm.reviewed_at)}</time>
+        </>
+      )}
     </p>
   );
 }

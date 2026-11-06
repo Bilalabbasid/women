@@ -1,6 +1,6 @@
 ---
 title: "Our sources"
-seo_title: "Our sources: every study, guideline, and regulator statement we cite"
+seo_title: "Our sources: every study and guideline we cite"
 meta_description: "Every source MenoVerdict cites, in one place: regulator labels, society guidelines, systematic reviews, and studies, each linked to the pages that use it."
 cluster: evidence
 primary_keyword: menopause research sources

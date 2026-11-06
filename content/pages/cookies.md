@@ -17,9 +17,10 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Initial cookie and browser storage policy", material: true }
+  - { date: "2026-11-07", summary: "Corrected to say plainly that we use no cookies at all today, rather than describing hypothetical server session cookies", material: true }
 evidence_grade: null
 claims: []
 safety_flags: []
@@ -30,23 +31,24 @@ related: [/privacy/, /terms/]
 affiliate_disclosure: false
 ---
 
-> **Notice:** This draft policy outlines our browser storage architecture. Marked for legal review before commercial affiliate launch.
+> **Notice:** This is a working legal draft, written to describe what this site actually stores in your browser today. It is scheduled for review by a qualified lawyer before it is treated as final.
 
-We believe that privacy is preserved by not collecting data in the first place. We do not use third-party advertising cookies or cross-site behavioral tracking scripts.
+We believe that privacy is preserved by not collecting data in the first place. We do not use third-party advertising cookies, cross-site behavioral tracking scripts, or session-replay tools.
 
-## Types of storage used on this website
+## We don't currently set any cookies
 
-### 1. Essential cookies
-These are minimal session or security tokens required for secure server communication, anti-CSRF protection, and administrative functionality. They do not store health details.
+This site has no accounts and no server-side sessions today, so it has no need for session cookies, authentication cookies, or any other cookie. If that changes — for example, once real sign-in exists — it will only ever be a strictly necessary cookie to keep you signed in, never one used for advertising or cross-site tracking, and we'll update this notice first.
 
-### 2. Browser Local Storage and IndexedDB
-Rather than sending your sensitive symptom logs to our servers, our interactive tools store information locally on your device:
-- **IndexedDB**: Used by the [Symptom tracker and doctor report](/tools/symptom-tracker/) to hold your daily entries and generate appointment summaries locally.
-- **LocalStorage**: Used to remember your saved article bookmarks (`menowell_bookmarks`) and tool preferences on this browser.
+## What we do store in your browser
 
-You can inspect, export, or clear this data at any time through your browser developer settings or the in-app privacy controls.
+Rather than sending anything to a server, a few features save information directly inside your browser, using two built-in browser storage technologies — never a cookie:
 
-## Managing your browser cookies
+- **IndexedDB**: used by the [symptom tracker and doctor report](/tools/symptom-tracker/) and related tools to hold your daily entries and generate appointment summaries, entirely on your device. We have no server that receives or can read this.
+- **Local storage**: used for small, non-health conveniences on this browser only, such as remembering your cookie choice below, your saved article bookmarks, and which symptoms you've pinned.
 
-You can instruct your browser to refuse all cookies or indicate when a cookie is being sent. However, because our public articles and guides are delivered as fast static pages, disabling cookies will not prevent you from reading any article or using our on-device tools.
+You can inspect, export, or clear any of this at any time, either through your browser's own developer settings or the delete-all-data control inside the app.
+
+## Managing your choices
+
+Because this site sets no cookies and runs no analytics today, the "Accept" or "Reject" choice on the banner has no effect beyond dismissing it and remembering your answer so we don't ask again. If we later add basic, privacy-friendly, non-health analytics, we will make that choice meaningful first and say so here. Either choice will never stop you from reading an article or using any on-device tool.
 

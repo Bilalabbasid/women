@@ -17,9 +17,10 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Initial publication of medical disclaimer", material: true }
+  - { date: "2026-11-07", summary: "Added an explicit line that comparisons are not personal doctor or product recommendations", material: true }
 evidence_grade: null
 claims: []
 safety_flags: []
@@ -39,6 +40,10 @@ The content, tools, calculators, checklists, and symptom tracking features provi
 ## Always consult a qualified professional
 
 Always seek the advice of your physician, gynecologist, or other qualified healthcare provider with any questions you may have regarding a medical condition, symptom, or treatment regimen. Never disregard professional medical advice or delay in seeking it because of something you have read on this website.
+
+## We don't recommend a specific doctor, clinic, or product for you
+
+Our evidence grades and comparisons describe what the research says about a treatment, supplement, or provider category in general — they are never a personal recommendation that you, specifically, should use it. Where we list or compare named telehealth providers or products, that's information for you to weigh yourself, not a referral, and it has no bearing on how honestly we grade the underlying evidence (see [how we make money](/about/how-we-make-money/)).
 
 ## Emergency guidance
 

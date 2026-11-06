@@ -16,3 +16,9 @@ export function localDateString(d: Date = new Date()): string {
 export function localDaysAgo(n: number, from: Date = new Date()): string {
   return localDateString(new Date(from.getFullYear(), from.getMonth(), from.getDate() - n));
 }
+
+/** The ISO calendar date `delta` days after `dateStr` (negative to go back). Pure string arithmetic, pairs with `daysBetween()` in `storage/periods.ts`. */
+export function addIsoDays(dateStr: string, delta: number): string {
+  const [y, m, d] = dateStr.split('-').map(Number);
+  return new Date(Date.UTC(y, m - 1, d + delta)).toISOString().slice(0, 10);
+}

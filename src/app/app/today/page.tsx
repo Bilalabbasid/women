@@ -12,6 +12,8 @@ import {
   Check,
   Stethoscope,
   PlusCircle,
+  CalendarClock,
+  X,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -22,6 +24,9 @@ import { LocalCheckin, LocalSymptomEntry, LocalTreatment, LocalTreatmentEvent } 
 import { NotificationService } from '@/lib/notifications/treatment-reminders';
 import { describeStorageError } from '@/lib/storage/errors';
 import { useLocalToday } from '@/components/storage/use-tool-state';
+import { getMissedDays } from '@/lib/tracker/catch-up';
+
+const CATCH_UP_DISMISSED_KEY = 'catch_up_dismissed_on';
 
 export default function DashboardPage() {
   // Her local date; '' during server render so hydration matches.
@@ -34,6 +39,8 @@ export default function DashboardPage() {
   const [todayEvents, setTodayEvents] = useState<LocalTreatmentEvent[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [reloadTrigger, setReloadTrigger] = useState(0);
+  const [missedDays, setMissedDays] = useState<string[]>([]);
+  const [catchUpDismissed, setCatchUpDismissed] = useState(false);
 
   const feelings = [
     { value: 1, label: 'Rough' },
@@ -61,6 +68,13 @@ export default function DashboardPage() {
       const all = await LocalDataService.getAllCheckins();
       if (!isMounted) return;
       setRecentCheckins(all);
+
+      const lastLoggedDate = all.find((c) => c.date < todayStr)?.date ?? null;
+      const missed = getMissedDays(lastLoggedDate, todayStr);
+      const dismissedOn = await LocalDataService.getSetting<string | null>(CATCH_UP_DISMISSED_KEY, null);
+      if (!isMounted) return;
+      setMissedDays(missed);
+      setCatchUpDismissed(dismissedOn === todayStr);
 
       const trts = await LocalDataService.getTreatments(true);
       const evts = await LocalDataService.getTreatmentEvents(todayStr, todayStr);
@@ -111,6 +125,16 @@ export default function DashboardPage() {
     setReloadTrigger((n) => n + 1);
   };
 
+  const handleDismissCatchUp = async () => {
+    setCatchUpDismissed(true);
+    if (!todayStr) return;
+    try {
+      await LocalDataService.setSetting(CATCH_UP_DISMISSED_KEY, todayStr);
+    } catch {
+      // Not critical: worst case the banner reappears next visit today.
+    }
+  };
+
   const handleLogTreatmentDone = async (t: LocalTreatment) => {
     const action =
       t.type === 'patch' || t.type === 'hrt_patch'
@@ -157,6 +181,39 @@ export default function DashboardPage() {
             {saveError}
           </p>
         )}
+
+        {/* Catch-up: no notification server exists yet, so she's only reminded of a gap when she opens the app herself. */}
+        {missedDays.length > 0 && !catchUpDismissed && (
+          <Card className="bg-[#FDF9F0] border-[#E9DFC4] p-4 flex items-start justify-between gap-3">
+            <div className="flex items-start gap-3">
+              <div className="w-9 h-9 rounded-xl bg-[#F3E8CE] text-[#8A6D2F] flex items-center justify-center shrink-0">
+                <CalendarClock className="w-4.5 h-4.5" />
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-[#231F1D]">
+                  You haven&apos;t logged in {missedDays.length} {missedDays.length === 1 ? 'day' : 'days'}
+                </p>
+                <p className="text-xs text-[#5C554F] mt-0.5">
+                  Want to add those days to your report? Nothing is filled in for you.
+                </p>
+                <Link href="/app/catch-up/">
+                  <Button size="sm" variant="secondary" className="mt-2 text-xs">
+                    Catch up
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={handleDismissCatchUp}
+              aria-label="Dismiss catch-up reminder for today"
+              className="p-1.5 text-[#8A6D2F] hover:text-[#231F1D] shrink-0"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </Card>
+        )}
+
         {/* Storage status banner */}
         <div className="bg-[#F7F6F2] border border-[#E5DED5] rounded-xl px-3.5 py-1.5 flex items-center justify-between text-xs text-[#68615C]">
           <span className="flex items-center gap-1.5">

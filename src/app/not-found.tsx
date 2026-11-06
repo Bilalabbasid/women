@@ -27,7 +27,7 @@ export default function NotFound() {
               id="nf-q"
               name="q"
               type="search"
-              className="min-h-[48px] flex-1 rounded-xl border border-[var(--color-rule)] bg-white px-4"
+              className="min-h-[48px] flex-1 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] px-4"
             />
             <button type="submit" className="tap rounded-xl bg-[var(--color-accent)] px-5 font-semibold text-white">
               Search

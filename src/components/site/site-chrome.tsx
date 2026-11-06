@@ -53,8 +53,13 @@ export function SiteHeader({ hubs }: { hubs: Array<{ href: string; label: string
         <Link href="/" className="tap font-serif text-xl font-semibold text-[var(--color-ink)] no-underline">
           <BrandLogo size={30} />
         </Link>
-        <nav aria-label="Main" className="w-full sm:w-auto">
-          <ul className="flex flex-wrap items-center gap-x-5 gap-y-0">
+        {/* Up to 6 hubs plus Tools/Search/Account: on a narrow phone this wraps
+            into 2-3 ragged lines of links before any page content, pushing
+            everything down. A single scrollable row keeps it compact and
+            lets the next item peek into view as a scroll affordance; it goes
+            back to a normal wrapping row once there's room (sm+). No JS. */}
+        <nav aria-label="Main" className="w-full min-w-0 sm:w-auto">
+          <ul className="flex flex-nowrap items-center gap-x-5 gap-y-0 overflow-x-auto sm:flex-wrap sm:overflow-x-visible">
             {hubs.map((h) => (
               <li key={h.href}>
                 <Link href={h.href} className="tap text-[var(--color-ink)] underline-offset-4 hover:underline">

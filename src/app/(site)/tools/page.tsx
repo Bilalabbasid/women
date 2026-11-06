@@ -8,11 +8,60 @@ import { JsonLd, Breadcrumbs } from '@/components/site/site-chrome';
 import { isToolLive } from '@/lib/tools/logic';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Free menopause tools: tracker, checklist & stage guide',
+  title: 'Menopause tools: tracker, checklist & stage quiz',
   description:
-    'Six free, private tools for perimenopause and menopause: symptom tracker, printable checklist, STRAW+10 stage guide, evidence checker, appointment builder, and 12-month counter.',
+    'Free, private menopause tools: symptom tracker, printable checklist, perimenopause stage quiz, evidence checker, HRT question builder and 12-month counter.',
   path: '/tools/',
 });
+
+/** Groups tools by the question a reader arrives with. Unlisted tool pages fall into "More tools". */
+const GROUPS: Array<{ id: string; heading: string; intro: string; tools: Array<{ url: string; useWhen: string }> }> = [
+  {
+    id: 'is-it-perimenopause',
+    heading: 'Wondering whether it could be perimenopause',
+    intro: 'Start here if your periods or your body have started to change and you want to know what to look for.',
+    tools: [
+      {
+        url: '/tools/symptoms-checklist/',
+        useWhen: 'Tick the symptoms you have noticed and print a list for your appointment. No score, no sign-up.',
+      },
+      {
+        url: '/tools/stage-guide/',
+        useWhen: 'Answer five questions to see which STRAW+10 stage your period pattern resembles, and why.',
+      },
+      {
+        url: '/tools/12-month-counter/',
+        useWhen: 'Your periods have stopped: count the days to the 12-month mark and see when bleeding needs checking.',
+      },
+    ],
+  },
+  {
+    id: 'tracking',
+    heading: 'Keeping track over weeks and months',
+    intro: 'A record over time shows a clinician more than memory can.',
+    tools: [
+      {
+        url: '/tools/symptom-tracker/',
+        useWhen: 'Log symptoms, sleep, hot flashes and bleeding daily or weekly, then print a one-page doctor report.',
+      },
+    ],
+  },
+  {
+    id: 'treatment',
+    heading: 'Weighing up treatment',
+    intro: 'Check the evidence, then take your questions to someone who knows your health history.',
+    tools: [
+      {
+        url: '/tools/does-it-work-checker/',
+        useWhen: 'Look up HRT, newer non-hormonal drugs, CBT and supplements, with an evidence grade and source for each.',
+      },
+      {
+        url: '/tools/treatment-questions/',
+        useWhen: 'Choose your priorities and print a list of questions to ask about HRT and other options.',
+      },
+    ],
+  },
+];
 
 /**
  * Tools hub. Code-defined because it is navigation, not medical content.
@@ -22,27 +71,36 @@ export const metadata: Metadata = buildMetadata({
 export default function ToolsHub() {
   const { pages } = getSiteData();
   const toolGuides = pages.filter((p) => p.fm.page_type === 'tool');
+  const byUrl = new Map(toolGuides.map((p) => [p.url, p]));
+  const grouped = new Set(GROUPS.flatMap((g) => g.tools.map((t) => t.url)));
+  const ungrouped = toolGuides.filter((p) => !grouped.has(p.url));
   const trackerLive = isToolLive('symptom-tracker');
   const crumbs = [
     { name: 'Home', path: '/', linked: true },
     { name: 'Tools', path: '/tools/', linked: false },
   ];
 
+  const sections = [
+    ...GROUPS.map((g) => ({
+      ...g,
+      items: g.tools.flatMap((t) => {
+        const page = byUrl.get(t.url);
+        return page ? [{ url: page.url, title: page.fm.title, text: t.useWhen }] : [];
+      }),
+    })),
+    {
+      id: 'more-tools',
+      heading: 'More tools',
+      intro: '',
+      items: ungrouped.map((p) => ({ url: p.url, title: p.fm.title, text: p.fm.meta_description })),
+    },
+  ].filter((s) => s.items.length > 0);
+
   return (
-    <div className="space-y-8">
+    <div className="space-y-10">
       <JsonLd
         data={[
           breadcrumbLd(crumbs),
-          ...(trackerLive
-            ? [
-                webApplicationLd({
-                  name: 'Symptom tracker and doctor report',
-                  path: APP_ROUTES.today,
-                  description:
-                    'Private symptom log that stays on your device, with a printable summary for appointments.',
-                }),
-              ]
-            : []),
           ...toolGuides.map((p) =>
             webApplicationLd({
               name: p.fm.title,
@@ -54,10 +112,11 @@ export default function ToolsHub() {
       />
       <Breadcrumbs crumbs={crumbs} />
       <header className="max-w-3xl space-y-3">
-        <h1 className="text-3xl sm:text-4xl">Free private menopause tools</h1>
+        <h1 className="text-3xl sm:text-4xl">Free menopause and perimenopause tools</h1>
         <p className="text-xl text-[var(--color-ink-muted)]">
-          Every tool below runs in your browser on your own device. Nothing you enter is sent to a server, analytics,
-          or partners. They help you notice patterns and prepare for appointments — they never diagnose or prescribe.
+          Six free tools to help you notice patterns and prepare for appointments: a symptom tracker, a printable
+          checklist, a stage quiz, an evidence checker, an HRT question builder and a 12-month counter. They run in
+          your browser with no account, and what you enter stays on your device. They never diagnose or prescribe.
         </p>
       </header>
 
@@ -67,7 +126,7 @@ export default function ToolsHub() {
           className="space-y-3 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-5"
         >
           <h2 id="tracker" className="text-2xl">
-            Symptom tracker and doctor report
+            Start tracking today
           </h2>
           <p>
             Log how you feel each day or week: symptoms and how strong they are, sleep, hot flashes, bleeding, and
@@ -85,41 +144,78 @@ export default function ToolsHub() {
               href="/tools/symptom-tracker/"
               className="tap rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper)] px-5 font-semibold no-underline"
             >
-              Read tracker guide
+              How the tracker works
             </Link>
           </div>
         </section>
       )}
 
-      {toolGuides.length > 0 && (
-        <section aria-labelledby="guides" className="space-y-4">
-          <h2 id="guides" className="text-2xl">
-            All interactive tools &amp; guides ({toolGuides.length})
-          </h2>
+      {sections.map((s) => (
+        <section key={s.id} aria-labelledby={s.id} className="space-y-4">
+          <div className="space-y-1">
+            <h2 id={s.id} className="text-2xl">
+              {s.heading}
+            </h2>
+            {s.intro && <p className="text-[var(--color-ink-muted)]">{s.intro}</p>}
+          </div>
           <ul className="grid gap-4 sm:grid-cols-2">
-            {toolGuides.map((p) => (
+            {s.items.map((item) => (
               <li
-                key={p.url}
-                className="flex flex-col justify-between rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-5"
+                key={item.url}
+                className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-5"
               >
-                <div className="space-y-2">
-                  <h3 className="text-xl font-semibold">
-                    <Link href={p.url} className="tap text-[var(--color-link)] underline">
-                      {p.fm.title}
-                    </Link>
-                  </h3>
-                  <p className="text-sm text-[var(--color-ink-muted)]">{p.fm.meta_description}</p>
-                </div>
-                <p className="pt-3">
-                  <Link href={p.url} className="tap text-sm font-semibold text-[var(--color-link)] underline">
-                    Use tool &rarr;
+                <h3 className="text-xl font-semibold">
+                  <Link href={item.url} className="tap text-[var(--color-link)] underline">
+                    {item.title}
                   </Link>
-                </p>
+                </h3>
+                <p className="mt-2 text-[var(--color-ink-muted)]">{item.text}</p>
               </li>
             ))}
           </ul>
         </section>
-      )}
+      ))}
+
+      <section aria-labelledby="your-data" className="max-w-3xl space-y-3">
+        <h2 id="your-data" className="text-2xl">
+          How these tools store what you enter
+        </h2>
+        <p>
+          Everything you tick, type or log is saved in this browser on this device, so it&apos;s still there when you
+          come back, with no account. You can save dated copies, reopen or delete them, and export a backup file.
+          Nothing is sent to us, to analytics or to advertisers. Because the data lives only in this browser,
+          clearing your browser data, using a private window or switching device means it won&apos;t be there, so
+          export a backup now and then.
+        </p>
+      </section>
+
+      <section aria-labelledby="read-next" className="max-w-3xl space-y-3">
+        <h2 id="read-next" className="text-2xl">
+          Read next
+        </h2>
+        <ul className="list-disc space-y-1 pl-6">
+          <li>
+            <Link href="/perimenopause/" className="text-[var(--color-link)] underline">
+              Perimenopause: signs, stages and when to see a doctor
+            </Link>
+          </li>
+          <li>
+            <Link href="/symptoms/" className="text-[var(--color-link)] underline">
+              Every menopause symptom we cover, A to Z
+            </Link>
+          </li>
+          <li>
+            <Link href="/treatments/" className="text-[var(--color-link)] underline">
+              Menopause treatments compared by evidence
+            </Link>
+          </li>
+          <li>
+            <Link href="/does-it-work/" className="text-[var(--color-link)] underline">
+              Supplements and remedies: what the trials show
+            </Link>
+          </li>
+        </ul>
+      </section>
     </div>
   );
 }

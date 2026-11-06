@@ -129,6 +129,30 @@ export function buildSiteGraph(repoRoot: string = process.cwd()): SiteGraph {
     }
   }
 
+  // Every page also gets two code-rendered links that aren't literal body-text
+  // markdown, so the body-link parse above never sees either one:
+  //  - a hub page's auto-generated "In this section" grid of its children
+  //    ([...slug]/page.tsx's childrenOf())
+  //  - every page's own Breadcrumbs, which link up to its hub whenever the hub
+  //    is set (breadcrumbsFor() in site-data.ts)
+  // Add both as real edges, the same way homepage nav and the /tools/ hub
+  // already are below, or well-connected pages would look click-depth-
+  // unreachable or "missing a link to their hub" even though every reader
+  // actually sees both on the rendered page.
+  for (const node of Object.values(nodes)) {
+    if (node.page_type !== 'hub') continue;
+    for (const child of Object.values(nodes)) {
+      if (child.hub !== node.url || child.url === node.url) continue;
+      node.outgoing_links.push({ url: child.url, anchor: child.title, contextual: true });
+      child.incoming_links.push({ url: node.url, anchor: child.title });
+    }
+  }
+  for (const node of Object.values(nodes)) {
+    if (!node.hub || node.hub === node.url || !nodes[node.hub]) continue;
+    node.outgoing_links.push({ url: node.hub, anchor: 'breadcrumb', contextual: true });
+    nodes[node.hub].incoming_links.push({ url: node.url, anchor: 'breadcrumb' });
+  }
+
   // BFS click depth from homepage '/'
   const queue: Array<{ url: string; depth: number }> = [{ url: '/', depth: 0 }];
   const visited = new Set<string>(['/']);

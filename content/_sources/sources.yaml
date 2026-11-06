@@ -901,3 +901,177 @@
   key_finding: "Menopausal status was the factor most strongly associated with menopausal symptoms overall (p<0.01), including hot flashes and sweating (strongest association), paresthesiae, insomnia, arthralgia/myalgia, palpitations, skin formication (crawling-skin sensation), and unsatisfactory sexual life. Psychosocial factors (recent upsetting events, pessimism) were also significantly associated with most symptoms."
   funding_conflict: null
   verified: true
+
+- id: gopal-ashwagandha-perimenopause-2021
+  title: "Effect of an ashwagandha (Withania Somnifera) root extract on climacteric symptoms in women during perimenopause: A randomized, double-blind, placebo-controlled study"
+  authors: [Gopal S, Ajgaonkar A, Kanchi P, Kaundinya A, Thakare V, Chauhan S, Langade D]
+  publisher: Journal of Obstetrics and Gynaecology Research
+  year: 2021
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/34553463/
+  doi: 10.1111/jog.15030
+  accessed: "2026-11-07"
+  population: "100 perimenopausal women with climacteric symptoms, India (91 completed); 8-week RCT"
+  key_finding: "300mg ashwagandha root extract twice daily vs. placebo. Significant reduction in total Menopause Rating Scale score (p<0.0001, across psychological, somato-vegetative, and urogenital domains) and MENQoL score (p<0.0001). Significant increase in serum estradiol (p<0.0001) and decrease in FSH (p<0.0001) and LH (p<0.05) vs. placebo; no significant difference in testosterone."
+  funding_conflict: null
+  verified: true
+  notes: "No funding/conflict-of-interest statement found in the indexed abstract; all listed author affiliations are academic institutions (D Y Patil University, Vedanta Hospital, Terna Medical College, Narayana Hrudayalaya), with no industry sponsor named there."
+
+- id: lee-maca-menopause-systematic-review-2011
+  title: "Maca (Lepidium meyenii) for treatment of menopausal symptoms: A systematic review"
+  authors: [Lee MS, Shin BC, Yang EJ, Lim HJ, Ernst E]
+  publisher: Maturitas
+  year: 2011
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/21840656/
+  doi: 10.1016/j.maturitas.2011.07.017
+  accessed: "2026-11-07"
+  population: Healthy peri-, early-, and late-postmenopausal women across 4 included RCTs
+  key_finding: "All 4 included RCTs showed favorable effects on the Kupperman Menopausal Index or Greene Climacteric Score, but the reviewers conclude this is only limited evidence given the very small number of trials, small sample sizes, and methodological quality issues across them. Safety has not yet been proven. The review explicitly calls for larger, more rigorous trials before drawing firm conclusions."
+  funding_conflict: null
+  verified: true
+
+- id: hirata-dong-quai-trial-1997
+  title: "Does dong quai have estrogenic effects in postmenopausal women? A double-blind, placebo-controlled trial"
+  authors: [Hirata JD, Swiersz LM, Zell B, Small R, Ettinger B]
+  publisher: Fertility and Sterility
+  year: 1997
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/9418683/
+  doi: 10.1016/s0015-0282(97)00397-x
+  accessed: "2026-11-07"
+  population: "71 postmenopausal women with hot flashes and elevated FSH (>30 mIU/mL); 24-week RCT"
+  key_finding: "No statistically significant differences between dong quai and placebo in endometrial thickness, vaginal maturation index, number of hot flashes, or the Kupperman index. Used alone, dong quai produced no estrogen-like effect and was no more helpful than placebo for relieving menopausal symptoms."
+  funding_conflict: null
+  verified: true
+
+- id: scheffers-dhea-cochrane-2015
+  title: "Dehydroepiandrosterone for women in the peri- or postmenopausal phase"
+  authors: [Scheffers CS, Armstrong S, Cantineau AEP, Farquhar C, Jordan V]
+  publisher: Cochrane Database of Systematic Reviews
+  year: 2015
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/25879093/
+  doi: 10.1002/14651858.CD011066.pub2
+  accessed: "2026-11-07"
+  population: "28 trials, 1,273 peri- or postmenopausal women (oral and intravaginal DHEA, vs. placebo or other active treatment)"
+  key_finding: "No evidence DHEA improves quality of life vs. placebo (SMD 0.16, moderate-quality evidence). Associated with androgenic side effects, mainly acne (OR 3.77, moderate-quality evidence). Effect on general menopausal symptoms unclear - results were inconsistent across trials and couldn't easily be pooled. DHEA may slightly improve sexual function overall (SMD 0.31) compared with placebo, though the oral-only subgroup's effect on sexual function (SMD 0.11) was not itself significant, versus one intravaginal-DHEA study (SMD 0.42, significant alone)."
+  funding_conflict: null
+  verified: true
+
+- id: lemos-intravaginal-dhea-meta-analysis-2026
+  title: "Intravaginal dehydroepiandrosterone for the treatment of vulvovaginal atrophy: a systematic review and meta-analysis"
+  authors: [Lemos MJ, Queiroz LF, Diniz AF, Longo da Silva CM, Dos Santos PL, de Oliveira Gomide P, Ferraz JM, De Marco Novellino AM]
+  publisher: Menopause
+  year: 2026
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/41589851/
+  doi: 10.1097/GME.0000000000002736
+  accessed: "2026-11-07"
+  population: "5 unique RCTs (6 publications), 1,611 postmenopausal women with vulvovaginal atrophy"
+  key_finding: "Intravaginal DHEA (prasterone/Intrarosa) significantly improved vaginal dryness (mean difference -0.23, 95% CI -0.35 to -0.11) and dyspareunia (mean difference -0.40, 95% CI -0.66 to -0.15) vs. placebo. No major safety concerns; adverse effects were mild and infrequent, with low to moderate heterogeneity across trials."
+  funding_conflict: null
+  verified: true
+
+- id: pu-collagen-skin-aging-metaanalysis-2023
+  title: "Effects of Oral Collagen for Skin Anti-Aging: A Systematic Review and Meta-Analysis"
+  authors: [Pu SY, Huang YL, Pu CM, Kang YN, Hoang KD, Chen KH, Chen C]
+  publisher: Nutrients
+  year: 2023
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/37432180/
+  doi: 10.3390/nu15092080
+  accessed: "2026-11-07"
+  population: "26 RCTs, 1,721 participants, general adult population (not menopause-specific)"
+  key_finding: "Hydrolyzed collagen supplementation significantly improved skin hydration (p<0.00001) and elasticity (p<0.00001) vs. placebo. No significant difference in effect by collagen source or measurement method on elasticity. Several biases were identified across the included RCTs, and the authors call for larger, confirmatory trials."
+  funding_conflict: null
+  verified: true
+  notes: "Not specific to menopausal women - a general-population skin study. Cite it as general evidence for collagen and skin, not as menopause-specific evidence."
+
+- id: wang-probiotics-bone-health-metaanalysis-2024
+  title: "Effects of probiotic supplementation on bone health in postmenopausal women: a systematic review and meta-analysis"
+  authors: [Wang F, Wei W, Liu PJ]
+  publisher: Frontiers in Endocrinology
+  year: 2024
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/39553313/
+  doi: 10.3389/fendo.2024.1487998
+  accessed: "2026-11-07"
+  population: "12 RCTs, 1,183 postmenopausal women"
+  key_finding: "Probiotic supplementation significantly increased bone mineral density at the lumbar spine (SMD 0.60, 95% CI 0.14-1.05) and hip (SMD 0.74, 95% CI 0.15-1.33) versus controls, and reduced the bone-turnover markers CTX and BALP. The effect was more pronounced in women with osteopenia than those with osteoporosis. Results remained robust in sensitivity analyses; the authors still call for further RCTs to confirm and refine the findings."
+  funding_conflict: null
+  verified: true
+
+- id: acquarulo-pollen-extract-vms-metaanalysis-2024
+  title: "The efficacy of purified pollen extract for reducing vasomotor symptoms in women: a systematic review and meta-analysis"
+  authors: [Acquarulo EL, Hernandez EC, Kodzodziku F, Nemec EC]
+  publisher: Menopause
+  year: 2024
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/38194609/
+  doi: 10.1097/GME.0000000000002301
+  accessed: "2026-11-07"
+  population: "5 studies (1 RCT, 4 observational), 420 women total; search string explicitly included product/brand names (Bonafide, Femal, Estroven, Serelys)"
+  key_finding: "Pooling all 5 studies showed significant improvement at 3 months in hot flashes, night disturbance, depression, and myalgia. When only the placebo-controlled studies were pooled, these improvements were no longer statistically significant - the authors conclude the apparent benefit in the uncontrolled studies may reflect a placebo effect. No significant adverse effects were found either way."
+  funding_conflict: null
+  verified: true
+
+- id: radzinsky-amberen-pooled-trials-2019
+  title: "Succinate-Based Dietary Supplement for Menopausal Symptoms: A Pooled Analysis of Two Identical Randomized, Double-Blind, Placebo-Controlled Clinical Trials"
+  authors: [Radzinsky VE, Uspenskaya Y, Shulman LP, Kuznetsova IV]
+  publisher: Obstetrics and Gynecology International
+  year: 2019
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/31781230/
+  doi: 10.1155/2019/1572196
+  accessed: "2026-11-07"
+  population: "227 women aged 42-60 (114 treatment/113 placebo), pooled from two identical 90-day RCTs of a succinate-based supplement (Amberen)"
+  key_finding: "Significant improvement in 16 of 21 Greene Climacteric Scale symptoms (p<=0.05) and reduced anxiety (p<0.0001) vs. placebo. Significant reductions in weight, BMI, and waist/hip circumference vs. placebo. Serum estradiol increased significantly from baseline (p<0.0001) among users."
+  funding_conflict: "Disclosed in the paper itself: author Shulman is a paid consultant for Biogix Inc. (formerly Lunada Biomedical, Amberen's manufacturer). The other three authors were investigators in one or both of the pooled trials, not independent of the research - Kuznetsova and Radzinsky were each the main investigator in one of the two trials."
+  verified: true
+  notes: "Graded Limited despite the randomized, double-blind, placebo-controlled design, specifically because of the disclosed financial conflict - evidence outranks commission, but a real conflict of interest still outranks an otherwise-solid design when setting the grade."
+
+- id: relizen-own-site-2026
+  title: "Relizen (hot flash and night sweat supplement) — product page (own site)"
+  authors: []
+  publisher: Bonafide Health, LLC
+  year: 2026
+  type: other
+  url: https://hellobonafide.com/products/relizen
+  doi: null
+  accessed: "2026-11-07"
+  population: Prospective Relizen customers (US)
+  key_finding: "Self-reported by Bonafide: under a 'Results backed by science' heading, the page states '75% of women experienced reduced hot flash frequency' and '70% of women experienced reduced night sweats', both footnoted to reference 36. That reference (Bernsley et al., Menopause 2021;28(12):1438-1476) is explicitly described on the same page as 'based on survey data of 4,925 customers taking Relizen for at least 3 months' - a customer satisfaction survey, not a controlled trial - placed directly beside citations to three real placebo-controlled clinical trials (references 30-32) under the same science heading."
+  funding_conflict: "Self-reported by the company being reviewed."
+  verified: true
+  notes: "Confirmed directly by reading the page's own footnote text. The juxtaposition of a customer survey and real RCT citations under one 'backed by science' heading, with the same superscript style, is a genuine finding worth calling out plainly, not an artifact of secondary reporting."
+
+- id: aso-s-equol-hot-flash-trial-2012
+  title: "A natural S-equol supplement alleviates hot flushes and other menopausal symptoms in equol nonproducing postmenopausal Japanese women"
+  authors: [Aso T, Uchiyama S, Matsumura Y, Taguchi M, Nozaki M, Takamatsu K, Ishizuka B, Kubota T, Mizunuma H, Ohta H]
+  publisher: Journal of Women's Health
+  year: 2012
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/21992596/
+  doi: 10.1089/jwh.2011.2753
+  accessed: "2026-11-07"
+  population: "160 equol-nonproducing postmenopausal Japanese women with at least 1 hot flush/day (77 S-equol, 83 placebo); 12-week multicenter double-blind RCT, 126 completed"
+  key_finding: "10mg/day natural S-equol vs. placebo. Hot flush frequency decreased more with S-equol than placebo (-58.7% vs. -34.5% from baseline, p=0.009). Severity of hot flushes and neck/shoulder muscle stiffness also significantly decreased more with S-equol. No changes in clinical parameters and no serious adverse effects reported."
+  funding_conflict: null
+  verified: true
+  notes: "Added to match a citation already used in content/pages/does-it-work/equelle.md (the content session's own id for it) - verified independently via NCBI, not just taken from the content file's paraphrase. Note this trial used a different, equol-nonproducer-only Japanese population - whether its results generalize to women in general isn't established by this trial alone."
+
+- id: overbeek-chemotherapy-ovarian-function-2017
+  title: "Chemotherapy-related late adverse effects on ovarian function in female survivors of childhood and young adult cancer: A systematic review"
+  authors: [Overbeek A, van den Berg MH, van Leeuwen FE, Kaspers GJ, Lambalk CB, van Dulmen-den Broeder E]
+  publisher: Cancer Treatment Reviews
+  year: 2017
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/28056411/
+  doi: 10.1016/j.ctrv.2016.11.006
+  accessed: "2026-11-07"
+  population: "45 studies, 5,607 female survivors of childhood and young adult cancer"
+  key_finding: "Median age at menopause was earlier in cancer survivors than in the general population. Amenorrhoea prevalence ranged from 0% to 83% depending on treatment regimen; MVPP protocols and cyclophosphamide-containing regimens for breast cancer carried the highest risk (39-80%). The strongest risk factors for ovarian dysfunction were alkylating agents (specifically procarbazine and busulfan) and older age at treatment. The authors note all included studies had methodological limitations and call for nation-wide registries to guarantee long-term follow-up of cancer survivors."
+  funding_conflict: null
+  verified: true
+  notes: "Added to match a citation already used in content/pages/groups/chemotherapy-induced-menopause.md (the content session's own id for it) - verified independently via NCBI, not just taken from the content file's paraphrase."

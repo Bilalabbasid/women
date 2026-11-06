@@ -140,6 +140,8 @@ responsive/mobile pass, print styles) once A–D have a first draft — note tha
 explicitly below rather than silently editing files inside someone else's
 claimed lane.
 
+| **E — Cross-cutting: a11y & print sweep** | No fixed file list — audits across all lanes, flags findings here rather than editing claimed files directly; only touches a file itself if it's genuinely untouched by any other lane and the fix is small/additive (e.g. a missing `alt`, not a redesign) | this session — 2026-11-06 | In progress |
+
 ## Cross-lane notes
 
 *(Flag anything here that needed a file outside your lane, or a decision only
@@ -180,6 +182,33 @@ the owner/functionality chat can make.)*
   implies they should. Wrapping that list in `:::note`/`:::` would fix it
   with the directive that already exists — no template-engine change needed.
   Not editing `.md` files myself per the boundary above.
+- **Suggestion for Foundation, not editing `globals.css` myself since it's
+  claimed/in-progress:** the `@media print` block has no
+  `print-color-adjust: exact` / `-webkit-print-color-adjust: exact`. Chrome
+  and most browsers strip background colors by default when printing, so
+  every tool's "Print my list/summary/questions" output — the thing these
+  tools exist to produce for an appointment — currently prints the evidence
+  `.grade-*` badges and the safety-red `UrgentGuidance` box as plain white.
+  Not a correctness bug (every grade and urgent message also has a text
+  label, never color alone, per AGENTS.md), just a legibility/distinctiveness
+  loss on the one output format those components are built for. One-line fix
+  on the existing `body` rule inside the current `@media print` block.
+- **Suggestion for Lane B, not editing `does-it-work-checker.tsx` myself
+  since it's claimed/in-progress (commit `562c234` already fixed the hex
+  colors there):** that fix swapped the hex values for `grade grade-${item.grade}`,
+  but the component's own `VerdictGrade` type still only has 4 values
+  (`strong | moderate | limited | not_supported`) — it can't represent
+  `harm_concern`, the 5th grade AGENTS.md defines (the grade this exact tool
+  would need for e.g. compounded "bioidentical" hormones or unproven
+  "vaginal rejuvenation" — items the research brief explicitly says to reject
+  in public). Suggest importing `EvidenceGrade`/`GradeBadge`/`GRADE_LABELS`
+  from `@/lib/content/schema` + `@/components/site/evidence` instead of the
+  local type/hex, same shape as the `urgent-guidance.tsx` token fix — one
+  layer deeper (type + component reuse, not just the CSS class string). A
+  worked version of this swap (typecheck/lint clean, verified in-browser) is
+  sitting unmerged on local branch `ui/tools` in
+  `.claude/worktrees/ui-tools` if it's useful as a reference diff — happy to
+  hand it over directly instead of Lane B redoing it, just say so here.
 
 ## Changelog
 
@@ -298,3 +327,19 @@ the owner/functionality chat can make.)*
   haven't found anything there that CSS-only, non-globals.css changes can
   actually fix yet — most remaining gaps are either Foundation's file,
   the markdown pipeline, or content authoring (see cross-lane notes).
+- 2026-11-06 — New chat: tried to claim Lane C, but it was claimed (commit
+  `7994457`) between this session reading the file and writing to it — taking
+  the cross-cutting pass instead, per this doc's own "5th chat" guidance
+  above. Claimed **Lane E (a11y & print sweep)**. Ran `npm run validate:a11y`
+  (axe-core over 68 prerendered pages): 0 errors/warnings — note it
+  explicitly doesn't cover contrast or tap-target size (that's Lighthouse's
+  job per AGENTS.md's audit method; not re-run here, still open). Logged two
+  concrete, unmerged findings above rather than editing claimed files
+  directly: a missing `print-color-adjust: exact` in Foundation's print
+  block, and a harm_concern/`VerdictGrade` gap in Lane B's evidence checker
+  (plus an offer to hand over an already-built, verified fix for the latter
+  from branch `ui/tools`). Also: earlier in this session I was working in an
+  isolated git worktree (unaware this project was coordinating in-tree via
+  this file instead) and independently found/fixed the same hex-color issue
+  Lane B's `562c234` already fixed — that duplicate work is parked, unmerged,
+  on local branch `ui/tools`, not pushed into this tree.

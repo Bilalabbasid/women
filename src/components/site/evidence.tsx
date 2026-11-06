@@ -38,19 +38,20 @@ export function ReviewLine({
   page,
   author,
   reviewer,
-  approved,
+  reviewed,
 }: {
   page: ContentPage;
   author: Person | undefined;
   reviewer: Person | undefined;
-  approved: boolean;
+  /** isMedicallyReviewed(page, store) — NOT whether the page is published/live. See gate.ts. */
+  reviewed: boolean;
 }) {
   const { fm } = page;
   return (
     <p className="text-[var(--color-ink-muted)]">
       By {displayName(author)} · Updated <time dateTime={fm.updated_at}>{fmtDate(fm.updated_at)}</time>
       {page.isMedical &&
-        (approved && reviewer && fm.reviewed_at ? (
+        (reviewed && reviewer && fm.reviewed_at ? (
           <>
             {' '}
             · Medically reviewed by {displayName(reviewer)}

@@ -9,7 +9,7 @@ import {
   childrenOf,
   relatedFor,
 } from '@/lib/content/site-data';
-import { isPublishable } from '@/lib/content/gate';
+import { isPublishable, isMedicallyReviewed } from '@/lib/content/gate';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { contentPageLd, breadcrumbLd, faqLd, webApplicationLd } from '@/lib/seo/jsonld';
 import { splitContentIslands } from '@/lib/content/markdown';
@@ -58,6 +58,9 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
   const { fm } = page;
   const rendered = renderPage(page);
   const approved = isPublishable(page, store);
+  // Independent of `approved` (the publish gate) on purpose — never let "this page is
+  // live" imply "a clinician reviewed it" (AGENTS.md rule 4). See gate.ts.
+  const reviewed = isMedicallyReviewed(page, store);
   const problems = approved ? [] : draftProblems(page);
   const crumbs = breadcrumbsFor(page);
   const author = store.people.get(fm.author);
@@ -88,7 +91,7 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
         </div>
         <header className="space-y-3">
           <h1 className="text-3xl sm:text-4xl">{fm.title}</h1>
-          <ReviewLine page={page} author={author} reviewer={reviewer} approved={approved} />
+          <ReviewLine page={page} author={author} reviewer={reviewer} reviewed={reviewed} />
           {page.isMedical && <StandardNotice />}
           {fm.evidence_grade && (
             <p className="flex flex-wrap items-center gap-2">

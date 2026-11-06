@@ -68,13 +68,32 @@ describe('publish gate', () => {
   });
   const page = (url: string) => store.pages.find((p) => p.url === url)!;
 
-  it('publishes pages once sources are checked (Prompt 2 Owner Decisions 1 & 2)', () => {
+  it('publishes a clinician-approved page whose content matches its approval hash', () => {
     expect(publishProblems(page('/symptoms/hot-flashes/'), store)).toEqual([]);
     expect(isPublishable(page('/symptoms/hot-flashes/'), store)).toBe(true);
-    expect(isPublishable(page('/symptoms/night-sweats/'), store)).toBe(true);
   });
 
-  it('determines medical review honesty correctly (Prompt 2 Owner Decision 3)', async () => {
+  it('never publishes a literal status: draft page', () => {
+    const p = page('/symptoms/night-sweats/');
+    expect(isPublishable(p, store)).toBe(false);
+    expect(publishProblems(p, store)).toContain('status is "draft"');
+  });
+
+  it('owner decision 2026-11-06: a sourced, graded medical page publishes without a clinician review, but is never shown or marked as reviewed', async () => {
+    // Mirrors the real site: ~300 existing pages are status: published with reviewer: null.
+    const noReviewer = makeStore((root) => {
+      const f = path.join(root, 'pages', 'symptoms', 'night-sweats.md');
+      fs.writeFileSync(f, fs.readFileSync(f, 'utf8').replace('status: draft', 'status: published'));
+    });
+    const p = noReviewer.pages.find((x) => x.url === '/symptoms/night-sweats/')!;
+    expect(publishProblems(p, noReviewer)).toEqual([]);
+    expect(isPublishable(p, noReviewer)).toBe(true);
+    // The publish gate relaxing must NEVER make this true — that's a faked review (rule 4).
+    const { isMedicallyReviewed } = await import('../lib/content/gate');
+    expect(isMedicallyReviewed(p, noReviewer)).toBe(false);
+  });
+
+  it('determines medical review honesty correctly', async () => {
     const { isMedicallyReviewed } = await import('../lib/content/gate');
     // Approved fixture matches its hash and verified reviewer
     expect(isMedicallyReviewed(page('/symptoms/hot-flashes/'), store)).toBe(true);
@@ -102,17 +121,22 @@ describe('publish gate', () => {
     expect(publishProblems(p, missing)).toContain('cited source "fixture-guideline" is not in the registry');
   });
 
-  it('publishes all finished pages in production (Prompt 2: Everything goes live)', () => {
-    expect(visiblePages(store, 'production').map((p) => p.url)).toEqual([
+  it('shows only clinician-approved pages in production; drafts show nowhere in production', () => {
+    expect(visiblePages(store, 'production').map((p) => p.url)).toEqual(['/symptoms/hot-flashes/']);
+  });
+
+  it('shows drafts (with a banner) in development and staging, for review', () => {
+    expect(visiblePages(store, 'development').map((p) => p.url).sort()).toEqual([
+      '/symptoms/hot-flashes/',
+      '/symptoms/night-sweats/',
+    ]);
+    expect(visiblePages(store, 'staging').map((p) => p.url).sort()).toEqual([
       '/symptoms/hot-flashes/',
       '/symptoms/night-sweats/',
     ]);
   });
 
-  it('includes published pages in indexable lists unless explicitly noindex', () => {
-    expect(indexablePages(store).map((p) => p.url)).toEqual([
-      '/symptoms/hot-flashes/',
-      '/symptoms/night-sweats/',
-    ]);
+  it('includes only publishable, non-noindex pages in indexable lists (sitemap/RSS/search)', () => {
+    expect(indexablePages(store).map((p) => p.url)).toEqual(['/symptoms/hot-flashes/']);
   });
 });

@@ -1,5 +1,5 @@
 import type { ContentPage, ContentStore } from '../content/loader';
-import { isPublishable } from '../content/gate';
+import { isMedicallyReviewed } from '../content/gate';
 import { SITE, absoluteUrl, type SiteConfig } from '../site/config';
 import type { Person } from '../content/schema';
 
@@ -85,13 +85,9 @@ export function contentPageLd(page: ContentPage, store: Pick<ContentStore, 'sour
   const type = page.isMedical ? 'MedicalWebPage' : fm.page_type === 'legal' ? 'WebPage' : 'Article';
   const firstDate = [...fm.change_log].sort((a, b) => a.date.localeCompare(b.date))[0]?.date;
   const reviewer = fm.reviewer ? store.people.get(fm.reviewer) : undefined;
-  const reviewIsReal =
-    page.isMedical &&
-    isPublishable(page, store) &&
-    reviewer?.kind === 'person' &&
-    reviewer.verified &&
-    reviewer.roles.includes('clinical_reviewer') &&
-    fm.reviewed_at;
+  // isMedicallyReviewed() is the single source of truth for this — never imply review from
+  // "is this page live" (AGENTS.md rule 4). See gate.ts.
+  const reviewIsReal = isMedicallyReviewed(page, store) && reviewer?.kind === 'person';
 
   const ld: Json = {
     '@context': CTX,

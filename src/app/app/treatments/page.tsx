@@ -417,6 +417,11 @@ export default function TreatmentsPage() {
                     <span className="text-[#68615C]">Not yet enabled</span>
                   )}
                 </p>
+                {permissionState === 'granted' && (
+                  <p className="text-xs text-[#68615C]">
+                    Checks for due reminders every minute while MenoVerdict is open. Nothing fires if the browser is fully closed.
+                  </p>
+                )}
               </div>
             </div>
 

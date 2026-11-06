@@ -3,7 +3,15 @@
 
 import { LocalTreatment, LocalTreatmentEvent } from '../db/schema';
 import { db } from '../db/db';
+import { LocalDataService } from '../db/service';
 import { localDateString } from '../utils/local-date';
+
+const FIRED_TODAY_KEY = 'treatment_reminders_fired';
+
+interface FiredTodayRecord {
+  date: string;
+  treatmentIds: string[];
+}
 
 export type NotificationPermissionState = 'granted' | 'denied' | 'not_requested' | 'unsupported';
 export type NotificationPrivacyMode = 'discrete' | 'detailed';
@@ -190,6 +198,76 @@ export const NotificationService = {
     } catch (err) {
       return { success: false, message: err instanceof Error ? err.message : 'Failed to display notification.' };
     }
+  },
+
+  /** Shows a real notification via the service worker, falling back to the Notification constructor. */
+  async showPayload(payload: { title: string; body: string; icon: string; tag: string }, url = '/app/treatments/'): Promise<boolean> {
+    try {
+      if ('serviceWorker' in navigator) {
+        const registration = await navigator.serviceWorker.ready;
+        if (registration && registration.showNotification) {
+          await registration.showNotification(payload.title, { body: payload.body, icon: payload.icon, tag: payload.tag, data: { url } });
+          return true;
+        }
+      }
+      new Notification(payload.title, { body: payload.body, icon: payload.icon, tag: payload.tag });
+      return true;
+    } catch {
+      return false;
+    }
+  },
+
+  /**
+   * Fires a real notification for every treatment that is due today, has reminders
+   * enabled, and whose reminder time has arrived — at most once per treatment per day.
+   * Only works while this app is open (foreground or background tab); there is no
+   * push server, so nothing fires once the browser is fully closed. Called on a
+   * timer by ReminderScheduler (src/components/app/reminder-scheduler.tsx).
+   */
+  async checkAndFireDueReminders(now: Date = new Date()): Promise<string[]> {
+    const settings = await this.getSettings();
+    if (!settings.enabled || this.getPermissionState() !== 'granted') return [];
+
+    const todayStr = localDateString(now);
+    const nowMinutes = now.getHours() * 60 + now.getMinutes();
+
+    const firedRecord = await db.settings.get(FIRED_TODAY_KEY);
+    const fired = firedRecord?.value as FiredTodayRecord | undefined;
+    const firedToday = fired?.date === todayStr ? fired.treatmentIds : [];
+
+    const [treatments, todayEvents] = await Promise.all([
+      LocalDataService.getTreatments(),
+      LocalDataService.getTreatmentEvents(todayStr, todayStr),
+    ]);
+    const { due } = this.calculateDueTreatments(treatments, todayEvents, todayStr);
+
+    const justFired: string[] = [];
+    for (const t of due) {
+      if (firedToday.includes(t.id)) continue;
+      if (t.reminderEnabled === false) continue;
+      const timeStr = t.reminderTime || settings.defaultTime;
+      const [h, m] = timeStr.split(':').map(Number);
+      if (Number.isNaN(h) || Number.isNaN(m) || nowMinutes < h * 60 + m) continue;
+
+      const payload = this.buildNotificationPayload(t.name, t.dosage, settings.privacyMode);
+      if (await this.showPayload(payload)) justFired.push(t.id);
+    }
+
+    if (justFired.length > 0) {
+      await db.settings.put({
+        key: FIRED_TODAY_KEY,
+        value: { date: todayStr, treatmentIds: [...firedToday, ...justFired] } as FiredTodayRecord,
+        updatedAt: Date.now(),
+      });
+    }
+    return justFired;
+  },
+
+  /** Starts the foreground check loop. Returns a cleanup function; call once per mounted app. */
+  startScheduler(intervalMs = 60_000): () => void {
+    void this.checkAndFireDueReminders();
+    const id = setInterval(() => void this.checkAndFireDueReminders(), intervalMs);
+    return () => clearInterval(id);
   },
 
   // Calculate treatments due today

@@ -3,6 +3,7 @@ import { MedicalDisclaimerBanner } from '@/components/app/medical-disclaimer';
 import { PWAInstallBanner } from '@/components/app/pwa-install-banner';
 import { OfflineIndicator } from '@/components/app/service-worker-registrar';
 import { AppNavigation } from '@/components/app/app-navigation';
+import { ReminderScheduler } from '@/components/app/reminder-scheduler';
 import { notFound } from 'next/navigation';
 import { isToolLive } from '@/lib/tools/logic';
 
@@ -21,6 +22,7 @@ export default function TrackerLayout({ children }: { children: React.ReactNode 
 
   return (
     <div className="app-shell flex min-h-screen flex-col bg-[var(--color-paper)] text-[var(--color-ink)]">
+      <ReminderScheduler />
       <OfflineIndicator />
       <MedicalDisclaimerBanner />
       <PWAInstallBanner />

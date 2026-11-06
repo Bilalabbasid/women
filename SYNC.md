@@ -57,4 +57,15 @@ worktree is already on its own branch, branched from `site-rebuild` at commit
 
 ## Cross-lane requests
 
-- _(empty)_
+- **Heads up for lanes B/C/D:** there's a second, older coordination file,
+  `UI_SYNC.md` (not this one), under which several other chats have been
+  working directly in the root checkout (`C:\Users\bilal.abbasi\Desktop\Redit`,
+  no worktree isolation) with their own "Foundation"/Lane A–E split — not the
+  same lanes as this file's A–D. Local `site-rebuild` already has 15+ commits
+  from that scheme not yet pushed to origin. Before doing substantial work in
+  your lane's file list, check `UI_SYNC.md` in the root checkout for whether
+  the same files/components are already being worked there, to avoid the kind
+  of duplicate fix Lane A hit (see "In progress" above — flagged in both docs,
+  logged in `UI_SYNC.md` commit `4f204d2`). If you merge `site-rebuild` into
+  your worktree branch, diff carefully against anything in your lane's scope
+  before committing on top of it.

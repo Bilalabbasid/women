@@ -5,4 +5,290 @@
 #
 # Fields: id, title, authors[], publisher, year, type, url|null, doi|null (one required), accessed,
 #         population, key_finding, funding_conflict|null, verified, notes?
-[]
+#
+# Every record below was opened on the access date and its key finding checked against the source text.
+# "key_finding" paraphrases what the source says; it is not our conclusion.
+
+# ---------------------------------------------------------------- Regulators and labels
+
+- id: fda-mht-labeling-changes-2026
+  title: FDA Approves Labeling Changes to Menopausal Hormone Therapy Products
+  authors: []
+  publisher: U.S. Food and Drug Administration
+  year: 2026
+  type: regulator_statement
+  url: https://www.fda.gov/news-events/press-announcements/fda-approves-labeling-changes-menopausal-hormone-therapy-products
+  doi: null
+  accessed: "2026-11-06"
+  population: U.S. prescribing labels for menopausal hormone therapy products
+  key_finding: On February 12, 2026 the FDA approved labeling changes to six menopausal hormone therapy products, removing risk statements on cardiovascular disease, breast cancer and probable dementia from the boxed warning. 29 companies had submitted proposed changes; the first six span systemic combination, systemic estrogen-alone, systemic progestogen-alone and vaginal estrogen products.
+  funding_conflict: null
+  verified: true
+  notes: Trade press (Contemporary OB/GYN, 2026-10-30) reports three more estradiol patches approved on October 30, 2026; that report cites an HHS release we have not yet opened, so it is not used.
+
+- id: fda-mht-labeling-request-2025
+  title: FDA Requests Labeling Changes Related to Safety Information to Clarify the Benefit/Risk Considerations for Menopausal Hormone Therapies
+  authors: []
+  publisher: U.S. Food and Drug Administration
+  year: 2025
+  type: regulator_statement
+  url: https://www.fda.gov/drugs/drug-alerts-and-statements/fda-requests-labeling-changes-related-safety-information-clarify-benefitrisk-considerations
+  doi: null
+  accessed: "2026-11-06"
+  population: U.S. prescribing labels for menopausal hormone therapy products
+  key_finding: "On November 10, 2025 the FDA asked makers to remove cardiovascular disease, breast cancer and probable dementia language from the boxed warning, remove endometrial cancer boxed language except for systemic estrogen-alone products, and remove the 'lowest effective dose for the shortest time' recommendation. For systemic products, labels add consideration of starting therapy for moderate to severe hot flashes before age 60 or within 10 years of menopause, and retain cardiovascular and breast cancer information in the warnings."
+  funding_conflict: null
+  verified: true
+
+- id: hhs-mht-fact-sheet-2025
+  title: "FACT SHEET: FDA Initiates Removal of “Black Box” Warnings from Menopausal Hormone Replacement Therapy Products"
+  authors: []
+  publisher: U.S. Department of Health and Human Services
+  year: 2025
+  type: regulator_statement
+  url: https://www.hhs.gov/press-room/fact-sheet-fda-initiates-removal-of-black-box-warnings-from-menopausal-hormone-replacement-therapy-products.html
+  doi: null
+  accessed: "2026-11-06"
+  population: U.S. women considering menopausal hormone therapy
+  key_finding: The FDA is not seeking to remove the boxed warning for endometrial cancer on systemic estrogen-alone products, and its labeled recommendation will be to start systemic HRT within 10 years of menopause onset or before age 60.
+  funding_conflict: null
+  verified: true
+  notes: The fact sheet also states relative benefits (for example a 50% reduction in heart attack risk and 35% lower Alzheimer's risk) without inline citations. Do not repeat these figures; see content/_review/unverified-claims.md.
+
+- id: veozah-prescribing-information
+  title: VEOZAH (fezolinetant) tablets, prescribing information
+  authors: []
+  publisher: Astellas Pharma US
+  year: 2026
+  type: regulator_label
+  url: https://www.astellas.com/content/dam/astellas-com/global/en/documents/veozah_uspi.pdf
+  doi: null
+  accessed: "2026-11-06"
+  population: Adults with moderate to severe vasomotor symptoms due to menopause
+  key_finding: "Boxed warning for hepatotoxicity (added 12/2024). Liver tests before starting, then monthly for the first 3 months and at 6 and 9 months; do not start if aminotransferase or total bilirubin is 2 or more times the upper limit of normal. Contraindicated with known cirrhosis, severe renal impairment or end-stage renal disease, and CYP1A2 inhibitors. Dose: one 45 mg tablet daily."
+  funding_conflict: Manufacturer-issued label (FDA-approved text)
+  verified: true
+  notes: Label revised 02/2026. Doses are for reference only; pages never give individual dosing advice.
+
+- id: lynkuet-approval-bayer-2025
+  title: Bayer's Lynkuet (elinzanetant) approved in the U.S. for treatment of moderate to severe vasomotor symptoms due to menopause
+  authors: []
+  publisher: Bayer
+  year: 2025
+  type: brand_funded
+  url: https://www.bayer.com/media/en-us/bayers-lynkuet-elinzanetant-approved-in-the-us-for-treatment-of-moderate-to-severe-vasomotor-symptoms-due-to-menopause/
+  doi: null
+  accessed: "2026-11-06"
+  population: Menopausal women with moderate to severe hot flashes (OASIS 1-3 trials)
+  key_finding: The FDA approved elinzanetant (Lynkuet), a dual NK1 and NK3 receptor antagonist, on October 24, 2025. Efficacy came from 12 weeks of OASIS 1 and 2 in 796 women; safety from OASIS 1-3 in 1,420 women, including 627 followed for up to 52 weeks in OASIS 3.
+  funding_conflict: Manufacturer press release. Replace with the FDA label for efficacy and safety figures.
+  verified: true
+
+# ---------------------------------------------------------------- Society guidelines and statements
+
+- id: nams-2022-hormone-therapy
+  title: The 2022 hormone therapy position statement of The North American Menopause Society
+  authors: [The 2022 Hormone Therapy Position Statement Advisory Panel]
+  publisher: "Menopause (The North American Menopause Society, now The Menopause Society)"
+  year: 2022
+  type: position_statement
+  url: https://menopause.org/wp-content/uploads/professional/nams-2022-hormone-therapy-position-statement.pdf
+  doi: 10.1097/GME.0000000000002028
+  accessed: "2026-11-06"
+  population: Peri- and postmenopausal women
+  key_finding: Hormone therapy is the most effective treatment for vasomotor symptoms and genitourinary syndrome of menopause, and prevents bone loss and fracture. For women under 60 or within 10 years of menopause without contraindications, the benefit-risk ratio is favorable; starting more than 10 years after menopause or after 60 is less favorable because of greater absolute risks of coronary heart disease, stroke, venous thromboembolism and dementia.
+  funding_conflict: Funded by donations to the NAMS Education & Research Fund; the statement reports no commercial support. Individual panel disclosures not yet reviewed.
+  verified: true
+
+- id: nams-2023-nonhormone-therapy
+  title: The 2023 nonhormone therapy position statement of The North American Menopause Society
+  authors: [Shufelt CL, Brown V, Carpenter JS, Chism LA, Faubion SS, Joffe H, Kling JM, Soares CN, Thurston RC]
+  publisher: "Menopause (The North American Menopause Society, now The Menopause Society)"
+  year: 2023
+  type: position_statement
+  url: https://pubmed.ncbi.nlm.nih.gov/37252752/
+  doi: 10.1097/GME.0000000000002200
+  accessed: "2026-11-06"
+  population: Women with menopause-associated vasomotor symptoms
+  key_finding: "Recommended for hot flashes: CBT, clinical hypnosis, SSRIs/SNRIs, gabapentin, fezolinetant (Level I); oxybutynin (Levels I-II); weight loss and stellate ganglion block (Levels II-III). Not recommended: paced respiration (Level I); supplements and herbal remedies (Levels I-II); cooling techniques, avoiding triggers, exercise, yoga, mindfulness, relaxation, soy foods and extracts, equol, cannabinoids and acupuncture (Level II); clonidine and chiropractic (Levels I-III); dietary modification and pregabalin (Level III)."
+  funding_conflict: null
+  verified: true
+  notes: Panel disclosures not yet reviewed. "Not recommended" here means the panel did not recommend the therapy for hot flashes; some reviewers read it as "not first-line" (research plan). Present that nuance on each page.
+
+- id: menopause-society-fda-comment-2025
+  title: The Menopause Society Comments on the FDA Announcement on Hormone Therapy
+  authors: []
+  publisher: The Menopause Society
+  year: 2025
+  type: position_statement
+  url: https://menopause.org/press-releases/the-menopause-society-comments-on-the-fda-announcement-on-hormone-therapy
+  doi: null
+  accessed: "2026-11-06"
+  population: Women considering hormone therapy
+  key_finding: The Society agrees with removing the boxed warning from low-dose vaginal estrogen, but says systemic estrogen still carries potential risks for some individuals that should be reviewed in detail; risks are low for younger, healthy women starting closer to menopause and greater when started later.
+  funding_conflict: null
+  verified: true
+
+- id: ims-statement-boxed-warning-2025
+  title: "IMS Statement: US HHS Revises Black Box Warning for Menopause Hormone Therapy"
+  authors: []
+  publisher: International Menopause Society
+  year: 2025
+  type: position_statement
+  url: https://www.imsociety.org/2025/11/13/ims-statement-us-hhs-revises-black-box-warning-for-menopause-hormone-therapy/
+  doi: null
+  accessed: "2026-11-06"
+  population: Women considering menopause hormone therapy
+  key_finding: The IMS supports removing the boxed warning from vaginal estrogen products but does not support removing all warnings from systemic MHT, which can increase cardiovascular risk, breast cancer and dementia in some populations, particularly women who start later or already have these conditions.
+  funding_conflict: null
+  verified: true
+
+- id: straw-10-2012
+  title: "Executive summary of the Stages of Reproductive Aging Workshop + 10: addressing the unfinished agenda of staging reproductive aging"
+  authors: [Harlow SD, Gass M, Hall JE, Lobo R, Maki P, et al.]
+  publisher: Fertility and Sterility (published jointly in several journals)
+  year: 2012
+  type: guideline
+  url: https://www.fertstert.org/article/S0015-0282(12)00187-2/abstract
+  doi: null
+  accessed: "2026-11-06"
+  population: Midlife women (cohort data from five countries)
+  key_finding: Early menopausal transition is a persistent difference of 7 days or more in the length of consecutive cycles (recurring within 10 cycles). Late transition is 60 days or more without a period, and lasts on average 1 to 3 years. "Perimenopause" begins at the early transition and ends 12 months after the final menstrual period.
+  funding_conflict: null
+  verified: true
+  notes: Consensus staging system for research and clinical use. Bleeding criteria do not apply after hysterectomy or with hormonal contraception (route these to tailored guidance in the stage tool).
+
+- id: nice-ng23
+  title: "Menopause: identification and management (NG23)"
+  authors: []
+  publisher: National Institute for Health and Care Excellence (UK)
+  year: 2026
+  type: guideline
+  url: https://www.nice.org.uk/guidance/ng23
+  doi: null
+  accessed: "2026-11-06"
+  population: Women, trans men and non-binary people registered female at birth with menopause-associated symptoms (UK)
+  key_finding: UK guideline on identifying perimenopause and menopause, managing symptoms in people aged 40 and over, the effects of HRT on specific health outcomes, premature ovarian insufficiency under 40, and starting, stopping and reviewing HRT. Last reviewed 15 April 2026, when advice on vaginal bleeding while taking systemic HRT was amended.
+  funding_conflict: null
+  verified: true
+  notes: Overview page only. Open the specific recommendation before citing it.
+
+# ---------------------------------------------------------------- Studies and surveys
+
+- id: jmir-online-menopause-information-2025
+  title: "Understanding Experiences of and Unmet Needs in Online Searches for Menopause Information: An Exploratory Survey"
+  authors: [Funnell EL, McConnell F, Martin-Key NA, Qian L, Babbitt K, et al.]
+  publisher: JMIR Formative Research
+  year: 2025
+  type: other
+  url: https://formative.jmir.org/2025/1/e75335
+  doi: null
+  accessed: "2026-11-06"
+  population: 627 UK respondents (early perimenopause 171, late perimenopause 125, postmenopause 262, surgical menopause 69)
+  key_finding: 92.7% had used the internet for menopause information. The most searched topics were symptoms (82.4%), treatment options (76.1%) and self-help (54.7%). Participants reported gaps in complete symptom lists, information for medical or surgical menopause, outdated content and lack of source transparency.
+  funding_conflict: null
+  verified: true
+  notes: Cross-sectional online survey, UK-wide (the research plan did not say UK). Use for site planning, not for medical claims.
+
+# ---------------------------------------------------------------- Critiques (presented as disagreement, not as evidence)
+
+- id: public-citizen-mht-warnings-2025
+  title: Removing Safety Warnings for Menopausal Hormone Therapy Undermines FDA's Credibility, Encourages Inappropriate Off-Label Use
+  authors: [Zeldes N]
+  publisher: Public Citizen Health Research Group
+  year: 2025
+  type: other
+  url: https://www.citizen.org/news/removing-safety-warnings-for-menopausal-hormone-therapy-undermines-fdas-credibility-encourages-inappropriate-off-label-use/
+  doi: null
+  accessed: "2026-11-06"
+  population: Not applicable (advocacy statement)
+  key_finding: Public Citizen argues the treatments have documented cardiovascular, cognitive and cancer risks, that the change was made without an independent advisory committee, that officials promoted unapproved uses such as preventing heart disease, and notes the U.S. Preventive Services Task Force recommends against hormone therapy to prevent chronic conditions.
+  funding_conflict: null
+  verified: true
+
+- id: public-citizen-mht-labels-2026
+  title: "Outrage of the Month: Labeling Changes to Menopausal Hormone Therapy Products"
+  authors: []
+  publisher: Public Citizen Health Research Group
+  year: 2026
+  type: other
+  url: https://www.citizen.org/article/outrage-of-the-month-labeling-changes-to-menopausal-hormone-therapy-products/
+  doi: null
+  accessed: "2026-11-06"
+  population: Not applicable (advocacy commentary)
+  key_finding: For systemic estrogen-alone products in the February 2026 changes the endometrial cancer boxed warning was retained; for the other product categories the boxed warning was removed entirely. Public Citizen argues the decision was based on opinion rather than new safety data.
+  funding_conflict: null
+  verified: true
+
+# ---------------------------------------------------------------- Patient information and crisis services (used by urgent guidance)
+
+- id: nhs-heart-palpitations
+  title: Heart palpitations
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/conditions/heart-palpitations/
+  doi: null
+  accessed: "2026-11-06"
+  population: General public (UK)
+  key_finding: Call 999 or go to A&E if palpitations do not go away or come with chest pain, shortness of breath, or feeling faint or fainting. If those symptoms have stopped, ask for an urgent GP appointment or call 111.
+  funding_conflict: null
+  verified: true
+
+- id: nhs-postmenopausal-bleeding
+  title: Postmenopausal bleeding
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/conditions/post-menopausal-bleeding/
+  doi: null
+  accessed: "2026-11-06"
+  population: General public (UK)
+  key_finding: Any bleeding from the vagina after menopause should be checked by a GP, even a small amount or a single episode. It is not usually serious, but it can be a sign of cancer.
+  funding_conflict: null
+  verified: true
+
+- id: nhs-heavy-periods
+  title: Heavy periods
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/conditions/heavy-periods/
+  doi: null
+  accessed: "2026-11-06"
+  population: General public (UK)
+  key_finding: See a GP if heavy periods affect your life or have lasted some time, if you have severe pain during periods, bleed between periods or after sex, or have heavy periods with other symptoms such as pain when peeing, pooing or having sex.
+  funding_conflict: null
+  verified: true
+  notes: The page gives no emergency threshold for heavy bleeding (see unverified-claims.md).
+
+- id: lifeline-988
+  title: 988 Suicide & Crisis Lifeline
+  authors: []
+  publisher: 988 Lifeline
+  year: 2026
+  type: patient_information
+  url: https://988lifeline.org/
+  doi: null
+  accessed: "2026-11-06"
+  population: General public (US)
+  key_finding: Call, text or chat 988 for free, confidential support, 24/7/365.
+  funding_conflict: null
+  verified: true
+
+- id: samaritans-contact
+  title: Contact Samaritans
+  authors: []
+  publisher: Samaritans
+  year: 2026
+  type: patient_information
+  url: https://www.samaritans.org/how-we-can-help/contact-samaritan/
+  doi: null
+  accessed: "2026-11-06"
+  population: General public (UK and Ireland)
+  key_finding: Call 116 123 free from any phone, any time, day or night; the number does not appear on phone bills.
+  funding_conflict: null
+  verified: true

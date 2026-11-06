@@ -27,6 +27,12 @@ Each decision below is the sensible default chosen so work can continue. Anythin
 | D-021 | 2026-11-06 | **`CONTENT_ROOT` env override** points the content loader at another folder | Lets tests and previews use fixtures without putting fake pages in `content/`. Production never sets it | Decided |
 | D-022 | 2026-11-06 | **Approval is recorded by `npm run content:approve`**, which stamps a hash of the reviewable content (title, description, body, claims, grade, sources, FAQ, safety flags, audience limits). Any later change to those fields withholds the page until it is re-approved | Rule 4: "Changing medical content resets approval", enforced by the build rather than by memory | Decided |
 
+| D-023 | 2026-11-06 | **US English spelling in URLs and titles for launch** (`body-odor`, `moisturizers`), although the brief writes UK spellings | The brief says to launch US English first. UK pages come later through the locale model | Decided |
+| D-024 | 2026-11-06 | **13 inventory items merged; 158 URLs in the map** (`content/_plan/merge-log.md`) | The brief bans thin variations such as symptom-by-age pages. With no keyword data, each merge is editorial and should be revisited after import | **Owner**: review merges |
+| D-025 | 2026-11-06 | **Every Does-it-work page starts on the `diw_pending` CTA profile** (no commercial content). It moves to `diw_supported` or `diw_not_supported` only after its grade is set and reviewed | Rule 7: evidence before commission | Decided |
+| D-026 | 2026-11-06 | **CTA matrix "never" lists are encoded in code** (`src/lib/cta/profiles.ts`) as well as in `profiles.yaml` | A YAML edit can make a profile stricter, but can't quietly allow a banned combination; the build fails | Decided |
+| D-027 | 2026-11-06 | **The source registry holds only sources opened and checked on the access date** (17). The FTC guidance, the Truth in Advertising letters and the "IMS 2026 recommendations" are still to be checked (`content/_review/research-plan-checks.md`) | Rules 1 and 2 | Decided |
+
 ## Open questions for the owner
 
 1. Fill the placeholders: site name, domain, clinical reviewer name and credentials, email provider, legal entity and contact email (D-005).

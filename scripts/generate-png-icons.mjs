@@ -37,23 +37,28 @@ function encodePng(width, height, getPixel) {
   ihdrData.writeUInt32BE(width, 0);
   ihdrData.writeUInt32BE(height, 4);
   ihdrData.writeUInt8(8, 8); // 8-bit
-  ihdrData.writeUInt8(2, 9); // RGB
+  ihdrData.writeUInt8(6, 9); // RGBA (32-bit)
   ihdrData.writeUInt8(0, 10);
   ihdrData.writeUInt8(0, 11);
   ihdrData.writeUInt8(0, 12);
 
-  const rowSize = 1 + width * 3;
+  const rowSize = 1 + width * 4;
   const rawData = Buffer.alloc(rowSize * height);
 
   for (let y = 0; y < height; y++) {
     const rowOffset = y * rowSize;
     rawData[rowOffset] = 0;
     for (let x = 0; x < width; x++) {
-      const [r, g, b] = getPixel(x, y, width, height);
-      const pxOffset = rowOffset + 1 + x * 3;
+      const px = getPixel(x, y, width, height);
+      const r = px[0];
+      const g = px[1];
+      const b = px[2];
+      const a = px.length > 3 ? px[3] : 255;
+      const pxOffset = rowOffset + 1 + x * 4;
       rawData[pxOffset] = r;
       rawData[pxOffset + 1] = g;
       rawData[pxOffset + 2] = b;
+      rawData[pxOffset + 3] = a;
     }
   }
 
@@ -90,7 +95,7 @@ function markPixel(nx, ny, pad = 0.0) {
     const r = 0.18;
     const cx = u < r ? r : u > 1 - r ? 1 - r : u;
     const cy = v < r ? r : v > 1 - r ? 1 - r : v;
-    if (Math.hypot(u - cx, v - cy) > r) return BG_PAPER;
+    if (Math.hypot(u - cx, v - cy) > r) return [0, 0, 0, 0];
   }
 
   const stroke = 0.055;

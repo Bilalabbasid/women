@@ -31,7 +31,7 @@ Each decision below is the sensible default chosen so work can continue. Anythin
 | D-024 | 2026-11-06 | **13 inventory items merged; 158 URLs in the map** (`content/_plan/merge-log.md`) | The brief bans thin variations such as symptom-by-age pages. With no keyword data, each merge is editorial and should be revisited after import | **Owner**: review merges |
 | D-025 | 2026-11-06 | **Every Does-it-work page starts on the `diw_pending` CTA profile** (no commercial content). It moves to `diw_supported` or `diw_not_supported` only after its grade is set and reviewed | Rule 7: evidence before commission | Decided |
 | D-026 | 2026-11-06 | **CTA matrix "never" lists are encoded in code** (`src/lib/cta/profiles.ts`) as well as in `profiles.yaml` | A YAML edit can make a profile stricter, but can't quietly allow a banned combination; the build fails | Decided |
-| D-027 | 2026-11-06 | **The source registry holds only sources opened and checked on the access date** (17). The FTC guidance, the Truth in Advertising letters and the "IMS 2026 recommendations" are still to be checked (`content/_review/research-plan-checks.md`) | Rules 1 and 2 | Decided |
+| D-027 | 2026-11-06 | **The source registry holds only sources opened and checked on the access date** (19 at the end of Phase 3; corrected from a miscount of 17). The FTC guidance, the Truth in Advertising letters and the "IMS 2026 recommendations" are still to be checked (`content/_review/research-plan-checks.md`) | Rules 1 and 2 | Decided |
 
 ## Open questions for the owner
 

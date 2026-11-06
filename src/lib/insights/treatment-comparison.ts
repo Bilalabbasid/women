@@ -175,10 +175,10 @@ export const TreatmentComparisonEngine = {
       feelingTrend = 'insufficient_data';
     } else if (feelingDiff >= 0.4) {
       feelingTrend = 'higher';
-      feelingStatement = `Your average daily feeling score was ${afterFeelingAvg}/5 in the ${windowDays} days after this date, compared to ${beforeFeelingAvg}/5 prior.`;
+      feelingStatement = `Your average overall-feeling rating was ${afterFeelingAvg}/5 in the ${windowDays} days after this date, compared to ${beforeFeelingAvg}/5 prior.`;
     } else if (feelingDiff <= -0.4) {
       feelingTrend = 'lower';
-      feelingStatement = `Your average daily feeling score was ${afterFeelingAvg}/5 in the ${windowDays} days after this date, compared to ${beforeFeelingAvg}/5 prior.`;
+      feelingStatement = `Your average overall-feeling rating was ${afterFeelingAvg}/5 in the ${windowDays} days after this date, compared to ${beforeFeelingAvg}/5 prior.`;
     } else {
       feelingTrend = 'similar';
       feelingStatement = `Average feeling rating was steady (${afterFeelingAvg}/5 after vs ${beforeFeelingAvg}/5 before).`;

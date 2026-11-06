@@ -4,6 +4,7 @@ import { SITE } from '@/lib/site/config';
 import { APP_ROUTES } from '@/lib/routes';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { navHubs, getSiteData, CLUSTER_LABELS } from '@/lib/content/site-data';
+import { isToolLive } from '@/lib/tools/logic';
 
 export const metadata: Metadata = buildMetadata({
   title: `${SITE.name}: evidence-graded menopause information`,
@@ -18,6 +19,7 @@ export const metadata: Metadata = buildMetadata({
  */
 export default function HomePage() {
   const hubs = navHubs();
+  const trackerLive = isToolLive('symptom-tracker');
   const { pages } = getSiteData();
   const recent = [...pages]
     .filter((p) => p.fm.page_type !== 'legal')
@@ -71,6 +73,7 @@ export default function HomePage() {
         </section>
       )}
 
+      {trackerLive && (
       <section aria-labelledby="tools" className="space-y-3">
         <h2 id="tools" className="text-2xl">
           Free, private tools
@@ -98,6 +101,7 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+      )}
 
       {recent.length > 0 && (
         <section aria-labelledby="latest" className="space-y-3">

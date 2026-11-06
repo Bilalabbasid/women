@@ -18,6 +18,8 @@ import { publishProblems, isPublishable } from '../src/lib/content/gate';
 import { renderMarkdown } from '../src/lib/content/markdown';
 import { findBannedPhrases } from '../src/lib/content/banned-phrases';
 import { STATIC_PUBLIC_PATHS } from '../src/lib/content/site-data';
+import { loadToolLogic, toolApprovalProblems } from '../src/lib/tools/logic';
+import { URGENT_TRIGGERS } from '../src/lib/safety/urgent-triggers';
 import { Report } from './lib/report';
 
 const today = process.env.VALIDATE_TODAY ?? new Date().toISOString().slice(0, 10);
@@ -116,6 +118,23 @@ dupes((p) => p.fm.primary_keyword, 'primary keyword', true);
 dupes((p) => p.fm.title, 'title / H1');
 dupes((p) => p.fm.seo_title, 'SEO title');
 dupes((p) => p.fm.meta_description, 'meta description');
+
+// Tool logic files (content/_tools/): schema, code files, sources, triggers, approval.
+const { tools, errors: toolErrors } = loadToolLogic();
+for (const e of toolErrors) r.error('content/_tools', e);
+const triggerIds = new Set(URGENT_TRIGGERS.map((t) => t.id));
+for (const t of tools) {
+  for (const id of t.logic.sources) if (!store.sources.has(id)) r.error(t.file, `source "${id}" is not in the registry`);
+  for (const id of t.logic.urgent_triggers) if (!triggerIds.has(id)) r.error(t.file, `unknown urgent trigger "${id}"`);
+  const problems = toolApprovalProblems(t);
+  if (t.logic.status === 'clinician_approved') {
+    for (const p of problems) r.error(t.file, `marked clinician_approved but: ${p}`);
+    const rev = t.logic.reviewer ? store.people.get(t.logic.reviewer) : undefined;
+    if (!rev?.verified || !rev.roles.includes('clinical_reviewer')) r.error(t.file, `reviewer "${t.logic.reviewer}" is not a verified clinical reviewer`);
+  } else {
+    r.note(`tool "${t.logic.id}" logic is ${t.logic.status}: hidden in production until a clinician approves it`);
+  }
+}
 
 // Summary.
 const byStatus = new Map<string, number>();

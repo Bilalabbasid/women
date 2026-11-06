@@ -22,7 +22,8 @@
     "prebuild": "tsx scripts/validate-content.ts",
     "content:approve": "tsx scripts/approve-page.ts",
     "validate:plan": "tsx scripts/validate-plan.ts",
-    "plan:import": "tsx scripts/keyword-import.ts"
+    "plan:import": "tsx scripts/keyword-import.ts",
+    "tool:approve": "tsx scripts/approve-tool.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",

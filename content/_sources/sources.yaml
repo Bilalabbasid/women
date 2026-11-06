@@ -173,6 +173,21 @@
   verified: true
   notes: Overview page only. Open the specific recommendation before citing it.
 
+- id: nice-ng23-recommendations
+  title: "Menopause: identification and management (NG23), Recommendations"
+  authors: []
+  publisher: National Institute for Health and Care Excellence (UK)
+  year: 2026
+  type: guideline
+  url: https://www.nice.org.uk/guidance/ng23/chapter/Recommendations
+  doi: null
+  accessed: "2026-11-06"
+  population: Women, trans men and non-binary people registered female at birth with menopause-associated symptoms (UK)
+  key_finding: "1.2.2: besides changes in the menstrual cycle, symptoms may include vasomotor symptoms (hot flushes and sweats), genitourinary symptoms (for example vaginal dryness), effects on mood (for example depressive symptoms), musculoskeletal symptoms (for example joint and muscle pain) and sexual difficulties (for example low sexual desire), varying from minor to severe and over short or long periods. 1.3.1: in otherwise healthy people aged 45 or over, identify perimenopause without laboratory tests if vasomotor symptoms have recently started with any change in the menstrual cycle; menopause after 12 months without a period when not using hormonal contraception. 1.3.4: do not use AMH, inhibin A or B, oestradiol, antral follicle count or ovarian volume to identify perimenopause or menopause at 45 or over."
+  funding_conflict: null
+  verified: true
+  notes: Published 12 November 2015, last updated 15 April 2026. UK guidance; check US guidance before applying to US readers.
+
 # ---------------------------------------------------------------- Studies and surveys
 
 - id: jmir-online-menopause-information-2025

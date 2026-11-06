@@ -187,7 +187,7 @@ export default function InsightsPage() {
                             Avg Sev: {sym.averageSeverity}/5
                           </span>
                           <span className="text-[#68615C]">
-                            {sym.count} {sym.count === 1 ? 'day' : 'days'} ({sym.frequencyPercent}%)
+                            {sym.count} {sym.count === 1 ? 'entry' : 'entries'} ({sym.frequencyPercent}% of entries)
                           </span>
                         </div>
                       </div>

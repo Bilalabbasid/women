@@ -1,17 +1,20 @@
 import type { MetadataRoute } from 'next';
 import { SITE } from '@/lib/site/config';
 import { APP_ROUTES } from '@/lib/routes';
+import { isToolLive } from '@/lib/tools/logic';
 
 export const dynamic = 'force-static';
 
 /** Web app manifest. The installed app opens the private tracker. */
 export default function manifest(): MetadataRoute.Manifest {
+  // Until the tracker is approved for production, the installed app opens the home page.
+  const start = isToolLive('symptom-tracker') ? APP_ROUTES.today : '/';
   return {
-    id: APP_ROUTES.today,
+    id: '/',
     name: `${SITE.name}: symptom tracker`,
     short_name: SITE.name,
     description: 'A private symptom tracker for perimenopause and menopause. Entries stay on your device.',
-    start_url: APP_ROUTES.today,
+    start_url: start,
     scope: '/',
     display: 'standalone',
     orientation: 'portrait',

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { SiteHeader, SiteFooter } from '@/components/site/site-chrome';
 import { navHubs } from '@/lib/content/site-data';
 import { APP_ROUTES } from '@/lib/routes';
+import { isToolLive } from '@/lib/tools/logic';
 
 export const metadata: Metadata = {
   title: 'Page not found',
@@ -46,11 +47,13 @@ export default function NotFound() {
               Tools
             </Link>
           </li>
+          {isToolLive('symptom-tracker') && (
           <li>
             <Link href={APP_ROUTES.today} className="tap text-[var(--color-link)] underline">
               Your private symptom tracker
             </Link>
           </li>
+          )}
           <li>
             <Link href="/urgent-help/" className="tap font-semibold text-[var(--color-urgent)] underline">
               Urgent help and crisis lines

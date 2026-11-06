@@ -10,6 +10,8 @@ export interface LocalCheckin {
   date: string; // YYYY-MM-DD
   timestamp: number;
   overallFeeling: OverallFeelingLevel;
+  /** 1 = this day only (default); 7 = a weekly entry summarising the past 7 days. */
+  coversDays?: 1 | 7;
   notes?: string;
   sleepHours?: number;
   sleepQuality?: 1 | 2 | 3 | 4 | 5;

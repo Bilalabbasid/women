@@ -5,6 +5,7 @@ import { buildMetadata } from '@/lib/seo/metadata';
 import { getSiteData } from '@/lib/content/site-data';
 import { webApplicationLd, breadcrumbLd } from '@/lib/seo/jsonld';
 import { JsonLd, Breadcrumbs } from '@/components/site/site-chrome';
+import { isToolLive } from '@/lib/tools/logic';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Free menopause tools: symptom tracker and doctor report',
@@ -21,6 +22,7 @@ export const metadata: Metadata = buildMetadata({
 export default function ToolsHub() {
   const { pages } = getSiteData();
   const toolGuides = pages.filter((p) => p.fm.page_type === 'tool');
+  const trackerLive = isToolLive('symptom-tracker');
   const crumbs = [
     { name: 'Home', path: '/', linked: true },
     { name: 'Tools', path: '/tools/', linked: false },
@@ -31,11 +33,11 @@ export default function ToolsHub() {
       <JsonLd
         data={[
           breadcrumbLd(crumbs),
-          webApplicationLd({
+          ...(trackerLive ? [webApplicationLd({
             name: 'Symptom tracker and doctor report',
             path: APP_ROUTES.today,
             description: 'Private symptom log that stays on your device, with a printable summary for appointments.',
-          }),
+          })] : []),
         ]}
       />
       <Breadcrumbs crumbs={crumbs} />
@@ -47,6 +49,7 @@ export default function ToolsHub() {
         </p>
       </header>
 
+      {trackerLive && (
       <section aria-labelledby="tracker" className="space-y-3 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-5">
         <h2 id="tracker" className="text-2xl">
           Symptom tracker and doctor report
@@ -79,6 +82,11 @@ export default function ToolsHub() {
           </Link>
         </p>
       </section>
+      )}
+
+      {!trackerLive && toolGuides.length === 0 && (
+        <p>Our tools are being reviewed by a clinician before they go live.</p>
+      )}
 
       {toolGuides.length > 0 && (
         <section aria-labelledby="guides" className="space-y-2">

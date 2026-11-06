@@ -1,303 +1,269 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import {
-  Printer,
-  HelpCircle,
-  CheckCircle2,
-  Trash2,
-} from 'lucide-react';
+import React, { useEffect, useMemo, useState } from 'react';
+import { Printer, Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { AppHeader } from '@/components/app/app-header';
 import { LocalDataService } from '@/lib/db/service';
-import { LocalTreatment, LocalCheckin, LocalSymptomEntry } from '@/lib/db/schema';
+import type { LocalTreatment, LocalCheckin, LocalSymptomEntry } from '@/lib/db/schema';
 import { DOCTOR_QUESTION_STARTERS } from '@/lib/config/doctor-questions';
-import { InsightsEngine, SymptomStats, SleepStats, HotFlashStats } from '@/lib/insights/calculations';
+import { buildDoctorReport } from '@/lib/tools/doctor-report';
+import { markToolUsed } from '@/lib/pwa/install-gate';
 
-export default function DoctorModePage() {
-  const [reportWindow, setReportWindow] = useState<'30' | '60' | '90'>('30');
+const WINDOWS = [14, 30, 60, 90] as const;
+const QUESTIONS_KEY = 'doctor_report_questions';
+
+const fmt = (iso: string) =>
+  new Date(`${iso}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+
+/**
+ * One-page doctor report. Everything is computed on the device from her own
+ * entries (src/lib/tools/doctor-report.ts) and printed by the browser. Nothing
+ * is uploaded. Logic is described for clinical review in content/_tools/symptom-tracker.yaml.
+ */
+export default function DoctorReportPage() {
+  const [windowDays, setWindowDays] = useState<(typeof WINDOWS)[number]>(30);
   const [treatments, setTreatments] = useState<LocalTreatment[]>([]);
   const [checkins, setCheckins] = useState<Array<LocalCheckin & { symptoms: LocalSymptomEntry[] }>>([]);
-  const [symptomStats, setSymptomStats] = useState<SymptomStats[]>([]);
-  const [sleepStats, setSleepStats] = useState<SleepStats | null>(null);
-  const [hotFlashStats, setHotFlashStats] = useState<HotFlashStats | null>(null);
-
-  const [customQuestion, setCustomQuestion] = useState('');
   const [questions, setQuestions] = useState<string[]>([]);
+  const [customQuestion, setCustomQuestion] = useState('');
 
   useEffect(() => {
-    async function loadReport() {
-      const days = parseInt(reportWindow, 10);
-      const end = new Date().toISOString().split('T')[0];
-      const start = new Date(Date.now() - days * 86400000).toISOString().split('T')[0];
+    LocalDataService.getSetting<string[]>(QUESTIONS_KEY, []).then(setQuestions);
+  }, []);
 
-      const trts = await LocalDataService.getTreatments(true);
-      setTreatments(trts);
+  useEffect(() => {
+    const end = new Date().toISOString().slice(0, 10);
+    const start = new Date(Date.now() - (windowDays - 1) * 86_400_000).toISOString().slice(0, 10);
+    Promise.all([LocalDataService.getTreatments(true), LocalDataService.getCheckinsForRange(start, end)]).then(([t, c]) => {
+      setTreatments(t);
+      setCheckins(c);
+    });
+  }, [windowDays]);
 
-      const chks = await LocalDataService.getCheckinsForRange(start, end);
-      setCheckins(chks);
+  const report = useMemo(() => buildDoctorReport(checkins, treatments, windowDays), [checkins, treatments, windowDays]);
 
-      if (chks.length > 0) {
-        const allSyms = chks.flatMap((c) => c.symptoms);
-        setSymptomStats(InsightsEngine.calculateSymptomStats(chks, allSyms));
-        setSleepStats(InsightsEngine.calculateSleepStats(chks));
-        setHotFlashStats(InsightsEngine.calculateHotFlashStats(chks));
-      } else {
-        setSymptomStats([]);
-        setSleepStats(null);
-        setHotFlashStats(null);
-      }
-    }
-    loadReport();
-  }, [reportWindow]);
-
+  const saveQuestions = (next: string[]) => {
+    setQuestions(next);
+    void LocalDataService.setSetting(QUESTIONS_KEY, next);
+  };
   const addQuestion = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!customQuestion.trim()) return;
-    setQuestions((q) => [...q, customQuestion.trim()]);
+    const q = customQuestion.trim();
+    if (!q) return;
+    saveQuestions([...questions, q]);
     setCustomQuestion('');
   };
 
-  const addStarter = (q: string) => {
-    setQuestions((prev) => (prev.includes(q) ? prev : [...prev, q]));
+  const print = () => {
+    markToolUsed();
+    window.print();
   };
-
-  const removeQuestion = (idx: number) => {
-    setQuestions((q) => q.filter((_, i) => i !== idx));
-  };
-
-  const handlePrint = () => {
-    if (typeof window !== 'undefined') {
-      window.print();
-    }
-  };
-
-  const todayFormatted = new Date().toLocaleDateString('en-US', {
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric',
-  });
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <AppHeader
-        title="Doctor Mode"
-        subtitle="Prepare concise appointment summaries"
-        showPrivacyBadge={true}
-        showSettings={true}
-      />
+    <div className="flex min-h-screen flex-col">
+      <AppHeader title="Doctor report" subtitle="A one-page summary to print or save as PDF" showPrivacyBadge showSettings />
 
-      <div className="flex-1 max-w-2xl mx-auto w-full px-4 py-5 space-y-6">
-        {/* Intro Card */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-4 rounded-2xl border border-[#E5DED5]">
-          <div>
-            <h2 className="font-serif font-semibold text-base text-[#231F1D]">
-              Prepare for Your Clinician Visit
-            </h2>
-            <p className="text-xs text-[#68615C] mt-0.5">
-              Clinicians have 15 minutes. This dossier summarizes your self-reported history at a glance.
-            </p>
-          </div>
-
-          <div className="flex items-center gap-2 shrink-0">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={handlePrint}
-              className="gap-1.5 text-xs min-h-[44px]"
-            >
-              <Printer className="w-3.5 h-3.5" />
-              <span>Print / Save PDF</span>
-            </Button>
-          </div>
-        </div>
-
-        {/* Window Selector */}
-        <div className="flex items-center justify-between gap-2">
-          <span className="text-xs font-semibold text-[#68615C]">
-            Reporting Period ({checkins.length} {checkins.length === 1 ? 'day' : 'days'} logged):
-          </span>
-          <div className="flex items-center gap-1.5 bg-white p-1 rounded-xl border border-[#E5DED5]">
-            {(['30', '60', '90'] as const).map((days) => (
+      <div className="mx-auto w-full max-w-2xl flex-1 space-y-6 px-4 py-5 print:max-w-none print:p-0">
+        <div className="no-print space-y-3">
+          <p className="text-[#3E3834]">
+            This summary uses only what you logged. Choose a period, add your questions, then print it or save it as a
+            PDF to take to your appointment.
+          </p>
+          <fieldset className="flex flex-wrap items-center gap-2">
+            <legend className="mb-1 font-semibold text-[#231F1D]">Period</legend>
+            {WINDOWS.map((d) => (
               <button
-                key={days}
-                onClick={() => setReportWindow(days)}
-                className={`px-3 py-1 rounded-lg text-xs font-semibold transition ${
-                  reportWindow === days
-                    ? 'bg-[#965342] text-white shadow-xs'
-                    : 'text-[#68615C] hover:text-[#231F1D]'
+                key={d}
+                type="button"
+                aria-pressed={windowDays === d}
+                onClick={() => setWindowDays(d)}
+                className={`min-h-[44px] rounded-xl border px-4 font-semibold ${
+                  windowDays === d ? 'border-[#1f5a4c] bg-[#1f5a4c] text-white' : 'border-[#D9D1C7] bg-white text-[#3E3834]'
                 }`}
               >
-                Past {days} Days
+                Past {d} days
               </button>
             ))}
-          </div>
+          </fieldset>
+          <Button variant="outline" onClick={print} className="gap-2">
+            <Printer className="h-4 w-4" aria-hidden="true" />
+            Print or save as PDF
+          </Button>
         </div>
 
-        {/* The Printable Dossier Container */}
-        <div className="bg-white rounded-3xl border-2 border-[#D9D1C7] p-5 sm:p-7 space-y-6 shadow-sm print:border-none print:shadow-none print:p-0">
-          {/* Header of Report */}
-          <div className="border-b border-[#E5DED5] pb-4 space-y-1">
-            <div className="flex items-center justify-between">
-              <Badge variant="outline" className="text-xs uppercase tracking-wider font-semibold">
-                Patient-Generated Health Summary
-              </Badge>
-              <span className="text-xs text-[#68615C]">
-                Generated: {todayFormatted}
-              </span>
-            </div>
-            <h3 className="font-serif font-bold text-xl text-[#231F1D] pt-1">
-              Midlife & Menopause Symptom Log
-            </h3>
-            <p className="text-xs text-[#68615C]">
-              Self-reported longitudinal log for clinical review • Period: Past {reportWindow} Days ({checkins.length} check-ins)
+        {/* The printable page */}
+        <article
+          aria-label="Doctor report"
+          className="space-y-4 rounded-2xl border-2 border-[#D9D1C7] bg-white p-5 text-[#231F1D] print:rounded-none print:border-0 print:p-0 print:text-[11pt]"
+        >
+          <header className="space-y-1 border-b border-[#E5DED5] pb-3">
+            <p className="text-xs font-semibold uppercase tracking-wide text-[#5C554F]">Patient-recorded symptom summary</p>
+            <h2 className="font-serif text-xl font-bold">Menopause symptom log</h2>
+            <p className="text-xs text-[#3E3834]">
+              {fmt(report.startDate)} to {fmt(report.endDate)} · {report.entries} {report.entries === 1 ? 'entry' : 'entries'}
+              {report.weeklyEntries > 0 && ` (${report.dailyEntries} daily, ${report.weeklyEntries} weekly)`} covering{' '}
+              {report.daysCovered} of {report.windowDays} days · Printed {fmt(new Date().toISOString().slice(0, 10))}
             </p>
-          </div>
+            <p className="text-xs text-[#3E3834]">
+              Recorded by me on my own device. Ratings are my own (1 = mild, 5 = severe); this is not a
+              validated scale and not a diagnosis.
+            </p>
+          </header>
 
-          {/* Clinician Medical Disclaimer */}
-          <div className="bg-[#FAF8F5] p-3 rounded-xl border border-[#EBE3D8] text-xs text-[#68615C] leading-relaxed">
-            <strong>Clinical Notice:</strong> This summary was compiled client-side by the patient from their private local records for discussion during consultation. It does not constitute a diagnostic determination or therapeutic recommendation.
-          </div>
-
-          {/* Section 1: Active Treatments */}
-          <div className="space-y-2">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#231F1D]">
-              1. Current Regimens as Recorded ({treatments.length})
-            </h4>
-            {treatments.length === 0 ? (
-              <p className="text-xs text-[#5C554F] italic bg-[#FAF8F5] p-3 rounded-xl border border-[#E5DED5]">
-                No active treatments recorded in local app.
-              </p>
-            ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                {treatments.map((t) => (
-                  <div key={t.id} className="p-2.5 rounded-lg border border-[#E5DED5] bg-[#FAF8F5]">
-                    <p className="font-semibold text-[#231F1D]">{t.name}</p>
-                    <p className="text-[#68615C]">
-                      {t.dosage ? `${t.dosage} • ` : ''}{t.frequency}
-                      {t.startDate ? ` • Started ${t.startDate}` : ''}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Section 2: Symptom Frequencies */}
-          <div className="space-y-2">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#231F1D]">
-              2. Reported Symptom Burden (Past {reportWindow} Days)
-            </h4>
-
-            {checkins.length === 0 ? (
-              <p className="text-xs text-[#5C554F] italic bg-[#FAF8F5] p-3 rounded-xl border border-[#E5DED5]">
-                No check-ins recorded during this {reportWindow}-day window.
-              </p>
-            ) : (
-              <div className="space-y-1.5 text-xs text-[#3E3834]">
-                {hotFlashStats && (
-                  <div className="flex justify-between py-1.5 border-b border-[#F0EBE3]">
-                    <span>• Vasomotor (Hot Flashes / Flushes)</span>
-                    <span className="font-semibold">
-                      {hotFlashStats.dailyAverage}/day avg ({hotFlashStats.totalRecorded} total recorded)
-                    </span>
-                  </div>
+          {report.entries === 0 ? (
+            <p className="italic text-[#3E3834]">No entries in this period.</p>
+          ) : (
+            <>
+              <section aria-labelledby="r-symptoms" className="space-y-1">
+                <h3 id="r-symptoms" className="text-base font-bold">
+                  Symptoms, most frequent first
+                </h3>
+                {report.symptoms.length === 0 ? (
+                  <p className="text-xs">No symptoms logged.</p>
+                ) : (
+                  <table className="w-full text-left text-xs">
+                    <thead>
+                      <tr className="border-b border-[#E5DED5]">
+                        <th className="py-1 font-semibold">Symptom</th>
+                        <th className="py-1 font-semibold">Entries</th>
+                        <th className="py-1 font-semibold">Average rating</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {report.symptoms.map((s) => (
+                        <tr key={s.symptomId} className="border-b border-[#F0EBE3]">
+                          <td className="py-1">{s.name}</td>
+                          <td className="py-1">
+                            {s.count} of {report.entries} ({s.frequencyPercent}%)
+                          </td>
+                          <td className="py-1">{s.averageSeverity} / 5</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 )}
+              </section>
 
-                {sleepStats && (
-                  <div className="flex justify-between py-1.5 border-b border-[#F0EBE3]">
-                    <span>• Sleep Recovery</span>
-                    <span className="font-semibold">
-                      {sleepStats.averageHours} hrs/night avg (Night waking on {sleepStats.nightsWokeAtNight} of {checkins.length} nights)
-                    </span>
-                  </div>
-                )}
+              <section aria-labelledby="r-body" className="grid gap-x-6 gap-y-1 text-xs sm:grid-cols-2 print:grid-cols-2">
+                <h3 id="r-body" className="text-base font-bold sm:col-span-2 print:col-span-2">
+                  Hot flashes, sleep and bleeding
+                </h3>
+                <p>
+                  <strong>Hot flashes:</strong>{' '}
+                  {report.hotFlashes
+                    ? `${report.hotFlashes.perDay} a day on average (${report.hotFlashes.total} logged${
+                        report.hotFlashes.maxInOneDay !== null ? `; most in one day: ${report.hotFlashes.maxInOneDay}` : ''
+                      })`
+                    : 'not logged'}
+                </p>
+                <p>
+                  <strong>Sleep:</strong>{' '}
+                  {report.sleep
+                    ? `${report.sleep.averageHours} hours a night on average${
+                        report.sleep.dailyEntries > 0
+                          ? `; woke at night on ${report.sleep.nightsWithWaking} of ${report.sleep.dailyEntries} daily entries`
+                          : ''
+                      }`
+                    : 'not logged'}
+                </p>
+                <p>
+                  <strong>Bleeding:</strong>{' '}
+                  {report.bleeding.entries === 0
+                    ? 'none logged'
+                    : `${report.bleeding.entries} ${report.bleeding.entries === 1 ? 'entry' : 'entries'}, heaviest: ${report.bleeding.heaviest}`}
+                  {report.bleeding.dates.length > 0 && ` (${report.bleeding.dates.map(fmt).join(', ')})`}
+                </p>
+                <p>
+                  <strong>Overall feeling:</strong>{' '}
+                  {report.feelingAverage !== null ? `${report.feelingAverage} / 5 on average (my own rating)` : 'not logged'}
+                </p>
+              </section>
+            </>
+          )}
 
-                {symptomStats.slice(0, 4).map((sym) => (
-                  <div key={sym.symptomId} className="flex justify-between py-1.5 border-b border-[#F0EBE3]">
-                    <span>• {sym.name}</span>
-                    <span className="font-semibold">
-                      {sym.count} of {checkins.length} days ({sym.frequencyPercent}%) • Avg Severity: {sym.averageSeverity}/5
-                    </span>
-                  </div>
+          <section aria-labelledby="r-treatments" className="space-y-1 text-xs">
+            <h3 id="r-treatments" className="text-base font-bold">
+              Current treatments, as I recorded them
+            </h3>
+            {report.treatments.length === 0 ? (
+              <p>None recorded.</p>
+            ) : (
+              <ul className="list-disc pl-5">
+                {report.treatments.map((t) => (
+                  <li key={t.id}>
+                    {t.name}
+                    {t.dosage ? `, ${t.dosage}` : ''}
+                    {t.frequency ? `, ${t.frequency}` : ''}
+                    {t.startDate ? `, since ${fmt(t.startDate)}` : ''}
+                  </li>
                 ))}
-              </div>
+              </ul>
             )}
-          </div>
+          </section>
 
-          {/* Section 3: Questions for My Doctor */}
-          <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#231F1D] flex items-center gap-1.5">
-              <HelpCircle className="w-3.5 h-3.5 text-[#965342]" />
-              3. Questions to Discuss with Healthcare Provider
-            </h4>
-
-            <ul className="space-y-2 text-xs">
-              {questions.map((q, idx) => (
-                <li
-                  key={idx}
-                  className="p-3 rounded-xl bg-[#F7EFEA] border border-[#EAD0C2] text-[#231F1D] flex items-start justify-between gap-2"
-                >
-                  <div className="flex items-start gap-2">
-                    <span className="font-bold text-[#965342]">{idx + 1}.</span>
-                    <span className="leading-relaxed">{q}</span>
-                  </div>
-                  <button
-                    onClick={() => removeQuestion(idx)}
-                    className="text-[#5C554F] hover:text-[#A33A33] p-1 print:hidden"
-                    title="Remove question"
-                    aria-label="Remove question"
-                  >
-                    <Trash2 className="w-3.5 h-3.5" />
-                  </button>
-                </li>
-              ))}
-            </ul>
-
-            {questions.length === 0 && (
-              <p className="text-xs text-[#554E48] print:hidden">
-                No questions yet. Add your own below, or tap a starter to add it.
-              </p>
+          <section aria-labelledby="r-questions" className="space-y-2 text-xs">
+            <h3 id="r-questions" className="text-base font-bold">
+              My questions
+            </h3>
+            {questions.length === 0 ? (
+              <p className="italic">No questions added.</p>
+            ) : (
+              <ol className="list-decimal space-y-1 pl-5">
+                {questions.map((q, i) => (
+                  <li key={`${i}-${q}`} className="pr-2">
+                    <span>{q}</span>
+                    <button
+                      type="button"
+                      onClick={() => saveQuestions(questions.filter((_, j) => j !== i))}
+                      aria-label={`Remove question ${i + 1}`}
+                      className="no-print ml-2 inline-flex min-h-[44px] min-w-[44px] items-center justify-center align-middle text-[#5C554F] hover:text-[#8A1F1F]"
+                    >
+                      <Trash2 className="h-4 w-4" aria-hidden="true" />
+                    </button>
+                  </li>
+                ))}
+              </ol>
             )}
+          </section>
+        </article>
 
-            {/* Optional neutral starters: never pre-filled (DECISIONS.md D-006) */}
-            <div className="flex flex-wrap gap-2 print:hidden" aria-label="Question starters">
-              {DOCTOR_QUESTION_STARTERS.filter((q) => !questions.includes(q)).map((q) => (
+        <section aria-labelledby="add-q" className="no-print space-y-3">
+          <h2 id="add-q" className="font-serif text-lg font-semibold">
+            Add questions
+          </h2>
+          <form onSubmit={addQuestion} className="flex gap-2">
+            <label htmlFor="custom-question" className="sr-only">
+              Your question
+            </label>
+            <input
+              id="custom-question"
+              type="text"
+              value={customQuestion}
+              onChange={(e) => setCustomQuestion(e.target.value)}
+              placeholder="Type a question for your clinician"
+              className="min-h-[44px] flex-1 rounded-xl border border-[#D9D1C7] bg-white px-3"
+            />
+            <Button type="submit" variant="secondary">
+              Add
+            </Button>
+          </form>
+          <p className="text-[#3E3834]">Or tap a starter to add it:</p>
+          <ul className="flex flex-wrap gap-2">
+            {DOCTOR_QUESTION_STARTERS.filter((q) => !questions.includes(q)).map((q) => (
+              <li key={q}>
                 <button
-                  key={q}
                   type="button"
-                  onClick={() => addStarter(q)}
-                  className="text-left text-xs px-3 py-2 min-h-[44px] rounded-xl border border-[#D9D1C7] bg-white text-[#3E3834] hover:border-[#965342] focus-visible:outline-2 focus-visible:outline-offset-2"
+                  onClick={() => saveQuestions([...questions, q])}
+                  className="min-h-[44px] rounded-xl border border-[#D9D1C7] bg-white px-3 py-2 text-left text-xs text-[#3E3834] hover:border-[#1f5a4c]"
                 >
                   + {q}
                 </button>
-              ))}
-            </div>
-
-            {/* Add question form */}
-            <form onSubmit={addQuestion} className="flex gap-2 print:hidden pt-1">
-              <label htmlFor="custom-question" className="sr-only">Your question</label>
-              <input
-                id="custom-question"
-                type="text"
-                value={customQuestion}
-                onChange={(e) => setCustomQuestion(e.target.value)}
-                placeholder="Add a question you'd like to ask your clinician..."
-                className="flex-1 px-3 py-2 text-xs rounded-xl border border-[#E5DED5] bg-white focus:outline-none focus:border-[#965342]"
-              />
-              <Button type="submit" size="sm" variant="secondary" className="text-xs">
-                Add
-              </Button>
-            </form>
-          </div>
-        </div>
-
-        {/* Client-side privacy statement */}
-        <p className="text-center text-xs text-[#5C554F] flex items-center justify-center gap-1.5 pb-6">
-          <CheckCircle2 className="w-3.5 h-3.5 text-[#2C6E49]" />
-          Generated 100% in your browser • Zero server transmission
-        </p>
+              </li>
+            ))}
+          </ul>
+          <p className="text-xs text-[#5C554F]">Your questions are saved on this device only.</p>
+        </section>
       </div>
     </div>
   );

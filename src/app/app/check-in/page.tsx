@@ -37,6 +37,8 @@ export default function CheckinPage() {
   const [selectedDate, setSelectedDate] = useState<string>(todayStr);
   const [overallFeeling, setOverallFeeling] = useState<1 | 2 | 3 | 4 | 5>(3);
   const [journalText, setJournalText] = useState('');
+  const [coversDays, setCoversDays] = useState<1 | 7>(1);
+  const weekly = coversDays === 7;
   const [sleepHours, setSleepHours] = useState<number>(7);
   const [wokeAtNight, setWokeAtNight] = useState<boolean>(false);
   const [hotFlashCount, setHotFlashCount] = useState<number>(0);
@@ -85,6 +87,7 @@ export default function CheckinPage() {
       const existing = await LocalDataService.getCheckinByDate(selectedDate);
       if (existing) {
         setOverallFeeling(existing.overallFeeling);
+        setCoversDays(existing.coversDays === 7 ? 7 : 1);
         if (existing.notes) setJournalText(existing.notes);
         if (existing.sleepHours) setSleepHours(existing.sleepHours);
         if (typeof existing.wokeAtNight === 'boolean') setWokeAtNight(existing.wokeAtNight);
@@ -147,8 +150,10 @@ export default function CheckinPage() {
       date: selectedDate,
       overallFeeling,
       notes: journalText.trim() || undefined,
+      coversDays,
       sleepHours,
-      wokeAtNight,
+      // Night waking is a per-night answer, recorded on daily entries only.
+      wokeAtNight: weekly ? undefined : wokeAtNight,
       hotFlashCount,
       flow,
       lifestyle: { caffeine, alcohol, exercise },
@@ -212,6 +217,43 @@ export default function CheckinPage() {
           />
         </div>
 
+        {/* Daily or weekly entry */}
+        <fieldset className="bg-white p-3 rounded-2xl border border-[#E5DED5] space-y-2">
+          <legend className="sr-only">This entry covers</legend>
+          <p className="text-xs font-semibold text-[#5C554F]" aria-hidden="true">
+            This entry covers
+          </p>
+          <div className="grid grid-cols-2 gap-2">
+            {([
+              [1, 'This day'],
+              [7, 'The past 7 days'],
+            ] as const).map(([value, label]) => (
+              <label
+                key={value}
+                className={`min-h-[44px] flex items-center justify-center gap-2 rounded-xl border px-3 text-xs font-semibold cursor-pointer ${
+                  coversDays === value ? 'bg-[#1f5a4c] border-[#1f5a4c] text-white' : 'bg-[#FAF8F5] border-[#E5DED5] text-[#3E3834]'
+                }`}
+              >
+                <input
+                  type="radio"
+                  name="covers"
+                  value={value}
+                  checked={coversDays === value}
+                  onChange={() => setCoversDays(value)}
+                  className="sr-only"
+                />
+                {label}
+              </label>
+            ))}
+          </div>
+          {weekly && (
+            <p className="text-xs text-[#3E3834]">
+              A weekly entry summarizes the 7 days ending on the date above. Enter average sleep per night and the
+              total number of hot flashes for the week.
+            </p>
+          )}
+        </fieldset>
+
         {/* Section 1: How are you feeling today? */}
         <section className="space-y-2">
           <div className="flex items-center justify-between">
@@ -252,7 +294,7 @@ export default function CheckinPage() {
             <div className="flex items-center justify-between">
               <span className="text-xs font-semibold text-[#231F1D] flex items-center gap-1.5">
                 <Moon className="w-4 h-4 text-[#577060]" />
-                Sleep Duration
+                {weekly ? "Average sleep per night" : "Sleep duration"}
               </span>
               <span className="text-xs font-bold text-[#965342]">{sleepHours} hrs</span>
             </div>
@@ -285,8 +327,10 @@ export default function CheckinPage() {
               </Button>
             </div>
 
+            {!weekly && (
             <button
               type="button"
+              aria-pressed={wokeAtNight}
               onClick={() => setWokeAtNight(!wokeAtNight)}
               className={`w-full text-xs py-2 px-2.5 rounded-xl border flex items-center justify-center gap-1.5 transition ${
                 wokeAtNight
@@ -297,6 +341,7 @@ export default function CheckinPage() {
               <Clock className="w-3.5 h-3.5" />
               <span>{wokeAtNight ? 'Woke during night (2–4 AM)' : 'Slept through the night'}</span>
             </button>
+            )}
           </Card>
 
           {/* Hot Flash Counter */}
@@ -304,7 +349,7 @@ export default function CheckinPage() {
             <div className="flex items-center justify-between">
               <span className="text-xs font-semibold text-[#231F1D] flex items-center gap-1.5">
                 <Flame className="w-4 h-4 text-[#965342]" />
-                Hot Flashes Today
+                {weekly ? "Hot flashes this week" : "Hot flashes today"}
               </span>
               <span className="text-xs font-bold text-[#965342]">{hotFlashCount} total</span>
             </div>

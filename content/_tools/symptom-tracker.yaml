@@ -1,0 +1,76 @@
+# Tool logic: symptom tracker and doctor report.
+# Clinician review covers this description AND the code files listed under `code`.
+# Approval is stamped with `npm run tool:approve -- symptom-tracker --reviewer <id>` after a real review.
+# Any change to this file's content or to the listed code resets approval (hash mismatch).
+
+id: symptom-tracker
+name: Symptom tracker and doctor report
+guide_url: /tools/symptom-tracker/
+app_paths: [/app/]
+
+status: draft
+reviewer: null
+reviewed_at: null
+approved_hash: null
+
+code:
+  - src/lib/insights/calculations.ts
+  - src/lib/insights/treatment-comparison.ts
+  - src/lib/safety/urgent-triggers.ts
+  - src/lib/config/symptoms.ts
+  - src/lib/config/doctor-questions.ts
+  - src/app/app/check-in/page.tsx
+  - src/app/app/doctor-report/page.tsx
+  - src/lib/tools/doctor-report.ts
+
+purpose: >-
+  A private log that helps her notice patterns over weeks and take a clear,
+  one-page summary to an appointment. Monitoring only. It never diagnoses,
+  stages, scores or recommends treatment.
+
+inputs:
+  - Entry date, and whether the entry covers one day or the past 7 days
+  - Overall feeling, 1 (rough) to 5 (great), her own rating
+  - Sleep hours (average per night for a weekly entry) and whether she woke at night
+  - Number of hot flashes (for that day, or in total for the week)
+  - Bleeding that day or week (none, spotting, light, medium, heavy)
+  - Symptoms from a fixed custom list, plus her own custom symptoms, each rated 1 (mild) to 5 (severe)
+  - Optional lifestyle notes (caffeine, alcohol, exercise) and free-text notes
+  - Treatments she enters herself (name, type, the dose she was prescribed, schedule) and events (taken, applied, changed, skipped, snoozed)
+
+computes:
+  - "Per symptom: number of entries that include it, the share of entries (%), and the average of her severity ratings"
+  - "Sleep: average hours per night, weighted by the days each entry covers; share of daily entries with night waking"
+  - "Hot flashes: total, average per day (total divided by days covered), most in a single day (daily entries only)"
+  - "Window comparison: change in hot flashes per day and in average sleep between the selected period and the one before, as a percentage"
+  - "Treatment timeline: her ratings in the days before and after a treatment event she logged, described as co-occurrence only"
+
+shows:
+  - Timeline of entries, editable and deletable
+  - Insights screen with the figures above and a note that patterns are associations, not causes
+  - "Doctor report: a printable one-page summary (period covered, entries, symptoms by frequency and severity, sleep, hot flashes, bleeding entries, her treatments as she entered them, and her own questions)"
+  - Urgent guidance on the check-in screen when an urgent trigger applies (see urgent_triggers)
+
+never:
+  - Diagnose, or say she is in perimenopause, menopause or any stage
+  - Produce a score on a validated scale (MRS, Greene, MENQOL) or compare her to norms
+  - Recommend, start, stop or change a treatment or a dose
+  - Say a treatment caused a change in symptoms
+  - Pre-fill symptoms, questions or treatments she didn't enter
+  - Show commercial content or affiliate links anywhere in the tracker
+  - Send any entry off the device
+
+limits:
+  - Self-reported data; ratings are personal and not comparable between people
+  - Gaps in logging change averages; the report states how many entries and days it covers
+  - Weekly entries are her summary of the week and are less precise than daily entries
+  - Patterns between treatments and symptoms are co-occurrence; many factors affect symptoms
+  - Urgent guidance depends on what she logs; it can't assess her
+
+urgent_triggers: [self_harm_thoughts, palpitations_red_flags, bleeding_after_menopause, heavy_or_unusual_bleeding]
+sources: [nice-ng23-recommendations]
+
+privacy: >-
+  All entries are stored in IndexedDB in her browser on this device. Nothing is
+  sent to a server, analytics or partners. She can export everything as a JSON
+  file and delete everything from the Privacy screen.

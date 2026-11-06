@@ -7,7 +7,7 @@ import Link from 'next/link';
  */
 export function MedicalDisclaimerBanner() {
   return (
-    <aside aria-label="Medical notice" className="border-b border-[#E6DFD5] bg-[#F6F3EE] px-4 py-1.5 text-[#3E3834]">
+    <aside aria-label="Medical notice" className="no-print border-b border-[#E6DFD5] bg-[#F6F3EE] px-4 py-1.5 text-[#3E3834]">
       <p className="mx-auto max-w-2xl text-xs">
         A personal log, not a diagnosis or treatment advice.{' '}
         <Link href="/urgent-help/" className="font-semibold text-[#8A1F1F] underline">

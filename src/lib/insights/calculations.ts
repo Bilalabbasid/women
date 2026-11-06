@@ -34,6 +34,10 @@ export interface WindowComparison {
   isLower: boolean;
 }
 
+/** Days an entry covers: 1 for a daily entry, 7 for a weekly entry. */
+export const daysCovered = (c: Pick<LocalCheckin, 'coversDays'>) => (c.coversDays === 7 ? 7 : 1);
+const isDaily = (c: Pick<LocalCheckin, 'coversDays'>) => daysCovered(c) === 1;
+
 export const InsightsEngine = {
   calculateSymptomStats(checkins: LocalCheckin[], symptoms: LocalSymptomEntry[]): SymptomStats[] {
     const totalDays = checkins.length;
@@ -80,10 +84,14 @@ export const InsightsEngine = {
       return { averageHours: 0, totalNightsRecorded: 0, nightsWokeAtNight: 0, wakingPercent: 0 };
     }
 
-    const totalHours = recordedSleep.reduce((acc, c) => acc + (c.sleepHours || 0), 0);
-    const avg = Number((totalHours / recordedSleep.length).toFixed(1));
-    const wokeNights = checkins.filter((c) => c.wokeAtNight === true).length;
-    const wakingPercent = Math.round((wokeNights / checkins.length) * 100);
+    // Weekly entries record average hours per night, so weight each entry by the days it covers.
+    const weightedHours = recordedSleep.reduce((acc, c) => acc + (c.sleepHours || 0) * daysCovered(c), 0);
+    const weight = recordedSleep.reduce((acc, c) => acc + daysCovered(c), 0);
+    const avg = Number((weightedHours / weight).toFixed(1));
+    // "Woke at night" is a per-night answer, so only daily entries count towards it.
+    const daily = checkins.filter(isDaily);
+    const wokeNights = daily.filter((c) => c.wokeAtNight === true).length;
+    const wakingPercent = daily.length ? Math.round((wokeNights / daily.length) * 100) : 0;
 
     return {
       averageHours: avg,
@@ -98,16 +106,19 @@ export const InsightsEngine = {
     let daysWith = 0;
     let maxFlash = 0;
 
+    let days = 0;
     for (const c of checkins) {
       const count = c.hotFlashCount || 0;
-      if (count > 0) {
-        total += count;
+      days += daysCovered(c);
+      total += count;
+      // A weekly total is not a single day's count, so only daily entries feed these two.
+      if (count > 0 && isDaily(c)) {
         daysWith += 1;
         if (count > maxFlash) maxFlash = count;
       }
     }
 
-    const dailyAvg = checkins.length > 0 ? Number((total / checkins.length).toFixed(1)) : 0;
+    const dailyAvg = days > 0 ? Number((total / days).toFixed(1)) : 0;
 
     return {
       dailyAverage: dailyAvg,

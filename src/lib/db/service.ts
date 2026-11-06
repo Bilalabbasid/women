@@ -13,6 +13,8 @@ import {
 export interface CheckinInput {
   date: string; // YYYY-MM-DD
   overallFeeling: 1 | 2 | 3 | 4 | 5;
+  /** 1 = one day (default); 7 = the past 7 days. */
+  coversDays?: 1 | 7;
   notes?: string;
   sleepHours?: number;
   sleepQuality?: 1 | 2 | 3 | 4 | 5;
@@ -52,6 +54,7 @@ export const LocalDataService = {
         date: input.date,
         timestamp: now,
         overallFeeling: input.overallFeeling,
+        coversDays: input.coversDays ?? 1,
         notes: input.notes,
         sleepHours: input.sleepHours,
         sleepQuality: input.sleepQuality,

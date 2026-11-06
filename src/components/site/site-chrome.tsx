@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/lib/site/config';
 import { APP_ROUTES } from '@/lib/routes';
+import { isToolLive } from '@/lib/tools/logic';
 import type { Crumb } from '@/lib/seo/jsonld';
 import { serializeLd } from '@/lib/seo/jsonld';
 
@@ -65,11 +66,13 @@ export function SiteFooter({ links }: { links: Array<{ href: string; label: stri
                 Urgent help and crisis lines
               </Link>
             </li>
-            <li>
-              <Link href={APP_ROUTES.today} className="tap underline">
-                Your private symptom tracker
-              </Link>
-            </li>
+            {isToolLive('symptom-tracker') && (
+              <li>
+                <Link href={APP_ROUTES.today} className="tap underline">
+                  Your private symptom tracker
+                </Link>
+              </li>
+            )}
             {links.map((l) => (
               <li key={l.href}>
                 <Link href={l.href} className="tap underline">

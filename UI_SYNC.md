@@ -233,3 +233,25 @@ the owner/functionality chat can make.)*
   report; fixed two dead homepage symptom links Lighthouse caught as live
   404s. Full build + 73-point verification crawl + Lighthouse all green on
   commit `1d313d0`. Continuing on functionality/usability per the owner.
+- 2026-11-06 — UI sync session: claimed Lane A (public shell & homepage).
+  Re-read `(site)/page.tsx` fresh first — nextecom's `exists()` filter was
+  already the version I'd reviewed earlier, no conflict. Fixed one real gap
+  in `site-chrome.tsx`'s `SiteHeader` (**Foundation**, not Lane A, but it's
+  the shared nav every Lane A page sits under): up to 6 hub links plus Tools/
+  Search/Account were a single `flex-wrap` row with no mobile treatment, so
+  on a phone — this site's primary device — the nav wraps into 2-3 ragged
+  lines before any page content. Made the `<ul>` a horizontally-scrollable
+  single row below `sm`, normal wrapping at `sm+`; no JS added, header stays
+  server-only. Only `SiteHeader` touched — `SiteFooter`'s `STANDARD_NOTICE`
+  import is untouched. Also normalized two literal `bg-white` values
+  (`search-box.tsx`, `not-found.tsx`) to `bg-[var(--color-paper-raised)]` —
+  same color, now tracks the token. Reviewed `(site)/layout.tsx`,
+  `search/page.tsx`, `tools/page.tsx`, `urgent-help/page.tsx`, `error.tsx`,
+  `offline/page.tsx`, `cookie-banner.tsx`: no comparable drift found —
+  `error.tsx`/`offline/page.tsx` deliberately omit `SiteHeader`/`SiteFooter`
+  (both would call `getSiteData()`, which is exactly what could be failing
+  when an error boundary or offline fallback renders), left as-is rather
+  than "fixing" that. Lint + `tsc --noEmit` clean. **Not verified in a
+  browser**: another session already has a dev server running in this
+  checkout and this session's Browser tools can't reach it — if the nav
+  scroll looks wrong on a real phone width, flag it here.

@@ -32,7 +32,7 @@ safety_flags: [urgent_symptoms]
 cta_profile: learn_stage
 hub: null
 sources: [straw-10-2012, nice-ng23-recommendations]
-related: [/perimenopause/early-signs/, /perimenopause/questions-for-your-doctor/, /symptoms/, /tools/symptoms-checklist/]
+related: [/perimenopause/early-signs/, /perimenopause/questions-for-your-doctor/, /care/menopause-books/, /does-it-work/magnesium/]
 affiliate_disclosure: false
 ---
 
@@ -71,3 +71,7 @@ When consulting your healthcare professional, bring concrete documentation rathe
 - Complete the [Perimenopause symptoms checklist](/tools/symptoms-checklist/) to record all active symptoms.
 - Review our suggested questions in [What to ask your doctor about perimenopause](/perimenopause/questions-for-your-doctor/).
 - Track two weeks of sleep, bleeding, and vasomotor episodes with the [Symptom tracker and doctor report](/tools/symptom-tracker/).
+
+## Further reading
+
+For an evidence-based, myth-busting breakdown of the biology, symptoms, and medical options of the menopause transition, read our review of [*The Menopause Manifesto* by Dr Jen Gunter](/care/menopause-books/).

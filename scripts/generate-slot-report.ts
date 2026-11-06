@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { loadContent } from '../src/lib/content/loader';
 import { loadProductSlots } from '../src/lib/products/slots';
+import { loadAmazonProducts } from '../src/lib/products/products';
 import { parseKeywordMap } from '../src/lib/plan/keyword-map';
 
 export function generateSlotReport(repoRoot: string = process.cwd()): string {
@@ -9,6 +10,7 @@ export function generateSlotReport(repoRoot: string = process.cwd()): string {
     process.env.CONTENT_ROOT ? path.resolve(process.env.CONTENT_ROOT) : path.join(repoRoot, 'content')
   );
   const slots = loadProductSlots(repoRoot);
+  const amazonProducts = loadAmazonProducts(repoRoot);
   const mapFile = path.join(repoRoot, 'content', '_plan', 'keyword-map.csv');
   const rows = fs.existsSync(mapFile) ? parseKeywordMap(fs.readFileSync(mapFile, 'utf8')).rows : [];
   const priorityByUrl = new Map(rows.map((r) => [r.url, r.priority]));
@@ -41,6 +43,24 @@ export function generateSlotReport(repoRoot: string = process.cwd()): string {
           claim_limit: slot.claim_limit,
           priority: priorityByUrl.get(page.url) ?? 2,
           status: slot.status,
+        });
+      }
+    }
+
+    const prodMatches = page.body.matchAll(/<(?:Product|ProductBlock)\s+id=["']([a-z0-9-]+)["']|::(?:product|product-block)\{id=["']([a-z0-9-]+)["']\}/gi);
+    for (const m of prodMatches) {
+      const prodId = m[1] || m[2];
+      const prod = amazonProducts.get(prodId);
+      if (prod) {
+        entries.push({
+          page_url: page.url,
+          page_title: page.fm.title,
+          slot_id: prodId,
+          category: `amazon: ${prod.brand}`,
+          reader_need: prod.best_for,
+          claim_limit: prod.what_it_wont_do,
+          priority: priorityByUrl.get(page.url) ?? 2,
+          status: 'filled',
         });
       }
     }

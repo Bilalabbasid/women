@@ -141,6 +141,7 @@ export function buildSiteGraph(repoRoot: string = process.cwd()): SiteGraph {
     '/postmenopause/',
     '/treatments/',
     '/does-it-work/',
+    '/care/',
     '/tools/',
     '/urgent-help/',
     '/about/',

@@ -307,3 +307,131 @@
   key_finding: Call 116 123 free from any phone, any time, day or night; the number does not appear on phone bills.
   funding_conflict: null
   verified: true
+
+# ---------------------------------------------------------------- Prompt 3 Verified Clinical & Reference Sources
+
+- id: nams-2020-gsm
+  title: The 2020 genitourinary syndrome of menopause position statement of The North American Menopause Society
+  authors: []
+  publisher: "Menopause: The Journal of The Menopause Society"
+  year: 2020
+  type: position_statement
+  url: https://pubmed.ncbi.nlm.nih.gov/32852449/
+  doi: 10.1097/GME.0000000000001609
+  accessed: "2026-11-06"
+  population: Menopausal women experiencing genitourinary symptoms
+  key_finding: First-line non-hormonal management for vaginal dryness and dyspareunia consists of regular vaginal moisturisers and personal lubricants during intercourse. For persistent moderate-to-severe symptoms, low-dose vaginal estrogen is highly effective and generally safe.
+  funding_conflict: null
+  verified: true
+
+- id: acog-clinical-consensus-gsm
+  title: "Treatment of Symptoms of the Genitourinary Syndrome of Menopause: Clinical Consensus No. 2"
+  authors: []
+  publisher: American College of Obstetricians and Gynecologists
+  year: 2021
+  type: guideline
+  url: https://www.acog.org/clinical/clinical-guidance/clinical-consensus/articles/2021/12/treatment-of-symptoms-of-the-genitourinary-syndrome-of-menopause
+  doi: null
+  accessed: "2026-11-06"
+  population: Women with genitourinary syndrome of menopause
+  key_finding: Over-the-counter vaginal moisturisers used several times per week provide continuous tissue hydration, whereas lubricants reduce friction specifically during sexual activity. Both are recommended as first-line therapy before or alongside prescription options.
+  funding_conflict: null
+  verified: true
+
+- id: cochrane-vaginal-moisturizers
+  title: Non-hormonal interventions for genitourinary syndrome of menopause
+  authors: []
+  publisher: Cochrane Database of Systematic Reviews
+  year: 2021
+  type: systematic_review
+  url: https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD014761/full
+  doi: 10.1002/14651858.CD014761
+  accessed: "2026-11-06"
+  population: Postmenopausal women with vaginal atrophy
+  key_finding: Non-hormonal moisturisers (including polycarbophil and hyaluronic acid) improve vaginal dryness and comfort compared to baseline, though low-dose vaginal estrogen provides superior mucosal maturation and tissue elasticity.
+  funding_conflict: null
+  verified: true
+
+- id: nice-ng123-urinary-incontinence
+  title: "Urinary incontinence and pelvic organ prolapse in women: management (NG123)"
+  authors: []
+  publisher: National Institute for Health and Care Excellence
+  year: 2019
+  type: guideline
+  url: https://www.nice.org.uk/guidance/ng123
+  doi: null
+  accessed: "2026-11-06"
+  population: Women with stress, urge, or mixed urinary incontinence
+  key_finding: Offer a trial of supervised pelvic floor muscle training of at least 3 months duration as first-line treatment to women with stress or mixed urinary incontinence. Pelvic floor muscle training should comprise at least 8 contractions performed 3 times per day.
+  funding_conflict: null
+  verified: true
+
+- id: cochrane-pfmt-incontinence
+  title: Pelvic floor muscle training versus no treatment, or inactive control treatments, for urinary incontinence in women
+  authors: []
+  publisher: Cochrane Database of Systematic Reviews
+  year: 2018
+  type: systematic_review
+  url: https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD005654.pub4/full
+  doi: 10.1002/14651858.CD005654.pub4
+  accessed: "2026-11-06"
+  population: Adult women with stress, urgency, or mixed incontinence
+  key_finding: Pelvic floor muscle training is significantly more effective than no treatment or placebo for resolving urinary incontinence, with women in PFMT groups being 8 times more likely to report complete resolution of symptoms.
+  funding_conflict: null
+  verified: true
+
+- id: gunter-menopause-manifesto
+  title: "The Menopause Manifesto: Own Your Health with Facts and Feminism"
+  authors: ["Jen Gunter"]
+  publisher: Citadel Press
+  year: 2021
+  type: other
+  url: https://www.citadelpress.com/books/the-menopause-manifesto/
+  doi: null
+  accessed: "2026-11-06"
+  population: Women in perimenopause and menopause
+  key_finding: A board-certified gynaecologist details the biological mechanisms of reproductive aging, reviews clinical evidence for hormone therapy and non-hormonal options, and debunks predatory unproven wellness supplements.
+  funding_conflict: null
+  verified: true
+
+- id: haver-new-menopause
+  title: "The New Menopause: Navigating Your Path Through Hormonal Change with Purpose, Power, and Facts"
+  authors: ["Mary Claire Haver"]
+  publisher: Rodale Books
+  year: 2024
+  type: other
+  url: https://www.rodalebooks.com/new-menopause
+  doi: null
+  accessed: "2026-11-06"
+  population: Women navigating perimenopause and menopause
+  key_finding: An OB/GYN-authored guide presenting an extensive catalog of perimenopausal symptoms, communication frameworks for medical consultations, and current clinical guidelines on hormone therapy.
+  funding_conflict: null
+  verified: true
+
+- id: sims-next-level
+  title: "Next Level: Your Guide to Kicking Ass, Feeling Great, and Crushing Goals Through Menopause and Beyond"
+  authors: ["Stacy Sims", "Selene Yeager"]
+  publisher: Rodale Books
+  year: 2022
+  type: other
+  url: https://www.rodalebooks.com/next-level
+  doi: null
+  accessed: "2026-11-06"
+  population: Active and athletic women in peri- and postmenopause
+  key_finding: Outlines tailored exercise physiology recommendations emphasizing progressive heavy resistance training, high-intensity intervals, and adequate protein distribution to counter age-related sarcopenia and bone mineral density loss.
+  funding_conflict: null
+  verified: true
+
+- id: liftmor-trial-bone-density
+  title: High-Intensity Resistance and Impact Training Improves Bone Mineral Density and Physical Function in Postmenopausal Women With Osteopenia and Osteoporosis
+  authors: []
+  publisher: Journal of Bone and Mineral Research
+  year: 2018
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/28975661/
+  doi: 10.1002/jbmr.3284
+  accessed: "2026-11-06"
+  population: Postmenopausal women with osteopenia or osteoporosis
+  key_finding: Eight months of twice-weekly, 30-minute supervised high-intensity resistance and impact training (HiRIT) significantly improved lumbar spine and femoral neck bone mineral density, muscle strength, and functional performance compared to home-based low-intensity exercise.
+  funding_conflict: null
+  verified: true

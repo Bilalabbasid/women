@@ -32,7 +32,7 @@ safety_flags: [urgent_symptoms]
 cta_profile: treatment_overview
 hub: null
 sources: [nams-2022-hormone-therapy, nams-2023-nonhormone-therapy]
-related: [/treatments/hormone-therapy/boxed-warning/, /symptoms/, /does-it-work/]
+related: [/treatments/hormone-therapy/boxed-warning/, /care/menopause-books/, /does-it-work/, /tools/symptom-tracker/]
 affiliate_disclosure: false
 ---
 
@@ -66,3 +66,7 @@ Clinical guidelines highlight cognitive and behavioral methods as effective tool
 ## Evaluating popular supplements
 
 The market for over-the-counter menopause supplements is large, but trial results vary significantly from marketing claims. Review our independent assessments in the [Does It Work? evidence directory](/does-it-work/).
+
+## Further reading on treatments and doctor discussions
+
+For an extensive doctor-authored guide to perimenopause symptoms, communication strategies for doctor visits, and modern hormone therapy discussions, read our review of [*The New Menopause* by Dr Mary Claire Haver](/care/menopause-books/). You can also prepare for discussions using our on-device [symptom tracker and doctor summary](/tools/symptom-tracker/).

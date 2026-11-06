@@ -29,7 +29,7 @@ safety_flags: [medication_interactions]
 cta_profile: diw_pending
 hub: null
 sources: [nams-2023-nonhormone-therapy]
-related: [/does-it-work/magnesium/, /treatments/, /symptoms/]
+related: [/does-it-work/magnesium/, /does-it-work/cooling-products/, /does-it-work/exercise/, /tools/symptoms-checklist/]
 affiliate_disclosure: false
 ---
 
@@ -46,12 +46,15 @@ We examine each product and ingredient using four criteria:
 3. **Consistency of effect**: Have positive findings been replicated in independent studies, or only in brand-funded trials?
 4. **Regulatory status**: Is the substance subject to manufacturing standardization and purity testing?
 
-## Common supplements evaluated
+## Common remedies and strategies evaluated
 
-- [Does magnesium help menopause symptoms?](/does-it-work/magnesium/): An honest review of sleep and relaxation benefits, trial limits, and optimal forms.
-- **Black cohosh**: One of the most studied herbs for hot flashes; evidence remains mixed with notable placebo response rates.
+- **[Does magnesium help menopause symptoms?](/does-it-work/magnesium/)**: An honest review of sleep and relaxation benefits, trial limits, and optimal forms.
+- **[Do cooling products help night sweats and hot flashes?](/does-it-work/cooling-products/)**: How cooling sheets, bedside fans, and convective bed climate systems perform against vasomotor episodes.
+- **[Does strength training help menopause?](/does-it-work/exercise/)**: What the LIFTMOR clinical trials prove about heavy lifting, impact exercise, bone mineral density, and muscle preservation.
+- **Black cohosh and botanical extracts**: One of the most studied herbs for hot flashes; evidence remains mixed with notable placebo response rates.
 - **Red clover and soy isoflavones**: Phytoestrogens with modest, variable effects on mild hot flashes.
-- **Ashwagandha and adaptogens**: Small trials suggest stress and cortisol modulation, but long-term safety data in menopause is limited.
+
+You can record your active symptoms with our interactive [menopause symptoms checklist](/tools/symptoms-checklist/) to see which remedies match your personal pattern.
 
 ## Commercial integrity notice
 

@@ -75,6 +75,9 @@ export function SiteFooter({ links }: { links: Array<{ href: string; label: stri
               Independent, evidence-graded information on perimenopause and menopause.
               Fast, crawlable, and reader-first.
             </p>
+            <p className="text-xs text-[var(--color-ink-muted)]">
+              As an Amazon Associate we earn from qualifying purchases.
+            </p>
             {SITE.legalEntity && <p className="text-[var(--color-ink-muted)]">Operated by {SITE.legalEntity}.</p>}
           </div>
           <nav aria-label="Footer">

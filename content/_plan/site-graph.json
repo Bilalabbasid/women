@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-06T01:44:03.342Z",
-  "total_pages": 21,
+  "generated_at": "2026-11-06T16:12:09.421Z",
+  "total_pages": 31,
   "nodes": {
     "/about/how-we-make-money/": {
       "url": "/about/how-we-make-money/",
@@ -93,6 +93,378 @@
       ],
       "click_depth": 1
     },
+    "/care/": {
+      "url": "/care/",
+      "title": "Getting Menopause Care: Options, Guides, and Daily Support",
+      "status": "published",
+      "primary_keyword": "menopause care options",
+      "intent": "informational",
+      "cluster": "care",
+      "hub": null,
+      "parent": "/",
+      "symptom_tags": [],
+      "page_type": "hub",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/care/menopause-books/",
+        "/care/moisturizers-and-lubricants/",
+        "/care/pelvic-floor-exercises/",
+        "/care/sleepwear-for-night-sweats/"
+      ],
+      "related": [
+        "/symptoms/",
+        "/treatments/",
+        "/tools/symptom-tracker/",
+        "/perimenopause/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/care/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/care/moisturizers-and-lubricants/",
+          "anchor": "Vaginal moisturisers and lubricants",
+          "contextual": true
+        },
+        {
+          "url": "/care/menopause-books/",
+          "anchor": "Evidence-based menopause books",
+          "contextual": true
+        },
+        {
+          "url": "/care/pelvic-floor-exercises/",
+          "anchor": "How to do pelvic floor exercises correctly",
+          "contextual": true
+        },
+        {
+          "url": "/care/sleepwear-for-night-sweats/",
+          "anchor": "Best sleepwear for night sweats",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "symptom tracker and doctor summary",
+          "contextual": true
+        },
+        {
+          "url": "/perimenopause/questions-for-your-doctor/",
+          "anchor": "questions to ask your doctor about perimenopause",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/care/menopause-books/",
+          "anchor": "menopause care guides"
+        },
+        {
+          "url": "/care/moisturizers-and-lubricants/",
+          "anchor": "menopause care directory"
+        },
+        {
+          "url": "/care/pelvic-floor-exercises/",
+          "anchor": "menopause care guides"
+        },
+        {
+          "url": "/care/sleepwear-for-night-sweats/",
+          "anchor": "daily menopause care guides"
+        },
+        {
+          "url": "/",
+          "anchor": "Home navigation"
+        }
+      ],
+      "click_depth": 1
+    },
+    "/care/menopause-books/": {
+      "url": "/care/menopause-books/",
+      "title": "Menopause Books Worth Reading, Chosen by Evidence",
+      "status": "published",
+      "primary_keyword": "best menopause books",
+      "intent": "commercial",
+      "cluster": "care",
+      "hub": "/care/",
+      "parent": "/care/",
+      "symptom_tags": [],
+      "page_type": "guide",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/care/"
+      ],
+      "related": [
+        "/care/",
+        "/perimenopause/",
+        "/treatments/",
+        "/does-it-work/exercise/",
+        "/tools/symptom-tracker/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/care/menopause-books/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/care/",
+          "anchor": "menopause care guides",
+          "contextual": true
+        },
+        {
+          "url": "/perimenopause/questions-for-your-doctor/",
+          "anchor": "questions to ask your doctor about perimenopause",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "symptom tracker",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/care/",
+          "anchor": "Evidence-based menopause books"
+        },
+        {
+          "url": "/does-it-work/exercise/",
+          "anchor": "evidence-based menopause books"
+        },
+        {
+          "url": "/perimenopause/",
+          "anchor": "The Menopause Manifesto by Dr Jen Gunter"
+        },
+        {
+          "url": "/symptoms/",
+          "anchor": "The Menopause Manifesto by Dr Jen Gunter"
+        },
+        {
+          "url": "/treatments/",
+          "anchor": "The New Menopause by Dr Mary Claire Haver"
+        }
+      ],
+      "click_depth": 2
+    },
+    "/care/moisturizers-and-lubricants/": {
+      "url": "/care/moisturizers-and-lubricants/",
+      "title": "Vaginal Moisturiser vs Lubricant: Which Do You Need?",
+      "status": "published",
+      "primary_keyword": "vaginal moisturizer for menopause",
+      "intent": "commercial",
+      "cluster": "care",
+      "hub": "/care/",
+      "parent": "/care/",
+      "symptom_tags": [
+        "vaginal-dryness",
+        "painful-sex"
+      ],
+      "page_type": "guide",
+      "stage_tags": [
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/care/"
+      ],
+      "related": [
+        "/symptoms/vaginal-dryness/",
+        "/symptoms/painful-sex/",
+        "/care/",
+        "/tools/symptoms-checklist/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/care/moisturizers-and-lubricants/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/care/",
+          "anchor": "menopause care directory",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptoms-checklist/",
+          "anchor": "symptoms checklist",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/vaginal-dryness/",
+          "anchor": "vaginal dryness after menopause",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/painful-sex/",
+          "anchor": "painful sex in perimenopause and menopause",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/care/",
+          "anchor": "Vaginal moisturisers and lubricants"
+        },
+        {
+          "url": "/symptoms/painful-sex/",
+          "anchor": "vaginal moisturisers vs lubricants"
+        },
+        {
+          "url": "/symptoms/vaginal-dryness/",
+          "anchor": "vaginal moisturisers and lubricants"
+        }
+      ],
+      "click_depth": 2
+    },
+    "/care/pelvic-floor-exercises/": {
+      "url": "/care/pelvic-floor-exercises/",
+      "title": "How to Do Pelvic Floor Exercises Correctly: A Step-by-Step Guide",
+      "status": "published",
+      "primary_keyword": "pelvic floor exercises menopause",
+      "intent": "informational",
+      "cluster": "care",
+      "hub": "/care/",
+      "parent": "/care/",
+      "symptom_tags": [
+        "incontinence"
+      ],
+      "page_type": "guide",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/care/"
+      ],
+      "related": [
+        "/symptoms/incontinence/",
+        "/care/",
+        "/tools/symptoms-checklist/",
+        "/symptoms/vaginal-dryness/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/care/pelvic-floor-exercises/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/care/",
+          "anchor": "menopause care guides",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "symptom tracker",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/incontinence/",
+          "anchor": "bladder leaks in menopause",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/care/",
+          "anchor": "How to do pelvic floor exercises correctly"
+        },
+        {
+          "url": "/symptoms/incontinence/",
+          "anchor": "how to do pelvic floor exercises correctly"
+        }
+      ],
+      "click_depth": 2
+    },
+    "/care/sleepwear-for-night-sweats/": {
+      "url": "/care/sleepwear-for-night-sweats/",
+      "title": "Best Sleepwear for Night Sweats: How to Choose",
+      "status": "published",
+      "primary_keyword": "sleepwear for night sweats",
+      "intent": "commercial",
+      "cluster": "care",
+      "hub": "/care/",
+      "parent": "/care/",
+      "symptom_tags": [
+        "night-sweats",
+        "insomnia"
+      ],
+      "page_type": "guide",
+      "stage_tags": [
+        "perimenopause",
+        "menopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/care/"
+      ],
+      "related": [
+        "/symptoms/night-sweats/",
+        "/does-it-work/cooling-products/",
+        "/care/",
+        "/tools/symptom-tracker/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/care/sleepwear-for-night-sweats/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/care/",
+          "anchor": "daily menopause care guides",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/night-sweats/",
+          "anchor": "night sweats in perimenopause and menopause",
+          "contextual": true
+        },
+        {
+          "url": "/does-it-work/cooling-products/",
+          "anchor": "bed cooling fans and climate systems",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "symptom tracker",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/care/",
+          "anchor": "Best sleepwear for night sweats"
+        },
+        {
+          "url": "/does-it-work/cooling-products/",
+          "anchor": "best sleepwear for night sweats"
+        },
+        {
+          "url": "/symptoms/night-sweats/",
+          "anchor": "best sleepwear for night sweats"
+        }
+      ],
+      "click_depth": 2
+    },
     "/cookies/": {
       "url": "/cookies/",
       "title": "Cookie policy",
@@ -134,6 +506,139 @@
       ],
       "click_depth": 1
     },
+    "/does-it-work/cooling-products/": {
+      "url": "/does-it-work/cooling-products/",
+      "title": "Cooling Your Bed: Fans, Sheets, and Climate Systems Compared",
+      "status": "published",
+      "primary_keyword": "cooling products for hot flashes",
+      "intent": "informational",
+      "cluster": "does-it-work",
+      "hub": "/does-it-work/",
+      "parent": "/does-it-work/",
+      "symptom_tags": [
+        "night-sweats",
+        "hot-flashes"
+      ],
+      "page_type": "does_it_work",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/does-it-work/"
+      ],
+      "related": [
+        "/symptoms/night-sweats/",
+        "/care/sleepwear-for-night-sweats/",
+        "/does-it-work/",
+        "/tools/symptom-tracker/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/does-it-work/cooling-products/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/does-it-work/",
+          "anchor": "Does It Work directory",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/night-sweats/",
+          "anchor": "night sweats in perimenopause and menopause",
+          "contextual": true
+        },
+        {
+          "url": "/care/sleepwear-for-night-sweats/",
+          "anchor": "best sleepwear for night sweats",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "symptom tracker",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/care/sleepwear-for-night-sweats/",
+          "anchor": "bed cooling fans and climate systems"
+        },
+        {
+          "url": "/does-it-work/",
+          "anchor": "Do cooling products help night sweats and hot flashes?"
+        },
+        {
+          "url": "/symptoms/night-sweats/",
+          "anchor": "cooling products and bed climate systems"
+        }
+      ],
+      "click_depth": 2
+    },
+    "/does-it-work/exercise/": {
+      "url": "/does-it-work/exercise/",
+      "title": "Strength Training Through Menopause: What the Science Shows",
+      "status": "published",
+      "primary_keyword": "exercise for menopause",
+      "intent": "informational",
+      "cluster": "does-it-work",
+      "hub": "/does-it-work/",
+      "parent": "/does-it-work/",
+      "symptom_tags": [
+        "joint-pain",
+        "weight-gain"
+      ],
+      "page_type": "does_it_work",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/does-it-work/"
+      ],
+      "related": [
+        "/does-it-work/",
+        "/care/menopause-books/",
+        "/perimenopause/",
+        "/tools/symptom-tracker/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/does-it-work/exercise/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/does-it-work/",
+          "anchor": "Does It Work evidence directory",
+          "contextual": true
+        },
+        {
+          "url": "/care/menopause-books/",
+          "anchor": "evidence-based menopause books",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "symptom tracker",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/does-it-work/",
+          "anchor": "Does strength training help menopause?"
+        }
+      ],
+      "click_depth": 2
+    },
     "/does-it-work/": {
       "url": "/does-it-work/",
       "title": "Does it work? Menopause treatments tested against evidence",
@@ -158,12 +663,15 @@
       "treatment_tags": [],
       "tool_tags": [],
       "required_links": [
+        "/does-it-work/cooling-products/",
+        "/does-it-work/exercise/",
         "/does-it-work/magnesium/"
       ],
       "related": [
         "/does-it-work/magnesium/",
-        "/treatments/",
-        "/symptoms/"
+        "/does-it-work/cooling-products/",
+        "/does-it-work/exercise/",
+        "/tools/symptoms-checklist/"
       ],
       "updated_at": "2026-11-06",
       "next_pages": [],
@@ -175,9 +683,32 @@
           "url": "/does-it-work/magnesium/",
           "anchor": "Does magnesium help menopause symptoms?",
           "contextual": true
+        },
+        {
+          "url": "/does-it-work/cooling-products/",
+          "anchor": "Do cooling products help night sweats and hot flashes?",
+          "contextual": true
+        },
+        {
+          "url": "/does-it-work/exercise/",
+          "anchor": "Does strength training help menopause?",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptoms-checklist/",
+          "anchor": "menopause symptoms checklist",
+          "contextual": true
         }
       ],
       "incoming_links": [
+        {
+          "url": "/does-it-work/cooling-products/",
+          "anchor": "Does It Work directory"
+        },
+        {
+          "url": "/does-it-work/exercise/",
+          "anchor": "Does It Work evidence directory"
+        },
         {
           "url": "/does-it-work/magnesium/",
           "anchor": "Does It Work? evidence directory"
@@ -271,10 +802,6 @@
         {
           "url": "/symptoms/",
           "anchor": "magnesium improves sleep"
-        },
-        {
-          "url": "/symptoms/night-sweats/",
-          "anchor": "magnesium helps menopause sleep"
         }
       ],
       "click_depth": 2
@@ -590,8 +1117,8 @@
       "related": [
         "/perimenopause/early-signs/",
         "/perimenopause/questions-for-your-doctor/",
-        "/symptoms/",
-        "/tools/symptoms-checklist/"
+        "/care/menopause-books/",
+        "/does-it-work/magnesium/"
       ],
       "updated_at": "2026-11-06",
       "next_pages": [],
@@ -617,6 +1144,11 @@
         {
           "url": "/tools/symptom-tracker/",
           "anchor": "Symptom tracker and doctor report",
+          "contextual": true
+        },
+        {
+          "url": "/care/menopause-books/",
+          "anchor": "The Menopause Manifesto by Dr Jen Gunter",
           "contextual": true
         }
       ],
@@ -695,6 +1227,14 @@
         }
       ],
       "incoming_links": [
+        {
+          "url": "/care/",
+          "anchor": "questions to ask your doctor about perimenopause"
+        },
+        {
+          "url": "/care/menopause-books/",
+          "anchor": "questions to ask your doctor about perimenopause"
+        },
         {
           "url": "/perimenopause/early-signs/",
           "anchor": "What to ask your doctor about perimenopause"
@@ -816,6 +1356,69 @@
       ],
       "click_depth": 2
     },
+    "/symptoms/incontinence/": {
+      "url": "/symptoms/incontinence/",
+      "title": "Bladder Leaks in Menopause: Causes, Types, and What Actually Helps",
+      "status": "published",
+      "primary_keyword": "menopause incontinence",
+      "intent": "informational",
+      "cluster": "symptoms",
+      "hub": "/symptoms/",
+      "parent": "/symptoms/",
+      "symptom_tags": [
+        "incontinence"
+      ],
+      "page_type": "symptom",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/symptoms/"
+      ],
+      "related": [
+        "/care/pelvic-floor-exercises/",
+        "/symptoms/",
+        "/symptoms/vaginal-dryness/",
+        "/tools/symptoms-checklist/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/symptoms/incontinence/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/symptoms/",
+          "anchor": "menopause symptoms overview",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptoms-checklist/",
+          "anchor": "menopause symptoms checklist",
+          "contextual": true
+        },
+        {
+          "url": "/care/pelvic-floor-exercises/",
+          "anchor": "how to do pelvic floor exercises correctly",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/care/pelvic-floor-exercises/",
+          "anchor": "bladder leaks in menopause"
+        },
+        {
+          "url": "/symptoms/",
+          "anchor": "Bladder leaks and urgency"
+        }
+      ],
+      "click_depth": 2
+    },
     "/symptoms/": {
       "url": "/symptoms/",
       "title": "Perimenopause and menopause symptoms",
@@ -844,13 +1447,16 @@
       "tool_tags": [],
       "required_links": [
         "/symptoms/hot-flashes/",
-        "/symptoms/night-sweats/"
+        "/symptoms/incontinence/",
+        "/symptoms/night-sweats/",
+        "/symptoms/painful-sex/",
+        "/symptoms/vaginal-dryness/"
       ],
       "related": [
-        "/tools/symptoms-checklist/",
-        "/tools/symptom-tracker/",
-        "/perimenopause/",
-        "/treatments/"
+        "/symptoms/vaginal-dryness/",
+        "/symptoms/incontinence/",
+        "/care/menopause-books/",
+        "/tools/symptoms-checklist/"
       ],
       "updated_at": "2026-11-06",
       "next_pages": [],
@@ -874,6 +1480,21 @@
           "contextual": true
         },
         {
+          "url": "/symptoms/vaginal-dryness/",
+          "anchor": "Vaginal dryness (GSM)",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/painful-sex/",
+          "anchor": "Painful sex (dyspareunia)",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/incontinence/",
+          "anchor": "Bladder leaks and urgency",
+          "contextual": true
+        },
+        {
           "url": "/tools/symptoms-checklist/",
           "anchor": "Perimenopause symptoms checklist",
           "contextual": true
@@ -881,6 +1502,11 @@
         {
           "url": "/tools/symptom-tracker/",
           "anchor": "Symptom tracker and doctor report",
+          "contextual": true
+        },
+        {
+          "url": "/care/menopause-books/",
+          "anchor": "The Menopause Manifesto by Dr Jen Gunter",
           "contextual": true
         }
       ],
@@ -890,8 +1516,20 @@
           "anchor": "symptoms list"
         },
         {
-          "url": "/symptoms/night-sweats/",
+          "url": "/symptoms/incontinence/",
           "anchor": "menopause symptoms overview"
+        },
+        {
+          "url": "/symptoms/night-sweats/",
+          "anchor": "menopause symptoms directory"
+        },
+        {
+          "url": "/symptoms/painful-sex/",
+          "anchor": "menopause symptoms directory"
+        },
+        {
+          "url": "/symptoms/vaginal-dryness/",
+          "anchor": "menopause symptoms directory"
         },
         {
           "url": "/tools/symptoms-checklist/",
@@ -906,7 +1544,7 @@
     },
     "/symptoms/night-sweats/": {
       "url": "/symptoms/night-sweats/",
-      "title": "Night sweats in perimenopause: why they happen and what helps",
+      "title": "Night Sweats: How to Sleep Cooler Tonight",
       "status": "published",
       "primary_keyword": "menopause night sweats",
       "intent": "informational",
@@ -931,9 +1569,9 @@
       ],
       "related": [
         "/symptoms/hot-flashes/",
-        "/tools/symptom-tracker/",
-        "/tools/symptoms-checklist/",
-        "/treatments/hormone-therapy/boxed-warning/"
+        "/care/sleepwear-for-night-sweats/",
+        "/does-it-work/cooling-products/",
+        "/tools/symptom-tracker/"
       ],
       "updated_at": "2026-11-06",
       "next_pages": [],
@@ -943,21 +1581,34 @@
       "outgoing_links": [
         {
           "url": "/symptoms/",
-          "anchor": "menopause symptoms overview",
-          "contextual": true
-        },
-        {
-          "url": "/does-it-work/magnesium/",
-          "anchor": "magnesium helps menopause sleep",
+          "anchor": "menopause symptoms directory",
           "contextual": true
         },
         {
           "url": "/tools/symptom-tracker/",
-          "anchor": "Two-week symptom tracker and doctor report",
+          "anchor": "symptom tracker and doctor summary",
+          "contextual": true
+        },
+        {
+          "url": "/care/sleepwear-for-night-sweats/",
+          "anchor": "best sleepwear for night sweats",
+          "contextual": true
+        },
+        {
+          "url": "/does-it-work/cooling-products/",
+          "anchor": "cooling products and bed climate systems",
           "contextual": true
         }
       ],
       "incoming_links": [
+        {
+          "url": "/care/sleepwear-for-night-sweats/",
+          "anchor": "night sweats in perimenopause and menopause"
+        },
+        {
+          "url": "/does-it-work/cooling-products/",
+          "anchor": "night sweats in perimenopause and menopause"
+        },
         {
           "url": "/does-it-work/magnesium/",
           "anchor": "night sweats and waking at 3 a.m."
@@ -969,6 +1620,132 @@
         {
           "url": "/symptoms/",
           "anchor": "Night sweats and nocturnal awakenings"
+        }
+      ],
+      "click_depth": 2
+    },
+    "/symptoms/painful-sex/": {
+      "url": "/symptoms/painful-sex/",
+      "title": "Painful Sex in Perimenopause and Menopause: Causes and Relief",
+      "status": "published",
+      "primary_keyword": "painful sex after menopause",
+      "intent": "informational",
+      "cluster": "symptoms",
+      "hub": "/symptoms/",
+      "parent": "/symptoms/",
+      "symptom_tags": [
+        "painful-sex",
+        "vaginal-dryness"
+      ],
+      "page_type": "symptom",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/symptoms/"
+      ],
+      "related": [
+        "/symptoms/vaginal-dryness/",
+        "/care/moisturizers-and-lubricants/",
+        "/symptoms/",
+        "/tools/symptoms-checklist/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/symptoms/painful-sex/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/symptoms/",
+          "anchor": "menopause symptoms directory",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptoms-checklist/",
+          "anchor": "symptoms checklist",
+          "contextual": true
+        },
+        {
+          "url": "/care/moisturizers-and-lubricants/",
+          "anchor": "vaginal moisturisers vs lubricants",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/care/moisturizers-and-lubricants/",
+          "anchor": "painful sex in perimenopause and menopause"
+        },
+        {
+          "url": "/symptoms/",
+          "anchor": "Painful sex (dyspareunia)"
+        }
+      ],
+      "click_depth": 2
+    },
+    "/symptoms/vaginal-dryness/": {
+      "url": "/symptoms/vaginal-dryness/",
+      "title": "Vaginal Dryness After Menopause: What Actually Helps",
+      "status": "published",
+      "primary_keyword": "menopause vaginal dryness",
+      "intent": "informational",
+      "cluster": "symptoms",
+      "hub": "/symptoms/",
+      "parent": "/symptoms/",
+      "symptom_tags": [
+        "vaginal-dryness"
+      ],
+      "page_type": "symptom",
+      "stage_tags": [
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/symptoms/"
+      ],
+      "related": [
+        "/symptoms/painful-sex/",
+        "/care/moisturizers-and-lubricants/",
+        "/symptoms/",
+        "/tools/symptoms-checklist/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/symptoms/vaginal-dryness/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/symptoms/",
+          "anchor": "menopause symptoms directory",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptoms-checklist/",
+          "anchor": "menopause symptoms checklist",
+          "contextual": true
+        },
+        {
+          "url": "/care/moisturizers-and-lubricants/",
+          "anchor": "vaginal moisturisers and lubricants",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/care/moisturizers-and-lubricants/",
+          "anchor": "vaginal dryness after menopause"
+        },
+        {
+          "url": "/symptoms/",
+          "anchor": "Vaginal dryness (GSM)"
         }
       ],
       "click_depth": 2
@@ -1071,8 +1848,32 @@
       ],
       "incoming_links": [
         {
+          "url": "/care/",
+          "anchor": "symptom tracker and doctor summary"
+        },
+        {
+          "url": "/care/menopause-books/",
+          "anchor": "symptom tracker"
+        },
+        {
+          "url": "/care/pelvic-floor-exercises/",
+          "anchor": "symptom tracker"
+        },
+        {
+          "url": "/care/sleepwear-for-night-sweats/",
+          "anchor": "symptom tracker"
+        },
+        {
           "url": "/cookies/",
           "anchor": "Symptom tracker and doctor report"
+        },
+        {
+          "url": "/does-it-work/cooling-products/",
+          "anchor": "symptom tracker"
+        },
+        {
+          "url": "/does-it-work/exercise/",
+          "anchor": "symptom tracker"
         },
         {
           "url": "/does-it-work/magnesium/",
@@ -1100,7 +1901,7 @@
         },
         {
           "url": "/symptoms/night-sweats/",
-          "anchor": "Two-week symptom tracker and doctor report"
+          "anchor": "symptom tracker and doctor summary"
         },
         {
           "url": "/tools/symptoms-checklist/",
@@ -1109,6 +1910,10 @@
         {
           "url": "/treatments/hormone-therapy/boxed-warning/",
           "anchor": "symptom diary and report"
+        },
+        {
+          "url": "/treatments/",
+          "anchor": "symptom tracker and doctor summary"
         }
       ],
       "click_depth": 2
@@ -1184,6 +1989,14 @@
       ],
       "incoming_links": [
         {
+          "url": "/care/moisturizers-and-lubricants/",
+          "anchor": "symptoms checklist"
+        },
+        {
+          "url": "/does-it-work/",
+          "anchor": "menopause symptoms checklist"
+        },
+        {
           "url": "/perimenopause/early-signs/",
           "anchor": "Perimenopause symptoms checklist"
         },
@@ -1200,8 +2013,20 @@
           "anchor": "Perimenopause symptoms checklist"
         },
         {
+          "url": "/symptoms/incontinence/",
+          "anchor": "menopause symptoms checklist"
+        },
+        {
           "url": "/symptoms/",
           "anchor": "Perimenopause symptoms checklist"
+        },
+        {
+          "url": "/symptoms/painful-sex/",
+          "anchor": "symptoms checklist"
+        },
+        {
+          "url": "/symptoms/vaginal-dryness/",
+          "anchor": "menopause symptoms checklist"
         },
         {
           "url": "/tools/symptom-tracker/",
@@ -1297,8 +2122,9 @@
       ],
       "related": [
         "/treatments/hormone-therapy/boxed-warning/",
-        "/symptoms/",
-        "/does-it-work/"
+        "/care/menopause-books/",
+        "/does-it-work/",
+        "/tools/symptom-tracker/"
       ],
       "updated_at": "2026-11-06",
       "next_pages": [],
@@ -1314,6 +2140,16 @@
         {
           "url": "/does-it-work/",
           "anchor": "Does It Work? evidence directory",
+          "contextual": true
+        },
+        {
+          "url": "/care/menopause-books/",
+          "anchor": "The New Menopause by Dr Mary Claire Haver",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "symptom tracker and doctor summary",
           "contextual": true
         }
       ],

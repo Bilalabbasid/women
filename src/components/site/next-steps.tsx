@@ -87,7 +87,7 @@ export function BookmarkButton({ url, title }: { url: string; title: string }) {
     <button
       type="button"
       onClick={toggleBookmark}
-      aria-label={bookmarked ? 'Remove bookmark from this device' : 'Save reading to this device'}
+      aria-label={bookmarked ? 'Saved on this device' : 'Save for later'}
       className="tap inline-flex items-center gap-1.5 rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper)] px-3 py-1.5 text-xs font-medium text-[var(--color-ink)] hover:bg-[var(--color-paper-raised)]"
     >
       <span>{bookmarked ? '★ Saved on this device' : '☆ Save for later'}</span>

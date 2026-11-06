@@ -63,17 +63,19 @@ export const TOOL_ISLAND_IDS = ['symptoms-checklist'];
 export type ContentIslandPart =
   | { type: 'html'; html: string }
   | { type: 'tool'; tool: string }
-  | { type: 'product-slot'; slot: string };
+  | { type: 'product-slot'; slot: string }
+  | { type: 'product'; product: string };
 
 /** Splits rendered HTML around tool and product slot placeholders. */
 export function splitContentIslands(html: string): ContentIslandPart[] {
   const parts: ContentIslandPart[] = [];
   let last = 0;
-  const re = /<div data-(tool|product-slot)="([a-z0-9-]+)"><\/div>/g;
+  const re = /<div data-(tool|product-slot|product)="([a-z0-9-]+)"><\/div>/g;
   for (const m of html.matchAll(re)) {
     if (m.index! > last) parts.push({ type: 'html', html: html.slice(last, m.index) });
     if (m[1] === 'tool') parts.push({ type: 'tool', tool: m[2] });
     else if (m[1] === 'product-slot') parts.push({ type: 'product-slot', slot: m[2] });
+    else if (m[1] === 'product') parts.push({ type: 'product', product: m[2] });
     last = m.index! + m[0].length;
   }
   if (last < html.length) parts.push({ type: 'html', html: html.slice(last) });
@@ -149,7 +151,14 @@ function remarkDirectivesToHtml() {
           data.hProperties = { 'data-product-slot': id };
           return;
         }
-        throw new Error(`Unknown content directive "::${d.name}" (allowed: ::tool, ::product-slot)`);
+        if (d.name === 'product' || d.name === 'product-block') {
+          const id = d.attributes?.id ?? '';
+          const data = (d.data ??= {});
+          data.hName = 'div';
+          data.hProperties = { 'data-product': id };
+          return;
+        }
+        throw new Error(`Unknown content directive "::${d.name}" (allowed: ::tool, ::product-slot, ::product)`);
       }
       if (node.type !== 'containerDirective') return;
       const d = node as unknown as { name: string; data?: Record<string, unknown> };
@@ -235,8 +244,9 @@ export function renderMarkdown(markdown: string, opts: RenderOptions): RenderRes
     'html' | 'text' | 'citations'
   >;
 
-  // Prompt 2: Support <ProductSlot id="..." /> and strip comments such as <!-- EXPERIENCE_NEEDED -->
+  // Prompt 2 & 3: Support <ProductSlot id="..." />, <Product id="..." />, <ProductBlock id="..." /> and strip comments
   const preprocessed = markdown
+    .replace(/<(?:Product|ProductBlock)\s+id=["']([a-z0-9-]+)["']\s*(?:\/>|><\/(?:Product|ProductBlock)>)/gi, '\n\n::product{id="$1"}\n\n')
     .replace(/<ProductSlot\s+id=["']([a-z0-9-]+)["']\s*(?:\/>|><\/ProductSlot>)/gi, '\n\n::product-slot{id="$1"}\n\n')
     .replace(/<!--[\s\S]*?-->/g, '');
 

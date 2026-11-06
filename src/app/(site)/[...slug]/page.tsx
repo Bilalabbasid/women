@@ -15,6 +15,7 @@ import { contentPageLd, breadcrumbLd, faqLd, webApplicationLd } from '@/lib/seo/
 import { splitContentIslands } from '@/lib/content/markdown';
 import { ToolIsland } from '@/components/tools/tool-island';
 import { ProductSlotView } from '@/components/products/product-slot';
+import { ProductBlock } from '@/components/products/product-block';
 import { StandardNotice } from '@/components/site/standard-notice';
 import { EmailCapture } from '@/components/site/email-capture';
 import { NextSteps, BookmarkButton } from '@/components/site/next-steps';
@@ -95,10 +96,10 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
               <GradeBadge grade={fm.evidence_grade} methodHref={methodHref} />
             </p>
           )}
-          {fm.affiliate_disclosure && (
-            <p role="note" className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-3">
-              <strong>Disclosure:</strong> this page contains paid links, which are labelled. We may earn a
-              commission if you use them. That never changes an evidence grade or a ranking.
+          {(fm.affiliate_disclosure || parts.some((p) => p.type === 'product')) && (
+            <p role="note" className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-3 text-xs leading-relaxed text-[var(--color-ink-muted)]">
+              <strong>Disclosure:</strong> this page contains paid links, which are labelled. As an Amazon Associate we earn from
+              qualifying purchases. We may earn a commission if you use them. That never changes an evidence grade or a ranking.
             </p>
           )}
           {fm.audience_limits.length > 0 && (
@@ -119,6 +120,7 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
         {parts.map((part, i) => {
           if (part.type === 'tool') return <ToolIsland key={`tool-${i}`} id={part.tool} />;
           if (part.type === 'product-slot') return <ProductSlotView key={`slot-${i}`} id={part.slot} />;
+          if (part.type === 'product') return <ProductBlock key={`product-${i}`} id={part.product} />;
           return <div key={`html-${i}`} className="prose" dangerouslySetInnerHTML={{ __html: part.html }} />;
         })}
         {rendered.questionLists > 0 && <QuestionTools />}

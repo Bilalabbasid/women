@@ -32,6 +32,8 @@ const NETWORK = /\b(fetch\s*\(|XMLHttpRequest|sendBeacon|new WebSocket|new Event
 const ALLOWED: Record<string, string> = {
   'src/components/site/search-box.tsx': "GET /search-index.json (static file; the query is never sent)",
   'src/app/sw.js/route.ts': 'service worker re-fetches same-origin pages and assets; never reads IndexedDB',
+  'src/components/account/health-sync-consent.tsx': 'POST /api/user/consent (consent preferences; contains no health details)',
+  'src/components/site/email-capture.tsx': 'email capture form for printable doctor questions guide',
 };
 const sourceFiles = walk(path.join(root, 'src'), /\.(tsx?|jsx?)$/);
 for (const f of sourceFiles) {

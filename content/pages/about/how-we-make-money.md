@@ -32,14 +32,17 @@ affiliate_disclosure: false
 
 We believe that readers deserve complete transparency regarding how health publications earn revenue. Trust is built through honest reporting and strict commercial boundaries.
 
-## 1. Affiliate partnerships
+## 1. Affiliate partnerships & Amazon Associate disclosure
 
-When you click on certain product recommendation links (such as cooling bedding, sleepwear, books, or supplements) and make a purchase, we may earn an affiliate commission from the retailer or partner.
+As an Amazon Associate we earn from qualifying purchases.
+
+When you click on certain product recommendation links (such as cooling sleepwear, pelvic floor exercise devices, books, or lubricants) and make a purchase, we may earn an affiliate commission from the retailer or merchant.
 
 Every commercial link on this website:
-- Carries a clear visible notice: &ldquo;Paid link: we may earn a commission.&rdquo;
-- Uses direct redirects tagged with `rel="sponsored nofollow"` as required by search engine and FTC guidelines.
-- Sits below the objective clinical answer and evidence assessment, never in urgent health sections.
+- Carries a clear visible notice: &ldquo;Paid link: we may earn a commission. We aren't doctors.&rdquo;
+- Links straight to the retailer URL without link-cloaking or internal redirect tricks, using `rel="sponsored nofollow noopener"` as required by search engine, FTC, and retailer guidelines.
+- Never displays dynamic pricing, star ratings, or copied customer reviews that could become inaccurate or misleading.
+- Sits below the objective clinical answer and evidence assessment, never in urgent health sections, emergency guidance, or cancer/bleeding articles.
 
 ## 2. Editorial separation: evidence before commission
 

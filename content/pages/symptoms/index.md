@@ -29,7 +29,7 @@ safety_flags: [urgent_symptoms]
 cta_profile: learn_stage
 hub: null
 sources: [nice-ng23-recommendations]
-related: [/tools/symptoms-checklist/, /tools/symptom-tracker/, /perimenopause/, /treatments/]
+related: [/symptoms/vaginal-dryness/, /symptoms/incontinence/, /care/menopause-books/, /tools/symptoms-checklist/]
 affiliate_disclosure: false
 ---
 
@@ -64,10 +64,16 @@ Hormonal fluctuations affect central neurotransmitter pathways, contributing to 
 Estrogen receptors are located throughout connective tissues, joints, and mucous membranes:
 
 - **Joint stiffness and aches**: morning stiffness in hands, knees, shoulders, and hips.
-- **Vaginal dryness (GSM)**: tissue thinning, reduced natural lubrication, and pain during intercourse.
+- **[Vaginal dryness (GSM)](/symptoms/vaginal-dryness/)**: tissue thinning, reduced natural lubrication, and burning or irritation.
+- **[Painful sex (dyspareunia)](/symptoms/painful-sex/)**: friction and discomfort during intimacy caused by thinning mucosal layers.
+- **[Bladder leaks and urgency](/symptoms/incontinence/)**: stress and urge incontinence driven by weakened urethral closure pressure and pelvic floor tone.
 
 ## Tracking your personal pattern
 
 Because symptom patterns provide far more clinical insight than a one-time blood test [@nice-ng23-recommendations], recording what you experience over two to four weeks helps your clinician recommend targeted options.
 
 Start with the [Perimenopause symptoms checklist](/tools/symptoms-checklist/) or record daily entries with the [Symptom tracker and doctor report](/tools/symptom-tracker/).
+
+## Further reading
+
+For an evidence-based, myth-busting breakdown of symptom biology and treatments written by a board-certified gynaecologist, read our review of [*The Menopause Manifesto* by Dr Jen Gunter](/care/menopause-books/).

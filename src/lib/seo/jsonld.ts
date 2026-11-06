@@ -134,6 +134,11 @@ export function webApplicationLd(opts: { name: string; path: string; description
     applicationCategory: 'HealthApplication',
     operatingSystem: 'Any (runs in a web browser)',
     isAccessibleForFree: true,
+    // Accurate (every tool really is $0, no account): proposed by the Tools
+    // session, 2026-11-06. No rich-result eligibility without ratings, which
+    // this site deliberately never fakes (assertNoRatings), so this is a
+    // correctness detail, not an SEO lever.
+    offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD' },
     publisher: { '@id': orgId(c) },
   };
 }

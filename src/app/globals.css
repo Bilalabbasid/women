@@ -119,9 +119,24 @@
   top: 0.5rem;
 }
 
+/*
+ * `.tap` is unlayered on purpose EXCEPT for `display`: an unlayered rule
+ * always beats a Tailwind utility class regardless of source order, so a
+ * bare `display: inline-flex` here was silently overriding every
+ * `className="tap flex ..."` row (checkbox/radio labels, nav items) back to
+ * inline-flex — inline-level boxes flow with surrounding content, so two
+ * short labels could land side by side instead of stacking one per row.
+ * `display` moves into `@layer base` so an explicit `flex`/`block`/`grid`
+ * utility on the same element wins, as the class list implies it should;
+ * min-height/align-items stay unlayered since nothing needs to override those.
+ */
+@layer base {
+  .tap {
+    display: inline-flex;
+  }
+}
 .tap {
   min-height: 44px;
-  display: inline-flex;
   align-items: center;
 }
 

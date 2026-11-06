@@ -252,6 +252,16 @@ the owner/functionality chat can make.)*
   end up with two incompatible versions of the same files. **Lane A: pull it
   before your next `(site)/page.tsx` commit**, same reason. Not editing the
   Lanes table's claims myself — that's Foundation/Lane A's call, not mine.
+- **Lane G → Lane D / nextecom / Lane B-F (tool-page SEO, proposed diffs, full
+  text in `reports/tool-seo-audit.md`):** (A) `[...slug]/page.tsx`: skip `<Toc>`
+  when `page_type === 'tool'`; at 375px the tool starts ~2.3 screens down
+  (notice 216px + audience limits 291px + TOC 280px above it). (B) same file:
+  emit one WebApplication per tool page, including `/tools/symptom-tracker/`,
+  which has no island so gets none today. (C) `src/lib/seo/jsonld.ts`: add a
+  free `offers` to `webApplicationLd`. (D) `does-it-work-checker.tsx` catalogue:
+  elinzanetant "1,420 women" conflates safety (OASIS 1-3) with efficacy
+  (OASIS 1-2, 796); supplements entry should link `/does-it-work/black-cohosh/`
+  not `/magnesium/`.
 
 ## Changelog
 
@@ -443,3 +453,4 @@ the owner/functionality chat can make.)*
   lane had actually used it as a living doc, this file (`UI_SYNC.md`) was. The
   lane table it duplicated is unchanged and lives only here now. Recoverable
   from git history (`git show 9c51770:SYNC.md`) if any lane still needs it.
+- 2026-11-06 — Lane G (tool-page SEO): rewrote titles, descriptions, H1s, how-to/method/example content, 5 unique FAQs and internal links on all six tool pages, regrouped `/tools/` by intent and dropped its duplicate `/app/today/` WebApplication (`cbbec89`, `cd060d0`, `4646fac`). Primary keywords unchanged (keyword-map). validate:seo/content/links/plan/cta: 0 errors on tool pages. Report: `reports/tool-seo-audit.md`.

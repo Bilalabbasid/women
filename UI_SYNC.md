@@ -435,3 +435,10 @@ the owner/functionality chat can make.)*
   uncoordinated — see the cross-lane note above for the full detail. Flagging
   rather than reconciling the two docs myself, since reassigning Foundation's
   or Lane A's claims isn't this session's call.
+- 2026-11-06 — Functionality chat: resolved the above by deleting `SYNC.md`
+  (owner asked for a repo cleanup pass; rule 6 says log deletions). It was
+  committed once at `9c51770`, never updated again, and its "In progress" /
+  "Cross-lane requests" sections were still the empty placeholder text — no
+  lane had actually used it as a living doc, this file (`UI_SYNC.md`) was. The
+  lane table it duplicated is unchanged and lives only here now. Recoverable
+  from git history (`git show 9c51770:SYNC.md`) if any lane still needs it.

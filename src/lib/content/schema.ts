@@ -173,6 +173,8 @@ export const SOURCE_TYPES = [
   'other',
 ] as const;
 
+export type SourceType = (typeof SOURCE_TYPES)[number];
+
 export const sourceSchema = z
   .object({
     id: sourceId,

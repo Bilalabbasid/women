@@ -9,12 +9,13 @@ import {
   childrenOf,
   relatedFor,
 } from '@/lib/content/site-data';
-import { isPublishable, isMedicallyReviewed } from '@/lib/content/gate';
+import { isPublishable, isMedicallyReviewed, indexablePages } from '@/lib/content/gate';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { contentPageLd, breadcrumbLd, faqLd, webApplicationLd } from '@/lib/seo/jsonld';
 import { splitContentIslands } from '@/lib/content/markdown';
 import { ToolIsland } from '@/components/tools/tool-island';
 import { ProductSlotView } from '@/components/products/product-slot';
+import { SourcesList } from '@/components/site/sources-list';
 import { ProductBlock } from '@/components/products/product-block';
 import { StandardNotice } from '@/components/site/standard-notice';
 import { EmailCapture } from '@/components/site/email-capture';
@@ -147,6 +148,7 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
           }
           if (part.type === 'product-slot') return <ProductSlotView key={`slot-${i}`} id={part.slot} />;
           if (part.type === 'product') return <ProductBlock key={`product-${i}`} id={part.product} />;
+          if (part.type === 'sources-list') return <SourcesList key={`sources-${i}`} sources={store.sources} pages={indexablePages(store)} />;
           // The opening paragraph is the page's stand-alone answer (symptom
           // "quick answer", does-it-work verdict, comparison "quick answer: ...").
           // Give it a distinct card so it reads as the answer at a glance,

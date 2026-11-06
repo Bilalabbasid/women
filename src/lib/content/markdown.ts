@@ -23,6 +23,9 @@ import type { Root as HRoot, Element } from 'hast';
  *    content is banned inside (validate:cta).
  *  - Doctor questions: `:::questions` … `:::` → a list with copy and print controls.
  *  - Tools: `::tool{id="symptoms-checklist"}` → an interactive island rendered in place.
+ *  - Sources list: `::sources-list` → a live, read-only listing of every source
+ *    in content/_sources/sources.yaml, read fresh at request time (never
+ *    hand-copied into a page, so it can't drift from the real registry).
  *  - Internal links to pages that aren't in this build (drafts) render as
  *    plain text, so published pages never link to drafts.
  *  - /go/ links get rel="sponsored nofollow". Other external links are followed.
@@ -73,18 +76,20 @@ export type ContentIslandPart =
   | { type: 'html'; html: string }
   | { type: 'tool'; tool: string }
   | { type: 'product-slot'; slot: string }
-  | { type: 'product'; product: string };
+  | { type: 'product'; product: string }
+  | { type: 'sources-list' };
 
-/** Splits rendered HTML around tool and product slot placeholders. */
+/** Splits rendered HTML around tool, product slot, and sources-list placeholders. */
 export function splitContentIslands(html: string): ContentIslandPart[] {
   const parts: ContentIslandPart[] = [];
   let last = 0;
-  const re = /<div data-(tool|product-slot|product)="([a-z0-9-]+)"><\/div>/g;
+  const re = /<div data-(tool|product-slot|product)="([a-z0-9-]+)"><\/div>|<div data-sources-list="true"><\/div>/g;
   for (const m of html.matchAll(re)) {
     if (m.index! > last) parts.push({ type: 'html', html: html.slice(last, m.index) });
     if (m[1] === 'tool') parts.push({ type: 'tool', tool: m[2] });
     else if (m[1] === 'product-slot') parts.push({ type: 'product-slot', slot: m[2] });
     else if (m[1] === 'product') parts.push({ type: 'product', product: m[2] });
+    else parts.push({ type: 'sources-list' });
     last = m.index! + m[0].length;
   }
   if (last < html.length) parts.push({ type: 'html', html: html.slice(last) });
@@ -178,7 +183,13 @@ function remarkDirectivesToHtml() {
           data.hProperties = { 'data-product': id };
           return;
         }
-        throw new Error(`Unknown content directive "::${d.name}" (allowed: ::tool, ::product-slot, ::product)`);
+        if (d.name === 'sources-list') {
+          const data = (d.data ??= {});
+          data.hName = 'div';
+          data.hProperties = { 'data-sources-list': 'true' };
+          return;
+        }
+        throw new Error(`Unknown content directive "::${d.name}" (allowed: ::tool, ::product-slot, ::product, ::sources-list)`);
       }
       if (node.type !== 'containerDirective') return;
       const d = node as unknown as { name: string; data?: Record<string, unknown> };

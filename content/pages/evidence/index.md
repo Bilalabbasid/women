@@ -27,7 +27,7 @@ safety_flags: []
 cta_profile: site_none
 hub: null
 sources: []
-related: [/evidence/how-we-grade/, /evidence/updates/, /evidence/products-we-wont-recommend/, /about/how-we-make-money/]
+related: [/evidence/how-we-grade/, /evidence/updates/, /evidence/products-we-wont-recommend/, /evidence/sources/, /about/how-we-make-money/]
 affiliate_disclosure: false
 ---
 
@@ -40,6 +40,7 @@ We believe women seeking menopause information deserve scientific accuracy witho
 - [What&apos;s changed: updates log](/evidence/updates/): Real-time records of regulatory label actions, newly reviewed studies, and editorial corrections.
 - [How we make money](/about/how-we-make-money/): Full commercial disclosures explaining our strict editorial separation between evidence ratings and affiliate partnerships.
 - [Products we won't recommend](/evidence/products-we-wont-recommend/): The categories we reject outright, regardless of commission.
+- [Our sources](/evidence/sources/): Every regulator label, guideline, and study in our registry, in one place, linked to the pages that cite it.
 - [Interactive tools](/tools/): Free, on-device symptom tracking and appointment checklists that follow our non-diagnostic safety rules.
 
 Every medical claim on this site is traceable to an opened, verified citation in our primary source registry.

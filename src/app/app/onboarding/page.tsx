@@ -38,7 +38,7 @@ export default function OnboardingPage() {
       localStorage.setItem('menowell_storage_mode', storageMode);
       localStorage.setItem('menowell_pinned_symptoms', JSON.stringify(selectedSymptoms));
     }
-    router.push('/dashboard');
+    router.push('/app/today/');
   };
 
   return (

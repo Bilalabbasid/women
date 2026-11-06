@@ -48,6 +48,17 @@ export function UrgentGuidance({
                       {r.name}
                     </a>
                     : {r.how}
+                    <span className="mt-1 flex flex-wrap gap-2">
+                      {r.actions.map((a) => (
+                        <a
+                          key={a.href}
+                          href={a.href}
+                          className="inline-flex min-h-[44px] items-center rounded-xl bg-[#8A1F1F] px-4 font-semibold text-white"
+                        >
+                          {a.label}
+                        </a>
+                      ))}
+                    </span>
                   </li>
                 ))}
               </ul>

@@ -121,7 +121,7 @@ export default function InsightsPage() {
               </p>
             </div>
             <div className="flex items-center justify-center gap-2 pt-2">
-              <Link href="/check-in">
+              <Link href="/app/check-in/">
                 <Button size="sm" variant="primary" className="gap-1.5 text-xs">
                   <PlusCircle className="w-3.5 h-3.5" />
                   <span>Log Check-in</span>

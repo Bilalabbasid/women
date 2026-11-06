@@ -21,6 +21,8 @@ export interface CrisisResource {
   name: string;
   how: string;
   url: string;
+  /** One-tap contact links (tel:/sms:). */
+  actions: Array<{ label: string; href: string }>;
   sourceAccessed: string;
 }
 
@@ -33,6 +35,10 @@ export const CRISIS_RESOURCES: Record<Locale, { emergency: string; resources: Cr
         name: '988 Suicide & Crisis Lifeline',
         how: 'Call or text 988, or chat online. Free, confidential, 24/7.',
         url: 'https://988lifeline.org/',
+        actions: [
+          { label: 'Call 988', href: 'tel:988' },
+          { label: 'Text 988', href: 'sms:988' },
+        ],
         sourceAccessed: '2026-11-06',
       },
     ],
@@ -44,6 +50,7 @@ export const CRISIS_RESOURCES: Record<Locale, { emergency: string; resources: Cr
         name: 'Samaritans',
         how: 'Call 116 123, free from any phone, any time, day or night.',
         url: 'https://www.samaritans.org/how-we-can-help/contact-samaritan/',
+        actions: [{ label: 'Call 116 123', href: 'tel:116123' }],
         sourceAccessed: '2026-11-06',
       },
     ],

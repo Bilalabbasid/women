@@ -167,7 +167,7 @@ export default function CheckinPage() {
     });
     if (urgent.length === 0) {
       setTimeout(() => {
-        router.push('/dashboard');
+        router.push('/app/today/');
       }, 1000);
     }
   };
@@ -182,7 +182,7 @@ export default function CheckinPage() {
         title="Daily Check-in"
         subtitle="Stored on this device"
         showBack={true}
-        backHref="/dashboard"
+        backHref="/app/today/"
         showPrivacyBadge={true}
         showSettings={false}
       />

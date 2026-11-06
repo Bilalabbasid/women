@@ -34,7 +34,7 @@ export default function ErrorBoundary({
           <RefreshCw className="w-4 h-4" />
           Try Again
         </Button>
-        <Link href="/dashboard" className="w-full">
+        <Link href="/app/today/" className="w-full">
           <Button variant="outline" fullWidth className="gap-2">
             <Home className="w-4 h-4" />
             Go to Today

@@ -13,18 +13,20 @@ import {
 import { clsx } from 'clsx';
 
 const NAV_ITEMS = [
-  { href: '/dashboard', label: 'Today', icon: CalendarDays },
-  { href: '/timeline', label: 'Timeline', icon: Clock },
-  { href: '/treatments', label: 'Treatments', icon: Pill },
-  { href: '/insights', label: 'Insights', icon: BarChart2 },
-  { href: '/doctor', label: 'Doctor', icon: Stethoscope },
+  { href: '/app/today/', label: 'Today', icon: CalendarDays },
+  { href: '/app/timeline/', label: 'Timeline', icon: Clock },
+  { href: '/app/treatments/', label: 'Treatments', icon: Pill },
+  { href: '/app/insights/', label: 'Insights', icon: BarChart2 },
+  { href: '/app/doctor-report/', label: 'Doctor', icon: Stethoscope },
 ];
 
 export function AppNavigation() {
-  const pathname = usePathname();
+  const rawPath = usePathname() ?? '/';
+  // Normalise so comparisons work whether or not the router reports a trailing slash.
+  const pathname = rawPath.endsWith('/') ? rawPath : `${rawPath}/`;
 
   // Hide on public landing and onboarding screens
-  if (pathname === '/' || pathname === '/onboarding') {
+  if (pathname === '/' || pathname === '/app/onboarding/') {
     return null;
   }
 
@@ -40,7 +42,7 @@ export function AppNavigation() {
             const Icon = item.icon;
             const isActive =
               pathname === item.href ||
-              (item.href !== '/dashboard' && pathname.startsWith(item.href));
+              (item.href !== '/app/today/' && pathname.startsWith(item.href));
 
             return (
               <Link
@@ -80,7 +82,7 @@ export function AppNavigation() {
             const Icon = item.icon;
             const isActive =
               pathname === item.href ||
-              (item.href !== '/dashboard' && pathname.startsWith(item.href));
+              (item.href !== '/app/today/' && pathname.startsWith(item.href));
 
             return (
               <Link

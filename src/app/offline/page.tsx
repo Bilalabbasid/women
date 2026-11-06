@@ -26,7 +26,7 @@ export default function OfflinePage() {
         </div>
       </Card>
 
-      <Link href="/dashboard" className="w-full">
+      <Link href="/app/today/" className="w-full">
         <Button variant="primary" fullWidth className="gap-2">
           <span>Go to Today’s Check-in</span>
           <ArrowRight className="w-4 h-4" />

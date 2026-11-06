@@ -5,12 +5,12 @@ import Link from 'next/link';
 import {
   HardDrive,
   Cloud,
-  ChevronRight,
   Check,
 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { AppHeader } from '@/components/app/app-header';
+import { PWAInstallBanner } from '@/components/app/pwa-install-banner';
 import { APP_CONFIG } from '@/lib/config/constants';
 
 export default function SettingsPage() {
@@ -30,7 +30,7 @@ export default function SettingsPage() {
         title="Settings"
         subtitle="Preferences, storage & safety"
         showBack={true}
-        backHref="/dashboard"
+        backHref="/app/today/"
         showPrivacyBadge={true}
         showSettings={false}
       />
@@ -49,7 +49,7 @@ export default function SettingsPage() {
             <h2 className="font-serif font-semibold text-base text-[#231F1D]">
               Data Storage Preference
             </h2>
-            <Link href="/privacy-center" className="text-xs text-[#965342] hover:underline font-medium">
+            <Link href="/app/privacy/" className="text-xs text-[#965342] hover:underline font-medium">
               Privacy Dashboard
             </Link>
           </div>
@@ -166,21 +166,12 @@ export default function SettingsPage() {
           </Card>
         </section>
 
-        {/* Section 4: Membership / Upgrade */}
-        <section className="space-y-2">
-          <Link href="/pricing" className="block group">
-            <Card className="p-4 bg-[#FAF6F0] border border-[#E5DCD0] flex items-center justify-between group-hover:border-[#965342] transition">
-              <div>
-                <p className="font-serif font-semibold text-sm text-[#231F1D]">
-                  MenoWell Free Plan
-                </p>
-                <p className="text-xs text-[#68615C]">
-                  View membership options or activate 7-day trial
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-[#8A817A] group-hover:text-[#231F1D] transition" />
-            </Card>
-          </Link>
+        {/* Section 4: Install (the only place, besides after first tool use, that offers installation) */}
+        <section className="space-y-2" aria-labelledby="install-heading">
+          <h2 id="install-heading" className="font-serif font-semibold text-base text-[#231F1D]">
+            Install the app
+          </h2>
+          <PWAInstallBanner variant="settings" />
         </section>
 
         {/* Section 5: Legal & App Version */}

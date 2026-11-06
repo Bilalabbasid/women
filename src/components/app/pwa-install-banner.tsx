@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useEffect, useState, useSyncExternalStore } from 'react';
-import { Download, Share2, PlusSquare, X, CheckCircle2 } from 'lucide-react';
+import { Download, Share2, PlusSquare, X } from 'lucide-react';
 import { Button } from '../ui/button';
+import { hasUsedTool } from '@/lib/pwa/install-gate';
 
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
@@ -26,183 +27,136 @@ function getStandaloneSnapshot() {
   );
 }
 
-function getStandaloneServerSnapshot() {
-  return false;
-}
-
 function getIOSSnapshot() {
-  const userAgent = window.navigator.userAgent.toLowerCase();
-  return /iphone|ipad|ipod/.test(userAgent);
+  return /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
 }
 
-function getIOSServerSnapshot() {
-  return false;
-}
+const serverFalse = () => false;
 
-export function PWAInstallBanner() {
+/**
+ * Install prompt. AGENTS.md: never interrupt reading; offer installation only
+ * after a tool is used or from a settings link.
+ *
+ * - variant "banner": rendered only inside the private tracker, and only after
+ *   she has saved at least one check-in (hasUsedTool()).
+ * - variant "settings": an inline control on the Settings screen.
+ */
+export function PWAInstallBanner({ variant = 'banner' }: { variant?: 'banner' | 'settings' }) {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showIOSModal, setShowIOSModal] = useState(false);
   const [bannerDismissed, setBannerDismissed] = useState(false);
-
-  const isStandalone = useSyncExternalStore(
-    subscribeStandalone,
-    getStandaloneSnapshot,
-    getStandaloneServerSnapshot
-  );
-
-  const isIOS = useSyncExternalStore(
-    subscribeNoop,
-    getIOSSnapshot,
-    getIOSServerSnapshot
-  );
+  const toolUsed = useSyncExternalStore(subscribeNoop, hasUsedTool, serverFalse);
+  const isStandalone = useSyncExternalStore(subscribeStandalone, getStandaloneSnapshot, serverFalse);
+  const isIOS = useSyncExternalStore(subscribeNoop, getIOSSnapshot, serverFalse);
 
   useEffect(() => {
-    // Capture Android/Desktop PWA prompt
     const handleBeforeInstall = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
     };
-
     window.addEventListener('beforeinstallprompt', handleBeforeInstall);
     return () => window.removeEventListener('beforeinstallprompt', handleBeforeInstall);
   }, []);
+
+  const canInstall = Boolean(deferredPrompt) || isIOS;
 
   const handleInstallClick = async () => {
     if (deferredPrompt) {
       await deferredPrompt.prompt();
       const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === 'accepted') {
-        setDeferredPrompt(null);
-      }
+      if (outcome === 'accepted') setDeferredPrompt(null);
     } else if (isIOS) {
       setShowIOSModal(true);
     }
   };
 
-  if (isStandalone || bannerDismissed) {
-    return null;
+  const iosModal = showIOSModal && (
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="ios-install-title"
+      className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 p-3 sm:items-center"
+    >
+      <div className="w-full max-w-sm space-y-5 rounded-3xl border border-[#E5DED5] bg-white p-6 shadow-2xl">
+        <div className="flex items-start justify-between">
+          <h3 id="ios-install-title" className="font-serif text-lg font-semibold text-[#231F1D]">
+            Install on iPhone or iPad
+          </h3>
+          <button
+            type="button"
+            onClick={() => setShowIOSModal(false)}
+            aria-label="Close install instructions"
+            className="min-h-[44px] min-w-[44px] p-2 text-[#5C554F] hover:text-[#231F1D]"
+          >
+            <X className="h-5 w-5" aria-hidden="true" />
+          </button>
+        </div>
+        <ol className="list-decimal space-y-3 pl-5 text-[#3E3834]">
+          <li>
+            In Safari, tap <strong>Share</strong> <Share2 className="mx-0.5 inline h-4 w-4" aria-hidden="true" />.
+          </li>
+          <li>
+            Tap <strong>Add to Home Screen</strong>{' '}
+            <PlusSquare className="mx-0.5 inline h-4 w-4" aria-hidden="true" />.
+          </li>
+          <li>
+            Tap <strong>Add</strong>.
+          </li>
+        </ol>
+        <p className="text-[#3E3834]">No App Store account needed. Your journal stays on this device.</p>
+        <Button variant="outline" fullWidth onClick={() => setShowIOSModal(false)}>
+          Got it
+        </Button>
+      </div>
+    </div>
+  );
+
+  if (variant === 'settings') {
+    return (
+      <div className="space-y-2">
+        {isStandalone ? (
+          <p className="text-[#3E3834]">The app is already installed on this device.</p>
+        ) : canInstall ? (
+          <Button variant="outline" onClick={handleInstallClick} className="gap-2">
+            <Download className="h-4 w-4" aria-hidden="true" />
+            Install on this device
+          </Button>
+        ) : (
+          <p className="text-[#3E3834]">
+            Your browser doesn&apos;t offer installation here. In Chrome or Edge, use the browser menu
+            and choose &ldquo;Install app&rdquo;. On iPhone, use Safari&apos;s Share menu.
+          </p>
+        )}
+        {iosModal}
+      </div>
+    );
   }
 
-  // Show if either native prompt is available or it's an iOS browser
-  if (!deferredPrompt && !isIOS) {
-    return null;
-  }
+  if (isStandalone || bannerDismissed || !toolUsed || !canInstall) return null;
 
   return (
     <>
-      <div
-        role="region"
-        aria-label="Install App"
-        className="bg-[#F7EFEA] border-b border-[#E8D4C8] px-4 py-2.5 transition-all"
-      >
-        <div className="max-w-2xl mx-auto flex items-center justify-between gap-3">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-[#965342] text-white flex items-center justify-center shrink-0">
-              <Download className="w-4 h-4" />
-            </div>
-            <div>
-              <p className="text-xs font-semibold text-[#231F1D]">Install MenoWell</p>
-              <p className="text-[11px] text-[#68615C]">
-                Works offline, opens instantly from your home screen.
-              </p>
-            </div>
-          </div>
-
+      <div role="region" aria-label="Install the app" className="border-b border-[#E8D4C8] bg-[#F7EFEA] px-4 py-2.5">
+        <div className="mx-auto flex max-w-2xl items-center justify-between gap-3">
+          <p className="text-[#231F1D]">
+            <strong>Install the tracker</strong> so it opens from your home screen and works offline.
+          </p>
           <div className="flex items-center gap-2">
-            <Button
-              size="sm"
-              variant="primary"
-              onClick={handleInstallClick}
-              className="text-xs px-3 min-h-[34px]"
-            >
+            <Button size="sm" variant="primary" onClick={handleInstallClick}>
               Install
             </Button>
             <button
+              type="button"
               onClick={() => setBannerDismissed(true)}
               aria-label="Dismiss install banner"
-              className="text-[#8A817A] hover:text-[#231F1D] p-1"
+              className="min-h-[44px] min-w-[44px] p-2 text-[#5C554F] hover:text-[#231F1D]"
             >
-              <X className="w-4 h-4" />
+              <X className="h-4 w-4" aria-hidden="true" />
             </button>
           </div>
         </div>
       </div>
-
-      {/* iOS Install Instruction Modal */}
-      {showIOSModal && (
-        <div
-          role="dialog"
-          aria-modal="true"
-          className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-end sm:items-center justify-center p-3 animate-in fade-in"
-        >
-          <div className="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl border border-[#E5DED5] space-y-5">
-            <div className="flex items-start justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#965342] flex items-center justify-center text-white font-serif font-bold text-lg">
-                  M
-                </div>
-                <div>
-                  <h3 className="font-serif font-semibold text-lg text-[#231F1D]">
-                    Install on iPhone
-                  </h3>
-                  <p className="text-xs text-[#68615C]">Quick 3-step home screen setup</p>
-                </div>
-              </div>
-              <button
-                onClick={() => setShowIOSModal(false)}
-                className="text-[#8A817A] hover:text-[#231F1D] p-1"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            <ol className="space-y-3.5 text-sm text-[#3E3834]">
-              <li className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-[#F3EFEA] text-[#965342] font-semibold text-xs flex items-center justify-center shrink-0 mt-0.5">
-                  1
-                </span>
-                <span className="leading-snug">
-                  Tap the <strong className="text-[#231F1D]">Share</strong> button{' '}
-                  <Share2 className="w-4 h-4 inline text-[#965342] mx-0.5" /> at the bottom of Safari.
-                </span>
-              </li>
-
-              <li className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-[#F3EFEA] text-[#965342] font-semibold text-xs flex items-center justify-center shrink-0 mt-0.5">
-                  2
-                </span>
-                <span className="leading-snug">
-                  Scroll down and tap{' '}
-                  <strong className="text-[#231F1D]">Add to Home Screen</strong>{' '}
-                  <PlusSquare className="w-4 h-4 inline text-[#965342] mx-0.5" />.
-                </span>
-              </li>
-
-              <li className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-[#F3EFEA] text-[#965342] font-semibold text-xs flex items-center justify-center shrink-0 mt-0.5">
-                  3
-                </span>
-                <span className="leading-snug">
-                  Tap <strong className="text-[#231F1D]">Add</strong> in the top right corner. Done!
-                </span>
-              </li>
-            </ol>
-
-            <div className="bg-[#EFF7F2] rounded-xl p-3 flex items-center gap-2.5 text-xs text-[#2C6E49]">
-              <CheckCircle2 className="w-4 h-4 shrink-0 text-[#2C6E49]" />
-              <span>No App Store account needed. 100% private to this device.</span>
-            </div>
-
-            <Button
-              variant="outline"
-              fullWidth
-              onClick={() => setShowIOSModal(false)}
-            >
-              Got it
-            </Button>
-          </div>
-        </div>
-      )}
+      {iosModal}
     </>
   );
 }

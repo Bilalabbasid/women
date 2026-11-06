@@ -171,7 +171,7 @@ export const NotificationService = {
             body: payload.body,
             icon: payload.icon,
             tag: payload.tag,
-            data: { url: '/treatments' },
+            data: { url: '/app/treatments/' },
           });
           return { success: true, message: `Notification sent using ${settings.privacyMode} mode.` };
         }

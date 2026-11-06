@@ -47,7 +47,7 @@ export function AppHeader({
             </button>
           ) : (
             <Link
-              href="/dashboard"
+              href="/app/today/"
               className="flex items-center gap-2 group"
               aria-label="MenoWell Dashboard"
             >
@@ -71,7 +71,7 @@ export function AppHeader({
         <div className="flex items-center gap-2">
           {showPrivacyBadge && (
             <Link
-              href="/privacy-center"
+              href="/app/privacy/"
               className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-[#EDF3EF] text-[#2C6E49] border border-[#CFDFD5] hover:bg-[#E2ECE5] transition"
               title="Your health data stays on this device"
             >
@@ -82,7 +82,7 @@ export function AppHeader({
 
           {showSettings && (
             <Link
-              href="/settings"
+              href="/app/settings/"
               aria-label="App Settings"
               className="w-9 h-9 rounded-xl flex items-center justify-center text-[#68615C] hover:bg-[#F3EFEA] hover:text-[#231F1D] transition"
             >

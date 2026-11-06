@@ -25,7 +25,7 @@ export default function PricingPage() {
         title="Membership"
         subtitle="Transparent, privacy-aligned plans"
         showBack={true}
-        backHref="/dashboard"
+        backHref="/app/today/"
         showPrivacyBadge={true}
         showSettings={false}
       />

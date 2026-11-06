@@ -181,7 +181,7 @@ export default function DashboardPage() {
               })}
             </div>
 
-            <Link href="/check-in">
+            <Link href="/app/check-in/">
               <Button variant="primary" fullWidth size="lg" className="gap-2 text-sm sm:text-base">
                 <Sparkles className="w-4 h-4" />
                 <span>{todayCheckin ? 'Edit Today’s Check-in' : 'Complete Full Check-in'}</span>
@@ -197,7 +197,7 @@ export default function DashboardPage() {
             <h3 id="treatment-heading" className="text-sm font-semibold text-[#231F1D]">
               Today’s Treatment Schedule
             </h3>
-            <Link href="/treatments" className="text-xs text-[#965342] hover:underline font-medium">
+            <Link href="/app/treatments/" className="text-xs text-[#965342] hover:underline font-medium">
               Manage Regimens
             </Link>
           </div>
@@ -205,7 +205,7 @@ export default function DashboardPage() {
           {activeTreatments.length === 0 ? (
             <Card variant="muted" className="p-4 flex items-center justify-between gap-3 text-xs text-[#68615C]">
               <span>No active treatments or supplements recorded.</span>
-              <Link href="/treatments">
+              <Link href="/app/treatments/">
                 <Button size="sm" variant="outline" className="text-xs">
                   Add Regimen
                 </Button>
@@ -291,7 +291,7 @@ export default function DashboardPage() {
             <h3 id="recent-summary-heading" className="text-sm font-semibold text-[#231F1D]">
               Recent Logs
             </h3>
-            <Link href="/timeline" className="text-xs text-[#965342] hover:underline font-medium">
+            <Link href="/app/timeline/" className="text-xs text-[#965342] hover:underline font-medium">
               View Full Timeline
             </Link>
           </div>
@@ -302,7 +302,7 @@ export default function DashboardPage() {
                 No check-ins recorded yet on this device.
               </p>
               <div className="flex items-center justify-center gap-2">
-                <Link href="/check-in">
+                <Link href="/app/check-in/">
                   <Button size="sm" variant="primary" className="gap-1.5 text-xs">
                     <PlusCircle className="w-3.5 h-3.5" />
                     <span>Log First Check-in</span>
@@ -339,7 +339,7 @@ export default function DashboardPage() {
                     )}
                   </div>
                   <Link
-                    href="/timeline"
+                    href="/app/timeline/"
                     className="text-[#8A817A] hover:text-[#231F1D] p-1 mt-1 shrink-0"
                     aria-label="View entry in timeline"
                   >
@@ -353,7 +353,7 @@ export default function DashboardPage() {
 
         {/* Quick Navigation Cards */}
         <section className="grid grid-cols-2 gap-3 pt-2">
-          <Link href="/insights" className="block group">
+          <Link href="/app/insights/" className="block group">
             <Card variant="default" className="p-4 h-full group-hover:border-[#965342] transition-colors">
               <div className="w-8 h-8 rounded-lg bg-[#F7EFEA] text-[#965342] flex items-center justify-center mb-2">
                 <Brain className="w-4 h-4" />
@@ -367,7 +367,7 @@ export default function DashboardPage() {
             </Card>
           </Link>
 
-          <Link href="/doctor" className="block group">
+          <Link href="/app/doctor-report/" className="block group">
             <Card variant="default" className="p-4 h-full group-hover:border-[#965342] transition-colors">
               <div className="w-8 h-8 rounded-lg bg-[#EFF5F0] text-[#2C6E49] flex items-center justify-center mb-2">
                 <Stethoscope className="w-4 h-4" />

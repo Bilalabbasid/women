@@ -143,7 +143,7 @@ describe('Accounts, Consent and Data Retention (Prompt 2)', () => {
     const okReq = new Request('https://menoverdict.com/api/newsletter/subscribe/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: 'reader@example.com' }),
+      body: JSON.stringify({ email: 'reader@example.com', consented: true }),
     });
     const okRes = await newsletterPost(okReq);
     expect(okRes.status).toBe(200);
@@ -151,7 +151,7 @@ describe('Accounts, Consent and Data Retention (Prompt 2)', () => {
     const badReq = new Request('https://menoverdict.com/api/newsletter/subscribe/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: 'reader@example.com', symptoms: ['hot-flashes'] }),
+      body: JSON.stringify({ email: 'reader@example.com', consented: true, symptoms: ['hot-flashes'] }),
     });
     const badRes = await newsletterPost(badReq);
     expect(badRes.status).toBe(400);

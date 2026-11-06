@@ -13,7 +13,7 @@ import { SITE } from '@/lib/site/config';
 export async function POST() {
   const apiKey = process.env.GEMINI_API_KEY || process.env.AI_API_KEY || '';
 
-  if (!SITE.features.aiPromotion || !apiKey) {
+  if (!SITE.flags.aiPromotion || !apiKey) {
     return NextResponse.json(
       {
         available: false,

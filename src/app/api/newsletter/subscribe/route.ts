@@ -1,8 +1,8 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 const ALLOWED_KEYS = new Set(['email', 'consented']);
 
-export async function POST(req: NextRequest) {
+export async function POST(req: Request) {
   try {
     const body = (await req.json()) as Record<string, unknown>;
     if (!body || typeof body !== 'object') {

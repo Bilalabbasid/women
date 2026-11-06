@@ -5,15 +5,15 @@ import Link from 'next/link';
 import { AppHeader } from '@/components/app/app-header';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import type { RetentionPeriodDays } from '@/lib/account/types';
+import type { RetentionDays } from '@/lib/account/types';
 
-const RETENTION_OPTIONS: RetentionPeriodDays[] = [10, 20, 30, 90];
+const RETENTION_OPTIONS: RetentionDays[] = [10, 20, 30, 90];
 
 export default function AccountPage() {
   const [email, setEmail] = useState('');
   const [userId, setUserId] = useState<string | null>(null);
   const [consentGiven, setConsentGiven] = useState(false);
-  const [retentionDays, setRetentionDays] = useState<RetentionPeriodDays>(30);
+  const [retentionDays, setRetentionDays] = useState<RetentionDays>(30);
   const [statusMsg, setStatusMsg] = useState<string | null>(null);
 
   const handleSignIn = async (e: React.FormEvent) => {
@@ -71,7 +71,22 @@ export default function AccountPage() {
 
   const handleExport = async () => {
     if (!userId) return;
-    window.location.href = `/api/user/export/?userId=${encodeURIComponent(userId)}`;
+    try {
+      const res = await fetch(`/api/user/export/?userId=${encodeURIComponent(userId)}`);
+      if (!res.ok) return;
+      const data = await res.json();
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `menoverdict-account-export-${new Date().toISOString().slice(0, 10)}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch {
+      setStatusMsg('Could not export synced data right now.');
+    }
   };
 
   const handleDeleteAccount = async () => {
@@ -162,7 +177,7 @@ export default function AccountPage() {
               <select
                 id="retention-select"
                 value={retentionDays}
-                onChange={(e) => setRetentionDays(Number(e.target.value) as RetentionPeriodDays)}
+                onChange={(e) => setRetentionDays(Number(e.target.value) as RetentionDays)}
                 className="mt-1 min-h-[44px] rounded-xl border border-[#D8CFC4] bg-white px-3"
               >
                 {RETENTION_OPTIONS.map((days) => (

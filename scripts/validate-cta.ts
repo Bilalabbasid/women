@@ -7,13 +7,14 @@
  *  - /go/ links only with affiliate_disclosure: true.                 → error
  *  - No /go/ link, partner URL or affiliate wording in tool results,
  *    tracker screens or urgent guidance code.                         → error
- * The full CTA matrix (content/_cta/) and banned combinations are added in
- * Phase 6. Until content/_cta/ exists, cta_profile values are only listed.
+ *  - CTA profiles satisfy the brief's matrix, and each page names a real profile.
+ * Partner configuration and the selection engine are added in Phase 6.
  */
 import fs from 'node:fs';
 import path from 'node:path';
 import { loadContent, DEFAULT_CONTENT_ROOT } from '../src/lib/content/loader';
 import { renderMarkdown } from '../src/lib/content/markdown';
+import { loadCtaProfiles, profileProblems } from '../src/lib/cta/profiles';
 import { Report } from './lib/report';
 
 const r = new Report('validate:cta');
@@ -59,8 +60,19 @@ for (const dir of NO_COMMERCE_DIRS) {
   }
 }
 
-const profiles = [...new Set(store.pages.map((p) => p.fm.cta_profile))];
-if (!fs.existsSync(path.join(DEFAULT_CONTENT_ROOT, '_cta'))) {
-  r.note(`content/_cta/ not built yet (Phase 6). cta_profile values in use: ${profiles.join(', ') || 'none'}`);
+// CTA profiles: schema, matrix invariants, and every page's profile must exist.
+const { profiles, errors: profileErrors } = loadCtaProfiles();
+for (const e of profileErrors) r.error('content/_cta', e);
+for (const p of profileProblems(profiles)) r.error('content/_cta/profiles.yaml', p);
+for (const page of store.pages) {
+  const profile = profiles[page.fm.cta_profile];
+  if (!profile) {
+    r.error(page.file, `unknown cta_profile "${page.fm.cta_profile}"`);
+    continue;
+  }
+  if (profile.placement === 'none' && page.fm.affiliate_disclosure) {
+    r.warn(page.file, `affiliate_disclosure is true but profile "${page.fm.cta_profile}" allows no commercial content`);
+  }
 }
+r.note(`${Object.keys(profiles).length} CTA profile(s) checked against the CTA matrix`);
 r.finish();

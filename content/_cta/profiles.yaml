@@ -1,0 +1,388 @@
+# CTA profiles. Each page's `cta_profile` must name one of these.
+# Schema and invariants: src/lib/cta/profiles.ts. The CTA matrix in AGENTS.md is
+# encoded there as a test oracle, so a profile can be made stricter but never looser.
+#
+# Selection order on every page: safety -> understand -> act for free -> get care or buy.
+# Commercial categories name the TYPE of offer; real partners are configured in
+# partners.yaml (Phase 6) and stay disabled until verified.
+# Placement "after_evidence" means after the opening answer and the evidence sections.
+# A commercial block never appears inside or beside an urgent section, whatever the profile.
+
+profiles:
+  learn_stage:
+    label: Learning pages (what is perimenopause, stages, age)
+    matrix_row: "Learn: Symptom checklist or tracker; commercial usually none"
+    free:
+      - { kind: tool, target: /tools/symptoms-checklist/, purpose: "See which symptoms may fit, with links to each symptom page" }
+      - { kind: tool, target: /tools/symptom-tracker/, purpose: Start a private log to take to an appointment }
+      - { kind: email_sequence, target: perimenopause_basics, purpose: Optional basics sequence with clear consent }
+    commercial_allowed: []
+    commercial_never: [supplement_as_treatment, generic_supplement]
+    placement: none
+    max_commercial_blocks: 0
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+
+  vasomotor:
+    label: Hot flashes and night sweats
+    matrix_row: "Hot flashes, night sweats"
+    free:
+      - { kind: tool, target: /tools/symptom-tracker/, purpose: Track episodes for two weeks and bring the report }
+      - { kind: tool, target: /tools/treatment-questions/, purpose: Build treatment questions for a clinician }
+    commercial_allowed: [telehealth, cbt_program, comfort_bedding]
+    commercial_never: [supplement_as_treatment, cooling_product_as_treatment, generic_supplement]
+    placement: after_evidence
+    max_commercial_blocks: 1
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+    copy_examples:
+      - "Waking up soaked? Track two weeks of nights and bring the report to your appointment."
+      - "Want to discuss prescription options? Compare menopause clinicians by cost, insurance and treatment range. We may earn a commission."
+    notes: Telehealth must cover hormonal AND non-hormonal options. Bedding is labelled comfort only, never a treatment.
+
+  sleep:
+    label: Insomnia and night waking
+    matrix_row: "Insomnia, 3 a.m. waking"
+    free:
+      - { kind: tool, target: /tools/symptom-tracker/, purpose: Sleep and night-sweat log }
+      - { kind: email_sequence, target: sleep, purpose: Optional sleep sequence with clear consent }
+    commercial_allowed: [cbt_i_program, telehealth]
+    commercial_never: [sleep_supplement, supplement_as_treatment]
+    placement: after_evidence
+    max_commercial_blocks: 1
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+    notes: Telehealth only when the page links poor sleep to night sweats. The CBT-I programme must be credible.
+
+  fatigue:
+    label: Fatigue
+    matrix_row: "Fatigue"
+    free:
+      - { kind: question_list, target: /symptoms/fatigue/, purpose: Doctor checklist for other causes of tiredness }
+    commercial_allowed: [telehealth]
+    commercial_never: [energy_supplement, supplement_as_treatment]
+    placement: after_section
+    after_section_id: other-causes
+    max_commercial_blocks: 1
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+
+  mood:
+    label: Anxiety, panic, irritability and low mood
+    matrix_row: "Anxiety, panic, irritability, low mood"
+    free:
+      - { kind: tool, target: /tools/symptom-tracker/, purpose: Mood log to share with a doctor }
+      - { kind: urgent_guidance, target: /urgent-help/, purpose: "Crisis lines, always visible on these pages" }
+    commercial_allowed: [therapy_service, cbt_program, telehealth]
+    commercial_never: [mood_supplement, supplement_as_treatment]
+    placement: after_evidence
+    max_commercial_blocks: 1
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+    notes: No offer beside crisis content. Pages with the `crisis` safety flag carry no commercial links at all (validate:cta).
+
+  cognitive:
+    label: Brain fog and memory
+    matrix_row: "Brain fog, memory"
+    free:
+      - { kind: tool, target: /tools/symptom-tracker/, purpose: Symptom log }
+      - { kind: question_list, target: /symptoms/brain-fog/, purpose: Other-causes checklist and doctor questions }
+    commercial_allowed: [telehealth]
+    commercial_never: [nootropic, supplement_as_treatment]
+    placement: after_section
+    after_section_id: other-causes
+    max_commercial_blocks: 1
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+    copy_examples:
+      - "Check what else could be causing this, then get a list of questions for your doctor."
+
+  cardio_urgent:
+    label: Palpitations, dizziness, chest symptoms
+    matrix_row: "Palpitations, dizziness, chest symptoms"
+    free:
+      - { kind: urgent_guidance, target: /urgent-help/, purpose: Urgent-care guidance first }
+      - { kind: question_list, target: /tools/treatment-questions/, purpose: Clinician questions }
+    commercial_allowed: [telehealth]
+    commercial_never: [supplement_as_treatment, generic_supplement]
+    placement: after_section
+    after_section_id: when-to-see-a-doctor
+    max_commercial_blocks: 1
+    clinician_approval_required: true
+    sticky_mobile_cta: false
+    notes: Only outside the urgent section, and only if a clinician approves the placement.
+
+  weight:
+    label: Weight gain and belly fat
+    matrix_row: "Weight gain, belly fat"
+    free:
+      - { kind: question_list, target: /symptoms/weight-gain/, purpose: "What is known, plus clinician questions" }
+    commercial_allowed: [strength_program, strength_equipment, telehealth]
+    commercial_never: [diet_pills, detox, goal_weight_tool, before_after_claims, weight_drug_promotion, supplement_as_treatment]
+    placement: after_evidence
+    max_commercial_blocks: 1
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+
+  musculoskeletal:
+    label: Joint and muscle pain
+    matrix_row: "Joint and muscle pain"
+    free:
+      - { kind: tool, target: /tools/symptom-tracker/, purpose: Pain and activity log }
+    commercial_allowed: [strength_equipment, mobility_products]
+    commercial_never: [collagen_claims, anti_inflammatory_supplement, supplement_as_treatment]
+    placement: after_evidence
+    max_commercial_blocks: 1
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+    notes: Products are labelled general support, never treatment.
+
+  genitourinary_vaginal:
+    label: Vaginal dryness and painful sex
+    matrix_row: "Vaginal dryness, painful sex"
+    free:
+      - { kind: article, target: /care/moisturizers-and-lubricants/, purpose: Treatment comparison }
+      - { kind: tool, target: /tools/treatment-questions/, purpose: Clinician script }
+    commercial_allowed: [lubricants_moisturizers, telehealth]
+    commercial_never: [vaginal_rejuvenation, supplement_as_treatment]
+    placement: after_evidence
+    max_commercial_blocks: 1
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+    copy_examples:
+      - "See how moisturisers, lubricants and prescription options differ. Paid links are labelled."
+    notes: Telehealth for prescription options such as vaginal estrogen.
+
+  libido:
+    label: Low libido
+    matrix_row: "Low libido"
+    free:
+      - { kind: tool, target: /tools/treatment-questions/, purpose: Clinician questions }
+    commercial_allowed: [sexual_health_telehealth, lubricants_moisturizers]
+    commercial_never: [libido_supplement, supplement_as_treatment]
+    placement: after_evidence
+    max_commercial_blocks: 1
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+
+  urinary:
+    label: Bladder symptoms and UTIs
+    matrix_row: "Bladder symptoms, UTIs"
+    free:
+      - { kind: tool, target: /tools/symptom-tracker/, purpose: Symptom log }
+      - { kind: urgent_guidance, target: /urgent-help/, purpose: When to seek urgent care }
+    commercial_allowed: [telehealth]
+    commercial_never: [cranberry_cure_claims, supplement_as_treatment]
+    placement: after_section
+    after_section_id: when-to-see-a-doctor
+    max_commercial_blocks: 1
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+    notes: Telehealth only when not urgent. No offer near fever or severe pain guidance.
+
+  skin_hair:
+    label: Hair, skin and itching
+    matrix_row: "Hair, skin, itching"
+    free:
+      - { kind: question_list, target: /symptoms/hair-thinning/, purpose: Other-causes checklist }
+    commercial_allowed: [dermatology_care]
+    commercial_never: [collagen_claims, hair_growth_promise, supplement_as_treatment]
+    placement: after_section
+    after_section_id: other-causes
+    max_commercial_blocks: 1
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+    notes: Only evidence-backed topical or dermatology care, and only where the page supports it.
+
+  general_symptom:
+    label: Other symptoms (headaches, digestion, eyes, mouth, ears, odor, tingling, breast tenderness)
+    matrix_row: "Not a matrix row: conservative default (free tools first, telehealth only after other causes)"
+    free:
+      - { kind: tool, target: /tools/symptom-tracker/, purpose: Symptom log }
+      - { kind: tool, target: /tools/treatment-questions/, purpose: Doctor questions }
+    commercial_allowed: [telehealth]
+    commercial_never: [supplement_as_treatment, generic_supplement]
+    placement: after_section
+    after_section_id: other-causes
+    max_commercial_blocks: 1
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+
+  bleeding:
+    label: Irregular periods and bleeding
+    matrix_row: "Irregular periods, bleeding"
+    free:
+      - { kind: urgent_guidance, target: /urgent-help/, purpose: When to be checked }
+      - { kind: tool, target: /tools/12-month-counter/, purpose: 12-month counter and when bleeding needs checking }
+      - { kind: tool, target: /tools/treatment-questions/, purpose: What to say at the appointment }
+    commercial_allowed: []
+    commercial_never: [offer_that_may_delay_assessment, supplement_as_treatment]
+    placement: none
+    max_commercial_blocks: 0
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+
+  specialist_group:
+    label: Surgical or early menopause, POI and other specific situations
+    matrix_row: "Surgical or early menopause, POI"
+    free:
+      - { kind: article, target: /care/find-a-menopause-specialist/, purpose: Specialist-care guide }
+      - { kind: tool, target: /tools/treatment-questions/, purpose: Questions for a specialist }
+    commercial_allowed: [clinician_led_specialist_care]
+    commercial_never: [generic_supplement, supplement_as_treatment]
+    placement: after_evidence
+    max_commercial_blocks: 1
+    clinician_approval_required: true
+    sticky_mobile_cta: false
+    notes: Only clinician-led care that actually serves this group (confirm before enabling).
+
+  cancer_history:
+    label: Breast cancer history and chemotherapy-induced menopause
+    matrix_row: "Breast cancer history"
+    free:
+      - { kind: tool, target: /tools/treatment-questions/, purpose: Questions for the oncology team }
+    commercial_allowed: []
+    commercial_never: [hormone_products, generic_supplement, supplement_as_treatment]
+    placement: none
+    max_commercial_blocks: 0
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+
+  hrt_evaluating:
+    label: Hormone therapy explainers
+    matrix_row: "Funnel: Evaluating (HRT patch vs pill): question builder, then clinician access after the explanation"
+    free:
+      - { kind: tool, target: /tools/treatment-questions/, purpose: Question builder }
+      - { kind: email_sequence, target: hrt_questions, purpose: Optional HRT-questions sequence with clear consent }
+    commercial_allowed: [telehealth]
+    commercial_never: [supplement_as_treatment, generic_supplement]
+    placement: after_evidence
+    max_commercial_blocks: 1
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+
+  nonhormonal_evaluating:
+    label: Non-hormonal treatment explainers
+    matrix_row: "Funnel: Evaluating: question builder, then clinician access after the explanation"
+    free:
+      - { kind: tool, target: /tools/treatment-questions/, purpose: Question builder }
+    commercial_allowed: [telehealth]
+    commercial_never: [supplement_as_treatment, generic_supplement]
+    placement: after_evidence
+    max_commercial_blocks: 1
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+
+  treatment_overview:
+    label: Treatments hub
+    matrix_row: "Funnel: Evaluating"
+    free:
+      - { kind: tool, target: /tools/does-it-work-checker/, purpose: Compare options by evidence grade }
+      - { kind: tool, target: /tools/treatment-questions/, purpose: Question builder }
+    commercial_allowed: [telehealth]
+    commercial_never: [supplement_as_treatment, generic_supplement]
+    placement: after_evidence
+    max_commercial_blocks: 1
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+
+  diw_pending:
+    label: Does it work, before the grade is set
+    matrix_row: "Rule 7: set the evidence grade before checking whether an affiliate programme exists"
+    free:
+      - { kind: tool, target: /tools/does-it-work-checker/, purpose: Other graded options }
+    commercial_allowed: []
+    commercial_never: [buy_link_for_not_supported_item, supplement_as_treatment]
+    placement: none
+    max_commercial_blocks: 0
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+    notes: Every Does-it-work page starts here. It moves to diw_supported or diw_not_supported only after the grade is set and reviewed.
+
+  diw_supported:
+    label: Does it work, graded strong or moderate for the stated use
+    matrix_row: "Does it work: supported"
+    free:
+      - { kind: article, target: /does-it-work/, purpose: Evidence and label checklist }
+    commercial_allowed: [vetted_product_with_claim_limits]
+    commercial_never: [claims_beyond_evidence]
+    placement: after_evidence
+    max_commercial_blocks: 1
+    clinician_approval_required: true
+    sticky_mobile_cta: false
+
+  diw_not_supported:
+    label: Does it work, graded limited, not supported or harm concern
+    matrix_row: "Does it work: not supported"
+    free:
+      - { kind: article, target: /treatments/nonhormonal/, purpose: Better-supported alternatives }
+    commercial_allowed: [telehealth, evidence_backed_alternative]
+    commercial_never: [buy_link_for_not_supported_item, supplement_as_treatment]
+    placement: after_evidence
+    max_commercial_blocks: 1
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+    copy_examples:
+      - "Looking for something with stronger evidence? See the hot flash options that guidelines support."
+
+  care_comparison:
+    label: Telehealth comparisons and reviews
+    matrix_row: "Telehealth comparison"
+    free:
+      - { kind: article, target: /compare/, purpose: Choose by situation }
+    commercial_allowed: [telehealth, sexual_health_telehealth]
+    commercial_never: [ranking_by_commission]
+    placement: after_evidence
+    max_commercial_blocks: 6
+    clinician_approval_required: false
+    sticky_mobile_cta: true
+    notes: Each provider may be listed. Disclosure before the first link. Never rank by commission.
+
+  care_access:
+    label: Finding and paying for care
+    matrix_row: "Funnel: Worried/Evaluating: free questions first, one relevant care option after"
+    free:
+      - { kind: tool, target: /tools/treatment-questions/, purpose: Questions to take to a clinician }
+      - { kind: article, target: /care/find-a-menopause-specialist/, purpose: How to find a certified practitioner }
+    commercial_allowed: [telehealth]
+    commercial_never: [supplement_as_treatment]
+    placement: after_evidence
+    max_commercial_blocks: 1
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+
+  books:
+    label: Book recommendations
+    matrix_row: "Research plan: books and fitness gear (low risk)"
+    free:
+      - { kind: article, target: /evidence/how-we-grade/, purpose: How we judged each book }
+    commercial_allowed: [books]
+    commercial_never: [supplement_as_treatment]
+    placement: after_evidence
+    max_commercial_blocks: 1
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+
+  tool:
+    label: Tool pages and tool results
+    matrix_row: "Never put affiliate links inside tracker results, stage results or urgent guidance"
+    free:
+      - { kind: article, target: /care/, purpose: Neutral "find care options" page (no symptoms or results in the URL) }
+    commercial_allowed: []
+    commercial_never: [supplement_as_treatment]
+    placement: none
+    max_commercial_blocks: 0
+    clinician_approval_required: false
+    sticky_mobile_cta: false
+
+  site_none:
+    label: Site, legal and evidence-method pages
+    matrix_row: "No commercial content"
+    free:
+      - { kind: tool, target: /tools/symptom-tracker/, purpose: Private tracker }
+    commercial_allowed: []
+    commercial_never: []
+    placement: none
+    max_commercial_blocks: 0
+    clinician_approval_required: false
+    sticky_mobile_cta: false

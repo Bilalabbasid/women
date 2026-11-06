@@ -16,11 +16,13 @@
     "validate:privacy": "tsx scripts/validate-privacy.ts",
     "validate:seo": "tsx scripts/validate-seo.ts",
     "validate:a11y": "tsx scripts/validate-a11y.ts",
-    "validate:source": "npm run validate:content && npm run validate:links && npm run validate:cta",
+    "validate:source": "npm run validate:content && npm run validate:plan && npm run validate:links && npm run validate:cta",
     "validate:build": "npm run validate:seo && npm run validate:a11y && npm run validate:privacy",
     "validate": "npm run validate:source && npm run build && npm run validate:build",
     "prebuild": "tsx scripts/validate-content.ts",
-    "content:approve": "tsx scripts/approve-page.ts"
+    "content:approve": "tsx scripts/approve-page.ts",
+    "validate:plan": "tsx scripts/validate-plan.ts",
+    "plan:import": "tsx scripts/keyword-import.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",

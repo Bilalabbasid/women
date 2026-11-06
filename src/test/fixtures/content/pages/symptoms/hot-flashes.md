@@ -24,7 +24,7 @@ evidence_grade: per_option
 claims:
   - { id: claim-one, text: "A fixture claim with a source.", sources: [fixture-guideline] }
 safety_flags: []
-cta_profile: symptom_vasomotor
+cta_profile: vasomotor
 hub: /symptoms/
 sources: [fixture-guideline]
 related: []

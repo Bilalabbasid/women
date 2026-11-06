@@ -9,7 +9,18 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "validate:content": "tsx scripts/validate-content.ts",
+    "validate:links": "tsx scripts/link-audit.ts",
+    "validate:cta": "tsx scripts/validate-cta.ts",
+    "validate:privacy": "tsx scripts/validate-privacy.ts",
+    "validate:seo": "tsx scripts/validate-seo.ts",
+    "validate:a11y": "tsx scripts/validate-a11y.ts",
+    "validate:source": "npm run validate:content && npm run validate:links && npm run validate:cta",
+    "validate:build": "npm run validate:seo && npm run validate:a11y && npm run validate:privacy",
+    "validate": "npm run validate:source && npm run build && npm run validate:build",
+    "prebuild": "tsx scripts/validate-content.ts",
+    "content:approve": "tsx scripts/approve-page.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -37,6 +48,7 @@
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
     "@types/hast": "^3.0.5",
+    "@types/jsdom": "^30.0.0",
     "@types/mdast": "^4.0.4",
     "@types/node": "^24.19.1",
     "@types/react": "^19",

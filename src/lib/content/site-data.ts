@@ -100,6 +100,16 @@ export function childrenOf(hubUrl: string): ContentPage[] {
  */
 export function relatedFor(page: ContentPage, limit = 6): ContentPage[] {
   const { pages, byUrl } = getSiteData();
+  return relatedFrom(page, pages, byUrl, limit);
+}
+
+/** Pure version used by the site and by scripts/link-audit.ts. */
+export function relatedFrom(
+  page: ContentPage,
+  pages: ContentPage[],
+  byUrl: Map<string, ContentPage>,
+  limit = 6,
+): ContentPage[] {
   const chosen: ContentPage[] = [];
   for (const u of page.fm.related) {
     const p = byUrl.get(u);

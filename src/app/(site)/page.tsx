@@ -6,7 +6,7 @@ import { buildMetadata } from '@/lib/seo/metadata';
 import { navHubs, getSiteData, CLUSTER_LABELS } from '@/lib/content/site-data';
 
 export const metadata: Metadata = buildMetadata({
-  title: `${SITE.name}: evidence-graded perimenopause and menopause information`,
+  title: `${SITE.name}: evidence-graded menopause information`,
   description:
     'Independent perimenopause and menopause information. Every claim graded and sourced, every commission disclosed, plus a private symptom tracker.',
   path: '/',

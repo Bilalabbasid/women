@@ -166,7 +166,7 @@ export default function DoctorModePage() {
               1. Current Regimens as Recorded ({treatments.length})
             </h4>
             {treatments.length === 0 ? (
-              <p className="text-xs text-[#7A736E] italic bg-[#FAF8F5] p-3 rounded-xl border border-[#E5DED5]">
+              <p className="text-xs text-[#5C554F] italic bg-[#FAF8F5] p-3 rounded-xl border border-[#E5DED5]">
                 No active treatments recorded in local app.
               </p>
             ) : (
@@ -191,7 +191,7 @@ export default function DoctorModePage() {
             </h4>
 
             {checkins.length === 0 ? (
-              <p className="text-xs text-[#7A736E] italic bg-[#FAF8F5] p-3 rounded-xl border border-[#E5DED5]">
+              <p className="text-xs text-[#5C554F] italic bg-[#FAF8F5] p-3 rounded-xl border border-[#E5DED5]">
                 No check-ins recorded during this {reportWindow}-day window.
               </p>
             ) : (
@@ -245,7 +245,7 @@ export default function DoctorModePage() {
                   </div>
                   <button
                     onClick={() => removeQuestion(idx)}
-                    className="text-[#8A817A] hover:text-[#A33A33] p-1 print:hidden"
+                    className="text-[#5C554F] hover:text-[#A33A33] p-1 print:hidden"
                     title="Remove question"
                     aria-label="Remove question"
                   >
@@ -294,7 +294,7 @@ export default function DoctorModePage() {
         </div>
 
         {/* Client-side privacy statement */}
-        <p className="text-center text-xs text-[#7A736E] flex items-center justify-center gap-1.5 pb-6">
+        <p className="text-center text-xs text-[#5C554F] flex items-center justify-center gap-1.5 pb-6">
           <CheckCircle2 className="w-3.5 h-3.5 text-[#2C6E49]" />
           Generated 100% in your browser • Zero server transmission
         </p>

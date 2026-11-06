@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      # Content, links and CTA rules work on source files.
+      - run: npm run validate:source
+      # Preview build: drafts excluded, everything noindex.
+      - run: npm run build
+      # SEO, accessibility and privacy checks read the prerendered HTML.
+      - run: npm run validate:build

@@ -112,7 +112,7 @@ export default function OnboardingPage() {
                   <p className="text-xs text-[#554E48] mt-1 leading-relaxed">
                     Records stay purely in your device&apos;s IndexedDB. Zero cloud uploads, zero account required.
                   </p>
-                  <p className="text-xs text-[#7A736E] mt-2 bg-[#F3EFEA] p-2 rounded-lg">
+                  <p className="text-xs text-[#5C554F] mt-2 bg-[#F3EFEA] p-2 rounded-lg">
                     Note: Clearing your browser data will delete local logs. You can export encrypted backups anytime.
                   </p>
                 </div>

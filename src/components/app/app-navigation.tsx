@@ -52,7 +52,7 @@ export function AppNavigation() {
                   'flex flex-col items-center justify-center gap-1 transition-colors select-none group min-h-[48px]',
                   isActive
                     ? 'text-[#965342] font-semibold'
-                    : 'text-[#7A736E] hover:text-[#231F1D]'
+                    : 'text-[#5C554F] hover:text-[#231F1D]'
                 )}
               >
                 <div

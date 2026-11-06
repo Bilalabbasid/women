@@ -340,7 +340,7 @@ export default function DashboardPage() {
                   </div>
                   <Link
                     href="/app/timeline/"
-                    className="text-[#8A817A] hover:text-[#231F1D] p-1 mt-1 shrink-0"
+                    className="text-[#5C554F] hover:text-[#231F1D] p-1 mt-1 shrink-0"
                     aria-label="View entry in timeline"
                   >
                     <ChevronRight className="w-4 h-4" />

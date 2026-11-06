@@ -201,8 +201,9 @@ export default function CheckinPage() {
 
         {/* Date Selector */}
         <div className="flex items-center justify-between gap-3 bg-white p-3 rounded-2xl border border-[#E5DED5]">
-          <span className="text-xs font-semibold text-[#68615C]">Logging For:</span>
+          <label htmlFor="checkin-date" className="text-xs font-semibold text-[#5C554F]">Logging for</label>
           <input
+            id="checkin-date"
             type="date"
             value={selectedDate}
             max={todayStr}
@@ -235,7 +236,7 @@ export default function CheckinPage() {
                   }`}
                 >
                   <p className="text-xs font-semibold">{f.label}</p>
-                  <p className={`text-xs hidden sm:block ${isSelected ? 'text-white/80' : 'text-[#8A817A]'}`}>
+                  <p className={`text-xs hidden sm:block ${isSelected ? 'text-white/80' : 'text-[#5C554F]'}`}>
                     {f.desc}
                   </p>
                 </button>
@@ -262,6 +263,7 @@ export default function CheckinPage() {
                 variant="outline"
                 size="sm"
                 onClick={() => setSleepHours((h) => Math.max(0, h - 0.5))}
+                aria-label="Less sleep (half an hour)"
                 className="w-10 h-10 p-0 rounded-xl"
               >
                 <Minus className="w-4 h-4" />
@@ -276,6 +278,7 @@ export default function CheckinPage() {
                 variant="outline"
                 size="sm"
                 onClick={() => setSleepHours((h) => Math.min(14, h + 0.5))}
+                aria-label="More sleep (half an hour)"
                 className="w-10 h-10 p-0 rounded-xl"
               >
                 <Plus className="w-4 h-4" />
@@ -312,6 +315,7 @@ export default function CheckinPage() {
                 variant="outline"
                 size="sm"
                 onClick={() => setHotFlashCount((c) => Math.max(0, c - 1))}
+                aria-label="One fewer hot flash"
                 className="w-10 h-10 p-0 rounded-xl"
               >
                 <Minus className="w-4 h-4" />
@@ -326,13 +330,14 @@ export default function CheckinPage() {
                 variant="outline"
                 size="sm"
                 onClick={() => setHotFlashCount((c) => c + 1)}
+                aria-label="One more hot flash"
                 className="w-10 h-10 p-0 rounded-xl"
               >
                 <Plus className="w-4 h-4" />
               </Button>
             </div>
 
-            <p className="text-xs text-center text-[#7A736E] pt-1">
+            <p className="text-xs text-center text-[#5C554F] pt-1">
               Tap + anytime a flash or flush occurs.
             </p>
           </Card>
@@ -369,9 +374,9 @@ export default function CheckinPage() {
         <section className="space-y-3">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-sm font-serif font-semibold text-[#231F1D]">
+              <h2 className="text-sm font-serif font-semibold text-[#231F1D]">
                 Key Symptoms & Severity
-              </h3>
+              </h2>
               <p className="text-xs text-[#68615C]">1 = Mild • 5 = Severe • Tap again to deselect</p>
             </div>
             <Button
@@ -395,14 +400,14 @@ export default function CheckinPage() {
                   <div className="flex items-center justify-between mb-2">
                     <div>
                       <p className="text-sm font-medium text-[#231F1D]">{symptom.name}</p>
-                      <p className="text-xs text-[#7A736E]">{symptom.categoryLabel}</p>
+                      <p className="text-xs text-[#5C554F]">{symptom.categoryLabel}</p>
                     </div>
                     {currentSeverity > 0 ? (
                       <Badge variant="primary" className="text-xs">
                         Level {currentSeverity}/5
                       </Badge>
                     ) : (
-                      <span className="text-xs text-[#8A817A]">None</span>
+                      <span className="text-xs text-[#5C554F]">None</span>
                     )}
                   </div>
 
@@ -441,7 +446,7 @@ export default function CheckinPage() {
                         Level {currentSeverity}/5
                       </Badge>
                     ) : (
-                      <span className="text-xs text-[#8A817A]">None</span>
+                      <span className="text-xs text-[#5C554F]">None</span>
                     )}
                   </div>
 
@@ -474,7 +479,7 @@ export default function CheckinPage() {
                     <div className="flex items-center justify-between mb-2">
                       <div>
                         <p className="text-sm font-medium text-[#231F1D]">{symptom.name}</p>
-                        <p className="text-xs text-[#7A736E]">{symptom.categoryLabel}</p>
+                        <p className="text-xs text-[#5C554F]">{symptom.categoryLabel}</p>
                       </div>
                       {currentSeverity > 0 && (
                         <Badge variant="primary" className="text-xs">
@@ -578,7 +583,7 @@ export default function CheckinPage() {
               value={journalText}
               onChange={(e) => setJournalText(e.target.value)}
               placeholder="e.g. Morning was calm, headache started around 2 PM..."
-              className="w-full text-sm text-[#231F1D] placeholder:text-[#9A938C] bg-transparent resize-none border-none focus:outline-none leading-relaxed"
+              className="w-full text-sm text-[#231F1D] placeholder:text-[#6B645E] bg-transparent resize-none border-none focus:outline-none leading-relaxed"
             />
           </Card>
         </section>
@@ -606,7 +611,7 @@ export default function CheckinPage() {
             <span>{isSaving ? 'Saving...' : 'Save to This Device'}</span>
           </Button>
 
-          <p className="text-center text-xs text-[#7A736E] flex items-center justify-center gap-1.5">
+          <p className="text-center text-xs text-[#5C554F] flex items-center justify-center gap-1.5">
             <HardDrive className="w-3.5 h-3.5 text-[#2C6E49]" />
             Stored on this device • Zero cloud transmission
           </p>

@@ -1,7 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import {
   NotificationService,
-  DEFAULT_REMINDER_SETTINGS,
 } from '../lib/notifications/treatment-reminders';
 import { LocalTreatment, LocalTreatmentEvent } from '../lib/db/schema';
 import { db } from '../lib/db/db';

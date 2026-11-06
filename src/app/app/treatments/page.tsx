@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 import {
   Pill,
   Plus,
@@ -21,9 +20,6 @@ import {
   Edit3,
   Flame,
   Moon,
-  ChevronRight,
-  TrendingDown,
-  TrendingUp,
   AlertCircle,
   Share2,
 } from 'lucide-react';
@@ -354,7 +350,7 @@ export default function TreatmentsPage() {
   };
 
   // Calculate Due Treatments
-  const { due, completed, skipped, snoozed } = NotificationService.calculateDueTreatments(
+  const { due, completed, skipped } = NotificationService.calculateDueTreatments(
     treatments,
     events,
     todayStr
@@ -388,7 +384,7 @@ export default function TreatmentsPage() {
             <p>
               <strong>Prescription Guardrail:</strong> MenoWell strictly organizes the routines, schedules, and clinician instructions you record.
             </p>
-            <p className="text-xs text-[#8A817A]">
+            <p className="text-xs text-[#5C554F]">
               We never recommend starting, stopping, or altering medications or dosages. Consult your qualified healthcare professional before making any changes.
             </p>
           </div>
@@ -414,7 +410,7 @@ export default function TreatmentsPage() {
                   ) : permissionState === 'denied' ? (
                     <span className="text-[#965342] font-medium">Blocked in browser</span>
                   ) : permissionState === 'unsupported' ? (
-                    <span className="text-[#8A817A]">Unsupported in browser</span>
+                    <span className="text-[#5C554F]">Unsupported in browser</span>
                   ) : (
                     <span className="text-[#68615C]">Not yet enabled</span>
                   )}
@@ -495,7 +491,7 @@ export default function TreatmentsPage() {
             <h2 id="due-schedule-heading" className="text-base font-serif font-semibold text-[#231F1D]">
               Scheduled for Today
             </h2>
-            <span className="text-xs text-[#8A817A]">{todayStr}</span>
+            <span className="text-xs text-[#5C554F]">{todayStr}</span>
           </div>
 
           {due.length === 0 && completed.length === 0 && skipped.length === 0 ? (
@@ -559,7 +555,7 @@ export default function TreatmentsPage() {
                   )}
 
                   {/* Secondary Quick Controls: Skip, Snooze */}
-                  <div className="pt-2 border-t border-[#F0EBE3] flex items-center justify-between text-xs text-[#8A817A]">
+                  <div className="pt-2 border-t border-[#F0EBE3] flex items-center justify-between text-xs text-[#5C554F]">
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => handleQuickSkip(t)}
@@ -620,7 +616,7 @@ export default function TreatmentsPage() {
                   className="p-3 bg-[#FAF8F5] border-[#E2DBD1] flex items-center justify-between text-xs opacity-75"
                 >
                   <div className="flex items-center gap-2.5">
-                    <span className="text-xs font-semibold text-[#8A817A]">SKIPPED</span>
+                    <span className="text-xs font-semibold text-[#5C554F]">SKIPPED</span>
                     <p className="text-[#231F1D]">{t.name}</p>
                   </div>
                   <Button
@@ -695,7 +691,7 @@ export default function TreatmentsPage() {
                       <button
                         onClick={() => handleDeleteTreatment(t.id, t.name)}
                         title="Delete Regimen"
-                        className="p-1.5 text-[#8A817A] hover:text-[#965342] rounded-lg hover:bg-[#FDF0EC] transition"
+                        className="p-1.5 text-[#5C554F] hover:text-[#965342] rounded-lg hover:bg-[#FDF0EC] transition"
                       >
                         <Trash2 className="w-4 h-4" />
                       </button>
@@ -758,7 +754,7 @@ export default function TreatmentsPage() {
                       <span
                         className={`text-xs px-2 py-0.5 rounded-full font-bold uppercase ${
                           evt.action === 'skipped'
-                            ? 'bg-[#F2EDEA] text-[#8A817A]'
+                            ? 'bg-[#F2EDEA] text-[#5C554F]'
                             : evt.action === 'snoozed'
                             ? 'bg-[#FAF3F0] text-[#965342]'
                             : 'bg-[#EFF7F2] text-[#2C6E49]'
@@ -771,7 +767,7 @@ export default function TreatmentsPage() {
                     {evt.notes && <p className="text-[#68615C] text-xs">{evt.notes}</p>}
                   </div>
 
-                  <span className="text-[#8A817A] text-xs shrink-0">{evt.date}</span>
+                  <span className="text-[#5C554F] text-xs shrink-0">{evt.date}</span>
                 </Card>
               ))}
             </div>
@@ -792,7 +788,7 @@ export default function TreatmentsPage() {
                 </h3>
                 <button
                   onClick={() => setShowAddEditModal(false)}
-                  className="text-xs text-[#8A817A] hover:text-[#231F1D]"
+                  className="text-xs text-[#5C554F] hover:text-[#231F1D]"
                 >
                   ✕
                 </button>
@@ -1084,7 +1080,7 @@ export default function TreatmentsPage() {
                 </div>
                 <button
                   onClick={() => setShowComparisonModal(false)}
-                  className="text-xs text-[#8A817A] hover:text-[#231F1D]"
+                  className="text-xs text-[#5C554F] hover:text-[#231F1D]"
                 >
                   ✕
                 </button>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import Link from 'next/link';
 
 /**
  * Root error boundary. It loads on every page, so it uses no icon library or
@@ -24,9 +25,9 @@ export default function ErrorBoundary({ error, reset }: { error: Error & { diges
         >
           Try again
         </button>
-        <a href="/" className="tap px-2 font-semibold text-[var(--color-link)] underline">
+        <Link href="/" className="tap px-2 font-semibold text-[var(--color-link)] underline">
           Home
-        </a>
+        </Link>
       </p>
     </main>
   );

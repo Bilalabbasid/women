@@ -125,7 +125,7 @@ export default function PricingPage() {
               <span>Start {PRICING.trial.label}</span>
               <ArrowRight className="w-4 h-4" />
             </Button>
-            <p className="text-xs text-center text-[#7A736E]">
+            <p className="text-xs text-center text-[#5C554F]">
               Cancel anytime with one click in Settings • Zero penalties
             </p>
           </div>

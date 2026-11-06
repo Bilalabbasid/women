@@ -1,5 +1,7 @@
 # PLAN.md — MenoWell (Working Title)
 
+> **Superseded for process (2026-11-06):** AGENTS.md (the build prompt) now governs. See DECISIONS.md D-011 for what changed. This file is kept as the product history.
+
 > **"Your body isn't our business model."**
 
 This file is the **persistent source of truth** for the entire project. Every development iteration MUST begin by reading this file completely and end by updating it.

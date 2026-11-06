@@ -173,7 +173,7 @@ export default function InsightsPage() {
               </div>
 
               {symptomStats.length === 0 ? (
-                <p className="text-xs text-[#7A736E] italic">
+                <p className="text-xs text-[#5C554F] italic">
                   No specific symptoms rated above zero during this period.
                 </p>
               ) : (

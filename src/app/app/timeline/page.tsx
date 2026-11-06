@@ -240,7 +240,7 @@ export default function TimelinePage() {
                           : entry.overallFeeling === 3
                           ? 'bg-[#965342]'
                           : 'bg-[#B25E4B]'
-                        : 'bg-[#8A817A]'
+                        : 'bg-[#5C554F]'
                     }`}
                   />
 
@@ -263,7 +263,7 @@ export default function TimelinePage() {
                         </Badge>
                         <button
                           onClick={(e) => handleDeleteEntry(entry.id, e)}
-                          className="text-[#8A817A] hover:text-[#A33A33] p-1 transition"
+                          className="text-[#5C554F] hover:text-[#A33A33] p-1 transition"
                           title="Delete check-in"
                           aria-label="Delete check-in"
                         >
@@ -352,7 +352,7 @@ export default function TimelinePage() {
                               <span
                                 className={`text-xs px-2 py-0.5 rounded-full font-bold uppercase ${
                                   evt.action === 'skipped'
-                                    ? 'bg-[#F2EDEA] text-[#8A817A]'
+                                    ? 'bg-[#F2EDEA] text-[#5C554F]'
                                     : 'bg-[#EFF7F2] text-[#2C6E49]'
                                 }`}
                               >
@@ -409,7 +409,7 @@ export default function TimelinePage() {
                 </div>
                 <button
                   onClick={() => setShowComparisonModal(false)}
-                  className="text-xs text-[#8A817A] hover:text-[#231F1D]"
+                  className="text-xs text-[#5C554F] hover:text-[#231F1D]"
                 >
                   ✕
                 </button>

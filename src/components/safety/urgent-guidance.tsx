@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import {
   CRISIS_RESOURCES,
   type Locale,
@@ -69,9 +70,9 @@ export function UrgentGuidance({
       <p className="text-sm text-[#5A3A3A]">
         This guidance appears because of what you entered. It stays on this device. It is general
         information, not a diagnosis.{' '}
-        <a href="/urgent-help/" className="underline">
+        <Link href="/urgent-help/" className="underline">
           More urgent-help options
-        </a>
+        </Link>
       </p>
     </section>
   );

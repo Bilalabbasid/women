@@ -50,7 +50,15 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
 
   async redirects() {
-    return LEGACY_APP_REDIRECTS.map((r) => ({ ...r, permanent: true }));
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.menoverdict.com' }],
+        destination: 'https://menoverdict.com/:path*',
+        permanent: true,
+      },
+      ...LEGACY_APP_REDIRECTS.map((r) => ({ ...r, permanent: true })),
+    ];
   },
 
   async headers() {

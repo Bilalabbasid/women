@@ -86,7 +86,7 @@ export const NotificationService = {
         isStandalone: false,
         requiresInstallForPush: true,
         message:
-          'On iPhone and iPad, Apple requires adding MenoWell to your Home Screen (Share -> Add to Home Screen) to receive lock-screen push notifications. In-app reminders will always display here.',
+          'On iPhone and iPad, Apple requires adding MenoVerdict to your Home Screen (Share -> Add to Home Screen) to receive lock-screen push notifications. In-app reminders will always display here.',
       };
     }
 
@@ -134,10 +134,10 @@ export const NotificationService = {
   ): { title: string; body: string; icon: string; tag: string } {
     if (privacyMode === 'discrete') {
       return {
-        title: 'MenoWell Reminder',
+        title: 'MenoVerdict Reminder',
         body: 'Scheduled routine reminder. Tap to view your personal dashboard.',
         icon: '/icons/icon-192.png',
-        tag: 'menowell-treatment-discrete',
+        tag: 'menoverdict-treatment-discrete',
       };
     }
 

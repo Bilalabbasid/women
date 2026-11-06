@@ -141,18 +141,22 @@ export function buildSiteGraph(repoRoot: string = process.cwd()): SiteGraph {
     '/postmenopause/',
     '/treatments/',
     '/does-it-work/',
+    '/compare/',
     '/care/',
+    '/groups/',
     '/tools/',
     '/urgent-help/',
     '/about/',
     '/about/how-we-make-money/',
     '/evidence/',
+    '/evidence/editorial-policy/',
     '/evidence/how-we-grade/',
     '/evidence/updates/',
     '/privacy/',
     '/cookies/',
     '/terms/',
     '/medical-disclaimer/',
+    '/contact/',
   ];
   for (const hl of homeLinks) {
     if (nodes[hl]) {

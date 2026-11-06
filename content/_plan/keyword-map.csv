@@ -148,7 +148,7 @@ url,title_working,cluster,page_type,primary_keyword,secondary_keywords,questions
 /evidence/,How we check the evidence,evidence,evidence,menopause evidence checker,,,navigational,learn,,,,,1,,all,site_none,,drafted
 /evidence/how-we-grade/,How we grade evidence,evidence,evidence,how we grade evidence,,,navigational,learn,,,,,1,,all,site_none,/evidence/,drafted
 /evidence/medical-review/,Our medical review process,evidence,evidence,medical review process,,,navigational,learn,,,,,1,,all,site_none,/evidence/,planned
-/evidence/editorial-policy/,Editorial policy,evidence,evidence,editorial policy,,,navigational,learn,,,,,1,,all,site_none,/evidence/,planned
+/evidence/editorial-policy/,Editorial policy,evidence,evidence,editorial policy,,,navigational,learn,,,,,1,,all,site_none,/evidence/,drafted
 /evidence/products-we-wont-recommend/,Products we won't recommend,evidence,evidence,menopause products to avoid,,,navigational,learn,,,,,1,,all,site_none,/evidence/,planned
 /evidence/sources/,Our sources,evidence,evidence,menopause research sources,,,navigational,learn,,,,,2,,all,site_none,/evidence/,planned
 /evidence/updates/,Corrections and updates,evidence,evidence,corrections and updates,,,navigational,learn,,,,,1,,all,site_none,/evidence/,drafted
@@ -158,4 +158,4 @@ url,title_working,cluster,page_type,primary_keyword,secondary_keywords,questions
 /cookies/,Cookie policy,site,legal,cookie policy,,,navigational,learn,,,,,1,,all,site_none,,drafted
 /terms/,Terms of use,site,legal,terms of use,,,navigational,learn,,,,,1,,all,site_none,,drafted
 /medical-disclaimer/,Medical disclaimer,site,legal,medical disclaimer,,,navigational,learn,,,,,1,,all,site_none,,drafted
-/contact/,Contact us,site,about,contact,,,navigational,learn,,,,,1,,all,site_none,,planned
+/contact/,Contact us,site,about,contact,,,navigational,learn,,,,,1,,all,site_none,,drafted

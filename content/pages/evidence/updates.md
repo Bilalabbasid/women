@@ -1,7 +1,7 @@
 ---
 title: "What's changed: evidence updates and corrections log"
 seo_title: Whats changed evidence updates and corrections log
-meta_description: "Real-time record of medical guideline changes, FDA regulatory actions, study reviews, and editorial corrections across MenoWell."
+meta_description: "Real-time record of medical guideline changes, FDA regulatory actions, study reviews, and editorial corrections across MenoVerdict."
 cluster: evidence
 primary_keyword: corrections and updates
 slug: updates

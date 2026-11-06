@@ -24,7 +24,7 @@ describe('ExportService Archive Generator', () => {
     const archive = await ExportService.generateFullExport();
 
     expect(archive.formatVersion).toBe(1);
-    expect(archive.app).toBe('MenoWell');
+    expect(archive.app).toBe('MenoVerdict');
     expect(archive.exportedAt).toBeDefined();
     expect(archive.data.checkins.length).toBe(1);
     expect(archive.data.symptoms.length).toBe(1);

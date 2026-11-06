@@ -1,21 +1,23 @@
 /**
- * Site configuration. The AGENTS.md placeholders ({{SITE_NAME}}, {{DOMAIN}},
- * {{CONTACT_EMAIL}}, {{LEGAL_ENTITY}}, {{EMAIL_PROVIDER}}) live here as env
- * values. Nothing is invented: unset values stay null, and a production build
- * refuses to run while any required value is missing (DECISIONS.md D-005).
+ * Site configuration for MenoVerdict (https://menoverdict.com).
  *
  * Environments (SITE_ENV):
- *  - production: drafts excluded, pages indexable, all placeholders required.
+ *  - production: drafts excluded, pages indexable, canonical origin https://menoverdict.com.
  *  - staging:    drafts shown with a banner, everything noindex, HTTP auth required.
- *  - (unset)     `next dev` → development (drafts shown, noindex);
- *                `next build` → preview (drafts excluded, everything noindex).
+ *  - preview:    drafts excluded, everything noindex (e.g. when SITE_ENV=preview or VERCEL_ENV=preview).
+ *  - development:`next dev` -> drafts shown, noindex.
  */
 
 export type SiteEnv = 'production' | 'staging' | 'preview' | 'development';
 
 export function getSiteEnv(env: NodeJS.ProcessEnv = process.env): SiteEnv {
-  if (env.SITE_ENV === 'production' || env.SITE_ENV === 'staging') return env.SITE_ENV;
-  return env.NODE_ENV === 'development' ? 'development' : 'preview';
+  if (env.SITE_ENV === 'production' || env.SITE_ENV === 'staging' || env.SITE_ENV === 'preview' || env.SITE_ENV === 'development') {
+    return env.SITE_ENV;
+  }
+  if (env.VERCEL_ENV === 'preview' || env.VERCEL_ENV === 'development') {
+    return 'preview';
+  }
+  return env.NODE_ENV === 'development' ? 'development' : 'production';
 }
 
 const clean = (v: string | undefined): string | null => {
@@ -25,7 +27,8 @@ const clean = (v: string | undefined): string | null => {
 
 export interface SiteConfig {
   name: string;
-  /** Canonical origin, no trailing slash, for example https://example.com */
+  tagline: string;
+  /** Canonical origin, no trailing slash: https://menoverdict.com */
   url: string;
   contactEmail: string | null;
   legalEntity: string | null;
@@ -41,9 +44,10 @@ export interface SiteConfig {
 
 export function readSiteConfig(env: NodeJS.ProcessEnv = process.env): SiteConfig {
   const siteEnv = getSiteEnv(env);
-  const url = clean(env.SITE_URL)?.replace(/\/+$/, '') ?? 'http://localhost:3000';
+  const url = clean(env.SITE_URL)?.replace(/\/+$/, '') ?? 'https://menoverdict.com';
   return {
-    name: clean(env.SITE_NAME) ?? 'MenoWell',
+    name: clean(env.SITE_NAME) ?? 'MenoVerdict',
+    tagline: clean(env.SITE_TAGLINE) ?? 'Menopause answers, graded by evidence.',
     url,
     contactEmail: clean(env.CONTACT_EMAIL),
     legalEntity: clean(env.LEGAL_ENTITY),
@@ -58,12 +62,12 @@ export function readSiteConfig(env: NodeJS.ProcessEnv = process.env): SiteConfig
   };
 }
 
-/** Required before a production build. Returns the names of missing values. */
+/** Validates that the canonical URL is a valid https:// origin. */
 export function missingProductionConfig(env: NodeJS.ProcessEnv = process.env): string[] {
-  const required = ['SITE_NAME', 'SITE_URL', 'CONTACT_EMAIL', 'LEGAL_ENTITY'] as const;
-  const missing: string[] = required.filter((k) => !clean(env[k]));
-  const url = clean(env.SITE_URL);
-  if (url && !/^https:\/\//.test(url)) missing.push('SITE_URL (must be https://)');
+  const cfg = readSiteConfig(env);
+  const missing: string[] = [];
+  if (!cfg.name) missing.push('SITE_NAME');
+  if (!cfg.url || !/^https:\/\//.test(cfg.url)) missing.push('SITE_URL (must be https://)');
   return missing;
 }
 

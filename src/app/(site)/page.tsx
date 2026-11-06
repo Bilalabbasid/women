@@ -4,12 +4,17 @@ import { SITE } from '@/lib/site/config';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { getSiteData, CLUSTER_LABELS } from '@/lib/content/site-data';
 
-export const metadata: Metadata = buildMetadata({
-  title: `${SITE.name}: evidence-graded menopause answers`,
-  description:
-    'Find clear answers about perimenopause, menopause symptoms, evidence-graded treatments, and doctor questions. Fast, private, and independent.',
-  path: '/',
-});
+export const metadata: Metadata = {
+  ...buildMetadata({
+    title: `${SITE.name}: ${SITE.tagline}`,
+    description:
+      'Find clear answers about perimenopause, menopause symptoms, evidence-graded treatments, and doctor questions. Fast, private, and independent.',
+    path: '/',
+  }),
+  other: {
+    'awin-verification': 'Awin',
+  },
+};
 
 const TOP_SYMPTOMS = [
   { label: 'Hot flashes (vasomotor)', href: '/symptoms/hot-flashes/' },

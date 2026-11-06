@@ -382,7 +382,7 @@ export default function TreatmentsPage() {
           <Info className="w-4 h-4 text-[#965342] shrink-0 mt-0.5" />
           <div className="leading-relaxed space-y-1">
             <p>
-              <strong>Prescription Guardrail:</strong> MenoWell strictly organizes the routines, schedules, and clinician instructions you record.
+              <strong>Prescription Guardrail:</strong> MenoVerdict strictly organizes the routines, schedules, and clinician instructions you record.
             </p>
             <p className="text-xs text-[#5C554F]">
               We never recommend starting, stopping, or altering medications or dosages. Consult your qualified healthcare professional before making any changes.
@@ -479,7 +479,7 @@ export default function TreatmentsPage() {
             <div className="bg-[#FAF8F5] border border-[#E5DED5] rounded-xl p-3 text-xs text-[#68615C] flex items-start gap-2">
               <Share2 className="w-4 h-4 text-[#965342] shrink-0 mt-0.5" />
               <p className="leading-relaxed">
-                <strong>iPhone Lock-Screen Tip:</strong> Apple iOS requires adding MenoWell to your Home Screen (tap Safari Share → <em>Add to Home Screen</em>) for system push alerts. In-app reminders below remain fully active.
+                <strong>iPhone Lock-Screen Tip:</strong> Apple iOS requires adding MenoVerdict to your Home Screen (tap Safari Share → <em>Add to Home Screen</em>) for system push alerts. In-app reminders below remain fully active.
               </p>
             </div>
           )}

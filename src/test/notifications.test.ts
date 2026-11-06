@@ -23,7 +23,7 @@ describe('Phase 3: PWA Notifications & Treatment Reminders', () => {
       'discrete'
     );
 
-    expect(discretePayload.title).toBe('MenoWell Reminder');
+    expect(discretePayload.title).toBe('MenoVerdict Reminder');
     expect(discretePayload.body).toContain('Scheduled routine reminder');
     // Lock-screen safety: NEVER leak sensitive hormone or medication names in discrete mode
     expect(discretePayload.body).not.toContain('Estradiol');

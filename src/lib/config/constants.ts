@@ -1,10 +1,10 @@
 export const APP_CONFIG = {
-  name: 'MenoWell',
-  fullName: 'MenoWell — Menopause Companion',
-  tagline: 'Your body isn’t our business model.',
-  version: '1.0.0-phase1',
-  author: 'MenoWell Health',
-  supportEmail: 'care@menowell.app',
+  name: 'MenoVerdict',
+  fullName: 'MenoVerdict — Menopause Companion',
+  tagline: 'Menopause answers, graded by evidence.',
+  version: '1.0.0',
+  author: 'MenoVerdict Editorial Team',
+  supportEmail: 'contact@menoverdict.com',
   medicalDisclaimer:
-    'MenoWell is an organizational journal and personal health tracking tool. It does not provide medical diagnosis, treatment recommendations, or medication dosage advice. Always consult a board-certified healthcare professional regarding symptoms, treatments, or health changes.',
+    'MenoVerdict is an evidence-graded information resource and personal symptom tracking tool. It does not provide medical diagnosis, treatment recommendations, or medication dosage advice. Always consult a board-certified healthcare professional regarding symptoms, treatments, or health changes.',
 } as const;

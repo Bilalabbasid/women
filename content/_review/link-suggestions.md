@@ -34,10 +34,3 @@ Generated 2026-11-06 by scripts/link-audit.ts. Suggestions only: a person decide
 - Consider linking from content/pages/treatments/hormone-therapy/boxed-warning.md
 - Consider linking from content/pages/treatments/index.md
 
-## Strength Training Through Menopause: What the Science Shows (/does-it-work/exercise/)
-
-- Consider linking from content/pages/does-it-work/magnesium.md
-- Consider linking from content/pages/symptoms/index.md
-- Consider linking from content/pages/tools/symptom-tracker.md
-- Consider linking from content/pages/tools/symptoms-checklist.md
-

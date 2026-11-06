@@ -1,32 +1,29 @@
 import type { MetadataRoute } from 'next';
 import { SITE } from '@/lib/site/config';
-import { APP_ROUTES } from '@/lib/routes';
-import { isToolLive } from '@/lib/tools/logic';
 
 export const dynamic = 'force-static';
 
-/** Web app manifest. The installed app opens the private tracker. */
+/** Web app manifest for MenoVerdict. */
 export default function manifest(): MetadataRoute.Manifest {
-  // Until the tracker is approved for production, the installed app opens the home page.
-  const start = isToolLive('symptom-tracker') ? APP_ROUTES.today : '/';
   return {
     id: '/',
-    name: `${SITE.name}: symptom tracker`,
-    short_name: SITE.name,
-    description: 'A private symptom tracker for perimenopause and menopause. Entries stay on your device.',
-    start_url: start,
+    name: 'MenoVerdict',
+    short_name: 'MenoVerdict',
+    description: `${SITE.tagline} Private perimenopause and menopause tools and evidence-graded guides.`,
+    start_url: '/',
     scope: '/',
     display: 'standalone',
     orientation: 'portrait',
     background_color: '#F7F6F2',
-    theme_color: '#F7F6F2',
+    theme_color: '#1F5A4C',
     categories: ['health', 'medical', 'lifestyle'],
     icons: [
+      { src: '/favicon.ico', sizes: '16x16 32x32 48x48', type: 'image/x-icon' },
+      { src: '/favicon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' },
+      { src: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png', purpose: 'any' },
       { src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
       { src: '/icons/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
-      // The PNGs are full-bleed, so the 512px icon is safe to use as a maskable icon.
-      { src: '/icons/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
-      { src: '/icons/icon-192.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' },
+      { src: '/icons/icon-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
     ],
   };
 }

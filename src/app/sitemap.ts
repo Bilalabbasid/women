@@ -13,11 +13,15 @@ export const dynamic = 'force-static';
 export default function sitemap(): MetadataRoute.Sitemap {
   if (!isIndexable(SITE.env)) return [];
   const store = getContent();
-  const contentEntries = indexablePages(store).map((p) => {
+  const pages = indexablePages(store);
+  const contentEntries = pages.map((p) => {
     const material = p.fm.change_log.filter((c) => c.material).map((c) => c.date).sort();
     return { url: absoluteUrl(p.url), lastModified: material.at(-1) ?? p.fm.updated_at };
   });
-  // Code-defined public pages. Their lastmod is omitted rather than invented.
-  const staticEntries = ['/', '/tools/', '/urgent-help/'].map((path) => ({ url: absoluteUrl(path) }));
+  const latestContentDate = contentEntries.map((e) => e.lastModified).sort().at(-1) ?? '2026-11-06';
+  const staticEntries = ['/', '/tools/', '/urgent-help/'].map((path) => ({
+    url: absoluteUrl(path),
+    lastModified: latestContentDate,
+  }));
   return [...staticEntries, ...contentEntries];
 }

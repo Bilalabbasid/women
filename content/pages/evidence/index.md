@@ -34,8 +34,10 @@ We believe women seeking menopause information deserve scientific accuracy witho
 
 ## Evidence sections
 
+- [Editorial policy](/evidence/editorial-policy/): Our standards for primary source verification, clinical review honesty, and commercial independence.
 - [How we grade evidence](/evidence/how-we-grade/): Our complete methodology for ranking trials, systematic reviews, and consensus guidelines.
 - [What&apos;s changed: updates log](/evidence/updates/): Real-time records of regulatory label actions, newly reviewed studies, and editorial corrections.
 - [How we make money](/about/how-we-make-money/): Full commercial disclosures explaining our strict editorial separation between evidence ratings and affiliate partnerships.
+- [Interactive tools](/tools/): Free, on-device symptom tracking and appointment checklists that follow our non-diagnostic safety rules.
 
 Every medical claim on this site is traceable to an opened, verified citation in our primary source registry.

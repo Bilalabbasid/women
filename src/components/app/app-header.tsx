@@ -49,10 +49,10 @@ export function AppHeader({
             <Link
               href="/app/today/"
               className="flex items-center gap-2 group"
-              aria-label="MenoWell Dashboard"
+              aria-label="MenoVerdict Dashboard"
             >
-              <div className="w-8 h-8 rounded-lg bg-[#965342] flex items-center justify-center shadow-xs">
-                <span className="text-white font-serif font-bold text-base leading-none">M</span>
+              <div className="w-8 h-8 rounded-lg bg-[#1F5A4C] flex items-center justify-center shadow-xs">
+                <span className="text-white font-serif font-bold text-base leading-none">MV</span>
               </div>
             </Link>
           )}

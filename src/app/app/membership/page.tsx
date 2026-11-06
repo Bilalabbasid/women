@@ -140,7 +140,7 @@ export default function PricingPage() {
             </h3>
           </div>
           <p className="text-xs text-[#554E48] leading-relaxed">
-            Unlike other wellness trackers that harvest data from free users, MenoWell&apos;s free plan includes full local tracking, timeline access, and appointment summaries with zero advertisements based on your health history.
+            Unlike other wellness trackers that harvest data from free users, MenoVerdict&apos;s free plan includes full local tracking, timeline access, and appointment summaries with zero advertisements based on your health history.
           </p>
           <ul className="space-y-1.5 text-xs text-[#68615C]">
             {PRICING.features.free.map((feat, idx) => (

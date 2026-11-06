@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { SwRegister } from '@/components/pwa/sw-register';
-import { SITE, isIndexable } from '@/lib/site/config';
+import { SITE, absoluteUrl, isIndexable } from '@/lib/site/config';
 
 /**
  * Root layout. Kept deliberately thin and server-only: no tracker shell, no
@@ -12,18 +12,30 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
-  themeColor: '#F7F6F2',
+  themeColor: '#1F5A4C',
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: { default: SITE.name, template: `%s | ${SITE.name}` },
+  title: { default: `${SITE.name} — ${SITE.tagline}`, template: `%s | ${SITE.name}` },
   applicationName: SITE.name,
   manifest: '/manifest.webmanifest',
-  // Only production is ever indexable (D-005). Pages may tighten this further.
   robots: isIndexable() ? undefined : { index: false, follow: false },
   appleWebApp: { capable: true, statusBarStyle: 'default', title: SITE.name },
-  icons: { icon: '/icons/icon-192.svg', apple: '/icons/icon-192.png' },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '16x16 32x32 48x48', type: 'image/x-icon' },
+      { url: '/favicon.svg', type: 'image/svg+xml', sizes: 'any' },
+      { url: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icons/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
+  alternates: {
+    types: {
+      'application/rss+xml': absoluteUrl('/feed.xml'),
+    },
+  },
   formatDetection: { telephone: false },
 };
 

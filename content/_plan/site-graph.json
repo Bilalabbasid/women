@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-06T16:12:09.421Z",
-  "total_pages": 31,
+  "generated_at": "2026-11-06T16:31:33.559Z",
+  "total_pages": 33,
   "nodes": {
     "/about/how-we-make-money/": {
       "url": "/about/how-we-make-money/",
@@ -34,6 +34,14 @@
         {
           "url": "/about/",
           "anchor": "how we make money"
+        },
+        {
+          "url": "/contact/",
+          "anchor": "how we make money"
+        },
+        {
+          "url": "/evidence/editorial-policy/",
+          "anchor": "affiliate disclosure"
         },
         {
           "url": "/evidence/",
@@ -465,6 +473,88 @@
       ],
       "click_depth": 2
     },
+    "/contact/": {
+      "url": "/contact/",
+      "title": "Contact us",
+      "status": "published",
+      "primary_keyword": "contact",
+      "intent": "navigational",
+      "cluster": "site",
+      "hub": null,
+      "parent": "/",
+      "symptom_tags": [],
+      "page_type": "about",
+      "stage_tags": [
+        "all"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [],
+      "related": [
+        "/about/",
+        "/evidence/updates/",
+        "/privacy/",
+        "/evidence/editorial-policy/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/contact/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/urgent-help/",
+          "anchor": "crisis and urgent help page",
+          "contextual": true
+        },
+        {
+          "url": "/evidence/editorial-policy/",
+          "anchor": "editorial policy",
+          "contextual": true
+        },
+        {
+          "url": "/evidence/updates/",
+          "anchor": "corrections and updates page",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "symptom tracker",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptoms-checklist/",
+          "anchor": "symptoms checklist",
+          "contextual": true
+        },
+        {
+          "url": "/privacy/",
+          "anchor": "privacy policy",
+          "contextual": true
+        },
+        {
+          "url": "/about/how-we-make-money/",
+          "anchor": "how we make money",
+          "contextual": true
+        },
+        {
+          "url": "/evidence/how-we-grade/",
+          "anchor": "evidence grades",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/evidence/editorial-policy/",
+          "anchor": "contact page"
+        },
+        {
+          "url": "/",
+          "anchor": "Home navigation"
+        }
+      ],
+      "click_depth": 1
+    },
     "/cookies/": {
       "url": "/cookies/",
       "title": "Cookie policy",
@@ -806,6 +896,79 @@
       ],
       "click_depth": 2
     },
+    "/evidence/editorial-policy/": {
+      "url": "/evidence/editorial-policy/",
+      "title": "Editorial policy",
+      "status": "published",
+      "primary_keyword": "editorial policy",
+      "intent": "navigational",
+      "cluster": "evidence",
+      "hub": "/evidence/",
+      "parent": "/evidence/",
+      "symptom_tags": [],
+      "page_type": "evidence",
+      "stage_tags": [
+        "all"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/evidence/"
+      ],
+      "related": [
+        "/evidence/how-we-grade/",
+        "/evidence/updates/",
+        "/about/how-we-make-money/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/evidence/editorial-policy/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/evidence/how-we-grade/",
+          "anchor": "evidence grading method",
+          "contextual": true
+        },
+        {
+          "url": "/tools/",
+          "anchor": "interactive tools",
+          "contextual": true
+        },
+        {
+          "url": "/evidence/how-we-grade/",
+          "anchor": "evidence grades",
+          "contextual": true
+        },
+        {
+          "url": "/about/how-we-make-money/",
+          "anchor": "affiliate disclosure",
+          "contextual": true
+        },
+        {
+          "url": "/evidence/updates/",
+          "anchor": "corrections and updates page",
+          "contextual": true
+        },
+        {
+          "url": "/contact/",
+          "anchor": "contact page",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/contact/",
+          "anchor": "editorial policy"
+        },
+        {
+          "url": "/",
+          "anchor": "Home navigation"
+        }
+      ],
+      "click_depth": 1
+    },
     "/evidence/how-we-grade/": {
       "url": "/evidence/how-we-grade/",
       "title": "How we grade evidence",
@@ -838,6 +1001,18 @@
         {
           "url": "/about/",
           "anchor": "methodology for grading evidence"
+        },
+        {
+          "url": "/contact/",
+          "anchor": "evidence grades"
+        },
+        {
+          "url": "/evidence/editorial-policy/",
+          "anchor": "evidence grading method"
+        },
+        {
+          "url": "/evidence/editorial-policy/",
+          "anchor": "evidence grades"
         },
         {
           "url": "/evidence/",
@@ -957,6 +1132,14 @@
         }
       ],
       "incoming_links": [
+        {
+          "url": "/contact/",
+          "anchor": "corrections and updates page"
+        },
+        {
+          "url": "/evidence/editorial-policy/",
+          "anchor": "corrections and updates page"
+        },
         {
           "url": "/evidence/",
           "anchor": "What's changed: updates log"
@@ -1275,6 +1458,10 @@
       "redirect_from": [],
       "outgoing_links": [],
       "incoming_links": [
+        {
+          "url": "/contact/",
+          "anchor": "privacy policy"
+        },
         {
           "url": "/",
           "anchor": "Home navigation"
@@ -1794,7 +1981,7 @@
     "/tools/symptom-tracker/": {
       "url": "/tools/symptom-tracker/",
       "title": "Symptom tracker and doctor report",
-      "status": "draft",
+      "status": "published",
       "primary_keyword": "menopause symptom tracker",
       "intent": "transactional",
       "cluster": "tools",
@@ -1864,6 +2051,10 @@
           "anchor": "symptom tracker"
         },
         {
+          "url": "/contact/",
+          "anchor": "symptom tracker"
+        },
+        {
           "url": "/cookies/",
           "anchor": "Symptom tracker and doctor report"
         },
@@ -1921,7 +2112,7 @@
     "/tools/symptoms-checklist/": {
       "url": "/tools/symptoms-checklist/",
       "title": "Perimenopause symptoms checklist",
-      "status": "draft",
+      "status": "published",
       "primary_keyword": "perimenopause symptoms checklist",
       "intent": "transactional",
       "cluster": "tools",
@@ -1990,6 +2181,10 @@
       "incoming_links": [
         {
           "url": "/care/moisturizers-and-lubricants/",
+          "anchor": "symptoms checklist"
+        },
+        {
+          "url": "/contact/",
           "anchor": "symptoms checklist"
         },
         {

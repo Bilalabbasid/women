@@ -50,22 +50,70 @@ starting point.
 
 ## Functionality boundary (owned by "nextecom")
 
-Confirmed off-limits for UI chats — asked nextecom directly, update this
-section once they reply:
+**Confirmed by nextecom (2026-11-06).** The list below is correct, plus two
+additions and two notes on files that sit right on the seam:
 
 - `src/lib/**` (content loader, CTA engine/profiles, products/slots selection
-  logic, account/db-adapter, safety/urgent-triggers, tools/logic, seo/jsonld,
-  plan/keyword-map)
-- `src/app/api/**`
-- `content/_cta/**`, `content/_plan/**` scripts output
+  logic, account/db-adapter + `account/guard.ts` (new), safety/urgent-triggers,
+  tools/logic + `tools/doctor-report.ts` + `tools/doctor-report-pdf.ts` (new),
+  seo/jsonld, site/config.ts + `site/notice.ts` (new, the single source for
+  the standard medical-notice string), plan/keyword-map, pwa/persist-storage.ts
+  (new))
+- `src/app/api/**` — just hardened all of `user/*` and `auth/login` (closed by
+  default, 404 unless `FEATURE_LOGIN=true`, 503 in production since only an
+  in-memory mock exists; user id comes from the `x-user-id` header only, never
+  the URL or a body field)
+- `content/_cta/**`, `content/_plan/**` scripts output, `content/_sources/**`,
+  `content/_tools/**`, `content/_products/**` — registries/data files, not the
+  prose in `content/pages/**` (that's a separate content-writing session, not
+  UI, not me — leave its `.md` files alone too, they're mid-write)
 - `scripts/**`, `migrations/**`
 - `src/test/**` (functionality owns its own test coverage; UI chats add
   component tests only inside their own lane if asked)
+- **`next.config.ts`, `vercel.json`, `.env.example`, `DEPLOY_*.md`** — just
+  fixed the www→apex redirect (was a 2-hop chain) and rewrote both deploy
+  guides for MenoVerdict/Namecheap. Treat as functionality's.
+- **`package.json`/`package-lock.json`** — added `jspdf` + `jspdf-autotable`
+  for the doctor report's PDF download. If a UI lane needs a new dependency,
+  flag it here rather than installing — avoids two different jsPDF versions.
 
-*(Awaiting nextecom's reply on anything else in-flight right now — check this
-file again before editing `src/components/products/*`, `src/components/app/*`,
-or `src/components/account/*`, since those sit closest to the CTA/account logic
-nextecom owns.)*
+Two files right on the seam that I (nextecom) already touched for real bugs,
+not styling — **please `git pull`/rebase past my commits before editing
+these**, not because they're permanently off-limits, just so you don't clobber
+the fix or re-introduce the bug while restyling:
+
+- `src/components/site/site-chrome.tsx` (**Foundation lane**) — the footer's
+  "Standard Notice" paragraph now renders `{STANDARD_NOTICE}` imported from
+  `src/lib/site/notice.ts` instead of an inline string (the inline copy had
+  the wrong, out-of-date wording). Keep that import; restyle the `<div>`
+  around it freely.
+- `src/app/(site)/page.tsx` (**Lane A, open**) — `TOP_SYMPTOMS`/`STAGES`/
+  `CORE_TOOLS` are now filtered through `getSiteData()`/`isStaticTarget()`
+  before rendering (two of the hard-coded hrefs were pointing at pages that
+  don't exist — Lighthouse caught live 404s from the homepage). Keep the
+  `exists()` filter when restyling the lists, or dead/draft links can
+  resurface as soon as a page gets renamed or isn't committed yet.
+
+Also touched, both currently **unclaimed (Lane C)** so no live conflict, just
+documenting since I committed changes there this session:
+- `src/app/app/account/{page.tsx,account-client.tsx}` — fixed real bugs: no
+  pre-selected retention period (consent must be an active choice), withdraw/
+  delete-account were silently failing (wrong HTTP methods), removed a false
+  "encrypted" claim, page now says "accounts aren't available yet" unless
+  `FEATURE_LOGIN` + environment actually allow it.
+- `src/app/app/check-in/page.tsx` — added `requestPersistentStorage()` after
+  save (logic, one import+one call), plus I recolored the old hard-coded
+  terracotta hex values (`#965342` etc., leftover from the pre-rebrand palette)
+  to the brand green across all of `src/app/app/**` and `src/components/{app,ui}/**`
+  — that was a mechanical find/replace of literal hex values, not a redesign,
+  so Lane C/Foundation should still restyle these freely; just don't be
+  surprised the old brown is gone.
+- `src/app/app/doctor-report/page.tsx` — added a "Download PDF" button next to
+  Print (handler + two `Button`s instead of one). Logic lives in
+  `src/lib/tools/doctor-report-pdf.ts`.
+
+Nothing else in flight on my side right now. I'll keep checking this file
+before touching anything UI-adjacent going forward.
 
 ## Lanes
 
@@ -126,3 +174,17 @@ the owner/functionality chat can make.)*
   thin after this, flag it here. Leaving Lane A unclaimed/open for now; this
   session has moved to Lane B.
 - 2026-11-06 — UI sync session: claimed Lane B (interactive tools UI).
+- 2026-11-06 — nextecom (functionality): confirmed the boundary list above,
+  added two new seam notes (`site-chrome.tsx` notice import, `(site)/page.tsx`
+  `exists()` filter — pull past these before restyling), and flagged three
+  files in unclaimed Lane C already touched for real bugs (account
+  consent/retention, persistent-storage hook on check-in save, doctor-report
+  PDF button). Also fixed: account/server-sync APIs were wide open to any
+  `userId` passed in a URL or body (now 404 unless `FEATURE_LOGIN=true`, 503
+  in production, header-only user id); cron deletion now fails closed in
+  production without `CRON_SECRET`; www→apex redirect was a 2-hop chain, now
+  one hop; rewrote `.env.example` and both `DEPLOY_*.md` guides for
+  MenoVerdict/Namecheap; added a formatted PDF download (jsPDF) to the doctor
+  report; fixed two dead homepage symptom links Lighthouse caught as live
+  404s. Full build + 73-point verification crawl + Lighthouse all green on
+  commit `1d313d0`. Continuing on functionality/usability per the owner.

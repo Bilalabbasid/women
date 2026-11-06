@@ -1,0 +1,11 @@
+# Authors and reviewers. Never add a person who has not agreed, and never invent credentials.
+# A clinical_reviewer must be a person with credentials, and verified: true is set only by the owner
+# after checking identity and licence. Until then, no page can pass the publish gate.
+- id: editorial-team
+  kind: organization
+  name: null # rendered as "<SITE_NAME> editorial team"
+  roles: [author, editor]
+  credentials: null
+  bio: The editorial team researches and drafts pages. Medical pages are published only after a named clinician reviews them.
+  url: null
+  verified: true

@@ -1,0 +1,17 @@
+# TEST FIXTURE ONLY. Fictional people for unit tests.
+- id: editorial-team
+  kind: organization
+  name: null
+  roles: [author, editor]
+  credentials: null
+  bio: Fixture team.
+  url: null
+  verified: true
+- id: test-clinician
+  kind: person
+  name: Test Clinician
+  roles: [clinical_reviewer]
+  credentials: Test credentials
+  bio: Fixture reviewer.
+  url: null
+  verified: true

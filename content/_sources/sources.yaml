@@ -1,0 +1,8 @@
+# Source registry. One record per source; pages cite by id.
+# Add a source ONLY after opening it and confirming the key finding (set verified: true).
+# Order of preference: regulators/labels > society guidelines > systematic reviews and large RCTs > smaller studies.
+# Label small studies, preprints and brand-funded research with the matching `type` and `funding_conflict`.
+#
+# Fields: id, title, authors[], publisher, year, type, url|null, doi|null (one required), accessed,
+#         population, key_finding, funding_conflict|null, verified, notes?
+[]

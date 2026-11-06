@@ -1,0 +1,14 @@
+# TEST FIXTURE ONLY. Not a real source registry.
+- id: fixture-guideline
+  title: Fixture guideline for tests
+  authors: [Test Author]
+  publisher: Test Publisher
+  year: 2025
+  type: guideline
+  url: https://example.org/fixture
+  doi: null
+  accessed: "2026-11-06"
+  population: Test population
+  key_finding: A fixture finding used only in unit tests.
+  funding_conflict: null
+  verified: true

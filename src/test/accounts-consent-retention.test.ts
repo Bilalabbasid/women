@@ -1,6 +1,8 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { MemoryDatabaseAdapter } from '@/lib/account/db-adapter';
 import { AccountService } from '@/lib/account/service';
+import { POST as aiChatPost } from '@/app/api/ai/chat/route';
+import { POST as newsletterPost } from '@/app/api/newsletter/subscribe/route';
 
 describe('Accounts, Consent and Data Retention (Prompt 2)', () => {
   let db: MemoryDatabaseAdapter;
@@ -127,6 +129,32 @@ describe('Accounts, Consent and Data Retention (Prompt 2)', () => {
 
     const checkData = await service.getUserHealthData(user.id);
     expect(checkData.length).toBe(0);
+  });
+
+  it('returns calm not-available-yet message from AI endpoint when key is absent', async () => {
+    const res = await aiChatPost();
+    expect(res.status).toBe(200);
+    const body = (await res.json()) as { available: boolean; message: string };
+    expect(body.available).toBe(false);
+    expect(body.message).toMatch(/not available yet/i);
+  });
+
+  it('accepts email-only newsletter signup and rejects any health/symptom fields', async () => {
+    const okReq = new Request('https://menoverdict.com/api/newsletter/subscribe/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: 'reader@example.com' }),
+    });
+    const okRes = await newsletterPost(okReq);
+    expect(okRes.status).toBe(200);
+
+    const badReq = new Request('https://menoverdict.com/api/newsletter/subscribe/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: 'reader@example.com', symptoms: ['hot-flashes'] }),
+    });
+    const badRes = await newsletterPost(badReq);
+    expect(badRes.status).toBe(400);
   });
 });
 

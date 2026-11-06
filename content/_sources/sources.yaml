@@ -1163,3 +1163,92 @@
   funding_conflict: null
   verified: true
   notes: "I could not independently re-access goodrx.com myself (it returned a 403 'Access to this page has been denied' to my browser session on 2026-11-07, both for the main estradiol page and a patch-specific subpage) - this entry rests on the content session's own direct read, not my own verification. Retail pricing pages change often and are explicitly dated in the content as 'as of November 2026' rather than presented as a stable fact; re-check before relying on these figures again."
+
+- id: trento-postmenopausal-sexual-function-2021
+  title: "Sexual Function and Associated Factors in Postmenopausal Women"
+  authors: [Trento SRSS, Madeiro A, Rufino AC]
+  publisher: Revista Brasileira de Ginecologia e Obstetricia
+  year: 2021
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/34461662/
+  doi: 10.1055/s-0041-1735128
+  accessed: "2026-11-07"
+  population: "380 women aged 40-65, public health service users, Brazil, 2019; cross-sectional"
+  key_finding: "64% (243/380) were at risk of sexual dysfunction, with lower scores in sexual desire/interest, comfort, orgasm, and satisfaction. Factors significantly associated with greater risk of sexual dysfunction: sexual complaints (adjusted OR 8.16, 95% CI 5.06-13.15), vaginal dryness (adjusted OR 3.44, 95% CI 2.22-5.32), sleep problems (adjusted OR 2.72, 95% CI 1.77-4.19), having a partner (adjusted OR 2.07, 95% CI 1.03-4.17), and depressed mood (adjusted OR 2.03, 95% CI 1.32-3.10)."
+  funding_conflict: null
+  verified: true
+
+- id: silva-sexual-counseling-metaanalysis-2022
+  title: "Educational Programs and Sexual Counselling for Postmenopausal Sexual Dysfunction: A Systematic Review and Meta-Analysis"
+  authors: [Santos Silva IM, Paula Pinto M, Goncalves D]
+  publisher: Journal of Sexual Medicine
+  year: 2022
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/34758929/
+  doi: 10.1016/j.jsxm.2021.09.017
+  accessed: "2026-11-07"
+  population: "8 studies (6 RCTs, 2 non-randomized), 619 women aged 39-75, all in menopause less than 5 years"
+  key_finding: "Sexual counseling/education programs (4-10 sessions of 45-60 minutes, some including CBT or mindfulness) significantly improved total Female Sexual Function Index score vs. routine care (mean difference +7.14, 95% CI 3.70-10.6, p<0.0001), with significant improvement across all evaluated domains: pain, arousal, lubrication, desire, orgasm, and satisfaction."
+  funding_conflict: null
+  verified: true
+  notes: "No conflict-of-interest statement appears in the indexed abstract itself - recorded here as 'not stated', not assumed to be 'none', since the two are different things."
+
+- id: uspstf-breast-cancer-screening-2024
+  title: "Breast Cancer: Screening"
+  authors: []
+  publisher: US Preventive Services Task Force
+  year: 2024
+  type: regulator_statement
+  url: https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-screening
+  doi: null
+  accessed: "2026-11-07"
+  population: US women
+  key_finding: "USPSTF recommends biennial screening mammography for women aged 40-74 (Grade B). Evidence is insufficient to assess the balance of benefits and harms of screening mammography in women 75+ (Grade I), or of supplemental screening with ultrasound or MRI for women with dense breasts (Grade I)."
+  funding_conflict: null
+  verified: true
+  notes: "Dated April 30, 2024 on the page itself."
+
+- id: uspstf-osteoporosis-screening-2025
+  title: "Osteoporosis to Prevent Fractures: Screening"
+  authors: []
+  publisher: US Preventive Services Task Force
+  year: 2025
+  type: regulator_statement
+  url: https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/osteoporosis-screening
+  doi: null
+  accessed: "2026-11-07"
+  population: US women and men
+  key_finding: "USPSTF recommends screening for osteoporosis in women 65+ (Grade B), and in postmenopausal women younger than 65 who are at increased fracture risk per clinical risk assessment (Grade B). Evidence is insufficient to assess the balance of benefits and harms of screening in men (Grade I)."
+  funding_conflict: null
+  verified: true
+  notes: "Dated January 14, 2025 on the page itself."
+
+- id: uspstf-colorectal-cancer-screening-2021
+  title: "Colorectal Cancer: Screening"
+  authors: []
+  publisher: US Preventive Services Task Force
+  year: 2021
+  type: regulator_statement
+  url: https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/colorectal-cancer-screening
+  doi: null
+  accessed: "2026-11-07"
+  population: US adults at average risk for colorectal cancer
+  key_finding: "USPSTF recommends screening for colorectal cancer in adults aged 50-75 (Grade A) and 45-49 (Grade B). For adults 76-85, clinicians should selectively offer screening based on overall health, prior screening history, and patient preference (Grade C), since the net benefit of screening everyone in this age group is small."
+  funding_conflict: null
+  verified: true
+  notes: "Dated May 18, 2021 on the page itself."
+
+- id: uspstf-cervical-cancer-screening-2018
+  title: "Cervical Cancer: Screening"
+  authors: []
+  publisher: US Preventive Services Task Force
+  year: 2018
+  type: regulator_statement
+  url: https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening
+  doi: null
+  accessed: "2026-11-07"
+  population: US women
+  key_finding: "USPSTF recommends against cervical cancer screening in women older than 65 who have had adequate prior screening and aren't otherwise at high risk (Grade D), and against screening women who have had a hysterectomy with cervix removed and no history of a high-grade precancerous lesion (CIN 2/3) or cervical cancer (Grade D). For women 21-65, recommends screening every 3 years with cytology alone, or every 5 years with hrHPV testing alone or cotesting (Grade A)."
+  funding_conflict: null
+  verified: true
+  notes: "Dated August 21, 2018, and the page displays 'This topic is being updated... Update in Progress for Cervical Cancer: Screening' as of the access date - check for a newer statement before treating this as the final word, same caveat as the other 'update in progress' USPSTF pages already in this registry."

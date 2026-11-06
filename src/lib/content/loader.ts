@@ -37,7 +37,10 @@ export interface ContentStore {
   errors: ContentError[];
 }
 
-export const DEFAULT_CONTENT_ROOT = path.join(process.cwd(), 'content');
+/** CONTENT_ROOT lets tests and previews point at fixtures. Production uses ./content. */
+export const DEFAULT_CONTENT_ROOT = process.env.CONTENT_ROOT
+  ? path.resolve(process.env.CONTENT_ROOT)
+  : path.join(process.cwd(), 'content');
 
 const FM_RE = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/;
 

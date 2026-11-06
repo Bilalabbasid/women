@@ -68,7 +68,7 @@ export function AppNavigation() {
                     )}
                   />
                 </div>
-                <span className="text-[11px] leading-none tracking-tight">{item.label}</span>
+                <span className="text-xs leading-none tracking-tight">{item.label}</span>
               </Link>
             );
           })}

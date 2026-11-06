@@ -142,7 +142,7 @@ export default function InsightsPage() {
                   {hotFlashStats?.dailyAverage ?? 0}{' '}
                   <span className="text-xs font-sans font-normal text-[#68615C]">/ day avg</span>
                 </p>
-                <div className="flex items-center gap-1 text-[11px] text-[#2C6E49] font-medium">
+                <div className="flex items-center gap-1 text-xs text-[#2C6E49] font-medium">
                   <TrendingDown className="w-3.5 h-3.5" />
                   <span>{hotFlashStats?.totalRecorded ?? 0} total in window</span>
                 </div>
@@ -157,7 +157,7 @@ export default function InsightsPage() {
                   {sleepStats?.averageHours ?? 0}{' '}
                   <span className="text-xs font-sans font-normal text-[#68615C]">hours/night</span>
                 </p>
-                <p className="text-[11px] text-[#68615C]">
+                <p className="text-xs text-[#68615C]">
                   Night waking: {sleepStats?.nightsWokeAtNight ?? 0} of {recordCount} nights ({sleepStats?.wakingPercent ?? 0}%)
                 </p>
               </Card>

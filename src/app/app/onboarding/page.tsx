@@ -112,7 +112,7 @@ export default function OnboardingPage() {
                   <p className="text-xs text-[#554E48] mt-1 leading-relaxed">
                     Records stay purely in your device&apos;s IndexedDB. Zero cloud uploads, zero account required.
                   </p>
-                  <p className="text-[11px] text-[#7A736E] mt-2 bg-[#F3EFEA] p-2 rounded-lg">
+                  <p className="text-xs text-[#7A736E] mt-2 bg-[#F3EFEA] p-2 rounded-lg">
                     Note: Clearing your browser data will delete local logs. You can export encrypted backups anytime.
                   </p>
                 </div>
@@ -182,7 +182,7 @@ export default function OnboardingPage() {
                 >
                   <div>
                     <p className="font-medium text-sm">{symptom.name}</p>
-                    <p className="text-[11px] text-[#68615C] mt-0.5">{symptom.categoryLabel}</p>
+                    <p className="text-xs text-[#68615C] mt-0.5">{symptom.categoryLabel}</p>
                   </div>
                   <div
                     className={`w-5 h-5 rounded-full flex items-center justify-center border ${

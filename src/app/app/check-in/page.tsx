@@ -235,7 +235,7 @@ export default function CheckinPage() {
                   }`}
                 >
                   <p className="text-xs font-semibold">{f.label}</p>
-                  <p className={`text-[10px] hidden sm:block ${isSelected ? 'text-white/80' : 'text-[#8A817A]'}`}>
+                  <p className={`text-xs hidden sm:block ${isSelected ? 'text-white/80' : 'text-[#8A817A]'}`}>
                     {f.desc}
                   </p>
                 </button>
@@ -332,7 +332,7 @@ export default function CheckinPage() {
               </Button>
             </div>
 
-            <p className="text-[11px] text-center text-[#7A736E] pt-1">
+            <p className="text-xs text-center text-[#7A736E] pt-1">
               Tap + anytime a flash or flush occurs.
             </p>
           </Card>
@@ -372,14 +372,14 @@ export default function CheckinPage() {
               <h3 className="text-sm font-serif font-semibold text-[#231F1D]">
                 Key Symptoms & Severity
               </h3>
-              <p className="text-[11px] text-[#68615C]">1 = Mild • 5 = Severe • Tap again to deselect</p>
+              <p className="text-xs text-[#68615C]">1 = Mild • 5 = Severe • Tap again to deselect</p>
             </div>
             <Button
               type="button"
               variant="outline"
               size="sm"
               onClick={() => setShowAddCustomModal(true)}
-              className="text-xs gap-1 min-h-[34px] px-2.5"
+              className="text-xs gap-1 min-h-[44px] px-2.5"
             >
               <Plus className="w-3.5 h-3.5" />
               <span>Custom</span>
@@ -395,14 +395,14 @@ export default function CheckinPage() {
                   <div className="flex items-center justify-between mb-2">
                     <div>
                       <p className="text-sm font-medium text-[#231F1D]">{symptom.name}</p>
-                      <p className="text-[11px] text-[#7A736E]">{symptom.categoryLabel}</p>
+                      <p className="text-xs text-[#7A736E]">{symptom.categoryLabel}</p>
                     </div>
                     {currentSeverity > 0 ? (
                       <Badge variant="primary" className="text-xs">
                         Level {currentSeverity}/5
                       </Badge>
                     ) : (
-                      <span className="text-[11px] text-[#8A817A]">None</span>
+                      <span className="text-xs text-[#8A817A]">None</span>
                     )}
                   </div>
 
@@ -434,14 +434,14 @@ export default function CheckinPage() {
                   <div className="flex items-center justify-between mb-2">
                     <div>
                       <p className="text-sm font-medium text-[#231F1D]">{cs.name}</p>
-                      <p className="text-[11px] text-[#577060]">Custom Symptom</p>
+                      <p className="text-xs text-[#577060]">Custom Symptom</p>
                     </div>
                     {currentSeverity > 0 ? (
                       <Badge variant="secondary" className="text-xs">
                         Level {currentSeverity}/5
                       </Badge>
                     ) : (
-                      <span className="text-[11px] text-[#8A817A]">None</span>
+                      <span className="text-xs text-[#8A817A]">None</span>
                     )}
                   </div>
 
@@ -474,7 +474,7 @@ export default function CheckinPage() {
                     <div className="flex items-center justify-between mb-2">
                       <div>
                         <p className="text-sm font-medium text-[#231F1D]">{symptom.name}</p>
-                        <p className="text-[11px] text-[#7A736E]">{symptom.categoryLabel}</p>
+                        <p className="text-xs text-[#7A736E]">{symptom.categoryLabel}</p>
                       </div>
                       {currentSeverity > 0 && (
                         <Badge variant="primary" className="text-xs">

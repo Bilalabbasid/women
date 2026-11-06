@@ -1,0 +1,156 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import {
+  getSiteData,
+  renderPage,
+  breadcrumbsFor,
+  draftProblems,
+  childrenOf,
+  relatedFor,
+} from '@/lib/content/site-data';
+import { isPublishable } from '@/lib/content/gate';
+import { buildMetadata } from '@/lib/seo/metadata';
+import { contentPageLd, breadcrumbLd, faqLd } from '@/lib/seo/jsonld';
+import { JsonLd, Breadcrumbs } from '@/components/site/site-chrome';
+import { GradeBadge, ReviewLine, References, ChangeLog, DraftBanner, Toc } from '@/components/site/evidence';
+import { QuestionTools, SavedCopyNotice } from '@/components/site/client-islands';
+
+/** Only pages in this build exist. Anything else is a real 404. */
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return getSiteData().pages.map((p) => ({ slug: p.url.split('/').filter(Boolean) }));
+}
+
+const urlFor = (slug: string[]) => `/${slug.join('/')}/`;
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const page = getSiteData().byUrl.get(urlFor(slug));
+  if (!page) return {};
+  const { store } = getSiteData();
+  return buildMetadata({
+    title: page.fm.seo_title,
+    description: page.fm.meta_description,
+    path: page.url,
+    // Drafts (dev/staging only) are always noindex.
+    noindex: page.fm.noindex || !isPublishable(page, store),
+    type: 'article',
+    modified: page.fm.updated_at,
+  });
+}
+
+export default async function ContentPageRoute({ params }: { params: Promise<{ slug: string[] }> }) {
+  const { slug } = await params;
+  const { byUrl, store } = getSiteData();
+  const page = byUrl.get(urlFor(slug));
+  if (!page) notFound();
+
+  const { fm } = page;
+  const rendered = renderPage(page);
+  const approved = isPublishable(page, store);
+  const problems = approved ? [] : draftProblems(page);
+  const crumbs = breadcrumbsFor(page);
+  const author = store.people.get(fm.author);
+  const reviewer = fm.reviewer ? store.people.get(fm.reviewer) : undefined;
+  const methodHref = byUrl.has('/evidence/how-we-grade/') ? '/evidence/how-we-grade/' : undefined;
+  const children = fm.page_type === 'hub' ? childrenOf(page.url) : [];
+  const related = relatedFor(page);
+  const citationIds = [...rendered.citations, ...fm.sources.filter((s) => !rendered.citations.includes(s))];
+  const faq = fm.faq ?? [];
+  const ld = [contentPageLd(page, store), breadcrumbLd(crumbs), ...(faq.length ? [faqLd(faq)!] : [])];
+
+  return (
+    <>
+      {!approved && <DraftBanner problems={problems} />}
+      <JsonLd data={ld} />
+      <article className="space-y-6">
+        <Breadcrumbs crumbs={crumbs} />
+        <header className="space-y-3">
+          <h1 className="text-3xl sm:text-4xl">{fm.title}</h1>
+          <ReviewLine page={page} author={author} reviewer={reviewer} approved={approved} />
+          {fm.evidence_grade && (
+            <p className="flex flex-wrap items-center gap-2">
+              <span className="text-[var(--color-ink-muted)]">Evidence:</span>
+              <GradeBadge grade={fm.evidence_grade} methodHref={methodHref} />
+            </p>
+          )}
+          {fm.affiliate_disclosure && (
+            <p role="note" className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-3">
+              <strong>Disclosure:</strong> this page contains paid links, which are labelled. We may earn a
+              commission if you use them. That never changes an evidence grade or a ranking.
+            </p>
+          )}
+          {fm.audience_limits.length > 0 && (
+            <div className="rounded-xl bg-[var(--color-accent-soft)] p-3">
+              <p className="font-semibold">This page may not apply to you if:</p>
+              <ul className="list-disc pl-6">
+                {fm.audience_limits.map((a) => (
+                  <li key={a}>{a}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </header>
+
+        <SavedCopyNotice reviewedAt={approved ? fm.reviewed_at : null} isMedical={page.isMedical} />
+        <Toc headings={rendered.headings} />
+
+        <div className="prose" dangerouslySetInnerHTML={{ __html: rendered.html }} />
+        {rendered.questionLists > 0 && <QuestionTools />}
+
+        {children.length > 0 && (
+          <section aria-labelledby="in-this-section" className="space-y-2">
+            <h2 id="in-this-section" className="text-2xl">
+              In this section
+            </h2>
+            <ul className="space-y-1">
+              {children.map((c) => (
+                <li key={c.url}>
+                  <Link href={c.url} className="tap text-[var(--color-link)] underline">
+                    {c.fm.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {faq.length > 0 && (
+          <section aria-labelledby="faq" className="space-y-3">
+            <h2 id="faq" className="text-2xl">
+              Questions people ask
+            </h2>
+            {faq.map((f) => (
+              <div key={f.q}>
+                <h3 className="text-xl">{f.q}</h3>
+                <p>{f.a}</p>
+              </div>
+            ))}
+          </section>
+        )}
+
+        {related.length > 0 && (
+          <section aria-labelledby="related" className="space-y-2">
+            <h2 id="related" className="text-2xl">
+              Related pages
+            </h2>
+            <ul className="space-y-1">
+              {related.map((r) => (
+                <li key={r.url}>
+                  <Link href={r.url} className="tap text-[var(--color-link)] underline">
+                    {r.fm.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <References ids={citationIds} sources={store.sources} />
+        <ChangeLog entries={fm.change_log} />
+      </article>
+    </>
+  );
+}

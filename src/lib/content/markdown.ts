@@ -29,7 +29,8 @@ export interface RenderOptions {
   knownPaths: Set<string>;
   /** Code-defined routes that are always valid link targets (for example /tools/). */
   staticPaths?: Set<string>;
-  /** Source IDs in citation order are collected here. */
+  /** Extra rule for always-valid targets (for example anything under /app/). */
+  isAlwaysValid?: (path: string) => boolean;
 }
 
 export interface LinkRecord {
@@ -132,7 +133,7 @@ function rehypeLinksAndCollect(opts: RenderOptions, result: Omit<RenderResult, '
       }
       if (internal) {
         const pathOnly = href.split('#')[0].split('?')[0];
-        const exists = opts.knownPaths.has(pathOnly) || opts.staticPaths?.has(pathOnly);
+        const exists = opts.knownPaths.has(pathOnly) || opts.staticPaths?.has(pathOnly) || opts.isAlwaysValid?.(pathOnly);
         result.links.push({ href, text, internal: true, sponsored: false, inUrgent, dropped: !exists });
         if (!exists && parent && index !== undefined) {
           // Rule: never link a published page to a draft or missing page. Keep the words.

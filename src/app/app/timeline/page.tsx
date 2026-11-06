@@ -309,7 +309,7 @@ export default function TimelinePage() {
                       {/* Detailed symptoms disclosure */}
                       {entry.symptoms && entry.symptoms.length > 0 && (
                         <div className="pt-1">
-                          <div className="flex items-center justify-between text-[11px] text-[#68615C] font-semibold">
+                          <div className="flex items-center justify-between text-xs text-[#68615C] font-semibold">
                             <span>Recorded Symptoms ({entry.symptoms.length})</span>
                             <span className="flex items-center gap-0.5">
                               {isExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
@@ -324,7 +324,7 @@ export default function TimelinePage() {
                                   className="bg-[#FAF8F5] border border-[#E5DED5] p-2 rounded-lg text-xs"
                                 >
                                   <p className="font-medium text-[#231F1D] truncate">{s.name}</p>
-                                  <p className="text-[#965342] font-semibold text-[11px]">
+                                  <p className="text-[#965342] font-semibold text-xs">
                                     Severity: {s.severity}/5
                                   </p>
                                 </div>
@@ -350,7 +350,7 @@ export default function TimelinePage() {
                               <Pill className="w-4 h-4 text-[#965342]" />
                               <strong className="text-[#231F1D]">{evt.treatmentName}</strong>
                               <span
-                                className={`text-[10px] px-2 py-0.5 rounded-full font-bold uppercase ${
+                                className={`text-xs px-2 py-0.5 rounded-full font-bold uppercase ${
                                   evt.action === 'skipped'
                                     ? 'bg-[#F2EDEA] text-[#8A817A]'
                                     : 'bg-[#EFF7F2] text-[#2C6E49]'
@@ -360,12 +360,12 @@ export default function TimelinePage() {
                               </span>
                             </div>
                             {evt.site && (
-                              <p className="text-[11px] text-[#965342] flex items-center gap-1 pl-6">
+                              <p className="text-xs text-[#965342] flex items-center gap-1 pl-6">
                                 <RotateCcw className="w-3 h-3" /> {evt.site}
                               </p>
                             )}
                             {evt.notes && (
-                              <p className="text-[11px] text-[#68615C] pl-6">{evt.notes}</p>
+                              <p className="text-xs text-[#68615C] pl-6">{evt.notes}</p>
                             )}
                           </div>
 
@@ -373,7 +373,7 @@ export default function TimelinePage() {
                             size="sm"
                             variant="outline"
                             onClick={(e) => handleOpenComparison(evt, e)}
-                            className="text-[11px] px-2.5 py-1 min-h-[30px] gap-1 text-[#965342] hover:bg-[#F7EFEA] self-start sm:self-center"
+                            className="text-xs px-2.5 py-1 min-h-[44px] gap-1 text-[#965342] hover:bg-[#F7EFEA] self-start sm:self-center"
                           >
                             <Sparkles className="w-3 h-3" /> Compare Before & After
                           </Button>
@@ -397,7 +397,7 @@ export default function TimelinePage() {
             <div className="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl border border-[#E5DED5] space-y-4 max-h-[90vh] overflow-y-auto">
               <div className="flex items-start justify-between">
                 <div>
-                  <Badge variant="primary" className="text-[10px]">
+                  <Badge variant="primary" className="text-xs">
                     Deterministic Comparison
                   </Badge>
                   <h3 className="font-serif font-bold text-lg text-[#231F1D] mt-1">
@@ -445,7 +445,7 @@ export default function TimelinePage() {
                     <span className="font-semibold text-[#231F1D] flex items-center gap-1.5">
                       <Flame className="w-4 h-4 text-[#965342]" /> Hot Flashes
                     </span>
-                    <span className="text-[11px] font-bold text-[#68615C]">
+                    <span className="text-xs font-bold text-[#68615C]">
                       {comparisonResult.hotFlashes.beforeDailyAvg}/day → {comparisonResult.hotFlashes.afterDailyAvg}/day
                     </span>
                   </div>
@@ -460,7 +460,7 @@ export default function TimelinePage() {
                     <span className="font-semibold text-[#231F1D] flex items-center gap-1.5">
                       <Moon className="w-4 h-4 text-[#577060]" /> Sleep Duration
                     </span>
-                    <span className="text-[11px] font-bold text-[#68615C]">
+                    <span className="text-xs font-bold text-[#68615C]">
                       {comparisonResult.sleep.beforeAvgHours}h → {comparisonResult.sleep.afterAvgHours}h
                     </span>
                   </div>
@@ -473,7 +473,7 @@ export default function TimelinePage() {
                 <Card className="p-3.5 bg-white border-[#E5DED5] space-y-2">
                   <div className="flex items-center justify-between">
                     <span className="font-semibold text-[#231F1D]">Overall Daily Feeling</span>
-                    <span className="text-[11px] font-bold text-[#68615C]">
+                    <span className="text-xs font-bold text-[#68615C]">
                       {comparisonResult.feeling.beforeAvg}/5 → {comparisonResult.feeling.afterAvg}/5
                     </span>
                   </div>
@@ -489,7 +489,7 @@ export default function TimelinePage() {
                   <AlertCircle className="w-4 h-4 shrink-0" />
                   Medical Correlation Disclaimer:
                 </p>
-                <p className="leading-relaxed text-[11px] text-[#7A4234]">
+                <p className="leading-relaxed text-xs text-[#7A4234]">
                   {comparisonResult.safetyNotice}
                 </p>
               </div>

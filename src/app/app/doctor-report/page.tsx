@@ -105,7 +105,7 @@ export default function DoctorModePage() {
               variant="outline"
               size="sm"
               onClick={handlePrint}
-              className="gap-1.5 text-xs min-h-[38px]"
+              className="gap-1.5 text-xs min-h-[44px]"
             >
               <Printer className="w-3.5 h-3.5" />
               <span>Print / Save PDF</span>
@@ -140,7 +140,7 @@ export default function DoctorModePage() {
           {/* Header of Report */}
           <div className="border-b border-[#E5DED5] pb-4 space-y-1">
             <div className="flex items-center justify-between">
-              <Badge variant="outline" className="text-[10px] uppercase tracking-wider font-semibold">
+              <Badge variant="outline" className="text-xs uppercase tracking-wider font-semibold">
                 Patient-Generated Health Summary
               </Badge>
               <span className="text-xs text-[#68615C]">
@@ -156,7 +156,7 @@ export default function DoctorModePage() {
           </div>
 
           {/* Clinician Medical Disclaimer */}
-          <div className="bg-[#FAF8F5] p-3 rounded-xl border border-[#EBE3D8] text-[11px] text-[#68615C] leading-relaxed">
+          <div className="bg-[#FAF8F5] p-3 rounded-xl border border-[#EBE3D8] text-xs text-[#68615C] leading-relaxed">
             <strong>Clinical Notice:</strong> This summary was compiled client-side by the patient from their private local records for discussion during consultation. It does not constitute a diagnostic determination or therapeutic recommendation.
           </div>
 

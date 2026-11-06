@@ -121,7 +121,7 @@ export default function DashboardPage() {
 
       <div className="flex-1 max-w-2xl mx-auto w-full px-4 py-5 space-y-5">
         {/* Storage status banner */}
-        <div className="bg-[#FAF8F5] border border-[#E5DED5] rounded-xl px-3.5 py-1.5 flex items-center justify-between text-[11px] text-[#68615C]">
+        <div className="bg-[#FAF8F5] border border-[#E5DED5] rounded-xl px-3.5 py-1.5 flex items-center justify-between text-xs text-[#68615C]">
           <span className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-[#2C6E49]" />
             <span>Stored on this device (IndexedDB)</span>
@@ -135,7 +135,7 @@ export default function DashboardPage() {
         <section aria-labelledby="today-feeling-heading">
           <Card className="bg-gradient-to-b from-[#FDF9F6] to-white border-[#E5DCD2] p-5 sm:p-6 shadow-sm">
             <div className="flex items-center justify-between mb-2">
-              <Badge variant="primary" className="text-[11px]">
+              <Badge variant="primary" className="text-xs">
                 Daily Check-in
               </Badge>
               <span className="text-xs text-[#68615C]">
@@ -239,7 +239,7 @@ export default function DashboardPage() {
                           <div>
                             <div className="flex items-center gap-2">
                               <p className="font-semibold text-sm text-[#231F1D]">{t.name}</p>
-                              <Badge variant="primary" className="text-[10px] capitalize">
+                              <Badge variant="primary" className="text-xs capitalize">
                                 {t.type.replace('hrt_', '')}
                               </Badge>
                             </div>
@@ -255,7 +255,7 @@ export default function DashboardPage() {
                           variant="secondary"
                           size="sm"
                           onClick={() => handleLogTreatmentDone(t)}
-                          className="shrink-0 text-xs px-3 min-h-[32px]"
+                          className="shrink-0 text-xs px-3 min-h-[44px]"
                         >
                           <Check className="w-3.5 h-3.5 mr-1" />
                           {t.type === 'patch' || t.type === 'hrt_patch' ? 'Change Patch' : 'Mark Done'}
@@ -275,7 +275,7 @@ export default function DashboardPage() {
                           </div>
                           <span className="font-semibold text-[#231F1D] line-through opacity-75">{t.name}</span>
                         </div>
-                        <span className="text-[11px] text-[#2C6E49] font-medium">Logged for today</span>
+                        <span className="text-xs text-[#2C6E49] font-medium">Logged for today</span>
                       </Card>
                     ))}
                   </>
@@ -323,11 +323,11 @@ export default function DashboardPage() {
                           day: 'numeric',
                         })}
                       </span>
-                      <Badge variant={item.overallFeeling >= 4 ? 'success' : 'neutral'} className="text-[10px]">
+                      <Badge variant={item.overallFeeling >= 4 ? 'success' : 'neutral'} className="text-xs">
                         Feeling: {item.overallFeeling}/5
                       </Badge>
                       {item.hotFlashCount ? (
-                        <span className="text-[11px] text-[#8A5645] flex items-center gap-0.5">
+                        <span className="text-xs text-[#8A5645] flex items-center gap-0.5">
                           <Flame className="w-3 h-3" /> {item.hotFlashCount} flashes
                         </span>
                       ) : null}
@@ -361,7 +361,7 @@ export default function DashboardPage() {
               <p className="font-semibold text-xs text-[#231F1D] group-hover:text-[#965342] transition">
                 Symptom Trends
               </p>
-              <p className="text-[11px] text-[#68615C] mt-0.5">
+              <p className="text-xs text-[#68615C] mt-0.5">
                 Deterministic calculations of sleep & hot flash frequencies.
               </p>
             </Card>
@@ -375,7 +375,7 @@ export default function DashboardPage() {
               <p className="font-semibold text-xs text-[#231F1D] group-hover:text-[#2C6E49] transition">
                 Doctor Mode
               </p>
-              <p className="text-[11px] text-[#68615C] mt-0.5">
+              <p className="text-xs text-[#68615C] mt-0.5">
                 Generate a 1-page summary for your next appointment.
               </p>
             </Card>

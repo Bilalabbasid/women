@@ -388,7 +388,7 @@ export default function TreatmentsPage() {
             <p>
               <strong>Prescription Guardrail:</strong> MenoWell strictly organizes the routines, schedules, and clinician instructions you record.
             </p>
-            <p className="text-[11px] text-[#8A817A]">
+            <p className="text-xs text-[#8A817A]">
               We never recommend starting, stopping, or altering medications or dosages. Consult your qualified healthcare professional before making any changes.
             </p>
           </div>
@@ -407,7 +407,7 @@ export default function TreatmentsPage() {
               </div>
               <div>
                 <h3 className="text-sm font-semibold text-[#231F1D]">PWA Routine Reminders</h3>
-                <p className="text-[11px] text-[#68615C]">
+                <p className="text-xs text-[#68615C]">
                   Status:{' '}
                   {permissionState === 'granted' ? (
                     <span className="text-[#2C6E49] font-medium">Active</span>
@@ -427,7 +427,7 @@ export default function TreatmentsPage() {
                 size="sm"
                 variant="primary"
                 onClick={handleRequestPermission}
-                className="text-xs px-3 min-h-[34px]"
+                className="text-xs px-3 min-h-[44px]"
               >
                 Enable Reminders
               </Button>
@@ -436,7 +436,7 @@ export default function TreatmentsPage() {
                 size="sm"
                 variant="outline"
                 onClick={handleTestNotification}
-                className="text-xs px-3 min-h-[34px]"
+                className="text-xs px-3 min-h-[44px]"
               >
                 Test Notification
               </Button>
@@ -453,7 +453,7 @@ export default function TreatmentsPage() {
                   {reminderSettings.privacyMode} Mode
                 </span>
               </span>
-              <p className="text-[11px] text-[#68615C]">
+              <p className="text-xs text-[#68615C]">
                 {reminderSettings.privacyMode === 'discrete'
                   ? 'Displays neutral alert: "Scheduled routine reminder". Keeps medication details off lock screen.'
                   : 'Displays full medication name & dose on lock screen.'}
@@ -464,7 +464,7 @@ export default function TreatmentsPage() {
               size="sm"
               variant="outline"
               onClick={handleTogglePrivacyMode}
-              className="text-[11px] px-2.5 py-1 min-h-[30px] shrink-0"
+              className="text-xs px-2.5 py-1 min-h-[44px] shrink-0"
             >
               {reminderSettings.privacyMode === 'discrete' ? (
                 <span className="flex items-center gap-1">
@@ -480,7 +480,7 @@ export default function TreatmentsPage() {
 
           {/* iOS Fallback Guidance if applicable */}
           {iosGuidance.requiresInstallForPush && (
-            <div className="bg-[#FAF8F5] border border-[#E5DED5] rounded-xl p-3 text-[11px] text-[#68615C] flex items-start gap-2">
+            <div className="bg-[#FAF8F5] border border-[#E5DED5] rounded-xl p-3 text-xs text-[#68615C] flex items-start gap-2">
               <Share2 className="w-4 h-4 text-[#965342] shrink-0 mt-0.5" />
               <p className="leading-relaxed">
                 <strong>iPhone Lock-Screen Tip:</strong> Apple iOS requires adding MenoWell to your Home Screen (tap Safari Share → <em>Add to Home Screen</em>) for system push alerts. In-app reminders below remain fully active.
@@ -518,7 +518,7 @@ export default function TreatmentsPage() {
                       <div>
                         <div className="flex items-center gap-2">
                           <h3 className="font-semibold text-sm text-[#231F1D]">{t.name}</h3>
-                          <Badge variant="primary" className="text-[10px] capitalize">
+                          <Badge variant="primary" className="text-xs capitalize">
                             {t.type.replace('hrt_', '')}
                           </Badge>
                         </div>
@@ -544,7 +544,7 @@ export default function TreatmentsPage() {
                               : 'applied'
                           )
                         }
-                        className="text-xs px-3 min-h-[34px] font-semibold"
+                        className="text-xs px-3 min-h-[44px] font-semibold"
                       >
                         <Check className="w-3.5 h-3.5 mr-1" />
                         {t.type === 'patch' || t.type === 'hrt_patch' ? 'Change Patch' : 'Log Done'}
@@ -563,21 +563,21 @@ export default function TreatmentsPage() {
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => handleQuickSkip(t)}
-                        className="text-[11px] text-[#68615C] hover:text-[#965342] transition underline"
+                        className="text-xs text-[#68615C] hover:text-[#965342] transition underline"
                       >
                         Skip for today
                       </button>
                       <span>•</span>
                       <button
                         onClick={() => handleQuickSnooze(t)}
-                        className="text-[11px] text-[#68615C] hover:text-[#965342] transition underline"
+                        className="text-xs text-[#68615C] hover:text-[#965342] transition underline"
                       >
                         Snooze 1h
                       </button>
                     </div>
 
                     {t.reminderTime && (
-                      <span className="flex items-center gap-1 text-[#2C6E49] font-medium text-[11px]">
+                      <span className="flex items-center gap-1 text-[#2C6E49] font-medium text-xs">
                         <Clock className="w-3 h-3" /> {t.reminderTime}
                       </span>
                     )}
@@ -598,14 +598,14 @@ export default function TreatmentsPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-[#231F1D] line-through opacity-75">{t.name}</p>
-                      <p className="text-[11px] text-[#2C6E49]">Completed today</p>
+                      <p className="text-xs text-[#2C6E49]">Completed today</p>
                     </div>
                   </div>
                   <Button
                     size="sm"
                     variant="outline"
                     onClick={() => handleOpenActionModal(t, 'applied')}
-                    className="text-[11px] px-2.5 py-1 min-h-[28px]"
+                    className="text-xs px-2.5 py-1 min-h-[44px]"
                   >
                     Log Again
                   </Button>
@@ -620,14 +620,14 @@ export default function TreatmentsPage() {
                   className="p-3 bg-[#FAF8F5] border-[#E2DBD1] flex items-center justify-between text-xs opacity-75"
                 >
                   <div className="flex items-center gap-2.5">
-                    <span className="text-[11px] font-semibold text-[#8A817A]">SKIPPED</span>
+                    <span className="text-xs font-semibold text-[#8A817A]">SKIPPED</span>
                     <p className="text-[#231F1D]">{t.name}</p>
                   </div>
                   <Button
                     size="sm"
                     variant="outline"
                     onClick={() => handleOpenActionModal(t, 'applied')}
-                    className="text-[11px] px-2.5 py-1 min-h-[28px]"
+                    className="text-xs px-2.5 py-1 min-h-[44px]"
                   >
                     Log Done Instead
                   </Button>
@@ -647,7 +647,7 @@ export default function TreatmentsPage() {
               size="sm"
               variant="outline"
               onClick={handleOpenAdd}
-              className="gap-1.5 text-xs px-3 min-h-[34px]"
+              className="gap-1.5 text-xs px-3 min-h-[44px]"
             >
               <Plus className="w-3.5 h-3.5" />
               <span>Add Regimen</span>
@@ -673,7 +673,7 @@ export default function TreatmentsPage() {
                       <div>
                         <div className="flex items-center gap-2">
                           <h3 className="font-semibold text-sm text-[#231F1D]">{t.name}</h3>
-                          <Badge variant="primary" className="text-[10px] capitalize">
+                          <Badge variant="primary" className="text-xs capitalize">
                             {t.type.replace('hrt_', '')}
                           </Badge>
                         </div>
@@ -731,7 +731,7 @@ export default function TreatmentsPage() {
                       size="sm"
                       variant="outline"
                       onClick={() => handleOpenComparison(t)}
-                      className="text-xs px-2.5 py-1 min-h-[30px] gap-1 text-[#965342] hover:bg-[#F7EFEA]"
+                      className="text-xs px-2.5 py-1 min-h-[44px] gap-1 text-[#965342] hover:bg-[#F7EFEA]"
                     >
                       <Sparkles className="w-3.5 h-3.5" /> Compare Before & After
                     </Button>
@@ -756,7 +756,7 @@ export default function TreatmentsPage() {
                     <div className="flex items-center gap-2">
                       <p className="font-semibold text-[#231F1D]">{evt.treatmentName}</p>
                       <span
-                        className={`text-[10px] px-2 py-0.5 rounded-full font-bold uppercase ${
+                        className={`text-xs px-2 py-0.5 rounded-full font-bold uppercase ${
                           evt.action === 'skipped'
                             ? 'bg-[#F2EDEA] text-[#8A817A]'
                             : evt.action === 'snoozed'
@@ -767,11 +767,11 @@ export default function TreatmentsPage() {
                         {evt.action}
                       </span>
                     </div>
-                    {evt.site && <p className="text-[11px] text-[#965342]">Site: {evt.site}</p>}
-                    {evt.notes && <p className="text-[#68615C] text-[11px]">{evt.notes}</p>}
+                    {evt.site && <p className="text-xs text-[#965342]">Site: {evt.site}</p>}
+                    {evt.notes && <p className="text-[#68615C] text-xs">{evt.notes}</p>}
                   </div>
 
-                  <span className="text-[#8A817A] text-[11px] shrink-0">{evt.date}</span>
+                  <span className="text-[#8A817A] text-xs shrink-0">{evt.date}</span>
                 </Card>
               ))}
             </div>
@@ -946,7 +946,7 @@ export default function TreatmentsPage() {
                 <div className="flex items-center justify-between pt-2 border-t border-[#F0EBE3]">
                   <div>
                     <label className="font-semibold text-[#231F1D] block">Reminder Alert</label>
-                    <span className="text-[11px] text-[#68615C]">Notify on scheduled days</span>
+                    <span className="text-xs text-[#68615C]">Notify on scheduled days</span>
                   </div>
                   <input
                     type="time"
@@ -1072,7 +1072,7 @@ export default function TreatmentsPage() {
             <div className="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl border border-[#E5DED5] space-y-4 max-h-[90vh] overflow-y-auto">
               <div className="flex items-start justify-between">
                 <div>
-                  <Badge variant="primary" className="text-[10px]">
+                  <Badge variant="primary" className="text-xs">
                     Deterministic Comparison
                   </Badge>
                   <h3 className="font-serif font-bold text-lg text-[#231F1D] mt-1">
@@ -1120,7 +1120,7 @@ export default function TreatmentsPage() {
                     <span className="font-semibold text-[#231F1D] flex items-center gap-1.5">
                       <Flame className="w-4 h-4 text-[#965342]" /> Hot Flashes
                     </span>
-                    <span className="text-[11px] font-bold text-[#68615C]">
+                    <span className="text-xs font-bold text-[#68615C]">
                       {comparisonResult.hotFlashes.beforeDailyAvg}/day → {comparisonResult.hotFlashes.afterDailyAvg}/day
                     </span>
                   </div>
@@ -1135,7 +1135,7 @@ export default function TreatmentsPage() {
                     <span className="font-semibold text-[#231F1D] flex items-center gap-1.5">
                       <Moon className="w-4 h-4 text-[#577060]" /> Sleep Duration
                     </span>
-                    <span className="text-[11px] font-bold text-[#68615C]">
+                    <span className="text-xs font-bold text-[#68615C]">
                       {comparisonResult.sleep.beforeAvgHours}h → {comparisonResult.sleep.afterAvgHours}h
                     </span>
                   </div>
@@ -1148,7 +1148,7 @@ export default function TreatmentsPage() {
                 <Card className="p-3.5 bg-white border-[#E5DED5] space-y-2">
                   <div className="flex items-center justify-between">
                     <span className="font-semibold text-[#231F1D]">Overall Daily Feeling</span>
-                    <span className="text-[11px] font-bold text-[#68615C]">
+                    <span className="text-xs font-bold text-[#68615C]">
                       {comparisonResult.feeling.beforeAvg}/5 → {comparisonResult.feeling.afterAvg}/5
                     </span>
                   </div>
@@ -1167,7 +1167,7 @@ export default function TreatmentsPage() {
                       {comparisonResult.topSymptomSeverities.map((sym) => (
                         <p
                           key={sym.symptomName}
-                          className="text-[11px] text-[#554E48] bg-[#FAF8F5] p-2 rounded-lg border border-[#EBE3D8]"
+                          className="text-xs text-[#554E48] bg-[#FAF8F5] p-2 rounded-lg border border-[#EBE3D8]"
                         >
                           {sym.statement}
                         </p>
@@ -1183,7 +1183,7 @@ export default function TreatmentsPage() {
                   <AlertCircle className="w-4 h-4 shrink-0" />
                   Medical Correlation Disclaimer:
                 </p>
-                <p className="leading-relaxed text-[11px] text-[#7A4234]">
+                <p className="leading-relaxed text-xs text-[#7A4234]">
                   {comparisonResult.safetyNotice}
                 </p>
               </div>

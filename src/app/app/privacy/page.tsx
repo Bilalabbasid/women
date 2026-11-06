@@ -91,7 +91,7 @@ export default function PrivacyCenterPage() {
               <Badge variant="primary" className="text-xs">
                 Live Audit
               </Badge>
-              <span className="text-[11px] text-[#68615C]">Status: Device Only (Zero Cloud)</span>
+              <span className="text-xs text-[#68615C]">Status: Device Only (Zero Cloud)</span>
             </div>
 
             <h2

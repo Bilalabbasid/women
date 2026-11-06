@@ -185,7 +185,7 @@ export default function SettingsPage() {
             <span className="text-[#2C6E49] font-medium">Local-First (IndexedDB ready)</span>
           </div>
 
-          <p className="text-[11px] text-[#7A736E] pt-3 leading-relaxed">
+          <p className="text-xs text-[#7A736E] pt-3 leading-relaxed">
             {APP_CONFIG.medicalDisclaimer}
           </p>
         </section>

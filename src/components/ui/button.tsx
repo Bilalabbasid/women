@@ -34,7 +34,7 @@ export function Button({
   };
 
   const sizes = {
-    sm: 'min-h-[38px] px-3.5 text-xs',
+    sm: 'min-h-[44px] px-3.5 text-xs',
     md: 'min-h-[46px] px-5 text-sm font-semibold', // Minimum 44px+ for mobile touch targets
     lg: 'min-h-[52px] px-6 text-base font-semibold',
   };

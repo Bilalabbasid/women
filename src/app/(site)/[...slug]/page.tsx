@@ -109,12 +109,6 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
               <GradeBadge grade={fm.evidence_grade} methodHref={methodHref} />
             </p>
           )}
-          {(fm.affiliate_disclosure || parts.some((p) => p.type === 'product')) && (
-            <p role="note" className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-3 text-xs leading-relaxed text-[var(--color-ink-muted)]">
-              <strong>Disclosure:</strong> this page contains paid links, which are labelled. As an Amazon Associate we earn from
-              qualifying purchases. We may earn a commission if you use them. That never changes an evidence grade or a ranking.
-            </p>
-          )}
           {fm.audience_limits.length > 0 && (
             <div className="rounded-xl bg-[var(--color-accent-soft)] p-3">
               <p className="font-semibold">This page may not apply to you if:</p>
@@ -130,6 +124,16 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
         <SavedCopyNotice reviewedAt={approved ? fm.reviewed_at : null} isMedical={page.isMedical} />
         {/* On tool pages the table of contents moves below the tool, so the tool itself is reached first. */}
         {!hasTool && <Toc headings={rendered.headings} />}
+
+        {/* Out of the header so it isn't the very first thing under the H1, but still ahead of every
+            part below — including the first paid link, if any — per the FTC-grounded "disclose before
+            the link, not behind it" rule in AGENTS.md. */}
+        {(fm.affiliate_disclosure || parts.some((p) => p.type === 'product')) && (
+          <p role="note" className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-3 text-xs leading-relaxed text-[var(--color-ink-muted)]">
+            <strong>Disclosure:</strong> this page contains paid links, which are labelled. As an Amazon Associate we earn from
+            qualifying purchases. We may earn a commission if you use them. That never changes an evidence grade or a ranking.
+          </p>
+        )}
 
         {parts.map((part, i) => {
           if (part.type === 'tool') {

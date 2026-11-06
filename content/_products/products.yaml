@@ -135,3 +135,4 @@ book-next-level:
   who_should_check_first: Check with your doctor or physical therapist before starting heavy weight training if you have cardiovascular conditions, joint injuries, or low bone density.
   allowed_topics: [exercise, strength-training, joint-pain, bone-health]
   banned_contexts: [medical-advice, urgent]
+

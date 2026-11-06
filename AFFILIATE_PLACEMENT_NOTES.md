@@ -126,3 +126,4 @@
 - **Replens Long-Lasting Vaginal Moisturizer:** Tracking ID is `blackxpace05-20`.
 - **Other 8 Products:** Tracking ID is `buynow01c3-20`.
 - **Note:** Both IDs will be preserved exactly as provided in Prompt 3, and documented in `AFFILIATE_PLACEMENT_REPORT.md` for the owner.
+

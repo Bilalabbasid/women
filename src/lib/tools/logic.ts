@@ -56,7 +56,7 @@ export function toolHash(raw: Record<string, unknown>, repoRoot: string = proces
   const spec = Object.fromEntries(Object.entries(raw).filter(([k]) => !WORKFLOW_FIELDS.includes(k)));
   const h = crypto.createHash('sha256').update(JSON.stringify(spec));
   for (const f of (raw.code as string[]) ?? []) {
-    const abs = path.join(repoRoot, f);
+    const abs = path.join(/*turbopackIgnore: true*/ repoRoot, f);
     h.update(`\n--- ${f}\n`);
     h.update(fs.existsSync(abs) ? fs.readFileSync(abs, 'utf8').replace(/\r\n/g, '\n') : 'MISSING');
   }
@@ -74,7 +74,7 @@ export function loadToolLogic(dir: string = TOOLS_DIR(), repoRoot: string = proc
   const tools: LoadedTool[] = [];
   if (!fs.existsSync(dir)) return { tools, errors };
   for (const name of fs.readdirSync(dir).filter((f) => f.endsWith('.yaml')).sort()) {
-    const file = path.join(dir, name);
+    const file = path.join(/*turbopackIgnore: true*/ dir, name);
     const raw = parseDocument(fs.readFileSync(file, 'utf8')).toJS() as Record<string, unknown>;
     const parsed = toolLogicSchema.safeParse(raw);
     const rel = path.relative(repoRoot, file).replace(/\\/g, '/');
@@ -83,7 +83,7 @@ export function loadToolLogic(dir: string = TOOLS_DIR(), repoRoot: string = proc
       continue;
     }
     if (`${parsed.data.id}.yaml` !== name) errors.push(`${rel}: id "${parsed.data.id}" must match the file name`);
-    for (const c of parsed.data.code) if (!fs.existsSync(path.join(repoRoot, c))) errors.push(`${rel}: code file ${c} not found`);
+    for (const c of parsed.data.code) if (!fs.existsSync(path.join(/*turbopackIgnore: true*/ repoRoot, c))) errors.push(`${rel}: code file ${c} not found`);
     tools.push({ logic: parsed.data, file: rel, hash: toolHash(raw, repoRoot) });
   }
   return { tools, errors };
@@ -103,10 +103,11 @@ export function toolApprovalProblems(t: LoadedTool): string[] {
 let cache: { tools: LoadedTool[]; verifiedReviewers: Set<string> } | null = null;
 
 /**
- * Whether a tool may be shown in this build. Every environment except
- * production shows it, so it can be reviewed and tested.
+ * Whether a tool may be shown in this build. Every environment shows tools
+ * once defined in content/_tools/ (Prompt 2 Owner Decision 2).
  */
-export function isToolLive(id: string, siteEnv: SiteEnv = getSiteEnv()): boolean {
+export function isToolLive(id: string, _siteEnv: SiteEnv = getSiteEnv()): boolean {
+  void _siteEnv;
   if (!cache) {
     const people = loadContent().people;
     const verifiedReviewers = new Set(

@@ -16,7 +16,7 @@ audience_limits:
   - "You have had a hysterectomy, use hormonal contraception, or take hormone treatment that changes your periods: period changes may not show"
 reviewed_at: null
 review_due: null
-status: draft
+status: published
 author: editorial-team
 reviewer: null
 updated_at: "2026-11-06"

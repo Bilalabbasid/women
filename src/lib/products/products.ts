@@ -55,3 +55,4 @@ export function loadAmazonProducts(repoRoot: string = process.cwd()): Map<string
 export function getAmazonProduct(id: string): AmazonProduct | undefined {
   return loadAmazonProducts().get(id);
 }
+

@@ -1,8 +1,5 @@
 import type { ContentPage, ContentStore } from './loader';
 import { showDrafts, type SiteEnv, SITE } from '../site/config';
-import type { PageType } from './schema';
-
-const GRADE_EXEMPT: readonly PageType[] = ['tool', 'hub'];
 
 /**
  * PUBLISH GATE (AGENTS.md rules 3 and 4).

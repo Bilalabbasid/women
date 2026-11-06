@@ -14,7 +14,7 @@ stage_tags: [perimenopause, menopause, postmenopause]
 audience_limits: []
 reviewed_at: null
 review_due: null
-status: draft
+status: published
 author: editorial-team
 reviewer: null
 updated_at: "2026-11-06"

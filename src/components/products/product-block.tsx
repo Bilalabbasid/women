@@ -57,3 +57,4 @@ export function ProductBlock({ id }: ProductBlockProps) {
     </aside>
   );
 }
+

@@ -1,4 +1,5 @@
 import { SiteHeader, SiteFooter, JsonLd } from '@/components/site/site-chrome';
+import { CookieBanner } from '@/components/site/cookie-banner';
 import { getSiteData, navHubs } from '@/lib/content/site-data';
 import { organizationLd, websiteLd } from '@/lib/seo/jsonld';
 
@@ -22,6 +23,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
         {children}
       </main>
       <SiteFooter links={footerLinks} />
+      <CookieBanner />
     </>
   );
 }

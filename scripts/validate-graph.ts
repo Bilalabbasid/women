@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { buildSiteGraph, writeSiteGraph, SiteGraphNode } from '../src/lib/seo/site-graph';
+import { buildSiteGraph, writeSiteGraph } from '../src/lib/seo/site-graph';
 import { Report } from './lib/report';
 
 const r = new Report('validate:graph');

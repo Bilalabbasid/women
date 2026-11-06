@@ -106,3 +106,4 @@ All 9 products are placed on multiple highly relevant decision points. Zero prod
 > Both IDs are currently active and embedded in `content/_products/products.yaml`. If both IDs belong to your Amazon Associates account, earnings will track correctly but appear split across two separate tracking ID reports in your Amazon Associates dashboard.
 > 
 > To consolidate reporting under one tracking ID in the future, simply update the `amazon_url` and `tracking_id` fields in `content/_products/products.yaml` with your preferred unified ID; all article placements across the entire website will update automatically.
+

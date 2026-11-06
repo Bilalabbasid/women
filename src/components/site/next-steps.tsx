@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 interface NextStepsProps {
@@ -55,16 +55,15 @@ export function NextSteps({
 }
 
 export function BookmarkButton({ url, title }: { url: string; title: string }) {
-  const [bookmarked, setBookmarked] = useState(false);
-
-  useEffect(() => {
+  const [bookmarked, setBookmarked] = useState<boolean>(() => {
+    if (typeof window === 'undefined') return false;
     try {
       const saved = JSON.parse(localStorage.getItem('menowell_bookmarks') || '[]');
-      setBookmarked(saved.some((b: { url: string }) => b.url === url));
+      return saved.some((b: { url: string }) => b.url === url);
     } catch {
-      // Local storage unavailable
+      return false;
     }
-  }, [url]);
+  });
 
   const toggleBookmark = () => {
     try {

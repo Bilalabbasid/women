@@ -105,8 +105,7 @@ export function AccountClient() {
     try {
       const res = await fetch('/api/user/delete-account/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userId }),
+        headers: { 'x-user-id': userId },
       });
       if (res.ok) {
         setUserId(null);

@@ -6,8 +6,7 @@ export async function POST(req: NextRequest) {
   const blocked = accountsBlocked();
   if (blocked) return blocked;
   try {
-    const body = await req.json();
-    const { userId } = body;
+    const userId = userIdFrom(req);
     if (!userId) {
       return NextResponse.json({ error: 'User ID is required.' }, { status: 400 });
     }

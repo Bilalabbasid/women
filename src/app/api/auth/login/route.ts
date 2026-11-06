@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { accountsBlocked, userIdFrom } from '@/lib/account/guard';
+import { accountsBlocked } from '@/lib/account/guard';
 import { accountService } from '@/lib/account/service';
 
 export async function POST(req: NextRequest) {

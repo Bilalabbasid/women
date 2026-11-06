@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SITE } from '@/lib/site/config';
 import { buildMetadata } from '@/lib/seo/metadata';
-import { getSiteData, CLUSTER_LABELS } from '@/lib/content/site-data';
+import { getSiteData, CLUSTER_LABELS, isStaticTarget } from '@/lib/content/site-data';
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -22,8 +22,8 @@ const TOP_SYMPTOMS = [
   { label: 'Brain fog & forgetfulness', href: '/symptoms/brain-fog/' },
   { label: 'Fatigue & waking unrefreshed', href: '/symptoms/fatigue/' },
   { label: 'Joint aches & morning stiffness', href: '/symptoms/joint-pain/' },
-  { label: 'Sudden anger & mood changes', href: '/symptoms/mood-changes/' },
-  { label: 'Irregular cycles & flow changes', href: '/symptoms/irregular-periods/' },
+  { label: 'Irritability & sudden anger', href: '/symptoms/irritability/' },
+  { label: 'Irregular cycles & flow changes', href: '/perimenopause/irregular-periods/' },
   { label: 'Vaginal dryness & discomfort', href: '/symptoms/vaginal-dryness/' },
 ];
 
@@ -69,7 +69,12 @@ const CORE_TOOLS = [
 ];
 
 export default function HomePage() {
-  const { pages } = getSiteData();
+  const { pages, byUrl } = getSiteData();
+  // Link only to pages that exist in this build: code routes, or published content.
+  const exists = (href: string) => isStaticTarget(href) || byUrl.has(href);
+  const symptoms = TOP_SYMPTOMS.filter((s) => exists(s.href));
+  const stages = STAGES.filter((st) => exists(st.href));
+  const tools = CORE_TOOLS.filter((t) => exists(t.href));
   const recent = [...pages]
     .filter((p) => p.fm.page_type !== 'legal')
     .sort((a, b) => b.fm.updated_at.localeCompare(a.fm.updated_at))
@@ -118,7 +123,7 @@ export default function HomePage() {
           </Link>
         </div>
         <ul className="grid gap-3 sm:grid-cols-2 md:grid-cols-4">
-          {TOP_SYMPTOMS.map((s) => (
+          {symptoms.map((s) => (
             <li key={s.href}>
               <Link
                 href={s.href}
@@ -137,7 +142,7 @@ export default function HomePage() {
           Explore by stage
         </h2>
         <div className="grid gap-4 sm:grid-cols-3">
-          {STAGES.map((st) => (
+          {stages.map((st) => (
             <div
               key={st.href}
               className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-5 space-y-2 flex flex-col justify-between"
@@ -167,7 +172,7 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
-          {CORE_TOOLS.map((t) => (
+          {tools.map((t) => (
             <div
               key={t.href}
               className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-5 space-y-2 flex flex-col justify-between"

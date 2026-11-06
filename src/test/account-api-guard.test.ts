@@ -6,6 +6,7 @@ import { GET as exportGet } from '@/app/api/user/export/route';
 import { POST as consentPost } from '@/app/api/user/consent/route';
 import { POST as loginPost } from '@/app/api/auth/login/route';
 import { GET as cronGet } from '@/app/api/cron/data-deletion/route';
+import { POST as deleteAccountPost } from '@/app/api/user/delete-account/route';
 
 const saved = { ...process.env };
 const setEnv = (vars: Record<string, string | undefined>) => {
@@ -50,6 +51,16 @@ describe('account APIs are closed unless accounts are really available', () => {
     expect(badRetention.status).toBe(400);
     const withdrawn = await consentPost(req('/api/user/consent/', { method: 'POST', body: JSON.stringify({ userId: user.id, withdraw: true }) }));
     expect(withdrawn.status).toBe(200);
+  });
+
+  it('deletes an account only by the x-user-id header, never a body field', async () => {
+    setEnv({ FEATURE_LOGIN: 'true', SITE_ENV: 'staging' });
+    const login = await loginPost(req('/api/auth/login/', { method: 'POST', body: JSON.stringify({ email: 'delete-me@example.com' }) }));
+    const { user } = await login.json();
+    const byBodyOnly = await deleteAccountPost(req('/api/user/delete-account/', { method: 'POST', body: JSON.stringify({ userId: user.id }) }));
+    expect(byBodyOnly.status).toBe(400);
+    const byHeader = await deleteAccountPost(req('/api/user/delete-account/', { method: 'POST', headers: { 'x-user-id': user.id } }));
+    expect(byHeader.status).toBe(200);
   });
 
   it('cron deletion fails closed in production without CRON_SECRET', async () => {

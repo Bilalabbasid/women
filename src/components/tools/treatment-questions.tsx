@@ -1,11 +1,12 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { evaluateUrgentTriggers } from '@/lib/safety/urgent-triggers';
 import { UrgentGuidance } from '@/components/safety/urgent-guidance';
 import { markToolUsed } from '@/lib/pwa/install-gate';
-
-const STORAGE_KEY = 'menoverdict_treatment_questions_v1';
+import { useToolState, savedLabel } from '@/components/storage/use-tool-state';
+import { ToolHistory } from '@/components/storage/tool-history';
+import { btnDanger, btnPrimary } from '@/components/storage/styles';
 
 export interface QuestionTopic {
   id: string;
@@ -80,40 +81,34 @@ interface BuilderState {
   customNotes: string;
 }
 
+// Nothing pre-ticked: only topics she chooses are saved as hers (DECISIONS.md D-006).
 const DEFAULT_STATE: BuilderState = {
-  selectedTopics: ['perimenopause_assessment', 'systemic_hrt'],
+  selectedTopics: [],
   redFlags: [],
   customNotes: '',
 };
 
-function loadInitialState(): BuilderState {
-  if (typeof window === 'undefined') return DEFAULT_STATE;
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (!raw) return DEFAULT_STATE;
-    const parsed = JSON.parse(raw) as Partial<BuilderState>;
-    return {
-      selectedTopics: Array.isArray(parsed.selectedTopics) ? parsed.selectedTopics : DEFAULT_STATE.selectedTopics,
-      redFlags: Array.isArray(parsed.redFlags) ? parsed.redFlags : [],
-      customNotes: typeof parsed.customNotes === 'string' ? parsed.customNotes : '',
-    };
-  } catch {
-    return DEFAULT_STATE;
-  }
+const TOPIC_IDS = new Set(QUESTION_TOPICS.map((t) => t.id));
+const MAX_NOTES = 5000;
+
+function normalize(raw: unknown): BuilderState {
+  const p = (raw ?? {}) as Partial<BuilderState>;
+  return {
+    selectedTopics: Array.isArray(p.selectedTopics) ? p.selectedTopics.filter((x): x is string => typeof x === 'string' && TOPIC_IDS.has(x)) : [],
+    redFlags: Array.isArray(p.redFlags) ? p.redFlags.filter((x): x is string => typeof x === 'string') : [],
+    customNotes: typeof p.customNotes === 'string' ? p.customNotes.slice(0, MAX_NOTES) : '',
+  };
+}
+
+function summarize(s: BuilderState): string {
+  const labels = QUESTION_TOPICS.filter((t) => s.selectedTopics.includes(t.id)).map((t) => t.label);
+  const topics = labels.length ? `${labels.length} topic${labels.length === 1 ? '' : 's'}: ${labels.slice(0, 2).join('; ')}${labels.length > 2 ? '; …' : ''}` : 'No topics';
+  return s.customNotes.trim() ? `${topics} · your own notes` : topics;
 }
 
 export function TreatmentQuestionsBuilder() {
-  const [state, setState] = useState<BuilderState>(loadInitialState);
-
-  const persist = (next: BuilderState) => {
-    setState(next);
-    try {
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
-      markToolUsed();
-    } catch {
-      // ignore
-    }
-  };
+  const { state, update, reset, status } = useToolState('treatment-questions', DEFAULT_STATE, normalize);
+  const persist = (next: BuilderState) => update(next);
 
   const toggleTopic = (id: string) => {
     const exists = state.selectedTopics.includes(id);
@@ -141,44 +136,14 @@ export function TreatmentQuestionsBuilder() {
     [state.selectedTopics],
   );
 
-  const exportJson = () => {
-    try {
-      const payload = {
-        tool: 'treatment-questions',
-        app: 'MenoVerdict',
-        exportedAt: new Date().toISOString(),
-        topics: chosenTopics.map((t) => ({ id: t.id, label: t.label, questions: t.questions })),
-        customNotes: state.customNotes,
-      };
-      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `menoverdict-treatment-questions-${new Date().toISOString().slice(0, 10)}.json`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    } catch {
-      // ignore
-    }
-  };
-
-  const deleteAllData = () => {
-    setState({ selectedTopics: [], redFlags: [], customNotes: '' });
-    try {
-      window.localStorage.removeItem(STORAGE_KEY);
-    } catch {
-      // ignore
-    }
-  };
+  const hasContent = chosenTopics.length > 0 || state.customNotes.trim().length > 0;
 
   return (
     <div className="space-y-6" data-tool-ui="treatment-questions">
       <form onSubmit={(e) => e.preventDefault()} className="space-y-5" aria-describedby="tq-help">
         <p id="tq-help" className="text-[var(--color-ink-muted)]">
-          Choose the topics that matter most for your next appointment, and add any notes of your own. Everything stays
-          on this device.
+          Choose the topics that matter most for your next appointment, and add any notes of your own. Everything is
+          saved in this browser on this device as you go, and never sent anywhere.
         </p>
 
         <fieldset className="space-y-2 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
@@ -231,6 +196,7 @@ export function TreatmentQuestionsBuilder() {
           <textarea
             id="tq-custom-notes"
             rows={3}
+            maxLength={MAX_NOTES}
             value={state.customNotes}
             onChange={(e) => persist({ ...state, customNotes: e.target.value })}
             placeholder="Write any extra questions or context for your clinician..."
@@ -247,7 +213,7 @@ export function TreatmentQuestionsBuilder() {
         {/* Safety first */}
         <UrgentGuidance triggers={urgent} />
 
-        {chosenTopics.length === 0 && !state.customNotes.trim() ? (
+        {!hasContent ? (
           <p>Tick at least one topic above or add your own notes to generate your appointment sheet.</p>
         ) : (
           <div className="space-y-4 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-5">
@@ -276,35 +242,39 @@ export function TreatmentQuestionsBuilder() {
           </div>
         )}
 
+        <p className={`no-print text-sm ${status.error ? 'font-semibold text-[var(--color-urgent)]' : 'text-[var(--color-ink-muted)]'}`}>
+          {savedLabel(status)}
+        </p>
+
         <div className="no-print flex flex-wrap gap-3">
           <button
             type="button"
+            disabled={!hasContent}
             onClick={() => {
               markToolUsed();
               window.print();
             }}
-            className="tap rounded-xl bg-[var(--color-accent)] px-5 font-semibold text-white"
+            className={btnPrimary}
           >
             Print my question sheet
           </button>
-          {(chosenTopics.length > 0 || state.customNotes.trim().length > 0) && (
-            <button
-              type="button"
-              onClick={exportJson}
-              className="tap rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] px-5 font-semibold"
-            >
-              Export my questions (JSON)
+          {(hasContent || state.redFlags.length > 0) && (
+            <button type="button" onClick={() => void reset()} className={btnDanger}>
+              Clear my current sheet
             </button>
           )}
-          <button
-            type="button"
-            onClick={deleteAllData}
-            className="tap rounded-xl px-3 font-semibold text-[var(--color-urgent)] underline"
-          >
-            Delete all my data
-          </button>
         </div>
       </section>
+
+      <ToolHistory
+        tool="treatment-questions"
+        noun="question sheet"
+        current={state}
+        canSave={hasContent}
+        normalize={normalize}
+        summarize={summarize}
+        onOpen={(data) => update(data)}
+      />
     </div>
   );
 }

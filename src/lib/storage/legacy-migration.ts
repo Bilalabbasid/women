@@ -17,13 +17,16 @@ const LEGACY_KEYS: ReadonlyArray<{ key: string; tool: ToolKey }> = [
 
 let running: Promise<void> | null = null;
 
+/** Cheap (a few localStorage reads) and idempotent; concurrent callers share one in-flight run. */
 export function migrateLegacyToolStorage(): Promise<void> {
   if (typeof window === 'undefined') return Promise.resolve();
   if (!running) {
-    running = run().catch(() => {
-      // Leave the old keys in place and try again on the next page load.
-      running = null;
-    });
+    running = run()
+      // On failure the old keys stay in place and the next call tries again.
+      .catch(() => undefined)
+      .finally(() => {
+        running = null;
+      });
   }
   return running;
 }

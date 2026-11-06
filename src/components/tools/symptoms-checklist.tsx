@@ -6,30 +6,88 @@ import { SYMPTOM_CATALOG, triggerIdsFor, trackerIdsFor } from '@/lib/tools/sympt
 import { evaluateUrgentTriggers } from '@/lib/safety/urgent-triggers';
 import { UrgentGuidance } from '@/components/safety/urgent-guidance';
 import { markToolUsed } from '@/lib/pwa/install-gate';
+import { useToolState, savedLabel } from '@/components/storage/use-tool-state';
+import { ToolHistory, type HistoryEntry } from '@/components/storage/tool-history';
+import { btnDanger, btnPrimary, btnSecondary } from '@/components/storage/styles';
 
 const PINNED_KEY = 'menowell_pinned_symptoms';
 
+interface ChecklistState {
+  ticked: string[];
+}
+
+const DEFAULT_STATE: ChecklistState = { ticked: [] };
+const ALL_ITEMS = SYMPTOM_CATALOG.flatMap((g) => g.items);
+const KNOWN_IDS = new Set(ALL_ITEMS.map((i) => i.id));
+const LABELS = new Map(ALL_ITEMS.map((i) => [i.id, i.label]));
+
+function normalize(raw: unknown): ChecklistState {
+  const ticked = (raw as Partial<ChecklistState> | null)?.ticked;
+  return { ticked: Array.isArray(ticked) ? ticked.filter((x): x is string => typeof x === 'string' && KNOWN_IDS.has(x)) : [] };
+}
+
+function summarize(s: ChecklistState): string {
+  if (s.ticked.length === 0) return 'No symptoms ticked';
+  const names = s.ticked.map((id) => LABELS.get(id)).filter(Boolean) as string[];
+  const shown = names.slice(0, 3).join('; ');
+  return `${s.ticked.length} symptom${s.ticked.length === 1 ? '' : 's'}: ${shown}${names.length > 3 ? `; and ${names.length - 3} more` : ''}`;
+}
+
+/** How often each symptom appears across her saved lists, and how many she ticked each time. */
+function ChecklistTrends({ entries }: { entries: HistoryEntry<ChecklistState>[] }) {
+  const counts = new Map<string, number>();
+  for (const e of entries) for (const id of e.data.ticked) counts.set(id, (counts.get(id) ?? 0) + 1);
+  const top = [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8);
+  const max = Math.max(1, ...entries.map((e) => e.data.ticked.length));
+  return (
+    <div className="grid gap-4 md:grid-cols-2">
+      <figure className="space-y-2">
+        <figcaption className="font-semibold">Symptoms ticked in each saved list</figcaption>
+        <ul className="space-y-1.5">
+          {entries.map((e) => (
+            <li key={e.id} className="grid grid-cols-[6.5rem_1fr_2rem] items-center gap-2 text-sm">
+              <span className="text-[var(--color-ink-muted)]">{e.date}</span>
+              <span className="h-3 rounded bg-[var(--color-accent-soft)]" aria-hidden="true">
+                <span className="block h-3 rounded bg-[var(--color-accent)]" style={{ width: `${(e.data.ticked.length / max) * 100}%` }} />
+              </span>
+              <span className="text-right font-semibold">{e.data.ticked.length}</span>
+            </li>
+          ))}
+        </ul>
+      </figure>
+      <figure className="space-y-2">
+        <figcaption className="font-semibold">Most often on your lists</figcaption>
+        <ul className="space-y-1 text-sm">
+          {top.map(([id, n]) => (
+            <li key={id} className="flex justify-between gap-3 border-b border-[var(--color-rule)] py-1">
+              <span>{LABELS.get(id)}</span>
+              <span className="shrink-0 font-semibold">
+                {n} of {entries.length}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </figure>
+    </div>
+  );
+}
+
 /**
- * Interactive, printable symptoms checklist. Ticks live in this page's memory
- * only; nothing is stored or sent unless she chooses "Add to my tracker", which
- * saves the matching symptom ids in this browser. It never scores, counts
- * towards a threshold, or says what stage she is in
- * (content/_tools/symptoms-checklist.yaml).
+ * Interactive, printable symptoms checklist. Current ticks autosave in this
+ * browser (IndexedDB); she can keep dated copies to compare over time. It never
+ * scores, counts towards a threshold, or says what stage she is in
+ * (content/_tools/symptoms-checklist.yaml). Nothing is sent anywhere.
  */
 export function SymptomsChecklist({ liveUrls, trackerLive }: { liveUrls: string[]; trackerLive: boolean }) {
-  const [ticked, setTicked] = useState<Set<string>>(new Set());
-  const [saved, setSaved] = useState(false);
+  const { state, update, reset, status } = useToolState('symptoms-checklist', DEFAULT_STATE, normalize);
+  const [pinMessage, setPinMessage] = useState<{ ok: boolean; text: string } | null>(null);
+  const ticked = useMemo(() => new Set(state.ticked), [state.ticked]);
   const live = useMemo(() => new Set(liveUrls), [liveUrls]);
   const urgent = useMemo(() => evaluateUrgentTriggers({ symptomIds: triggerIdsFor(ticked) }), [ticked]);
 
   const toggle = (id: string) => {
-    setSaved(false);
-    setTicked((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      return next;
-    });
+    setPinMessage(null);
+    update((prev) => ({ ticked: prev.ticked.includes(id) ? prev.ticked.filter((x) => x !== id) : [...prev.ticked, id] }));
   };
 
   const addToTracker = () => {
@@ -37,53 +95,22 @@ export function SymptomsChecklist({ liveUrls, trackerLive }: { liveUrls: string[
     try {
       const existing: string[] = JSON.parse(window.localStorage.getItem(PINNED_KEY) ?? '[]');
       window.localStorage.setItem(PINNED_KEY, JSON.stringify([...new Set([...existing, ...ids])]));
-      setSaved(true);
+      setPinMessage({ ok: true, text: 'Added to your tracker on this device.' });
       markToolUsed();
     } catch {
-      setSaved(false);
+      setPinMessage({ ok: false, text: 'This browser would not save to your tracker. Storage may be blocked or full.' });
     }
   };
 
-  const tickedItems = SYMPTOM_CATALOG.flatMap((g) => g.items).filter((i) => ticked.has(i.id));
+  const tickedItems = ALL_ITEMS.filter((i) => ticked.has(i.id));
   const trackable = trackerIdsFor(ticked).length;
-
-  const exportJson = () => {
-    try {
-      const payload = {
-        tool: 'symptoms-checklist',
-        app: 'MenoVerdict',
-        exportedAt: new Date().toISOString(),
-        tickedSymptoms: tickedItems.map((i) => ({ id: i.id, label: i.label, url: i.url })),
-      };
-      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `menoverdict-symptoms-checklist-${new Date().toISOString().slice(0, 10)}.json`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    } catch {
-      // ignore
-    }
-  };
-
-  const deleteAllToolData = () => {
-    setTicked(new Set());
-    setSaved(false);
-    try {
-      window.localStorage.removeItem(PINNED_KEY);
-    } catch {
-      // ignore
-    }
-  };
 
   return (
     <div className="space-y-6" data-tool-ui="symptoms-checklist">
       <form onSubmit={(e) => e.preventDefault()} className="space-y-5" aria-describedby="checklist-help">
         <p id="checklist-help" className="text-[var(--color-ink-muted)]">
-          Tick anything you have noticed recently. Your ticks stay on this page and are not sent anywhere.
+          Tick anything you have noticed recently. Your ticks are saved in this browser on this device as you go, and are
+          never sent anywhere.
         </p>
         {SYMPTOM_CATALOG.map((group) => (
           <fieldset key={group.id} className="space-y-1 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
@@ -141,6 +168,10 @@ export function SymptomsChecklist({ liveUrls, trackerLive }: { liveUrls: string[
           </>
         )}
 
+        <p className={`no-print text-sm ${status.error ? 'font-semibold text-[var(--color-urgent)]' : 'text-[var(--color-ink-muted)]'}`}>
+          {savedLabel(status)}
+        </p>
+
         <div className="no-print flex flex-wrap gap-3">
           <button
             type="button"
@@ -148,45 +179,43 @@ export function SymptomsChecklist({ liveUrls, trackerLive }: { liveUrls: string[
               markToolUsed();
               window.print();
             }}
-            className="tap rounded-xl bg-[var(--color-accent)] px-5 font-semibold text-white"
+            className={btnPrimary}
           >
             Print my list
           </button>
           {trackerLive && trackable > 0 && (
-            <button
-              type="button"
-              onClick={addToTracker}
-              className="tap rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] px-5 font-semibold"
-            >
+            <button type="button" onClick={addToTracker} className={btnSecondary}>
               Add these to my tracker
             </button>
           )}
           {ticked.size > 0 && (
-            <button
-              type="button"
-              onClick={exportJson}
-              className="tap rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] px-5 font-semibold"
-            >
-              Export my list (JSON)
+            <button type="button" onClick={() => void reset()} className={btnDanger}>
+              Clear my ticks
             </button>
           )}
-          <button
-            type="button"
-            onClick={deleteAllToolData}
-            className="tap rounded-xl px-3 font-semibold text-[var(--color-urgent)] underline"
-          >
-            Delete all my data
-          </button>
         </div>
-        {saved && (
-          <p role="status">
-            Added to your tracker on this device.{' '}
-            <Link href="/app/check-in/" className="font-semibold text-[var(--color-link)] underline">
-              Log today
-            </Link>
+        {pinMessage && (
+          <p role="status" className={pinMessage.ok ? '' : 'font-semibold text-[var(--color-urgent)]'}>
+            {pinMessage.text}{' '}
+            {pinMessage.ok && (
+              <Link href="/app/check-in/" className="font-semibold text-[var(--color-link)] underline">
+                Log today
+              </Link>
+            )}
           </p>
         )}
       </section>
+
+      <ToolHistory
+        tool="symptoms-checklist"
+        noun="symptom list"
+        current={state}
+        canSave={state.ticked.length > 0}
+        normalize={normalize}
+        summarize={summarize}
+        onOpen={(data) => update(data)}
+        renderInsights={(entries) => <ChecklistTrends entries={entries} />}
+      />
     </div>
   );
 }

@@ -35,11 +35,11 @@ shows:
   - "A fixed note: the list can't tell her whether she is in perimenopause or menopause; many symptoms have other causes"
   - Links to each symptom page, only where that page is published
   - "'Add these to my tracker' (only when the tracker is live): saves matching tracker symptom ids in this browser"
+  - Her saved, dated symptom lists (open, update, re-date, rename, delete), and with two or more, how many symptoms each list had and which symptoms appear most often
 
 never:
   - Count ticks against a threshold, produce a score, or say what stage she is in
   - Say "you have" any condition
-  - Store ticks unless she chooses to add them to her tracker
   - Send ticks anywhere (no network calls; no analytics)
   - Show commercial content
 
@@ -52,6 +52,4 @@ urgent_triggers: [self_harm_thoughts, palpitations_red_flags, bleeding_after_men
 sources: [nice-ng23-recommendations, nhs-postmenopausal-bleeding, nhs-heart-palpitations, lifeline-988]
 
 privacy: >-
-  Ticks live in the page's memory only. If she taps "Add these to my tracker",
-  the matching symptom ids are saved in this browser's localStorage
-  (menowell_pinned_symptoms). Nothing is sent anywhere.
+  Current ticks autosave in this browser's IndexedDB (menowell_local_db, toolRecords) on her device, so they survive a reload. Dated lists she chooses to save are kept there too. "Add these to my tracker" saves the matching symptom ids in localStorage (menowell_pinned_symptoms). No account or login. Nothing is sent to a server, analytics, or partners. Everything is included in the backup file she can download and restore from /app/storage/, and nothing is deleted automatically: she deletes entries one at a time, by date range, by tool, or all at once.

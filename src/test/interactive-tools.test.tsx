@@ -1,6 +1,14 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor, cleanup } from '@testing-library/react';
 import { loadToolLogic } from '@/lib/tools/logic';
+import { LocalDataService } from '@/lib/db/service';
+import { ToolRecords } from '@/lib/storage/tool-records';
+import { Periods } from '@/lib/storage/periods';
+
+beforeEach(async () => {
+  window.localStorage.clear();
+  await LocalDataService.purgeAllData();
+});
 import { StageGuide } from '@/components/tools/stage-guide';
 import { DoesItWorkChecker } from '@/components/tools/does-it-work-checker';
 import { TreatmentQuestionsBuilder } from '@/components/tools/treatment-questions';
@@ -23,9 +31,7 @@ describe('tool logic registry', () => {
 });
 
 describe('StageGuide UI', () => {
-  beforeEach(() => window.localStorage.clear());
-
-  it('explains STRAW+10 early transition without diagnosing and clears data on delete', () => {
+  it('explains STRAW+10 early transition without diagnosing, autosaves on device, and clears on request', async () => {
     render(<StageGuide />);
     fireEvent.click(screen.getByLabelText('45 or over'));
     fireEvent.click(screen.getByLabelText(/Shifting — cycle length has varied by 7 days or more/));
@@ -34,8 +40,30 @@ describe('StageGuide UI', () => {
     expect(region.textContent).toMatch(/cannot diagnose/i);
     expect(region.textContent).not.toMatch(/\byou have\b|\byou should take\b/i);
 
-    fireEvent.click(screen.getByRole('button', { name: 'Delete all my data' }));
-    expect(window.localStorage.getItem('menoverdict_stage_guide_v1')).toBeNull();
+    await waitFor(async () => expect((await ToolRecords.getDraft('stage-guide'))?.data).toMatchObject({ ageGroup: '45_plus' }), { timeout: 2000 });
+
+    fireEvent.click(screen.getByRole('button', { name: 'Clear my answers' }));
+    await waitFor(async () => expect(await ToolRecords.getDraft('stage-guide')).toBeUndefined());
+  });
+
+  it('restores saved answers after a reload and keeps a dated history entry', async () => {
+    const { unmount } = render(<StageGuide />);
+    fireEvent.click(screen.getByLabelText('40 to 44'));
+    await waitFor(async () => expect(await ToolRecords.getDraft('stage-guide')).toBeDefined(), { timeout: 2000 });
+
+    fireEvent.change(screen.getByLabelText('Date'), { target: { value: '2026-05-01' } });
+    fireEvent.click(screen.getByRole('button', { name: 'Save this answer set' }));
+    await screen.findByText(/Saved your answer set for May 1, 2026/);
+
+    unmount();
+    cleanup();
+    render(<StageGuide />);
+    await waitFor(() => expect(screen.getByLabelText('40 to 44')).toBeChecked());
+    expect(await screen.findByText('May 1, 2026', undefined, { timeout: 4000 })).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: /^Delete\s*the answer set from May 1, 2026$/ }));
+    fireEvent.click(screen.getByRole('button', { name: 'Yes, delete' }));
+    await waitFor(async () => expect(await ToolRecords.listEntries('stage-guide')).toEqual([]));
   });
 
   it('shows both 988 (US) and Samaritans 116 123 (UK) when self-harm red flag is ticked', () => {
@@ -48,22 +76,33 @@ describe('StageGuide UI', () => {
 });
 
 describe('DoesItWorkChecker UI', () => {
-  beforeEach(() => window.localStorage.clear());
-
-  it('filters evidence verdicts and saves shortlist items on device without prescribing', () => {
-    render(<DoesItWorkChecker liveUrls={['/does-it-work/magnesium/']} />);
+  it('filters evidence verdicts and saves shortlist items on device without prescribing', async () => {
+    render(<DoesItWorkChecker liveUrls={['/does-it-work/black-cohosh/']} />);
     const saveButtons = screen.getAllByRole('button', { name: 'Save to ask my doctor' });
     expect(saveButtons.length).toBeGreaterThan(5);
     fireEvent.click(saveButtons[0]);
-    expect(window.localStorage.getItem('menoverdict_evidence_checker_v1')).toBeTruthy();
+    await waitFor(
+      async () => expect((await ToolRecords.getDraft('does-it-work-checker'))?.data).toMatchObject({ bookmarkedIds: ['systemic-hrt'] }),
+      { timeout: 2000 },
+    );
 
-    fireEvent.click(screen.getByRole('button', { name: 'Delete all my data' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Clear my shortlist and filters' }));
+    await waitFor(async () => expect(await ToolRecords.getDraft('does-it-work-checker')).toBeUndefined());
+  });
+
+  it('moves an old localStorage shortlist into IndexedDB on first visit', async () => {
+    window.localStorage.setItem('menoverdict_evidence_checker_v1', JSON.stringify({ bookmarkedIds: ['cbt-hypnosis'] }));
+    render(<DoesItWorkChecker liveUrls={[]} />);
+    expect(await screen.findByRole('button', { name: 'Remove from my doctor list' }, { timeout: 4000 })).toBeInTheDocument();
     expect(window.localStorage.getItem('menoverdict_evidence_checker_v1')).toBeNull();
   });
 });
 
 describe('TreatmentQuestionsBuilder UI', () => {
-  beforeEach(() => window.localStorage.clear());
+  it('starts with nothing pre-ticked', () => {
+    render(<TreatmentQuestionsBuilder />);
+    for (const box of screen.getAllByRole('checkbox')) expect(box).not.toBeChecked();
+  });
 
   it('renders printable appointment questions and triggers crisis help on self-harm notes', () => {
     render(<TreatmentQuestionsBuilder />);
@@ -76,7 +115,28 @@ describe('TreatmentQuestionsBuilder UI', () => {
 });
 
 describe('TwelveMonthCounter calculation and UI', () => {
-  beforeEach(() => window.localStorage.clear());
+  it('logs period start dates, counts from the most recent, and lets her edit and delete them', async () => {
+    render(<TwelveMonthCounter />);
+    await screen.findByText('No period dates logged yet.', undefined, { timeout: 4000 });
+    const input = screen.getByLabelText('Period start date');
+
+    fireEvent.change(input, { target: { value: '2026-01-05' } });
+    fireEvent.click(screen.getByRole('button', { name: 'Add this date' }));
+    await screen.findByText(/Added January 5, 2026/);
+    fireEvent.change(input, { target: { value: '2026-03-20' } });
+    fireEvent.click(screen.getByRole('button', { name: 'Add this date' }));
+    await screen.findByText(/74 days after the one before/);
+    expect((await Periods.list()).map((p) => p.startDate)).toEqual(['2026-03-20', '2026-01-05']);
+    expect(screen.getByText(/most recent, counting from here/)).toBeInTheDocument();
+
+    fireEvent.change(input, { target: { value: '2026-03-20' } });
+    fireEvent.click(screen.getByRole('button', { name: 'Add this date' }));
+    await screen.findByText(/already in your list/);
+
+    fireEvent.click(screen.getByRole('button', { name: /^Delete\s*March 20, 2026$/ }));
+    fireEvent.click(screen.getByRole('button', { name: 'Yes, delete' }));
+    await waitFor(async () => expect((await Periods.list()).map((p) => p.startDate)).toEqual(['2026-01-05']));
+  });
 
   it('calculates elapsed days and the 12-month anniversary date accurately', () => {
     const res = calculateTwelveMonthWindow('2025-10-01', new Date('2026-11-06T00:00:00Z'));

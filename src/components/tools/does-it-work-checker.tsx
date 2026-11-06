@@ -1,12 +1,13 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import Link from 'next/link';
 import { evaluateUrgentTriggers } from '@/lib/safety/urgent-triggers';
 import { UrgentGuidance } from '@/components/safety/urgent-guidance';
 import { markToolUsed } from '@/lib/pwa/install-gate';
-
-const STORAGE_KEY = 'menoverdict_evidence_checker_v1';
+import { useToolState, savedLabel } from '@/components/storage/use-tool-state';
+import { ToolHistory } from '@/components/storage/tool-history';
+import { btnDanger, btnPrimary } from '@/components/storage/styles';
 
 export type VerdictGrade = 'strong' | 'moderate' | 'limited' | 'not_supported';
 
@@ -67,8 +68,8 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     grade: 'strong',
     gradeLabel: 'Strong evidence',
     verdictSummary:
-      'FDA-approved in October 2025 for moderate-to-severe vasomotor symptoms based on the Phase 3 OASIS 1–3 randomized trials in 1,420 women.',
-    guidelineSource: 'FDA Approval / OASIS 1–3 clinical trial program (2025)',
+      'FDA-approved in October 2025 for moderate-to-severe vasomotor symptoms. Efficacy came from two 12-week phase 3 trials (OASIS 1 and 2) in 796 women; safety data covered 1,420 women across OASIS 1–3, including 627 followed for up to a year.',
+    guidelineSource: 'Manufacturer (Bayer) approval announcement, 2025, reporting the OASIS 1–3 trials; brand-funded source',
     articleUrl: '/symptoms/hot-flashes/',
   },
   {
@@ -153,7 +154,7 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     verdictSummary:
       'The Menopause Society (2023) does not recommend over-the-counter supplements, herbal remedies, soy extracts, or cannabinoids for vasomotor symptoms because randomized trial results are inconsistent or no better than placebo.',
     guidelineSource: 'The Menopause Society 2023 Nonhormone Therapy Position Statement',
-    articleUrl: '/does-it-work/magnesium/',
+    articleUrl: '/does-it-work/black-cohosh/',
   },
   {
     id: 'paced-respiration-acupuncture',
@@ -194,37 +195,30 @@ const DEFAULT_STATE: CheckerState = {
   redFlags: [],
 };
 
-function loadInitialState(): CheckerState {
-  if (typeof window === 'undefined') return DEFAULT_STATE;
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (!raw) return DEFAULT_STATE;
-    const parsed = JSON.parse(raw) as Partial<CheckerState>;
-    return {
-      selectedSymptom: parsed.selectedSymptom ?? 'All symptoms',
-      selectedGrade: parsed.selectedGrade ?? 'all',
-      query: parsed.query ?? '',
-      bookmarkedIds: Array.isArray(parsed.bookmarkedIds) ? parsed.bookmarkedIds : [],
-      redFlags: Array.isArray(parsed.redFlags) ? parsed.redFlags : [],
-    };
-  } catch {
-    return DEFAULT_STATE;
-  }
+const ENTRY_IDS = new Set(EVIDENCE_CATALOG.map((e) => e.id));
+const GRADES: ReadonlyArray<CheckerState['selectedGrade']> = ['all', 'strong', 'moderate', 'limited', 'not_supported'];
+
+function normalize(raw: unknown): CheckerState {
+  const p = (raw ?? {}) as Partial<CheckerState>;
+  return {
+    selectedSymptom: (SYMPTOM_FILTERS as readonly string[]).includes(p.selectedSymptom as string) ? (p.selectedSymptom as string) : 'All symptoms',
+    selectedGrade: GRADES.includes(p.selectedGrade as CheckerState['selectedGrade']) ? (p.selectedGrade as CheckerState['selectedGrade']) : 'all',
+    query: typeof p.query === 'string' ? p.query.slice(0, 200) : '',
+    bookmarkedIds: Array.isArray(p.bookmarkedIds) ? p.bookmarkedIds.filter((x): x is string => typeof x === 'string' && ENTRY_IDS.has(x)) : [],
+    redFlags: Array.isArray(p.redFlags) ? p.redFlags.filter((x): x is string => typeof x === 'string') : [],
+  };
+}
+
+function summarize(s: CheckerState): string {
+  const names = EVIDENCE_CATALOG.filter((e) => s.bookmarkedIds.includes(e.id)).map((e) => e.name.split(' (')[0].split(' — ')[0]);
+  if (!names.length) return 'Empty shortlist';
+  return `${names.length} option${names.length === 1 ? '' : 's'}: ${names.slice(0, 3).join('; ')}${names.length > 3 ? '; …' : ''}`;
 }
 
 export function DoesItWorkChecker({ liveUrls }: { liveUrls: string[] }) {
-  const [state, setState] = useState<CheckerState>(loadInitialState);
+  const { state, update, reset, status } = useToolState('does-it-work-checker', DEFAULT_STATE, normalize);
   const live = useMemo(() => new Set(liveUrls), [liveUrls]);
-
-  const persist = (next: CheckerState) => {
-    setState(next);
-    try {
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
-      markToolUsed();
-    } catch {
-      // ignore
-    }
-  };
+  const persist = (next: CheckerState) => update(next);
 
   const toggleBookmark = (id: string) => {
     const exists = state.bookmarkedIds.includes(id);
@@ -271,42 +265,6 @@ export function DoesItWorkChecker({ liveUrls }: { liveUrls: string[] }) {
     () => EVIDENCE_CATALOG.filter((item) => state.bookmarkedIds.includes(item.id)),
     [state.bookmarkedIds],
   );
-
-  const exportJson = () => {
-    try {
-      const payload = {
-        tool: 'does-it-work-checker',
-        app: 'MenoVerdict',
-        exportedAt: new Date().toISOString(),
-        bookmarkedOptions: bookmarkedItems.map((i) => ({
-          id: i.id,
-          name: i.name,
-          gradeLabel: i.gradeLabel,
-          guidelineSource: i.guidelineSource,
-        })),
-      };
-      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `menoverdict-evidence-shortlist-${new Date().toISOString().slice(0, 10)}.json`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    } catch {
-      // ignore
-    }
-  };
-
-  const deleteAllData = () => {
-    setState(DEFAULT_STATE);
-    try {
-      window.localStorage.removeItem(STORAGE_KEY);
-    } catch {
-      // ignore
-    }
-  };
 
   return (
     <div className="space-y-6" data-tool-ui="does-it-work-checker">
@@ -467,35 +425,37 @@ export function DoesItWorkChecker({ liveUrls }: { liveUrls: string[] }) {
           </ul>
         )}
 
+        <p className={`no-print text-sm ${status.error ? 'font-semibold text-[var(--color-urgent)]' : 'text-[var(--color-ink-muted)]'}`}>
+          {savedLabel(status)}
+        </p>
+
         <div className="no-print flex flex-wrap gap-3 pt-2">
           <button
             type="button"
+            disabled={bookmarkedItems.length === 0}
             onClick={() => {
               markToolUsed();
               window.print();
             }}
-            className="tap rounded-xl bg-[var(--color-accent)] px-5 font-semibold text-white"
+            className={btnPrimary}
           >
             Print shortlist
           </button>
-          {bookmarkedItems.length > 0 && (
-            <button
-              type="button"
-              onClick={exportJson}
-              className="tap rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper)] px-5 font-semibold"
-            >
-              Export shortlist (JSON)
-            </button>
-          )}
-          <button
-            type="button"
-            onClick={deleteAllData}
-            className="tap rounded-xl px-3 font-semibold text-[var(--color-urgent)] underline"
-          >
-            Delete all my data
+          <button type="button" onClick={() => void reset()} className={btnDanger}>
+            Clear my shortlist and filters
           </button>
         </div>
       </section>
+
+      <ToolHistory
+        tool="does-it-work-checker"
+        noun="shortlist"
+        current={state}
+        canSave={state.bookmarkedIds.length > 0}
+        normalize={normalize}
+        summarize={summarize}
+        onOpen={(data) => update(data)}
+      />
     </div>
   );
 }

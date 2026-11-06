@@ -29,13 +29,14 @@ inputs:
 
 computes:
   - "Filtered list of evidence entries from the verified catalog"
-  - "Saved shortlist of options to print or export"
+  - "Saved shortlist of options to print"
   - "Urgent triggers from any ticked safety red flags"
 
 shows:
   - Urgent guidance first when any safety trigger applies, including 988 (US) and Samaritans 116 123 (UK)
   - Evidence grade badge, summary of guideline findings, and source citation for each matching option
-  - Printable and exportable shortlist of saved options, plus Delete all my data
+  - Printable shortlist of saved options, plus Clear my shortlist and filters
+  - Her saved, dated shortlists (open, update, re-date, rename, delete)
 
 never:
   - Recommend that the reader take, start, stop, or change any medication or supplement
@@ -51,6 +52,5 @@ urgent_triggers: [self_harm_thoughts, palpitations_red_flags, bleeding_after_men
 sources: [nams-2022-hormone-therapy, nams-2023-nonhormone-therapy, veozah-prescribing-information, lynkuet-approval-bayer-2025, nams-2020-gsm, acog-clinical-consensus-gsm, cochrane-vaginal-moisturizers, nice-ng123-urinary-incontinence, cochrane-pfmt-incontinence, liftmor-trial-bone-density, nhs-postmenopausal-bleeding, nhs-heart-palpitations, lifeline-988]
 
 privacy: >-
-  Filters and saved shortlist items live in this browser's localStorage
-  (menoverdict_evidence_checker_v1) on her device only. Nothing is sent anywhere.
+  Filters and the current shortlist autosave in this browser's IndexedDB (menowell_local_db, toolRecords) on her device; dated shortlists she chooses to save are kept there too. Data from the older localStorage key (menoverdict_evidence_checker_v1) is moved in once, then that key is removed. No account or login. Nothing is sent to a server, analytics, or partners. Everything is included in the backup file she can download and restore from /app/storage/, and nothing is deleted automatically: she deletes entries one at a time, by date range, by tool, or all at once.
 

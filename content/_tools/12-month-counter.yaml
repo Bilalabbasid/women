@@ -21,20 +21,22 @@ purpose: >-
   flagging any bleeding after 12 months as needing medical evaluation.
 
 inputs:
-  - First day of her most recent menstrual period (YYYY-MM-DD)
+  - First day of each period she logs (YYYY-MM-DD); the count uses the most recent
   - Whether hormonal contraception, hormone therapy, or hysterectomy affects her bleeding
   - Whether any vaginal bleeding or spotting occurred after 12 months without a period
   - Safety red-flag checkboxes (heavy/unusual bleeding, palpitations with red flags, self-harm thoughts)
 
 computes:
-  - "Days elapsed since the entered date, days remaining until the 12-month anniversary date, and the formatted 12-month anniversary date"
+  - "Days elapsed since her most recent logged period, days remaining until the 12-month anniversary date, and the formatted 12-month anniversary date"
+  - "Days between consecutive logged periods"
   - "Urgent triggers, including automatic postmenopausal bleeding guidance whenever bleeding after 12 months is ticked"
 
 shows:
   - Urgent guidance first when any safety trigger applies, including postmenopausal bleeding guidance and US/UK crisis lines
   - Days elapsed, days remaining, and the 12-month anniversary date
   - Notice explaining why the 12-month bleeding rule does not apply on its own when hormonal contraception or surgery affects periods
-  - Print, Export JSON, and Delete all my data actions
+  - Her logged period dates (edit or delete each), the gap in days between them, and a note that STRAW+10 describes gaps of 60+ days as part of the late transition
+  - Print action
 
 never:
   - Diagnose menopause or rule out pregnancy or other causes of missed periods
@@ -50,7 +52,5 @@ urgent_triggers: [self_harm_thoughts, palpitations_red_flags, bleeding_after_men
 sources: [straw-10-2012, nice-ng23-recommendations, nhs-postmenopausal-bleeding, nhs-heavy-periods, nhs-heart-palpitations, lifeline-988, samaritans-contact]
 
 privacy: >-
-  The date and checkboxes are stored only in this browser's localStorage
-  (menoverdict_12_month_counter_v1) on her device. Nothing is sent to a server,
-  analytics, or partners.
+  Period start dates are stored in this browser's IndexedDB (menowell_local_db, cycles) on her device, shared with the tracker; the checkboxes autosave in the toolRecords table. A date from the older localStorage key (menoverdict_12_month_counter_v1) is moved in once, then that key is removed. No account or login. Nothing is sent to a server, analytics, or partners. Everything is included in the backup file she can download and restore from /app/storage/, and nothing is deleted automatically: she deletes entries one at a time, by date range, by tool, or all at once.
 

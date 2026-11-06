@@ -36,7 +36,8 @@ shows:
   - Urgent guidance first when any safety trigger applies, including 988 (US) and Samaritans 116 123 (UK)
   - Plain-language explanation of the STRAW+10 stage pattern and NICE NG23 guidance
   - Explicit notice when STRAW+10 cycle rules do not apply (under 40, hysterectomy, hormonal contraception)
-  - Print, Export JSON, and Delete all my data actions
+  - Print and Clear my answers actions
+  - Her saved, dated answer sets (open, update, re-date, rename, delete), and with two or more, how her period-pattern answer has changed
 
 never:
   - Diagnose perimenopause, menopause, or premature ovarian insufficiency
@@ -54,7 +55,5 @@ urgent_triggers: [self_harm_thoughts, palpitations_red_flags, bleeding_after_men
 sources: [straw-10-2012, nice-ng23-recommendations, nhs-postmenopausal-bleeding, nhs-heart-palpitations, lifeline-988, samaritans-contact]
 
 privacy: >-
-  All selections are stored in this browser's localStorage (menoverdict_stage_guide_v1)
-  on her device only. Nothing is sent to a server, analytics, or partners. She can
-  export her answers as JSON or delete them with one tap.
+  Current answers autosave in this browser's IndexedDB (menowell_local_db, toolRecords) on her device; dated answer sets she chooses to save are kept there too. Answers from the older localStorage key (menoverdict_stage_guide_v1) are moved in once, then that key is removed. No account or login. Nothing is sent to a server, analytics, or partners. Everything is included in the backup file she can download and restore from /app/storage/, and nothing is deleted automatically: she deletes entries one at a time, by date range, by tool, or all at once.
 

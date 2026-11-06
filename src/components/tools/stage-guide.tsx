@@ -1,12 +1,13 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import Link from 'next/link';
 import { evaluateUrgentTriggers } from '@/lib/safety/urgent-triggers';
 import { UrgentGuidance } from '@/components/safety/urgent-guidance';
 import { markToolUsed } from '@/lib/pwa/install-gate';
-
-const STORAGE_KEY = 'menoverdict_stage_guide_v1';
+import { useToolState, savedLabel } from '@/components/storage/use-tool-state';
+import { ToolHistory, type HistoryEntry } from '@/components/storage/tool-history';
+import { btnDanger, btnPrimary } from '@/components/storage/styles';
 
 type AgeGroup = '' | 'under_40' | '40_to_44' | '45_plus';
 type CycleContext = '' | 'natural_cycles' | 'hormonal_contraception' | 'hysterectomy';
@@ -33,42 +34,70 @@ const DEFAULT_STATE: StageGuideState = {
   redFlags: [],
 };
 
-function loadInitialState(): StageGuideState {
-  if (typeof window === 'undefined') return DEFAULT_STATE;
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (!raw) return DEFAULT_STATE;
-    const parsed = JSON.parse(raw) as Partial<StageGuideState>;
-    return {
-      ageGroup: parsed.ageGroup ?? '',
-      cycleContext: parsed.cycleContext ?? '',
-      cyclePattern: parsed.cyclePattern ?? '',
-      hasVasomotor: Boolean(parsed.hasVasomotor),
-      redFlags: Array.isArray(parsed.redFlags) ? parsed.redFlags : [],
-    };
-  } catch {
-    return DEFAULT_STATE;
-  }
+const AGE_GROUPS: AgeGroup[] = ['under_40', '40_to_44', '45_plus'];
+const CONTEXTS: CycleContext[] = ['natural_cycles', 'hormonal_contraception', 'hysterectomy'];
+const PATTERNS: CyclePattern[] = ['regular', 'varied_7_plus_days', 'skipped_60_plus_days', 'none_12_plus_months'];
+
+const AGE_LABEL: Record<string, string> = { under_40: 'Under 40', '40_to_44': '40 to 44', '45_plus': '45 or over' };
+const PATTERN_LABEL: Record<string, string> = {
+  regular: 'Regular cycles',
+  varied_7_plus_days: 'Cycle length shifting by 7+ days',
+  skipped_60_plus_days: '60+ days between periods',
+  none_12_plus_months: 'No period for 12+ months',
+};
+const CONTEXT_LABEL: Record<string, string> = {
+  natural_cycles: 'natural cycles',
+  hormonal_contraception: 'hormonal contraception',
+  hysterectomy: 'hysterectomy or ablation',
+};
+
+function normalize(raw: unknown): StageGuideState {
+  const p = (raw ?? {}) as Partial<StageGuideState>;
+  return {
+    ageGroup: AGE_GROUPS.includes(p.ageGroup as AgeGroup) ? (p.ageGroup as AgeGroup) : '',
+    cycleContext: CONTEXTS.includes(p.cycleContext as CycleContext) ? (p.cycleContext as CycleContext) : '',
+    cyclePattern: PATTERNS.includes(p.cyclePattern as CyclePattern) ? (p.cyclePattern as CyclePattern) : '',
+    hasVasomotor: Boolean(p.hasVasomotor),
+    redFlags: Array.isArray(p.redFlags) ? p.redFlags.filter((x): x is string => typeof x === 'string') : [],
+  };
+}
+
+function summarize(s: StageGuideState): string {
+  const parts = [
+    s.ageGroup && AGE_LABEL[s.ageGroup],
+    s.cyclePattern && PATTERN_LABEL[s.cyclePattern],
+    s.cycleContext && s.cycleContext !== 'natural_cycles' && CONTEXT_LABEL[s.cycleContext],
+    s.hasVasomotor && 'hot flashes or night sweats',
+  ].filter(Boolean);
+  return parts.length ? parts.join(' · ') : 'No answers';
+}
+
+/** How her cycle-pattern answer has changed between saved answer sets. */
+function PatternTimeline({ entries }: { entries: HistoryEntry<StageGuideState>[] }) {
+  return (
+    <figure className="space-y-2">
+      <figcaption className="font-semibold">How your period pattern answer has changed</figcaption>
+      <ol className="space-y-1 border-l-2 border-[var(--color-accent)] pl-4 text-sm">
+        {entries.map((e) => (
+          <li key={e.id}>
+            <span className="text-[var(--color-ink-muted)]">{e.date}:</span>{' '}
+            {e.data.cyclePattern ? PATTERN_LABEL[e.data.cyclePattern] : 'pattern not answered'}
+          </li>
+        ))}
+      </ol>
+    </figure>
+  );
 }
 
 /**
  * Interactive STRAW+10 educational stage guide ("Where am I?").
  * Explains how the STRAW+10 reproductive aging criteria and NICE NG23 clinical
- * rules work without diagnosing or scoring the reader. All answers remain on
- * this device in localStorage.
+ * rules work without diagnosing or scoring the reader. Answers autosave in this
+ * browser (IndexedDB), with optional dated copies; nothing is sent anywhere.
  */
 export function StageGuide() {
-  const [state, setState] = useState<StageGuideState>(loadInitialState);
-
-  const persist = (next: StageGuideState) => {
-    setState(next);
-    try {
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
-      markToolUsed();
-    } catch {
-      // ignore storage errors
-    }
-  };
+  const { state, update, reset, status } = useToolState('stage-guide', DEFAULT_STATE, normalize);
+  const persist = (next: StageGuideState) => update(next);
 
   const toggleRedFlag = (flag: string) => {
     const exists = state.redFlags.includes(flag);
@@ -86,43 +115,12 @@ export function StageGuide() {
 
   const hasInputs = Boolean(state.ageGroup || state.cycleContext || state.cyclePattern || state.hasVasomotor || state.redFlags.length > 0);
 
-  const exportJson = () => {
-    try {
-      const payload = {
-        tool: 'stage-guide',
-        app: 'MenoVerdict',
-        exportedAt: new Date().toISOString(),
-        answers: state,
-      };
-      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `menoverdict-stage-guide-${new Date().toISOString().slice(0, 10)}.json`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    } catch {
-      // ignore
-    }
-  };
-
-  const deleteAllData = () => {
-    setState(DEFAULT_STATE);
-    try {
-      window.localStorage.removeItem(STORAGE_KEY);
-    } catch {
-      // ignore
-    }
-  };
-
   return (
     <div className="space-y-6" data-tool-ui="stage-guide">
       <form onSubmit={(e) => e.preventDefault()} className="space-y-5" aria-describedby="stage-guide-help">
         <p id="stage-guide-help" className="text-[var(--color-ink-muted)]">
           Answer the questions below to see how research staging criteria (STRAW+10) and clinical guidelines (NICE NG23)
-          describe menstrual changes. Your answers stay on this device and are never sent anywhere.
+          describe menstrual changes. Your answers are saved in this browser on this device and are never sent anywhere.
         </p>
 
         <fieldset className="space-y-2 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
@@ -377,6 +375,10 @@ export function StageGuide() {
           </div>
         )}
 
+        <p className={`no-print text-sm ${status.error ? 'font-semibold text-[var(--color-urgent)]' : 'text-[var(--color-ink-muted)]'}`}>
+          {savedLabel(status)}
+        </p>
+
         <div className="no-print flex flex-wrap gap-3">
           <button
             type="button"
@@ -384,26 +386,15 @@ export function StageGuide() {
               markToolUsed();
               window.print();
             }}
-            className="tap rounded-xl bg-[var(--color-accent)] px-5 font-semibold text-white"
+            className={btnPrimary}
           >
             Print summary for my appointment
           </button>
           {hasInputs && (
-            <button
-              type="button"
-              onClick={exportJson}
-              className="tap rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] px-5 font-semibold"
-            >
-              Export my answers (JSON)
+            <button type="button" onClick={() => void reset()} className={btnDanger}>
+              Clear my answers
             </button>
           )}
-          <button
-            type="button"
-            onClick={deleteAllData}
-            className="tap rounded-xl px-3 font-semibold text-[var(--color-urgent)] underline"
-          >
-            Delete all my data
-          </button>
         </div>
 
         <p className="no-print text-sm text-[var(--color-ink-muted)]">
@@ -418,6 +409,17 @@ export function StageGuide() {
           .
         </p>
       </section>
+
+      <ToolHistory
+        tool="stage-guide"
+        noun="answer set"
+        current={state}
+        canSave={hasInputs}
+        normalize={normalize}
+        summarize={summarize}
+        onOpen={(data) => update(data)}
+        renderInsights={(entries) => <PatternTimeline entries={entries} />}
+      />
     </div>
   );
 }

@@ -31,7 +31,9 @@ computes:
 shows:
   - Urgent guidance first when any safety trigger applies, including 988 (US) and Samaritans 116 123 (UK)
   - Printable appointment question sheet grouped by topic
-  - Export JSON and Delete all my data controls
+  - Print and Clear my current sheet controls
+  - Her saved, dated question sheets (open, update, re-date, rename, delete)
+  - "Nothing pre-ticked: only topics she chooses appear on her sheet"
 
 never:
   - Diagnose a condition or recommend a specific drug or dose
@@ -47,7 +49,5 @@ urgent_triggers: [self_harm_thoughts, palpitations_red_flags, bleeding_after_men
 sources: [nice-ng23-recommendations, nams-2022-hormone-therapy, nams-2023-nonhormone-therapy, fda-mht-labeling-request-2025, veozah-prescribing-information, nams-2020-gsm, nice-ng123-urinary-incontinence, nhs-postmenopausal-bleeding, nhs-heart-palpitations, lifeline-988, samaritans-contact]
 
 privacy: >-
-  Selected topics and custom notes are stored only in this browser's localStorage
-  (menoverdict_treatment_questions_v1) on her device. Nothing is transmitted over
-  the network.
+  Selected topics and notes autosave in this browser's IndexedDB (menowell_local_db, toolRecords) on her device; dated sheets she chooses to save are kept there too. Data from the older localStorage key (menoverdict_treatment_questions_v1) is moved in once, then that key is removed. No account or login. Nothing is sent to a server, analytics, or partners. Everything is included in the backup file she can download and restore from /app/storage/, and nothing is deleted automatically: she deletes entries one at a time, by date range, by tool, or all at once.
 

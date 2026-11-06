@@ -1134,3 +1134,32 @@
   funding_conflict: "Disclosed: funded by/affiliated with Astellas Pharma (maker of fezolinetant/Veozah). Three authors (Ajmera, Shiozawa, Kim, Mancuso) are Astellas employees; lead author Kapoor discloses consulting fees from Astellas and several other companies (Novo Nordisk, Estetra, Fresenius Kabi, Exeltis, Dexcom, WellFound); the remaining authors are employees of a health-economics consultancy (Medicus Economics) engaged for the analysis."
   verified: true
   notes: "This is workplace-impact epidemiology (self-reported survey data), not a drug-efficacy claim, but the funding conflict is disclosed anyway per house style since the funder sells a treatment for the exact symptoms being surveyed."
+
+- id: chesnokova-insurance-mht-disparity-2026
+  title: "Insurance Type and Menopausal Hormone Therapy Use Among US Women"
+  authors: [Chesnokova A, Mumford SL, Schachter A, Hamm RF, Lorch S, Klebanoff M, Lindley S, Harness E, Williams M, Schapira MM]
+  publisher: JAMA Network Open
+  year: 2026
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/42467433/
+  doi: 10.1001/jamanetworkopen.2026.23740
+  accessed: "2026-11-07"
+  population: "NHANES 2013-2020 cycles; 1,666 unweighted respondents (weighted n=22,275,545), US women aged 45-64 with Medicaid or private insurance, eligible for MHT (91.4% weighted private, 8.6% Medicaid)"
+  key_finding: "Medicaid-insured women reported a lower history of MHT use than privately insured women (10.7%, 95% CI 6.9-16.0% vs. 20.7%, 95% CI 18.1-23.5%); after adjustment, Medicaid insurance was associated with lower odds of MHT use (OR 0.50, 95% CI 0.28-0.87). Black participants had lower odds of MHT use than White participants (OR 0.68, 95% CI 0.45-0.95), but this difference was attenuated once insurance status was added to the model (adjusted OR 0.72, 95% CI 0.50-1.04) - suggesting insurance type may partly explain the racial gap."
+  funding_conflict: null
+  verified: true
+
+- id: goodrx-estradiol-pricing-2026
+  title: "Estradiol prices, coupons & savings tips"
+  authors: []
+  publisher: GoodRx
+  year: 2026
+  type: other
+  url: https://www.goodrx.com/estradiol
+  doi: null
+  accessed: "2026-11-07"
+  population: N/A — US retail drug pricing data
+  key_finding: "As of 2026-11-07, listed US retail (non-insurance) prices for a 1-month supply of generic estradiol: once-weekly patches ranged roughly $37-$69 depending on dose (4-patch cartons); gel packets ranged much more widely, roughly $39-$545 depending on dose/quantity, with some specific strength/quantity combinations priced far higher, likely a brand/generic-substitution quirk at that exact SKU rather than a representative price. Tablet pricing was not checked."
+  funding_conflict: null
+  verified: true
+  notes: "I could not independently re-access goodrx.com myself (it returned a 403 'Access to this page has been denied' to my browser session on 2026-11-07, both for the main estradiol page and a patch-specific subpage) - this entry rests on the content session's own direct read, not my own verification. Retail pricing pages change often and are explicitly dated in the content as 'as of November 2026' rather than presented as a stable fact; re-check before relying on these figures again."

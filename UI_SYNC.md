@@ -478,3 +478,17 @@ the owner/functionality chat can make.)*
   the old text after this commit — a stale-cache artifact of the
   long-running shared server, not a bug (confirmed correct via the
   validators instead). Shows up next time that server restarts.
+- 2026-11-07 — This session (Lane E), direct owner request: moved the
+  affiliate-disclosure `<p role="note">` in `src/app/(site)/[...slug]/
+  page.tsx` out of `<header>` (where it was effectively the first thing
+  under the H1) to right before `{parts.map(...)}`, after `Toc` —
+  touches Lane D's claimed file, flagging per rule 2. Owner first asked
+  for it at the very *end* of the page; flagged that against AGENTS.md's
+  own FTC-grounded rule ("disclose before the link, not behind it" —
+  putting it after the body would put it after any `<Product>` link), so
+  it landed lower instead, still strictly before every body part. Same
+  condition as before (`fm.affiliate_disclosure || parts.some(p =>
+  p.type === 'product')`), not touched. `tsc --noEmit`/`eslint` clean,
+  verified on `/symptoms/vaginal-dryness/`. Full `npm run build` clean,
+  pushed to `origin/site-rebuild` (`85022d1`, `50d7d76`) along with the
+  affiliate_disclosure frontmatter fix above.

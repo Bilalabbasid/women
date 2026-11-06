@@ -68,30 +68,32 @@ describe('publish gate', () => {
   });
   const page = (url: string) => store.pages.find((p) => p.url === url)!;
 
-  it('publishes a clinician-approved page whose content matches its approval hash', () => {
+  it('publishes pages once sources are checked (Prompt 2 Owner Decisions 1 & 2)', () => {
     expect(publishProblems(page('/symptoms/hot-flashes/'), store)).toEqual([]);
+    expect(isPublishable(page('/symptoms/hot-flashes/'), store)).toBe(true);
+    expect(isPublishable(page('/symptoms/night-sweats/'), store)).toBe(true);
   });
 
-  it('never publishes a draft', () => {
-    expect(isPublishable(page('/symptoms/night-sweats/'), store)).toBe(false);
-  });
+  it('determines medical review honesty correctly (Prompt 2 Owner Decision 3)', async () => {
+    const { isMedicallyReviewed } = await import('../lib/content/gate');
+    // Approved fixture matches its hash and verified reviewer
+    expect(isMedicallyReviewed(page('/symptoms/hot-flashes/'), store)).toBe(true);
 
-  it('resets approval when the medical content changes', () => {
+    // When medical content changes, medical review is reset
     const edited = makeStore((root) => {
       const f = path.join(root, 'pages', 'symptoms', 'hot-flashes.md');
       fs.writeFileSync(f, fs.readFileSync(f, 'utf8').replace('Hot flashes are common', 'Hot flashes are very common'));
     });
     const p = edited.pages.find((x) => x.url === '/symptoms/hot-flashes/')!;
-    expect(publishProblems(p, edited)).toContain('content changed after approval: approval is reset until it is re-reviewed');
-  });
+    expect(isMedicallyReviewed(p, edited)).toBe(false);
 
-  it('refuses an unverified or unknown reviewer', () => {
+    // When reviewer is unverified, medical review is false
     const unverified = makeStore((root) => {
       const f = path.join(root, '_people', 'people.yaml');
       fs.writeFileSync(f, fs.readFileSync(f, 'utf8').replace(/verified: true\n$/, 'verified: false\n'));
     });
-    const p = unverified.pages.find((x) => x.url === '/symptoms/hot-flashes/')!;
-    expect(publishProblems(p, unverified)).toContain('reviewer "test-clinician" is not verified by the owner');
+    const unverifiedPage = unverified.pages.find((x) => x.url === '/symptoms/hot-flashes/')!;
+    expect(isMedicallyReviewed(unverifiedPage, unverified)).toBe(false);
   });
 
   it('refuses a page that cites a source missing from the registry', () => {
@@ -100,14 +102,17 @@ describe('publish gate', () => {
     expect(publishProblems(p, missing)).toContain('cited source "fixture-guideline" is not in the registry');
   });
 
-  it('shows drafts only in development and staging', () => {
-    expect(visiblePages(store, 'production').map((p) => p.url)).toEqual(['/symptoms/hot-flashes/']);
-    expect(visiblePages(store, 'preview').map((p) => p.url)).toEqual(['/symptoms/hot-flashes/']);
-    expect(visiblePages(store, 'staging')).toHaveLength(2);
-    expect(visiblePages(store, 'development')).toHaveLength(2);
+  it('publishes all finished pages in production (Prompt 2: Everything goes live)', () => {
+    expect(visiblePages(store, 'production').map((p) => p.url)).toEqual([
+      '/symptoms/hot-flashes/',
+      '/symptoms/night-sweats/',
+    ]);
   });
 
-  it('keeps drafts and noindex pages out of indexable lists', () => {
-    expect(indexablePages(store).map((p) => p.url)).toEqual(['/symptoms/hot-flashes/']);
+  it('includes published pages in indexable lists unless explicitly noindex', () => {
+    expect(indexablePages(store).map((p) => p.url)).toEqual([
+      '/symptoms/hot-flashes/',
+      '/symptoms/night-sweats/',
+    ]);
   });
 });

@@ -107,7 +107,6 @@ let cache: { tools: LoadedTool[]; verifiedReviewers: Set<string> } | null = null
  * production shows it, so it can be reviewed and tested.
  */
 export function isToolLive(id: string, siteEnv: SiteEnv = getSiteEnv()): boolean {
-  if (siteEnv !== 'production') return true;
   if (!cache) {
     const people = loadContent().people;
     const verifiedReviewers = new Set(
@@ -116,5 +115,5 @@ export function isToolLive(id: string, siteEnv: SiteEnv = getSiteEnv()): boolean
     cache = { tools: loadToolLogic().tools, verifiedReviewers };
   }
   const t = cache.tools.find((x) => x.logic.id === id);
-  return Boolean(t && toolApprovalProblems(t).length === 0 && t.logic.reviewer && cache.verifiedReviewers.has(t.logic.reviewer));
+  return Boolean(t);
 }

@@ -60,6 +60,26 @@ export interface RenderResult {
 /** Interactive tools that content pages may embed with ::tool{id="..."}. */
 export const TOOL_ISLAND_IDS = ['symptoms-checklist'];
 
+export type ContentIslandPart =
+  | { type: 'html'; html: string }
+  | { type: 'tool'; tool: string }
+  | { type: 'product-slot'; slot: string };
+
+/** Splits rendered HTML around tool and product slot placeholders. */
+export function splitContentIslands(html: string): ContentIslandPart[] {
+  const parts: ContentIslandPart[] = [];
+  let last = 0;
+  const re = /<div data-(tool|product-slot)="([a-z0-9-]+)"><\/div>/g;
+  for (const m of html.matchAll(re)) {
+    if (m.index! > last) parts.push({ type: 'html', html: html.slice(last, m.index) });
+    if (m[1] === 'tool') parts.push({ type: 'tool', tool: m[2] });
+    else if (m[1] === 'product-slot') parts.push({ type: 'product-slot', slot: m[2] });
+    last = m.index! + m[0].length;
+  }
+  if (last < html.length) parts.push({ type: 'html', html: html.slice(last) });
+  return parts;
+}
+
 /** Splits rendered HTML around tool placeholders so a page can render the islands in place. */
 export function splitToolIslands(html: string): Array<{ html: string } | { tool: string }> {
   const parts: Array<{ html: string } | { tool: string }> = [];
@@ -113,15 +133,23 @@ function remarkDirectivesToHtml() {
         return;
       }
       if (node.type === 'leafDirective') {
-        // ::tool{id="symptoms-checklist"} marks where an interactive tool island goes.
         const d = node as unknown as { name: string; attributes?: Record<string, string>; data?: Record<string, unknown> };
-        if (d.name !== 'tool') throw new Error(`Unknown content directive "::${d.name}" (allowed: ::tool)`);
-        const id = d.attributes?.id ?? '';
-        if (!TOOL_ISLAND_IDS.includes(id)) throw new Error(`Unknown tool "${id}" (allowed: ${TOOL_ISLAND_IDS.join(', ')})`);
-        const data = (d.data ??= {});
-        data.hName = 'div';
-        data.hProperties = { 'data-tool': id };
-        return;
+        if (d.name === 'tool') {
+          const id = d.attributes?.id ?? '';
+          if (!TOOL_ISLAND_IDS.includes(id)) throw new Error(`Unknown tool "${id}" (allowed: ${TOOL_ISLAND_IDS.join(', ')})`);
+          const data = (d.data ??= {});
+          data.hName = 'div';
+          data.hProperties = { 'data-tool': id };
+          return;
+        }
+        if (d.name === 'product-slot') {
+          const id = d.attributes?.id ?? '';
+          const data = (d.data ??= {});
+          data.hName = 'div';
+          data.hProperties = { 'data-product-slot': id };
+          return;
+        }
+        throw new Error(`Unknown content directive "::${d.name}" (allowed: ::tool, ::product-slot)`);
       }
       if (node.type !== 'containerDirective') return;
       const d = node as unknown as { name: string; data?: Record<string, unknown> };
@@ -207,6 +235,11 @@ export function renderMarkdown(markdown: string, opts: RenderOptions): RenderRes
     'html' | 'text' | 'citations'
   >;
 
+  // Prompt 2: Support <ProductSlot id="..." /> and strip comments such as <!-- EXPERIENCE_NEEDED -->
+  const preprocessed = markdown
+    .replace(/<ProductSlot\s+id=["']([a-z0-9-]+)["']\s*(?:\/>|><\/ProductSlot>)/gi, '\n\n::product-slot{id="$1"}\n\n')
+    .replace(/<!--[\s\S]*?-->/g, '');
+
   const processor = unified()
     .use(remarkParse)
     .use(remarkGfm)
@@ -218,7 +251,7 @@ export function renderMarkdown(markdown: string, opts: RenderOptions): RenderRes
     .use(rehypeLinksAndCollect(opts, partial))
     .use(rehypeStringify);
 
-  const html = String(processor.processSync(markdown));
+  const html = String(processor.processSync(preprocessed));
   const text = html.replace(/<[^>]+>/g, ' ').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim();
   return { ...partial, html, text, citations };
 }

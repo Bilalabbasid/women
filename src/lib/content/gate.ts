@@ -21,37 +21,29 @@ const GRADE_EXEMPT: readonly PageType[] = ['tool', 'hub'];
  * Production builds include only publishable pages. Drafts render only on a
  * local dev server or authenticated staging, always with a draft banner.
  */
+export function isMedicallyReviewed(page: ContentPage, store: Pick<ContentStore, 'sources' | 'people'>): boolean {
+  const { fm } = page;
+  if (!page.isMedical || !fm.reviewer || !fm.reviewed_at) return false;
+  const reviewer = store.people.get(fm.reviewer);
+  if (!reviewer || !reviewer.roles.includes('clinical_reviewer') || !reviewer.verified) return false;
+  return Boolean(fm.approved_hash && fm.approved_hash === page.hash);
+}
+
+/**
+ * PUBLISH GATE (Prompt 2 Owner Decisions 1 & 2).
+ *
+ * All pages go live:
+ *  - Sources cited must exist in the sources registry
+ *  - Clinician approval does NOT block publishing
+ *  - Honesty rule: pages without clinical review display the honesty notice
+ *    and omit reviewer schema / reviewer name
+ */
 export function publishProblems(page: ContentPage, store: Pick<ContentStore, 'sources' | 'people'>): string[] {
   const { fm } = page;
   const problems: string[] = [];
 
-  if (page.isMedical) {
-    if (fm.status !== 'clinician_approved' && fm.status !== 'published') {
-      problems.push(`status is "${fm.status}", needs clinician_approved or published`);
-    }
-    if (!fm.reviewer) problems.push('no clinical reviewer named');
-    else {
-      const reviewer = store.people.get(fm.reviewer);
-      if (!reviewer) problems.push(`reviewer "${fm.reviewer}" is not in people.yaml`);
-      else if (!reviewer.roles.includes('clinical_reviewer')) problems.push(`"${fm.reviewer}" is not a clinical reviewer`);
-      else if (!reviewer.verified) problems.push(`reviewer "${fm.reviewer}" is not verified by the owner`);
-    }
-    if (!fm.reviewed_at) problems.push('no reviewed_at date');
-    if (!fm.review_due) problems.push('no review_due date');
-    // Tool guides and hubs do not grade a single use, so they are exempt (DECISIONS.md D-029).
-    if (!fm.evidence_grade && !GRADE_EXEMPT.includes(fm.page_type)) problems.push('no evidence grade');
-    if (fm.sources.length === 0) problems.push('no sources cited');
-  } else if (fm.status !== 'owner_approved' && fm.status !== 'published') {
-    problems.push(`status is "${fm.status}", needs owner_approved or published`);
-  }
-
   for (const id of fm.sources) {
     if (!store.sources.has(id)) problems.push(`cited source "${id}" is not in the registry`);
-  }
-
-  if (!fm.approved_hash) problems.push('no approved_hash (never approved)');
-  else if (fm.approved_hash !== page.hash) {
-    problems.push('content changed after approval: approval is reset until it is re-reviewed');
   }
 
   return problems;

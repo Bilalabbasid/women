@@ -12,8 +12,12 @@ import {
 import { isPublishable } from '@/lib/content/gate';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { contentPageLd, breadcrumbLd, faqLd, webApplicationLd } from '@/lib/seo/jsonld';
-import { splitToolIslands } from '@/lib/content/markdown';
+import { splitContentIslands } from '@/lib/content/markdown';
 import { ToolIsland } from '@/components/tools/tool-island';
+import { ProductSlotView } from '@/components/products/product-slot';
+import { StandardNotice } from '@/components/site/standard-notice';
+import { EmailCapture } from '@/components/site/email-capture';
+import { NextSteps, BookmarkButton } from '@/components/site/next-steps';
 import { isToolLive } from '@/lib/tools/logic';
 import { JsonLd, Breadcrumbs } from '@/components/site/site-chrome';
 import { GradeBadge, ReviewLine, References, ChangeLog, DraftBanner, Toc } from '@/components/site/evidence';
@@ -62,8 +66,8 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
   const related = relatedFor(page);
   const citationIds = [...rendered.citations, ...fm.sources.filter((s) => !rendered.citations.includes(s))];
   const faq = fm.faq ?? [];
-  const parts = splitToolIslands(rendered.html);
-  const toolIds = parts.flatMap((p) => ('tool' in p ? [p.tool] : []));
+  const parts = splitContentIslands(rendered.html);
+  const toolIds = parts.flatMap((p) => (p.type === 'tool' ? [p.tool] : []));
   const ld = [
     contentPageLd(page, store),
     breadcrumbLd(crumbs),
@@ -77,10 +81,14 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
       {!approved && <DraftBanner problems={problems} />}
       <JsonLd data={ld} />
       <article className="space-y-6">
-        <Breadcrumbs crumbs={crumbs} />
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <Breadcrumbs crumbs={crumbs} />
+          <BookmarkButton url={page.url} title={fm.title} />
+        </div>
         <header className="space-y-3">
           <h1 className="text-3xl sm:text-4xl">{fm.title}</h1>
           <ReviewLine page={page} author={author} reviewer={reviewer} approved={approved} />
+          {page.isMedical && <StandardNotice />}
           {fm.evidence_grade && (
             <p className="flex flex-wrap items-center gap-2">
               <span className="text-[var(--color-ink-muted)]">Evidence:</span>
@@ -108,14 +116,15 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
         <SavedCopyNotice reviewedAt={approved ? fm.reviewed_at : null} isMedical={page.isMedical} />
         <Toc headings={rendered.headings} />
 
-        {parts.map((part, i) =>
-          'tool' in part ? (
-            <ToolIsland key={`tool-${i}`} id={part.tool} />
-          ) : (
-            <div key={`html-${i}`} className="prose" dangerouslySetInnerHTML={{ __html: part.html }} />
-          ),
-        )}
+        {parts.map((part, i) => {
+          if (part.type === 'tool') return <ToolIsland key={`tool-${i}`} id={part.tool} />;
+          if (part.type === 'product-slot') return <ProductSlotView key={`slot-${i}`} id={part.slot} />;
+          return <div key={`html-${i}`} className="prose" dangerouslySetInnerHTML={{ __html: part.html }} />;
+        })}
         {rendered.questionLists > 0 && <QuestionTools />}
+
+        <NextSteps />
+        <EmailCapture title={`Get the ${fm.title.toLowerCase()} doctor question sheet`} />
 
         {children.length > 0 && (
           <section aria-labelledby="in-this-section" className="space-y-2">

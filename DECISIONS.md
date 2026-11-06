@@ -32,12 +32,17 @@ Each decision below is the sensible default chosen so work can continue. Anythin
 | D-025 | 2026-11-06 | **Every Does-it-work page starts on the `diw_pending` CTA profile** (no commercial content). It moves to `diw_supported` or `diw_not_supported` only after its grade is set and reviewed | Rule 7: evidence before commission | Decided |
 | D-026 | 2026-11-06 | **CTA matrix "never" lists are encoded in code** (`src/lib/cta/profiles.ts`) as well as in `profiles.yaml` | A YAML edit can make a profile stricter, but can't quietly allow a banned combination; the build fails | Decided |
 | D-027 | 2026-11-06 | **The source registry holds only sources opened and checked on the access date** (19 at the end of Phase 3; corrected from a miscount of 17). The FTC guidance, the Truth in Advertising letters and the "IMS 2026 recommendations" are still to be checked (`content/_review/research-plan-checks.md`) | Rules 1 and 2 | Decided |
+| D-028 | 2026-11-06 | **Prompt 2 Override: Everything goes live.** All articles, hubs, tools and information pages publish and are indexable in the production build once their sources are checked and they pass validators | Prompt 2 Owner Decision 1 | Decided |
+| D-029 | 2026-11-06 | **Prompt 2 Override: Clinician approval does not block publishing.** Pages publish once sources are checked and validators pass. Without clinical review, pages show the standard honesty notice (content wasn't written by a doctor) and omit reviewer name / reviewer schema | Prompt 2 Owner Decisions 2 & 3 | Decided |
+| D-030 | 2026-11-06 | **Config flags:** `FEATURE_LOGIN=false`, `FEATURE_AI_PROMOTION=false`, `FEATURE_APP_DOWNLOAD_PROMOTION=false`. Login, AI and app download promotions hidden until flags are enabled | Prompt 2 Config Flags | Decided |
+| D-031 | 2026-11-06 | **Product placeholder system:** `<ProductSlot id="..." />` reads from `content/_products/slots.yaml`. Empty slots render editorial how-to-choose guidance without buy links | Prompt 2 Commerce rules | Decided |
+| D-032 | 2026-11-06 | **Accounts, consent and retention:** On-device by default. Server storage requires separate explicit consent with mandatory 10/20/30/90-day retention choice. Scheduled data deletion endpoint at `/api/cron/data-deletion` | Prompt 2 Privacy & Retention rules | Decided |
+| D-033 | 2026-11-06 | **Site graph & validation:** `content/_plan/site-graph.json` generated from frontmatter and `keyword-map.csv`. Build validates required links, 3-click depth, and sitemap consistency via `validate:graph` | Prompt 2 SEO & Linking rules | Decided |
 
 ## Open questions for the owner
 
-1. Fill the placeholders: site name, domain, clinical reviewer name and credentials, email provider, legal entity and contact email (D-005).
-2. Who is the clinical reviewer, and when can they start? Nothing medical goes live without them (D-014).
+1. Fill the placeholders: site name, domain, email provider, legal entity and contact email (D-005).
+2. Clinical reviewer: optional for launch under Prompt 2 (pages display honesty notice stating content wasn't written by a doctor). Appoint when available to upgrade pages to "medically reviewed".
 3. Approve the tagline wording (D-008).
 4. Do you hold licences for the Menopause Rating Scale or the Greene scale, or should we stay with the custom log (D-012)?
 5. The JavaScript budget: accept about 174 KB on article pages for now, or invest in dropping hydration on content pages (D-017)?
-6. Confirm that `/urgent-help/` may go live before clinical review (D-016).

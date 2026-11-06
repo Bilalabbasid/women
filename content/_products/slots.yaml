@@ -1,0 +1,173 @@
+# Product placeholder system (Prompt 2)
+# Status is 'empty' until the owner adds verified affiliate products.
+# In production, empty slots show editorial how-to-choose guidance without buy links.
+
+cooling-bedding:
+  category: cooling bedding
+  reader_need: staying more comfortable during night sweats
+  allowed_clusters: [symptoms, perimenopause, menopause]
+  claim_limit: comfort only, never a treatment for hot flashes
+  choose_by: [fabric (bamboo, eucalyptus, linen or percale cotton), breathability, moisture-wicking weave, washability, return policy]
+  disclosure: required
+  status: empty
+  products: []
+
+moisture-wicking-sleepwear:
+  category: sleepwear
+  reader_need: managing overnight temperature spikes and perspiration
+  allowed_clusters: [symptoms, perimenopause, menopause]
+  claim_limit: overnight comfort only, does not stop vasomotor symptoms
+  choose_by: [breathable moisture-wicking fabric, tagless seams, loose non-constricting fit, ease of quick washing]
+  disclosure: required
+  status: empty
+  products: []
+
+bedside-cooling-fans:
+  category: fans
+  reader_need: immediate personal airflow during night sweats and hot flashes
+  allowed_clusters: [symptoms, perimenopause]
+  claim_limit: immediate surface cooling only
+  choose_by: [quiet operation (under 35 dB for sleep), remote control, directional oscillation, low power consumption]
+  disclosure: required
+  status: empty
+  products: []
+
+cbt-sleep-programme:
+  category: CBT and sleep programmes
+  reader_need: non-hormonal cognitive behavioural techniques for insomnia and vasomotor distress
+  allowed_clusters: [symptoms, treatments, perimenopause]
+  claim_limit: behavioural tool for sleep and distress management, not a cure for night sweats
+  choose_by: [CBT-I based curriculum, menopause-specific clinical trial backing, weekly pacing, certified coaching support]
+  disclosure: required
+  status: empty
+  products: []
+
+telehealth-consultation:
+  category: telehealth
+  reader_need: connecting with a certified menopause specialist when local care is delayed
+  allowed_clusters: [care, compare, treatments]
+  claim_limit: medical access facilitator, does not guarantee specific prescriptions
+  choose_by: [accreditation by Menopause Society (BMS/NAMS), clear transparent pricing, insurance or HSA/FSA eligibility, medication delivery options]
+  disclosure: required
+  status: empty
+  products: []
+
+vaginal-moisturizer:
+  category: vaginal moisturisers
+  reader_need: regular hydration for vaginal dryness and tissue discomfort (GSM)
+  allowed_clusters: [symptoms, treatments]
+  claim_limit: topical tissue comfort, not a systemic hormone replacement
+  choose_by: [pH-balanced (3.8-4.5), low osmolality (<380 mOsm/kg), paraben-free, applicator vs finger application]
+  disclosure: required
+  status: empty
+  products: []
+
+water-silicone-lubricant:
+  category: lubricants
+  reader_need: reducing friction and pain during sexual activity
+  allowed_clusters: [symptoms, treatments]
+  claim_limit: situational friction relief, does not treat underlying tissue atrophy
+  choose_by: [iso-osmotic formula, free of glycerine and artificial fragrances, compatibility with condoms or pelvic toys, longevity]
+  disclosure: required
+  status: empty
+  products: []
+
+leak-proof-underwear:
+  category: leak and period underwear
+  reader_need: everyday protection against unpredictable perimenopause bleeding and mild urinary leaks
+  allowed_clusters: [symptoms, perimenopause]
+  claim_limit: garment protection only, does not address pelvic floor weakness or abnormal bleeding causes
+  choose_by: [absorbency level (light/medium/heavy), breathable gusset, odour-resistant lining, machine wash durability]
+  disclosure: required
+  status: empty
+  products: []
+
+incontinence-products:
+  category: incontinence products
+  reader_need: discreet daytime or nighttime protection for urge or stress urinary incontinence
+  allowed_clusters: [symptoms]
+  claim_limit: hygiene protection only, not a treatment for pelvic floor disorders
+  choose_by: [rapid-absorbing core, skin-friendly hypoallergenic top sheet, odour neutralization, anatomical contouring]
+  disclosure: required
+  status: empty
+  products: []
+
+pelvic-floor-trainer:
+  category: pelvic floor devices
+  reader_need: guided biofeedback for strengthening pelvic floor muscles at home
+  allowed_clusters: [symptoms, treatments, tools]
+  claim_limit: home exercise aid, requires consistent long-term use and cannot replace physical therapy evaluation
+  choose_by: [biofeedback accuracy, app connectivity, medical-grade silicone, simple hygienic cleaning]
+  disclosure: required
+  status: empty
+  products: []
+
+home-strength-equipment:
+  category: strength and mobility equipment
+  reader_need: maintaining muscle mass, joint stability, and bone mineral density
+  allowed_clusters: [symptoms, postmenopause]
+  claim_limit: exercise tool, benefits depend on progressive resistance training over time
+  choose_by: [adjustable dumbbells or bands, non-slip grip, compact storage, progression range]
+  disclosure: required
+  status: empty
+  products: []
+
+supportive-walking-shoes:
+  category: shoes
+  reader_need: joint protection and shock absorption during everyday movement and walking
+  allowed_clusters: [symptoms, postmenopause]
+  claim_limit: biomechanical foot support and comfort, does not treat underlying osteoarthritis
+  choose_by: [cushioned midsole, firm heel counter, anatomical arch support, wide toe box]
+  disclosure: required
+  status: empty
+  products: []
+
+printed-symptom-journal:
+  category: symptom journals
+  reader_need: structured paper tracking of daily symptoms, sleep, and triggers for doctor visits
+  allowed_clusters: [tools, perimenopause]
+  claim_limit: organizational record-keeping tool only
+  choose_by: [daily symptom grid, trigger logging space, appointment question summary, lay-flat binding]
+  disclosure: required
+  status: empty
+  products: []
+
+menopause-guidebook:
+  category: books
+  reader_need: comprehensive, evidence-based reading on menopause physiology and options
+  allowed_clusters: [perimenopause, menopause, evidence]
+  claim_limit: educational background reading, not personalized medical advice
+  choose_by: [authored by accredited menopause specialist or medical journalist, recent publication date reflecting latest guidelines, peer-reviewed citations]
+  disclosure: required
+  status: empty
+  products: []
+
+sleep-mask-white-noise:
+  category: sleep comfort
+  reader_need: sensory control to assist falling asleep and minimising wakefulness
+  allowed_clusters: [symptoms, sleep]
+  claim_limit: environmental sleep aid only, does not stop hormonal nighttime awakenings
+  choose_by: [zero eye-pressure contoured mask, sound machine with non-looping pink/white noise, travel portability]
+  disclosure: required
+  status: empty
+  products: []
+
+bone-health-nutrition:
+  category: evidence-limited nutrition
+  reader_need: dietary calcium and vitamin D optimization for bone density support
+  allowed_clusters: [postmenopause, evidence]
+  claim_limit: dietary supplement to meet recommended daily allowances, does not reverse established osteoporosis
+  choose_by: [third-party tested (USP/NSF), calcium citrate vs carbonate for absorption, combined with vitamin D3, within daily upper safety limits]
+  disclosure: required
+  status: empty
+  products: []
+
+magnesium-supplement:
+  category: supplements
+  reader_need: relaxation and sleep quality support
+  allowed_clusters: [symptoms, does-it-work]
+  claim_limit: some women report modest sleep benefit; evidence is limited and does not replace insomnia therapy
+  choose_by: [magnesium glycinate or citrate for bioavailability, elemental magnesium dose, third-party purity certification]
+  disclosure: required
+  status: empty
+  products: []

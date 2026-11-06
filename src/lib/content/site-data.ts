@@ -69,7 +69,8 @@ export function breadcrumbsFor(page: ContentPage): Array<Crumb & { linked: boole
   for (let i = 1; i < segs.length; i++) {
     const path = `/${segs.slice(0, i).join('/')}/`;
     const parent = byUrl.get(path);
-    crumbs.push({ name: parent?.fm.title ?? CLUSTER_LABELS[segs[i - 1]] ?? segs[i - 1], path, linked: Boolean(parent) });
+    // Code routes such as /tools/ are real pages too, so they are linked.
+    crumbs.push({ name: parent?.fm.title ?? CLUSTER_LABELS[segs[i - 1]] ?? segs[i - 1], path, linked: Boolean(parent) || isStaticTarget(path) });
   }
   crumbs.push({ name: page.fm.title, path: page.url, linked: false });
   return crumbs;

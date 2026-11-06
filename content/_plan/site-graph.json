@@ -1,0 +1,1341 @@
+{
+  "generated_at": "2026-11-06T01:42:29.542Z",
+  "total_pages": 21,
+  "nodes": {
+    "/about/how-we-make-money/": {
+      "url": "/about/how-we-make-money/",
+      "title": "How we make money",
+      "status": "published",
+      "primary_keyword": "how we make money",
+      "intent": "navigational",
+      "cluster": "site",
+      "hub": null,
+      "parent": "/about/",
+      "symptom_tags": [],
+      "page_type": "about",
+      "stage_tags": [
+        "all"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [],
+      "related": [
+        "/privacy/",
+        "/evidence/how-we-grade/",
+        "/medical-disclaimer/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/about/how-we-make-money/",
+      "redirect_from": [],
+      "outgoing_links": [],
+      "incoming_links": [
+        {
+          "url": "/about/",
+          "anchor": "how we make money"
+        },
+        {
+          "url": "/evidence/",
+          "anchor": "How we make money"
+        },
+        {
+          "url": "/",
+          "anchor": "Home navigation"
+        }
+      ],
+      "click_depth": 1
+    },
+    "/about/": {
+      "url": "/about/",
+      "title": "About us",
+      "status": "published",
+      "primary_keyword": "about",
+      "intent": "navigational",
+      "cluster": "site",
+      "hub": null,
+      "parent": "/",
+      "symptom_tags": [],
+      "page_type": "about",
+      "stage_tags": [
+        "all"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [],
+      "related": [
+        "/about/how-we-make-money/",
+        "/evidence/how-we-grade/",
+        "/privacy/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/about/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/about/how-we-make-money/",
+          "anchor": "how we make money",
+          "contextual": true
+        },
+        {
+          "url": "/evidence/how-we-grade/",
+          "anchor": "methodology for grading evidence",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/",
+          "anchor": "Home navigation"
+        }
+      ],
+      "click_depth": 1
+    },
+    "/cookies/": {
+      "url": "/cookies/",
+      "title": "Cookie policy",
+      "status": "published",
+      "primary_keyword": "cookie policy",
+      "intent": "navigational",
+      "cluster": "site",
+      "hub": null,
+      "parent": "/",
+      "symptom_tags": [],
+      "page_type": "legal",
+      "stage_tags": [
+        "all"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [],
+      "related": [
+        "/privacy/",
+        "/terms/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/cookies/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "Symptom tracker and doctor report",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/",
+          "anchor": "Home navigation"
+        }
+      ],
+      "click_depth": 1
+    },
+    "/does-it-work/": {
+      "url": "/does-it-work/",
+      "title": "Does it work? Menopause treatments tested against evidence",
+      "status": "published",
+      "primary_keyword": "do menopause supplements work",
+      "intent": "informational",
+      "cluster": "does-it-work",
+      "hub": null,
+      "parent": "/",
+      "symptom_tags": [
+        "hot-flashes",
+        "night-sweats",
+        "insomnia",
+        "joint-pain"
+      ],
+      "page_type": "hub",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/does-it-work/magnesium/"
+      ],
+      "related": [
+        "/does-it-work/magnesium/",
+        "/treatments/",
+        "/symptoms/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/does-it-work/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/does-it-work/magnesium/",
+          "anchor": "Does magnesium help menopause symptoms?",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/does-it-work/magnesium/",
+          "anchor": "Does It Work? evidence directory"
+        },
+        {
+          "url": "/treatments/",
+          "anchor": "Does It Work? evidence directory"
+        },
+        {
+          "url": "/",
+          "anchor": "Home navigation"
+        }
+      ],
+      "click_depth": 1
+    },
+    "/does-it-work/magnesium/": {
+      "url": "/does-it-work/magnesium/",
+      "title": "Does magnesium help menopause sleep and symptoms?",
+      "status": "published",
+      "primary_keyword": "magnesium menopause",
+      "intent": "informational",
+      "cluster": "does-it-work",
+      "hub": "/does-it-work/",
+      "parent": "/does-it-work/",
+      "symptom_tags": [
+        "insomnia",
+        "anxiety",
+        "joint-pain"
+      ],
+      "page_type": "does_it_work",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/does-it-work/"
+      ],
+      "related": [
+        "/does-it-work/",
+        "/symptoms/night-sweats/",
+        "/symptoms/hot-flashes/",
+        "/treatments/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/does-it-work/magnesium/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/does-it-work/",
+          "anchor": "Does It Work? evidence directory",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/night-sweats/",
+          "anchor": "night sweats and waking at 3 a.m.",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/",
+          "anchor": "menopause treatment options",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "Symptom tracker",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/does-it-work/",
+          "anchor": "Does magnesium help menopause symptoms?"
+        },
+        {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "magnesium for sleep and muscle tension"
+        },
+        {
+          "url": "/perimenopause/questions-for-your-doctor/",
+          "anchor": "magnesium for sleep"
+        },
+        {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "magnesium for relaxation"
+        },
+        {
+          "url": "/symptoms/",
+          "anchor": "magnesium improves sleep"
+        },
+        {
+          "url": "/symptoms/night-sweats/",
+          "anchor": "magnesium helps menopause sleep"
+        }
+      ],
+      "click_depth": 2
+    },
+    "/evidence/how-we-grade/": {
+      "url": "/evidence/how-we-grade/",
+      "title": "How we grade evidence",
+      "status": "published",
+      "primary_keyword": "how we grade evidence",
+      "intent": "navigational",
+      "cluster": "evidence",
+      "hub": null,
+      "parent": "/evidence/",
+      "symptom_tags": [],
+      "page_type": "evidence",
+      "stage_tags": [
+        "all"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [],
+      "related": [
+        "/about/how-we-make-money/",
+        "/evidence/updates/",
+        "/medical-disclaimer/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/evidence/how-we-grade/",
+      "redirect_from": [],
+      "outgoing_links": [],
+      "incoming_links": [
+        {
+          "url": "/about/",
+          "anchor": "methodology for grading evidence"
+        },
+        {
+          "url": "/evidence/",
+          "anchor": "How we grade evidence"
+        },
+        {
+          "url": "/",
+          "anchor": "Home navigation"
+        }
+      ],
+      "click_depth": 1
+    },
+    "/evidence/": {
+      "url": "/evidence/",
+      "title": "How we check the evidence",
+      "status": "published",
+      "primary_keyword": "menopause evidence checker",
+      "intent": "navigational",
+      "cluster": "evidence",
+      "hub": null,
+      "parent": "/",
+      "symptom_tags": [],
+      "page_type": "evidence",
+      "stage_tags": [
+        "all"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [],
+      "related": [
+        "/evidence/how-we-grade/",
+        "/evidence/updates/",
+        "/about/how-we-make-money/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/evidence/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/evidence/how-we-grade/",
+          "anchor": "How we grade evidence",
+          "contextual": true
+        },
+        {
+          "url": "/evidence/updates/",
+          "anchor": "What's changed: updates log",
+          "contextual": true
+        },
+        {
+          "url": "/about/how-we-make-money/",
+          "anchor": "How we make money",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/",
+          "anchor": "Home navigation"
+        }
+      ],
+      "click_depth": 1
+    },
+    "/evidence/updates/": {
+      "url": "/evidence/updates/",
+      "title": "What's changed: evidence updates and corrections log",
+      "status": "published",
+      "primary_keyword": "corrections and updates",
+      "intent": "navigational",
+      "cluster": "evidence",
+      "hub": null,
+      "parent": "/evidence/",
+      "symptom_tags": [],
+      "page_type": "evidence",
+      "stage_tags": [
+        "all"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [],
+      "related": [
+        "/evidence/how-we-grade/",
+        "/treatments/hormone-therapy/boxed-warning/",
+        "/about/how-we-make-money/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/evidence/updates/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/treatments/hormone-therapy/boxed-warning/",
+          "anchor": "The FDA HRT boxed warning change, explained",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/",
+          "anchor": "Menopause treatment options",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "Hot flashes in perimenopause",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "Hot flashes",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/night-sweats/",
+          "anchor": "Night sweats",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/evidence/",
+          "anchor": "What's changed: updates log"
+        },
+        {
+          "url": "/",
+          "anchor": "Home navigation"
+        }
+      ],
+      "click_depth": 1
+    },
+    "/medical-disclaimer/": {
+      "url": "/medical-disclaimer/",
+      "title": "Medical disclaimer",
+      "status": "published",
+      "primary_keyword": "medical disclaimer",
+      "intent": "navigational",
+      "cluster": "site",
+      "hub": null,
+      "parent": "/",
+      "symptom_tags": [],
+      "page_type": "legal",
+      "stage_tags": [
+        "all"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [],
+      "related": [
+        "/privacy/",
+        "/terms/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/medical-disclaimer/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/urgent-help/",
+          "anchor": "urgent help and crisis lines",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/terms/",
+          "anchor": "medical disclaimer"
+        },
+        {
+          "url": "/",
+          "anchor": "Home navigation"
+        }
+      ],
+      "click_depth": 1
+    },
+    "/perimenopause/early-signs/": {
+      "url": "/perimenopause/early-signs/",
+      "title": "Early signs of perimenopause: what to expect in your 40s",
+      "status": "published",
+      "primary_keyword": "early signs of perimenopause",
+      "intent": "informational",
+      "cluster": "perimenopause",
+      "hub": "/perimenopause/",
+      "parent": "/perimenopause/",
+      "symptom_tags": [
+        "irregular-periods",
+        "hot-flashes",
+        "insomnia",
+        "brain-fog",
+        "anxiety"
+      ],
+      "page_type": "guide",
+      "stage_tags": [
+        "perimenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/perimenopause/"
+      ],
+      "related": [
+        "/perimenopause/",
+        "/perimenopause/questions-for-your-doctor/",
+        "/symptoms/",
+        "/tools/symptoms-checklist/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/perimenopause/early-signs/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/perimenopause/",
+          "anchor": "perimenopause guide",
+          "contextual": true
+        },
+        {
+          "url": "/does-it-work/magnesium/",
+          "anchor": "magnesium for sleep and muscle tension",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptoms-checklist/",
+          "anchor": "Perimenopause symptoms checklist",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "Symptom tracker and doctor report",
+          "contextual": true
+        },
+        {
+          "url": "/perimenopause/questions-for-your-doctor/",
+          "anchor": "What to ask your doctor about perimenopause",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/perimenopause/",
+          "anchor": "Early signs of perimenopause guide"
+        },
+        {
+          "url": "/tools/symptoms-checklist/",
+          "anchor": "early signs of perimenopause"
+        }
+      ],
+      "click_depth": 2
+    },
+    "/perimenopause/": {
+      "url": "/perimenopause/",
+      "title": "Perimenopause: stages, symptoms and evidence-graded options",
+      "status": "published",
+      "primary_keyword": "what is perimenopause",
+      "intent": "informational",
+      "cluster": "perimenopause",
+      "hub": null,
+      "parent": "/",
+      "symptom_tags": [
+        "irregular-periods",
+        "hot-flashes",
+        "night-sweats",
+        "insomnia",
+        "brain-fog"
+      ],
+      "page_type": "hub",
+      "stage_tags": [
+        "perimenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/perimenopause/early-signs/",
+        "/perimenopause/questions-for-your-doctor/"
+      ],
+      "related": [
+        "/perimenopause/early-signs/",
+        "/perimenopause/questions-for-your-doctor/",
+        "/symptoms/",
+        "/tools/symptoms-checklist/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/perimenopause/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "Early signs of perimenopause guide",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptoms-checklist/",
+          "anchor": "Perimenopause symptoms checklist",
+          "contextual": true
+        },
+        {
+          "url": "/perimenopause/questions-for-your-doctor/",
+          "anchor": "What to ask your doctor about perimenopause",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "Symptom tracker and doctor report",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "perimenopause guide"
+        },
+        {
+          "url": "/perimenopause/questions-for-your-doctor/",
+          "anchor": "perimenopause transition"
+        },
+        {
+          "url": "/",
+          "anchor": "Home navigation"
+        }
+      ],
+      "click_depth": 1
+    },
+    "/perimenopause/questions-for-your-doctor/": {
+      "url": "/perimenopause/questions-for-your-doctor/",
+      "title": "What to ask your doctor about perimenopause",
+      "status": "published",
+      "primary_keyword": "questions to ask doctor about perimenopause",
+      "intent": "informational",
+      "cluster": "perimenopause",
+      "hub": "/perimenopause/",
+      "parent": "/perimenopause/",
+      "symptom_tags": [
+        "irregular-periods",
+        "hot-flashes",
+        "night-sweats",
+        "insomnia",
+        "brain-fog"
+      ],
+      "page_type": "guide",
+      "stage_tags": [
+        "perimenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/perimenopause/"
+      ],
+      "related": [
+        "/perimenopause/",
+        "/perimenopause/early-signs/",
+        "/tools/symptoms-checklist/",
+        "/tools/symptom-tracker/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/perimenopause/questions-for-your-doctor/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/perimenopause/",
+          "anchor": "perimenopause transition",
+          "contextual": true
+        },
+        {
+          "url": "/does-it-work/magnesium/",
+          "anchor": "magnesium for sleep",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "Symptom tracker and doctor report",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptoms-checklist/",
+          "anchor": "Perimenopause symptoms checklist",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "What to ask your doctor about perimenopause"
+        },
+        {
+          "url": "/perimenopause/",
+          "anchor": "What to ask your doctor about perimenopause"
+        }
+      ],
+      "click_depth": 2
+    },
+    "/privacy/": {
+      "url": "/privacy/",
+      "title": "Privacy notice and health data retention policy",
+      "status": "published",
+      "primary_keyword": "privacy policy",
+      "intent": "navigational",
+      "cluster": "site",
+      "hub": null,
+      "parent": "/",
+      "symptom_tags": [],
+      "page_type": "legal",
+      "stage_tags": [
+        "all"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [],
+      "related": [
+        "/cookies/",
+        "/terms/",
+        "/medical-disclaimer/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/privacy/",
+      "redirect_from": [],
+      "outgoing_links": [],
+      "incoming_links": [
+        {
+          "url": "/",
+          "anchor": "Home navigation"
+        }
+      ],
+      "click_depth": 1
+    },
+    "/symptoms/hot-flashes/": {
+      "url": "/symptoms/hot-flashes/",
+      "title": "Hot flashes in perimenopause: why they happen and what helps",
+      "status": "published",
+      "primary_keyword": "menopause hot flashes",
+      "intent": "informational",
+      "cluster": "symptoms",
+      "hub": "/symptoms/",
+      "parent": "/symptoms/",
+      "symptom_tags": [
+        "hot-flashes",
+        "night-sweats",
+        "anxiety"
+      ],
+      "page_type": "symptom",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/symptoms/"
+      ],
+      "related": [
+        "/symptoms/night-sweats/",
+        "/treatments/hormone-therapy/boxed-warning/",
+        "/tools/symptoms-checklist/",
+        "/tools/symptom-tracker/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/symptoms/hot-flashes/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/symptoms/",
+          "anchor": "symptoms list",
+          "contextual": true
+        },
+        {
+          "url": "/does-it-work/magnesium/",
+          "anchor": "magnesium for relaxation",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptoms-checklist/",
+          "anchor": "Perimenopause symptoms checklist",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "Symptom tracker and doctor report",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/evidence/updates/",
+          "anchor": "Hot flashes in perimenopause"
+        },
+        {
+          "url": "/evidence/updates/",
+          "anchor": "Hot flashes"
+        },
+        {
+          "url": "/symptoms/",
+          "anchor": "Hot flashes (vasomotor symptoms)"
+        }
+      ],
+      "click_depth": 2
+    },
+    "/symptoms/": {
+      "url": "/symptoms/",
+      "title": "Perimenopause and menopause symptoms",
+      "status": "published",
+      "primary_keyword": "menopause symptoms list",
+      "intent": "informational",
+      "cluster": "symptoms",
+      "hub": null,
+      "parent": "/",
+      "symptom_tags": [
+        "hot-flashes",
+        "night-sweats",
+        "irregular-periods",
+        "insomnia",
+        "brain-fog",
+        "joint-pain",
+        "vaginal-dryness"
+      ],
+      "page_type": "hub",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/symptoms/hot-flashes/",
+        "/symptoms/night-sweats/"
+      ],
+      "related": [
+        "/tools/symptoms-checklist/",
+        "/tools/symptom-tracker/",
+        "/perimenopause/",
+        "/treatments/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/symptoms/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "Hot flashes (vasomotor symptoms)",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/night-sweats/",
+          "anchor": "Night sweats and nocturnal awakenings",
+          "contextual": true
+        },
+        {
+          "url": "/does-it-work/magnesium/",
+          "anchor": "magnesium improves sleep",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptoms-checklist/",
+          "anchor": "Perimenopause symptoms checklist",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "Symptom tracker and doctor report",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "symptoms list"
+        },
+        {
+          "url": "/symptoms/night-sweats/",
+          "anchor": "menopause symptoms overview"
+        },
+        {
+          "url": "/tools/symptoms-checklist/",
+          "anchor": "all symptoms"
+        },
+        {
+          "url": "/",
+          "anchor": "Home navigation"
+        }
+      ],
+      "click_depth": 1
+    },
+    "/symptoms/night-sweats/": {
+      "url": "/symptoms/night-sweats/",
+      "title": "Night sweats in perimenopause: why they happen and what helps",
+      "status": "published",
+      "primary_keyword": "menopause night sweats",
+      "intent": "informational",
+      "cluster": "symptoms",
+      "hub": "/symptoms/",
+      "parent": "/symptoms/",
+      "symptom_tags": [
+        "night-sweats",
+        "hot-flashes",
+        "insomnia"
+      ],
+      "page_type": "symptom",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/symptoms/"
+      ],
+      "related": [
+        "/symptoms/hot-flashes/",
+        "/tools/symptom-tracker/",
+        "/tools/symptoms-checklist/",
+        "/treatments/hormone-therapy/boxed-warning/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/symptoms/night-sweats/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/symptoms/",
+          "anchor": "menopause symptoms overview",
+          "contextual": true
+        },
+        {
+          "url": "/does-it-work/magnesium/",
+          "anchor": "magnesium helps menopause sleep",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "Two-week symptom tracker and doctor report",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/does-it-work/magnesium/",
+          "anchor": "night sweats and waking at 3 a.m."
+        },
+        {
+          "url": "/evidence/updates/",
+          "anchor": "Night sweats"
+        },
+        {
+          "url": "/symptoms/",
+          "anchor": "Night sweats and nocturnal awakenings"
+        }
+      ],
+      "click_depth": 2
+    },
+    "/terms/": {
+      "url": "/terms/",
+      "title": "Terms of use",
+      "status": "published",
+      "primary_keyword": "terms of use",
+      "intent": "navigational",
+      "cluster": "site",
+      "hub": null,
+      "parent": "/",
+      "symptom_tags": [],
+      "page_type": "legal",
+      "stage_tags": [
+        "all"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [],
+      "related": [
+        "/privacy/",
+        "/medical-disclaimer/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/terms/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/medical-disclaimer/",
+          "anchor": "medical disclaimer",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/",
+          "anchor": "Home navigation"
+        }
+      ],
+      "click_depth": 1
+    },
+    "/tools/symptom-tracker/": {
+      "url": "/tools/symptom-tracker/",
+      "title": "Symptom tracker and doctor report",
+      "status": "draft",
+      "primary_keyword": "menopause symptom tracker",
+      "intent": "transactional",
+      "cluster": "tools",
+      "hub": "/tools/",
+      "parent": "/tools/",
+      "symptom_tags": [
+        "hot-flashes",
+        "night-sweats",
+        "insomnia",
+        "irregular-periods",
+        "low-mood",
+        "joint-pain"
+      ],
+      "page_type": "tool",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/tools/"
+      ],
+      "related": [
+        "/tools/symptoms-checklist/",
+        "/perimenopause/questions-for-your-doctor/",
+        "/symptoms/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/tools/symptom-tracker/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/app/today/",
+          "anchor": "Open the tracker",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptoms-checklist/",
+          "anchor": "symptoms checklist",
+          "contextual": true
+        },
+        {
+          "url": "/urgent-help/",
+          "anchor": "urgent help page",
+          "contextual": false
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/cookies/",
+          "anchor": "Symptom tracker and doctor report"
+        },
+        {
+          "url": "/does-it-work/magnesium/",
+          "anchor": "Symptom tracker"
+        },
+        {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "Symptom tracker and doctor report"
+        },
+        {
+          "url": "/perimenopause/",
+          "anchor": "Symptom tracker and doctor report"
+        },
+        {
+          "url": "/perimenopause/questions-for-your-doctor/",
+          "anchor": "Symptom tracker and doctor report"
+        },
+        {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "Symptom tracker and doctor report"
+        },
+        {
+          "url": "/symptoms/",
+          "anchor": "Symptom tracker and doctor report"
+        },
+        {
+          "url": "/symptoms/night-sweats/",
+          "anchor": "Two-week symptom tracker and doctor report"
+        },
+        {
+          "url": "/tools/symptoms-checklist/",
+          "anchor": "symptom tracker and doctor report"
+        },
+        {
+          "url": "/treatments/hormone-therapy/boxed-warning/",
+          "anchor": "symptom diary and report"
+        }
+      ],
+      "click_depth": 2
+    },
+    "/tools/symptoms-checklist/": {
+      "url": "/tools/symptoms-checklist/",
+      "title": "Perimenopause symptoms checklist",
+      "status": "draft",
+      "primary_keyword": "perimenopause symptoms checklist",
+      "intent": "transactional",
+      "cluster": "tools",
+      "hub": "/tools/",
+      "parent": "/tools/",
+      "symptom_tags": [
+        "hot-flashes",
+        "night-sweats",
+        "irregular-periods",
+        "insomnia",
+        "anxiety",
+        "low-mood",
+        "brain-fog",
+        "joint-pain",
+        "vaginal-dryness",
+        "palpitations"
+      ],
+      "page_type": "tool",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/tools/"
+      ],
+      "related": [
+        "/tools/symptom-tracker/",
+        "/perimenopause/early-signs/",
+        "/symptoms/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/tools/symptoms-checklist/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/groups/premature-ovarian-insufficiency/",
+          "anchor": "premature ovarian insufficiency",
+          "contextual": true
+        },
+        {
+          "url": "/urgent-help/",
+          "anchor": "urgent help page",
+          "contextual": false
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "symptom tracker and doctor report",
+          "contextual": true
+        },
+        {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "early signs of perimenopause",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/",
+          "anchor": "all symptoms",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "Perimenopause symptoms checklist"
+        },
+        {
+          "url": "/perimenopause/",
+          "anchor": "Perimenopause symptoms checklist"
+        },
+        {
+          "url": "/perimenopause/questions-for-your-doctor/",
+          "anchor": "Perimenopause symptoms checklist"
+        },
+        {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "Perimenopause symptoms checklist"
+        },
+        {
+          "url": "/symptoms/",
+          "anchor": "Perimenopause symptoms checklist"
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "symptoms checklist"
+        }
+      ],
+      "click_depth": 2
+    },
+    "/treatments/hormone-therapy/boxed-warning/": {
+      "url": "/treatments/hormone-therapy/boxed-warning/",
+      "title": "The FDA HRT boxed warning change, explained",
+      "status": "published",
+      "primary_keyword": "hrt black box warning removed",
+      "intent": "informational",
+      "cluster": "treatments",
+      "hub": "/treatments/",
+      "parent": "/treatments/hormone-therapy/",
+      "symptom_tags": [
+        "hot-flashes",
+        "night-sweats"
+      ],
+      "page_type": "treatment",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/treatments/"
+      ],
+      "related": [
+        "/treatments/",
+        "/symptoms/hot-flashes/",
+        "/symptoms/night-sweats/",
+        "/perimenopause/questions-for-your-doctor/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/treatments/hormone-therapy/boxed-warning/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/treatments/",
+          "anchor": "menopause treatment options",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "symptom diary and report",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/evidence/updates/",
+          "anchor": "The FDA HRT boxed warning change, explained"
+        },
+        {
+          "url": "/treatments/",
+          "anchor": "The FDA HRT boxed warning change, explained"
+        }
+      ],
+      "click_depth": 2
+    },
+    "/treatments/": {
+      "url": "/treatments/",
+      "title": "Menopause treatments: evidence-graded options",
+      "status": "published",
+      "primary_keyword": "menopause treatment options",
+      "intent": "informational",
+      "cluster": "treatments",
+      "hub": null,
+      "parent": "/",
+      "symptom_tags": [
+        "hot-flashes",
+        "night-sweats",
+        "insomnia",
+        "vaginal-dryness"
+      ],
+      "page_type": "hub",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [
+        "/treatments/hormone-therapy/boxed-warning/"
+      ],
+      "related": [
+        "/treatments/hormone-therapy/boxed-warning/",
+        "/symptoms/",
+        "/does-it-work/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/treatments/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/treatments/hormone-therapy/boxed-warning/",
+          "anchor": "The FDA HRT boxed warning change, explained",
+          "contextual": true
+        },
+        {
+          "url": "/does-it-work/",
+          "anchor": "Does It Work? evidence directory",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/does-it-work/magnesium/",
+          "anchor": "menopause treatment options"
+        },
+        {
+          "url": "/evidence/updates/",
+          "anchor": "Menopause treatment options"
+        },
+        {
+          "url": "/treatments/hormone-therapy/boxed-warning/",
+          "anchor": "menopause treatment options"
+        },
+        {
+          "url": "/",
+          "anchor": "Home navigation"
+        }
+      ],
+      "click_depth": 1
+    }
+  }
+}

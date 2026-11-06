@@ -23,11 +23,14 @@ describe('ExportService Archive Generator', () => {
 
     const archive = await ExportService.generateFullExport();
 
-    expect(archive.formatVersion).toBe(1);
+    expect(archive.formatVersion).toBe(2);
+    expect(archive.format).toBe('menoverdict-backup');
     expect(archive.app).toBe('MenoVerdict');
     expect(archive.exportedAt).toBeDefined();
+    expect(archive.schemaVersion).toBeGreaterThanOrEqual(2);
     expect(archive.data.checkins.length).toBe(1);
     expect(archive.data.symptoms.length).toBe(1);
-    expect(archive.privacyNotice).toContain('personal health journal');
+    expect(archive.data.toolRecords).toEqual([]);
+    expect(archive.privacyNotice).toContain('health records');
   });
 });

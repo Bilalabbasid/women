@@ -61,7 +61,8 @@ export interface LocalCycleEntry {
   id: string;
   startDate: string; // YYYY-MM-DD
   endDate?: string;
-  flow: FlowLevel;
+  /** Unknown when she only logged that a period started (e.g. from the 12-month counter). */
+  flow?: FlowLevel;
   notes?: string;
   createdAt: number;
 }
@@ -125,5 +126,33 @@ export interface LocalAppointment {
 export interface LocalSettingItem {
   key: string;
   value: unknown;
+  updatedAt: number;
+}
+
+/** The public /tools/ pages that keep their own saved data on the device. */
+export const TOOL_KEYS = [
+  'symptoms-checklist',
+  'stage-guide',
+  'does-it-work-checker',
+  'treatment-questions',
+  '12-month-counter',
+] as const;
+export type ToolKey = (typeof TOOL_KEYS)[number];
+
+/**
+ * One saved item from a public tool.
+ *  - kind 'draft': the tool's current, autosaved answers. One per tool, id `draft:<tool>`.
+ *  - kind 'entry': a dated copy she chose to keep (her history for that tool).
+ * `data` is the tool's own state shape; each tool normalises it on read.
+ */
+export interface LocalToolRecord {
+  id: string;
+  tool: ToolKey;
+  kind: 'draft' | 'entry';
+  /** YYYY-MM-DD the entry is about (for a draft: the day it was last edited). */
+  date: string;
+  label?: string;
+  data: unknown;
+  createdAt: number;
   updatedAt: number;
 }

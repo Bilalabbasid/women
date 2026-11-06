@@ -241,6 +241,7 @@ export const LocalDataService = {
         db.treatmentEvents,
         db.appointments,
         db.settings,
+        db.toolRecords,
       ],
       async () => {
         await Promise.all([
@@ -253,6 +254,7 @@ export const LocalDataService = {
           db.treatmentEvents.clear(),
           db.appointments.clear(),
           db.settings.clear(),
+          db.toolRecords.clear(),
         ]);
       }
     );

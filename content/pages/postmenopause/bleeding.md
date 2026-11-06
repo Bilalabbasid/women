@@ -1,6 +1,6 @@
 ---
 title: Bleeding after menopause
-seo_title: "Bleeding or spotting after menopause: when to get checked"
+seo_title: "Bleeding After Menopause: When to Worry"
 meta_description: "Why any vaginal bleeding or spotting 12 months or more after your last period should be checked by a doctor, common non-cancer causes, and what to ask."
 cluster: postmenopause
 primary_keyword: postmenopausal bleeding

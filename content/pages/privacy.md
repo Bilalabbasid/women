@@ -1,7 +1,7 @@
 ---
 title: "Privacy notice and health data retention policy"
 seo_title: Privacy policy and health data retention notice
-meta_description: "Our privacy commitments: on-device health data by default, UK GDPR Article 9 special category consent, US consumer health privacy, and strict retention schedules."
+meta_description: "Our privacy commitments: on-device health data by default, UK GDPR special-category consent, and strict data retention schedules."
 cluster: site
 primary_keyword: privacy policy
 slug: privacy

@@ -1,6 +1,6 @@
 ---
 title: Does black cohosh work for hot flashes?
-seo_title: "Black cohosh for menopause hot flashes: trial evidence"
+seo_title: "Black Cohosh for Hot Flashes: Evidence"
 meta_description: "Why The Menopause Society (2023) does not recommend black cohosh for hot flashes (Levels I–II), what randomized trials show, and safety considerations."
 cluster: does-it-work
 primary_keyword: black cohosh menopause

@@ -1,7 +1,7 @@
 ---
 title: "Night Sweats: How to Sleep Cooler Tonight"
-seo_title: "Night Sweats in Menopause: Why They Happen and How to Sleep Cooler"
-meta_description: "Waking drenched at 3 a.m.? Learn why night sweats occur in perimenopause, how to sleep cooler tonight with sleepwear and cooling systems, and medical relief options."
+seo_title: "Night Sweats in Menopause"
+meta_description: "Waking drenched at 3 a.m.? Why night sweats happen in perimenopause, how to sleep cooler tonight, and medical relief options."
 cluster: symptoms
 primary_keyword: menopause night sweats
 slug: night-sweats

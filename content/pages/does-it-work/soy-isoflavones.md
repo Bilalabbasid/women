@@ -1,6 +1,6 @@
 ---
 title: Do soy and isoflavones help hot flashes?
-seo_title: "Soy isoflavones for menopause hot flashes: evidence grade"
+seo_title: "Soy Isoflavones for Hot Flashes: Evidence"
 meta_description: "What The Menopause Society (2023) concludes about soy foods, soy isoflavone extracts, and S-equol for menopausal hot flashes (Level II)."
 cluster: does-it-work
 primary_keyword: soy isoflavones menopause

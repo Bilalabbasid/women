@@ -1,6 +1,6 @@
 ---
 title: Hormone therapy (HRT) for menopause
-seo_title: "Hormone therapy (HRT) for menopause: benefits & risks"
+seo_title: "Hormone Therapy (HRT) for Menopause"
 meta_description: "Evidence-graded overview of menopausal hormone therapy (HRT/MHT): benefits for hot flashes and bone loss, timing window, and 2025–2026 FDA label updates."
 cluster: treatments
 primary_keyword: hormone replacement therapy

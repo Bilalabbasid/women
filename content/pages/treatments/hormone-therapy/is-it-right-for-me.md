@@ -1,6 +1,6 @@
 ---
 title: "Who HRT may suit, and who needs specialist advice"
-seo_title: "Is HRT right for me? Who should and shouldn't take it"
+seo_title: "Is HRT Right for Me?"
 meta_description: "Who hormone therapy typically suits, who needs specialist input first, and the personal factors (health history, timing, risk) that shape the decision."
 cluster: treatments
 primary_keyword: who can take hrt

@@ -1,6 +1,6 @@
 ---
 title: Bone health after menopause
-seo_title: "Bone health after menopause: HRT & strength training"
+seo_title: "Bone Health After Menopause"
 meta_description: "Why bone mineral density drops after menopause and what clinical trials show about hormone therapy and high-intensity resistance training (LIFTMOR)."
 cluster: postmenopause
 primary_keyword: menopause bone health

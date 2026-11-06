@@ -1,6 +1,6 @@
 ---
 title: Panic attacks in perimenopause
-seo_title: "Panic attacks in perimenopause: causes & when to worry"
+seo_title: "Panic Attacks in Perimenopause"
 meta_description: "Why sudden panic attacks can start in perimenopause, how to tell them apart from a cardiac emergency, and what actually helps, graded by evidence."
 cluster: symptoms
 primary_keyword: menopause panic attacks

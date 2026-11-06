@@ -1,6 +1,6 @@
 ---
 title: Surgical menopause
-seo_title: "Surgical menopause after oophorectomy: what to expect"
+seo_title: "Surgical Menopause: What to Expect"
 meta_description: "What happens when both ovaries are removed (bilateral oophorectomy), why symptoms start abruptly, and evidence-graded hormonal and non-hormonal care."
 cluster: groups
 primary_keyword: surgical menopause

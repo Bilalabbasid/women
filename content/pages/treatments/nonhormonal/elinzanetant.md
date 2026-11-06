@@ -1,6 +1,6 @@
 ---
 title: Lynkuet (elinzanetant)
-seo_title: "Lynkuet (elinzanetant) for hot flashes: OASIS trial evidence"
+seo_title: "Lynkuet (Elinzanetant) for Hot Flashes"
 meta_description: "What the OASIS 1–3 randomized trials show about Lynkuet (elinzanetant), the dual NK1/NK3 non-hormonal hot flash treatment approved by the FDA in October 2025."
 cluster: treatments
 primary_keyword: lynkuet

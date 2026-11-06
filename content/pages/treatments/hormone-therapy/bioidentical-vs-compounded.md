@@ -1,6 +1,6 @@
 ---
 title: "Bioidentical vs compounded hormones"
-seo_title: "Bioidentical vs. compounded hormones: what ACOG says"
+seo_title: "Bioidentical vs. Compounded Hormones"
 meta_description: "Why 'bioidentical' doesn't mean 'compounded,' what ACOG's 2023 clinical consensus says about compounded hormone therapy, and the risks specific to it."
 cluster: treatments
 primary_keyword: bioidentical hormones vs compounded

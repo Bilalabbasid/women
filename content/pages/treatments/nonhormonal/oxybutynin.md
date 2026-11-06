@@ -1,6 +1,6 @@
 ---
 title: "Oxybutynin for hot flashes"
-seo_title: "Oxybutynin for hot flashes: evidence & who should avoid it"
+seo_title: "Oxybutynin for Hot Flashes"
 meta_description: "Why oxybutynin, usually an overactive-bladder medication, is also used for hot flashes, its Level I-II evidence rating, and who should be cautious."
 cluster: treatments
 primary_keyword: oxybutynin for hot flashes

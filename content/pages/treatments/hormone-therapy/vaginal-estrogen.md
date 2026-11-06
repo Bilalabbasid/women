@@ -1,6 +1,6 @@
 ---
 title: Vaginal estrogen
-seo_title: "Vaginal estrogen for dryness & UTIs: evidence & safety"
+seo_title: "Vaginal Estrogen: Evidence & Safety"
 meta_description: "How low-dose vaginal estrogen (creams, tablets, and rings) treats vaginal dryness and painful sex, and why the FDA removed its boxed warning in 2025–2026."
 cluster: treatments
 primary_keyword: vaginal estrogen

@@ -1,6 +1,6 @@
 ---
 title: "Vaginal Dryness After Menopause: What Actually Helps"
-seo_title: "Vaginal Dryness After Menopause: Causes and Proven Relief Options"
+seo_title: "Vaginal Dryness After Menopause"
 meta_description: "Why vaginal dryness happens after menopause, how moisturisers, lubricants, and prescription vaginal estrogen compare, and when to consult a doctor."
 cluster: symptoms
 primary_keyword: menopause vaginal dryness

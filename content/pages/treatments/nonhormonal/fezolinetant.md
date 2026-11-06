@@ -1,6 +1,6 @@
 ---
 title: Veozah (fezolinetant)
-seo_title: "Veozah (fezolinetant) for hot flashes: evidence & liver tests"
+seo_title: "Veozah (Fezolinetant) for Hot Flashes"
 meta_description: "How Veozah (fezolinetant) treats menopausal hot flashes without hormones, its Level I guideline rating, and its FDA boxed warning for liver blood testing."
 cluster: treatments
 primary_keyword: veozah

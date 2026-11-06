@@ -1,6 +1,6 @@
 ---
 title: Menopause anxiety
-seo_title: "Menopause & perimenopause anxiety: causes & what helps"
+seo_title: "Menopause Anxiety: Causes & What Helps"
 meta_description: "Why sudden anxiety can appear in perimenopause and menopause, how NICE NG23 and NAMS guidelines approach mood symptoms, and when to get support."
 cluster: symptoms
 primary_keyword: menopause anxiety

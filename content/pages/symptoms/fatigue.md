@@ -1,6 +1,6 @@
 ---
 title: Menopause fatigue
-seo_title: "Menopause fatigue: why you're so tired, and what helps"
+seo_title: "Menopause Fatigue: Why You're So Tired"
 meta_description: "Why exhaustion is common in perimenopause, how sleep and mood symptoms feed into it, other causes to rule out, and evidence-graded next steps."
 cluster: symptoms
 primary_keyword: menopause fatigue

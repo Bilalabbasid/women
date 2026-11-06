@@ -1,6 +1,6 @@
 ---
 title: "Early menopause"
-seo_title: "Early menopause (40-45): what it means & your options"
+seo_title: "Early Menopause (40-45): What It Means"
 meta_description: "What counts as early menopause, how common it is, how it's diagnosed, and why bone and heart health need extra attention at this age."
 cluster: groups
 primary_keyword: early menopause

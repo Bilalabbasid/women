@@ -1,6 +1,6 @@
 ---
 title: "Vaginal Moisturiser vs Lubricant: Which Do You Need?"
-seo_title: "Vaginal Moisturiser vs Lubricant: Differences, When to Use Each, and Best Options"
+seo_title: "Vaginal Moisturizer vs. Lubricant"
 meta_description: "Understand the clear difference between vaginal moisturisers and lubricants: when to use each, how often, what they cannot do, and how to choose."
 cluster: care
 primary_keyword: vaginal moisturizer for menopause

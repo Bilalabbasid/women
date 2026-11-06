@@ -1,6 +1,6 @@
 ---
 title: "Early signs of perimenopause: what to expect in your 40s"
-seo_title: Early signs of perimenopause what to expect in your 40s
+seo_title: "Early Signs of Perimenopause"
 meta_description: "Wondering why you feel exhausted, irritable, or suddenly waking at 3 a.m.? Learn the earliest signs of perimenopause and what else to check."
 cluster: perimenopause
 primary_keyword: early signs of perimenopause

@@ -1,6 +1,6 @@
 ---
 title: "Does paced breathing help hot flashes?"
-seo_title: "Does paced breathing help hot flashes? Evidence grade"
+seo_title: "Paced Breathing for Hot Flashes: Evidence"
 meta_description: "What The Menopause Society (2023) concludes about paced respiration for hot flashes (Level I), and what to try instead."
 cluster: does-it-work
 primary_keyword: paced breathing hot flashes

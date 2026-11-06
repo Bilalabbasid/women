@@ -1,6 +1,6 @@
 ---
 title: "Getting Menopause Care: Options, Guides, and Daily Support"
-seo_title: "Menopause Care Options, Guides, and Evidence-Based Tools"
+seo_title: "Menopause Care Options & Guides"
 meta_description: "Explore your menopause care options: finding accredited specialists, practical comfort guides, evidence-based books, and self-advocacy tools."
 cluster: care
 primary_keyword: menopause care options

@@ -1,6 +1,6 @@
 ---
 title: "How long does perimenopause last?"
-seo_title: "How long does perimenopause last? (stages & timeline)"
+seo_title: "How Long Does Perimenopause Last?"
 meta_description: "How long perimenopause typically lasts according to STRAW+10 staging, what marks the end of it, and what can make it feel longer."
 cluster: perimenopause
 primary_keyword: how long does perimenopause last

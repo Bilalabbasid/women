@@ -1,6 +1,6 @@
 ---
 title: "Painful Sex in Perimenopause and Menopause: Causes and Relief"
-seo_title: "Painful Sex After Menopause: Why Sex Hurts and How to Make It Comfortable"
+seo_title: "Painful Sex After Menopause: Causes & Relief"
 meta_description: "Why sex becomes painful during perimenopause and menopause, practical comfort steps with lubricants and moisturisers, medical options, and warning signs."
 cluster: symptoms
 primary_keyword: painful sex after menopause

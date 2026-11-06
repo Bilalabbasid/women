@@ -1,7 +1,7 @@
 ---
 title: "Strength Training Through Menopause: What the Science Shows"
-seo_title: "Strength Training in Menopause: Muscle Preservation, Bone Density, and Starter Plan"
-meta_description: "Why progressive resistance and impact training matter during menopause: preserving muscle mass, protecting bone mineral density, a simple starter plan, and safety."
+seo_title: "Strength Training in Menopause: What Works"
+meta_description: "Why progressive resistance and impact training matter in menopause: muscle mass, bone density, a simple starter plan, and safety."
 cluster: does-it-work
 primary_keyword: exercise for menopause
 slug: exercise

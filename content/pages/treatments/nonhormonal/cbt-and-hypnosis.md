@@ -1,6 +1,6 @@
 ---
 title: "CBT and clinical hypnosis for hot flashes"
-seo_title: "CBT & clinical hypnosis for hot flashes: Level I evidence"
+seo_title: "CBT & Hypnosis for Hot Flashes"
 meta_description: "Why cognitive behavioral therapy and clinical hypnosis are rated Level I treatments for hot flashes, with no drug interactions, and how to find a program."
 cluster: treatments
 primary_keyword: cbt for menopause

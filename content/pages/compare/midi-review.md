@@ -1,6 +1,6 @@
 ---
 title: "Midi Health review"
-seo_title: "Midi Health review: cost, insurance & what to expect"
+seo_title: "Midi Health Review: Cost & Insurance"
 meta_description: "What Midi Health actually offers for menopause care, its insurance and self-pay pricing as of November 2026, and who it may not suit."
 cluster: compare
 primary_keyword: midi review

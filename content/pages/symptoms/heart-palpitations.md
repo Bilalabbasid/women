@@ -1,6 +1,6 @@
 ---
 title: Heart palpitations in perimenopause
-seo_title: "Heart palpitations in perimenopause: when to get checked"
+seo_title: "Heart Palpitations in Perimenopause"
 meta_description: "Why heart racing or fluttering can happen around hot flashes in perimenopause, when palpitations are a medical emergency (NHS guidance), and what to ask."
 cluster: symptoms
 primary_keyword: perimenopause heart palpitations

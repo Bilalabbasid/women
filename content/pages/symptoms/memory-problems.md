@@ -1,6 +1,6 @@
 ---
 title: Memory problems in menopause
-seo_title: "Menopause memory loss: is it serious, and what helps"
+seo_title: "Menopause Memory Loss: Is It Serious?"
 meta_description: "Why memory lapses and 'brain fog' are common in perimenopause, what the research says about dementia risk, and evidence-graded ways to manage it."
 cluster: symptoms
 primary_keyword: menopause memory loss

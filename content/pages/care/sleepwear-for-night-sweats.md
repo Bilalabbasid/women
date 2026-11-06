@@ -1,6 +1,6 @@
 ---
 title: "Best Sleepwear for Night Sweats: How to Choose"
-seo_title: "Best Sleepwear for Night Sweats in Menopause: Fabrics and Fit"
+seo_title: "Best Sleepwear for Night Sweats"
 meta_description: "How to choose the best sleepwear for night sweats: why cotton fails, how moisture-wicking fabrics work, fit considerations, and honest limitations."
 cluster: care
 primary_keyword: sleepwear for night sweats

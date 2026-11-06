@@ -1,6 +1,6 @@
 ---
 title: "HRT and blood clot risk"
-seo_title: "HRT and blood clot (VTE) & stroke risk: what matters"
+seo_title: "HRT and Blood Clot (VTE) Risk"
 meta_description: "Why the route of HRT — patch or gel versus pill — changes blood clot and stroke risk more than the decision to take HRT itself."
 cluster: treatments
 primary_keyword: hrt blood clot risk

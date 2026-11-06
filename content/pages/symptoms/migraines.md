@@ -1,6 +1,6 @@
 ---
 title: Migraines and menopause
-seo_title: "Migraines and menopause: aura, HRT safety & what helps"
+seo_title: "Migraines and Menopause: Aura & HRT Safety"
 meta_description: "Do migraines get worse in perimenopause? Why migraine with aura changes HRT safety, and what the evidence says about managing both."
 cluster: symptoms
 primary_keyword: menopause migraines

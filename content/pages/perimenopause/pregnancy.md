@@ -1,6 +1,6 @@
 ---
 title: "Can you get pregnant during perimenopause?"
-seo_title: "Can you get pregnant in perimenopause? Contraception"
+seo_title: "Can You Get Pregnant in Perimenopause?"
 meta_description: "Why pregnancy is still possible during perimenopause even with irregular periods, and when it's considered safe to stop contraception."
 cluster: perimenopause
 primary_keyword: can you get pregnant during perimenopause

@@ -1,6 +1,6 @@
 ---
 title: "Heavy periods in perimenopause"
-seo_title: "Heavy periods in perimenopause: causes & when urgent"
+seo_title: "Heavy Periods in Perimenopause"
 meta_description: "Why periods can become heavier in perimenopause, when heavy bleeding needs medical attention, and what NHS guidance says to watch for."
 cluster: perimenopause
 primary_keyword: heavy periods perimenopause

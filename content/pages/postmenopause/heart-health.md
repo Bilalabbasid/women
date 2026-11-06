@@ -1,6 +1,6 @@
 ---
 title: "Heart health after menopause"
-seo_title: "Heart health after menopause: risk & the timing window"
+seo_title: "Heart Health After Menopause"
 meta_description: "Why cardiovascular risk rises after menopause, why HRT isn't used to prevent heart disease, and the 'timing hypothesis' explained."
 cluster: postmenopause
 primary_keyword: menopause heart health

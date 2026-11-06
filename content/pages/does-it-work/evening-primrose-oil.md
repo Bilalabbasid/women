@@ -1,6 +1,6 @@
 ---
 title: "Does evening primrose oil help hot flashes?"
-seo_title: "Evening primrose oil for hot flashes: evidence grade"
+seo_title: "Evening Primrose Oil for Hot Flashes"
 meta_description: "What a 2021 randomized trial found about evening primrose oil for hot flashes vs. night sweats, and what has stronger evidence for hot flashes."
 cluster: does-it-work
 primary_keyword: evening primrose oil menopause

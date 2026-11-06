@@ -1,7 +1,7 @@
 ---
 title: "Menopause treatments: evidence-graded options"
 seo_title: Menopause treatments evidence graded options
-meta_description: "Independent overview of hormonal therapies, non-hormonal prescription medications, cognitive behavioural therapies, and lifestyle strategies graded by trial evidence."
+meta_description: "Independent overview of hormonal, non-hormonal, and lifestyle menopause treatments, graded by trial evidence."
 cluster: treatments
 primary_keyword: menopause treatment options
 slug: treatments

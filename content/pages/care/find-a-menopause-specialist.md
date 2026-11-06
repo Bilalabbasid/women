@@ -1,6 +1,6 @@
 ---
 title: "How to find a menopause specialist"
-seo_title: "How to find a menopause specialist (MSCP credential)"
+seo_title: "How to Find a Menopause Specialist"
 meta_description: "What the Menopause Society Certified Practitioner (MSCP) credential actually means, how to search for one, and when a referral matters most."
 cluster: care
 primary_keyword: how to find a menopause specialist

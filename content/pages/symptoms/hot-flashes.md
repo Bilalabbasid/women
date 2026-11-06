@@ -1,6 +1,6 @@
 ---
 title: "Hot flashes in perimenopause: why they happen and what helps"
-seo_title: Hot flashes in perimenopause why they happen and what helps
+seo_title: "Hot Flashes in Perimenopause"
 meta_description: "Sudden surges of intense heat and flushed skin? Discover why vasomotor symptoms occur in perimenopause, other medical causes, and evidence-graded relief."
 cluster: symptoms
 primary_keyword: menopause hot flashes

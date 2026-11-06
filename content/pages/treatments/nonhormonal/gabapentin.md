@@ -1,6 +1,6 @@
 ---
 title: "Gabapentin for hot flashes"
-seo_title: "Gabapentin for hot flashes: evidence & what to expect"
+seo_title: "Gabapentin for Hot Flashes"
 meta_description: "Why gabapentin, a non-hormonal anti-seizure medication, reduces hot flashes and night sweats, its Level I evidence rating, and common side effects."
 cluster: treatments
 primary_keyword: gabapentin for hot flashes

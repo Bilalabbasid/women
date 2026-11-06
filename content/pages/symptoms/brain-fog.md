@@ -1,6 +1,6 @@
 ---
 title: Menopause brain fog
-seo_title: "Menopause brain fog & forgetfulness: causes & evidence"
+seo_title: "Menopause Brain Fog: Causes & Evidence"
 meta_description: "Why word-finding trouble and concentration lapses happen in perimenopause and menopause, what else to rule out, and evidence-graded management."
 cluster: symptoms
 primary_keyword: menopause brain fog

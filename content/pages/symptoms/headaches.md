@@ -1,6 +1,6 @@
 ---
 title: Menopause headaches
-seo_title: "Menopause headaches: why they change, and what helps"
+seo_title: "Menopause Headaches: Why They Change"
 meta_description: "Why headaches often shift in frequency or pattern during perimenopause, how they differ from migraines, and what's safe to try."
 cluster: symptoms
 primary_keyword: menopause headaches

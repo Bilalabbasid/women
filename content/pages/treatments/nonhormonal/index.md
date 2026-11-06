@@ -1,6 +1,6 @@
 ---
 title: Non-hormonal treatments for hot flashes
-seo_title: "Non-hormonal treatments for hot flashes: Level I guide"
+seo_title: "Non-Hormonal Treatments for Hot Flashes"
 meta_description: "What The Menopause Society (2023) recommends for hot flashes without hormones: fezolinetant, elinzanetant, SSRIs/SNRIs, gabapentin, oxybutynin, and CBT."
 cluster: treatments
 primary_keyword: non hormonal treatment for hot flashes

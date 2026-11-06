@@ -1,6 +1,6 @@
 ---
 title: "Calcium after menopause"
-seo_title: "Calcium supplements after menopause: what the USPSTF says"
+seo_title: "Calcium After Menopause: What USPSTF Says"
 meta_description: "What the US Preventive Services Task Force concludes about calcium supplements for fracture prevention after menopause, and the kidney stone tradeoff."
 cluster: does-it-work
 primary_keyword: calcium after menopause

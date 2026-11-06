@@ -1,6 +1,6 @@
 ---
 title: Premature ovarian insufficiency (POI)
-seo_title: "Premature ovarian insufficiency (POI): under-40 guide"
+seo_title: "Premature Ovarian Insufficiency (POI)"
 meta_description: "What premature ovarian insufficiency (POI) is when ovarian function changes before age 40, how NICE NG23 guides diagnosis and care, and doctor questions."
 cluster: groups
 primary_keyword: premature ovarian insufficiency

@@ -1,6 +1,6 @@
 ---
 title: "Bladder Leaks in Menopause: Causes, Types, and What Actually Helps"
-seo_title: "Bladder Leaks in Menopause: Stress vs Urge Incontinence and Relief"
+seo_title: "Bladder Leaks in Menopause: Stress vs. Urge"
 meta_description: "Why urinary leakage increases during perimenopause and menopause, the difference between stress and urge incontinence, and how pelvic floor training helps."
 cluster: symptoms
 primary_keyword: menopause incontinence

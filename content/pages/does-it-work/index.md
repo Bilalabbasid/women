@@ -1,6 +1,6 @@
 ---
 title: "Does it work? Menopause treatments tested against evidence"
-seo_title: Does it work menopause treatments tested against evidence
+seo_title: "Does It Work? Menopause Treatments Graded"
 meta_description: "Independent evaluations of popular menopause supplements, botanical remedies, and non-hormonal therapies graded by clinical trial evidence."
 cluster: does-it-work
 primary_keyword: do menopause supplements work

@@ -1,6 +1,6 @@
 ---
 title: "How to Do Pelvic Floor Exercises Correctly: A Step-by-Step Guide"
-seo_title: "How to Do Pelvic Floor Exercises (Kegels) Correctly for Menopause"
+seo_title: "How to Do Pelvic Floor Exercises Correctly"
 meta_description: "Learn how to do pelvic floor exercises correctly: step-by-step instructions, common mistakes like bearing down, timelines for results, and biofeedback tools."
 cluster: care
 primary_keyword: pelvic floor exercises menopause

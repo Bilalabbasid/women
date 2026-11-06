@@ -1,6 +1,6 @@
 ---
 title: "Progesterone and progestogens in HRT"
-seo_title: "Progesterone in HRT: why it's needed, and which type"
+seo_title: "Progesterone in HRT: Why It's Needed"
 meta_description: "Why a progestogen is added to estrogen for people with a uterus, the difference between micronised progesterone and other progestogens, and the regimens."
 cluster: treatments
 primary_keyword: progesterone in hrt

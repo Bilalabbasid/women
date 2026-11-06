@@ -1,6 +1,6 @@
 ---
 title: Postmenopause explained
-seo_title: "What is postmenopause? Symptoms, bone & heart health"
+seo_title: "What Is Postmenopause?"
 meta_description: "What happens in postmenopause (the years after 12 months without a period), which symptoms persist, why any bleeding needs checking, and bone health care."
 cluster: postmenopause
 primary_keyword: postmenopause

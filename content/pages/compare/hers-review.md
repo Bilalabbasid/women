@@ -1,6 +1,6 @@
 ---
 title: "Hers (menopause care) review"
-seo_title: "Hers menopause review: what we could (and couldn't) verify"
+seo_title: "Hers Menopause Care Review"
 meta_description: "What's publicly known about Hers' menopause care, and why we're flagging limited direct verification rather than repeating unconfirmed pricing claims."
 cluster: compare
 primary_keyword: hers review

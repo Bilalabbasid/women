@@ -1,6 +1,6 @@
 ---
 title: Recurrent UTIs after menopause
-seo_title: "Recurrent UTIs after menopause: why they happen & care"
+seo_title: "Recurrent UTIs After Menopause"
 meta_description: "Why urinary tract infections (UTIs) become more frequent in menopause and postmenopause, how vaginal estrogen helps prevent them, and urgent signs."
 cluster: symptoms
 primary_keyword: utis after menopause

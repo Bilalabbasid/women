@@ -1,6 +1,6 @@
 ---
 title: "Cooling Your Bed: Fans, Sheets, and Climate Systems Compared"
-seo_title: "Cooling Bed Products for Menopause: Do Fans and Bed Climate Systems Work?"
+seo_title: "Do Cooling Products Help Hot Flashes?"
 meta_description: "Do cooling products help night sweats? Compare bed fans, cooling sheets, and active climate control systems by price, noise, setup, and evidence."
 cluster: does-it-work
 primary_keyword: cooling products for hot flashes

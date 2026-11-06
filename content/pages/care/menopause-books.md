@@ -1,6 +1,6 @@
 ---
 title: "Menopause Books Worth Reading, Chosen by Evidence"
-seo_title: "Best Menopause Books: Evidence-Based Guides Reviewed by Doctors and Scientists"
+seo_title: "Best Evidence-Based Menopause Books"
 meta_description: "Which menopause books can you trust? Honest, evidence-focused reviews of The Menopause Manifesto, The New Menopause, and Next Level: who each suits and limits."
 cluster: care
 primary_keyword: best menopause books

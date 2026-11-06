@@ -79,12 +79,12 @@ export default function DoctorReportPage() {
 
       <div className="mx-auto w-full max-w-2xl flex-1 space-y-6 px-4 py-5 print:max-w-none print:p-0">
         <div className="no-print space-y-3">
-          <p className="text-[#3E3834]">
+          <p className="text-[var(--color-ink-muted)]">
             This summary uses only what you logged. Choose a period, add your questions, then print it or save it as a
             PDF to take to your appointment.
           </p>
           <fieldset className="flex flex-wrap items-center gap-2">
-            <legend className="mb-1 font-semibold text-[#231F1D]">Period</legend>
+            <legend className="mb-1 font-semibold text-[var(--color-ink)]">Period</legend>
             {WINDOWS.map((d) => (
               <button
                 key={d}
@@ -92,7 +92,7 @@ export default function DoctorReportPage() {
                 aria-pressed={windowDays === d}
                 onClick={() => setWindowDays(d)}
                 className={`min-h-[44px] rounded-xl border px-4 font-semibold ${
-                  windowDays === d ? 'border-[#1f5a4c] bg-[#1f5a4c] text-white' : 'border-[#D9D1C7] bg-white text-[#3E3834]'
+                  windowDays === d ? 'border-[var(--color-accent)] bg-[var(--color-accent)] text-white' : 'border-[var(--color-rule)] bg-[var(--color-paper-raised)] text-[var(--color-ink-muted)]'
                 }`}
               >
                 Past {d} days
@@ -109,30 +109,30 @@ export default function DoctorReportPage() {
               Print
             </Button>
           </div>
-          <p className="text-xs text-[#5C554F]">The PDF is created on this device. Nothing is uploaded.</p>
+          <p className="text-xs text-[var(--color-ink-muted)]">The PDF is created on this device. Nothing is uploaded.</p>
         </div>
 
         {/* The printable page */}
         <article
           aria-label="Doctor report"
-          className="space-y-4 rounded-2xl border-2 border-[#D9D1C7] bg-white p-5 text-[#231F1D] print:rounded-none print:border-0 print:p-0 print:text-[11pt]"
+          className="space-y-4 rounded-2xl border-2 border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-5 text-[var(--color-ink)] print:rounded-none print:border-0 print:p-0 print:text-[11pt]"
         >
-          <header className="space-y-1 border-b border-[#E5DED5] pb-3">
-            <p className="text-xs font-semibold uppercase tracking-wide text-[#5C554F]">Patient-recorded symptom summary</p>
+          <header className="space-y-1 border-b border-[var(--color-rule)] pb-3">
+            <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-ink-muted)]">Patient-recorded symptom summary</p>
             <h2 className="font-serif text-xl font-bold">Menopause symptom log</h2>
-            <p className="text-xs text-[#3E3834]">
+            <p className="text-xs text-[var(--color-ink-muted)]">
               {fmt(report.startDate)} to {fmt(report.endDate)} · {report.entries} {report.entries === 1 ? 'entry' : 'entries'}
               {report.weeklyEntries > 0 && ` (${report.dailyEntries} daily, ${report.weeklyEntries} weekly)`} covering{' '}
               {report.daysCovered} of {report.windowDays} days · Printed {fmt(new Date().toISOString().slice(0, 10))}
             </p>
-            <p className="text-xs text-[#3E3834]">
+            <p className="text-xs text-[var(--color-ink-muted)]">
               Recorded by me on my own device. Ratings are my own (1 = mild, 5 = severe); this is not a
               validated scale and not a diagnosis.
             </p>
           </header>
 
           {report.entries === 0 ? (
-            <p className="italic text-[#3E3834]">No entries in this period.</p>
+            <p className="italic text-[var(--color-ink-muted)]">No entries in this period.</p>
           ) : (
             <>
               <section aria-labelledby="r-symptoms" className="space-y-1">
@@ -144,7 +144,7 @@ export default function DoctorReportPage() {
                 ) : (
                   <table className="w-full text-left text-xs">
                     <thead>
-                      <tr className="border-b border-[#E5DED5]">
+                      <tr className="border-b border-[var(--color-rule)]">
                         <th className="py-1 font-semibold">Symptom</th>
                         <th className="py-1 font-semibold">Entries</th>
                         <th className="py-1 font-semibold">Average rating</th>
@@ -152,7 +152,7 @@ export default function DoctorReportPage() {
                     </thead>
                     <tbody>
                       {report.symptoms.map((s) => (
-                        <tr key={s.symptomId} className="border-b border-[#F0EBE3]">
+                        <tr key={s.symptomId} className="border-b border-[var(--color-rule)]">
                           <td className="py-1">{s.name}</td>
                           <td className="py-1">
                             {s.count} of {report.entries} ({s.frequencyPercent}%)
@@ -237,7 +237,7 @@ export default function DoctorReportPage() {
                       type="button"
                       onClick={() => saveQuestions(questions.filter((_, j) => j !== i))}
                       aria-label={`Remove question ${i + 1}`}
-                      className="no-print ml-2 inline-flex min-h-[44px] min-w-[44px] items-center justify-center align-middle text-[#5C554F] hover:text-[#8A1F1F]"
+                      className="no-print ml-2 inline-flex min-h-[44px] min-w-[44px] items-center justify-center align-middle text-[var(--color-ink-muted)] hover:text-[var(--color-urgent)]"
                     >
                       <Trash2 className="h-4 w-4" aria-hidden="true" />
                     </button>
@@ -262,27 +262,27 @@ export default function DoctorReportPage() {
               value={customQuestion}
               onChange={(e) => setCustomQuestion(e.target.value)}
               placeholder="Type a question for your clinician"
-              className="min-h-[44px] flex-1 rounded-xl border border-[#D9D1C7] bg-white px-3"
+              className="min-h-[44px] flex-1 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] px-3"
             />
             <Button type="submit" variant="secondary">
               Add
             </Button>
           </form>
-          <p className="text-[#3E3834]">Or tap a starter to add it:</p>
+          <p className="text-[var(--color-ink-muted)]">Or tap a starter to add it:</p>
           <ul className="flex flex-wrap gap-2">
             {DOCTOR_QUESTION_STARTERS.filter((q) => !questions.includes(q)).map((q) => (
               <li key={q}>
                 <button
                   type="button"
                   onClick={() => saveQuestions([...questions, q])}
-                  className="min-h-[44px] rounded-xl border border-[#D9D1C7] bg-white px-3 py-2 text-left text-xs text-[#3E3834] hover:border-[#1f5a4c]"
+                  className="min-h-[44px] rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] px-3 py-2 text-left text-xs text-[var(--color-ink-muted)] hover:border-[var(--color-accent)]"
                 >
                   + {q}
                 </button>
               </li>
             ))}
           </ul>
-          <p className="text-xs text-[#5C554F]">Your questions are saved on this device only.</p>
+          <p className="text-xs text-[var(--color-ink-muted)]">Your questions are saved on this device only.</p>
         </section>
       </div>
     </div>

@@ -209,6 +209,18 @@ the owner/functionality chat can make.)*
   sitting unmerged on local branch `ui/tools` in
   `.claude/worktrees/ui-tools` if it's useful as a reference diff — happy to
   hand it over directly instead of Lane B redoing it, just say so here.
+- **Finding for Lane C, not editing `app-header.tsx` myself since it's
+  claimed/in-progress:** ran Lighthouse's accessibility audit (a11y score
+  1.0 on homepage/symptom page/tools checker, so the codebase is in good
+  shape generally) against `/app/today/` and it flagged one real,
+  serious-impact WCAG 2.5.3 (Label in Name) failure: the dashboard-logo
+  `<Link>` has visible text "MV" but `aria-label="MenoVerdict Dashboard"` —
+  no overlap, so voice-control users ("click MV") and some screen readers
+  won't match it. One-line fix: make the label contain the visible text,
+  e.g. `aria-label="MV, MenoVerdict Dashboard"`. Lives in `app-header.tsx`
+  around the `showBack ? ... : <Link href="/app/today/" aria-label=...>`
+  branch — unrelated to the token-cleanup work just logged below, so should
+  be a clean, independent one-line change whenever Lane C gets to it.
 
 ## Changelog
 
@@ -378,3 +390,13 @@ the owner/functionality chat can make.)*
   `#B25E4B` (brownish — possibly old-palette leftovers nextecom's pass
   missed) worth a second look. Left for a page-by-page follow-up rather than
   guessing at scale.
+- 2026-11-06 — This session (Lane E): ran Lighthouse (pinned `13.6.0` per
+  AGENTS.md's audit method) accessibility-only against the shared dev
+  server on homepage, `/symptoms/hot-flashes/`, `/tools/does-it-work-checker/`
+  (all score 1.0) and `/app/today/` (also 1.0 overall, but one audit still
+  failed: `label-content-name-mismatch` — logged above for Lane C). Scratch
+  JSON reports deleted after reading, not committed. Still open for this
+  lane: contrast/tap-target spot checks on a couple more `/app` pages once
+  Lane C's current token-cleanup pass settles, and actually confirming the
+  print-color-adjust gap visually (reasoned from the CSS, not yet checked
+  in a real print preview).

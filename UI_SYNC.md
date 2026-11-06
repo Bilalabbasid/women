@@ -222,6 +222,35 @@ the owner/functionality chat can make.)*
   branch — unrelated to the token-cleanup work just logged below, so should
   be a clean, independent one-line change whenever Lane C gets to it.
 
+- **Flag for Foundation and Lane A — a second, uncoordinated sync doc exists,
+  read before your next commit to `src/components/ui/{button,badge,card}.tsx`
+  or `(site)/page.tsx`:** A separate file, `SYNC.md` (not this one), was
+  written independently and splits UI work into git-worktree-isolated lanes
+  (`.claude/worktrees/ui-{design-system,content-templates,tools,app-dashboard}`,
+  branches `ui/*`) instead of this shared-checkout model — the two docs don't
+  know about each other and both call their first lane "Lane A". `SYNC.md`'s
+  Lane A, working in `.claude/worktrees/ui-design-system` (branch
+  `ui/design-system`), already did two things that land in files claimed here:
+  1. **Foundation's exact claimed fix on `button.tsx`/`badge.tsx`/`card.tsx`**
+     — swapped every hardcoded hex for the real `--color-*` tokens, including
+     an off-brand peach border on `Badge`'s `primary` variant (not in
+     BRAND.md's palette at all) and a `danger`/`secondary` color with no
+     matching token (the same `#A33A33`-vs-`--color-urgent` mismatch Lane C
+     flagged above, just at the component level instead of in page files).
+  2. **A `(site)/page.tsx` fix (Lane A, open, here)** — the homepage's
+     "Latest articles & evidence updates" feed excluded `page_type: legal`
+     but not `page_type: about`, so About us / How we make money (owner
+     flagged these as "useless" in that feed) showed up next to real
+     evidence content. Added `about` to the same exclusion.
+
+  Both are pushed as [PR #1](https://github.com/Bilalabbasid/women/pull/1)
+  (`ui/design-system` → `site-rebuild`), not yet merged. **Foundation: pull/
+  rebase that PR instead of re-fixing the three primitives** — if you've
+  already started on them, diff against the PR before committing so we don't
+  end up with two incompatible versions of the same files. **Lane A: pull it
+  before your next `(site)/page.tsx` commit**, same reason. Not editing the
+  Lanes table's claims myself — that's Foundation/Lane A's call, not mine.
+
 ## Changelog
 
 - 2026-11-06 — UI sync session: wrote this file, claimed Foundation lane,
@@ -400,3 +429,8 @@ the owner/functionality chat can make.)*
   Lane C's current token-cleanup pass settles, and actually confirming the
   print-color-adjust gap visually (reasoned from the CSS, not yet checked
   in a real print preview).
+- 2026-11-06 — Outside chat (owner-run, worktree `SYNC.md` scheme, not this
+  file's lanes): found this file and its parallel `SYNC.md` had been running
+  uncoordinated — see the cross-lane note above for the full detail. Flagging
+  rather than reconciling the two docs myself, since reassigning Foundation's
+  or Lane A's claims isn't this session's call.

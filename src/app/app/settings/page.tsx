@@ -49,7 +49,7 @@ export default function SettingsPage() {
             <h2 className="font-serif font-semibold text-base text-[#231F1D]">
               Data Storage Preference
             </h2>
-            <Link href="/app/privacy/" className="text-xs text-[#965342] hover:underline font-medium">
+            <Link href="/app/privacy/" className="text-xs text-[#1F5A4C] hover:underline font-medium">
               Privacy Dashboard
             </Link>
           </div>
@@ -63,13 +63,13 @@ export default function SettingsPage() {
               }}
               className={`w-full text-left p-4 rounded-2xl border transition-all ${
                 storageMode === 'device_only'
-                  ? 'border-[#965342] bg-[#FDF9F7] shadow-xs ring-1 ring-[#965342]'
+                  ? 'border-[#1F5A4C] bg-[#FDF9F7] shadow-xs ring-1 ring-[#1F5A4C]'
                   : 'border-[#E5DED5] bg-white hover:border-[#D0C7BC]'
               }`}
             >
               <div className="flex items-center justify-between">
                 <span className="font-semibold text-sm text-[#231F1D] flex items-center gap-2">
-                  <HardDrive className="w-4 h-4 text-[#965342]" />
+                  <HardDrive className="w-4 h-4 text-[#1F5A4C]" />
                   Option A — Device Only (Default)
                 </span>
                 <Badge variant="success">100% Local</Badge>
@@ -87,13 +87,13 @@ export default function SettingsPage() {
               }}
               className={`w-full text-left p-4 rounded-2xl border transition-all ${
                 storageMode === 'temporary_cloud'
-                  ? 'border-[#965342] bg-[#FDF9F7] shadow-xs ring-1 ring-[#965342]'
+                  ? 'border-[#1F5A4C] bg-[#FDF9F7] shadow-xs ring-1 ring-[#1F5A4C]'
                   : 'border-[#E5DED5] bg-white hover:border-[#D0C7BC]'
               }`}
             >
               <div className="flex items-center justify-between">
                 <span className="font-semibold text-sm text-[#231F1D] flex items-center gap-2">
-                  <Cloud className="w-4 h-4 text-[#965342]" />
+                  <Cloud className="w-4 h-4 text-[#1F5A4C]" />
                   Option B — Temporary Encrypted Cloud
                 </span>
                 <Badge variant="warning">Auto-Purge</Badge>
@@ -125,8 +125,8 @@ export default function SettingsPage() {
                   }}
                   className={`py-2 rounded-xl text-xs font-semibold border transition ${
                     retentionDays === days
-                      ? 'bg-[#965342] border-[#965342] text-white'
-                      : 'bg-[#FAF8F5] border-[#E5DED5] text-[#554E48]'
+                      ? 'bg-[#1F5A4C] border-[#1F5A4C] text-white'
+                      : 'bg-[#F7F6F2] border-[#E5DED5] text-[#554E48]'
                   }`}
                 >
                   {days}d
@@ -153,7 +153,7 @@ export default function SettingsPage() {
                 handleSave();
               }}
               className={`w-12 h-6 rounded-full transition-colors relative ${
-                notifications ? 'bg-[#965342]' : 'bg-[#D9D1C7]'
+                notifications ? 'bg-[#1F5A4C]' : 'bg-[#D9D1C7]'
               }`}
               aria-label="Toggle notifications"
             >

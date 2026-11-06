@@ -1,6 +1,28 @@
 {
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.menoverdict.com"
+        }
+      ],
+      "destination": "https://menoverdict.com/",
+      "permanent": true
+    },
+    {
+      "source": "/:path((?:[^/]+/)*[^/.]+)/?",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.menoverdict.com"
+        }
+      ],
+      "destination": "https://menoverdict.com/:path/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {

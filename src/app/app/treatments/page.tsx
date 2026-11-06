@@ -379,7 +379,7 @@ export default function TreatmentsPage() {
 
         {/* Prescription Guardrail Notice */}
         <Card variant="muted" className="p-3.5 flex items-start gap-2.5 text-xs text-[#554E48]">
-          <Info className="w-4 h-4 text-[#965342] shrink-0 mt-0.5" />
+          <Info className="w-4 h-4 text-[#1F5A4C] shrink-0 mt-0.5" />
           <div className="leading-relaxed space-y-1">
             <p>
               <strong>Prescription Guardrail:</strong> MenoVerdict strictly organizes the routines, schedules, and clinician instructions you record.
@@ -394,7 +394,7 @@ export default function TreatmentsPage() {
         <Card className="p-4 bg-white border-[#E5DED5] space-y-3.5">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-[#F7EFEA] text-[#965342] flex items-center justify-center">
+              <div className="w-9 h-9 rounded-xl bg-[#E6EFEB] text-[#1F5A4C] flex items-center justify-center">
                 {reminderSettings.enabled && permissionState === 'granted' ? (
                   <Bell className="w-4 h-4" />
                 ) : (
@@ -408,7 +408,7 @@ export default function TreatmentsPage() {
                   {permissionState === 'granted' ? (
                     <span className="text-[#2C6E49] font-medium">Active</span>
                   ) : permissionState === 'denied' ? (
-                    <span className="text-[#965342] font-medium">Blocked in browser</span>
+                    <span className="text-[#1F5A4C] font-medium">Blocked in browser</span>
                   ) : permissionState === 'unsupported' ? (
                     <span className="text-[#5C554F]">Unsupported in browser</span>
                   ) : (
@@ -445,7 +445,7 @@ export default function TreatmentsPage() {
               <span className="font-semibold text-[#231F1D] flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#2C6E49]" />
                 Lock Screen Privacy:{' '}
-                <span className="font-bold text-[#965342] capitalize">
+                <span className="font-bold text-[#1F5A4C] capitalize">
                   {reminderSettings.privacyMode} Mode
                 </span>
               </span>
@@ -476,8 +476,8 @@ export default function TreatmentsPage() {
 
           {/* iOS Fallback Guidance if applicable */}
           {iosGuidance.requiresInstallForPush && (
-            <div className="bg-[#FAF8F5] border border-[#E5DED5] rounded-xl p-3 text-xs text-[#68615C] flex items-start gap-2">
-              <Share2 className="w-4 h-4 text-[#965342] shrink-0 mt-0.5" />
+            <div className="bg-[#F7F6F2] border border-[#E5DED5] rounded-xl p-3 text-xs text-[#68615C] flex items-start gap-2">
+              <Share2 className="w-4 h-4 text-[#1F5A4C] shrink-0 mt-0.5" />
               <p className="leading-relaxed">
                 <strong>iPhone Lock-Screen Tip:</strong> Apple iOS requires adding MenoVerdict to your Home Screen (tap Safari Share → <em>Add to Home Screen</em>) for system push alerts. In-app reminders below remain fully active.
               </p>
@@ -508,7 +508,7 @@ export default function TreatmentsPage() {
                 <Card key={t.id} className="p-3.5 bg-white border-[#E5DCD2] space-y-3 shadow-xs">
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-[#F7EFEA] text-[#965342] flex items-center justify-center shrink-0 mt-0.5">
+                      <div className="w-10 h-10 rounded-xl bg-[#E6EFEB] text-[#1F5A4C] flex items-center justify-center shrink-0 mt-0.5">
                         <Pill className="w-5 h-5" />
                       </div>
                       <div>
@@ -549,7 +549,7 @@ export default function TreatmentsPage() {
                   </div>
 
                   {t.instructions && (
-                    <p className="text-xs text-[#554E48] bg-[#FAF8F5] p-2.5 rounded-xl border border-[#EBE3D8] leading-relaxed">
+                    <p className="text-xs text-[#554E48] bg-[#F7F6F2] p-2.5 rounded-xl border border-[#EBE3D8] leading-relaxed">
                       {t.instructions}
                     </p>
                   )}
@@ -559,14 +559,14 @@ export default function TreatmentsPage() {
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => handleQuickSkip(t)}
-                        className="text-xs text-[#68615C] hover:text-[#965342] transition underline"
+                        className="text-xs text-[#68615C] hover:text-[#1F5A4C] transition underline"
                       >
                         Skip for today
                       </button>
                       <span>•</span>
                       <button
                         onClick={() => handleQuickSnooze(t)}
-                        className="text-xs text-[#68615C] hover:text-[#965342] transition underline"
+                        className="text-xs text-[#68615C] hover:text-[#1F5A4C] transition underline"
                       >
                         Snooze 1h
                       </button>
@@ -586,7 +586,7 @@ export default function TreatmentsPage() {
                 <Card
                   key={t.id}
                   variant="muted"
-                  className="p-3 bg-[#FAF8F5] border-[#E2DBD1] flex items-center justify-between text-xs"
+                  className="p-3 bg-[#F7F6F2] border-[#E2DBD1] flex items-center justify-between text-xs"
                 >
                   <div className="flex items-center gap-2.5">
                     <div className="w-6 h-6 rounded-full bg-[#EFF7F2] text-[#2C6E49] flex items-center justify-center shrink-0">
@@ -613,7 +613,7 @@ export default function TreatmentsPage() {
                 <Card
                   key={t.id}
                   variant="muted"
-                  className="p-3 bg-[#FAF8F5] border-[#E2DBD1] flex items-center justify-between text-xs opacity-75"
+                  className="p-3 bg-[#F7F6F2] border-[#E2DBD1] flex items-center justify-between text-xs opacity-75"
                 >
                   <div className="flex items-center gap-2.5">
                     <span className="text-xs font-semibold text-[#5C554F]">SKIPPED</span>
@@ -663,7 +663,7 @@ export default function TreatmentsPage() {
                 <Card key={t.id} className="p-4 bg-white border-[#E5DED5] space-y-3">
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-[#F7EFEA] text-[#965342] flex items-center justify-center shrink-0">
+                      <div className="w-10 h-10 rounded-xl bg-[#E6EFEB] text-[#1F5A4C] flex items-center justify-center shrink-0">
                         <Pill className="w-5 h-5" />
                       </div>
                       <div>
@@ -684,14 +684,14 @@ export default function TreatmentsPage() {
                       <button
                         onClick={() => handleOpenEdit(t)}
                         title="Edit Regimen"
-                        className="p-1.5 text-[#68615C] hover:text-[#231F1D] rounded-lg hover:bg-[#F3EFEA] transition"
+                        className="p-1.5 text-[#68615C] hover:text-[#231F1D] rounded-lg hover:bg-[#EEF1EF] transition"
                       >
                         <Edit3 className="w-4 h-4" />
                       </button>
                       <button
                         onClick={() => handleDeleteTreatment(t.id, t.name)}
                         title="Delete Regimen"
-                        className="p-1.5 text-[#5C554F] hover:text-[#965342] rounded-lg hover:bg-[#FDF0EC] transition"
+                        className="p-1.5 text-[#5C554F] hover:text-[#1F5A4C] rounded-lg hover:bg-[#FDF0EC] transition"
                       >
                         <Trash2 className="w-4 h-4" />
                       </button>
@@ -699,7 +699,7 @@ export default function TreatmentsPage() {
                   </div>
 
                   {t.instructions && (
-                    <p className="text-xs text-[#554E48] bg-[#FAF8F5] p-2.5 rounded-xl border border-[#EBE3D8] leading-relaxed">
+                    <p className="text-xs text-[#554E48] bg-[#F7F6F2] p-2.5 rounded-xl border border-[#EBE3D8] leading-relaxed">
                       <strong>Instructions:</strong> {t.instructions}
                     </p>
                   )}
@@ -717,7 +717,7 @@ export default function TreatmentsPage() {
                       </span>
                       {t.defaultSite && (
                         <span className="flex items-center gap-1">
-                          <RotateCcw className="w-3.5 h-3.5 text-[#965342]" /> Site: {t.defaultSite}
+                          <RotateCcw className="w-3.5 h-3.5 text-[#1F5A4C]" /> Site: {t.defaultSite}
                         </span>
                       )}
                     </div>
@@ -727,7 +727,7 @@ export default function TreatmentsPage() {
                       size="sm"
                       variant="outline"
                       onClick={() => handleOpenComparison(t)}
-                      className="text-xs px-2.5 py-1 min-h-[44px] gap-1 text-[#965342] hover:bg-[#F7EFEA]"
+                      className="text-xs px-2.5 py-1 min-h-[44px] gap-1 text-[#1F5A4C] hover:bg-[#E6EFEB]"
                     >
                       <Sparkles className="w-3.5 h-3.5" /> Compare Before & After
                     </Button>
@@ -756,14 +756,14 @@ export default function TreatmentsPage() {
                           evt.action === 'skipped'
                             ? 'bg-[#F2EDEA] text-[#5C554F]'
                             : evt.action === 'snoozed'
-                            ? 'bg-[#FAF3F0] text-[#965342]'
+                            ? 'bg-[#FAF3F0] text-[#1F5A4C]'
                             : 'bg-[#EFF7F2] text-[#2C6E49]'
                         }`}
                       >
                         {evt.action}
                       </span>
                     </div>
-                    {evt.site && <p className="text-xs text-[#965342]">Site: {evt.site}</p>}
+                    {evt.site && <p className="text-xs text-[#1F5A4C]">Site: {evt.site}</p>}
                     {evt.notes && <p className="text-[#68615C] text-xs">{evt.notes}</p>}
                   </div>
 
@@ -805,7 +805,7 @@ export default function TreatmentsPage() {
                     value={formName}
                     onChange={(e) => setFormName(e.target.value)}
                     placeholder="e.g. Estradiol Transdermal Patch"
-                    className="w-full px-3 py-2 rounded-xl border border-[#E5DED5] focus:outline-none focus:border-[#965342]"
+                    className="w-full px-3 py-2 rounded-xl border border-[#E5DED5] focus:outline-none focus:border-[#1F5A4C]"
                   />
                 </div>
 
@@ -815,7 +815,7 @@ export default function TreatmentsPage() {
                     <select
                       value={formType}
                       onChange={(e) => setFormType(e.target.value as TreatmentType)}
-                      className="w-full px-2.5 py-2 rounded-xl border border-[#E5DED5] bg-white focus:outline-none focus:border-[#965342]"
+                      className="w-full px-2.5 py-2 rounded-xl border border-[#E5DED5] bg-white focus:outline-none focus:border-[#1F5A4C]"
                     >
                       {TREATMENT_TYPES.map((t) => (
                         <option key={t.value} value={t.value}>
@@ -834,7 +834,7 @@ export default function TreatmentsPage() {
                       value={formDosage}
                       onChange={(e) => setFormDosage(e.target.value)}
                       placeholder="e.g. 0.05 mg/day"
-                      className="w-full px-3 py-2 rounded-xl border border-[#E5DED5] focus:outline-none focus:border-[#965342]"
+                      className="w-full px-3 py-2 rounded-xl border border-[#E5DED5] focus:outline-none focus:border-[#1F5A4C]"
                     />
                   </div>
                 </div>
@@ -847,7 +847,7 @@ export default function TreatmentsPage() {
                     value={formFrequency}
                     onChange={(e) => setFormFrequency(e.target.value)}
                     placeholder="e.g. Twice weekly (Mon & Thu) or Nightly"
-                    className="w-full px-3 py-2 rounded-xl border border-[#E5DED5] focus:outline-none focus:border-[#965342]"
+                    className="w-full px-3 py-2 rounded-xl border border-[#E5DED5] focus:outline-none focus:border-[#1F5A4C]"
                   />
                 </div>
 
@@ -872,8 +872,8 @@ export default function TreatmentsPage() {
                           }}
                           className={`flex-1 py-1.5 rounded-lg text-xs font-semibold border transition ${
                             isSelected
-                              ? 'bg-[#965342] text-white border-[#965342]'
-                              : 'bg-[#FAF8F5] text-[#68615C] border-[#E5DED5] hover:bg-white'
+                              ? 'bg-[#1F5A4C] text-white border-[#1F5A4C]'
+                              : 'bg-[#F7F6F2] text-[#68615C] border-[#E5DED5] hover:bg-white'
                           }`}
                         >
                           {d.label}
@@ -892,7 +892,7 @@ export default function TreatmentsPage() {
                     <select
                       value={formDefaultSite}
                       onChange={(e) => setFormDefaultSite(e.target.value)}
-                      className="w-full px-2.5 py-2 rounded-xl border border-[#E5DED5] bg-white focus:outline-none focus:border-[#965342]"
+                      className="w-full px-2.5 py-2 rounded-xl border border-[#E5DED5] bg-white focus:outline-none focus:border-[#1F5A4C]"
                     >
                       {APPLICATION_SITES.map((site) => (
                         <option key={site} value={site}>
@@ -912,7 +912,7 @@ export default function TreatmentsPage() {
                     value={formInstructions}
                     onChange={(e) => setFormInstructions(e.target.value)}
                     placeholder="e.g. Rotate site each change; apply to dry, clean skin"
-                    className="w-full px-3 py-2 rounded-xl border border-[#E5DED5] focus:outline-none focus:border-[#965342]"
+                    className="w-full px-3 py-2 rounded-xl border border-[#E5DED5] focus:outline-none focus:border-[#1F5A4C]"
                   />
                 </div>
 
@@ -924,7 +924,7 @@ export default function TreatmentsPage() {
                       required
                       value={formStartDate}
                       onChange={(e) => setFormStartDate(e.target.value)}
-                      className="w-full px-2.5 py-2 rounded-xl border border-[#E5DED5] bg-white focus:outline-none focus:border-[#965342]"
+                      className="w-full px-2.5 py-2 rounded-xl border border-[#E5DED5] bg-white focus:outline-none focus:border-[#1F5A4C]"
                     />
                   </div>
 
@@ -934,7 +934,7 @@ export default function TreatmentsPage() {
                       type="date"
                       value={formEndDate}
                       onChange={(e) => setFormEndDate(e.target.value)}
-                      className="w-full px-2.5 py-2 rounded-xl border border-[#E5DED5] bg-white focus:outline-none focus:border-[#965342]"
+                      className="w-full px-2.5 py-2 rounded-xl border border-[#E5DED5] bg-white focus:outline-none focus:border-[#1F5A4C]"
                     />
                   </div>
                 </div>
@@ -997,8 +997,8 @@ export default function TreatmentsPage() {
                         onClick={() => setSelectedAction(act)}
                         className={`py-2 rounded-xl text-xs font-semibold capitalize border transition ${
                           selectedAction === act
-                            ? 'bg-[#965342] text-white border-[#965342]'
-                            : 'bg-[#FAF8F5] text-[#68615C] border-[#E5DED5]'
+                            ? 'bg-[#1F5A4C] text-white border-[#1F5A4C]'
+                            : 'bg-[#F7F6F2] text-[#68615C] border-[#E5DED5]'
                         }`}
                       >
                         {act}
@@ -1015,7 +1015,7 @@ export default function TreatmentsPage() {
                     <select
                       value={selectedSite}
                       onChange={(e) => setSelectedSite(e.target.value)}
-                      className="w-full px-2.5 py-2 rounded-xl border border-[#E5DED5] bg-white focus:outline-none focus:border-[#965342]"
+                      className="w-full px-2.5 py-2 rounded-xl border border-[#E5DED5] bg-white focus:outline-none focus:border-[#1F5A4C]"
                     >
                       {APPLICATION_SITES.map((s) => (
                         <option key={s} value={s}>
@@ -1035,7 +1035,7 @@ export default function TreatmentsPage() {
                     value={eventNotes}
                     onChange={(e) => setEventNotes(e.target.value)}
                     placeholder="e.g. Applied after evening shower, no skin irritation"
-                    className="w-full px-3 py-2 rounded-xl border border-[#E5DED5] focus:outline-none focus:border-[#965342]"
+                    className="w-full px-3 py-2 rounded-xl border border-[#E5DED5] focus:outline-none focus:border-[#1F5A4C]"
                   />
                 </div>
 
@@ -1087,7 +1087,7 @@ export default function TreatmentsPage() {
               </div>
 
               {/* Window Selector */}
-              <div className="flex items-center justify-between bg-[#FAF8F5] p-2 rounded-2xl border border-[#E5DED5]">
+              <div className="flex items-center justify-between bg-[#F7F6F2] p-2 rounded-2xl border border-[#E5DED5]">
                 <span className="text-xs font-semibold text-[#68615C] pl-2">
                   Comparison Window:
                 </span>
@@ -1098,7 +1098,7 @@ export default function TreatmentsPage() {
                       onClick={() => handleChangeComparisonWindow(win)}
                       className={`px-3 py-1 rounded-xl text-xs font-semibold transition ${
                         comparisonWindow === win
-                          ? 'bg-[#965342] text-white'
+                          ? 'bg-[#1F5A4C] text-white'
                           : 'text-[#68615C] hover:bg-[#F0EBE3]'
                       }`}
                     >
@@ -1114,13 +1114,13 @@ export default function TreatmentsPage() {
                 <Card className="p-3.5 bg-white border-[#E5DED5] space-y-2">
                   <div className="flex items-center justify-between">
                     <span className="font-semibold text-[#231F1D] flex items-center gap-1.5">
-                      <Flame className="w-4 h-4 text-[#965342]" /> Hot Flashes
+                      <Flame className="w-4 h-4 text-[#1F5A4C]" /> Hot Flashes
                     </span>
                     <span className="text-xs font-bold text-[#68615C]">
                       {comparisonResult.hotFlashes.beforeDailyAvg}/day → {comparisonResult.hotFlashes.afterDailyAvg}/day
                     </span>
                   </div>
-                  <p className="text-[#554E48] text-xs leading-relaxed bg-[#FAF8F5] p-2.5 rounded-xl border border-[#EBE3D8]">
+                  <p className="text-[#554E48] text-xs leading-relaxed bg-[#F7F6F2] p-2.5 rounded-xl border border-[#EBE3D8]">
                     {comparisonResult.hotFlashes.statement}
                   </p>
                 </Card>
@@ -1135,7 +1135,7 @@ export default function TreatmentsPage() {
                       {comparisonResult.sleep.beforeAvgHours}h → {comparisonResult.sleep.afterAvgHours}h
                     </span>
                   </div>
-                  <p className="text-[#554E48] text-xs leading-relaxed bg-[#FAF8F5] p-2.5 rounded-xl border border-[#EBE3D8]">
+                  <p className="text-[#554E48] text-xs leading-relaxed bg-[#F7F6F2] p-2.5 rounded-xl border border-[#EBE3D8]">
                     {comparisonResult.sleep.statement}
                   </p>
                 </Card>
@@ -1148,7 +1148,7 @@ export default function TreatmentsPage() {
                       {comparisonResult.feeling.beforeAvg}/5 → {comparisonResult.feeling.afterAvg}/5
                     </span>
                   </div>
-                  <p className="text-[#554E48] text-xs leading-relaxed bg-[#FAF8F5] p-2.5 rounded-xl border border-[#EBE3D8]">
+                  <p className="text-[#554E48] text-xs leading-relaxed bg-[#F7F6F2] p-2.5 rounded-xl border border-[#EBE3D8]">
                     {comparisonResult.feeling.statement}
                   </p>
                 </Card>
@@ -1163,7 +1163,7 @@ export default function TreatmentsPage() {
                       {comparisonResult.topSymptomSeverities.map((sym) => (
                         <p
                           key={sym.symptomName}
-                          className="text-xs text-[#554E48] bg-[#FAF8F5] p-2 rounded-lg border border-[#EBE3D8]"
+                          className="text-xs text-[#554E48] bg-[#F7F6F2] p-2 rounded-lg border border-[#EBE3D8]"
                         >
                           {sym.statement}
                         </p>
@@ -1174,7 +1174,7 @@ export default function TreatmentsPage() {
               </div>
 
               {/* Strict Non-Causation Safety Guardrail */}
-              <div className="bg-[#FAF3F0] border border-[#ECD9D1] rounded-2xl p-3.5 text-xs text-[#965342] space-y-1">
+              <div className="bg-[#FAF3F0] border border-[#ECD9D1] rounded-2xl p-3.5 text-xs text-[#1F5A4C] space-y-1">
                 <p className="font-semibold flex items-center gap-1.5">
                   <AlertCircle className="w-4 h-4 shrink-0" />
                   Medical Correlation Disclaimer:

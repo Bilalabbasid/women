@@ -42,7 +42,7 @@ export default function OnboardingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF8F5] flex flex-col justify-between max-w-xl mx-auto px-4 py-6">
+    <div className="min-h-screen bg-[#F7F6F2] flex flex-col justify-between max-w-xl mx-auto px-4 py-6">
       {/* Top Header */}
       <div className="flex items-center justify-between mb-6">
         {step > 1 ? (
@@ -58,9 +58,9 @@ export default function OnboardingPage() {
         )}
 
         <div className="flex items-center gap-1.5">
-          <div className={`h-1.5 rounded-full transition-all ${step >= 1 ? 'w-6 bg-[#965342]' : 'w-2 bg-[#E5DED5]'}`} />
-          <div className={`h-1.5 rounded-full transition-all ${step >= 2 ? 'w-6 bg-[#965342]' : 'w-2 bg-[#E5DED5]'}`} />
-          <div className={`h-1.5 rounded-full transition-all ${step >= 3 ? 'w-6 bg-[#965342]' : 'w-2 bg-[#E5DED5]'}`} />
+          <div className={`h-1.5 rounded-full transition-all ${step >= 1 ? 'w-6 bg-[#1F5A4C]' : 'w-2 bg-[#E5DED5]'}`} />
+          <div className={`h-1.5 rounded-full transition-all ${step >= 2 ? 'w-6 bg-[#1F5A4C]' : 'w-2 bg-[#E5DED5]'}`} />
+          <div className={`h-1.5 rounded-full transition-all ${step >= 3 ? 'w-6 bg-[#1F5A4C]' : 'w-2 bg-[#E5DED5]'}`} />
         </div>
 
         <button
@@ -90,14 +90,14 @@ export default function OnboardingPage() {
               onClick={() => setStorageMode('device_only')}
               className={`cursor-pointer rounded-2xl border-2 p-4 transition-all ${
                 storageMode === 'device_only'
-                  ? 'border-[#965342] bg-[#FDF9F7] shadow-xs'
+                  ? 'border-[#1F5A4C] bg-[#FDF9F7] shadow-xs'
                   : 'border-[#E5DED5] bg-white hover:border-[#D0C7BC]'
               }`}
             >
               <div className="flex items-start gap-3">
                 <div
                   className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${
-                    storageMode === 'device_only' ? 'bg-[#965342] text-white' : 'bg-[#F3EFEA] text-[#68615C]'
+                    storageMode === 'device_only' ? 'bg-[#1F5A4C] text-white' : 'bg-[#EEF1EF] text-[#68615C]'
                   }`}
                 >
                   <HardDrive className="w-5 h-5" />
@@ -112,7 +112,7 @@ export default function OnboardingPage() {
                   <p className="text-xs text-[#554E48] mt-1 leading-relaxed">
                     Records stay purely in your device&apos;s IndexedDB. Zero cloud uploads, zero account required.
                   </p>
-                  <p className="text-xs text-[#5C554F] mt-2 bg-[#F3EFEA] p-2 rounded-lg">
+                  <p className="text-xs text-[#5C554F] mt-2 bg-[#EEF1EF] p-2 rounded-lg">
                     Note: Clearing your browser data will delete local logs. You can export encrypted backups anytime.
                   </p>
                 </div>
@@ -124,14 +124,14 @@ export default function OnboardingPage() {
               onClick={() => setStorageMode('temporary_cloud')}
               className={`cursor-pointer rounded-2xl border-2 p-4 transition-all ${
                 storageMode === 'temporary_cloud'
-                  ? 'border-[#965342] bg-[#FDF9F7] shadow-xs'
+                  ? 'border-[#1F5A4C] bg-[#FDF9F7] shadow-xs'
                   : 'border-[#E5DED5] bg-white hover:border-[#D0C7BC]'
               }`}
             >
               <div className="flex items-start gap-3">
                 <div
                   className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${
-                    storageMode === 'temporary_cloud' ? 'bg-[#965342] text-white' : 'bg-[#F3EFEA] text-[#68615C]'
+                    storageMode === 'temporary_cloud' ? 'bg-[#1F5A4C] text-white' : 'bg-[#EEF1EF] text-[#68615C]'
                   }`}
                 >
                   <Cloud className="w-5 h-5" />
@@ -176,7 +176,7 @@ export default function OnboardingPage() {
                   type="button"
                   className={`flex items-center justify-between p-3.5 rounded-xl border text-left text-xs transition-all ${
                     isSelected
-                      ? 'border-[#965342] bg-[#F7EFEA] text-[#231F1D] font-medium'
+                      ? 'border-[#1F5A4C] bg-[#E6EFEB] text-[#231F1D] font-medium'
                       : 'border-[#E5DED5] bg-white text-[#554E48] hover:border-[#D0C7BC]'
                   }`}
                 >
@@ -187,7 +187,7 @@ export default function OnboardingPage() {
                   <div
                     className={`w-5 h-5 rounded-full flex items-center justify-center border ${
                       isSelected
-                        ? 'bg-[#965342] border-[#965342] text-white'
+                        ? 'bg-[#1F5A4C] border-[#1F5A4C] text-white'
                         : 'border-[#D9D1C7]'
                     }`}
                   >

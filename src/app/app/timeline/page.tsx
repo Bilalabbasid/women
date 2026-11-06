@@ -132,12 +132,12 @@ export default function TimelinePage() {
         {/* Filter bar */}
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 bg-white p-2.5 rounded-2xl border border-[#E5DED5]">
           {/* View mode toggle */}
-          <div className="flex items-center gap-1 bg-[#FAF8F5] p-1 rounded-xl border border-[#EBE3D8]">
+          <div className="flex items-center gap-1 bg-[#F7F6F2] p-1 rounded-xl border border-[#EBE3D8]">
             <button
               onClick={() => setViewMode('all')}
               className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition ${
                 viewMode === 'all'
-                  ? 'bg-[#965342] text-white'
+                  ? 'bg-[#1F5A4C] text-white'
                   : 'text-[#68615C] hover:text-[#231F1D]'
               }`}
             >
@@ -147,7 +147,7 @@ export default function TimelinePage() {
               onClick={() => setViewMode('checkins')}
               className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition ${
                 viewMode === 'checkins'
-                  ? 'bg-[#965342] text-white'
+                  ? 'bg-[#1F5A4C] text-white'
                   : 'text-[#68615C] hover:text-[#231F1D]'
               }`}
             >
@@ -157,7 +157,7 @@ export default function TimelinePage() {
               onClick={() => setViewMode('treatments')}
               className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition ${
                 viewMode === 'treatments'
-                  ? 'bg-[#965342] text-white'
+                  ? 'bg-[#1F5A4C] text-white'
                   : 'text-[#68615C] hover:text-[#231F1D]'
               }`}
             >
@@ -177,8 +177,8 @@ export default function TimelinePage() {
                 onClick={() => setFilterDays(f.value as 7 | 14 | 30 | 60 | 90)}
                 className={`px-2.5 py-1 rounded-xl text-xs font-semibold transition ${
                   filterDays === f.value
-                    ? 'bg-[#965342] text-white shadow-xs'
-                    : 'text-[#68615C] hover:bg-[#F3EFEA] hover:text-[#231F1D]'
+                    ? 'bg-[#1F5A4C] text-white shadow-xs'
+                    : 'text-[#68615C] hover:bg-[#EEF1EF] hover:text-[#231F1D]'
                 }`}
               >
                 {f.label}
@@ -190,7 +190,7 @@ export default function TimelinePage() {
         {/* Timeline Items */}
         {allDates.length === 0 && !isLoading ? (
           <Card variant="muted" className="p-8 text-center space-y-4">
-            <div className="w-12 h-12 rounded-2xl bg-[#F7EFEA] text-[#965342] flex items-center justify-center mx-auto">
+            <div className="w-12 h-12 rounded-2xl bg-[#E6EFEB] text-[#1F5A4C] flex items-center justify-center mx-auto">
               <Calendar className="w-6 h-6" />
             </div>
             <div>
@@ -233,12 +233,12 @@ export default function TimelinePage() {
                 <div key={dateStr} className="relative space-y-2">
                   {/* Dot indicator */}
                   <div
-                    className={`absolute -left-6 sm:-left-8 top-1.5 w-6 h-6 rounded-full border-4 border-[#FAF8F5] flex items-center justify-center text-white ${
+                    className={`absolute -left-6 sm:-left-8 top-1.5 w-6 h-6 rounded-full border-4 border-[#F7F6F2] flex items-center justify-center text-white ${
                       entry
                         ? entry.overallFeeling >= 4
                           ? 'bg-[#2C6E49]'
                           : entry.overallFeeling === 3
-                          ? 'bg-[#965342]'
+                          ? 'bg-[#1F5A4C]'
                           : 'bg-[#B25E4B]'
                         : 'bg-[#5C554F]'
                     }`}
@@ -281,7 +281,7 @@ export default function TimelinePage() {
                     >
                       <div className="flex flex-wrap items-center gap-2">
                         {entry.hotFlashCount ? (
-                          <span className="inline-flex items-center gap-1 text-xs text-[#965342] bg-[#F7EFEA] px-2.5 py-1 rounded-lg font-medium">
+                          <span className="inline-flex items-center gap-1 text-xs text-[#1F5A4C] bg-[#E6EFEB] px-2.5 py-1 rounded-lg font-medium">
                             <Flame className="w-3.5 h-3.5" /> {entry.hotFlashCount} Hot Flashes
                           </span>
                         ) : null}
@@ -294,14 +294,14 @@ export default function TimelinePage() {
                         ) : null}
 
                         {entry.flow && entry.flow !== 'none' ? (
-                          <span className="inline-flex items-center gap-1 text-xs text-[#965342] bg-[#FAF3F0] px-2.5 py-1 rounded-lg font-medium capitalize">
+                          <span className="inline-flex items-center gap-1 text-xs text-[#1F5A4C] bg-[#FAF3F0] px-2.5 py-1 rounded-lg font-medium capitalize">
                             Flow: {entry.flow}
                           </span>
                         ) : null}
                       </div>
 
                       {entry.notes && (
-                        <p className="text-xs text-[#554E48] italic bg-[#FAF8F5] p-3 rounded-xl border border-[#EBE3D8] leading-relaxed">
+                        <p className="text-xs text-[#554E48] italic bg-[#F7F6F2] p-3 rounded-xl border border-[#EBE3D8] leading-relaxed">
                           &quot;{entry.notes}&quot;
                         </p>
                       )}
@@ -321,10 +321,10 @@ export default function TimelinePage() {
                               {entry.symptoms.map((s) => (
                                 <div
                                   key={s.id}
-                                  className="bg-[#FAF8F5] border border-[#E5DED5] p-2 rounded-lg text-xs"
+                                  className="bg-[#F7F6F2] border border-[#E5DED5] p-2 rounded-lg text-xs"
                                 >
                                   <p className="font-medium text-[#231F1D] truncate">{s.name}</p>
-                                  <p className="text-[#965342] font-semibold text-xs">
+                                  <p className="text-[#1F5A4C] font-semibold text-xs">
                                     Severity: {s.severity}/5
                                   </p>
                                 </div>
@@ -343,11 +343,11 @@ export default function TimelinePage() {
                         <Card
                           key={evt.id}
                           variant="muted"
-                          className="p-3 bg-[#FAF8F5] border-[#E5DCD2] flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs"
+                          className="p-3 bg-[#F7F6F2] border-[#E5DCD2] flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs"
                         >
                           <div className="space-y-0.5">
                             <div className="flex items-center gap-2">
-                              <Pill className="w-4 h-4 text-[#965342]" />
+                              <Pill className="w-4 h-4 text-[#1F5A4C]" />
                               <strong className="text-[#231F1D]">{evt.treatmentName}</strong>
                               <span
                                 className={`text-xs px-2 py-0.5 rounded-full font-bold uppercase ${
@@ -360,7 +360,7 @@ export default function TimelinePage() {
                               </span>
                             </div>
                             {evt.site && (
-                              <p className="text-xs text-[#965342] flex items-center gap-1 pl-6">
+                              <p className="text-xs text-[#1F5A4C] flex items-center gap-1 pl-6">
                                 <RotateCcw className="w-3 h-3" /> {evt.site}
                               </p>
                             )}
@@ -373,7 +373,7 @@ export default function TimelinePage() {
                             size="sm"
                             variant="outline"
                             onClick={(e) => handleOpenComparison(evt, e)}
-                            className="text-xs px-2.5 py-1 min-h-[44px] gap-1 text-[#965342] hover:bg-[#F7EFEA] self-start sm:self-center"
+                            className="text-xs px-2.5 py-1 min-h-[44px] gap-1 text-[#1F5A4C] hover:bg-[#E6EFEB] self-start sm:self-center"
                           >
                             <Sparkles className="w-3 h-3" /> Compare Before & After
                           </Button>
@@ -416,7 +416,7 @@ export default function TimelinePage() {
               </div>
 
               {/* Window Selector */}
-              <div className="flex items-center justify-between bg-[#FAF8F5] p-2 rounded-2xl border border-[#E5DED5]">
+              <div className="flex items-center justify-between bg-[#F7F6F2] p-2 rounded-2xl border border-[#E5DED5]">
                 <span className="text-xs font-semibold text-[#68615C] pl-2">
                   Comparison Window:
                 </span>
@@ -427,7 +427,7 @@ export default function TimelinePage() {
                       onClick={() => handleChangeComparisonWindow(win)}
                       className={`px-3 py-1 rounded-xl text-xs font-semibold transition ${
                         comparisonWindow === win
-                          ? 'bg-[#965342] text-white'
+                          ? 'bg-[#1F5A4C] text-white'
                           : 'text-[#68615C] hover:bg-[#F0EBE3]'
                       }`}
                     >
@@ -443,13 +443,13 @@ export default function TimelinePage() {
                 <Card className="p-3.5 bg-white border-[#E5DED5] space-y-2">
                   <div className="flex items-center justify-between">
                     <span className="font-semibold text-[#231F1D] flex items-center gap-1.5">
-                      <Flame className="w-4 h-4 text-[#965342]" /> Hot Flashes
+                      <Flame className="w-4 h-4 text-[#1F5A4C]" /> Hot Flashes
                     </span>
                     <span className="text-xs font-bold text-[#68615C]">
                       {comparisonResult.hotFlashes.beforeDailyAvg}/day → {comparisonResult.hotFlashes.afterDailyAvg}/day
                     </span>
                   </div>
-                  <p className="text-[#554E48] text-xs leading-relaxed bg-[#FAF8F5] p-2.5 rounded-xl border border-[#EBE3D8]">
+                  <p className="text-[#554E48] text-xs leading-relaxed bg-[#F7F6F2] p-2.5 rounded-xl border border-[#EBE3D8]">
                     {comparisonResult.hotFlashes.statement}
                   </p>
                 </Card>
@@ -464,7 +464,7 @@ export default function TimelinePage() {
                       {comparisonResult.sleep.beforeAvgHours}h → {comparisonResult.sleep.afterAvgHours}h
                     </span>
                   </div>
-                  <p className="text-[#554E48] text-xs leading-relaxed bg-[#FAF8F5] p-2.5 rounded-xl border border-[#EBE3D8]">
+                  <p className="text-[#554E48] text-xs leading-relaxed bg-[#F7F6F2] p-2.5 rounded-xl border border-[#EBE3D8]">
                     {comparisonResult.sleep.statement}
                   </p>
                 </Card>
@@ -477,14 +477,14 @@ export default function TimelinePage() {
                       {comparisonResult.feeling.beforeAvg}/5 → {comparisonResult.feeling.afterAvg}/5
                     </span>
                   </div>
-                  <p className="text-[#554E48] text-xs leading-relaxed bg-[#FAF8F5] p-2.5 rounded-xl border border-[#EBE3D8]">
+                  <p className="text-[#554E48] text-xs leading-relaxed bg-[#F7F6F2] p-2.5 rounded-xl border border-[#EBE3D8]">
                     {comparisonResult.feeling.statement}
                   </p>
                 </Card>
               </div>
 
               {/* Strict Non-Causation Safety Guardrail */}
-              <div className="bg-[#FAF3F0] border border-[#ECD9D1] rounded-2xl p-3.5 text-xs text-[#965342] space-y-1">
+              <div className="bg-[#FAF3F0] border border-[#ECD9D1] rounded-2xl p-3.5 text-xs text-[#1F5A4C] space-y-1">
                 <p className="font-semibold flex items-center gap-1.5">
                   <AlertCircle className="w-4 h-4 shrink-0" />
                   Medical Correlation Disclaimer:

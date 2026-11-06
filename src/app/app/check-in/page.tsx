@@ -236,7 +236,7 @@ export default function CheckinPage() {
             value={selectedDate}
             max={todayStr}
             onChange={(e) => setSelectedDate(e.target.value)}
-            className="text-xs font-medium text-[#231F1D] bg-[#FAF8F5] px-3 py-1.5 rounded-xl border border-[#E5DED5] focus:outline-none focus:border-[#965342]"
+            className="text-xs font-medium text-[#231F1D] bg-[#F7F6F2] px-3 py-1.5 rounded-xl border border-[#E5DED5] focus:outline-none focus:border-[#1F5A4C]"
           />
         </div>
 
@@ -254,7 +254,7 @@ export default function CheckinPage() {
               <label
                 key={value}
                 className={`min-h-[44px] flex items-center justify-center gap-2 rounded-xl border px-3 text-xs font-semibold cursor-pointer ${
-                  coversDays === value ? 'bg-[#1f5a4c] border-[#1f5a4c] text-white' : 'bg-[#FAF8F5] border-[#E5DED5] text-[#3E3834]'
+                  coversDays === value ? 'bg-[#1f5a4c] border-[#1f5a4c] text-white' : 'bg-[#F7F6F2] border-[#E5DED5] text-[#3E3834]'
                 }`}
               >
                 <input
@@ -279,12 +279,9 @@ export default function CheckinPage() {
 
         {/* Section 1: How are you feeling today? */}
         <section className="space-y-2">
-          <div className="flex items-center justify-between">
-            <label className="text-sm font-serif font-semibold text-[#231F1D]">
-              How are you feeling today?
-            </label>
-            <span className="text-xs text-[#68615C]">Overall baseline</span>
-          </div>
+          <h2 className="text-sm font-serif font-semibold text-[#231F1D]">
+            {weekly ? 'How was your week overall?' : 'How are you feeling today?'}
+          </h2>
 
           <div className="grid grid-cols-5 gap-2">
             {feelings.map((f) => {
@@ -296,7 +293,7 @@ export default function CheckinPage() {
                   onClick={() => setOverallFeeling(f.value)}
                   className={`py-2.5 px-1 rounded-2xl border text-center transition select-none active:scale-95 ${
                     isSelected
-                      ? 'bg-[#965342] border-[#965342] text-white shadow-xs'
+                      ? 'bg-[#1F5A4C] border-[#1F5A4C] text-white shadow-xs'
                       : 'bg-white border-[#E5DED5] text-[#554E48] hover:border-[#D0C7BC]'
                   }`}
                 >
@@ -319,7 +316,7 @@ export default function CheckinPage() {
                 <Moon className="w-4 h-4 text-[#577060]" />
                 {weekly ? "Average sleep per night" : "Sleep duration"}
               </span>
-              <span className="text-xs font-bold text-[#965342]">{sleepHours} hrs</span>
+              <span className="text-xs font-bold text-[#1F5A4C]">{sleepHours} hrs</span>
             </div>
 
             <div className="flex items-center justify-between gap-3 pt-1">
@@ -357,8 +354,8 @@ export default function CheckinPage() {
               onClick={() => setWokeAtNight(!wokeAtNight)}
               className={`w-full text-xs py-2 px-2.5 rounded-xl border flex items-center justify-center gap-1.5 transition ${
                 wokeAtNight
-                  ? 'bg-[#F7EFEA] border-[#E8D4C8] text-[#965342] font-semibold'
-                  : 'bg-[#FAF8F5] border-[#E5DED5] text-[#68615C]'
+                  ? 'bg-[#E6EFEB] border-[#C9DCD4] text-[#1F5A4C] font-semibold'
+                  : 'bg-[#F7F6F2] border-[#E5DED5] text-[#68615C]'
               }`}
             >
               <Clock className="w-3.5 h-3.5" />
@@ -371,10 +368,10 @@ export default function CheckinPage() {
           <Card className="p-4 bg-white space-y-3">
             <div className="flex items-center justify-between">
               <span className="text-xs font-semibold text-[#231F1D] flex items-center gap-1.5">
-                <Flame className="w-4 h-4 text-[#965342]" />
+                <Flame className="w-4 h-4 text-[#1F5A4C]" />
                 {weekly ? "Hot flashes this week" : "Hot flashes today"}
               </span>
-              <span className="text-xs font-bold text-[#965342]">{hotFlashCount} total</span>
+              <span className="text-xs font-bold text-[#1F5A4C]">{hotFlashCount} total</span>
             </div>
 
             <div className="flex items-center justify-between gap-3 pt-1">
@@ -414,8 +411,8 @@ export default function CheckinPage() {
         {/* Section 3: Cycle / Bleeding Observation */}
         <section className="space-y-2">
           <label className="text-sm font-serif font-semibold text-[#231F1D] flex items-center gap-1.5">
-            <Droplet className="w-4 h-4 text-[#965342]" />
-            Bleeding / Cycle Observation
+            <Droplet className="w-4 h-4 text-[#1F5A4C]" />
+            Bleeding or spotting
           </label>
           <div className="grid grid-cols-5 gap-2">
             {flows.map((fl) => {
@@ -427,7 +424,7 @@ export default function CheckinPage() {
                   onClick={() => setFlow(fl.id)}
                   className={`py-2 px-1 rounded-xl border text-xs font-medium transition text-center ${
                     isSelected
-                      ? 'bg-[#965342] border-[#965342] text-white shadow-xs'
+                      ? 'bg-[#1F5A4C] border-[#1F5A4C] text-white shadow-xs'
                       : 'bg-white border-[#E5DED5] text-[#554E48] hover:border-[#D0C7BC]'
                   }`}
                 >
@@ -443,7 +440,7 @@ export default function CheckinPage() {
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-sm font-serif font-semibold text-[#231F1D]">
-                Key Symptoms & Severity
+                Symptoms and how strong they are
               </h2>
               <p className="text-xs text-[#68615C]">1 = Mild • 5 = Severe • Tap again to deselect</p>
             </div>
@@ -487,8 +484,8 @@ export default function CheckinPage() {
                         onClick={() => toggleSymptomSeverity(symptom.id, lvl)}
                         className={`h-9 rounded-lg border text-xs font-semibold flex items-center justify-center transition active:scale-95 ${
                           currentSeverity === lvl
-                            ? 'bg-[#965342] border-[#965342] text-white shadow-xs'
-                            : 'bg-[#FAF8F5] border-[#E5DED5] text-[#68615C] hover:border-[#D0C7BC]'
+                            ? 'bg-[#1F5A4C] border-[#1F5A4C] text-white shadow-xs'
+                            : 'bg-[#F7F6F2] border-[#E5DED5] text-[#68615C] hover:border-[#D0C7BC]'
                         }`}
                       >
                         {lvl}
@@ -527,7 +524,7 @@ export default function CheckinPage() {
                         className={`h-9 rounded-lg border text-xs font-semibold flex items-center justify-center transition active:scale-95 ${
                           currentSeverity === lvl
                             ? 'bg-[#577060] border-[#577060] text-white shadow-xs'
-                            : 'bg-[#FAF8F5] border-[#E5DED5] text-[#68615C] hover:border-[#D0C7BC]'
+                            : 'bg-[#F7F6F2] border-[#E5DED5] text-[#68615C] hover:border-[#D0C7BC]'
                         }`}
                       >
                         {lvl}
@@ -564,8 +561,8 @@ export default function CheckinPage() {
                           onClick={() => toggleSymptomSeverity(symptom.id, lvl)}
                           className={`h-9 rounded-lg border text-xs font-semibold flex items-center justify-center transition active:scale-95 ${
                             currentSeverity === lvl
-                              ? 'bg-[#965342] border-[#965342] text-white shadow-xs'
-                              : 'bg-[#FAF8F5] border-[#E5DED5] text-[#68615C] hover:border-[#D0C7BC]'
+                              ? 'bg-[#1F5A4C] border-[#1F5A4C] text-white shadow-xs'
+                              : 'bg-[#F7F6F2] border-[#E5DED5] text-[#68615C] hover:border-[#D0C7BC]'
                           }`}
                         >
                           {lvl}
@@ -579,7 +576,7 @@ export default function CheckinPage() {
             <button
               type="button"
               onClick={() => setShowMoreSymptoms(!showMoreSymptoms)}
-              className="w-full py-2.5 text-xs text-[#965342] font-semibold flex items-center justify-center gap-1.5 bg-[#FAF8F5] border border-[#E5DED5] rounded-xl hover:bg-[#F3EFEA] transition"
+              className="w-full py-2.5 text-xs text-[#1F5A4C] font-semibold flex items-center justify-center gap-1.5 bg-[#F7F6F2] border border-[#E5DED5] rounded-xl hover:bg-[#EEF1EF] transition"
             >
               <span>{showMoreSymptoms ? 'Show Fewer Symptoms' : `Show All ${STANDARD_SYMPTOMS.length} Symptoms`}</span>
               {showMoreSymptoms ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
@@ -607,7 +604,7 @@ export default function CheckinPage() {
                 type="button"
                 onClick={() => setCaffeine(!caffeine)}
                 className={`p-2.5 rounded-xl border text-xs flex flex-col items-center gap-1 transition ${
-                  caffeine ? 'bg-[#F7EFEA] border-[#965342] text-[#965342] font-semibold' : 'border-[#E5DED5] text-[#68615C]'
+                  caffeine ? 'bg-[#E6EFEB] border-[#1F5A4C] text-[#1F5A4C] font-semibold' : 'border-[#E5DED5] text-[#68615C]'
                 }`}
               >
                 <Coffee className="w-4 h-4" />
@@ -618,7 +615,7 @@ export default function CheckinPage() {
                 type="button"
                 onClick={() => setAlcohol(!alcohol)}
                 className={`p-2.5 rounded-xl border text-xs flex flex-col items-center gap-1 transition ${
-                  alcohol ? 'bg-[#F7EFEA] border-[#965342] text-[#965342] font-semibold' : 'border-[#E5DED5] text-[#68615C]'
+                  alcohol ? 'bg-[#E6EFEB] border-[#1F5A4C] text-[#1F5A4C] font-semibold' : 'border-[#E5DED5] text-[#68615C]'
                 }`}
               >
                 <Wine className="w-4 h-4" />
@@ -642,7 +639,7 @@ export default function CheckinPage() {
         {/* Section 6: Talk or Type Free-Form Journal Notes */}
         <section className="space-y-2">
           <label htmlFor="journal-input" className="text-sm font-serif font-semibold text-[#231F1D]">
-            Personal Notes & Observations
+            Notes (optional)
           </label>
           <Card className="p-3 bg-white">
             <textarea
@@ -665,8 +662,8 @@ export default function CheckinPage() {
           })}
         />
 
-        {/* Bottom Save Action */}
-        <div className="pt-2 pb-8 space-y-3">
+        {/* Save: sticky, so it stays in reach above the bottom navigation on phones */}
+        <div className="sticky bottom-[4.5rem] md:bottom-4 z-30 -mx-4 space-y-1 border-t border-[#E5DED5] bg-[#F7F6F2]/95 px-4 pt-3 pb-3 backdrop-blur-sm">
           <Button
             variant="primary"
             size="lg"
@@ -675,13 +672,13 @@ export default function CheckinPage() {
             disabled={isSaving || savedSuccess}
             className="gap-2 text-base font-semibold"
           >
-            <Check className="w-5 h-5 stroke-[2.5]" />
-            <span>{isSaving ? 'Saving...' : 'Save to This Device'}</span>
+            <Check className="w-5 h-5 stroke-[2.5]" aria-hidden="true" />
+            <span>{isSaving ? 'Saving…' : savedSuccess ? 'Saved' : 'Save to this device'}</span>
           </Button>
 
           <p className="text-center text-xs text-[#5C554F] flex items-center justify-center gap-1.5">
-            <HardDrive className="w-3.5 h-3.5 text-[#2C6E49]" />
-            Stored on this device • Zero cloud transmission
+            <HardDrive className="w-3.5 h-3.5 text-[#2C6E49]" aria-hidden="true" />
+            Saved only in this browser. Nothing is uploaded.
           </p>
         </div>
       </div>
@@ -707,7 +704,7 @@ export default function CheckinPage() {
                 value={newCustomName}
                 onChange={(e) => setNewCustomName(e.target.value)}
                 placeholder="e.g. Tingling in fingers, Heart flutters..."
-                className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-[#E5DED5] focus:outline-none focus:border-[#965342]"
+                className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-[#E5DED5] focus:outline-none focus:border-[#1F5A4C]"
                 autoFocus
               />
 

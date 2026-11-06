@@ -49,7 +49,7 @@ export default function PricingPage() {
               onClick={() => setBillingCycle('annual')}
               className={`px-4 py-2 rounded-xl text-xs font-semibold transition ${
                 billingCycle === 'annual'
-                  ? 'bg-[#965342] text-white shadow-xs'
+                  ? 'bg-[#1F5A4C] text-white shadow-xs'
                   : 'text-[#68615C] hover:text-[#231F1D]'
               }`}
             >
@@ -59,7 +59,7 @@ export default function PricingPage() {
               onClick={() => setBillingCycle('monthly')}
               className={`px-4 py-2 rounded-xl text-xs font-semibold transition ${
                 billingCycle === 'monthly'
-                  ? 'bg-[#965342] text-white shadow-xs'
+                  ? 'bg-[#1F5A4C] text-white shadow-xs'
                   : 'text-[#68615C] hover:text-[#231F1D]'
               }`}
             >
@@ -69,10 +69,10 @@ export default function PricingPage() {
         </div>
 
         {/* Pricing Card */}
-        <Card className="bg-white border-2 border-[#965342] p-6 sm:p-7 space-y-6 relative overflow-hidden shadow-sm">
+        <Card className="bg-white border-2 border-[#1F5A4C] p-6 sm:p-7 space-y-6 relative overflow-hidden shadow-sm">
           <div className="flex items-start justify-between">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-[#965342]">
+              <span className="text-xs font-semibold uppercase tracking-wider text-[#1F5A4C]">
                 Full Membership
               </span>
               <div className="flex items-baseline gap-1 mt-1">

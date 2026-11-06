@@ -20,7 +20,7 @@ export default function TrackerLayout({ children }: { children: React.ReactNode 
   if (!isToolLive('symptom-tracker')) notFound();
 
   return (
-    <div className="app-shell flex min-h-screen flex-col bg-[#FAF8F5] text-[#231F1D]">
+    <div className="app-shell flex min-h-screen flex-col bg-[#F7F6F2] text-[#231F1D]">
       <OfflineIndicator />
       <MedicalDisclaimerBanner />
       <PWAInstallBanner />

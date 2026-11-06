@@ -76,7 +76,7 @@ export default function InsightsPage() {
       <div className="flex-1 max-w-2xl mx-auto w-full px-4 py-5 space-y-6">
         {/* Association vs Causation Guardrail Card */}
         <Card variant="muted" className="p-4 flex items-start gap-3 text-xs text-[#554E48]">
-          <Info className="w-4 h-4 text-[#965342] shrink-0 mt-0.5" />
+          <Info className="w-4 h-4 text-[#1F5A4C] shrink-0 mt-0.5" />
           <div>
             <p className="font-semibold text-[#231F1D] mb-0.5">Scientific Rigor Notice</p>
             <p className="leading-relaxed">
@@ -97,7 +97,7 @@ export default function InsightsPage() {
                 onClick={() => setSelectedRange(r)}
                 className={`px-3 py-1 rounded-lg text-xs font-semibold transition ${
                   selectedRange === r
-                    ? 'bg-[#965342] text-white shadow-xs'
+                    ? 'bg-[#1F5A4C] text-white shadow-xs'
                     : 'text-[#68615C] hover:text-[#231F1D]'
                 }`}
               >
@@ -109,7 +109,7 @@ export default function InsightsPage() {
 
         {recordCount === 0 && !isLoading ? (
           <Card variant="muted" className="p-8 text-center space-y-4">
-            <div className="w-12 h-12 rounded-2xl bg-[#F7EFEA] text-[#965342] flex items-center justify-center mx-auto">
+            <div className="w-12 h-12 rounded-2xl bg-[#E6EFEB] text-[#1F5A4C] flex items-center justify-center mx-auto">
               <BarChart3 className="w-6 h-6" />
             </div>
             <div>
@@ -135,7 +135,7 @@ export default function InsightsPage() {
             <div className="grid grid-cols-2 gap-3">
               <Card className="p-4 bg-white space-y-2">
                 <span className="text-xs text-[#68615C] flex items-center gap-1.5">
-                  <Flame className="w-3.5 h-3.5 text-[#965342]" />
+                  <Flame className="w-3.5 h-3.5 text-[#1F5A4C]" />
                   Hot Flash Frequency
                 </span>
                 <p className="text-2xl font-serif font-bold text-[#231F1D]">
@@ -183,7 +183,7 @@ export default function InsightsPage() {
                       <div className="flex items-center justify-between">
                         <span className="text-[#231F1D] font-medium">{sym.name}</span>
                         <div className="flex items-center gap-2">
-                          <span className="text-[#965342] font-semibold">
+                          <span className="text-[#1F5A4C] font-semibold">
                             Avg Sev: {sym.averageSeverity}/5
                           </span>
                           <span className="text-[#68615C]">
@@ -191,9 +191,9 @@ export default function InsightsPage() {
                           </span>
                         </div>
                       </div>
-                      <div className="w-full bg-[#F3EFEA] rounded-full h-2 overflow-hidden">
+                      <div className="w-full bg-[#EEF1EF] rounded-full h-2 overflow-hidden">
                         <div
-                          className="bg-[#965342] h-full rounded-full transition-all duration-300"
+                          className="bg-[#1F5A4C] h-full rounded-full transition-all duration-300"
                           style={{ width: `${sym.frequencyPercent}%` }}
                         />
                       </div>

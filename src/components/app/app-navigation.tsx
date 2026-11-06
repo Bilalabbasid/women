@@ -35,7 +35,7 @@ export function AppNavigation() {
       {/* Mobile Bottom Navigation (screens < 768px) */}
       <nav
         aria-label="Bottom Navigation"
-        className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-lg border-t border-[#E5DED5] pb-[env(safe-area-inset-bottom,0px)]"
+        className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#F7F6F2]/95 backdrop-blur-lg border-t border-[#E5DED5] pb-[env(safe-area-inset-bottom,0px)]"
       >
         <div className="grid grid-cols-5 h-16 max-w-lg mx-auto px-1">
           {NAV_ITEMS.map((item) => {
@@ -51,14 +51,14 @@ export function AppNavigation() {
                 className={clsx(
                   'flex flex-col items-center justify-center gap-1 transition-colors select-none group min-h-[48px]',
                   isActive
-                    ? 'text-[#965342] font-semibold'
+                    ? 'text-[#1F5A4C] font-semibold'
                     : 'text-[#5C554F] hover:text-[#231F1D]'
                 )}
               >
                 <div
                   className={clsx(
                     'w-9 h-7 rounded-full flex items-center justify-center transition-all',
-                    isActive ? 'bg-[#F7EFEA]' : 'group-hover:bg-[#F3EFEA]'
+                    isActive ? 'bg-[#E6EFEB]' : 'group-hover:bg-[#EEF1EF]'
                   )}
                 >
                   <Icon
@@ -91,7 +91,7 @@ export function AppNavigation() {
                 className={clsx(
                   'flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors',
                   isActive
-                    ? 'border-[#965342] text-[#965342]'
+                    ? 'border-[#1F5A4C] text-[#1F5A4C]'
                     : 'border-transparent text-[#68615C] hover:text-[#231F1D] hover:border-[#D9D1C7]'
                 )}
               >

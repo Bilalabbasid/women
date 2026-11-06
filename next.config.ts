@@ -51,6 +51,20 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
+      // www → apex in ONE hop. Page paths keep their trailing slash so the
+      // apex doesn't redirect a second time; file paths (with a dot) don't get one.
+      {
+        source: '/',
+        has: [{ type: 'host', value: 'www.menoverdict.com' }],
+        destination: 'https://menoverdict.com/',
+        permanent: true,
+      },
+      {
+        source: '/:path((?:[^/]+/)*[^/.]+)/?',
+        has: [{ type: 'host', value: 'www.menoverdict.com' }],
+        destination: 'https://menoverdict.com/:path/',
+        permanent: true,
+      },
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'www.menoverdict.com' }],

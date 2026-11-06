@@ -136,7 +136,7 @@ export function PWAInstallBanner({ variant = 'banner' }: { variant?: 'banner' | 
 
   return (
     <>
-      <div role="region" aria-label="Install the app" className="border-b border-[#E8D4C8] bg-[#F7EFEA] px-4 py-2.5">
+      <div role="region" aria-label="Install the app" className="border-b border-[#C9DCD4] bg-[#E6EFEB] px-4 py-2.5">
         <div className="mx-auto flex max-w-2xl items-center justify-between gap-3">
           <p className="text-[#231F1D]">
             <strong>Install the tracker</strong> so it opens from your home screen and works offline.

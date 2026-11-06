@@ -121,7 +121,7 @@ export default function DashboardPage() {
 
       <div className="flex-1 max-w-2xl mx-auto w-full px-4 py-5 space-y-5">
         {/* Storage status banner */}
-        <div className="bg-[#FAF8F5] border border-[#E5DED5] rounded-xl px-3.5 py-1.5 flex items-center justify-between text-xs text-[#68615C]">
+        <div className="bg-[#F7F6F2] border border-[#E5DED5] rounded-xl px-3.5 py-1.5 flex items-center justify-between text-xs text-[#68615C]">
           <span className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-[#2C6E49]" />
             <span>Stored on this device (IndexedDB)</span>
@@ -164,13 +164,13 @@ export default function DashboardPage() {
                     onClick={() => handleQuickFeelingSelect(f.value as 1 | 2 | 3 | 4 | 5)}
                     className={`flex flex-col items-center justify-center p-2.5 sm:p-3 rounded-2xl border transition-all text-center select-none active:scale-95 ${
                       isSelected
-                        ? 'border-[#965342] bg-[#F7EFEA] text-[#231F1D] font-semibold ring-2 ring-[#965342]/20'
+                        ? 'border-[#1F5A4C] bg-[#E6EFEB] text-[#231F1D] font-semibold ring-2 ring-[#1F5A4C]/20'
                         : 'border-[#E5DED5] bg-white text-[#554E48] hover:border-[#D0C7BC] hover:bg-[#FDFBF8]'
                     }`}
                   >
                     <div
                       className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-serif font-bold mb-1.5 transition-colors ${
-                        isSelected ? 'bg-[#965342] text-white' : 'bg-[#F3EFEA] text-[#68615C]'
+                        isSelected ? 'bg-[#1F5A4C] text-white' : 'bg-[#EEF1EF] text-[#68615C]'
                       }`}
                     >
                       {f.value}
@@ -197,7 +197,7 @@ export default function DashboardPage() {
             <h3 id="treatment-heading" className="text-sm font-semibold text-[#231F1D]">
               Today’s Treatment Schedule
             </h3>
-            <Link href="/app/treatments/" className="text-xs text-[#965342] hover:underline font-medium">
+            <Link href="/app/treatments/" className="text-xs text-[#1F5A4C] hover:underline font-medium">
               Manage Regimens
             </Link>
           </div>
@@ -233,7 +233,7 @@ export default function DashboardPage() {
                     {due.map((t) => (
                       <Card key={t.id} className="p-4 flex items-center justify-between gap-3 bg-white">
                         <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-xl bg-[#F7EFEA] text-[#965342] flex items-center justify-center shrink-0">
+                          <div className="w-10 h-10 rounded-xl bg-[#E6EFEB] text-[#1F5A4C] flex items-center justify-center shrink-0">
                             <Pill className="w-5 h-5" />
                           </div>
                           <div>
@@ -267,7 +267,7 @@ export default function DashboardPage() {
                       <Card
                         key={t.id}
                         variant="muted"
-                        className="p-3 bg-[#FAF8F5] border-[#E2DBD1] flex items-center justify-between text-xs"
+                        className="p-3 bg-[#F7F6F2] border-[#E2DBD1] flex items-center justify-between text-xs"
                       >
                         <div className="flex items-center gap-2.5">
                           <div className="w-5 h-5 rounded-full bg-[#EFF7F2] text-[#2C6E49] flex items-center justify-center shrink-0">
@@ -291,7 +291,7 @@ export default function DashboardPage() {
             <h3 id="recent-summary-heading" className="text-sm font-semibold text-[#231F1D]">
               Recent Logs
             </h3>
-            <Link href="/app/timeline/" className="text-xs text-[#965342] hover:underline font-medium">
+            <Link href="/app/timeline/" className="text-xs text-[#1F5A4C] hover:underline font-medium">
               View Full Timeline
             </Link>
           </div>
@@ -327,7 +327,7 @@ export default function DashboardPage() {
                         Feeling: {item.overallFeeling}/5
                       </Badge>
                       {item.hotFlashCount ? (
-                        <span className="text-xs text-[#8A5645] flex items-center gap-0.5">
+                        <span className="text-xs text-[#1F5A4C] flex items-center gap-0.5">
                           <Flame className="w-3 h-3" /> {item.hotFlashCount} flashes
                         </span>
                       ) : null}
@@ -354,11 +354,11 @@ export default function DashboardPage() {
         {/* Quick Navigation Cards */}
         <section className="grid grid-cols-2 gap-3 pt-2">
           <Link href="/app/insights/" className="block group">
-            <Card variant="default" className="p-4 h-full group-hover:border-[#965342] transition-colors">
-              <div className="w-8 h-8 rounded-lg bg-[#F7EFEA] text-[#965342] flex items-center justify-center mb-2">
+            <Card variant="default" className="p-4 h-full group-hover:border-[#1F5A4C] transition-colors">
+              <div className="w-8 h-8 rounded-lg bg-[#E6EFEB] text-[#1F5A4C] flex items-center justify-center mb-2">
                 <Brain className="w-4 h-4" />
               </div>
-              <p className="font-semibold text-xs text-[#231F1D] group-hover:text-[#965342] transition">
+              <p className="font-semibold text-xs text-[#231F1D] group-hover:text-[#1F5A4C] transition">
                 Symptom Trends
               </p>
               <p className="text-xs text-[#68615C] mt-0.5">
@@ -368,7 +368,7 @@ export default function DashboardPage() {
           </Link>
 
           <Link href="/app/doctor-report/" className="block group">
-            <Card variant="default" className="p-4 h-full group-hover:border-[#965342] transition-colors">
+            <Card variant="default" className="p-4 h-full group-hover:border-[#1F5A4C] transition-colors">
               <div className="w-8 h-8 rounded-lg bg-[#EFF5F0] text-[#2C6E49] flex items-center justify-center mb-2">
                 <Stethoscope className="w-4 h-4" />
               </div>

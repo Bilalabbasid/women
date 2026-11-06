@@ -33,7 +33,7 @@ export function AppHeader({
   };
 
   return (
-    <header className="no-print sticky top-0 z-30 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-[#EBE3D8] transition-all">
+    <header className="no-print sticky top-0 z-30 bg-[#F7F6F2]/90 backdrop-blur-md border-b border-[#EBE3D8] transition-all">
       <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
         {/* Left: Back or Brand Icon */}
         <div className="flex items-center gap-2.5">
@@ -41,7 +41,7 @@ export function AppHeader({
             <button
               onClick={handleBack}
               aria-label="Go back"
-              className="w-10 h-10 -ml-1 rounded-xl flex items-center justify-center text-[#554E48] hover:bg-[#F3EFEA] active:scale-95 transition"
+              className="w-10 h-10 -ml-1 rounded-xl flex items-center justify-center text-[#554E48] hover:bg-[#EEF1EF] active:scale-95 transition"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
@@ -84,7 +84,7 @@ export function AppHeader({
             <Link
               href="/app/settings/"
               aria-label="App Settings"
-              className="w-9 h-9 rounded-xl flex items-center justify-center text-[#68615C] hover:bg-[#F3EFEA] hover:text-[#231F1D] transition"
+              className="w-9 h-9 rounded-xl flex items-center justify-center text-[#68615C] hover:bg-[#EEF1EF] hover:text-[#231F1D] transition"
             >
               <Settings className="w-4 h-4" />
             </Link>

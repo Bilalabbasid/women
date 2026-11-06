@@ -6,19 +6,22 @@ const known = new Set(['/symptoms/hot-flashes/']);
 const render = (md: string) => renderMarkdown(md, { knownPaths: known, staticPaths: new Set(['/tools/']) });
 
 describe('markdown renderer', () => {
-  it('numbers citations in first-use order and links them to the reference list', () => {
+  it('collects citations in first-use order, with no inline marker in the body', () => {
     const r = render('One [@b-source]. Two [@a-source]. Again [@b-source].');
     expect(r.citations).toEqual(['b-source', 'a-source']);
-    expect(r.html).toContain('href="#ref-1"');
-    expect(r.html).toContain('href="#ref-2"');
-    expect(r.html.match(/href="#ref-1"/g)).toHaveLength(2);
+    // No inline [1]/[2] marker or #ref- link breaks up the reading flow —
+    // citations surface only in the end References list (owner decision,
+    // see DECISIONS.md). The sentence reads cleanly, with no stray space
+    // left where the bracket used to be.
+    expect(r.html).not.toContain('#ref-');
+    expect(r.html).not.toContain('@b-source');
+    expect(r.html).toContain('<p>One. Two. Again.</p>');
   });
 
-  it('splits a multi-source bracket into one numbered link per source', () => {
+  it('collects every id from a multi-source bracket, with no inline marker', () => {
     const r = render('This is supported [@a-source; @b-source].');
     expect(r.citations).toEqual(['a-source', 'b-source']);
-    expect(r.html).toContain('href="#ref-1"');
-    expect(r.html).toContain('href="#ref-2"');
+    expect(r.html).toContain('<p>This is supported.</p>');
     // Never leave the raw, un-parsed bracket text on the page.
     expect(r.html).not.toContain('@a-source');
     expect(r.html).not.toContain('@b-source');
@@ -26,9 +29,9 @@ describe('markdown renderer', () => {
   });
 
   it('handles three or more sources in one bracket', () => {
-    const r = render('[@a-source; @b-source; @c-source]');
+    const r = render('Clear now [@a-source; @b-source; @c-source].');
     expect(r.citations).toEqual(['a-source', 'b-source', 'c-source']);
-    expect(r.html.match(/class="cite"/g)).toHaveLength(3);
+    expect(r.html).toContain('<p>Clear now.</p>');
   });
 
   it('drops links to pages that are not in this build, keeping the words', () => {

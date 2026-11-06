@@ -15,9 +15,10 @@ import type { Root as HRoot, Element } from 'hast';
  * (remark-rehype drops it), so pages cannot smuggle in scripts or tracking.
  *
  * Content conventions:
- *  - Citations: `[@source-id]` → numbered superscript linking to #ref-N.
- *    One bracket may hold several, semicolon-separated: `[@id-1; @id-2]` →
- *    two separate numbered links, one per source.
+ *  - Citations: `[@source-id]` marks which sentence a source backs, but
+ *    renders nothing inline (owner decision, 2026-11-06) — it only adds that
+ *    source to the References list at the end of the page, in first-use
+ *    order. `[@id-1; @id-2]` in one bracket adds both.
  *  - Urgent sections: `:::urgent` … `:::` → <aside data-urgent>. Commercial
  *    content is banned inside (validate:cta).
  *  - Doctor questions: `:::questions` … `:::` → a list with copy and print controls.
@@ -108,6 +109,15 @@ const CITE_ID = `[a-z0-9]+(?:-[a-z0-9]+)*`;
 const CITE_RE = new RegExp(`\\[@${CITE_ID}(?:\\s*;\\s*@${CITE_ID})*\\]`, 'g');
 const CITE_ID_RE = new RegExp(`@(${CITE_ID})`, 'g');
 
+/**
+ * Citations are collected for the end References list only — no inline
+ * [1]/[2] marker is rendered in the body (owner decision, 2026-11-06, see
+ * DECISIONS.md). Reading a page shouldn't feel like reading a paper; the
+ * `[@id]`/`[@id-1; @id-2]` markers still mark exactly which source backs
+ * which sentence in the source file, but readers only see that at the
+ * bottom, as a linked, numbered list — the same sources, same order of
+ * first use, just not interrupting the prose.
+ */
 function remarkCitations(citations: string[]) {
   return () => (tree: MdRoot) => {
     visit(tree, 'text', (node: MdText, index, parent) => {
@@ -116,17 +126,14 @@ function remarkCitations(citations: string[]) {
       const out: PhrasingContent[] = [];
       let last = 0;
       for (const m of node.value.matchAll(CITE_RE)) {
-        if (m.index! > last) out.push({ type: 'text', value: node.value.slice(last, m.index) });
+        // Swallow one preceding space so "...fact [@id]." becomes "...fact.",
+        // not "...fact .", once the bracket itself is removed.
+        let start = m.index!;
+        if (start > last && node.value[start - 1] === ' ') start -= 1;
+        if (start > last) out.push({ type: 'text', value: node.value.slice(last, start) });
         for (const idMatch of m[0].matchAll(CITE_ID_RE)) {
           const id = idMatch[1];
           if (!citations.includes(id)) citations.push(id);
-          const n = citations.indexOf(id) + 1;
-          out.push({
-            type: 'link',
-            url: `#ref-${n}`,
-            data: { hProperties: { className: ['cite'], 'data-source': id, 'aria-label': `Reference ${n}` } },
-            children: [{ type: 'text', value: `[${n}]` }],
-          } as PhrasingContent);
         }
         last = m.index! + m[0].length;
       }

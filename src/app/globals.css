@@ -80,6 +80,21 @@
     text-wrap: balance;
   }
 
+  /*
+   * A fieldset's first <legend> is drawn straddling the top border, so the
+   * card's border line ran straight through every tool's bold section heading.
+   * Floating it takes it out of that special layout and makes it a normal
+   * heading inside the card (same approach as Bootstrap's reboot).
+   */
+  legend {
+    float: left;
+    width: 100%;
+    padding: 0;
+  }
+  legend + * {
+    clear: left;
+  }
+
   /* Visible focus for every interactive element, not only <Button>. */
   :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
     outline: 3px solid var(--color-accent);

@@ -14,6 +14,23 @@ describe('markdown renderer', () => {
     expect(r.html.match(/href="#ref-1"/g)).toHaveLength(2);
   });
 
+  it('splits a multi-source bracket into one numbered link per source', () => {
+    const r = render('This is supported [@a-source; @b-source].');
+    expect(r.citations).toEqual(['a-source', 'b-source']);
+    expect(r.html).toContain('href="#ref-1"');
+    expect(r.html).toContain('href="#ref-2"');
+    // Never leave the raw, un-parsed bracket text on the page.
+    expect(r.html).not.toContain('@a-source');
+    expect(r.html).not.toContain('@b-source');
+    expect(r.html).not.toContain(';');
+  });
+
+  it('handles three or more sources in one bracket', () => {
+    const r = render('[@a-source; @b-source; @c-source]');
+    expect(r.citations).toEqual(['a-source', 'b-source', 'c-source']);
+    expect(r.html.match(/class="cite"/g)).toHaveLength(3);
+  });
+
   it('drops links to pages that are not in this build, keeping the words', () => {
     const r = render('See [night sweats](/symptoms/night-sweats/) and [hot flashes](/symptoms/hot-flashes/).');
     expect(r.html).not.toContain('/symptoms/night-sweats/');

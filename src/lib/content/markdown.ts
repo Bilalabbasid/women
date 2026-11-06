@@ -16,6 +16,8 @@ import type { Root as HRoot, Element } from 'hast';
  *
  * Content conventions:
  *  - Citations: `[@source-id]` → numbered superscript linking to #ref-N.
+ *    One bracket may hold several, semicolon-separated: `[@id-1; @id-2]` →
+ *    two separate numbered links, one per source.
  *  - Urgent sections: `:::urgent` … `:::` → <aside data-urgent>. Commercial
  *    content is banned inside (validate:cta).
  *  - Doctor questions: `:::questions` … `:::` → a list with copy and print controls.
@@ -101,7 +103,10 @@ export function splitToolIslands(html: string): Array<{ html: string } | { tool:
   return parts;
 }
 
-const CITE_RE = /\[@([a-z0-9]+(?:-[a-z0-9]+)*)\]/g;
+const CITE_ID = `[a-z0-9]+(?:-[a-z0-9]+)*`;
+// One bracket may hold one or more @id refs, separated by `;` — e.g. `[@a]` or `[@a; @b; @c]`.
+const CITE_RE = new RegExp(`\\[@${CITE_ID}(?:\\s*;\\s*@${CITE_ID})*\\]`, 'g');
+const CITE_ID_RE = new RegExp(`@(${CITE_ID})`, 'g');
 
 function remarkCitations(citations: string[]) {
   return () => (tree: MdRoot) => {
@@ -111,16 +116,18 @@ function remarkCitations(citations: string[]) {
       const out: PhrasingContent[] = [];
       let last = 0;
       for (const m of node.value.matchAll(CITE_RE)) {
-        const id = m[1];
-        if (!citations.includes(id)) citations.push(id);
-        const n = citations.indexOf(id) + 1;
         if (m.index! > last) out.push({ type: 'text', value: node.value.slice(last, m.index) });
-        out.push({
-          type: 'link',
-          url: `#ref-${n}`,
-          data: { hProperties: { className: ['cite'], 'data-source': id, 'aria-label': `Reference ${n}` } },
-          children: [{ type: 'text', value: `[${n}]` }],
-        } as PhrasingContent);
+        for (const idMatch of m[0].matchAll(CITE_ID_RE)) {
+          const id = idMatch[1];
+          if (!citations.includes(id)) citations.push(id);
+          const n = citations.indexOf(id) + 1;
+          out.push({
+            type: 'link',
+            url: `#ref-${n}`,
+            data: { hProperties: { className: ['cite'], 'data-source': id, 'aria-label': `Reference ${n}` } },
+            children: [{ type: 'text', value: `[${n}]` }],
+          } as PhrasingContent);
+        }
         last = m.index! + m[0].length;
       }
       if (last < node.value.length) out.push({ type: 'text', value: node.value.slice(last) });

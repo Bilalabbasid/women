@@ -710,3 +710,78 @@
   key_finding: "1.8g/day omega-3 (EPA 425mg + DHA 100mg + other omega-3s 90mg per capsule) for 12 weeks did not significantly reduce VMS frequency vs. placebo (relative difference of 0.3 fewer hot flashes/day, 95% CI -0.5 to 1.0, p=0.28) or VMS bother (p=0.36). No improvement in self-reported sleep or mood vs. placebo (p>0.09 for all comparisons). Confirmed against the full open-access text (PMC), not just the abstract."
   funding_conflict: null
   verified: true
+
+- id: midi-health-own-site-2026
+  title: "Midi Health — pricing, insurance, and care model (own site)"
+  authors: []
+  publisher: Midi Health
+  year: 2026
+  type: other
+  url: https://www.joinmidi.com/
+  doi: null
+  accessed: "2026-11-06"
+  population: Prospective Midi Health patients (US)
+  key_finding: "Self-reported by Midi: live video visits with MDs/NPs produce a Care Plan (hormonal, non-hormonal, lifestyle); available in all 50 states. Self-pay: $250 first visit / $150 follow-up (excludes labs/meds). With insurance: average about $50 out-of-pocket per visit reported by Midi, deductible up to $250 (new) / $150 (follow-up), in-network with most (not all) major PPO plans. Does not accept Medicaid/Medi-Cal even self-pay; Medicare beneficiaries self-pay only, no claims submission."
+  funding_conflict: "Self-reported by the company being reviewed — treat as the company's own claims about its own service, not independent verification of care quality or outcomes."
+  verified: true
+  notes: "Confirmed directly: homepage for the care-model claims, and the Midi Health help-center article 'How much will my appointment cost?' for the exact pricing/deductible figures, which match word for word."
+
+- id: alloy-own-site-2026
+  title: "Alloy — care model and pricing model (own site)"
+  authors: []
+  publisher: Alloy
+  year: 2026
+  type: other
+  url: https://www.myalloy.com/
+  doi: null
+  accessed: "2026-11-06"
+  population: Prospective Alloy customers (US)
+  key_finding: "Self-reported by Alloy: medical intake (5-10 min) reviewed by a board-certified, menopause-specialized physician, treatment plan within about 12 hours, free delivery, 24/7 messaging. Hormone therapy offered as pill/patch/gel/spray/cream, described as FDA-approved. Also sells skincare, sexual health, GLP-1 weight care, hair/lash/brow, and gut-health products — a broader midlife wellness catalog, not menopause-exclusive. HSA/FSA eligible. Could not confirm a specific current consult price from public pages."
+  funding_conflict: "Self-reported by the company being reviewed."
+  verified: true
+  notes: "Confirmed directly on the homepage. The page also displays marketed outcome percentages (e.g. '95% of Alloy customers... symptom relief in 2 weeks or less') which are correctly excluded from this key_finding — unverifiable methodology, not independently confirmable."
+
+- id: evernow-own-site-2026
+  title: "Evernow — pricing and care model (own site)"
+  authors: []
+  publisher: Evernow
+  year: 2026
+  type: other
+  url: https://www.evernow.com/
+  doi: null
+  accessed: "2026-11-06"
+  population: Prospective Evernow patients (US)
+  key_finding: "Self-reported by Evernow: two pricing paths — one-time insurance-eligible visit, no membership required; or membership (ongoing messaging, optional insurance-eligible video visits, prescriptions, care plans) starting at $35/month. States it now accepts insurance for video visits. Care team described as specially certified in menopause/postmenopause; covers VMS, sexual health, body aches, mental health, weight, hair/skin, sleep. Sells supplements marketed to complement HRT."
+  funding_conflict: "Self-reported by the company being reviewed."
+  verified: true
+  notes: "Confirmed directly on the homepage, including the $35/month membership floor and the insurance-for-video-visits claim."
+
+- id: winona-own-site-2026
+  title: "Winona — treatment formats and care model (own site)"
+  authors: []
+  publisher: Winona
+  year: 2026
+  type: other
+  url: https://bywinona.com/treatments
+  doi: null
+  accessed: "2026-11-06"
+  population: Prospective Winona patients (US)
+  key_finding: "Self-reported by Winona, from its own /treatments page: body cream, vaginal cream, and pill formats are each explicitly labeled 'Compounded' (+ 'Plant-derived'); the patch format is labeled only 'Plant-derived', with no 'Compounded' tag. No blood/saliva hormone testing required before prescribing (citing The Menopause Society/NAMS and ACOG). No insurance billing (HSA/FSA reimbursement only)."
+  funding_conflict: "Self-reported by the company being reviewed."
+  verified: true
+  notes: "Confirmed directly, on both /treatments and the homepage. The homepage strings 'FDA-approved / Compounded / Plant-derived' together directly under '#1 Physician-Recommended Treatment for Menopause' and above all four delivery formats, which reads as if FDA approval applies across the board — while the /treatments page itself shows only the patch lacks the 'Compounded' tag. That juxtaposition is real, not an artifact of secondary reporting, and is directly relevant to the ACOG consensus already in the registry (acog-compounded-bioidentical-2023) on compounded vs. FDA-approved bioidentical hormones. Worth a second look before any comparison page states or implies Winona's cream/pill products are FDA-approved."
+
+- id: hims-hers-health-public-company-2026
+  title: "Hims & Hers Health, Inc. (NYSE: HIMS) — public company profile"
+  authors: []
+  publisher: "Public company filings/financial data aggregators (e.g. stockanalysis.com)"
+  year: 2026
+  type: other
+  url: https://stockanalysis.com/stocks/hims/company
+  doi: null
+  accessed: "2026-11-06"
+  population: Not applicable (corporate/public-markets fact)
+  key_finding: "Hims & Hers Health, Inc. trades on the NYSE under ticker HIMS; founded 2017, headquartered San Francisco; telehealth platform connecting patients with providers across specialties including erectile dysfunction, hair loss, skincare, mental health, and weight loss, alongside Hers' women's health offerings (menopause among them), using a catalog of generic, branded, and compounded prescription drugs plus OTC products. Used only to establish Hers' corporate/platform context — Hers' own site (forhers.com) blocks automated access on every page tried, so its menopause-specific pricing, insurance policy, and prescribing details could not be independently verified and are not stated anywhere on this site."
+  funding_conflict: null
+  notes: "Confirmed the block is real: forhers.com returns a Cloudflare interactive challenge (HTTP 403, 'Just a moment...') to a real browser session, not just to an API-based fetch. Do not state a specific Hers price, insurance policy, or prescribing detail anywhere without reading the real page first."
+  verified: true

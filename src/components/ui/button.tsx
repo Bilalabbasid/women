@@ -22,15 +22,15 @@ export function Button({
 
   const variants = {
     primary:
-      'bg-[#1F5A4C] text-white hover:bg-[#174A3E] focus-visible:ring-[#1F5A4C] shadow-sm',
+      'bg-[var(--color-accent)] text-[var(--color-paper)] hover:brightness-90 focus-visible:ring-[var(--color-accent)] shadow-sm',
     secondary:
-      'bg-[#577060] text-white hover:bg-[#465A4D] focus-visible:ring-[#577060] shadow-sm',
+      'bg-[var(--color-accent-soft)] text-[var(--color-accent)] hover:brightness-95 focus-visible:ring-[var(--color-accent)] shadow-sm',
     outline:
-      'border border-[#D9D1C7] bg-white text-[#231F1D] hover:bg-[#E6EFEB] hover:border-[#1F5A4C] focus-visible:ring-[#1F5A4C]',
+      'border border-[var(--color-rule)] bg-[var(--color-paper-raised)] text-[var(--color-ink)] hover:bg-[var(--color-accent-soft)] hover:border-[var(--color-accent)] focus-visible:ring-[var(--color-accent)]',
     ghost:
-      'text-[#68615C] hover:bg-[#EEF1EF] hover:text-[#231F1D] focus-visible:ring-[#1F5A4C]',
+      'text-[var(--color-ink-muted)] hover:bg-[var(--color-accent-soft)] hover:text-[var(--color-ink)] focus-visible:ring-[var(--color-accent)]',
     danger:
-      'bg-[#A33A33] text-white hover:bg-[#882F2A] focus-visible:ring-[#A33A33]',
+      'bg-[var(--color-urgent)] text-[var(--color-paper)] hover:brightness-90 focus-visible:ring-[var(--color-urgent)]',
   };
 
   const sizes = {

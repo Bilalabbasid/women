@@ -41,7 +41,10 @@ worktree is already on its own branch, branched from `site-rebuild` at commit
 
 ## In progress (update when you start/finish touching a shared file)
 
-- _(empty — add `Lane X — <file> — <date> — <status>` entries here)_
+- Lane A — `src/components/ui/{badge,button,card}.tsx` — 2026-11-06 — done: replaced
+  hardcoded hex (several off-brand/drifted, including a peach badge border not in
+  BRAND.md's palette) with the `--color-*` tokens from `globals.css`. No API/props
+  changes, so nothing else needs to adjust call sites.
 
 ## Cross-lane requests
 

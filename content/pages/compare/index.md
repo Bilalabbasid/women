@@ -23,6 +23,7 @@ updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Published objective menopause telehealth comparison ranked by clinician credentials, insurance acceptance, and prescribing standards", material: true }
   - { date: "2026-11-06", summary: "Added links to 5 new standalone provider reviews", material: true }
+  - { date: "2026-11-07", summary: "Added links to 3 new head-to-head comparison pages", material: true }
 evidence_grade: per_option
 claims:
   - id: mht-most-effective-vms-gsm
@@ -38,7 +39,7 @@ safety_flags: [urgent_symptoms, bleeding, medication_interactions]
 cta_profile: care_comparison
 hub: null
 sources: [nams-2022-hormone-therapy, nams-2023-nonhormone-therapy, nice-ng23-recommendations, nhs-postmenopausal-bleeding, nhs-heart-palpitations, jmir-online-menopause-information-2025]
-related: [/care/, /treatments/, /perimenopause/questions-for-your-doctor/, /tools/symptom-tracker/, /compare/midi-review/, /compare/alloy-review/, /compare/evernow-review/, /compare/winona-review/, /compare/hers-review/]
+related: [/care/, /treatments/, /perimenopause/questions-for-your-doctor/, /tools/symptom-tracker/, /compare/midi-review/, /compare/alloy-review/, /compare/evernow-review/, /compare/winona-review/, /compare/hers-review/, /compare/midi-vs-alloy/, /compare/midi-vs-evernow/, /compare/alloy-vs-evernow/]
 affiliate_disclosure: false
 faq:
   - q: Do online menopause clinics require hormone blood tests before prescribing?
@@ -77,6 +78,10 @@ We never rank a telehealth provider based on whether they pay a referral fee. In
 ## Full individual reviews
 
 For a deeper look at any one service — including exactly what we could and couldn't verify ourselves — see our standalone reviews: [Midi Health](/compare/midi-review/), [Alloy](/compare/alloy-review/), [Evernow](/compare/evernow-review/), [Winona](/compare/winona-review/), and [Hers](/compare/hers-review/).
+
+## Head-to-head comparisons
+
+For a direct side-by-side on the three most-compared providers: [Midi vs. Alloy](/compare/midi-vs-alloy/), [Midi vs. Evernow](/compare/midi-vs-evernow/), and [Alloy vs. Evernow](/compare/alloy-vs-evernow/).
 
 ---
 

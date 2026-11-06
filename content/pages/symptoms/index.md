@@ -22,6 +22,7 @@ change_log:
   - { date: "2026-11-06", summary: "Initial launch of the symptoms directory", material: true }
   - { date: "2026-11-06", summary: "Linked 10 new symptom pages and added a specialist-situations section", material: true }
   - { date: "2026-11-06", summary: "Linked bloating, breast tenderness, hair thinning, and dry/itchy skin pages", material: true }
+  - { date: "2026-11-07", summary: "Linked dizziness, frozen shoulder, digestive changes, facial hair, acne, burning mouth, dry eyes, tinnitus, body odor, and tingling pages", material: true }
 evidence_grade: null
 claims:
   - id: core-symptom-diversity
@@ -46,6 +47,7 @@ Hot flashes and nocturnal sweating stem from altered temperature regulation in t
 - [Hot flashes (vasomotor symptoms)](/symptoms/hot-flashes/): sudden sensations of intense heat, flushed skin, and rapid heartbeat.
 - [Night sweats and nocturnal awakenings](/symptoms/night-sweats/): waking soaked in perspiration, often followed by chills around 3 a.m.
 - [Heart palpitations in perimenopause](/symptoms/heart-palpitations/): pounding or fluttering heartbeats around vasomotor surges, and when palpitations are an emergency.
+- **[Body odor changes](/symptoms/body-odor/)**: how increased sweating from hot flashes and night sweats likely connects to changes in body odor, and what the direct evidence gap actually looks like.
 
 ## Sleep and energy changes
 
@@ -64,16 +66,22 @@ Hormonal fluctuations affect central neurotransmitter pathways, contributing to 
 - **[Menopause anxiety](/symptoms/anxiety/)** and **[panic attacks](/symptoms/panic-attacks/)**: unexplained surges of apprehension, nervous tension, or panic-like sensations, and how to tell them apart from a cardiac or vasomotor event.
 - **[Low mood and depression](/symptoms/depression/)**: a heavier, more persistent low mood that NICE guidance treats as distinct from an ordinary diagnosis of depression.
 - **[Headaches](/symptoms/headaches/)** and **[migraines](/symptoms/migraines/)**: changing headache patterns, and why migraine with aura changes hormone therapy safety specifically.
+- **[Dizziness](/symptoms/dizziness/)**: lightheaded or off-balance sensations that correlate with hot flash severity, and the vestibular causes that can mimic it.
+- **[Tingling and formication](/symptoms/tingling/)**: prickling or crawling-skin sensations, and when they signal something other than menopause.
+- **[Tinnitus](/symptoms/tinnitus/)**: ringing or buzzing in the ears, and why the research on a menopause link is genuinely mixed.
 
 ## Musculoskeletal, metabolic, and tissue comfort
 
 Estrogen receptors are located throughout connective tissues, joints, and mucous membranes:
 
 - **[Joint and muscle pain](/symptoms/joint-pain/)**: morning stiffness and aching in hands, knees, shoulders, and hips.
+- **[Frozen shoulder](/symptoms/frozen-shoulder/)**: stiffness that restricts shoulder movement, and why the hormone link is less settled than clinical folklore suggests.
 - **[Weight gain and belly fat in menopause](/symptoms/weight-gain/)**: why body composition shifts toward abdominal fat and how resistance training protects muscle and bone.
 - **[Bloating](/symptoms/bloating/)**: digestive changes and a feeling of fullness, and what the evidence does (and doesn't yet) explain.
+- **[Digestive changes](/symptoms/digestive-changes/)**: constipation, altered bowel habits, and IBS flares, and when they need a doctor's check.
 - **[Breast tenderness](/symptoms/breast-tenderness/)**: cyclical, non-cyclical, and chest-wall pain patterns, and which breast changes need a check.
-- **[Hair thinning](/symptoms/hair-thinning/)** and **[dry, itchy skin](/symptoms/dry-itchy-skin/)**: what's actually driven by estrogen loss, and what evidence-based options exist.
+- **[Hair thinning](/symptoms/hair-thinning/)**, **[facial hair](/symptoms/facial-hair/)**, **[acne](/symptoms/acne/)**, and **[dry, itchy skin](/symptoms/dry-itchy-skin/)**: what's actually driven by estrogen loss, and what evidence-based options exist.
+- **[Dry eyes](/symptoms/dry-eyes/)** and **[burning mouth](/symptoms/burning-mouth/)**: two mucosal-dryness symptoms with real, studied hormone links.
 - **[Vaginal dryness (GSM)](/symptoms/vaginal-dryness/)**: tissue thinning, reduced natural lubrication, and burning or irritation.
 - **[Painful sex (dyspareunia)](/symptoms/painful-sex/)**: friction and discomfort during intimacy caused by thinning mucosal layers.
 - **[Low libido](/symptoms/low-libido/)**: a drop in sex drive that NICE guidance recognizes as a core menopause symptom in its own right.

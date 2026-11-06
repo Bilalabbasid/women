@@ -5,18 +5,21 @@ import Link from 'next/link';
 import { evaluateUrgentTriggers } from '@/lib/safety/urgent-triggers';
 import { UrgentGuidance } from '@/components/safety/urgent-guidance';
 import { markToolUsed } from '@/lib/pwa/install-gate';
+import type { EvidenceGrade } from '@/lib/content/schema';
+import { GradeBadge, GRADE_LABELS } from '@/components/site/evidence';
 
 const STORAGE_KEY = 'menoverdict_evidence_checker_v1';
 
-export type VerdictGrade = 'strong' | 'moderate' | 'limited' | 'not_supported';
-
+/** Catalog grades use the site-wide scale (`EvidenceGrade`) so a verdict reads the
+ * same way here as it does on an article page — same words, same colors. */
 export interface EvidenceEntry {
   id: string;
   name: string;
   category: 'Hormonal' | 'Non-hormonal Rx' | 'Behavioral & Physical' | 'Topical & Devices' | 'Supplements & Cooling';
   symptoms: string[];
-  grade: VerdictGrade;
-  gradeLabel: string;
+  grade: Exclude<EvidenceGrade, 'per_option'>;
+  /** Extra nuance beyond the plain grade word, e.g. "(with liver monitoring warning)". */
+  gradeNote?: string;
   verdictSummary: string;
   guidelineSource: string;
   articleUrl?: string;
@@ -29,7 +32,6 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     category: 'Hormonal',
     symptoms: ['Hot flashes & night sweats', 'Bone loss prevention', 'Genitourinary symptoms'],
     grade: 'strong',
-    gradeLabel: 'Strong evidence',
     verdictSummary:
       'The Menopause Society (2022) states systemic hormone therapy is the most effective treatment for vasomotor symptoms and prevents bone loss. Benefit-risk ratio is most favorable under age 60 or within 10 years of menopause onset without contraindications.',
     guidelineSource: 'The Menopause Society 2022 Position Statement; FDA 2025–2026 labeling updates',
@@ -41,7 +43,6 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     category: 'Hormonal',
     symptoms: ['Vaginal dryness & painful sex'],
     grade: 'strong',
-    gradeLabel: 'Strong evidence',
     verdictSummary:
       'Highly effective for moderate-to-severe genitourinary syndrome of menopause (vaginal dryness and painful sex) when non-hormonal moisturisers are not enough, with minimal systemic absorption.',
     guidelineSource: 'NAMS 2020 GSM Position Statement; Cochrane 2021',
@@ -53,7 +54,7 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     category: 'Non-hormonal Rx',
     symptoms: ['Hot flashes & night sweats'],
     grade: 'strong',
-    gradeLabel: 'Strong evidence (with liver monitoring warning)',
+    gradeNote: 'with liver monitoring warning',
     verdictSummary:
       'FDA-approved non-hormonal prescription option with Level I evidence for moderate-to-severe hot flashes. Carries an FDA boxed warning for liver injury (hepatotoxicity), requiring baseline and scheduled blood liver tests.',
     guidelineSource: 'NAMS 2023 Nonhormone Statement; FDA Veozah Prescribing Information (2026)',
@@ -65,7 +66,6 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     category: 'Non-hormonal Rx',
     symptoms: ['Hot flashes & night sweats'],
     grade: 'strong',
-    gradeLabel: 'Strong evidence',
     verdictSummary:
       'FDA-approved in October 2025 for moderate-to-severe vasomotor symptoms based on the Phase 3 OASIS 1–3 randomized trials in 1,420 women.',
     guidelineSource: 'FDA Approval / OASIS 1–3 clinical trial program (2025)',
@@ -77,7 +77,7 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     category: 'Non-hormonal Rx',
     symptoms: ['Hot flashes & night sweats'],
     grade: 'strong',
-    gradeLabel: 'Strong to moderate evidence (Level I–II)',
+    gradeNote: 'strong to moderate depending on option, Level I–II',
     verdictSummary:
       'Recommended by The Menopause Society (2023) as non-hormonal prescription options that reduce hot flash frequency and severity when hormone therapy is contraindicated or not chosen.',
     guidelineSource: 'The Menopause Society 2023 Nonhormone Therapy Position Statement',
@@ -89,7 +89,7 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     category: 'Behavioral & Physical',
     symptoms: ['Hot flashes & night sweats', 'Sleep & mood'],
     grade: 'strong',
-    gradeLabel: 'Strong evidence (Level I)',
+    gradeNote: 'Level I',
     verdictSummary:
       'The Menopause Society (2023) recommends CBT and clinical hypnosis (Level I) for reducing how much hot flashes bother daily life and sleep.',
     guidelineSource: 'The Menopause Society 2023 Nonhormone Therapy Position Statement',
@@ -101,7 +101,6 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     category: 'Behavioral & Physical',
     symptoms: ['Bladder leaks & urgency'],
     grade: 'strong',
-    gradeLabel: 'Strong evidence',
     verdictSummary:
       'First-line treatment in NICE NG123 and Cochrane systematic reviews (at least 3 months of structured contractions); participants in PFMT trials were 8 times more likely to report complete resolution of urinary leakage than inactive controls.',
     guidelineSource: 'NICE NG123 (2019); Cochrane Review CD005654 (2018)',
@@ -113,7 +112,7 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     category: 'Behavioral & Physical',
     symptoms: ['Bone loss prevention'],
     grade: 'strong',
-    gradeLabel: 'Strong evidence (for bone density & strength)',
+    gradeNote: 'for bone density & strength',
     verdictSummary:
       'In the LIFTMOR randomized trial, twice-weekly supervised high-intensity resistance and impact training improved lumbar spine and femoral neck bone mineral density and functional strength in postmenopausal women with low bone mass. (Not recommended by NAMS 2023 as a treatment for hot flashes.)',
     guidelineSource: 'LIFTMOR Trial (JBMR 2018); NAMS 2023 Nonhormone Statement',
@@ -125,7 +124,7 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     category: 'Topical & Devices',
     symptoms: ['Vaginal dryness & painful sex'],
     grade: 'moderate',
-    gradeLabel: 'Moderate evidence (First-line non-hormonal)',
+    gradeNote: 'first-line non-hormonal option',
     verdictSummary:
       'Recommended by NAMS (2020) and ACOG (2021) as first-line non-hormonal care: vaginal moisturisers used several times a week hydrate tissue continuously, while lubricants reduce friction during sex.',
     guidelineSource: 'NAMS 2020 GSM Statement; ACOG Clinical Consensus No. 2 (2021); Cochrane 2021',
@@ -137,7 +136,7 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     category: 'Supplements & Cooling',
     symptoms: ['Hot flashes & night sweats', 'Sleep & mood'],
     grade: 'limited',
-    gradeLabel: 'Limited clinical evidence (Comfort aid only)',
+    gradeNote: 'comfort aid only, not a treatment',
     verdictSummary:
       'The Menopause Society (2023) notes that cooling techniques are not recommended as a clinical treatment that stops vasomotor flashes (Level II), though many women use breathable layers and cooling pillows for practical comfort when night sweats wake them.',
     guidelineSource: 'The Menopause Society 2023 Nonhormone Therapy Position Statement',
@@ -149,7 +148,7 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     category: 'Supplements & Cooling',
     symptoms: ['Hot flashes & night sweats', 'Sleep & mood'],
     grade: 'not_supported',
-    gradeLabel: 'Not recommended by guidelines for hot flashes (Level I–II)',
+    gradeNote: 'Level I–II trials',
     verdictSummary:
       'The Menopause Society (2023) does not recommend over-the-counter supplements, herbal remedies, soy extracts, or cannabinoids for vasomotor symptoms because randomized trial results are inconsistent or no better than placebo.',
     guidelineSource: 'The Menopause Society 2023 Nonhormone Therapy Position Statement',
@@ -161,7 +160,7 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     category: 'Behavioral & Physical',
     symptoms: ['Hot flashes & night sweats'],
     grade: 'not_supported',
-    gradeLabel: 'Not recommended for hot flashes (Level I–II)',
+    gradeNote: 'Level I–II trials',
     verdictSummary:
       'Controlled trials found paced respiration (Level I) and acupuncture or relaxation (Level II) did not consistently outperform sham or control groups for reducing hot flashes.',
     guidelineSource: 'The Menopause Society 2023 Nonhormone Therapy Position Statement',
@@ -180,7 +179,7 @@ const SYMPTOM_FILTERS = [
 
 interface CheckerState {
   selectedSymptom: string;
-  selectedGrade: 'all' | VerdictGrade;
+  selectedGrade: 'all' | Exclude<EvidenceGrade, 'per_option'>;
   query: string;
   bookmarkedIds: string[];
   redFlags: string[];
@@ -281,7 +280,8 @@ export function DoesItWorkChecker({ liveUrls }: { liveUrls: string[] }) {
         bookmarkedOptions: bookmarkedItems.map((i) => ({
           id: i.id,
           name: i.name,
-          gradeLabel: i.gradeLabel,
+          gradeLabel: GRADE_LABELS[i.grade],
+          gradeNote: i.gradeNote,
           guidelineSource: i.guidelineSource,
         })),
       };
@@ -367,10 +367,11 @@ export function DoesItWorkChecker({ liveUrls }: { liveUrls: string[] }) {
               className="mt-1 min-h-[44px] w-full rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper)] px-3"
             >
               <option value="all">All evidence grades</option>
-              <option value="strong">Strong evidence</option>
-              <option value="moderate">Moderate evidence</option>
-              <option value="limited">Limited / comfort aid</option>
-              <option value="not_supported">Not recommended by guidelines</option>
+              <option value="strong">{GRADE_LABELS.strong}</option>
+              <option value="moderate">{GRADE_LABELS.moderate}</option>
+              <option value="limited">{GRADE_LABELS.limited}</option>
+              <option value="not_supported">{GRADE_LABELS.not_supported}</option>
+              <option value="harm_concern">{GRADE_LABELS.harm_concern}</option>
             </select>
           </div>
 
@@ -408,14 +409,6 @@ export function DoesItWorkChecker({ liveUrls }: { liveUrls: string[] }) {
           <ul className="space-y-4">
             {filtered.map((item) => {
               const saved = state.bookmarkedIds.includes(item.id);
-              const badgeColor =
-                item.grade === 'strong'
-                  ? 'bg-[#1D5B4C] text-white'
-                  : item.grade === 'moderate'
-                    ? 'bg-[#2B4C6F] text-white'
-                    : item.grade === 'limited'
-                      ? 'bg-[#6B5322] text-white'
-                      : 'bg-[#7A2E2E] text-white';
               return (
                 <li
                   key={item.id}
@@ -428,8 +421,11 @@ export function DoesItWorkChecker({ liveUrls }: { liveUrls: string[] }) {
                       </span>
                       <h3 className="text-xl font-semibold">{item.name}</h3>
                     </div>
-                    <span className={`rounded-full px-3 py-1 text-xs font-bold ${badgeColor}`}>{item.gradeLabel}</span>
+                    <GradeBadge grade={item.grade} methodHref="/evidence/how-we-grade/" />
                   </div>
+                  {item.gradeNote && (
+                    <p className="text-sm text-[var(--color-ink-muted)]">{item.gradeNote}</p>
+                  )}
                   <p>{item.verdictSummary}</p>
                   <p className="text-sm text-[var(--color-ink-muted)]">
                     <strong>Guideline source:</strong> {item.guidelineSource}
@@ -467,7 +463,8 @@ export function DoesItWorkChecker({ liveUrls }: { liveUrls: string[] }) {
           <ul className="list-disc space-y-1 pl-6">
             {bookmarkedItems.map((i) => (
               <li key={i.id}>
-                <strong>{i.name}</strong> — {i.gradeLabel} ({i.guidelineSource})
+                <strong>{i.name}</strong> — {GRADE_LABELS[i.grade]}
+                {i.gradeNote ? ` (${i.gradeNote})` : ''} ({i.guidelineSource})
               </li>
             ))}
           </ul>

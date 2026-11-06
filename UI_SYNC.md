@@ -284,3 +284,17 @@ the owner/functionality chat can make.)*
   `{"url": "http://localhost:3000"}` (no `name`) attaches directly to an
   already-running server instead of trying to start a second one — that's
   what let this session view/verify pages the whole time.
+- 2026-11-06 — This session (Lane D): "In this section" (hub children) and
+  "Related pages" were both plain stacked `<ul>` link lists, easy to skim
+  past on hub pages whose whole job is to funnel the reader onward. Turned
+  both into a 2-column (1 on mobile) grid of bordered link cards, same
+  language as `NextSteps`. Verified on `/perimenopause/` (4 children + 2
+  related) and `/symptoms/hot-flashes/` (6 related) at desktop + 375px —
+  holds up with uneven counts. `tsc --noEmit` and `eslint` on the file both
+  clean. Commit `cdd93e7`. Lane D's first pass (lead-answer card, FAQ cards,
+  children/related grids) is now done across symptom/does-it-work/
+  comparison/hub page types; next would be does-it-work's label-check /
+  who-should-avoid sections and a closer look at treatment pages, but
+  haven't found anything there that CSS-only, non-globals.css changes can
+  actually fix yet — most remaining gaps are either Foundation's file,
+  the markdown pipeline, or content authoring (see cross-lane notes).

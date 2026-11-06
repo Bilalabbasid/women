@@ -150,6 +150,25 @@ the owner/functionality chat can make.)*
   selection logic vs. card markup). Treat `product-block.tsx` /
   `product-slot.tsx` markup as part of Lane B if touched, but do not change
   slot-selection logic in `src/lib/products/` or `src/lib/cta/`.
+- **Citation rendering bug (not mine to fix, flagging for nextecom/markdown
+  pipeline):** `[@source-id]` renders as a proper numbered link, but
+  `[@source-id-1; @source-id-2]` (two or more sources in one bracket) renders
+  as the raw, un-parsed markdown text instead — readers see literal
+  `[@nams-2023-nonhormone-therapy; @gunter-menopause-manifesto]` on the page.
+  Seen live on `/does-it-work/black-cohosh/`, `/compare/`, and
+  `/treatments/hormone-therapy/`, so it's widespread, not one page's typo.
+  The citation parser is in `src/lib/content/markdown.ts` (off-limits to UI
+  lanes) — likely only matches a single `@id` per bracket, not a
+  semicolon-separated list.
+- **One content file fix, flagged since content/pages/\*\*.md is the
+  content-writing session's territory, not UI's:** `content/pages/does-it-work/
+  hormone-balance-supplements.md`'s first FAQ answer started with a quoted
+  phrase (`"Hormone balance"`) followed by more unquoted text on the same
+  line — invalid YAML (the `yaml` package parses it as a quoted scalar with
+  trailing content and throws). `getSiteData()` loads every page up front, so
+  this one file 500'd *every* route on the site, including the ones Lane D
+  needed to audit. Wrapped the value in single quotes; no wording changed,
+  nothing else touched. Commit `2b9e759`.
 
 ## Changelog
 
@@ -188,6 +207,18 @@ the owner/functionality chat can make.)*
   `stage-guide.tsx`, `symptoms-checklist.tsx`, `treatment-questions.tsx`,
   `twelve-month-counter.tsx` reviewed, no comparable drift found — already
   consistent with the design system.
+- 2026-11-06 — This session (Lane D): fixed the YAML bug 500ing the whole
+  site (see cross-lane notes) so pages could actually be audited. Then gave
+  every content page's opening paragraph — the symptom "quick answer", the
+  does-it-work verdict, the comparison "quick answer: ..." line, a hub's
+  intro — a distinct bordered/raised card via a Tailwind `:first-of-type`
+  selector on the first markdown-HTML part in `[...slug]/page.tsx`. No
+  wording changed, no `globals.css` edit (per the lane note above). Verified
+  on `/symptoms/hot-flashes/`, `/does-it-work/black-cohosh/`, `/compare/`,
+  `/treatments/hormone-therapy/` at desktop and 375px mobile widths. Flagged
+  the multi-citation rendering bug in cross-lane notes for nextecom. Next:
+  does-it-work "better-supported alternatives" section and comparison
+  provider-card styling.
 - 2026-11-06 — nextecom (functionality): confirmed the boundary list above,
   added two new seam notes (`site-chrome.tsx` notice import, `(site)/page.tsx`
   `exists()` filter — pull past these before restyling), and flagged three

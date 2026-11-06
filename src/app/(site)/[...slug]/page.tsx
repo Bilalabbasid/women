@@ -121,7 +121,22 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
           if (part.type === 'tool') return <ToolIsland key={`tool-${i}`} id={part.tool} />;
           if (part.type === 'product-slot') return <ProductSlotView key={`slot-${i}`} id={part.slot} />;
           if (part.type === 'product') return <ProductBlock key={`product-${i}`} id={part.product} />;
-          return <div key={`html-${i}`} className="prose" dangerouslySetInnerHTML={{ __html: part.html }} />;
+          // The opening paragraph is the page's stand-alone answer (symptom
+          // "quick answer", does-it-work verdict, comparison "quick answer: ...").
+          // Give it a distinct card so it reads as the answer at a glance,
+          // without changing or duplicating any wording.
+          const isLead = i === 0;
+          return (
+            <div
+              key={`html-${i}`}
+              className={
+                isLead
+                  ? 'prose [&>p:first-of-type]:rounded-xl [&>p:first-of-type]:border [&>p:first-of-type]:border-[var(--color-rule)] [&>p:first-of-type]:bg-[var(--color-paper-raised)] [&>p:first-of-type]:p-4 [&>p:first-of-type]:text-lg [&>p:first-of-type]:leading-relaxed'
+                  : 'prose'
+              }
+              dangerouslySetInnerHTML={{ __html: part.html }}
+            />
+          );
         })}
         {rendered.questionLists > 0 && <QuestionTools />}
 

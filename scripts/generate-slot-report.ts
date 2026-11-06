@@ -70,3 +70,4 @@ if (process.argv[1]?.includes('generate-slot-report')) {
   const p = generateSlotReport();
   console.log(`Generated slot report at ${p}`);
 }
+

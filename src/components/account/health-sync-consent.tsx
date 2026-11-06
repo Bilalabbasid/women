@@ -175,3 +175,4 @@ export function HealthSyncConsent({ userId, onConsentRecorded, onDeclined }: Hea
     </div>
   );
 }
+

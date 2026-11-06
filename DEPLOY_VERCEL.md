@@ -65,3 +65,4 @@ Vercel automatically passes `Authorization: Bearer <CRON_SECRET>` to cron reques
    - Symptom tracker: `https://your-domain.vercel.app/tools/symptom-tracker/`
    - XML Sitemap: `https://your-domain.vercel.app/sitemap.xml`
    - RSS Feed: `https://your-domain.vercel.app/feed.xml`
+

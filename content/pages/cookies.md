@@ -49,3 +49,4 @@ You can inspect, export, or clear this data at any time through your browser dev
 ## Managing your browser cookies
 
 You can instruct your browser to refuse all cookies or indicate when a cookie is being sent. However, because our public articles and guides are delivered as fast static pages, disabling cookies will not prevent you from reading any article or using our on-device tools.
+

@@ -21,3 +21,4 @@
 - `nams-2022-hormone-therapy`: NAMS 2022 Hormone Therapy Position Statement
 - `nams-2023-nonhormone-therapy`: NAMS Nonhormonal Guidelines
 - `veozah-prescribing-information`: FDA Prescribing Information for fezolinetant
+

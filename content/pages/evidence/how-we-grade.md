@@ -50,3 +50,4 @@ When reviewing options, we prioritize sources in the following order:
 - **Not supported**: Robust clinical trials demonstrate no significant benefit compared to placebo.
 - **Harm concern**: Credible evidence indicates that potential adverse effects (e.g., hepatotoxicity, increased thrombosis risk) outweigh potential benefits.
 - **Per option**: Used on symptom hub pages where multiple treatment choices are compared side-by-side in a graded summary table.
+

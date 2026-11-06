@@ -38,3 +38,4 @@ export async function DELETE(req: NextRequest) {
   const deleted = await accountService.deleteAllHealthData(userId);
   return NextResponse.json({ status: 'deleted', deletedCount: deleted });
 }
+

@@ -29,3 +29,4 @@
 - `nams-2022-hormone-therapy`: NAMS Position Statement on Vasomotor Symptoms
 - `nams-2023-nonhormone-therapy`: NAMS Nonhormonal Management of Vasomotor Symptoms
 - `straw-10-2012`: STRAW+10 staging system
+

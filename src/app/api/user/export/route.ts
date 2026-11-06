@@ -10,3 +10,4 @@ export async function GET(req: NextRequest) {
   const exportData = await accountService.exportUserData(userId);
   return NextResponse.json(exportData);
 }
+

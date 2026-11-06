@@ -45,3 +45,4 @@ You may view, print, and download individual pages, checklists, and question gui
 ## 3. Disclaimers and limitation of liability
 
 While we strive to ensure that all information accurately reflects peer-reviewed clinical literature and official regulatory guidelines, we make no warranties, express or implied, regarding completeness, reliability, or suitability for any particular purpose. To the maximum extent permitted by applicable law, we disclaim liability for any direct, indirect, incidental, or consequential damages arising from your use of this site.
+

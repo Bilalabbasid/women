@@ -41,3 +41,4 @@ CREATE INDEX IF NOT EXISTS idx_health_records_user ON stored_health_records(user
 
 -- Scheduled deletion query run at least daily:
 -- DELETE FROM stored_health_records WHERE expires_at <= NOW();
+

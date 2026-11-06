@@ -125,3 +125,4 @@ export class MemoryDatabaseAdapter implements DatabaseAdapter {
 
 // Global instance for local/test use
 export const defaultDbAdapter = new MemoryDatabaseAdapter();
+

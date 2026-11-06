@@ -96,3 +96,4 @@ Prompt 2 requires automatic deletion of expired health records at least daily. S
 4. Click **Save**.
 
 This calls the secured deletion endpoint daily, permanently removing records past their retention window (10, 20, 30, or 90 days).
+

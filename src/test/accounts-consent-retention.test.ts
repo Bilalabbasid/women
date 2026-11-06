@@ -129,3 +129,4 @@ describe('Accounts, Consent and Data Retention (Prompt 2)', () => {
     expect(checkData.length).toBe(0);
   });
 });
+

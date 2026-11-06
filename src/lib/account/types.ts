@@ -31,3 +31,4 @@ export interface ConsentInput {
   consentVersion: string;
   purpose?: 'server_sync' | 'ai_assistance';
 }
+

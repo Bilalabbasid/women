@@ -63,3 +63,4 @@ export function loadProductSlots(repoRoot: string = process.cwd()): Map<string, 
 export function getProductSlot(id: string): ProductSlot | undefined {
   return loadProductSlots().get(id);
 }
+

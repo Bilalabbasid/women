@@ -30,3 +30,4 @@ async function handleDeletion(req: NextRequest) {
     executedAt: new Date().toISOString(),
   });
 }
+

@@ -455,3 +455,26 @@ the owner/functionality chat can make.)*
   from git history (`git show 9c51770:SYNC.md`) if any lane still needs it.
 - 2026-11-06 — Lane G (tool-page SEO): rewrote titles, descriptions, H1s, how-to/method/example content, 5 unique FAQs and internal links on all six tool pages, regrouped `/tools/` by intent and dropped its duplicate `/app/today/` WebApplication (`cbbec89`, `cd060d0`, `4646fac`). Primary keywords unchanged (keyword-map). validate:seo/content/links/plan/cta: 0 errors on tool pages. Report: `reports/tool-seo-audit.md`.
 - 2026-11-06 — Lane F (local-first storage) + Lane D: IndexedDB v2 with per-tool autosave and dated history (`2f593f1`, `fa73968`), `/app/storage/` Manage storage with oldest-N-days / range / category / clear-all deletes and backup restore (`b6dded8`), tracker data fixes (`e47ef28`): UTC "today" filed evening entries under tomorrow, check-in carried one day's answers into another, quick-feeling erased notes/flow/lifestyle, timeline capped at 90 days, logged doses couldn't be removed. Also `.tap`/legend CSS (`5f11872`, `b5f63f9`), bookmark hydration (`b7d0417`), tool-first layout (`dba9a1d`), one WebApplication per tool guide (`8547d8d`). **Touched nextecom-owned lib files for correctness only**: `src/lib/tools/doctor-report{,-pdf}.ts`, `src/lib/notifications/treatment-reminders.ts` (UTC date → `src/lib/utils/local-date.ts`), and `content/_tools/*.yaml` privacy/shows text (now describes IndexedDB + history; the checklist spec's "never store ticks" rule is superseded by the owner's directive). Tests 119 → 148, all pass. Report: `reports/tool-storage-audit.md`.
+- 2026-11-07 — This session (Lane E), direct owner request, not a lane edit:
+  owner asked to remove the "paid links / Amazon Associate" disclosure from
+  pages that don't actually have an affiliate link. 19 pages had
+  `affiliate_disclosure: true`; cross-checked each against
+  `content/_products/products.yaml` (real `<Product id="..."/>` links) and
+  `slots.yaml` (`::product-slot{}` — every slot is `status: empty`, so no
+  real link even when referenced). 10 pages genuinely embed a live
+  `<Product>` link and stayed `true`. Flipped 9 to `false`: `compare/
+  {index,midi,alloy,evernow,hers,winona}-review`, `symptoms/{hot-flashes,
+  insomnia,waking-at-3am}` (commit `7e21d1e`). **First pass was wrong**: I
+  initially searched only for `::product{}` directive syntax and missed
+  that real products use `<Product id="..."/>` JSX syntax, so I nearly
+  removed the disclosure from the 10 pages that do have real links; caught
+  it before committing by cross-checking `products.yaml` directly, then
+  confirmed the final `git diff --stat` was exactly the intended 9 files
+  before committing. `validate:content`/`validate:cta` clean. Content/.md
+  is outside every lane's normal boundary — only touched because the owner
+  asked directly, and it's one boolean per file, not prose. **Not verified
+  live**: the shared dev server's `getSiteData()` caches content in memory
+  per-process with no file-watch invalidation, so `/compare/` still showed
+  the old text after this commit — a stale-cache artifact of the
+  long-running shared server, not a bug (confirmed correct via the
+  validators instead). Shows up next time that server restarts.

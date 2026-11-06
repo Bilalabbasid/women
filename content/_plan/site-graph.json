@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-06T16:31:33.559Z",
-  "total_pages": 33,
+  "generated_at": "2026-11-06T16:35:15.463Z",
+  "total_pages": 34,
   "nodes": {
     "/about/how-we-make-money/": {
       "url": "/about/how-we-make-money/",
@@ -186,6 +186,10 @@
           "anchor": "daily menopause care guides"
         },
         {
+          "url": "/compare/",
+          "anchor": "getting care hub"
+        },
+        {
           "url": "/",
           "anchor": "Home navigation"
         }
@@ -246,6 +250,10 @@
         {
           "url": "/care/",
           "anchor": "Evidence-based menopause books"
+        },
+        {
+          "url": "/compare/",
+          "anchor": "evidence-based menopause books"
         },
         {
           "url": "/does-it-work/exercise/",
@@ -472,6 +480,118 @@
         }
       ],
       "click_depth": 2
+    },
+    "/compare/": {
+      "url": "/compare/",
+      "title": "Best menopause telehealth: compared by credentials, cost, and insurance",
+      "status": "published",
+      "primary_keyword": "best menopause telehealth",
+      "intent": "commercial",
+      "cluster": "compare",
+      "hub": null,
+      "parent": "/",
+      "symptom_tags": [
+        "hot-flashes",
+        "night-sweats",
+        "vaginal-dryness",
+        "irregular-periods",
+        "insomnia",
+        "mood-changes"
+      ],
+      "page_type": "comparison",
+      "stage_tags": [
+        "perimenopause",
+        "menopause",
+        "postmenopause"
+      ],
+      "treatment_tags": [],
+      "tool_tags": [],
+      "required_links": [],
+      "related": [
+        "/care/",
+        "/treatments/",
+        "/perimenopause/questions-for-your-doctor/",
+        "/tools/symptom-tracker/"
+      ],
+      "updated_at": "2026-11-06",
+      "next_pages": [],
+      "previous_pages": [],
+      "canonical": "/compare/",
+      "redirect_from": [],
+      "outgoing_links": [
+        {
+          "url": "/treatments/",
+          "anchor": "menopause treatment guidelines",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/vaginal-dryness/",
+          "anchor": "low-dose vaginal estrogen",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "Level I non-hormonal prescriptions",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "fezolinetant",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/hormone-therapy/boxed-warning/",
+          "anchor": "FDA boxed warning considerations",
+          "contextual": true
+        },
+        {
+          "url": "/perimenopause/questions-for-your-doctor/",
+          "anchor": "doctor appointment question list",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "two-week symptom report",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/",
+          "anchor": "joint pain",
+          "contextual": true
+        },
+        {
+          "url": "/urgent-help/",
+          "anchor": "urgent help page",
+          "contextual": false
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "symptom tracker and doctor report",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptoms-checklist/",
+          "anchor": "perimenopause symptoms checklist",
+          "contextual": true
+        },
+        {
+          "url": "/care/",
+          "anchor": "getting care hub",
+          "contextual": true
+        },
+        {
+          "url": "/care/menopause-books/",
+          "anchor": "evidence-based menopause books",
+          "contextual": true
+        }
+      ],
+      "incoming_links": [
+        {
+          "url": "/",
+          "anchor": "Home navigation"
+        }
+      ],
+      "click_depth": 1
     },
     "/contact/": {
       "url": "/contact/",
@@ -927,6 +1047,11 @@
       "redirect_from": [],
       "outgoing_links": [
         {
+          "url": "/evidence/",
+          "anchor": "evidence evaluation standards",
+          "contextual": true
+        },
+        {
           "url": "/evidence/how-we-grade/",
           "anchor": "evidence grading method",
           "contextual": true
@@ -961,6 +1086,10 @@
         {
           "url": "/contact/",
           "anchor": "editorial policy"
+        },
+        {
+          "url": "/evidence/",
+          "anchor": "Editorial policy"
         },
         {
           "url": "/",
@@ -1054,6 +1183,11 @@
       "redirect_from": [],
       "outgoing_links": [
         {
+          "url": "/evidence/editorial-policy/",
+          "anchor": "Editorial policy",
+          "contextual": true
+        },
+        {
           "url": "/evidence/how-we-grade/",
           "anchor": "How we grade evidence",
           "contextual": true
@@ -1067,9 +1201,18 @@
           "url": "/about/how-we-make-money/",
           "anchor": "How we make money",
           "contextual": true
+        },
+        {
+          "url": "/tools/",
+          "anchor": "Interactive tools",
+          "contextual": true
         }
       ],
       "incoming_links": [
+        {
+          "url": "/evidence/editorial-policy/",
+          "anchor": "evidence evaluation standards"
+        },
         {
           "url": "/",
           "anchor": "Home navigation"
@@ -1419,6 +1562,10 @@
           "anchor": "questions to ask your doctor about perimenopause"
         },
         {
+          "url": "/compare/",
+          "anchor": "doctor appointment question list"
+        },
+        {
           "url": "/perimenopause/early-signs/",
           "anchor": "What to ask your doctor about perimenopause"
         },
@@ -1528,6 +1675,14 @@
         }
       ],
       "incoming_links": [
+        {
+          "url": "/compare/",
+          "anchor": "Level I non-hormonal prescriptions"
+        },
+        {
+          "url": "/compare/",
+          "anchor": "fezolinetant"
+        },
         {
           "url": "/evidence/updates/",
           "anchor": "Hot flashes in perimenopause"
@@ -1698,6 +1853,10 @@
         }
       ],
       "incoming_links": [
+        {
+          "url": "/compare/",
+          "anchor": "joint pain"
+        },
         {
           "url": "/symptoms/hot-flashes/",
           "anchor": "symptoms list"
@@ -1931,6 +2090,10 @@
           "anchor": "vaginal dryness after menopause"
         },
         {
+          "url": "/compare/",
+          "anchor": "low-dose vaginal estrogen"
+        },
+        {
           "url": "/symptoms/",
           "anchor": "Vaginal dryness (GSM)"
         }
@@ -2049,6 +2212,14 @@
         {
           "url": "/care/sleepwear-for-night-sweats/",
           "anchor": "symptom tracker"
+        },
+        {
+          "url": "/compare/",
+          "anchor": "two-week symptom report"
+        },
+        {
+          "url": "/compare/",
+          "anchor": "symptom tracker and doctor report"
         },
         {
           "url": "/contact/",
@@ -2184,6 +2355,10 @@
           "anchor": "symptoms checklist"
         },
         {
+          "url": "/compare/",
+          "anchor": "perimenopause symptoms checklist"
+        },
+        {
           "url": "/contact/",
           "anchor": "symptoms checklist"
         },
@@ -2279,6 +2454,10 @@
       ],
       "incoming_links": [
         {
+          "url": "/compare/",
+          "anchor": "FDA boxed warning considerations"
+        },
+        {
           "url": "/evidence/updates/",
           "anchor": "The FDA HRT boxed warning change, explained"
         },
@@ -2349,6 +2528,10 @@
         }
       ],
       "incoming_links": [
+        {
+          "url": "/compare/",
+          "anchor": "menopause treatment guidelines"
+        },
         {
           "url": "/does-it-work/magnesium/",
           "anchor": "menopause treatment options"

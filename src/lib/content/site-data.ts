@@ -30,7 +30,7 @@ export const CLUSTER_LABELS: Record<string, string> = {
 };
 
 /** Primary navigation hubs, in display order. Shown only when the hub page exists in this build. */
-export const NAV_HUBS = ['/perimenopause/', '/symptoms/', '/treatments/', '/does-it-work/', '/care/'] as const;
+export const NAV_HUBS = ['/perimenopause/', '/symptoms/', '/treatments/', '/does-it-work/', '/compare/', '/care/'] as const;
 
 export interface SiteData {
   store: ContentStore;

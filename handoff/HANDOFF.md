@@ -114,7 +114,11 @@ asks for an email. Logic lives in `src/lib/tools/stage-quiz.ts`, the component s
   redesign branch).
 
 ## 5. Merge the redesign branch, build, verify, push
-1. `ui-redesign` is at **008640b** (worktree `C:\Users\bilal.abbasi\Desktop\Redit-ui`).
+1. `ui-redesign` is at **008640b** and is **pushed to GitHub as its own branch, `origin/ui-redesign`**
+   (also checked out locally in the worktree `C:\Users\bilal.abbasi\Desktop\Redit-ui`). You MUST merge it:
+   it holds all of the redesign chat's work, and none of it is in `site-rebuild` yet. Get it with
+   `git fetch origin` and merge `origin/ui-redesign` (step 2). The commerce-removal chat's branch
+   (`free-site`) is already merged into `site-rebuild`; nothing to do for it.
    - Verified at 6a8d5ec: design system (tokens, components, `/dev/design-system`), site-wide dark mode,
      full tracker redesign; article template 7220fcd.
    - WIP, tsc-clean but not build-verified: new header (menu sheet, fuzzy search), homepage (uses
@@ -125,8 +129,12 @@ asks for an email. Logic lives in `src/lib/tools/stage-quiz.ts`, the component s
      of `src/components/site/verdict-hero.tsx` and `compare-cards.tsx`.
    - It owns `[...slug]/page.tsx` layout, site-chrome, homepage and globals.css; this branch owns
      behaviour (sw.js, manifest, /api/subscribe, markdown.ts rehype step, article.css, start-here.ts).
-2. `git merge ui-redesign` into `site-rebuild` (resolve conflicts keeping both: behaviour from
-   site-rebuild, visuals from ui-redesign). It already contains site-rebuild up to ba51eaf.
+2. On `site-rebuild`, run `git fetch origin` then `git merge origin/ui-redesign` (resolve conflicts
+   keeping both: behaviour from site-rebuild, visuals from ui-redesign). It already contains site-rebuild
+   up to ba51eaf, so expect conflicts only from the later commits (c96bb90 onwards and the WIP commit),
+   mostly in `src/app/(site)/[...slug]/page.tsx`, `src/components/tools/*`, `email-capture.tsx` and
+   `content/pages/**`. The redesign worktree also has one uncommitted file, `AGENTS.md`; ignore it unless
+   the owner says otherwise.
 3. Run everything; all must pass with 0 errors:
    ```bash
    npm run validate:source

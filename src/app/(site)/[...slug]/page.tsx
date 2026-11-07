@@ -8,7 +8,10 @@ import {
   draftProblems,
   childrenOf,
   relatedFor,
+  NAV_HUBS,
+  CLUSTER_LABELS,
 } from '@/lib/content/site-data';
+import { HubHero, HubDirectory } from '@/components/site/hub-hero';
 import { isPublishable, isMedicallyReviewed, indexablePages } from '@/lib/content/gate';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { contentPageLd, breadcrumbLd, faqLd, webApplicationLd } from '@/lib/seo/jsonld';
@@ -24,6 +27,7 @@ import { isToolLive } from '@/lib/tools/logic';
 import { JsonLd, Breadcrumbs } from '@/components/site/site-chrome';
 import { GradeBadge, ReviewLine, References, ChangeLog, DraftBanner, Toc } from '@/components/site/evidence';
 import { QuestionTools, SavedCopyNotice } from '@/components/site/client-islands';
+import { ToolHero, TOOL_HEROES } from '@/components/site/tool-hero';
 
 /** Only pages in this build exist. Anything else is a real 404. */
 export const dynamicParams = false;
@@ -66,13 +70,18 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
   const author = store.people.get(fm.author);
   const reviewer = fm.reviewer ? store.people.get(fm.reviewer) : undefined;
   const methodHref = byUrl.has('/evidence/how-we-grade/') ? '/evidence/how-we-grade/' : undefined;
-  const children = fm.page_type === 'hub' ? childrenOf(page.url) : [];
+  const isNavHub = (NAV_HUBS as readonly string[]).includes(page.url);
+  const children = fm.page_type === 'hub' || isNavHub ? childrenOf(page.url) : [];
   const related = relatedFor(page);
   const citationIds = [...rendered.citations, ...fm.sources.filter((s) => !rendered.citations.includes(s))];
   const faq = fm.faq ?? [];
   const parts = splitContentIslands(rendered.html);
   const firstToolIndex = parts.findIndex((p) => p.type === 'tool' && isToolLive(p.tool));
   const hasTool = firstToolIndex >= 0;
+  const toolHero = fm.page_type === 'tool' ? TOOL_HEROES[page.url] : undefined;
+  const toolHeroHref = toolHero?.appHref
+    ? isToolLive('symptom-tracker') ? toolHero.appHref : null
+    : hasTool ? '#tool' : null;
   const ld = [
     contentPageLd(page, store),
     breadcrumbLd(crumbs),
@@ -93,9 +102,30 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
           <Breadcrumbs crumbs={crumbs} />
           <BookmarkButton url={page.url} title={fm.title} />
         </div>
+        {toolHero && (
+          <ToolHero
+            config={toolHero}
+            title={fm.title}
+            description={fm.meta_description}
+            primaryHref={toolHeroHref}
+            guideHref={(() => {
+              const h = rendered.headings.find((x) => x.depth === 2);
+              return h ? `#${h.id}` : undefined;
+            })()}
+          />
+        )}
+        {isNavHub && (
+          <HubHero
+            eyebrow={`${CLUSTER_LABELS[fm.cluster] ?? fm.cluster} · Evidence-graded guides`}
+            title={fm.title}
+            description={fm.meta_description}
+            guideCount={children.length}
+            sections={rendered.headings.filter((h) => h.depth === 2 && h.id !== 'references')}
+          />
+        )}
         <header className="space-y-3">
-          <h1 className="text-3xl sm:text-4xl">{fm.title}</h1>
-          {hasTool && (
+          {!toolHero && !isNavHub && <h1 className="text-3xl sm:text-4xl">{fm.title}</h1>}
+          {hasTool && !toolHero && (
             <p className="no-print">
               <a href="#tool" className="tap font-semibold text-[var(--color-link)] underline">
                 Go straight to the tool ↓
@@ -124,7 +154,8 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
 
         <SavedCopyNotice reviewedAt={approved ? fm.reviewed_at : null} isMedical={page.isMedical} />
         {/* On tool pages the table of contents moves below the tool, so the tool itself is reached first. */}
-        {!hasTool && <Toc headings={rendered.headings} />}
+        {!hasTool && !isNavHub && <Toc headings={rendered.headings} />}
+        {isNavHub && children.length > 0 && <HubDirectory pages={children} heading="Guides in this section" />}
 
         {/* Out of the header so it isn't the very first thing under the H1, but still ahead of every
             part below — including the first paid link, if any — per the FTC-grounded "disclose before
@@ -154,13 +185,14 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
           // Give it a distinct card so it reads as the answer at a glance,
           // without changing or duplicating any wording.
           const isLead = i === 0;
+          const prose = toolHero || isNavHub ? 'prose steps' : 'prose';
           return (
             <div
               key={`html-${i}`}
               className={
                 isLead
-                  ? 'prose [&>p:first-of-type]:rounded-xl [&>p:first-of-type]:border [&>p:first-of-type]:border-[var(--color-rule)] [&>p:first-of-type]:bg-[var(--color-paper-raised)] [&>p:first-of-type]:p-4 [&>p:first-of-type]:text-lg [&>p:first-of-type]:leading-relaxed'
-                  : 'prose'
+                  ? `${prose} [&>p:first-of-type]:rounded-xl [&>p:first-of-type]:border [&>p:first-of-type]:border-[var(--color-rule)] [&>p:first-of-type]:bg-[var(--color-paper-raised)] [&>p:first-of-type]:p-4 [&>p:first-of-type]:text-lg [&>p:first-of-type]:leading-relaxed`
+                  : prose
               }
               dangerouslySetInnerHTML={{ __html: part.html }}
             />
@@ -174,7 +206,7 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
             sheet" was a real, nonsensical result of running this on every page). */}
         {page.isMedical && <EmailCapture title={`Get the ${fm.title.toLowerCase()} doctor question sheet`} />}
 
-        {children.length > 0 && (
+        {children.length > 0 && !isNavHub && (
           <section aria-labelledby="in-this-section" className="space-y-3">
             <h2 id="in-this-section" className="text-2xl">
               In this section

@@ -15,7 +15,12 @@ function makeStore(mutate?: (dir: string) => void): ContentStore {
   const root = path.join(dir, 'content');
   fs.cpSync(FIXTURE, root, { recursive: true });
   const file = path.join(root, 'pages', 'symptoms', 'hot-flashes.md');
-  const raw = fs.readFileSync(file, 'utf8').replace('approved_hash: HASH_PLACEHOLDER\n', '');
+  // \r\n normalized first: a CRLF checkout (Windows autocrlf) must not silently
+  // skip the placeholder replace and feed "HASH_PLACEHOLDER" to the schema.
+  const raw = fs
+    .readFileSync(file, 'utf8')
+    .replace(/\r\n/g, '\n')
+    .replace('approved_hash: HASH_PLACEHOLDER\n', '');
   const split = splitFrontmatter(raw)!;
   const fm = frontmatterSchema.parse(split.data);
   const hash = contentHash(fm, split.body);

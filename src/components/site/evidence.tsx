@@ -159,15 +159,24 @@ export function Toc({ headings }: { headings: Array<{ depth: 2 | 3; id: string; 
   const h2s = headings.filter((h) => h.depth === 2 && h.id !== 'references');
   if (h2s.length < 3) return null;
   return (
-    <nav aria-labelledby="toc-title" className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
-      <p id="toc-title" className="font-semibold">
+    <nav aria-labelledby="toc-title" className="rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4 sm:p-5">
+      <p id="toc-title" className="font-serif text-lg font-semibold">
         On this page
       </p>
-      <ol className="mt-1 space-y-0.5">
-        {h2s.map((h) => (
+      <ol className="mt-2 grid gap-x-6 sm:grid-cols-2">
+        {h2s.map((h, i) => (
           <li key={h.id}>
-            <a href={`#${h.id}`} className="tap text-[var(--color-link)] underline">
-              {h.text}
+            <a
+              href={`#${h.id}`}
+              className="tap group w-full gap-3 rounded-lg px-2 text-[var(--color-link)] no-underline hover:bg-[var(--color-accent-soft)]"
+            >
+              <span
+                aria-hidden="true"
+                className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent-soft)] text-sm font-semibold text-[var(--color-accent)] group-hover:bg-[var(--color-accent)] group-hover:text-white"
+              >
+                {i + 1}
+              </span>
+              <span className="underline-offset-4 group-hover:underline">{h.text}</span>
             </a>
           </li>
         ))}

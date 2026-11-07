@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { getProductSlot } from '@/lib/products/slots';
-import { SITE } from '@/lib/site/config';
 
 interface ProductSlotProps {
   id: string;
@@ -11,42 +10,11 @@ export function ProductSlotView({ id }: ProductSlotProps) {
   const slot = getProductSlot(id);
   if (!slot) return null;
 
-  const isStagingOrDev = SITE.env === 'staging' || SITE.env === 'development';
   const activeProducts = (slot.products || []).filter((p) => p.active);
   const isFilled = slot.status === 'filled' && activeProducts.length > 0;
 
-  if (!isFilled) {
-    // Empty behavior: Useful editorial how-to-choose guide without buy link
-    return (
-      <aside
-        aria-label={`How to choose: ${slot.category}`}
-        className={`my-8 rounded-xl border bg-[var(--color-paper-raised)] p-5 text-[var(--color-ink)] ${
-          isStagingOrDev ? 'border-dashed border-[var(--color-accent)]' : 'border-[var(--color-rule)]'
-        }`}
-      >
-        {isStagingOrDev && (
-          <div className="mb-3 inline-block rounded bg-[var(--color-accent-soft)] px-2 py-0.5 text-xs font-mono font-medium text-[var(--color-accent)]">
-            [Staging: Slot ID: {id} | Category: {slot.category}]
-          </div>
-        )}
-        <h3 className="font-serif text-xl font-semibold mb-2">How to choose: {slot.category}</h3>
-        <p className="text-sm text-[var(--color-ink-muted)] mb-3">
-          <strong>Purpose:</strong> {slot.reader_need}.
-        </p>
-        <div className="space-y-2 text-sm">
-          <p className="font-medium">What to prioritize when selecting options:</p>
-          <ul className="list-disc pl-5 space-y-1">
-            {slot.choose_by.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
-        </div>
-        <p className="mt-3 text-xs text-[var(--color-ink-muted)] border-t border-[var(--color-rule)] pt-2">
-          <strong>Guidance limit:</strong> {slot.claim_limit}.
-        </p>
-      </aside>
-    );
-  }
+  // An empty slot renders nothing at all, in every environment: no placeholder, no staging label.
+  if (!isFilled) return null;
 
   // Filled behavior: Editorial recommendation with standard paid link notice
   return (

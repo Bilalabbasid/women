@@ -292,7 +292,10 @@ export function renderMarkdown(markdown: string, opts: RenderOptions): RenderRes
     .use(rehypeLinksAndCollect(opts, partial))
     .use(rehypeStringify);
 
-  const html = String(processor.processSync(preprocessed));
+  // Tables scroll sideways inside a focusable region, so they stay usable by keyboard on phones.
+  const html = String(processor.processSync(preprocessed))
+    .replace(/<table>/g, '<div class="table-wrap" role="region" aria-label="Table, scrolls sideways" tabindex="0"><table>')
+    .replace(/<\/table>/g, '</table></div>');
   const text = html.replace(/<[^>]+>/g, ' ').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim();
   return { ...partial, html, text, citations };
 }

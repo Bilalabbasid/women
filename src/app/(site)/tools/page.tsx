@@ -6,6 +6,26 @@ import { getSiteData } from '@/lib/content/site-data';
 import { webApplicationLd, breadcrumbLd } from '@/lib/seo/jsonld';
 import { JsonLd, Breadcrumbs } from '@/components/site/site-chrome';
 import { isToolLive } from '@/lib/tools/logic';
+import { ArrowDown, ArrowRight, Lock, Wrench } from 'lucide-react';
+import { TOOL_HEROES } from '@/components/site/tool-hero';
+import {
+  HeroPanel,
+  heroEyebrow,
+  heroTitle,
+  heroLead,
+  heroPrimaryBtn,
+  heroGhostBtn,
+} from '@/components/site/hero-panel';
+
+/** Short names for the hero's icon grid. */
+const SHORT_NAMES: Record<string, string> = {
+  '/tools/symptom-tracker/': 'Symptom tracker',
+  '/tools/symptoms-checklist/': 'Symptoms checklist',
+  '/tools/stage-guide/': 'Stage guide',
+  '/tools/does-it-work-checker/': 'Evidence checker',
+  '/tools/treatment-questions/': 'Question builder',
+  '/tools/12-month-counter/': '12-month counter',
+};
 
 export const metadata: Metadata = buildMetadata({
   title: 'Menopause tools: tracker, checklist & stage quiz',
@@ -63,13 +83,20 @@ const GROUPS: Array<{ id: string; heading: string; intro: string; tools: Array<{
   },
 ];
 
+const READ_NEXT = [
+  { href: '/perimenopause/', label: 'Perimenopause: signs, stages and when to see a doctor' },
+  { href: '/symptoms/', label: 'Every menopause symptom we cover, A to Z' },
+  { href: '/treatments/', label: 'Menopause treatments compared by evidence' },
+  { href: '/does-it-work/', label: 'Supplements and remedies: what the trials show' },
+];
+
 /**
  * Tools hub. Code-defined because it is navigation, not medical content.
  * Each tool's own guide page lives in content/pages/tools/ and appears here
  * once it is in the build.
  */
 export default function ToolsHub() {
-  const { pages } = getSiteData();
+  const { pages, byUrl: byUrlAll } = getSiteData();
   const toolGuides = pages.filter((p) => p.fm.page_type === 'tool');
   const byUrl = new Map(toolGuides.map((p) => [p.url, p]));
   const grouped = new Set(GROUPS.flatMap((g) => g.tools.map((t) => t.url)));
@@ -97,7 +124,7 @@ export default function ToolsHub() {
   ].filter((s) => s.items.length > 0);
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-14">
       <JsonLd
         data={[
           breadcrumbLd(crumbs),
@@ -110,110 +137,136 @@ export default function ToolsHub() {
           ),
         ]}
       />
-      <Breadcrumbs crumbs={crumbs} />
-      <header className="max-w-3xl space-y-3">
-        <h1 className="text-3xl sm:text-4xl">Free menopause and perimenopause tools</h1>
-        <p className="text-xl text-[var(--color-ink-muted)]">
-          Six free tools to help you notice patterns and prepare for appointments: a symptom tracker, a printable
-          checklist, a stage quiz, an evidence checker, an HRT question builder and a 12-month counter. They run in
-          your browser with no account, and what you enter stays on your device. They never diagnose or prescribe.
-        </p>
-      </header>
-
-      {trackerLive && (
-        <section
-          aria-labelledby="tracker"
-          className="space-y-3 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-5"
-        >
-          <h2 id="tracker" className="text-2xl">
-            Start tracking today
-          </h2>
-          <p>
-            Log how you feel each day or week: symptoms and how strong they are, sleep, hot flashes, bleeding, and
-            notes in your own words. Over a few weeks you&apos;ll see patterns, and you can print a one-page summary
-            with your own questions for your clinician.
-          </p>
-          <div className="flex flex-wrap gap-3 pt-1">
-            <Link
-              href={APP_ROUTES.today}
-              className="tap rounded-xl bg-[var(--color-accent)] px-5 font-semibold text-white no-underline"
-            >
-              Open the tracker
-            </Link>
-            <Link
-              href="/tools/symptom-tracker/"
-              className="tap rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper)] px-5 font-semibold no-underline"
-            >
-              How the tracker works
-            </Link>
+      <div className="space-y-5">
+        <Breadcrumbs crumbs={crumbs} />
+        <HeroPanel labelledBy="tools-title">
+          <div className="grid items-center gap-8 md:grid-cols-[3fr_2fr]">
+            <div className="space-y-5">
+              <p className={heroEyebrow}>Free · No account · Stays on your device</p>
+              <h1 id="tools-title" className={heroTitle}>
+                Free menopause and perimenopause tools
+              </h1>
+              <p className={heroLead}>
+                Six free tools to help you notice patterns and prepare for appointments. They run in your browser with
+                no account, what you enter stays on your device, and they never diagnose or prescribe.
+              </p>
+              <div className="no-print flex flex-wrap items-center gap-3 pt-1">
+                {trackerLive && (
+                  <Link href={APP_ROUTES.today} className={heroPrimaryBtn}>
+                    Open the tracker
+                    <ArrowRight aria-hidden="true" className="h-4 w-4" />
+                  </Link>
+                )}
+                <a
+                  href={`#${sections[0]?.id ?? 'your-data'}`}
+                  className={trackerLive ? heroGhostBtn : heroPrimaryBtn}
+                >
+                  Browse all tools
+                  <ArrowDown aria-hidden="true" className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+            <ul className="grid grid-cols-2 gap-3">
+              {toolGuides.map((p) => {
+                const Icon = TOOL_HEROES[p.url]?.Icon ?? Wrench;
+                return (
+                  <li key={p.url}>
+                    <Link
+                      href={p.url}
+                      className="tap group flex h-full w-full flex-col items-start gap-2 rounded-2xl bg-white p-3.5 text-[var(--color-ink)] no-underline shadow-lg shadow-black/15 transition-transform hover:-translate-y-0.5 focus-visible:outline-white"
+                    >
+                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-accent)] text-white">
+                        <Icon aria-hidden="true" className="h-5 w-5" />
+                      </span>
+                      <span className="text-sm font-semibold leading-snug group-hover:text-[var(--color-accent)]">
+                        {SHORT_NAMES[p.url] ?? p.fm.title}
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
-        </section>
-      )}
+        </HeroPanel>
+      </div>
 
       {sections.map((s) => (
-        <section key={s.id} aria-labelledby={s.id} className="space-y-4">
+        <section key={s.id} aria-labelledby={s.id} className="scroll-mt-4 space-y-4">
           <div className="space-y-1">
-            <h2 id={s.id} className="text-2xl">
+            <h2 id={s.id} className="font-serif text-2xl font-semibold sm:text-3xl">
               {s.heading}
             </h2>
             {s.intro && <p className="text-[var(--color-ink-muted)]">{s.intro}</p>}
           </div>
           <ul className="grid gap-4 sm:grid-cols-2">
-            {s.items.map((item) => (
-              <li
-                key={item.url}
-                className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-5"
-              >
-                <h3 className="text-xl font-semibold">
-                  <Link href={item.url} className="tap text-[var(--color-link)] underline">
-                    {item.title}
+            {s.items.map((item) => {
+              const Icon = TOOL_HEROES[item.url]?.Icon ?? Wrench;
+              return (
+                <li key={item.url}>
+                  <Link
+                    href={item.url}
+                    className="tap group flex h-full items-start gap-4 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-5 no-underline shadow-xs transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:shadow-md"
+                  >
+                    <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-accent)] text-white">
+                      <Icon aria-hidden="true" className="h-6 w-6" />
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block font-serif text-lg font-semibold text-[var(--color-ink)] group-hover:text-[var(--color-accent)]">
+                        {item.title}
+                      </span>
+                      <span className="mt-1 block text-sm leading-relaxed text-[var(--color-ink-muted)]">
+                        {item.text}
+                      </span>
+                      <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-link)]">
+                        Open tool
+                        <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </span>
+                    </span>
                   </Link>
-                </h3>
-                <p className="mt-2 text-[var(--color-ink-muted)]">{item.text}</p>
-              </li>
-            ))}
+                </li>
+              );
+            })}
           </ul>
         </section>
       ))}
 
-      <section aria-labelledby="your-data" className="max-w-3xl space-y-3">
-        <h2 id="your-data" className="text-2xl">
-          How these tools store what you enter
-        </h2>
-        <p>
-          Everything you tick, type or log is saved in this browser on this device, so it&apos;s still there when you
-          come back, with no account. You can save dated copies, reopen or delete them, and export a backup file.
-          Nothing is sent to us, to analytics or to advertisers. Because the data lives only in this browser,
-          clearing your browser data, using a private window or switching device means it won&apos;t be there, so
-          export a backup now and then.
-        </p>
+      <section
+        aria-labelledby="your-data"
+        className="flex scroll-mt-4 flex-col gap-4 rounded-3xl bg-[var(--color-accent-soft)] p-6 sm:flex-row sm:items-start sm:p-8"
+      >
+        <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-accent)] text-white">
+          <Lock aria-hidden="true" className="h-6 w-6" />
+        </span>
+        <div className="max-w-3xl space-y-2">
+          <h2 id="your-data" className="font-serif text-2xl font-semibold">
+            How these tools store what you enter
+          </h2>
+          <p>
+            Everything you tick, type or log is saved in this browser on this device, so it&apos;s still there when you
+            come back, with no account. You can save dated copies, reopen or delete them, and export a backup file.
+            Nothing is sent to us, to analytics or to advertisers. Because the data lives only in this browser,
+            clearing your browser data, using a private window or switching device means it won&apos;t be there, so
+            export a backup now and then.
+          </p>
+        </div>
       </section>
 
-      <section aria-labelledby="read-next" className="max-w-3xl space-y-3">
-        <h2 id="read-next" className="text-2xl">
+      <section aria-labelledby="read-next" className="space-y-4">
+        <h2 id="read-next" className="font-serif text-2xl font-semibold sm:text-3xl">
           Read next
         </h2>
-        <ul className="list-disc space-y-1 pl-6">
-          <li>
-            <Link href="/perimenopause/" className="text-[var(--color-link)] underline">
-              Perimenopause: signs, stages and when to see a doctor
-            </Link>
-          </li>
-          <li>
-            <Link href="/symptoms/" className="text-[var(--color-link)] underline">
-              Every menopause symptom we cover, A to Z
-            </Link>
-          </li>
-          <li>
-            <Link href="/treatments/" className="text-[var(--color-link)] underline">
-              Menopause treatments compared by evidence
-            </Link>
-          </li>
-          <li>
-            <Link href="/does-it-work/" className="text-[var(--color-link)] underline">
-              Supplements and remedies: what the trials show
-            </Link>
-          </li>
+        <ul className="grid gap-3 sm:grid-cols-2">
+          {READ_NEXT.filter((r) => byUrlAll.has(r.href)).map((r) => (
+            <li key={r.href}>
+              <Link
+                href={r.href}
+                className="tap group flex h-full items-center justify-between gap-3 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4 font-semibold text-[var(--color-ink)] no-underline shadow-xs transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] hover:shadow-md"
+              >
+                {r.label}
+                <ArrowRight aria-hidden="true" className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </li>
+          ))}
         </ul>
       </section>
     </div>

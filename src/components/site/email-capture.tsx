@@ -1,133 +1,210 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { CONSENT_TEXT, FORM_ERROR, NEWSLETTER_TITLE, type FormType } from '@/lib/forms/subscribe';
 
-interface EmailCaptureProps {
-  title?: string;
-  itemDescription?: string;
-}
+const boxClass = 'my-8 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-6 text-[var(--color-ink)]';
+const inputClass =
+  'w-full max-w-md rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper)] px-3 py-2 text-[var(--color-ink)]';
+const buttonClass =
+  'tap inline-flex items-center rounded-lg bg-[var(--color-ink)] px-5 py-2.5 font-semibold text-white no-underline hover:opacity-90 disabled:opacity-50';
 
-export function EmailCapture({
-  title = 'Get the appointment checklist and doctor question guide',
-  itemDescription = 'A one-page printable worksheet with the exact questions to ask your doctor, plus weekly research updates on treatments and options.',
-}: EmailCaptureProps) {
-  const [email, setEmail] = useState('');
-  const [consented, setConsented] = useState(false);
-  // 'confirmed' only when a provider is actually connected and really sends something;
-  // 'queued' when the signup was recorded but nothing can be emailed yet (no provider
-  // configured) - two different honest states, never a single blanket "success".
-  const [result, setResult] = useState<'confirmed' | 'queued' | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+/**
+ * Shared submit logic for the two forms. Sends only what the person typed; the
+ * honeypot and the time since the form appeared are the anti-spam checks.
+ */
+function useFormSubmit(form: FormType) {
+  const shownAt = useRef<number>(0);
+  useEffect(() => {
+    shownAt.current = performance.now();
+  }, []);
+  const [state, setState] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email || !email.includes('@')) {
-      setError('Please enter a valid email address.');
-      return;
-    }
-    if (!consented) {
-      setError('Please tick the consent box to receive emails.');
-      return;
-    }
-
-    setLoading(true);
-    setError(null);
-
+  async function submit(fields: { email: string; consent: boolean; message?: string; website: string }) {
+    setState('sending');
     try {
-      const res = await fetch('/api/newsletter/subscribe', {
+      const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, consented }),
+        body: JSON.stringify({ form, ...fields, elapsedMs: Math.round(performance.now() - shownAt.current) }),
       });
-      const data = (await res.json().catch(() => null)) as { status?: string; providerConfigured?: boolean; error?: string } | null;
-      if (!res.ok) {
-        setError(data?.error ?? 'Could not submit that right now. Please try again.');
-        return;
-      }
-      setResult(data?.providerConfigured ? 'confirmed' : 'queued');
+      setState(res.ok ? 'sent' : 'error');
     } catch {
-      setError('Could not reach the server. Please check your connection and try again.');
-    } finally {
-      setLoading(false);
+      setState('error');
     }
-  };
-
-  if (result === 'confirmed') {
-    return (
-      <aside aria-label="Email confirmation" className="my-8 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-6 text-[var(--color-ink)]">
-        <h3 className="font-serif text-xl font-semibold mb-2">Check your inbox</h3>
-        <p className="text-sm text-[var(--color-ink-muted)] mb-3">
-          We&apos;ve sent your guide to <strong>{email}</strong>. Every email includes a one-click unsubscribe link.
-        </p>
-        <p className="text-xs text-[var(--color-ink-muted)]">
-          Your email is never shared or matched with private health tracker data.
-        </p>
-      </aside>
-    );
   }
+  return { state, submit };
+}
 
-  if (result === 'queued') {
+/** Off-screen field people never see; automated scripts tend to fill it in. */
+function Honeypot({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+  return (
+    <div aria-hidden="true" style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, overflow: 'hidden' }}>
+      <label>
+        Website
+        <input type="text" name="website" tabIndex={-1} autoComplete="off" value={value} onChange={(e) => onChange(e.target.value)} />
+      </label>
+    </div>
+  );
+}
+
+function ConsentBox({ id, checked, onChange }: { id: string; checked: boolean; onChange: (v: boolean) => void }) {
+  return (
+    <div className="flex items-start gap-2">
+      <input
+        id={id}
+        type="checkbox"
+        checked={checked}
+        onChange={(e) => onChange(e.target.checked)}
+        className="mt-1 h-4 w-4 rounded border-[var(--color-rule)] text-[var(--color-accent)]"
+      />
+      <label htmlFor={id} className="text-sm leading-snug text-[var(--color-ink-muted)]">
+        {CONSENT_TEXT}
+      </label>
+    </div>
+  );
+}
+
+function FormError() {
+  return (
+    <p role="alert" className="text-sm text-[var(--color-urgent)]">
+      {FORM_ERROR.split('contact@menoverdict.com')[0]}
+      <a href="mailto:contact@menoverdict.com" className="font-semibold underline">
+        contact@menoverdict.com
+      </a>
+    </p>
+  );
+}
+
+/** Newsletter signup: one per page. Nothing is offered in exchange, and no download is gated behind it. */
+export function EmailCapture({
+  title = NEWSLETTER_TITLE,
+  itemDescription = 'One short email when a new free tool or guide goes live. No health information is ever asked for or sent.',
+}: {
+  title?: string;
+  itemDescription?: string;
+}) {
+  const { state, submit } = useFormSubmit('newsletter');
+  const [email, setEmail] = useState('');
+  const [consent, setConsent] = useState(false);
+  const [website, setWebsite] = useState('');
+
+  if (state === 'sent') {
     return (
-      <aside aria-label="Signup received" className="my-8 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-6 text-[var(--color-ink)]">
-        <h3 className="font-serif text-xl font-semibold mb-2">Thanks — you&apos;re on the list</h3>
-        <p className="text-sm text-[var(--color-ink-muted)] mb-3">
-          Email delivery isn&apos;t live yet, so nothing has been sent to <strong>{email}</strong> yet. We&apos;ll send the
-          guide as soon as it is.
-        </p>
-        <p className="text-xs text-[var(--color-ink-muted)]">
-          Your email is never shared or matched with private health tracker data.
+      <aside aria-label="Signup received" className={boxClass}>
+        <h2 className="mb-2 font-serif text-xl font-semibold">Thanks, you&apos;re on the list</h2>
+        <p className="text-[var(--color-ink-muted)]">
+          We&apos;ll email <strong>{email}</strong> when we launch new tools. To stop, reply to any email and say so.
         </p>
       </aside>
     );
   }
 
   return (
-    <aside aria-label="Download doctor questions guide" className="my-8 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-6 text-[var(--color-ink)]">
-      <h3 className="font-serif text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-sm text-[var(--color-ink-muted)] mb-4">{itemDescription}</p>
-
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <aside aria-labelledby="newsletter-title" className={boxClass}>
+      <h2 id="newsletter-title" className="mb-2 font-serif text-xl font-semibold">
+        {title}
+      </h2>
+      <p className="mb-4 text-[var(--color-ink-muted)]">{itemDescription}</p>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          void submit({ email, consent, website });
+        }}
+        className="relative space-y-4"
+      >
         <div>
-          <label htmlFor="newsletter-email" className="block text-xs font-semibold mb-1">
+          <label htmlFor="newsletter-email" className="mb-1 block text-sm font-semibold">
             Email address
           </label>
           <input
             id="newsletter-email"
             type="email"
+            autoComplete="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="you@example.com"
             required
-            className="w-full max-w-md rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)]"
+            className={inputClass}
           />
         </div>
-
-        <div className="flex items-start gap-2">
-          <input
-            id="newsletter-consent"
-            type="checkbox"
-            checked={consented}
-            onChange={(e) => setConsented(e.target.checked)}
-            className="mt-1 h-4 w-4 rounded border-[var(--color-rule)] text-[var(--color-accent)]"
-          />
-          <label htmlFor="newsletter-consent" className="text-xs text-[var(--color-ink-muted)] leading-tight">
-            I agree to receive the free guide and occasional evidence-based updates. Unsubscribe anytime.
-            No health tracker data is ever sent with this form.
-          </label>
-        </div>
-
-        {error && <p className="text-xs text-[var(--color-urgent)]">{error}</p>}
-
-        <button
-          type="submit"
-          disabled={loading}
-          className="tap inline-flex items-center rounded-lg bg-[var(--color-ink)] px-5 py-2.5 text-sm font-semibold text-white no-underline hover:opacity-90 disabled:opacity-50"
-        >
-          {loading ? 'Sending...' : 'Send me the guide'}
+        <ConsentBox id="newsletter-consent" checked={consent} onChange={setConsent} />
+        <Honeypot value={website} onChange={setWebsite} />
+        {state === 'error' && <FormError />}
+        <button type="submit" disabled={state === 'sending' || !consent} className={buttonClass}>
+          {state === 'sending' ? 'Sending…' : 'Notify me'}
         </button>
       </form>
     </aside>
   );
 }
 
+/** Contact form on /contact/: goes to the same inbox as writing to contact@menoverdict.com. */
+export function ContactForm() {
+  const { state, submit } = useFormSubmit('contact');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [consent, setConsent] = useState(false);
+  const [website, setWebsite] = useState('');
+
+  if (state === 'sent') {
+    return (
+      <aside aria-label="Message sent" className={boxClass}>
+        <h2 className="mb-2 font-serif text-xl font-semibold">Message sent</h2>
+        <p className="text-[var(--color-ink-muted)]">Thanks. We&apos;ll reply to {email}.</p>
+      </aside>
+    );
+  }
+
+  return (
+    <aside aria-labelledby="contact-form-title" className={boxClass}>
+      <h2 id="contact-form-title" className="mb-2 font-serif text-xl font-semibold">
+        Send us a message
+      </h2>
+      <p className="mb-4 text-[var(--color-ink-muted)]">
+        Please don&apos;t include details about your health: we can&apos;t give personal medical advice.
+      </p>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          void submit({ email, consent, message, website });
+        }}
+        className="relative space-y-4"
+      >
+        <div>
+          <label htmlFor="contact-email" className="mb-1 block text-sm font-semibold">
+            Your email address
+          </label>
+          <input
+            id="contact-email"
+            type="email"
+            autoComplete="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className={inputClass}
+          />
+        </div>
+        <div>
+          <label htmlFor="contact-message" className="mb-1 block text-sm font-semibold">
+            Message
+          </label>
+          <textarea
+            id="contact-message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            required
+            maxLength={5000}
+            rows={6}
+            className={`${inputClass} max-w-xl`}
+          />
+        </div>
+        <ConsentBox id="contact-consent" checked={consent} onChange={setConsent} />
+        <Honeypot value={website} onChange={setWebsite} />
+        {state === 'error' && <FormError />}
+        <button type="submit" disabled={state === 'sending'} className={buttonClass}>
+          {state === 'sending' ? 'Sending…' : 'Send message'}
+        </button>
+      </form>
+    </aside>
+  );
+}

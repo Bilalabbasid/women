@@ -1,69 +1,73 @@
 import React from 'react';
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { EmailCapture } from '@/components/site/email-capture';
-
-async function fillAndSubmit(email = 'reader@example.com') {
-  fireEvent.change(screen.getByLabelText(/email address/i), { target: { value: email } });
-  fireEvent.click(screen.getByLabelText(/i agree to receive/i));
-  fireEvent.click(screen.getByRole('button', { name: /send me the guide/i }));
-}
+import { ContactForm, EmailCapture } from '@/components/site/email-capture';
+import { CONSENT_TEXT } from '@/lib/forms/subscribe';
 
 describe('EmailCapture', () => {
   const originalFetch = global.fetch;
-
   afterEach(() => {
     global.fetch = originalFetch;
     vi.restoreAllMocks();
   });
 
-  it('never claims a guide was sent when the server rejects the request', async () => {
-    global.fetch = vi.fn().mockResolvedValue({
-      ok: false,
-      json: async () => ({ error: 'Explicit consent is required to subscribe.' }),
-    }) as unknown as typeof fetch;
-
+  it('starts with consent unticked and the button disabled until it is ticked', () => {
     render(<EmailCapture />);
-    await fillAndSubmit();
+    const box = screen.getByLabelText(CONSENT_TEXT) as HTMLInputElement;
+    expect(box.checked).toBe(false);
+    expect(screen.getByRole('button', { name: /notify me/i })).toBeDisabled();
+    fireEvent.click(box);
+    expect(screen.getByRole('button', { name: /notify me/i })).toBeEnabled();
+  });
 
-    await waitFor(() => expect(screen.getByText(/explicit consent is required/i)).toBeInTheDocument());
-    expect(screen.queryByText(/we've sent your guide/i)).not.toBeInTheDocument();
+  it('sends only the form type, email, consent, honeypot and timing to /api/subscribe', async () => {
+    const fetchMock = vi.fn().mockResolvedValue({ ok: true });
+    global.fetch = fetchMock as unknown as typeof fetch;
+    render(<EmailCapture />);
+    fireEvent.change(screen.getByLabelText(/email address/i), { target: { value: 'reader@example.com' } });
+    fireEvent.click(screen.getByLabelText(CONSENT_TEXT));
+    fireEvent.click(screen.getByRole('button', { name: /notify me/i }));
+    await waitFor(() => expect(screen.getByText(/you're on the list/i)).toBeInTheDocument());
+    const [url, init] = fetchMock.mock.calls[0];
+    expect(url).toBe('/api/subscribe');
+    expect(Object.keys(JSON.parse(init.body)).sort()).toEqual(['consent', 'elapsedMs', 'email', 'form', 'website']);
+  });
+
+  it('shows the contact address when sending fails', async () => {
+    global.fetch = vi.fn().mockResolvedValue({ ok: false }) as unknown as typeof fetch;
+    render(<EmailCapture />);
+    fireEvent.change(screen.getByLabelText(/email address/i), { target: { value: 'reader@example.com' } });
+    fireEvent.click(screen.getByLabelText(CONSENT_TEXT));
+    fireEvent.click(screen.getByRole('button', { name: /notify me/i }));
+    await waitFor(() => expect(screen.getByRole('alert')).toHaveTextContent('Something went wrong — email us at contact@menoverdict.com'));
     expect(screen.queryByText(/you're on the list/i)).not.toBeInTheDocument();
   });
 
-  it('never claims a guide was sent when the request fails entirely (network/offline)', async () => {
-    global.fetch = vi.fn().mockRejectedValue(new Error('network down')) as unknown as typeof fetch;
-
+  it('treats a network failure as an error, never as success', async () => {
+    global.fetch = vi.fn().mockRejectedValue(new Error('offline')) as unknown as typeof fetch;
     render(<EmailCapture />);
-    await fillAndSubmit();
+    fireEvent.change(screen.getByLabelText(/email address/i), { target: { value: 'reader@example.com' } });
+    fireEvent.click(screen.getByLabelText(CONSENT_TEXT));
+    fireEvent.click(screen.getByRole('button', { name: /notify me/i }));
+    await waitFor(() => expect(screen.getByRole('alert')).toBeInTheDocument());
+  });
+});
 
-    await waitFor(() => expect(screen.getByText(/could not reach the server/i)).toBeInTheDocument());
-    expect(screen.queryByText(/we've sent your guide/i)).not.toBeInTheDocument();
+describe('ContactForm', () => {
+  const originalFetch = global.fetch;
+  afterEach(() => {
+    global.fetch = originalFetch;
   });
 
-  it('says the signup is queued, not that a guide was sent, when no email provider is configured', async () => {
-    global.fetch = vi.fn().mockResolvedValue({
-      ok: true,
-      json: async () => ({ status: 'accepted', providerConfigured: false }),
-    }) as unknown as typeof fetch;
-
-    render(<EmailCapture />);
-    await fillAndSubmit();
-
-    await waitFor(() => expect(screen.getByText(/you're on the list/i)).toBeInTheDocument());
-    expect(screen.getByText(/nothing has been sent/i)).toBeInTheDocument();
-    expect(screen.queryByText(/we've sent your guide/i)).not.toBeInTheDocument();
-  });
-
-  it('only claims a guide was sent once a real provider actually confirms it', async () => {
-    global.fetch = vi.fn().mockResolvedValue({
-      ok: true,
-      json: async () => ({ status: 'subscribed', providerConfigured: true }),
-    }) as unknown as typeof fetch;
-
-    render(<EmailCapture />);
-    await fillAndSubmit();
-
-    await waitFor(() => expect(screen.getByText(/we've sent your guide/i)).toBeInTheDocument());
+  it('sends the message with consent off by default', async () => {
+    const fetchMock = vi.fn().mockResolvedValue({ ok: true });
+    global.fetch = fetchMock as unknown as typeof fetch;
+    render(<ContactForm />);
+    fireEvent.change(screen.getByLabelText(/your email address/i), { target: { value: 'reader@example.com' } });
+    fireEvent.change(screen.getByLabelText(/^message$/i), { target: { value: 'A broken link on the hot flashes page.' } });
+    fireEvent.click(screen.getByRole('button', { name: /send message/i }));
+    await waitFor(() => expect(screen.getByText(/message sent/i)).toBeInTheDocument());
+    const body = JSON.parse(fetchMock.mock.calls[0][1].body);
+    expect(body).toMatchObject({ form: 'contact', consent: false, message: 'A broken link on the hot flashes page.' });
   });
 });

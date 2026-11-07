@@ -183,6 +183,19 @@ export function SymptomsChecklist({ liveUrls, trackerLive }: { liveUrls: string[
           >
             Print my list
           </button>
+          <button
+            type="button"
+            disabled={ticked.size === 0}
+            onClick={async () => {
+              markToolUsed();
+              const { checklistPdf, downloadSimplePdf } = await import('@/lib/tools/simple-pdf');
+              const groups = SYMPTOM_CATALOG.map((g) => ({ label: g.label, items: g.items.filter((i) => ticked.has(i.id)).map((i) => i.label) }));
+              downloadSimplePdf(checklistPdf(groups), 'symptoms-checklist');
+            }}
+            className={btnSecondary}
+          >
+            Download PDF
+          </button>
           {trackerLive && trackable > 0 && (
             <button type="button" onClick={addToTracker} className={btnSecondary}>
               Add these to my tracker

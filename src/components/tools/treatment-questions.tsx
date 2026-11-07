@@ -6,7 +6,7 @@ import { UrgentGuidance } from '@/components/safety/urgent-guidance';
 import { markToolUsed } from '@/lib/pwa/install-gate';
 import { useToolState, savedLabel } from '@/components/storage/use-tool-state';
 import { ToolHistory } from '@/components/storage/tool-history';
-import { btnDanger, btnPrimary } from '@/components/storage/styles';
+import { btnDanger, btnPrimary, btnSecondary } from '@/components/storage/styles';
 
 export interface QuestionTopic {
   id: string;
@@ -257,6 +257,18 @@ export function TreatmentQuestionsBuilder() {
             className={btnPrimary}
           >
             Print my question sheet
+          </button>
+          <button
+            type="button"
+            onClick={async () => {
+              markToolUsed();
+              const { appointmentKitPdf, downloadSimplePdf } = await import('@/lib/tools/simple-pdf');
+              const topics = QUESTION_TOPICS.filter((t) => state.selectedTopics.includes(t.id)).map((t) => ({ label: t.label, questions: [...t.questions] }));
+              downloadSimplePdf(appointmentKitPdf(topics, state.customNotes), 'appointment-kit');
+            }}
+            className={btnSecondary}
+          >
+            Download my 10-minute appointment kit (PDF)
           </button>
           {(hasContent || state.redFlags.length > 0) && (
             <button type="button" onClick={() => void reset()} className={btnDanger}>

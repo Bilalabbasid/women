@@ -1,7 +1,6 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 /**
@@ -39,17 +38,20 @@ export function ComingSoon({
       role="dialog"
       aria-modal="true"
       aria-labelledby="coming-soon-title"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4"
+      className="fixed inset-0 z-50 flex items-end justify-center bg-[var(--scrim)] sm:items-center sm:p-4"
     >
-      <div className="w-full max-w-sm space-y-4 rounded-2xl bg-[var(--color-paper)] p-6 text-center shadow-xl">
-        <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-accent-soft)] text-[var(--color-accent)]">
-          <Sparkles className="h-6 w-6" aria-hidden="true" />
-        </div>
-        <h2 id="coming-soon-title" className="font-serif text-xl font-semibold text-[var(--color-ink)]">
+      <div className="w-full max-w-sm space-y-4 rounded-t-[var(--radius-lg)] border border-[var(--rule)] bg-[var(--paper-raised)] p-6 pb-[calc(1.5rem+env(safe-area-inset-bottom,0px))] text-center shadow-[var(--shadow-lift)] sm:rounded-[var(--radius-lg)] sm:pb-6">
+        <svg viewBox="0 0 120 120" className="illo mx-auto h-20 w-20" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <circle cx="60" cy="60" r="50" className="i-fill" stroke="none" />
+          <circle cx="60" cy="62" r="24" />
+          <path d="M60 50v12l8 6" />
+          <path d="M52 30h16" />
+        </svg>
+        <h2 id="coming-soon-title" className="font-serif text-[1.4rem] font-semibold">
           {title}
         </h2>
-        <p className="text-sm text-[var(--color-ink-muted)]">{message}</p>
-        <Button variant="primary" fullWidth onClick={goBack} className="min-h-[44px]">
+        <p className="text-[var(--ink-muted)]">{message}</p>
+        <Button variant="primary" fullWidth onClick={goBack}>
           Got it
         </Button>
       </div>

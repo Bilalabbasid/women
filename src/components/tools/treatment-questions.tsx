@@ -7,6 +7,7 @@ import { markToolUsed } from '@/lib/pwa/install-gate';
 import { useToolState, savedLabel } from '@/components/storage/use-tool-state';
 import { ToolHistory } from '@/components/storage/tool-history';
 import { btnDanger, btnPrimary, btnSecondary } from '@/components/storage/styles';
+import { CopyButton } from '@/components/ui/copy-button';
 
 export interface QuestionTopic {
   id: string;
@@ -146,25 +147,24 @@ export function TreatmentQuestionsBuilder() {
           saved in this browser on this device as you go, and never sent anywhere.
         </p>
 
-        <fieldset className="space-y-2 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
-          <legend className="px-1 font-serif text-xl font-semibold">
+        <fieldset className="panel min-w-0 gap-1">
+          <legend className="panel-title mb-1">
             1. What do you want to discuss at your appointment?
           </legend>
           {QUESTION_TOPICS.map((topic) => (
-            <label key={topic.id} className="tap flex cursor-pointer items-start gap-3 py-1.5">
+            <label key={topic.id} className="check">
               <input
                 type="checkbox"
                 checked={state.selectedTopics.includes(topic.id)}
                 onChange={() => toggleTopic(topic.id)}
-                className="mt-1 h-5 w-5 shrink-0 accent-[var(--color-accent)]"
               />
               <span>{topic.label}</span>
             </label>
           ))}
         </fieldset>
 
-        <fieldset className="space-y-2 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
-          <legend className="px-1 font-serif text-xl font-semibold">
+        <fieldset className="panel min-w-0 gap-1 border-t-4 border-t-[var(--urgent-rule)]">
+          <legend className="panel-title mb-1">
             2. Do you have any symptoms that should be mentioned first?
           </legend>
           {[
@@ -173,23 +173,22 @@ export function TreatmentQuestionsBuilder() {
             { id: 'palpitations', label: 'Heart palpitations with chest pain, breathlessness, or dizziness' },
             { id: 'low_mood', label: 'Severe low mood or thoughts of harming yourself' },
           ].map((item) => (
-            <label key={item.id} className="tap flex cursor-pointer items-center gap-3 py-1">
+            <label key={item.id} className="check">
               <input
                 type="checkbox"
                 checked={state.redFlags.includes(item.id)}
                 onChange={() => toggleRedFlag(item.id)}
-                className="h-5 w-5 shrink-0 accent-[var(--color-accent)]"
               />
               <span>{item.label}</span>
             </label>
           ))}
         </fieldset>
 
-        <div className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
-          <label htmlFor="tq-custom-notes" className="block font-serif text-xl font-semibold">
+        <div className="panel gap-2">
+          <label htmlFor="tq-custom-notes" className="panel-title block">
             3. Your own questions or personal health history to remember
           </label>
-          <p className="mt-1 text-sm text-[var(--color-ink-muted)]">
+          <p className="hint">
             For example: current medications, date of last period, or family history you want to ask about. Stored only
             in your browser.
           </p>
@@ -200,13 +199,13 @@ export function TreatmentQuestionsBuilder() {
             value={state.customNotes}
             onChange={(e) => persist({ ...state, customNotes: e.target.value })}
             placeholder="Write any extra questions or context for your clinician..."
-            className="mt-2 w-full rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper)] p-3"
+            className="textarea"
           />
         </div>
       </form>
 
-      <section aria-labelledby="tq-output-heading" aria-live="polite" className="space-y-4">
-        <h2 id="tq-output-heading" className="text-2xl">
+      <section aria-labelledby="tq-output-heading" aria-live="polite" className="panel panel-feature gap-4">
+        <h2 id="tq-output-heading" className="panel-title">
           Your printable appointment sheet
         </h2>
 
@@ -214,13 +213,14 @@ export function TreatmentQuestionsBuilder() {
         <UrgentGuidance triggers={urgent} />
 
         {!hasContent ? (
-          <p>Tick at least one topic above or add your own notes to generate your appointment sheet.</p>
+          <p className="text-[var(--ink-muted)]">Tick at least one topic above or add your own notes to build your appointment sheet.</p>
         ) : (
-          <div className="space-y-4 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-5">
+          <div id="tq-sheet" className="callout callout-ask m-0 max-w-none space-y-4">
+            <p className="callout-title">Ask your doctor</p>
             {chosenTopics.map((topic) => (
               <div key={topic.id} className="space-y-1.5">
-                <h3 className="text-lg font-semibold">{topic.label}</h3>
-                <ul className="list-disc space-y-1 pl-6">
+                <h3 className="font-sans text-[1.0625rem] font-bold">{topic.label}</h3>
+                <ul className="space-y-2">
                   {topic.questions.map((q) => (
                     <li key={q}>{q}</li>
                   ))}
@@ -230,12 +230,12 @@ export function TreatmentQuestionsBuilder() {
 
             {state.customNotes.trim() && (
               <div className="space-y-1.5 border-t border-[var(--color-rule)] pt-3">
-                <h3 className="text-lg font-semibold">My own questions and context</h3>
-                <p className="whitespace-pre-wrap">{state.customNotes}</p>
+                <h3 className="font-sans text-[1.0625rem] font-bold">My own questions and context</h3>
+                <p className="whitespace-pre-wrap font-serif">{state.customNotes}</p>
               </div>
             )}
 
-            <p className="text-sm text-[var(--color-ink-muted)]">
+            <p className="text-[1rem] text-[var(--ink-muted)]">
               Prepared with MenoVerdict. This sheet is a conversation aid for a medical appointment and does not
               recommend any specific medication or dose.
             </p>
@@ -270,6 +270,7 @@ export function TreatmentQuestionsBuilder() {
           >
             Download my 10-minute appointment kit (PDF)
           </button>
+          {hasContent && <CopyButton targetId="tq-sheet" label="Copy questions" className="btn btn-secondary" />}
           {(hasContent || state.redFlags.length > 0) && (
             <button type="button" onClick={() => void reset()} className={btnDanger}>
               Clear my current sheet

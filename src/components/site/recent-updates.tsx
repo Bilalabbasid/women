@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { getSiteData } from '@/lib/content/site-data';
 import { UPDATES_URL, parseEvidenceUpdates } from '@/lib/content/updates';
+import '@/app/styles/misc.css';
 
 /** The newest entries from the evidence updates log. Renders nothing if the log is empty or unpublished. */
 export function RecentEvidenceUpdates({ limit = 5, headingLevel = 2 }: { limit?: number; headingLevel?: 2 | 3 }) {
@@ -13,26 +14,26 @@ export function RecentEvidenceUpdates({ limit = 5, headingLevel = 2 }: { limit?:
 
   return (
     <section aria-labelledby="evidence-updates-heading" className="space-y-4">
-      <div className="flex flex-wrap items-end justify-between gap-2">
-        <Heading id="evidence-updates-heading" className="font-serif text-2xl font-semibold text-[var(--color-ink)]">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+        <Heading id="evidence-updates-heading" className="font-serif text-[length:var(--fs-h3)] font-semibold text-[var(--ink)]">
           Recent evidence updates
         </Heading>
-        <Link href={UPDATES_URL} className="tap text-sm font-semibold text-[var(--color-link)] underline">
-          Full updates log →
+        <Link href={UPDATES_URL} className="link link-arrow text-[1rem]">
+          Full updates log
         </Link>
       </div>
-      <ul className="divide-y divide-[var(--color-rule)] overflow-hidden rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)]">
+      <ul className="row-list" role="list">
         {updates.map((u) => (
-          <li key={`${u.date}-${u.title}`} className="space-y-1 p-4">
-            <time dateTime={u.date} className="block text-sm text-[var(--color-ink-muted)]">
+          <li key={`${u.date}-${u.title}`} className="update-row">
+            <time dateTime={u.date} className="update-date">
               {u.dateLabel}
             </time>
             {u.href && byUrl.has(u.href) ? (
-              <Link href={u.href} className="tap font-medium text-[var(--color-link)] underline">
+              <Link href={u.href} className="font-bold leading-snug text-[var(--link)] underline decoration-[color-mix(in_srgb,var(--link)_45%,transparent)] underline-offset-[0.18em] hover:decoration-current">
                 {u.title}
               </Link>
             ) : (
-              <span className="font-medium text-[var(--color-ink)]">{u.title}</span>
+              <span className="font-bold leading-snug text-[var(--ink)]">{u.title}</span>
             )}
           </li>
         ))}

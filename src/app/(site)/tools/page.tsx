@@ -9,14 +9,6 @@ import { isToolLive } from '@/lib/tools/logic';
 import { ArrowDown, ArrowRight, Lock, Wrench } from 'lucide-react';
 import { TOOL_HEROES } from '@/components/site/tool-hero';
 import { HonestyNotice } from '@/components/site/honesty-notice';
-import {
-  HeroPanel,
-  heroEyebrow,
-  heroTitle,
-  heroLead,
-  heroPrimaryBtn,
-  heroGhostBtn,
-} from '@/components/site/hero-panel';
 
 /** Short names for the hero's icon grid. */
 const SHORT_NAMES: Record<string, string> = {
@@ -140,90 +132,71 @@ export default function ToolsHub() {
       />
       <div className="space-y-5">
         <Breadcrumbs crumbs={crumbs} />
-        <HeroPanel labelledBy="tools-title">
-          <div className="grid items-center gap-8 md:grid-cols-[3fr_2fr]">
-            <div className="space-y-5">
-              <p className={heroEyebrow}>Free · No account · Stays on your device</p>
-              <h1 id="tools-title" className={heroTitle}>
-                Free menopause and perimenopause tools
-              </h1>
-              <p className={heroLead}>
-                Six free tools to help you notice patterns and prepare for appointments. They run in your browser with
-                no account, what you enter stays on your device, and they never diagnose or prescribe.
-              </p>
-              <div className="no-print flex flex-wrap items-center gap-3 pt-1">
-                {trackerLive && (
-                  <Link href={APP_ROUTES.today} className={heroPrimaryBtn}>
-                    Open the tracker
-                    <ArrowRight aria-hidden="true" className="h-4 w-4" />
-                  </Link>
-                )}
-                <a
-                  href={`#${sections[0]?.id ?? 'your-data'}`}
-                  className={trackerLive ? heroGhostBtn : heroPrimaryBtn}
-                >
-                  Browse all tools
-                  <ArrowDown aria-hidden="true" className="h-4 w-4" />
-                </a>
-              </div>
+        <header aria-labelledby="tools-title" className="grid items-start gap-8 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+          <div>
+            <p className="kicker">Free · No account · Stays on your device</p>
+            <h1 id="tools-title" className="mt-2 max-w-[20ch] text-[length:var(--fs-h1)] leading-[1.08]">
+              Free menopause and perimenopause tools
+            </h1>
+            <p className="mt-4 max-w-[var(--measure)] text-[length:var(--fs-lead)] leading-relaxed text-[var(--ink-muted)]">
+              Six free tools to help you notice patterns and prepare for appointments. They run in your browser with
+              no account, what you enter stays on your device, and they never diagnose or prescribe.
+            </p>
+            <div className="no-print mt-6 flex flex-wrap items-center gap-x-4 gap-y-3">
+              {trackerLive && (
+                <Link href={APP_ROUTES.today} className="btn btn-primary btn-lg">
+                  Open the tracker
+                  <ArrowRight aria-hidden="true" className="h-5 w-5" />
+                </Link>
+              )}
+              <a href={`#${sections[0]?.id ?? 'your-data'}`} className={trackerLive ? 'btn btn-quiet' : 'btn btn-primary btn-lg'}>
+                Browse all tools
+                <ArrowDown aria-hidden="true" className="h-5 w-5" />
+              </a>
             </div>
-            <ul className="grid grid-cols-2 gap-3">
-              {toolGuides.map((p) => {
-                const Icon = TOOL_HEROES[p.url]?.Icon ?? Wrench;
-                return (
-                  <li key={p.url}>
-                    <Link
-                      href={p.url}
-                      className="tap group flex h-full w-full flex-col items-start gap-2 rounded-2xl bg-white p-3.5 text-[var(--color-ink)] no-underline shadow-lg shadow-black/15 transition-transform hover:-translate-y-0.5 focus-visible:outline-white"
-                    >
-                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-accent)] text-white">
-                        <Icon aria-hidden="true" className="h-5 w-5" />
-                      </span>
-                      <span className="text-sm font-semibold leading-snug group-hover:text-[var(--color-accent)]">
-                        {SHORT_NAMES[p.url] ?? p.fm.title}
-                      </span>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
           </div>
-        </HeroPanel>
+          {/* Quick jump: every tool, one tap. */}
+          <ul className="grid grid-cols-2 gap-2.5" aria-label="All tools">
+            {toolGuides.map((p) => {
+              const Icon = TOOL_HEROES[p.url]?.Icon ?? Wrench;
+              return (
+                <li key={p.url}>
+                  <Link href={p.url} className="card flex h-full items-center gap-3 p-3">
+                    <span className="row-icon" aria-hidden="true">
+                      <Icon className="h-5 w-5" />
+                    </span>
+                    <span className="text-[1rem] font-bold leading-snug">{SHORT_NAMES[p.url] ?? p.fm.title}</span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </header>
       </div>
 
       <HonestyNotice variant="short" href="/medical-disclaimer/" />
 
       {sections.map((s) => (
-        <section key={s.id} aria-labelledby={s.id} className="scroll-mt-4 space-y-4">
+        <section key={s.id} aria-labelledby={s.id} className="scroll-mt-20 space-y-4 border-t border-[var(--rule)] pt-8">
           <div className="space-y-1">
-            <h2 id={s.id} className="font-serif text-2xl font-semibold sm:text-3xl">
+            <h2 id={s.id} className="text-[length:var(--fs-h2)]">
               {s.heading}
             </h2>
-            {s.intro && <p className="text-[var(--color-ink-muted)]">{s.intro}</p>}
+            {s.intro && <p className="max-w-[var(--measure)] text-[var(--ink-muted)]">{s.intro}</p>}
           </div>
-          <ul className="grid gap-4 sm:grid-cols-2">
+          <ul className="grid gap-3 sm:grid-cols-2">
             {s.items.map((item) => {
               const Icon = TOOL_HEROES[item.url]?.Icon ?? Wrench;
               return (
                 <li key={item.url}>
-                  <Link
-                    href={item.url}
-                    className="card-live tap group flex h-full items-start gap-4 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-5 no-underline shadow-xs transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:shadow-md"
-                  >
-                    <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-accent)] text-white">
-                      <Icon aria-hidden="true" className="h-6 w-6" />
+                  <Link href={item.url} className="card flex h-full items-start gap-4 p-5">
+                    <span className="row-icon h-12 w-12" aria-hidden="true">
+                      <Icon className="h-6 w-6" />
                     </span>
                     <span className="min-w-0">
-                      <span className="block font-serif text-lg font-semibold text-[var(--color-ink)] group-hover:text-[var(--color-accent)]">
-                        {item.title}
-                      </span>
-                      <span className="mt-1 block text-sm leading-relaxed text-[var(--color-ink-muted)]">
-                        {item.text}
-                      </span>
-                      <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-link)]">
-                        Open tool
-                        <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                      </span>
+                      <span className="card-title block">{item.title}</span>
+                      <span className="mt-1.5 block text-[1.0625rem] leading-relaxed text-[var(--ink-muted)]">{item.text}</span>
+                      <span className="link link-arrow mt-2 inline-block">Open tool</span>
                     </span>
                   </Link>
                 </li>
@@ -233,15 +206,12 @@ export default function ToolsHub() {
         </section>
       ))}
 
-      <section
-        aria-labelledby="your-data"
-        className="flex scroll-mt-4 flex-col gap-4 rounded-3xl bg-[var(--color-accent-soft)] p-6 sm:flex-row sm:items-start sm:p-8"
-      >
-        <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-accent)] text-white">
-          <Lock aria-hidden="true" className="h-6 w-6" />
+      <section aria-labelledby="your-data" className="panel panel-quiet scroll-mt-20 sm:grid-cols-[auto_1fr] sm:items-start sm:gap-5">
+        <span className="row-icon h-12 w-12" aria-hidden="true">
+          <Lock className="h-6 w-6" />
         </span>
-        <div className="max-w-3xl space-y-2">
-          <h2 id="your-data" className="font-serif text-2xl font-semibold">
+        <div className="max-w-[var(--measure)] space-y-2">
+          <h2 id="your-data" className="panel-title">
             How these tools store what you enter
           </h2>
           <p>
@@ -255,18 +225,15 @@ export default function ToolsHub() {
       </section>
 
       <section aria-labelledby="read-next" className="space-y-4">
-        <h2 id="read-next" className="font-serif text-2xl font-semibold sm:text-3xl">
+        <h2 id="read-next" className="text-[length:var(--fs-h2)]">
           Read next
         </h2>
-        <ul className="grid gap-3 sm:grid-cols-2">
+        <ul className="row-list max-w-[48rem]" role="list">
           {READ_NEXT.filter((r) => byUrlAll.has(r.href)).map((r) => (
             <li key={r.href}>
-              <Link
-                href={r.href}
-                className="card-live tap group flex h-full items-center justify-between gap-3 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4 font-semibold text-[var(--color-ink)] no-underline shadow-xs transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] hover:shadow-md"
-              >
-                {r.label}
-                <ArrowRight aria-hidden="true" className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" />
+              <Link href={r.href} className="row">
+                <span className="row-main row-title">{r.label}</span>
+                <ArrowRight aria-hidden="true" className="h-5 w-5 shrink-0 text-[var(--ink-muted)]" />
               </Link>
             </li>
           ))}

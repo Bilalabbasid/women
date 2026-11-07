@@ -1,13 +1,19 @@
 import Link from 'next/link';
-import { ArrowDown, ArrowRight } from 'lucide-react';
 import type { ContentPage } from '@/lib/content/loader';
 import type { EvidenceGrade } from '@/lib/content/schema';
-import { HeroPanel, heroEyebrow, heroTitle, heroLead, heroPrimaryBtn } from './hero-panel';
-import { GradeBadge, GRADE_LABELS, headingLabel } from './evidence';
+import { getSiteData } from '@/lib/content/site-data';
 import { HOW_SITE_WORKS_LINK } from '@/lib/site/honesty';
+import { TocSheet } from '@/components/ui/interactive';
+import { GradeBadge, GRADE_LABELS, headingLabel } from './evidence';
+import { SymptomsDirectory } from './hub-symptoms';
+import { EXTRA_URLS, SLUG_GROUP, SLUG_TERMS, SYMPTOM_GROUPS, type DirectoryGroup } from './hub-symptoms-data';
+import '@/app/styles/hubs.css';
 
-const MAX_JUMPS = 6;
-
+/**
+ * Hub page top: calm and editorial, matching ArticleHero (kicker, H1, lead).
+ * No banner and no second contents box; the hub's own sections open from an
+ * "On this page" chip, and the guide count sits beside the title on desktop.
+ */
 export function HubHero({
   eyebrow,
   title,
@@ -20,64 +26,43 @@ export function HubHero({
   description: string;
   /** Real count of published guides in this hub. 0 hides the browse button. */
   guideCount: number;
-  /** The hub's own H2s, used as a jump list. */
+  /** The hub's own H2s, offered as an "On this page" sheet. */
   sections: Array<{ id: string; text: string }>;
 }) {
   return (
-    <HeroPanel>
-      <div className={`grid items-center gap-8 ${sections.length > 0 ? 'md:grid-cols-[3fr_2fr]' : ''}`}>
-        <div className="space-y-5">
-          <p className={heroEyebrow}>{eyebrow}</p>
-          <h1 className={heroTitle}>{title}</h1>
-          <p>
-            <Link href="/about/" className="text-sm font-semibold text-white underline underline-offset-2 focus-visible:outline-white">
-              {HOW_SITE_WORKS_LINK}
-            </Link>
-          </p>
-          <p className={heroLead}>{description}</p>
-          {guideCount > 0 && (
-            <div className="no-print flex flex-wrap items-center gap-3 pt-1">
-              <a href="#in-this-section" className={heroPrimaryBtn}>
+    <header className="hub-hero">
+      <div>
+        <p className="kicker">{eyebrow}</p>
+        <h1>{title}</h1>
+        <p className="hub-hero-lead">{description}</p>
+        <p className="notice-line mt-3">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" className="mt-1 shrink-0 text-[var(--accent)]" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 11v5M12 7.5v.01" strokeLinecap="round" />
+          </svg>
+          <Link href="/about/">{HOW_SITE_WORKS_LINK}</Link>
+        </p>
+        {(guideCount > 0 || sections.length > 0) && (
+          <div className="hub-hero-actions no-print">
+            {guideCount > 0 && (
+              <a href="#in-this-section" className="btn btn-primary">
                 Browse {guideCount} guides
-                <ArrowDown aria-hidden="true" className="h-4 w-4" />
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M12 5v14M6 13l6 6 6-6" />
+                </svg>
               </a>
-            </div>
-          )}
-        </div>
-
-        {sections.length > 0 && (
-          <nav
-            aria-label="On this page"
-            className="rounded-2xl bg-white p-5 text-[var(--color-ink)] shadow-xl shadow-black/20 sm:p-6"
-          >
-            <p className="font-serif text-lg font-semibold">On this page</p>
-            <ol className="mt-3 space-y-1">
-              {sections.slice(0, MAX_JUMPS).map((s, i) => (
-                <li key={s.id}>
-                  <a
-                    href={`#${s.id}`}
-                    className="tap group w-full gap-3 rounded-lg px-1.5 text-base text-[var(--color-ink)] no-underline hover:bg-[var(--color-accent-soft)]"
-                  >
-                    <span
-                      aria-hidden="true"
-                      className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent-soft)] text-sm font-semibold text-[var(--color-accent)] group-hover:bg-[var(--color-accent)] group-hover:text-white"
-                    >
-                      {i + 1}
-                    </span>
-                    <span className="leading-snug group-hover:underline">{headingLabel(s.text)}</span>
-                  </a>
-                </li>
-              ))}
-            </ol>
-            {sections.length > MAX_JUMPS && (
-              <p className="mt-2 pl-1.5 text-sm text-[var(--color-ink-muted)]">
-                + {sections.length - MAX_JUMPS} more sections further down
-              </p>
             )}
-          </nav>
+            {sections.length > 0 && <TocSheet items={sections.map((s) => ({ id: s.id, label: headingLabel(s.text) }))} />}
+          </div>
         )}
       </div>
-    </HeroPanel>
+      {guideCount > 0 && (
+        <p className="hub-hero-count" aria-hidden="true">
+          <strong>{guideCount}</strong>
+          <span>guides, each with its sources</span>
+        </p>
+      )}
+    </header>
   );
 }
 
@@ -86,24 +71,16 @@ const GRADE_ORDER: EvidenceGrade[] = ['strong', 'moderate', 'limited', 'comfort_
 function GuideCard({ page, showGrade }: { page: ContentPage; showGrade: boolean }) {
   const grade = page.fm.evidence_grade;
   return (
-    <Link
-      href={page.url}
-      className="card-live tap group flex h-full flex-col items-start gap-2 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4 no-underline shadow-xs transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:shadow-md"
-    >
-      <span className="flex w-full items-start justify-between gap-3">
-        <span className="font-semibold leading-snug text-[var(--color-ink)] group-hover:text-[var(--color-accent)]">
-          {page.fm.title}
-        </span>
-        <ArrowRight
-          aria-hidden="true"
-          className="mt-1 h-4 w-4 shrink-0 text-[var(--color-ink-muted)] transition-transform group-hover:translate-x-1 group-hover:text-[var(--color-accent)]"
-        />
+    <Link href={page.url} className="guide-card">
+      <span className="guide-card-title">
+        <span>{page.fm.title}</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
       </span>
-      <span className="line-clamp-2 text-sm leading-relaxed text-[var(--color-ink-muted)]">
-        {page.fm.meta_description}
-      </span>
+      <span className="guide-card-desc">{page.fm.meta_description}</span>
       {showGrade && grade && grade !== 'per_option' && (
-        <span className="mt-auto pt-1">
+        <span className="guide-card-grade">
           <GradeBadge grade={grade} />
         </span>
       )}
@@ -111,40 +88,68 @@ function GuideCard({ page, showGrade }: { page: ContentPage; showGrade: boolean 
   );
 }
 
+/** Symptoms hub: guides grouped by what she's feeling, with chips and instant search. */
+function symptomGroups(pages: ContentPage[]): DirectoryGroup[] {
+  const { byUrl } = getSiteData();
+  const toItem = (p: ContentPage) => ({
+    url: p.url,
+    title: p.fm.title,
+    desc: p.fm.meta_description,
+    terms: [p.fm.primary_keyword, ...(p.fm.secondary_keywords ?? []), ...(p.fm.symptom_tags ?? []), SLUG_TERMS[p.fm.slug] ?? '']
+      .join(' ')
+      .replace(/-/g, ' ')
+      .toLowerCase(),
+  });
+  const groups: DirectoryGroup[] = SYMPTOM_GROUPS.map((g) => ({ ...g, items: [] }));
+  const byId = new Map(groups.map((g) => [g.id, g]));
+  for (const p of pages) byId.get(SLUG_GROUP[p.fm.slug] ?? 'other')!.items.push(toItem(p));
+  for (const extra of EXTRA_URLS) {
+    const p = byUrl.get(extra.url);
+    if (p && !pages.includes(p)) byId.get(extra.group)!.items.push(toItem(p));
+  }
+  for (const g of groups) g.items.sort((a, b) => a.title.localeCompare(b.title));
+  return groups.filter((g) => g.items.length > 0);
+}
+
 /**
- * The hub's guides as cards. When most of them carry an evidence grade (the
- * Does-it-work hub), they are grouped by grade, strongest first, so the
- * directory doubles as a verdict board. Grades come from each page's own
- * frontmatter, never from here.
+ * The hub's guides. The symptoms hub gets grouped, filterable cards; a hub where
+ * most guides carry an evidence grade (Does it work?) is grouped by grade,
+ * strongest first; any other hub is a simple card grid. Grades come from each
+ * page's own frontmatter, never from here.
  */
 export function HubDirectory({ pages, heading }: { pages: ContentPage[]; heading: string }) {
+  const isSymptoms = pages.length > 0 && pages.every((p) => p.url.startsWith('/symptoms/'));
   const graded = pages.filter((p) => p.fm.evidence_grade && p.fm.evidence_grade !== 'per_option');
-  const byGrade = graded.length * 2 > pages.length;
+  const byGrade = !isSymptoms && graded.length * 2 > pages.length;
+  const groups = isSymptoms ? symptomGroups(pages) : [];
+  const total = isSymptoms ? groups.reduce((n, g) => n + g.items.length, 0) : pages.length;
 
   return (
     <section aria-labelledby="in-this-section" className="scroll-mt-4 space-y-5">
-      <div className="flex flex-wrap items-end justify-between gap-2">
-        <h2 id="in-this-section" className="font-serif text-2xl font-semibold sm:text-3xl">
+      <div className="flex flex-wrap items-baseline justify-between gap-2 border-t border-[var(--rule)] pt-6">
+        <h2 id="in-this-section" className="text-[length:var(--fs-h2)]">
           {heading}
         </h2>
-        <p className="text-sm text-[var(--color-ink-muted)]">{pages.length} guides</p>
+        <p className="text-[var(--fs-meta)] text-[var(--ink-muted)]">{total} guides</p>
       </div>
 
-      {byGrade ? (
-        <div className="space-y-7">
+      {isSymptoms ? (
+        <SymptomsDirectory groups={groups} total={total} />
+      ) : byGrade ? (
+        <div>
           {GRADE_ORDER.map((g) => {
             const group = graded.filter((p) => p.fm.evidence_grade === g);
             if (group.length === 0) return null;
             return (
-              <div key={g} className="space-y-3">
-                <h3 className="flex items-center gap-3 text-lg">
+              <div key={g} className="hub-group">
+                <h3 className="flex flex-wrap items-center gap-3 text-[length:var(--fs-h4)]">
                   <GradeBadge grade={g} />
-                  <span className="text-[var(--color-ink-muted)]">
+                  <span className="font-sans text-[1rem] font-normal text-[var(--ink-muted)]">
                     {group.length} {group.length === 1 ? 'verdict' : 'verdicts'}
                   </span>
-                  <span className="sr-only">: {GRADE_LABELS[g]}</span>
+                  <span className="visually-hidden">: {GRADE_LABELS[g]}</span>
                 </h3>
-                <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                <ul className="guide-grid">
                   {group.map((p) => (
                     <li key={p.url}>
                       <GuideCard page={p} showGrade={false} />
@@ -155,9 +160,9 @@ export function HubDirectory({ pages, heading }: { pages: ContentPage[]; heading
             );
           })}
           {pages.length > graded.length && (
-            <div className="space-y-3">
-              <h3 className="text-lg">More guides</h3>
-              <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="hub-group">
+              <h3 className="text-[length:var(--fs-h4)]">More guides</h3>
+              <ul className="guide-grid">
                 {pages
                   .filter((p) => !graded.includes(p))
                   .map((p) => (
@@ -170,7 +175,7 @@ export function HubDirectory({ pages, heading }: { pages: ContentPage[]; heading
           )}
         </div>
       ) : (
-        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="guide-grid">
           {pages.map((p) => (
             <li key={p.url}>
               <GuideCard page={p} showGrade />

@@ -99,18 +99,20 @@ export function TodayNudges({ todayStr, lastLoggedDate, firstEntryDate }: Props)
   if (nudges.length === 0) return null;
 
   return (
-    <div className="space-y-3" aria-label="Reminders">
+    <div className="grid gap-3" aria-label="Reminders">
       {nudges.map((n) => (
         <section
           key={n.id}
           aria-labelledby={`nudge-${n.id}`}
-          className="rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4"
+          className={`panel gap-2 border-l-4 ${
+            n.id === 'appointment' ? 'border-l-[var(--link)]' : n.id === 'backup' ? 'border-l-[var(--brass-rule)]' : 'border-l-[var(--accent)]'
+          }`}
         >
-          <h2 id={`nudge-${n.id}`} className="text-base font-semibold text-[var(--color-ink)]">
+          <h2 id={`nudge-${n.id}`} className="font-serif text-[1.2rem] font-semibold leading-snug">
             {n.title}
           </h2>
-          <p className="mt-1 text-sm text-[var(--color-ink-muted)]">{n.body}</p>
-          <Link href={n.href} className="tap mt-2 inline-flex font-semibold text-[var(--color-link)] underline">
+          <p className="text-[var(--ink-muted)]">{n.body}</p>
+          <Link href={n.href} className="btn btn-secondary btn-sm justify-self-start">
             {n.action}
           </Link>
         </section>

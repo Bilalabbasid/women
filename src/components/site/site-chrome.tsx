@@ -6,92 +6,167 @@ import { APP_ROUTES } from '@/lib/routes';
 import { isToolLive } from '@/lib/tools/logic';
 import type { Crumb } from '@/lib/seo/jsonld';
 import { serializeLd } from '@/lib/seo/jsonld';
+import { getSiteData } from '@/lib/content/site-data';
+import { MenuSheet, NavGroups, ReadingControls, UrgentLink, type NavGroup } from './menu-sheet';
+import { SearchLauncher } from './search-launcher';
+import '@/app/styles/chrome.css';
 
-/** Server-only site chrome. Ships no JavaScript. */
+/**
+ * Site chrome: server components, plus three small islands (the phone menu
+ * sheet, the search overlay launcher, and the theme/text-size controls).
+ * "More" on desktop is a native popover with no JavaScript.
+ */
 
 export function JsonLd({ data }: { data: Record<string, unknown> | Array<Record<string, unknown>> }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeLd(data) }} />;
 }
 
-export function BrandLogo({ size = 28, tone = 'dark' }: { size?: number; tone?: 'dark' | 'light' }) {
-  const light = tone === 'light';
+/**
+ * Brand mark + wordmark. Drawn from tokens, so it inverts cleanly in dark mode.
+ * `tone` is kept for older callers; both tones now follow the theme.
+ */
+export function BrandLogo({ size = 28 }: { size?: number; tone?: 'dark' | 'light' }) {
   return (
     <span className="inline-flex items-center gap-2.5">
-      <svg
-        width={size}
-        height={size}
-        viewBox="0 0 64 64"
-        fill="none"
-        aria-hidden="true"
-        className="shrink-0"
-      >
-        <rect width="64" height="64" rx="14" fill={light ? '#2C7A66' : '#1F5A4C'} />
-        <path
-          d="M13 46V18H19.5L27.5 34.5L35.5 18H42V46H36.5V27.5L29.2 42.5H25.8L18.5 27.5V46H13Z"
-          fill="#F7F6F2"
-        />
+      <svg width={size} height={size} viewBox="0 0 64 64" fill="none" aria-hidden="true" className="shrink-0">
+        <rect width="64" height="64" rx="14" fill="var(--accent)" />
+        <path d="M13 46V18H19.5L27.5 34.5L35.5 18H42V46H36.5V27.5L29.2 42.5H25.8L18.5 27.5V46H13Z" fill="var(--on-accent)" />
         <path
           d="M38 35.5L43.5 41L53 27.5"
-          stroke="#E6EFEB"
+          stroke="var(--on-accent)"
+          strokeOpacity=".75"
           strokeWidth="5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
       </svg>
-      <span className={`font-serif text-xl font-bold tracking-tight ${light ? 'text-white' : 'text-[var(--color-ink)]'}`}>
-        Meno<span className={light ? 'text-[#9fd4c3]' : 'text-[var(--color-accent)]'}>Verdict</span>
+      <span className="font-serif text-[1.35rem] font-semibold tracking-tight text-[var(--ink)]">
+        Meno<span className="text-[var(--accent)]">Verdict</span>
       </span>
     </span>
   );
 }
 
-export function SiteHeader({ hubs }: { hubs: Array<{ href: string; label: string }> }) {
+/* ------------------------------------------------------------------ navigation model */
+
+/** Desktop's main row (only hubs that exist in this build). */
+const PRIMARY = [
+  { href: '/symptoms/', label: 'Symptoms' },
+  { href: '/treatments/', label: 'Treatments' },
+  { href: '/does-it-work/', label: 'Does it work?' },
+];
+
+function exists(href: string) {
+  return getSiteData().byUrl.has(href);
+}
+
+/** Understand · Treat · Tools, built from pages in this build. */
+function navGroups(): NavGroup[] {
+  const pick = (links: Array<{ href: string; label: string; hint?: string }>) => links.filter((l) => exists(l.href));
+  const tools = pick([
+    { href: '/tools/stage-guide/', label: 'Where am I in the transition?', hint: 'Short quiz' },
+    { href: '/tools/symptoms-checklist/', label: 'Symptoms checklist' },
+    { href: '/tools/does-it-work-checker/', label: 'Evidence checker' },
+    { href: '/tools/treatment-questions/', label: 'Doctor question builder' },
+  ]);
+  if (isToolLive('symptom-tracker')) tools.unshift({ href: APP_ROUTES.today, label: 'Your private tracker', hint: 'On this device' });
+  tools.push({ href: '/tools/', label: 'All tools' });
+  return [
+    {
+      title: 'Understand',
+      links: pick([
+        { href: '/perimenopause/', label: 'Perimenopause' },
+        { href: '/menopause/', label: 'Menopause' },
+        { href: '/postmenopause/', label: 'Postmenopause' },
+        { href: '/symptoms/', label: 'Symptoms' },
+      ]),
+    },
+    {
+      title: 'Treat',
+      links: pick([
+        { href: '/treatments/', label: 'Treatments' },
+        { href: '/does-it-work/', label: 'Does it work?' },
+        { href: '/compare/', label: 'Compare care' },
+        { href: '/care/', label: 'Getting care' },
+      ]),
+    },
+    { title: 'Tools', links: tools },
+  ];
+}
+
+/** Saved pages and install (the tracker's PWA pages), when the tracker is live. */
+function pwaLinks() {
+  return isToolLive('symptom-tracker')
+    ? [
+        { href: APP_ROUTES.saved, label: 'Saved' },
+        { href: APP_ROUTES.install, label: 'Install the app' },
+      ]
+    : [];
+}
+
+/* ------------------------------------------------------------------ header */
+
+// `hubs` is kept for existing callers; the header builds its groups from this build's pages.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function SiteHeader(_props: { hubs: Array<{ href: string; label: string }> }) {
+  const groups = navGroups();
+  const primaryHrefs = new Set(PRIMARY.map((p) => p.href));
+  // Desktop "More": everything not already in the main row.
+  const moreGroups = groups.map((g) => ({ ...g, links: g.links.filter((l) => !primaryHrefs.has(l.href)) }));
+  const primary = PRIMARY.filter((p) => exists(p.href));
+
   return (
-    <header role="banner" className="border-b border-[var(--color-rule)] bg-[var(--color-paper)]">
+    <header role="banner" className="site-header rule-double no-print">
       <a href="#main" className="skip-link">
         Skip to content
       </a>
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-4 py-2.5">
-        <Link href="/" className="tap font-serif text-xl font-semibold text-[var(--color-ink)] no-underline">
+      <div className="site-header-row">
+        <Link href="/" className="site-logo" aria-label="MenoVerdict home">
           <BrandLogo size={30} />
         </Link>
-        {/* Up to 6 hubs plus Tools/Search/Account: on a narrow phone this wraps
-            into 2-3 ragged lines of links before any page content, pushing
-            everything down. A single scrollable row keeps it compact and
-            lets the next item peek into view as a scroll affordance; it goes
-            back to a normal wrapping row once there's room (sm+). No JS. */}
-        <nav aria-label="Main" className="w-full min-w-0 sm:w-auto">
-          <ul className="flex flex-nowrap items-center gap-x-5 gap-y-0 overflow-x-auto sm:flex-wrap sm:overflow-x-visible">
-            {hubs.map((h) => (
-              <li key={h.href}>
-                <Link href={h.href} className="tap text-[var(--color-ink)] underline-offset-4 hover:underline">
-                  {h.label}
+
+        <nav aria-label="Main" className="site-nav">
+          <ul>
+            {primary.map((p) => (
+              <li key={p.href}>
+                <Link href={p.href} className="site-nav-link">
+                  {p.label}
                 </Link>
               </li>
             ))}
             <li>
-              <Link href="/tools/" className="tap font-semibold text-[var(--color-accent)] underline-offset-4 hover:underline">
+              <Link href="/tools/" className="site-nav-link">
                 Tools
               </Link>
             </li>
-            <li>
-              <Link href="/search/" className="tap text-[var(--color-ink)] underline-offset-4 hover:underline">
-                Search
-              </Link>
-            </li>
-            {isToolLive('symptom-tracker') && (
-              <li>
-                <Link href={APP_ROUTES.saved} className="tap text-[var(--color-ink)] underline-offset-4 hover:underline">
-                  Saved
-                </Link>
-              </li>
-            )}
           </ul>
         </nav>
+
+        <div className="site-header-actions">
+          <SearchLauncher label className="site-nav-link site-search" />
+          <button type="button" className="site-nav-link site-more" popoverTarget="site-more" aria-haspopup="true">
+            More
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
+          <div className="site-menu-btn">
+            <MenuSheet groups={groups} extra={pwaLinks()} />
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop "More": native popover (no JS), light-dismiss and Esc to close. */}
+      <div id="site-more" popover="auto" className="more-pop" role="dialog" aria-label="More">
+        <NavGroups groups={moreGroups} extra={pwaLinks()} />
+        <ReadingControls />
+        <UrgentLink />
       </div>
     </header>
   );
 }
+
+/* ------------------------------------------------------------------ footer */
 
 const TRUST_LINKS: Array<{ href: string; label: string }> = [
   { href: '/about/', label: 'About' },
@@ -109,18 +184,15 @@ const LEGAL_LINKS: Array<{ href: string; label: string }> = [
   { href: '/contact/', label: 'Contact' },
 ];
 
-const footerLink =
-  'tap text-sm text-[#cfe2da] underline-offset-4 hover:text-white hover:underline focus-visible:outline-white';
-
 function FooterColumn({ title, links }: { title: string; links: Array<{ href: string; label: string }> }) {
   if (links.length === 0) return null;
   return (
     <div>
-      <p className="font-serif text-base font-semibold text-white">{title}</p>
+      <p className="footer-col-title">{title}</p>
       <ul className="mt-2">
         {links.map((l) => (
           <li key={l.href}>
-            <Link href={l.href} className={footerLink}>
+            <Link href={l.href} className="footer-link">
               {l.label}
             </Link>
           </li>
@@ -149,37 +221,19 @@ export function SiteFooter({
   }
 
   return (
-    <footer role="contentinfo" className="relative mt-20 overflow-hidden bg-[#14382f] text-[#e4eeea]">
-      <svg
-        aria-hidden="true"
-        focusable="false"
-        className="pointer-events-none absolute -left-32 -bottom-48 h-[30rem] w-[30rem] opacity-[0.07]"
-        viewBox="0 0 400 400"
-        fill="none"
-      >
-        {[70, 110, 150, 190].map((r) => (
-          <circle key={r} cx="200" cy="200" r={r} stroke="#fff" strokeWidth="1.5" />
-        ))}
-      </svg>
-
-      <div className="relative mx-auto max-w-6xl px-4 pt-14 pb-8">
-        <div className="grid gap-10 lg:grid-cols-[1.3fr_2fr]">
+    <footer role="contentinfo" className="site-footer">
+      <div className="wrap pt-12 pb-8">
+        <div className="grid gap-10 lg:grid-cols-[1.2fr_2fr]">
           <div className="space-y-4">
-            <Link href="/" className="tap no-underline focus-visible:outline-white">
-              <BrandLogo size={34} tone="light" />
+            <Link href="/" className="inline-flex no-underline" aria-label="MenoVerdict home">
+              <BrandLogo size={34} />
             </Link>
-            <p className="font-serif text-xl font-medium text-white">{SITE.tagline}</p>
-            <p className="max-w-sm text-sm leading-relaxed text-[#cfe2da]">
+            <p className="font-serif text-[1.3rem] leading-snug font-medium text-[var(--ink)]">{SITE.tagline}</p>
+            <p className="max-w-sm text-[1.0625rem] leading-relaxed text-[var(--ink-muted)]">
               Independent, evidence-graded information on perimenopause and menopause. Every claim graded, every
               source linked. Free, with no ads and no sponsors.
             </p>
-            <Link
-              href="/urgent-help/"
-              className="tap gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-[var(--color-urgent)] no-underline shadow-sm hover:bg-[var(--color-urgent-soft)] focus-visible:outline-white"
-            >
-              <span aria-hidden="true" className="h-2 w-2 rounded-full bg-[var(--color-urgent)]" />
-              Crisis and Urgent Help
-            </Link>
+            <UrgentLink />
           </div>
 
           <nav aria-label="Footer" className="grid gap-8 sm:grid-cols-3">
@@ -187,17 +241,17 @@ export function SiteFooter({
             <FooterColumn title="Trust & method" links={[...TRUST_LINKS, ...extraLinks]} />
             <div>
               <FooterColumn title="Legal & contact" links={LEGAL_LINKS} />
-              <StorageChoicesButton className={`${footerLink} cursor-pointer bg-transparent p-0 text-left`} />
+              <StorageChoicesButton className="footer-link cursor-pointer border-0 bg-transparent p-0 text-left" />
             </div>
           </nav>
         </div>
 
         {/* Standard notice */}
-        <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm leading-relaxed text-[#cfe2da]">
+        <div className="footer-notice">
           <p data-honesty="footer">{HONESTY_FOOTER}</p>
         </div>
 
-        <div className="mt-8 flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-[#a9c7bc] sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-6 flex flex-col gap-2 border-t border-[var(--rule)] pt-5 text-[1rem] text-[var(--ink-muted)] sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} {SITE.name}
             {SITE.legalEntity ? ` · Operated by ${SITE.legalEntity}` : ''}
@@ -209,9 +263,16 @@ export function SiteFooter({
 }
 
 export function Breadcrumbs({ crumbs }: { crumbs: Array<Crumb & { linked: boolean }> }) {
+  // Phones get one short "‹ Parent" link (the H1 is right below); wider screens the full trail.
+  const parent = [...crumbs.slice(0, -1)].reverse().find((c) => c.linked);
   return (
-    <nav aria-label="Breadcrumb" className="text-[var(--color-ink-muted)]">
-      <ol className="flex flex-wrap items-center gap-x-2">
+    <nav aria-label="Breadcrumb" className="text-[1rem] text-[var(--color-ink-muted)]">
+      {parent && (
+        <Link href={parent.path} className="tap gap-1 font-bold text-[var(--link)] no-underline hover:underline sm:hidden">
+          <span aria-hidden="true">‹</span> {parent.name}
+        </Link>
+      )}
+      <ol className={`${parent ? 'hidden sm:flex' : 'flex'} flex-wrap items-center gap-x-2`}>
         {crumbs.map((c, i) => {
           const last = i === crumbs.length - 1;
           return (

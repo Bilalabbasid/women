@@ -40,7 +40,7 @@ describe('Check-in page', () => {
 
     render(<CheckinPage />);
     const dateInput = screen.getByLabelText('Logging for') as HTMLInputElement;
-    const notes = screen.getByLabelText(/Notes/) as HTMLTextAreaElement;
+    const notes = screen.getByLabelText(/^Note/) as HTMLTextAreaElement;
     await waitFor(() => expect(dateInput.value).toBe('2026-08-20'));
     await waitFor(() => expect(notes.value).toBe('Woke at 3am drenched'));
 
@@ -54,10 +54,10 @@ describe('Check-in page', () => {
       .spyOn(LocalDataService, 'saveCheckin')
       .mockRejectedValueOnce(Object.assign(new Error('x'), { name: 'QuotaExceededError' }));
     render(<CheckinPage />);
-    const save = await screen.findByRole('button', { name: /Save to this device/ });
+    const save = await screen.findByRole('button', { name: /^Save (today|this day|this week)/ });
     fireEvent.click(save);
     expect(await screen.findByRole('alert')).toHaveTextContent(/out of storage space/);
-    expect(screen.getByRole('button', { name: /Save to this device/ })).not.toBeDisabled();
+    expect(screen.getByRole('button', { name: /^Save (today|this day|this week)/ })).not.toBeDisabled();
     spy.mockRestore();
   });
 });
@@ -75,7 +75,8 @@ describe('Today page quick feeling', () => {
     });
 
     render(<DashboardPage />);
-    const great = await screen.findByRole('button', { name: /Great/ });
+    // The five feeling levels are a radio group (one choice, arrow-key navigable).
+    const great = await screen.findByRole('radio', { name: /Great/ });
     fireEvent.click(great);
 
     await waitFor(async () => expect((await LocalDataService.getCheckinByDate(today))?.overallFeeling).toBe(5));
@@ -89,7 +90,7 @@ describe('Today page quick feeling', () => {
 
   it('does not invent sleep or hot-flash numbers on a brand-new day', async () => {
     render(<DashboardPage />);
-    fireEvent.click(await screen.findByRole('button', { name: /Okay/ }));
+    fireEvent.click(await screen.findByRole('radio', { name: /Okay/ }));
     const today = localDateString();
     await waitFor(async () => expect(await LocalDataService.getCheckinByDate(today)).not.toBeNull());
     const saved = (await LocalDataService.getCheckinByDate(today))!;

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction C: Field Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--link)}
+button{font:inherit;color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.mob-only{}
+.desk-only{display:none}
+@media(min-width:900px){.mob-only{display:none!important}.desk-only{display:revert}}
+h1,h2,h3{font-family:var(--font-head);color:var(--ink);text-wrap:balance;margin:0}
+.site-header{border-bottom:1px solid var(--rule);background:var(--paper)}
+.header-row{display:flex;align-items:center;justify-content:space-between;min-height:60px;gap:24px}
+.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.logo-tile{fill:var(--logo-tile)}.logo-m{fill:var(--logo-ink)}.logo-tick{stroke:var(--logo-tick)}
+.logo-word{font-family:var(--font-head);font-size:1.3rem;font-weight:600;letter-spacing:-.01em}
+.logo-word b{font-weight:600;color:var(--accent)}
+.desk-nav{display:none;gap:26px}
+.desk-nav a{color:var(--ink);text-decoration:none;font-size:1.0625rem}
+@media(min-width:900px){.desk-nav{display:flex}}
+.header-actions{display:flex;gap:4px;align-items:center}
+.icon-btn{display:inline-flex;align-items:center;gap:8px;min-width:48px;min-height:48px;justify-content:center;border:0;background:none;border-radius:12px;cursor:pointer;padding:0 10px}
+.hero{position:relative;overflow:hidden}
+.hero-grid{display:grid;gap:40px;padding-top:28px;padding-bottom:36px}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.25fr 1fr;align-items:center;padding-top:72px;padding-bottom:80px}}
+.hero h1{font-size:var(--h1-hero);line-height:1.08;letter-spacing:-.02em;font-weight:var(--head-weight)}
+.hero-sub{color:var(--ink-muted);margin:.6em 0 0;max-width:34em}
+.chips{border:0;padding:0;margin:22px 0 0;min-width:0}
+.chips legend{font-weight:700;font-size:1rem;margin-bottom:10px;padding:0;color:var(--ink)}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:0 16px;border:1.5px solid var(--chip-border);background:var(--paper-raised);border-radius:var(--chip-radius);font-size:1rem;cursor:pointer;color:var(--ink)}
+.chip.is-on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.chips-result{font-size:1rem;color:var(--ink-muted);margin:12px 0 0}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 22px;border-radius:var(--btn-radius);font-weight:700;text-decoration:none;font-size:1.0625rem}
+.btn-primary{background:var(--accent);color:var(--on-accent)}
+.btn-quiet{color:var(--link);padding:0 4px;text-decoration:underline;text-underline-offset:.2em}
+.eyebrow{font-size:.95rem;font-weight:700;color:var(--ink-muted);margin:0 0 12px}
+.verdict-card{display:flex;flex-direction:column;gap:10px;padding:16px 18px;border:1px solid var(--rule);background:var(--paper-raised);border-radius:var(--card-radius);text-decoration:none;color:var(--ink);margin-bottom:10px}
+.vc-title{font-weight:700}
+/* grade meter */
+.meter{display:flex;flex-direction:column;gap:6px}
+.meter-track{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;max-width:220px}
+.seg{height:8px;border-radius:2px;background:var(--meter-off)}
+.seg.is-below{background:var(--meter-dim)}
+.seg.is-on{background:var(--g);height:8px;outline:2px solid var(--g);outline-offset:2px}
+.meter-label{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:.95rem;color:var(--g-ink)}
+.meter-icon{display:inline-grid;place-items:center;width:1.2em;height:1.2em;border-radius:50%;background:var(--g);color:var(--paper-raised);font-size:.75em;line-height:1}
+.grade-strong{--g:var(--g-strong);--g-ink:var(--g-strong-ink)}
+.grade-moderate{--g:var(--g-moderate);--g-ink:var(--g-moderate-ink)}
+.grade-limited{--g:var(--g-limited);--g-ink:var(--g-limited-ink)}
+.grade-none{--g:var(--g-none);--g-ink:var(--g-none-ink)}
+.grade-harm{--g:var(--g-harm);--g-ink:var(--g-harm-ink)}
+.divider-label{margin-top:8px;margin-bottom:8px}
+.divider-label span{display:inline-block;font:700 .8rem/1 ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-muted);border:1px dashed var(--rule);padding:8px 10px;border-radius:6px}
+.article{padding-top:16px;padding-bottom:60px}
+.article-grid{display:grid;gap:48px}
+@media(min-width:900px){.article-grid{grid-template-columns:minmax(0,68ch) 240px;justify-content:space-between}}
+.crumbs a{font-size:1rem;color:var(--ink-muted);text-decoration:none;display:inline-flex;min-height:44px;align-items:center}
+.article-h1{font-size:var(--h1);line-height:1.12;letter-spacing:-.015em;font-weight:var(--head-weight)}
+.notice-line{font-size:1rem;color:var(--ink-muted);margin:14px 0 0;line-height:1.5}
+.byline{font-size:1rem;color:var(--ink-muted);margin:6px 0 0}
+.progress{height:3px;background:var(--rule);margin:18px 0;border-radius:2px;overflow:hidden}
+.progress span{display:block;height:100%;width:12%;background:var(--accent)}
+.toc-chip{min-height:44px;border:1px solid var(--rule);background:var(--paper-raised);border-radius:999px;padding:0 16px;font-size:1rem;font-weight:700;margin-bottom:18px}
+.callout{margin:0 0 20px;padding:18px 20px;border-radius:var(--card-radius)}
+.callout-title{font-family:var(--font-body);font-size:.95rem;font-weight:800;letter-spacing:.02em;margin-bottom:6px}
+.callout p{margin:0}
+.steps{margin:0;padding-left:1.3em}.steps li+li{margin-top:.35em}
+.article-h2{font-size:var(--h2);line-height:1.2;margin:40px 0 16px;font-weight:var(--head-weight)}
+.option-rows{border-top:1px solid var(--rule)}
+.option{display:grid;gap:8px;padding:16px 0;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink)}
+@media(min-width:700px){.option{grid-template-columns:200px 220px 1fr;align-items:center}}
+.opt-name{font-weight:700}
+.opt-find{color:var(--ink-muted)}
+.toc{position:sticky;top:24px;align-self:start;padding-top:60px}
+.toc-title{font-weight:800;font-size:.95rem;margin:0 0 10px}
+.toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--rule)}
+.toc li a{display:block;padding:7px 14px;color:var(--ink-muted);text-decoration:none;font-size:1rem;line-height:1.35}
+.toc li.is-on a{color:var(--ink);font-weight:700;box-shadow:-2px 0 0 var(--accent)}
+.text-size{display:flex;gap:4px;margin-top:24px}
+.text-size button{min-width:48px;min-height:44px;border:1px solid var(--rule);background:var(--paper-raised);border-radius:10px;font-weight:700}
+.text-size button[aria-pressed=true]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+
+
+:root{--font-head:'Bricolage Grotesque',system-ui,sans-serif;--font-body:'Literata',Georgia,serif;--head-weight:700;
+--body:1.125rem;--h1-hero:clamp(2.3rem,6.4vw,3.7rem);--h1:clamp(2rem,5vw,2.9rem);--h2:clamp(1.5rem,3.4vw,1.9rem);
+--paper:#F1EEE8;--paper-raised:#FAF8F4;--ink:#1F2723;--ink-muted:#4D5650;--rule:#D8D3C9;--accent:#3C5E4C;--on-accent:#FAF8F4;--link:#2D5873;
+--clay:#A3502F;--chip-border:#CBC5B9;--chip-radius:8px;--btn-radius:8px;--card-radius:4px;
+--logo-tile:#3C5E4C;--logo-ink:#F1EEE8;--logo-tick:#F0B9A2;
+--meter-off:#E1DCD2;--meter-dim:#C9C2B5;
+--g-strong:#2E7653;--g-strong-ink:#1F583C;--g-moderate:#30628B;--g-moderate-ink:#234C6D;--g-limited:#A47718;--g-limited-ink:#6B4C07;--g-none:#7A6B62;--g-none-ink:#554940;--g-harm:#A3352D;--g-harm-ink:#8A2620;
+--answer-bg:#FAF8F4;--try-bg:#F6E7DF}
+@media(prefers-color-scheme:dark){:root{
+--paper:#1A1815;--paper-raised:#22201C;--ink:#EBE5DC;--ink-muted:#B0A99F;--rule:#36322C;--accent:#9CC7AE;--on-accent:#152019;--link:#9EC8E3;
+--clay:#E79A7B;--chip-border:#46413A;--logo-tile:#4C7861;--logo-ink:#EBE5DC;--logo-tick:#F0B9A2;--meter-off:#2D2A25;--meter-dim:#47423A;
+--g-strong:#6EC296;--g-strong-ink:#93D3B0;--g-moderate:#7DB0DE;--g-moderate-ink:#A3C8EA;--g-limited:#DCB25E;--g-limited-ink:#E7C580;--g-none:#B7A79B;--g-none-ink:#CEC1B6;--g-harm:#EE8A80;--g-harm-ink:#F2A79F;
+--answer-bg:#22201C;--try-bg:#2C211C}}
+.hero h1{max-width:14ch;letter-spacing:-.03em}
+.logo-word{font-weight:700}
+.logo-word b{color:var(--clay)}
+.eyebrow{text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;font-family:var(--font-head)}
+.chips legend,.callout-title,.toc-title,.vc-title,.opt-name,.btn,.meter-label,.toc-chip{font-family:var(--font-head)}
+.chip{font-family:var(--font-head);font-weight:600}
+/* signature: the "transition thread" — a thin vertical line with stops running down the article margin,
+   echoing the perimenopause timeline; grade meter drawn as stepping stones on a line */
+.article-main{position:relative}
+@media(min-width:700px){.article-main{padding-left:34px}
+.article-main::before{content:"";position:absolute;left:8px;top:8px;bottom:0;width:2px;background:var(--rule)}
+.callout::before,.article-h2::before{content:"";position:absolute;left:3px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--accent);margin-top:6px}
+.callout,.article-h2{position:relative}
+.callout::before{left:-31px;top:20px;margin:0}.article-h2::before{left:-31px}}
+.callout-answer{border:1.5px solid var(--ink);border-radius:4px;background:var(--answer-bg)}
+.callout-try{background:var(--try-bg);border-radius:4px}
+.callout-try .callout-title{color:var(--clay)}
+.meter-track{position:relative;display:flex;gap:0;justify-content:space-between;max-width:200px;align-items:center;height:16px}
+.meter-track::before{content:"";position:absolute;left:0;right:0;top:50%;height:2px;background:var(--meter-dim)}
+.seg{position:relative;width:12px;height:12px;border-radius:50%;background:var(--paper-raised);border:2px solid var(--meter-dim)}
+.seg.is-below{background:var(--meter-dim)}
+.seg.is-on{width:16px;height:16px;background:var(--g);border-color:var(--g);outline:3px solid color-mix(in srgb,var(--g) 30%,transparent);outline-offset:1px}
+.verdict-card{border-top:3px solid var(--g,var(--accent))}
+.verdict-card:nth-of-type(1){--g:var(--g-strong)}.verdict-card:nth-of-type(2){--g:var(--g-limited)}.verdict-card:nth-of-type(3){--g:var(--g-none)}
+
+</style>
+</head>
+<body class="dir-c">
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="logo" href="#"><svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" class="logo-tile"/><path d="M13 46V18H19.5L27.5 34.5L35.5 18H42V46H36.5V27.5L29.2 42.5H25.8L18.5 27.5V46H13Z" class="logo-m"/><path d="M38 35.5L43.5 41L53 27.5" class="logo-tick" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span class="logo-word">Meno<b>Verdict</b></span></a>
+    <nav class="desk-nav" aria-label="Main"><a href="#">Symptoms</a><a href="#">Treatments</a><a href="#">Does it work?</a><a href="#">Tools</a><a href="#">More</a></nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Search"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="desk-only">Search</span></button>
+      <button class="icon-btn mob-only" aria-label="Menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="q">
+  <div class="wrap hero-grid">
+    <div class="hero-main">
+      <h1 id="q">What’s going on with your body right now?</h1>
+      <p class="hero-sub">Plain answers, graded against the evidence. No sign-up, nothing sold to you.</p>
+      <fieldset class="chips" aria-describedby="chips-hint">
+        <legend>Tap what you’re feeling</legend>
+        <div class="chip-row">
+          <button class="chip" aria-pressed="false">Hot at night</button><button class="chip is-on" aria-pressed="true">Can't sleep</button><button class="chip" aria-pressed="false">Hot flashes</button><button class="chip" aria-pressed="false">Angry all the time</button><button class="chip" aria-pressed="false">Low or anxious</button><button class="chip" aria-pressed="false">Brain fog</button><button class="chip" aria-pressed="false">Aching joints</button><button class="chip" aria-pressed="false">Heavy periods</button><button class="chip" aria-pressed="false">Racing heart</button><button class="chip" aria-pressed="false">Sore or dry down there</button>
+        </div>
+        <p id="chips-hint" class="chips-result"><b>3 guides</b> for “Can’t sleep” · <a href="#">Night sweats</a>, <a href="#">3 a.m. waking</a>, <a href="#">Anxiety at night</a></p>
+      </fieldset>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#">Where am I in the transition? <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-quiet" href="#">Start tracking</a>
+      </div>
+    </div>
+    <aside class="hero-aside" aria-labelledby="plainly">
+      <p id="plainly" class="eyebrow">We say it plainly when something doesn’t work</p>
+      <a class="verdict-card" href="#"><span class="vc-title">CBT for hot flashes</span><div class="meter sm grade-strong" role="img" aria-label="Evidence grade: Strong, step 5 of 5">
+    <div class="meter-track" aria-hidden="true"><span class="seg seg-harm is-below"></span><span class="seg seg-none is-below"></span><span class="seg seg-limited is-below"></span><span class="seg seg-moderate is-below"></span><span class="seg seg-strong is-on"></span></div>
+    <span class="meter-label"><span class="meter-icon" aria-hidden="true">●</span>Strong</span>
+  </div></a>
+      <a class="verdict-card" href="#"><span class="vc-title">Ashwagandha for mood</span><div class="meter sm grade-limited" role="img" aria-label="Evidence grade: Limited, step 3 of 5">
+    <div class="meter-track" aria-hidden="true"><span class="seg seg-harm is-below"></span><span class="seg seg-none is-below"></span><span class="seg seg-limited is-on"></span><span class="seg seg-moderate"></span><span class="seg seg-strong"></span></div>
+    <span class="meter-label"><span class="meter-icon" aria-hidden="true">◐</span>Limited</span>
+  </div></a>
+      <a class="verdict-card" href="#"><span class="vc-title">Black cohosh for hot flashes</span><div class="meter sm grade-none" role="img" aria-label="Evidence grade: Not supported, step 2 of 5">
+    <div class="meter-track" aria-hidden="true"><span class="seg seg-harm is-below"></span><span class="seg seg-none is-on"></span><span class="seg seg-limited"></span><span class="seg seg-moderate"></span><span class="seg seg-strong"></span></div>
+    <span class="meter-label"><span class="meter-icon" aria-hidden="true">×</span>Not supported</span>
+  </div></a>
+    </aside>
+  </div>
+  
+</section>
+
+<div class="divider-label wrap"><span>Article template · top of page</span></div>
+
+<article class="article wrap">
+  <div class="article-grid">
+    <div class="article-main">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="#">‹ Symptoms</a></nav>
+      <h1 class="article-h1">Night sweats: how to sleep cooler tonight</h1>
+      <p class="notice-line"><span class="notice-dot" aria-hidden="true"></span>Not medical advice. Written from published sources with AI help, not by a doctor. <a href="#">How this page was made</a></p>
+      <p class="byline">Checked against 4 sources · Last checked 2 Nov 2026 · 6 min read</p>
+      <div class="progress" aria-hidden="true"><span></span></div>
+      <button class="toc-chip mob-only">On this page · 5 sections</button>
+      <section class="callout callout-answer" aria-labelledby="sa">
+        <h2 id="sa" class="callout-title">Short answer</h2>
+        <p>Night sweats are hot flashes that happen while you sleep. They’re one of the most common signs of perimenopause, and you’re not imagining them. A cooler room, layered bedding and avoiding alcohol in the evening help tonight. Hormone therapy has the strongest evidence if they keep waking you.</p>
+      </section>
+      <section class="callout callout-try" aria-labelledby="tt">
+        <h2 id="tt" class="callout-title">Try tonight</h2>
+        <ol class="steps"><li>Set the bedroom to about 18 °C (65 °F).</li><li>Swap the duvet for two light layers you can kick off.</li><li>Skip wine after dinner; it’s a common trigger.</li></ol>
+      </section>
+      <h2 class="article-h2">What has the best evidence</h2>
+      <div class="option-rows">
+        <a class="option" href="#"><span class="opt-name">Hormone therapy (HRT)</span><div class="meter sm grade-strong" role="img" aria-label="Evidence grade: Strong, step 5 of 5">
+    <div class="meter-track" aria-hidden="true"><span class="seg seg-harm is-below"></span><span class="seg seg-none is-below"></span><span class="seg seg-limited is-below"></span><span class="seg seg-moderate is-below"></span><span class="seg seg-strong is-on"></span></div>
+    <span class="meter-label"><span class="meter-icon" aria-hidden="true">●</span>Strong</span>
+  </div><span class="opt-find">Cuts hot flashes by about 75% in trials.</span></a>
+        <a class="option" href="#"><span class="opt-name">CBT</span><div class="meter sm grade-moderate" role="img" aria-label="Evidence grade: Moderate, step 4 of 5">
+    <div class="meter-track" aria-hidden="true"><span class="seg seg-harm is-below"></span><span class="seg seg-none is-below"></span><span class="seg seg-limited is-below"></span><span class="seg seg-moderate is-on"></span><span class="seg seg-strong"></span></div>
+    <span class="meter-label"><span class="meter-icon" aria-hidden="true">◕</span>Moderate</span>
+  </div><span class="opt-find">Makes them less bothersome, not less frequent.</span></a>
+        <a class="option" href="#"><span class="opt-name">Black cohosh</span><div class="meter sm grade-none" role="img" aria-label="Evidence grade: Not supported, step 2 of 5">
+    <div class="meter-track" aria-hidden="true"><span class="seg seg-harm is-below"></span><span class="seg seg-none is-on"></span><span class="seg seg-limited"></span><span class="seg seg-moderate"></span><span class="seg seg-strong"></span></div>
+    <span class="meter-label"><span class="meter-icon" aria-hidden="true">×</span>Not supported</span>
+  </div><span class="opt-find">No better than placebo in good trials.</span></a>
+      </div>
+    </div>
+    <aside class="toc desk-only" aria-label="On this page">
+      <p class="toc-title">On this page</p>
+      <ol><li class="is-on"><a href="#">Short answer</a></li><li><a href="#">Is this perimenopause?</a></li><li><a href="#">Sleep cooler tonight</a></li><li><a href="#">What else could cause it</a></li><li><a href="#">What has the best evidence</a></li><li><a href="#">See a doctor if…</a></li></ol>
+      <div class="text-size" role="group" aria-label="Text size"><button>A</button><button aria-pressed="true">A+</button><button>A++</button></div>
+    </aside>
+  </div>
+</article>
+</main>
+</body>
+</html>

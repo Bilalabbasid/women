@@ -14,7 +14,7 @@ import { ComingSoon } from '@/components/app/coming-soon';
 export default function MembershipPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <AppHeader title="Membership" subtitle="Transparent, privacy-aligned plans" showBack showPrivacyBadge />
+      <AppHeader title="Membership" subtitle="Not built yet" showBack showPrivacyBadge />
       <ComingSoon
         title="Membership is coming soon"
         message="Paid membership isn't built yet. Every article and tool is already free and works fully on your device - there's nothing to upgrade to use them."

@@ -1,8 +1,5 @@
-import Link from 'next/link';
-import { BookOpen, Clock, Scale } from 'lucide-react';
 import type { EvidenceGrade, PageType } from '@/lib/content/schema';
-import { HeroPanel, heroEyebrow, heroTitle, heroLead } from './hero-panel';
-import { GradeBadge, GradeAiNote } from './evidence';
+import { GradeMeter } from '@/components/ui/grade';
 
 const TYPE_LABELS: Record<PageType, string> = {
   hub: 'Overview',
@@ -20,9 +17,10 @@ const TYPE_LABELS: Record<PageType, string> = {
 };
 
 /**
- * Hero for every article page. The key-facts card only shows facts read from
- * the page itself: its evidence grade, how many sources it cites, and a
- * reading time computed from its own word count.
+ * Article page top: editorial, not a banner. Kicker, H1, description, then one
+ * quiet line of facts read from the page itself: its evidence grade (as a meter
+ * with "What does this mean?"), how many sources it cites, and reading time.
+ * Includes the slim reading-progress bar (CSS scroll-driven, no JavaScript).
  */
 export function ArticleHero({
   section,
@@ -30,7 +28,6 @@ export function ArticleHero({
   title,
   description,
   grade,
-  methodHref,
   sourceCount,
   readMinutes,
 }: {
@@ -39,76 +36,47 @@ export function ArticleHero({
   title: string;
   description: string;
   grade: EvidenceGrade | null;
+  /** Kept for callers; the grade meter's explainer links to the method. */
   methodHref?: string;
   sourceCount: number;
   readMinutes: number;
 }) {
-  const facts = grade || sourceCount > 0;
-
+  const scaleGrade = grade && grade !== 'per_option' ? grade : null;
   return (
-    <HeroPanel>
-      <div className={`grid items-center gap-8 ${facts ? 'md:grid-cols-[3fr_2fr]' : ''}`}>
-        <div className="space-y-4">
-          <p className={heroEyebrow}>
-            {section} · {TYPE_LABELS[pageType]}
-          </p>
-          <h1 className={heroTitle}>{title}</h1>
-          <p className={heroLead}>{description}</p>
-          {!facts && (
-            <p className="inline-flex items-center gap-2 text-sm text-[#cfe2da]">
-              <Clock aria-hidden="true" className="h-4 w-4" /> {readMinutes} min read
-            </p>
-          )}
-        </div>
+    <header className="article-hero">
+      <div className="reading-progress" aria-hidden="true" />
+      <p className="kicker">
+        {section} · {TYPE_LABELS[pageType]}
+      </p>
+      <h1 className="mt-2 max-w-[22ch] text-[length:var(--fs-h1)] leading-[1.08]">{title}</h1>
+      <p className="mt-4 max-w-[var(--measure)] text-[length:var(--fs-lead)] leading-relaxed text-[var(--ink-muted)]">{description}</p>
 
-        {facts && (
-          <div className="rounded-2xl bg-white p-5 text-[var(--color-ink)] shadow-xl shadow-black/20 sm:p-6">
-          <dl className="space-y-4">
-            {grade && (
-              <div className="space-y-1.5">
-                <dt className="flex items-center gap-2 text-sm font-semibold text-[var(--color-ink-muted)]">
-                  <Scale aria-hidden="true" className="h-4 w-4 text-[var(--color-accent)]" /> Evidence grade
-                </dt>
-                <dd>
-                  <GradeBadge grade={grade} methodHref={methodHref} />
-                  <span className="mt-1.5 block">
-                    <GradeAiNote methodHref={methodHref} />
-                  </span>
-                </dd>
-              </div>
-            )}
-            {sourceCount > 0 && (
-              <div
-                className={`flex items-center justify-between gap-3 ${grade ? 'border-t border-[var(--color-rule)] pt-3' : ''}`}
-              >
-                <dt className="flex items-center gap-2 text-sm font-semibold text-[var(--color-ink-muted)]">
-                  <BookOpen aria-hidden="true" className="h-4 w-4 text-[var(--color-accent)]" /> Sources cited
-                </dt>
-                <dd>
-                  <a href="#references" className="font-serif text-lg font-semibold text-[var(--color-link)] underline">
-                    {sourceCount}
-                  </a>
-                </dd>
-              </div>
-            )}
-            <div className="flex items-center justify-between gap-3 border-t border-[var(--color-rule)] pt-3">
-              <dt className="flex items-center gap-2 text-sm font-semibold text-[var(--color-ink-muted)]">
-                <Clock aria-hidden="true" className="h-4 w-4 text-[var(--color-accent)]" /> Reading time
-              </dt>
-              <dd className="font-serif text-lg font-semibold">{readMinutes} min</dd>
-            </div>
-          </dl>
-            {methodHref && grade && (
-              <p className="mt-4 border-t border-[var(--color-rule)] pt-3 text-sm text-[var(--color-ink-muted)]">
-                Grades come from the published evidence, and nobody pays to be graded.{' '}
-                <Link href={methodHref} className="font-semibold text-[var(--color-link)] underline">
-                  How we grade
-                </Link>
-              </p>
-            )}
+      <div className="mt-6 flex flex-wrap items-start gap-x-8 gap-y-4 border-y border-[var(--rule)] py-4">
+        {scaleGrade && (
+          <div className="min-w-[13rem]">
+            <p className="eyebrow mb-1.5">Evidence grade</p>
+            <GradeMeter grade={scaleGrade} />
           </div>
         )}
+        {grade === 'per_option' && (
+          <div>
+            <p className="eyebrow mb-1">Evidence</p>
+            <p className="font-bold">Each option below has its own grade</p>
+          </div>
+        )}
+        {sourceCount > 0 && (
+          <div>
+            <p className="eyebrow mb-1">Sources</p>
+            <a href="#references" className="link">
+              {sourceCount} cited
+            </a>
+          </div>
+        )}
+        <div>
+          <p className="eyebrow mb-1">Reading time</p>
+          <p className="font-bold">{readMinutes} min</p>
+        </div>
       </div>
-    </HeroPanel>
+    </header>
   );
 }

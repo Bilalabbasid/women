@@ -40,15 +40,15 @@ export function HonestyNotice(
     const label = href.startsWith('#') ? HONESTY_SHORT.linkLabel : 'How this site works';
     return (
       <p
-        className={`flex items-start gap-2 text-sm leading-relaxed ${dark ? 'text-[#e4eeea]' : 'text-[var(--color-ink-muted)]'}`}
+        className={dark ? 'flex items-start gap-2 text-sm leading-relaxed text-[#e4eeea]' : 'notice-line'}
         data-honesty="short"
       >
-        <Info aria-hidden="true" className={`mt-0.5 h-4 w-4 shrink-0 ${dark ? 'text-[#9fd4c3]' : 'text-[var(--color-accent)]'}`} />
+        <Info aria-hidden="true" className={`mt-1 h-4 w-4 shrink-0 ${dark ? 'text-[#9fd4c3]' : 'text-[var(--color-accent)]'}`} />
         <span>
           {HONESTY_SHORT.text}{' '}
           <a
             href={href}
-            className={`font-semibold underline underline-offset-2 ${dark ? 'text-white focus-visible:outline-white' : 'text-[var(--color-link)]'}`}
+            className={dark ? 'font-semibold text-white underline underline-offset-2 focus-visible:outline-white' : undefined}
           >
             {label}
           </a>
@@ -63,11 +63,15 @@ export function HonestyNotice(
       id={HONESTY_ANCHOR}
       aria-labelledby={`${HONESTY_ANCHOR}-title`}
       data-honesty="full"
-      className="scroll-mt-4 space-y-3 rounded-2xl border border-[var(--color-rule)] border-l-4 border-l-[var(--color-accent)] bg-[var(--color-paper-raised)] p-5 sm:p-6"
+      className="notice scroll-mt-20"
     >
+      <span className="notice-stamp" aria-hidden="true">
+        i
+      </span>
       <h2 id={`${HONESTY_ANCHOR}-title`} className="font-serif text-xl font-semibold">
         {HONESTY_FULL.heading}
       </h2>
+      <div className="col-start-2 space-y-3">
       <p className="font-semibold">{reviewer ? HONESTY_FULL.leadReviewed(reviewer) : HONESTY_FULL.lead}</p>
       {HONESTY_FULL.sections.map((s) => (
         <p key={s.title} className="text-[var(--color-ink)]">
@@ -87,6 +91,7 @@ export function HonestyNotice(
           {HONESTY_FULL.mistakeLabel}
         </Link>
       </p>
+      </div>
     </section>
   );
 }

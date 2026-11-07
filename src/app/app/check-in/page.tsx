@@ -1,27 +1,9 @@
 'use client';
 
-import React, { useState, useEffect, useMemo, useSyncExternalStore } from 'react';
+import React, { useState, useEffect, useMemo, useRef, useSyncExternalStore } from 'react';
 import { useRouter } from 'next/navigation';
-import {
-  Flame,
-  Moon,
-  Clock,
-  Check,
-  Plus,
-  Minus,
-  CheckCircle2,
-  HardDrive,
-  Droplet,
-  Coffee,
-  Wine,
-  Activity,
-  ChevronDown,
-  ChevronUp,
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { AppHeader } from '@/components/app/app-header';
+import { AppPage, Icon, LevelPicker, Panel, QuickPick, Stepper, SymptomChips } from '@/components/app/kit';
 import { STANDARD_SYMPTOMS } from '@/lib/config/symptoms';
 import { LocalDataService } from '@/lib/db/service';
 import { SeverityLevel, FlowLevel, LocalCustomSymptom } from '@/lib/db/schema';
@@ -46,10 +28,40 @@ function readPinned(): string {
   }
 }
 
+const FEELINGS: Array<{ value: 1 | 2 | 3 | 4 | 5; label: string; desc: string }> = [
+  { value: 1, label: 'Rough', desc: 'Very hard' },
+  { value: 2, label: 'Low', desc: 'Struggling' },
+  { value: 3, label: 'Okay', desc: 'Manageable' },
+  { value: 4, label: 'Good', desc: 'Steady' },
+  { value: 5, label: 'Great', desc: 'Thriving' },
+];
+
+const FLOWS: Array<{ value: FlowLevel; label: string }> = [
+  { value: 'none', label: 'None' },
+  { value: 'spotting', label: 'Spotting' },
+  { value: 'light', label: 'Light' },
+  { value: 'medium', label: 'Medium' },
+  { value: 'heavy', label: 'Heavy' },
+];
+
+/** Sleep quick picks (hours). Half-hours stay possible with the fine adjust below. */
+const SLEEP_PICKS = [
+  { value: 4, label: '4 or less' },
+  { value: 5, label: '5' },
+  { value: 6, label: '6' },
+  { value: 7, label: '7' },
+  { value: 8, label: '8' },
+  { value: 9, label: '9+' },
+];
+
+function longDay(date: string) {
+  const [y, m, d] = date.split('-').map(Number);
+  return new Date(y, m - 1, d).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+}
+
 export default function CheckinPage() {
   const router = useRouter();
 
-  // Primary state
   // Her local date ('' during server render so hydration matches); an evening entry belongs to today, not UTC tomorrow.
   const todayStr = useLocalToday();
   const dateParam = useSyncExternalStore(subscribeNoop, readDateParam, () => '');
@@ -68,36 +80,20 @@ export default function CheckinPage() {
   const [alcohol, setAlcohol] = useState(false);
   const [exercise, setExercise] = useState(false);
 
-  // Progressive disclosure sections
   const [showMoreSymptoms, setShowMoreSymptoms] = useState(false);
-  const [showLifestyle, setShowLifestyle] = useState(false);
+  const [showSleepAdjust, setShowSleepAdjust] = useState(false);
 
-  // Symptoms tracking
+  // Symptoms tracking: id → strength 1-5
   const [selectedSymptoms, setSelectedSymptoms] = useState<{ [id: string]: number }>({});
 
   // Custom symptoms
   const [customSymptomsList, setCustomSymptomsList] = useState<LocalCustomSymptom[]>([]);
   const [showAddCustomModal, setShowAddCustomModal] = useState(false);
   const [newCustomName, setNewCustomName] = useState('');
+  const customDialog = useRef<HTMLDialogElement>(null);
 
   const [savedSuccess, setSavedSuccess] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
-
-  const feelings: Array<{ value: 1 | 2 | 3 | 4 | 5; label: string; desc: string }> = [
-    { value: 1, label: 'Rough', desc: 'Very difficult' },
-    { value: 2, label: 'Low', desc: 'Struggling' },
-    { value: 3, label: 'Okay', desc: 'Manageable' },
-    { value: 4, label: 'Good', desc: 'Steady' },
-    { value: 5, label: 'Great', desc: 'Thriving' },
-  ];
-
-  const flows: Array<{ id: FlowLevel; label: string }> = [
-    { id: 'none', label: 'None' },
-    { id: 'spotting', label: 'Spotting' },
-    { id: 'light', label: 'Light' },
-    { id: 'medium', label: 'Medium' },
-    { id: 'heavy', label: 'Heavy' },
-  ];
 
   // Load existing check-in if editing
   useEffect(() => {
@@ -153,16 +149,25 @@ export default function CheckinPage() {
     };
   }, [selectedDate]);
 
-  const toggleSymptomSeverity = (id: string, severity: number) => {
+  // The add-your-own dialog opens as a real modal (focus trap, Esc to close).
+  useEffect(() => {
+    const d = customDialog.current;
+    if (!d) return;
+    if (showAddCustomModal && !d.open) d.showModal();
+    if (!showAddCustomModal && d.open) d.close();
+  }, [showAddCustomModal]);
+
+  /** Tap a chip: add it at 3 (moderate), or remove it. */
+  const toggleSymptom = (id: string) => {
     setSelectedSymptoms((prev) => {
       const copy = { ...prev };
-      if (copy[id] === severity) {
-        delete copy[id];
-      } else {
-        copy[id] = severity;
-      }
+      if (copy[id]) delete copy[id];
+      else copy[id] = 3;
       return copy;
     });
+  };
+  const setSymptomStrength = (id: string, severity: number) => {
+    setSelectedSymptoms((prev) => ({ ...prev, [id]: severity }));
   };
 
   const handleCreateCustomSymptom = async (e: React.FormEvent) => {
@@ -231,7 +236,6 @@ export default function CheckinPage() {
     }
   };
 
-  // Pinned symptoms (top 6 standard symptoms) vs extended list
   // Symptoms she pinned (onboarding or the symptoms checklist) come first; otherwise the first six.
   const pinnedRaw = useSyncExternalStore(subscribeNoop, readPinned, () => '[]');
   const pinnedIds = useMemo<string[]>(() => {
@@ -245,535 +249,267 @@ export default function CheckinPage() {
   const pinned = STANDARD_SYMPTOMS.filter((s) => pinnedIds.includes(s.id));
   const primarySymptoms = pinned.length > 0 ? pinned : STANDARD_SYMPTOMS.slice(0, 6);
   const remainingSymptoms = STANDARD_SYMPTOMS.filter((s) => !primarySymptoms.includes(s));
+  // A symptom already chosen stays visible even when the full list is folded away.
+  const shownSymptoms = [
+    ...primarySymptoms,
+    ...remainingSymptoms.filter((s) => showMoreSymptoms || selectedSymptoms[s.id]),
+  ];
+  const chosenCount = Object.keys(selectedSymptoms).length;
+
+  const urgentTriggers = evaluateUrgentTriggers({
+    flow,
+    symptomIds: Object.keys(selectedSymptoms),
+    notes: journalText,
+  });
+
+  const isToday = selectedDate === todayStr;
+  const extrasOn = [caffeine && 'caffeine', alcohol && 'alcohol', exercise && 'exercise'].filter(Boolean).length;
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <>
       <AppHeader
-        title="Daily Check-in"
-        subtitle="Stored on this device"
-        showBack={true}
+        title={isToday || !selectedDate ? 'Log today' : 'Edit a day'}
+        subtitle={selectedDate ? longDay(selectedDate) : undefined}
+        showBack
         backHref="/app/today/"
-        showPrivacyBadge={true}
         showSettings={false}
       />
 
-      <div className="flex-1 max-w-2xl mx-auto w-full px-4 py-5 space-y-6">
-        {/* Saved confirmation toast */}
-        {savedSuccess && (
-          <div className="bg-[#EFF7F2] border border-[#CDE0D4] rounded-2xl p-4 flex items-center gap-3 text-sm text-[#2C6E49] animate-in fade-in">
-            <CheckCircle2 className="w-5 h-5 shrink-0" />
-            <div>
-              <p className="font-semibold">Check-in safely saved to your local device</p>
-              <p className="text-xs text-[#3E5646]">Zero cloud transmission. Updating records...</p>
-            </div>
+      <AppPage>
+        {saveError && (
+          <div role="alert" className="error-state">
+            <strong>That didn’t save.</strong>
+            <span>{saveError}</span>
           </div>
         )}
 
-        {saveError && (
-          <p role="alert" className="rounded-2xl bg-[var(--color-urgent-soft)] p-4 text-sm font-semibold text-[var(--color-urgent)]">
-            {saveError}
-          </p>
-        )}
+        {/* When and how long */}
+        <div className="panel panel-quiet gap-3">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <label htmlFor="checkin-date" className="label">
+              Logging for
+            </label>
+            <input
+              id="checkin-date"
+              type="date"
+              value={selectedDate}
+              max={todayStr || undefined}
+              onChange={(e) => setSelectedDate(e.target.value)}
+              className="input w-auto min-w-[11rem]"
+            />
+          </div>
+          <QuickPick
+            label="This entry covers"
+            options={[
+              { value: 1 as const, label: 'This day' },
+              { value: 7 as const, label: 'The past 7 days' },
+            ]}
+            value={coversDays}
+            onChange={setCoversDays}
+          />
+          {weekly && (
+            <p className="hint">
+              A weekly entry sums up the 7 days ending on the date above. Give your average sleep a night and the total
+              hot flashes for the week.
+            </p>
+          )}
+        </div>
 
-        {/* Date Selector */}
-        <div className="flex items-center justify-between gap-3 bg-white p-3 rounded-2xl border border-[#E5DED5]">
-          <label htmlFor="checkin-date" className="text-xs font-semibold text-[#5C554F]">Logging for</label>
-          <input
-            id="checkin-date"
-            type="date"
-            value={selectedDate}
-            max={todayStr || undefined}
-            onChange={(e) => setSelectedDate(e.target.value)}
-            className="text-xs font-medium text-[#231F1D] bg-[#F7F6F2] px-3 py-1.5 rounded-xl border border-[#E5DED5] focus:outline-none focus:border-[#1F5A4C]"
+        <Panel title={weekly ? 'How was your week overall?' : 'How are you feeling?'}>
+          <LevelPicker label="Overall, from rough to great" levels={FEELINGS} value={overallFeeling} onChange={setOverallFeeling} />
+        </Panel>
+
+        <Panel
+          title={weekly ? 'Hot flashes this week' : 'Hot flashes today'}
+          hint={weekly ? 'Your best guess is fine.' : 'Tap + each time one happens, or add them up now.'}
+        >
+          <Stepper
+            label={weekly ? 'Hot flashes this week' : 'Hot flashes today'}
+            value={hotFlashCount}
+            onChange={setHotFlashCount}
+            unit={hotFlashCount === 1 ? 'hot flash' : 'hot flashes'}
+            decreaseLabel="One fewer hot flash"
+            increaseLabel="One more hot flash"
+          />
+        </Panel>
+
+        <Panel
+          title={weekly ? 'Sleep (average a night)' : 'Sleep last night'}
+          hint={`${sleepHours} ${sleepHours === 1 ? 'hour' : 'hours'}`}
+          action={
+            <button type="button" className="btn btn-quiet btn-sm" aria-expanded={showSleepAdjust} onClick={() => setShowSleepAdjust((v) => !v)}>
+              {showSleepAdjust ? 'Done' : 'Adjust'}
+            </button>
+          }
+        >
+          <QuickPick
+            label="Hours of sleep"
+            options={SLEEP_PICKS}
+            columns={3}
+            value={SLEEP_PICKS.some((p) => p.value === sleepHours) ? sleepHours : null}
+            onChange={setSleepHours}
+          />
+          {showSleepAdjust && (
+            <Stepper
+              label="Hours of sleep"
+              value={sleepHours}
+              onChange={setSleepHours}
+              min={0}
+              max={14}
+              step={0.5}
+              unit="hours"
+              decreaseLabel="Half an hour less"
+              increaseLabel="Half an hour more"
+            />
+          )}
+          {!weekly && (
+            <QuickPick
+              label="Did you wake in the night?"
+              options={[
+                { value: 'through' as const, label: 'Slept through' },
+                { value: 'woke' as const, label: 'Woke in the night' },
+              ]}
+              value={wokeAtNight ? 'woke' : 'through'}
+              onChange={(v) => setWokeAtNight(v === 'woke')}
+            />
+          )}
+        </Panel>
+
+        <Panel title="Bleeding or spotting">
+          <QuickPick label="Bleeding or spotting" options={FLOWS} columns={3} value={flow} onChange={setFlow} />
+        </Panel>
+
+        <Panel
+          title="Symptoms"
+          hint={chosenCount ? `${chosenCount} chosen. Tap one again to remove it.` : 'Tap any you’ve had. Then say how strong.'}
+        >
+          <SymptomChips
+            items={[
+              ...shownSymptoms.map((s) => ({ id: s.id, name: s.name })),
+              ...customSymptomsList.map((c) => ({ id: c.id, name: c.name, note: 'yours' })),
+            ]}
+            selected={selectedSymptoms}
+            onToggle={toggleSymptom}
+            onStrength={setSymptomStrength}
+          />
+          <div className="flex flex-wrap gap-x-4 gap-y-1">
+            {remainingSymptoms.length > 0 && (
+              <button type="button" className="btn btn-quiet btn-sm" aria-expanded={showMoreSymptoms} onClick={() => setShowMoreSymptoms(!showMoreSymptoms)}>
+                {showMoreSymptoms ? 'Show fewer' : `Show all ${STANDARD_SYMPTOMS.length} symptoms`}
+              </button>
+            )}
+            <button type="button" className="btn btn-quiet btn-sm" onClick={() => setShowAddCustomModal(true)}>
+              <Icon.Plus width={18} height={18} />
+              Add your own
+            </button>
+          </div>
+        </Panel>
+
+        <div className="accordion">
+          <details open={extrasOn > 0 || undefined}>
+            <summary>
+              <span>
+                Anything else today? <span className="font-normal text-[var(--ink-muted)]">(optional)</span>
+              </span>
+            </summary>
+            <div className="accordion-body">
+              <div className="chip-row" role="group" aria-label="Things that can affect symptoms">
+                <button type="button" className="chip" aria-pressed={caffeine} onClick={() => setCaffeine(!caffeine)}>
+                  Caffeine
+                </button>
+                <button type="button" className="chip" aria-pressed={alcohol} onClick={() => setAlcohol(!alcohol)}>
+                  Alcohol
+                </button>
+                <button type="button" className="chip" aria-pressed={exercise} onClick={() => setExercise(!exercise)}>
+                  Exercise
+                </button>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <div className="field">
+          <label htmlFor="journal-input" className="label">
+            Note <span className="font-normal text-[var(--ink-muted)]">(optional)</span>
+          </label>
+          <textarea
+            id="journal-input"
+            rows={3}
+            value={journalText}
+            onChange={(e) => setJournalText(e.target.value)}
+            placeholder="Anything you want to remember for your doctor"
+            className="textarea"
           />
         </div>
 
-        {/* Daily or weekly entry */}
-        <fieldset className="bg-white p-3 rounded-2xl border border-[#E5DED5] space-y-2">
-          <legend className="sr-only">This entry covers</legend>
-          <p className="text-xs font-semibold text-[#5C554F]" aria-hidden="true">
-            This entry covers
-          </p>
-          <div className="grid grid-cols-2 gap-2">
-            {([
-              [1, 'This day'],
-              [7, 'The past 7 days'],
-            ] as const).map(([value, label]) => (
-              <label
-                key={value}
-                className={`min-h-[44px] flex items-center justify-center gap-2 rounded-xl border px-3 text-xs font-semibold cursor-pointer ${
-                  coversDays === value ? 'bg-[#1f5a4c] border-[#1f5a4c] text-white' : 'bg-[#F7F6F2] border-[#E5DED5] text-[#3E3834]'
-                }`}
-              >
-                <input
-                  type="radio"
-                  name="covers"
-                  value={value}
-                  checked={coversDays === value}
-                  onChange={() => setCoversDays(value)}
-                  className="sr-only"
-                />
-                {label}
-              </label>
-            ))}
-          </div>
-          {weekly && (
-            <p className="text-xs text-[#3E3834]">
-              A weekly entry summarizes the 7 days ending on the date above. Enter average sleep per night and the
-              total number of hot flashes for the week.
-            </p>
-          )}
-        </fieldset>
-
-        {/* Section 1: How are you feeling today? */}
-        <section className="space-y-2">
-          <h2 className="text-sm font-serif font-semibold text-[#231F1D]">
-            {weekly ? 'How was your week overall?' : 'How are you feeling today?'}
-          </h2>
-
-          <div className="grid grid-cols-5 gap-2">
-            {feelings.map((f) => {
-              const isSelected = overallFeeling === f.value;
-              return (
-                <button
-                  key={f.value}
-                  type="button"
-                  onClick={() => setOverallFeeling(f.value)}
-                  className={`py-2.5 px-1 rounded-2xl border text-center transition select-none active:scale-95 ${
-                    isSelected
-                      ? 'bg-[#1F5A4C] border-[#1F5A4C] text-white shadow-xs'
-                      : 'bg-white border-[#E5DED5] text-[#554E48] hover:border-[#D0C7BC]'
-                  }`}
-                >
-                  <p className="text-xs font-semibold">{f.label}</p>
-                  <p className={`text-xs hidden sm:block ${isSelected ? 'text-white/80' : 'text-[#5C554F]'}`}>
-                    {f.desc}
-                  </p>
-                </button>
-              );
-            })}
-          </div>
-        </section>
-
-        {/* Section 2: Vitals — Sleep & Hot Flashes */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {/* Sleep Card */}
-          <Card className="p-4 bg-white space-y-3">
-            <div className="flex items-center justify-between">
-              <span className="text-xs font-semibold text-[#231F1D] flex items-center gap-1.5">
-                <Moon className="w-4 h-4 text-[#577060]" />
-                {weekly ? "Average sleep per night" : "Sleep duration"}
-              </span>
-              <span className="text-xs font-bold text-[#1F5A4C]">{sleepHours} hrs</span>
-            </div>
-
-            <div className="flex items-center justify-between gap-3 pt-1">
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                onClick={() => setSleepHours((h) => Math.max(0, h - 0.5))}
-                aria-label="Less sleep (half an hour)"
-                className="w-10 h-10 p-0 rounded-xl"
-              >
-                <Minus className="w-4 h-4" />
-              </Button>
-
-              <span className="font-serif font-semibold text-lg text-[#231F1D]">
-                {sleepHours}h
-              </span>
-
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                onClick={() => setSleepHours((h) => Math.min(14, h + 0.5))}
-                aria-label="More sleep (half an hour)"
-                className="w-10 h-10 p-0 rounded-xl"
-              >
-                <Plus className="w-4 h-4" />
-              </Button>
-            </div>
-
-            {!weekly && (
-            <button
-              type="button"
-              aria-pressed={wokeAtNight}
-              onClick={() => setWokeAtNight(!wokeAtNight)}
-              className={`w-full text-xs py-2 px-2.5 rounded-xl border flex items-center justify-center gap-1.5 transition ${
-                wokeAtNight
-                  ? 'bg-[#E6EFEB] border-[#C9DCD4] text-[#1F5A4C] font-semibold'
-                  : 'bg-[#F7F6F2] border-[#E5DED5] text-[#68615C]'
-              }`}
-            >
-              <Clock className="w-3.5 h-3.5" />
-              <span>{wokeAtNight ? 'Woke during night (2–4 AM)' : 'Slept through the night'}</span>
-            </button>
-            )}
-          </Card>
-
-          {/* Hot Flash Counter */}
-          <Card className="p-4 bg-white space-y-3">
-            <div className="flex items-center justify-between">
-              <span className="text-xs font-semibold text-[#231F1D] flex items-center gap-1.5">
-                <Flame className="w-4 h-4 text-[#1F5A4C]" />
-                {weekly ? "Hot flashes this week" : "Hot flashes today"}
-              </span>
-              <span className="text-xs font-bold text-[#1F5A4C]">{hotFlashCount} total</span>
-            </div>
-
-            <div className="flex items-center justify-between gap-3 pt-1">
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                onClick={() => setHotFlashCount((c) => Math.max(0, c - 1))}
-                aria-label="One fewer hot flash"
-                className="w-10 h-10 p-0 rounded-xl"
-              >
-                <Minus className="w-4 h-4" />
-              </Button>
-
-              <span className="font-serif font-semibold text-lg text-[#231F1D]">
-                {hotFlashCount}
-              </span>
-
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                onClick={() => setHotFlashCount((c) => c + 1)}
-                aria-label="One more hot flash"
-                className="w-10 h-10 p-0 rounded-xl"
-              >
-                <Plus className="w-4 h-4" />
-              </Button>
-            </div>
-
-            <p className="text-xs text-center text-[#5C554F] pt-1">
-              Tap + anytime a flash or flush occurs.
-            </p>
-          </Card>
-        </section>
-
-        {/* Section 3: Cycle / Bleeding Observation */}
-        <section className="space-y-2">
-          <label className="text-sm font-serif font-semibold text-[#231F1D] flex items-center gap-1.5">
-            <Droplet className="w-4 h-4 text-[#1F5A4C]" />
-            Bleeding or spotting
-          </label>
-          <div className="grid grid-cols-5 gap-2">
-            {flows.map((fl) => {
-              const isSelected = flow === fl.id;
-              return (
-                <button
-                  key={fl.id}
-                  type="button"
-                  onClick={() => setFlow(fl.id)}
-                  className={`py-2 px-1 rounded-xl border text-xs font-medium transition text-center ${
-                    isSelected
-                      ? 'bg-[#1F5A4C] border-[#1F5A4C] text-white shadow-xs'
-                      : 'bg-white border-[#E5DED5] text-[#554E48] hover:border-[#D0C7BC]'
-                  }`}
-                >
-                  {fl.label}
-                </button>
-              );
-            })}
-          </div>
-        </section>
-
-        {/* Section 4: Primary Symptoms Severity (1-5) */}
-        <section className="space-y-3">
-          <div className="flex items-center justify-between">
-            <div>
-              <h2 className="text-sm font-serif font-semibold text-[#231F1D]">
-                Symptoms and how strong they are
-              </h2>
-              <p className="text-xs text-[#68615C]">1 = Mild • 5 = Severe • Tap again to deselect</p>
-            </div>
-            <Button
-              type="button"
-              variant="outline"
-              size="sm"
-              onClick={() => setShowAddCustomModal(true)}
-              className="text-xs gap-1 min-h-[44px] px-2.5"
-            >
-              <Plus className="w-3.5 h-3.5" />
-              <span>Custom</span>
-            </Button>
-          </div>
-
-          <div className="space-y-2.5">
-            {/* Primary standard symptoms */}
-            {primarySymptoms.map((symptom) => {
-              const currentSeverity = selectedSymptoms[symptom.id] || 0;
-              return (
-                <Card key={symptom.id} className="p-3.5 bg-white">
-                  <div className="flex items-center justify-between mb-2">
-                    <div>
-                      <p className="text-sm font-medium text-[#231F1D]">{symptom.name}</p>
-                      <p className="text-xs text-[#5C554F]">{symptom.categoryLabel}</p>
-                    </div>
-                    {currentSeverity > 0 ? (
-                      <Badge variant="primary" className="text-xs">
-                        Level {currentSeverity}/5
-                      </Badge>
-                    ) : (
-                      <span className="text-xs text-[#5C554F]">None</span>
-                    )}
-                  </div>
-
-                  <div className="grid grid-cols-5 gap-1.5">
-                    {[1, 2, 3, 4, 5].map((lvl) => (
-                      <button
-                        key={lvl}
-                        type="button"
-                        onClick={() => toggleSymptomSeverity(symptom.id, lvl)}
-                        className={`h-9 rounded-lg border text-xs font-semibold flex items-center justify-center transition active:scale-95 ${
-                          currentSeverity === lvl
-                            ? 'bg-[#1F5A4C] border-[#1F5A4C] text-white shadow-xs'
-                            : 'bg-[#F7F6F2] border-[#E5DED5] text-[#68615C] hover:border-[#D0C7BC]'
-                        }`}
-                      >
-                        {lvl}
-                      </button>
-                    ))}
-                  </div>
-                </Card>
-              );
-            })}
-
-            {/* Custom user symptoms */}
-            {customSymptomsList.map((cs) => {
-              const currentSeverity = selectedSymptoms[cs.id] || 0;
-              return (
-                <Card key={cs.id} className="p-3.5 bg-white border-l-4 border-l-[#577060]">
-                  <div className="flex items-center justify-between mb-2">
-                    <div>
-                      <p className="text-sm font-medium text-[#231F1D]">{cs.name}</p>
-                      <p className="text-xs text-[#577060]">Custom Symptom</p>
-                    </div>
-                    {currentSeverity > 0 ? (
-                      <Badge variant="secondary" className="text-xs">
-                        Level {currentSeverity}/5
-                      </Badge>
-                    ) : (
-                      <span className="text-xs text-[#5C554F]">None</span>
-                    )}
-                  </div>
-
-                  <div className="grid grid-cols-5 gap-1.5">
-                    {[1, 2, 3, 4, 5].map((lvl) => (
-                      <button
-                        key={lvl}
-                        type="button"
-                        onClick={() => toggleSymptomSeverity(cs.id, lvl)}
-                        className={`h-9 rounded-lg border text-xs font-semibold flex items-center justify-center transition active:scale-95 ${
-                          currentSeverity === lvl
-                            ? 'bg-[#577060] border-[#577060] text-white shadow-xs'
-                            : 'bg-[#F7F6F2] border-[#E5DED5] text-[#68615C] hover:border-[#D0C7BC]'
-                        }`}
-                      >
-                        {lvl}
-                      </button>
-                    ))}
-                  </div>
-                </Card>
-              );
-            })}
-
-            {/* Progressive Disclosure: More symptoms */}
-            {showMoreSymptoms &&
-              remainingSymptoms.map((symptom) => {
-                const currentSeverity = selectedSymptoms[symptom.id] || 0;
-                return (
-                  <Card key={symptom.id} className="p-3.5 bg-white">
-                    <div className="flex items-center justify-between mb-2">
-                      <div>
-                        <p className="text-sm font-medium text-[#231F1D]">{symptom.name}</p>
-                        <p className="text-xs text-[#5C554F]">{symptom.categoryLabel}</p>
-                      </div>
-                      {currentSeverity > 0 && (
-                        <Badge variant="primary" className="text-xs">
-                          Level {currentSeverity}/5
-                        </Badge>
-                      )}
-                    </div>
-
-                    <div className="grid grid-cols-5 gap-1.5">
-                      {[1, 2, 3, 4, 5].map((lvl) => (
-                        <button
-                          key={lvl}
-                          type="button"
-                          onClick={() => toggleSymptomSeverity(symptom.id, lvl)}
-                          className={`h-9 rounded-lg border text-xs font-semibold flex items-center justify-center transition active:scale-95 ${
-                            currentSeverity === lvl
-                              ? 'bg-[#1F5A4C] border-[#1F5A4C] text-white shadow-xs'
-                              : 'bg-[#F7F6F2] border-[#E5DED5] text-[#68615C] hover:border-[#D0C7BC]'
-                          }`}
-                        >
-                          {lvl}
-                        </button>
-                      ))}
-                    </div>
-                  </Card>
-                );
-              })}
-
-            <button
-              type="button"
-              onClick={() => setShowMoreSymptoms(!showMoreSymptoms)}
-              className="w-full py-2.5 text-xs text-[#1F5A4C] font-semibold flex items-center justify-center gap-1.5 bg-[#F7F6F2] border border-[#E5DED5] rounded-xl hover:bg-[#EEF1EF] transition"
-            >
-              <span>{showMoreSymptoms ? 'Show Fewer Symptoms' : `Show All ${STANDARD_SYMPTOMS.length} Symptoms`}</span>
-              {showMoreSymptoms ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-            </button>
-          </div>
-        </section>
-
-        {/* Section 5: Optional Lifestyle Factors (Progressive Disclosure) */}
-        <section className="space-y-2">
-          <button
-            type="button"
-            onClick={() => setShowLifestyle(!showLifestyle)}
-            className="w-full flex items-center justify-between text-xs text-[#68615C] font-semibold py-1 hover:text-[#231F1D]"
-          >
-            <span className="flex items-center gap-1.5">
-              <Activity className="w-4 h-4" />
-              Optional Lifestyle Observations
-            </span>
-            {showLifestyle ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-          </button>
-
-          {showLifestyle && (
-            <Card className="p-3.5 bg-white grid grid-cols-3 gap-2 animate-in fade-in">
-              <button
-                type="button"
-                onClick={() => setCaffeine(!caffeine)}
-                className={`p-2.5 rounded-xl border text-xs flex flex-col items-center gap-1 transition ${
-                  caffeine ? 'bg-[#E6EFEB] border-[#1F5A4C] text-[#1F5A4C] font-semibold' : 'border-[#E5DED5] text-[#68615C]'
-                }`}
-              >
-                <Coffee className="w-4 h-4" />
-                <span>Caffeine</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setAlcohol(!alcohol)}
-                className={`p-2.5 rounded-xl border text-xs flex flex-col items-center gap-1 transition ${
-                  alcohol ? 'bg-[#E6EFEB] border-[#1F5A4C] text-[#1F5A4C] font-semibold' : 'border-[#E5DED5] text-[#68615C]'
-                }`}
-              >
-                <Wine className="w-4 h-4" />
-                <span>Alcohol</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setExercise(!exercise)}
-                className={`p-2.5 rounded-xl border text-xs flex flex-col items-center gap-1 transition ${
-                  exercise ? 'bg-[#EDF3EF] border-[#577060] text-[#577060] font-semibold' : 'border-[#E5DED5] text-[#68615C]'
-                }`}
-              >
-                <Activity className="w-4 h-4" />
-                <span>Exercise</span>
-              </button>
-            </Card>
-          )}
-        </section>
-
-        {/* Section 6: Talk or Type Free-Form Journal Notes */}
-        <section className="space-y-2">
-          <label htmlFor="journal-input" className="text-sm font-serif font-semibold text-[#231F1D]">
-            Notes (optional)
-          </label>
-          <Card className="p-3 bg-white">
-            <textarea
-              id="journal-input"
-              rows={3}
-              value={journalText}
-              onChange={(e) => setJournalText(e.target.value)}
-              placeholder="e.g. Morning was calm, headache started around 2 PM..."
-              className="w-full text-sm text-[#231F1D] placeholder:text-[#6B645E] bg-transparent resize-none border-none focus:outline-none leading-relaxed"
-            />
-          </Card>
-        </section>
-
         {/* Urgent guidance: shown live, before saving, from the clinician-reviewed trigger file */}
-        <UrgentGuidance
-          triggers={evaluateUrgentTriggers({
-            flow,
-            symptomIds: Object.keys(selectedSymptoms),
-            notes: journalText,
-          })}
-        />
+        <UrgentGuidance triggers={urgentTriggers} />
 
         {/* Save: sticky, so it stays in reach above the bottom navigation on phones */}
-        <div className="sticky bottom-[4.5rem] md:bottom-4 z-30 -mx-4 space-y-1 border-t border-[#E5DED5] bg-[#F7F6F2]/95 px-4 pt-3 pb-3 backdrop-blur-sm">
-          <Button
-            variant="primary"
-            size="lg"
-            fullWidth
-            onClick={handleSave}
-            disabled={isSaving || savedSuccess}
-            className="gap-2 text-base font-semibold"
-          >
-            <Check className="w-5 h-5 stroke-[2.5]" aria-hidden="true" />
-            <span>{isSaving ? 'Saving…' : savedSuccess ? 'Saved' : 'Save to this device'}</span>
-          </Button>
-
-          <p className="text-center text-xs text-[#5C554F] flex items-center justify-center gap-1.5">
-            <HardDrive className="w-3.5 h-3.5 text-[#2C6E49]" aria-hidden="true" />
+        {/* No tab bar on this screen, so the Save bar sits on the bottom edge (safe-area aware). */}
+        <div className="save-bar no-print bottom-0 pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))]">
+          {savedSuccess ? (
+            <p className="saved-note" role="status">
+              <Icon.Check width={22} height={22} />
+              Saved on this device.{urgentTriggers.length === 0 ? ' Taking you back to Today…' : ''}
+            </p>
+          ) : (
+            <button type="button" className="btn btn-primary btn-lg btn-block" onClick={handleSave} disabled={isSaving} aria-busy={isSaving || undefined}>
+              <Icon.Check width={22} height={22} />
+              {weekly ? 'Save this week' : isToday ? 'Save today' : 'Save this day'}
+            </button>
+          )}
+          <p className="flex items-center justify-center gap-1.5 text-center text-[0.95rem] text-[var(--ink-muted)]">
+            <Icon.Lock width={15} height={15} />
             Saved only in this browser. Nothing is uploaded.
           </p>
         </div>
-      </div>
+      </AppPage>
 
-      {/* Add Custom Symptom Modal */}
-      {showAddCustomModal && (
-        <div
-          role="dialog"
-          aria-modal="true"
-          className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4 animate-in fade-in"
-        >
-          <div className="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl border border-[#E5DED5] space-y-4">
-            <h3 className="font-serif font-bold text-lg text-[#231F1D]">
-              Add Custom Symptom
-            </h3>
-            <p className="text-xs text-[#68615C]">
-              Create a custom symptom specific to your experience. It will be saved locally on this device.
-            </p>
-
-            <form onSubmit={handleCreateCustomSymptom} className="space-y-4 pt-1">
-              <input
-                type="text"
-                value={newCustomName}
-                onChange={(e) => setNewCustomName(e.target.value)}
-                placeholder="e.g. Tingling in fingers, Heart flutters..."
-                className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-[#E5DED5] focus:outline-none focus:border-[#1F5A4C]"
-                autoFocus
-              />
-
-              <div className="flex gap-2">
-                <Button type="submit" variant="primary" fullWidth size="sm">
-                  Add Symptom
-                </Button>
-                <Button
-                  type="button"
-                  variant="outline"
-                  fullWidth
-                  size="sm"
-                  onClick={() => setShowAddCustomModal(false)}
-                >
-                  Cancel
-                </Button>
-              </div>
-            </form>
-          </div>
+      {/* Add your own symptom */}
+      <dialog
+        ref={customDialog}
+        className="sheet"
+        aria-labelledby="custom-title"
+        onClose={() => setShowAddCustomModal(false)}
+        onClick={(e) => {
+          if (e.target === customDialog.current) setShowAddCustomModal(false);
+        }}
+      >
+        <div className="sheet-grip" aria-hidden="true" />
+        <div className="sheet-head">
+          <h2 id="custom-title" className="sheet-title">
+            Add your own symptom
+          </h2>
+          <button type="button" className="icon-btn" aria-label="Close" onClick={() => setShowAddCustomModal(false)}>
+            <Icon.Close width={22} height={22} />
+          </button>
         </div>
-      )}
-    </div>
+        <form onSubmit={handleCreateCustomSymptom} className="sheet-body grid gap-4">
+          <div className="field">
+            <label htmlFor="custom-name" className="label">
+              What do you call it?
+            </label>
+            <input
+              id="custom-name"
+              type="text"
+              value={newCustomName}
+              onChange={(e) => setNewCustomName(e.target.value)}
+              placeholder="e.g. Tingling fingers"
+              className="input"
+            />
+            <span className="hint">It’s saved on this device and added to your list.</span>
+          </div>
+          <div className="flex gap-3">
+            <button type="submit" className="btn btn-primary flex-1" disabled={!newCustomName.trim()}>
+              Add symptom
+            </button>
+            <button type="button" className="btn btn-secondary" onClick={() => setShowAddCustomModal(false)}>
+              Cancel
+            </button>
+          </div>
+        </form>
+      </dialog>
+    </>
   );
 }

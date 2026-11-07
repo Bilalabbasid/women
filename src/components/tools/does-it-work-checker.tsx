@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { evaluateUrgentTriggers } from '@/lib/safety/urgent-triggers';
 import { UrgentGuidance } from '@/components/safety/urgent-guidance';
@@ -8,8 +8,11 @@ import { markToolUsed } from '@/lib/pwa/install-gate';
 import { useToolState, savedLabel } from '@/components/storage/use-tool-state';
 import { ToolHistory } from '@/components/storage/tool-history';
 import { btnDanger, btnPrimary } from '@/components/storage/styles';
+import { BottomSheet } from '@/components/ui/interactive';
+import { GradeMeter } from '@/components/ui/grade';
+import '@/app/styles/verdict.css';
 import type { EvidenceGrade } from '@/lib/content/schema';
-import { GradeBadge, GRADE_LABELS, GradeAiNote } from '@/components/site/evidence';
+import { GRADE_LABELS, GradeAiNote } from '@/components/site/evidence';
 import { requireGrade } from '@/lib/grades/registry';
 
 /** Catalog grades use the site-wide scale (`EvidenceGrade`) so a verdict reads the
@@ -215,6 +218,9 @@ const DEFAULT_STATE: CheckerState = {
 const ENTRY_IDS = new Set(EVIDENCE_CATALOG.map((e) => e.id));
 const GRADES: ReadonlyArray<CheckerState['selectedGrade']> = ['all', 'strong', 'moderate', 'limited', 'comfort_only', 'not_supported'];
 
+/** Strongest first. Comfort only sits with not supported: it helps you feel better but is not a treatment. */
+const GRADE_RANK: Record<EvidenceEntry['grade'], number> = { strong: 5, moderate: 4, limited: 3, comfort_only: 2, not_supported: 1, harm_concern: 0 };
+
 function normalize(raw: unknown): CheckerState {
   const p = (raw ?? {}) as Partial<CheckerState>;
   return {
@@ -283,26 +289,49 @@ export function DoesItWorkChecker({ liveUrls }: { liveUrls: string[] }) {
     [state.bookmarkedIds],
   );
 
+  const [sort, setSort] = useState<'grade' | 'az'>('grade');
+
+  /** Counts for the chips: how many options each choice would show, given the other filters. */
+  const matches = (item: EvidenceEntry, symptom: string, grade: CheckerState['selectedGrade']) => {
+    const q = state.query.trim().toLowerCase();
+    if (symptom !== 'All symptoms' && !item.symptoms.includes(symptom)) return false;
+    if (grade !== 'all' && item.grade !== grade) return false;
+    if (q && !item.name.toLowerCase().includes(q) && !item.verdictSummary.toLowerCase().includes(q) && !item.category.toLowerCase().includes(q)) {
+      return false;
+    }
+    return true;
+  };
+
+  const shown = useMemo(() => {
+    const list = [...filtered];
+    // Strongest evidence first by default; stable, so catalog order breaks ties.
+    if (sort === 'grade') list.sort((a, b) => GRADE_RANK[b.grade] - GRADE_RANK[a.grade]);
+    else list.sort((a, b) => a.name.localeCompare(b.name));
+    return list;
+  }, [filtered, sort]);
+
+  const shortName = (name: string) => name.split(' (')[0].split(' — ')[0];
+  const filtersActive = state.selectedSymptom !== 'All symptoms' || state.selectedGrade !== 'all' || state.query.trim() !== '';
+
+  const printShortlist = () => {
+    markToolUsed();
+    window.print();
+  };
+
   return (
-    <div className="space-y-6" data-tool-ui="does-it-work-checker">
-      <fieldset className="space-y-2 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
-        <legend className="px-1 font-serif text-lg font-semibold">
-          Safety check first: do any of these apply right now?
-        </legend>
-        <div className="grid gap-2 sm:grid-cols-2">
+    <div className="checker" data-tool-ui="does-it-work-checker">
+      <fieldset className="panel min-w-0">
+        <legend className="panel-title mb-1">Safety check first: do any of these apply right now?</legend>
+        <p className="panel-hint -mt-2">Tick any that do. You’ll see where to get help straight away.</p>
+        <div className="grid sm:grid-cols-2 sm:gap-x-6">
           {[
             { id: 'postmenopausal_bleeding', label: 'Bleeding or spotting after 12+ months without a period' },
             { id: 'heavy_flow', label: 'Heavy or unusual vaginal bleeding' },
             { id: 'palpitations', label: 'Palpitations with chest pain, shortness of breath, or fainting' },
             { id: 'low_mood', label: 'Thoughts of harming yourself or feeling unable to stay safe' },
           ].map((item) => (
-            <label key={item.id} className="tap flex cursor-pointer items-center gap-3 py-1 text-sm">
-              <input
-                type="checkbox"
-                checked={state.redFlags.includes(item.id)}
-                onChange={() => toggleRedFlag(item.id)}
-                className="h-5 w-5 shrink-0 accent-[var(--color-accent)]"
-              />
+            <label key={item.id} className="check">
+              <input type="checkbox" checked={state.redFlags.includes(item.id)} onChange={() => toggleRedFlag(item.id)} />
               <span>{item.label}</span>
             </label>
           ))}
@@ -311,114 +340,131 @@ export function DoesItWorkChecker({ liveUrls }: { liveUrls: string[] }) {
 
       <UrgentGuidance triggers={urgent} />
 
-      <form onSubmit={(e) => e.preventDefault()} className="space-y-4 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
-        <div className="grid gap-4 sm:grid-cols-3">
-          <div>
-            <label htmlFor="checker-symptom" className="block text-sm font-semibold">
-              Filter by symptom or goal
-            </label>
-            <select
-              id="checker-symptom"
-              value={state.selectedSymptom}
-              onChange={(e) => persist({ ...state, selectedSymptom: e.target.value })}
-              className="mt-1 min-h-[44px] w-full rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper)] px-3"
-            >
-              {SYMPTOM_FILTERS.map((s) => (
-                <option key={s} value={s}>
-                  {s}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="checker-grade" className="block text-sm font-semibold">
-              Filter by evidence grade
-            </label>
-            <select
-              id="checker-grade"
-              value={state.selectedGrade}
-              onChange={(e) => persist({ ...state, selectedGrade: e.target.value as CheckerState['selectedGrade'] })}
-              className="mt-1 min-h-[44px] w-full rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper)] px-3"
-            >
-              <option value="all">All evidence grades</option>
-              <option value="strong">{GRADE_LABELS.strong}</option>
-              <option value="moderate">{GRADE_LABELS.moderate}</option>
-              <option value="limited">{GRADE_LABELS.limited}</option>
-              <option value="not_supported">{GRADE_LABELS.not_supported}</option>
-              <option value="harm_concern">{GRADE_LABELS.harm_concern}</option>
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="checker-search" className="block text-sm font-semibold">
-              Search treatment or supplement
-            </label>
+      <form onSubmit={(e) => e.preventDefault()} className="panel checker-filters" aria-label="Filter treatments">
+        <div className="field">
+          <label htmlFor="checker-search" className="label">
+            Search a treatment or supplement
+          </label>
+          <div className="search-input">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m20 20-3.5-3.5" />
+            </svg>
             <input
               id="checker-search"
               type="search"
-              placeholder="e.g. fezolinetant, CBT, black cohosh..."
+              className="input"
+              placeholder="e.g. fezolinetant, CBT, black cohosh"
               value={state.query}
               onChange={(e) => persist({ ...state, query: e.target.value })}
-              className="mt-1 min-h-[44px] w-full rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper)] px-3"
             />
+          </div>
+        </div>
+
+        <div>
+          <p className="checker-filter-label" id="checker-symptom-label">
+            Symptom or goal
+          </p>
+          <div className="chip-row" role="group" aria-labelledby="checker-symptom-label">
+            {SYMPTOM_FILTERS.map((s) => {
+              const n = EVIDENCE_CATALOG.filter((item) => matches(item, s, state.selectedGrade)).length;
+              return (
+                <button
+                  key={s}
+                  type="button"
+                  className="chip"
+                  aria-pressed={state.selectedSymptom === s}
+                  onClick={() => persist({ ...state, selectedSymptom: s })}
+                >
+                  {s === 'All symptoms' ? 'All' : s} <span className="chip-count">{n}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <div>
+          <p className="checker-filter-label" id="checker-grade-label">
+            Evidence
+          </p>
+          <div className="chip-row" role="group" aria-labelledby="checker-grade-label">
+            {GRADES.map((g) => {
+              const n = EVIDENCE_CATALOG.filter((item) => matches(item, state.selectedSymptom, g)).length;
+              return (
+                <button
+                  key={g}
+                  type="button"
+                  className="chip"
+                  aria-pressed={state.selectedGrade === g}
+                  disabled={n === 0 && state.selectedGrade !== g}
+                  onClick={() => persist({ ...state, selectedGrade: g })}
+                >
+                  {g === 'all' ? 'Any grade' : GRADE_LABELS[g]} <span className="chip-count">{n}</span>
+                </button>
+              );
+            })}
           </div>
         </div>
       </form>
 
-      <section aria-labelledby="checker-results-heading" aria-live="polite" className="space-y-4">
-        <div className="flex flex-wrap items-baseline justify-between gap-2">
-          <h2 id="checker-results-heading" className="text-2xl">
-            Evidence verdicts ({filtered.length})
+      <section aria-labelledby="checker-results-heading" className="grid gap-4">
+        <div className="checker-head">
+          <h2 id="checker-results-heading" className="text-[length:var(--fs-h3)]" aria-live="polite">
+            {shown.length} {shown.length === 1 ? 'option' : 'options'}
           </h2>
-          <p className="text-sm text-[var(--color-ink-muted)]">
-            Summaries reflect guideline consensus; never a personal recommendation or dose.
-          </p>
+          <div className="seg-control" role="group" aria-label="Sort">
+            <button type="button" aria-pressed={sort === 'grade'} onClick={() => setSort('grade')}>
+              Strongest first
+            </button>
+            <button type="button" aria-pressed={sort === 'az'} onClick={() => setSort('az')}>
+              A–Z
+            </button>
+          </div>
         </div>
+        <p className="hint -mt-2">Summaries of guideline consensus, never a personal recommendation or dose.</p>
 
-        {filtered.length === 0 ? (
-          <p className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
-            No treatments matched your filter. Try clearing the search box or switching to &ldquo;All symptoms&rdquo;.
-          </p>
+        {shown.length === 0 ? (
+          <div className="empty-state">
+            <strong>Nothing matches those filters</strong>
+            <span>Try “All” symptoms, “Any grade”, or a shorter search.</span>
+            {filtersActive && (
+              <button
+                type="button"
+                className="btn btn-secondary btn-sm"
+                onClick={() => persist({ ...state, selectedSymptom: 'All symptoms', selectedGrade: 'all', query: '' })}
+              >
+                Show every option
+              </button>
+            )}
+          </div>
         ) : (
-          <ul className="space-y-4">
-            {filtered.map((item) => {
+          <ul className="checker-list">
+            {shown.map((item) => {
               const saved = state.bookmarkedIds.includes(item.id);
               return (
-                <li
-                  key={item.id}
-                  className="space-y-2 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4"
-                >
-                  <div className="flex flex-wrap items-start justify-between gap-2">
-                    <div>
-                      <span className="text-xs font-semibold uppercase tracking-wider text-[var(--color-ink-muted)]">
-                        {item.category}
-                      </span>
-                      <h3 className="text-xl font-semibold">{item.name}</h3>
-                    </div>
-                    <div className="flex flex-col items-start gap-1">
-                      <GradeBadge grade={item.grade} methodHref="/evidence/how-we-grade/" />
-                      <GradeAiNote />
-                    </div>
+                <li key={item.id} className={`checker-card g-${item.grade}${saved ? ' is-saved' : ''}`}>
+                  <div>
+                    <p className="checker-card-cat">{item.category}</p>
+                    <h3 className="checker-card-name">{item.name}</h3>
                   </div>
-                  {item.gradeNote && (
-                    <p className="text-sm text-[var(--color-ink-muted)]">{item.gradeNote}</p>
-                  )}
+                  <GradeMeter grade={item.grade} use={item.symptoms.join(', ')} />
+                  {item.gradeNote && <p className="hint -mt-1">{item.gradeNote}</p>}
                   <p>{item.verdictSummary}</p>
-                  <p className="text-sm text-[var(--color-ink-muted)]">
-                    <strong>Guideline source:</strong> {item.guidelineSource}
+                  <p className="checker-source">
+                    <strong>Source:</strong> {item.guidelineSource} · <GradeAiNote />
                   </p>
-                  <div className="no-print flex flex-wrap items-center gap-3 pt-1">
+                  <div className="checker-actions no-print">
                     <button
                       type="button"
                       onClick={() => toggleBookmark(item.id)}
-                      className="tap rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper)] px-3 text-sm font-semibold"
+                      aria-pressed={saved}
+                      className="btn btn-secondary btn-sm save-toggle"
                     >
                       {saved ? 'Remove from my doctor list' : 'Save to ask my doctor'}
                     </button>
                     {item.articleUrl && live.has(item.articleUrl) && (
-                      <Link href={item.articleUrl} className="tap text-sm font-semibold text-[var(--color-link)] underline">
-                        Read full evidence guide
+                      <Link href={item.articleUrl} className="link link-arrow">
+                        Read the full guide
                       </Link>
                     )}
                   </div>
@@ -429,39 +475,34 @@ export function DoesItWorkChecker({ liveUrls }: { liveUrls: string[] }) {
         )}
       </section>
 
-      <section aria-labelledby="checker-saved-heading" className="space-y-3 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-5">
-        <h2 id="checker-saved-heading" className="text-2xl">
-          Options saved to discuss with your clinician ({bookmarkedItems.length})
+      <section aria-labelledby="checker-saved-heading" className="panel scroll-mt-20" id="checker-saved">
+        <h2 id="checker-saved-heading" className="panel-title">
+          My doctor list ({bookmarkedItems.length})
         </h2>
         {bookmarkedItems.length === 0 ? (
-          <p className="text-[var(--color-ink-muted)]">
-            Tap &ldquo;Save to ask my doctor&rdquo; on any option above to build a printable shortlist on this device.
+          <p className="text-[var(--ink-muted)]">
+            Tap &ldquo;Save to ask my doctor&rdquo; on any option above to build a list you can print. It stays on this device.
           </p>
         ) : (
-          <ul className="list-disc space-y-1 pl-6">
+          <ul className="row-list" role="list">
             {bookmarkedItems.map((i) => (
-              <li key={i.id}>
-                <strong>{i.name}</strong> — {GRADE_LABELS[i.grade]}
-                {i.gradeNote ? ` (${i.gradeNote})` : ''} ({i.guidelineSource})
+              <li key={i.id} className={`row g-${i.grade}`}>
+                <div className="row-main">
+                  <p className="row-title">{i.name}</p>
+                  <p className="row-meta">
+                    {GRADE_LABELS[i.grade]}
+                    {i.gradeNote ? ` (${i.gradeNote})` : ''} · {i.guidelineSource}
+                  </p>
+                </div>
               </li>
             ))}
           </ul>
         )}
 
-        <p className={`no-print text-sm ${status.error ? 'font-semibold text-[var(--color-urgent)]' : 'text-[var(--color-ink-muted)]'}`}>
-          {savedLabel(status)}
-        </p>
+        <p className={`no-print hint ${status.error ? 'font-bold text-[var(--urgent)]' : ''}`}>{savedLabel(status)}</p>
 
-        <div className="no-print flex flex-wrap gap-3 pt-2">
-          <button
-            type="button"
-            disabled={bookmarkedItems.length === 0}
-            onClick={() => {
-              markToolUsed();
-              window.print();
-            }}
-            className={btnPrimary}
-          >
+        <div className="no-print flex flex-wrap gap-3">
+          <button type="button" disabled={bookmarkedItems.length === 0} onClick={printShortlist} className={btnPrimary}>
             Print shortlist
           </button>
           <button type="button" onClick={() => void reset()} className={btnDanger}>
@@ -479,7 +520,53 @@ export function DoesItWorkChecker({ liveUrls }: { liveUrls: string[] }) {
         summarize={summarize}
         onOpen={(data) => update(data)}
       />
+
+      {/* Phones: the shortlist stays one tap away while scrolling the results. */}
+      {bookmarkedItems.length > 0 && (
+        <>
+          <div className="checker-spacer" aria-hidden="true" />
+          <div className="shortlist-tray no-print">
+            <BottomSheet
+              title={`My doctor list (${bookmarkedItems.length})`}
+              triggerClassName="btn btn-primary btn-block"
+              trigger={
+                <>
+                  My doctor list <span className="tray-count">{bookmarkedItems.length}</span>
+                </>
+              }
+            >
+              <ul className="row-list" role="list">
+                {bookmarkedItems.map((i) => (
+                  <li key={i.id} className="row">
+                    <div className="row-main">
+                      <p className="row-title">{shortName(i.name)}</p>
+                      <p className="row-meta">{GRADE_LABELS[i.grade]}</p>
+                    </div>
+                    <button
+                      type="button"
+                      className="icon-btn"
+                      aria-label={`Take ${shortName(i.name)} off the list`}
+                      onClick={() => toggleBookmark(i.id)}
+                    >
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
+                        <path d="M6 6l12 12M18 6L6 18" />
+                      </svg>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-4 flex flex-wrap gap-3">
+                <button type="button" onClick={printShortlist} className="btn btn-primary">
+                  Print my list
+                </button>
+                <a href="#checker-saved" className="btn btn-quiet">
+                  See it on the page
+                </a>
+              </div>
+            </BottomSheet>
+          </div>
+        </>
+      )}
     </div>
   );
 }
-

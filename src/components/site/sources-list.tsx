@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Source, SourceType } from '@/lib/content/schema';
 import type { ContentPage } from '@/lib/content/loader';
+import '@/app/styles/misc.css';
 
 /** AGENTS.md source order: regulators/labels first, down to smaller/weaker evidence. */
 const TYPE_ORDER: readonly SourceType[] = [
@@ -60,11 +61,11 @@ export function SourcesList({ sources, pages }: { sources: Map<string, Source>; 
   const groups = TYPE_ORDER.filter((t) => byType.has(t));
 
   return (
-    <div className="space-y-8" data-sources-list-ui="true">
-      <p className="text-sm text-[var(--color-ink-muted)]">
+    <div className="space-y-10" data-sources-list-ui="true">
+      <p className="text-[1rem] leading-relaxed text-[var(--ink-muted)]">
         {sources.size} source{sources.size === 1 ? '' : 's'} currently in the registry, generated from{' '}
         <code>content/_sources/sources.yaml</code>. The same data, for scripts and researchers, is at{' '}
-        <a href="/sources.json" className="text-[var(--color-link)] underline">
+        <a href="/sources.json" className="link">
           /sources.json
         </a>
         .
@@ -72,39 +73,41 @@ export function SourcesList({ sources, pages }: { sources: Map<string, Source>; 
 
       {groups.map((type) => {
         const list = byType.get(type)!;
+        const caution = type === 'small_study' || type === 'preprint' || type === 'brand_funded';
         return (
           <section key={type} aria-labelledby={`sources-${type}`} className="space-y-3">
-            <h2 id={`sources-${type}`} className="text-xl font-semibold">
-              {TYPE_LABELS[type]} <span className="text-[var(--color-ink-muted)] font-normal">({list.length})</span>
+            <h2 id={`sources-${type}`} className="source-group-title">
+              {TYPE_LABELS[type]} <span className="source-group-count">({list.length})</span>
             </h2>
-            <ul className="space-y-4">
+            <ul
+              className={`row-list ${caution ? 'border-[color-mix(in_srgb,var(--g-limited)_45%,var(--rule))]' : ''}`}
+              role="list"
+            >
               {list.map((s) => {
                 const href = s.url ?? (s.doi ? `https://doi.org/${s.doi}` : undefined);
                 const citing = citedBy.get(s.id) ?? [];
                 return (
-                  <li key={s.id} className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
-                    <p className="font-semibold">
+                  <li key={s.id} className="source-row">
+                    <p className="source-title">
                       {href ? (
-                        <a href={href} rel="noopener" className="text-[var(--color-link)] underline">
+                        <a href={href} rel="noopener">
                           {s.title}
                         </a>
                       ) : (
                         s.title
                       )}
                     </p>
-                    <p className="text-sm text-[var(--color-ink-muted)]">
+                    <p className="source-meta">
                       {s.publisher}, {s.year}
                       {s.funding_conflict && <> — funding: {s.funding_conflict}</>}
                     </p>
                     {citing.length > 0 && (
-                      <p className="mt-2 text-xs text-[var(--color-ink-muted)]">
+                      <p className="source-cited">
                         Cited on:{' '}
                         {citing.map((p, i) => (
                           <span key={p.url}>
                             {i > 0 && ', '}
-                            <Link href={p.url} className="text-[var(--color-link)] underline">
-                              {p.fm.title}
-                            </Link>
+                            <Link href={p.url}>{p.fm.title}</Link>
                           </span>
                         ))}
                       </p>

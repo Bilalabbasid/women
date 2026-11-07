@@ -27,12 +27,12 @@ export function UrgentGuidance({
     <section
       aria-label="Urgent guidance"
       data-urgent="true"
-      className="space-y-3 rounded-2xl border-2 border-[var(--color-urgent)] bg-[var(--color-urgent-soft)] p-4 text-[var(--color-ink)]"
+      className="space-y-3 rounded-[var(--radius)] border-2 border-[var(--urgent-rule)] bg-[var(--color-urgent-soft)] p-4 text-[var(--color-ink)]"
     >
       {triggers.map((t) => (
         <div key={t.id} role={t.level === 'see_doctor' ? 'note' : 'alert'} className="space-y-1.5">
           <p className="font-semibold">
-            <span className="mr-2 inline-block rounded bg-[var(--color-urgent)] px-2 py-0.5 text-sm font-bold uppercase tracking-wide text-white">
+            <span className="mr-2 inline-block rounded bg-[var(--color-urgent)] px-2 py-0.5 text-sm font-bold uppercase tracking-wide text-[var(--paper-raised)]">
               {t.level === 'crisis' ? 'Get support now' : t.level === 'emergency' ? 'Urgent' : 'Get this checked'}
             </span>
             {t.title}
@@ -54,7 +54,7 @@ export function UrgentGuidance({
                         <a
                           key={a.href}
                           href={a.href}
-                          className="inline-flex min-h-[44px] items-center rounded-xl bg-[var(--color-urgent)] px-4 font-semibold text-white"
+                          className="btn btn-danger"
                         >
                           {a.label}
                         </a>

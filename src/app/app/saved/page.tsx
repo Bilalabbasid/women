@@ -1,8 +1,10 @@
 'use client';
 
-import React, { useSyncExternalStore } from 'react';
+import { useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import { AppHeader } from '@/components/app/app-header';
+import { AppPage, Icon } from '@/components/app/kit';
+import { IlloEmpty } from '@/components/ui/illustrations';
 import { readSavedPages, removeSavedPage, subscribeSavedPages, type SavedPage } from '@/lib/saved-pages';
 
 const EMPTY: SavedPage[] = [];
@@ -29,44 +31,54 @@ export default function SavedPagesPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <AppHeader title="Saved pages" subtitle="Kept on this device" showBack backHref="/app/today/" />
-      <div className="mx-auto w-full max-w-2xl flex-1 space-y-4 px-4 py-5">
-        <p className="text-[var(--color-ink-muted)]">
-          Pages you saved with &ldquo;Save for later&rdquo;. The list is kept only in this browser, and saved pages can
-          be opened without a connection once the app is installed or the page has loaded once.
+      <AppPage>
+        <p className="text-[var(--ink-muted)]">
+          Pages you saved with &ldquo;Save for later&rdquo;. The list is kept only in this browser, and saved pages can be
+          opened without a connection once the app is installed or the page has loaded once.
         </p>
 
         {newestFirst.length === 0 ? (
-          <p className="rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
-            Nothing saved yet. Press &ldquo;Save for later&rdquo; on any guide to keep it here.
-          </p>
+          <div className="empty-state">
+            <IlloEmpty />
+            <strong>Nothing saved yet</strong>
+            <span>Press &ldquo;Save for later&rdquo; on any guide to keep it here, ready to read offline.</span>
+            <Link href="/symptoms/" className="btn btn-primary btn-sm mt-1">
+              Browse symptom guides
+            </Link>
+          </div>
         ) : (
-          <ul className="space-y-3">
-            {newestFirst.map((p) => (
-              <li
-                key={p.url}
-                className="flex items-start justify-between gap-3 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4"
-              >
-                <div>
-                  <Link href={p.url} className="font-semibold text-[var(--color-link)] underline">
-                    {p.title || p.url}
+          <>
+            <p className="font-bold">
+              {newestFirst.length} saved {newestFirst.length === 1 ? 'page' : 'pages'}
+            </p>
+            <ul className="row-list">
+              {newestFirst.map((p) => (
+                <li key={p.url} className="flex items-center">
+                  <Link href={p.url} className="row min-w-0 flex-1">
+                    <span className="row-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round">
+                        <path d="M6 3.5h12v17l-6-4-6 4z" />
+                      </svg>
+                    </span>
+                    <span className="row-main">
+                      <span className="row-title block">{p.title || p.url}</span>
+                      {savedOn(p.savedAt) && <span className="row-meta block">Saved {savedOn(p.savedAt)}</span>}
+                    </span>
                   </Link>
-                  {savedOn(p.savedAt) && (
-                    <p className="mt-0.5 text-sm text-[var(--color-ink-muted)]">Saved {savedOn(p.savedAt)}</p>
-                  )}
-                </div>
-                <button
-                  type="button"
-                  onClick={() => removeSavedPage(p.url)}
-                  className="tap shrink-0 px-2 text-sm font-semibold text-[var(--color-ink-muted)] underline"
-                  aria-label={`Remove ${p.title || p.url} from saved pages`}
-                >
-                  Remove
-                </button>
-              </li>
-            ))}
-          </ul>
+                  <button
+                    type="button"
+                    onClick={() => removeSavedPage(p.url)}
+                    className="icon-btn mr-2 shrink-0 text-[var(--ink-muted)]"
+                    aria-label={`Remove ${p.title || p.url} from saved pages`}
+                  >
+                    <Icon.Close width={20} height={20} />
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </>
         )}
-      </div>
+      </AppPage>
     </div>
   );
 }

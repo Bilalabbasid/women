@@ -2,31 +2,40 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import {
-  ShieldCheck,
-  Check,
-  ArrowRight,
-  HardDrive,
-  ChevronLeft,
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { Icon, QuickPick } from '@/components/app/kit';
+import { IlloDoctor, IlloEmpty, IlloSleep } from '@/components/ui/illustrations';
 import { STANDARD_SYMPTOMS } from '@/lib/config/symptoms';
+import { LocalDataService } from '@/lib/db/service';
+import { setPreference } from '@/lib/storage/consent';
+import {
+  DEFAULT_LOG_REMINDER,
+  LOG_REMINDER_KEY,
+  type LogReminderFrequency,
+  type LogReminderSettings,
+} from '@/lib/tracker/nudges';
 
+type Step = 1 | 2 | 3;
+const STEPS: Step[] = [1, 2, 3];
+
+/**
+ * First run: three short, skippable screens.
+ *  1. What it does   2. Where your data lives   3. Daily or weekly (+ optional symptoms to keep handy)
+ * Saves only what she chooses: pinned symptoms (added to any she already pinned),
+ * and a reminder frequency if she picks one. Nothing is pre-selected.
+ */
 export default function OnboardingPage() {
   const router = useRouter();
-  const [step, setStep] = useState<1 | 2 | 3>(1);
+  const [step, setStep] = useState<Step>(1);
   // Nothing pre-selected: only symptoms she picks are pinned (DECISIONS.md D-006).
   const [selectedSymptoms, setSelectedSymptoms] = useState<string[]>([]);
+  const [frequency, setFrequency] = useState<Exclude<LogReminderFrequency, 'off'> | null>(null);
+  const [showAll, setShowAll] = useState(false);
 
   const toggleSymptom = (id: string) => {
-    setSelectedSymptoms((prev) =>
-      prev.includes(id) ? prev.filter((s) => s !== id) : [...prev, id]
-    );
+    setSelectedSymptoms((prev) => (prev.includes(id) ? prev.filter((s) => s !== id) : [...prev, id]));
   };
 
-  const handleFinish = () => {
+  const handleFinish = async () => {
     try {
       // Add to any symptoms she already pinned (e.g. from the symptoms checklist); never replace them.
       const existing: unknown = JSON.parse(localStorage.getItem('menowell_pinned_symptoms') ?? '[]');
@@ -35,182 +44,156 @@ export default function OnboardingPage() {
     } catch {
       // Storage blocked: the tracker still works, pins just aren't remembered.
     }
+    if (frequency) {
+      // Only when she picked one. Uses the same reminder setting as Settings → Reminders.
+      try {
+        const current = await LocalDataService.getSetting<LogReminderSettings>(LOG_REMINDER_KEY, DEFAULT_LOG_REMINDER);
+        await LocalDataService.setSetting(LOG_REMINDER_KEY, { ...DEFAULT_LOG_REMINDER, ...current, frequency });
+      } catch {
+        // Not critical: she can set it in Settings.
+      }
+    }
+    // A convenience flag only: stored with her preferences consent, otherwise not at all.
+    setPreference('menowell_onboarding_completed', 'true');
     router.push('/app/today/');
   };
 
+  const next = () => (step < 3 ? setStep((s) => (s + 1) as Step) : void handleFinish());
+
   return (
-    <div className="min-h-screen bg-[#F7F6F2] flex flex-col justify-between max-w-xl mx-auto px-4 py-6">
-      {/* Top Header */}
-      <div className="flex items-center justify-between mb-6">
+    <div className="mx-auto flex min-h-[100dvh] w-full max-w-xl flex-col px-4 pt-3 pb-6">
+      {/* Top bar: back, progress dots, skip */}
+      <div className="flex min-h-[3.5rem] items-center justify-between gap-3">
         {step > 1 ? (
-          <button
-            onClick={() => setStep((s) => (s - 1) as 1 | 2 | 3)}
-            className="flex items-center gap-1 text-xs text-[#68615C] hover:text-[#231F1D] p-1"
-          >
-            <ChevronLeft className="w-4 h-4" />
-            <span>Back</span>
+          <button type="button" onClick={() => setStep((s) => (s - 1) as Step)} className="icon-btn -ml-2" aria-label="Back">
+            <Icon.Back width={24} height={24} />
           </button>
         ) : (
-          <div className="w-12" />
+          <span className="w-12" aria-hidden="true" />
         )}
 
-        <div className="flex items-center gap-1.5">
-          <div className={`h-1.5 rounded-full transition-all ${step >= 1 ? 'w-6 bg-[#1F5A4C]' : 'w-2 bg-[#E5DED5]'}`} />
-          <div className={`h-1.5 rounded-full transition-all ${step >= 2 ? 'w-6 bg-[#1F5A4C]' : 'w-2 bg-[#E5DED5]'}`} />
-          <div className={`h-1.5 rounded-full transition-all ${step >= 3 ? 'w-6 bg-[#1F5A4C]' : 'w-2 bg-[#E5DED5]'}`} />
+        {/* Decorative: each step's visible "Step N of 3" line is the label. */}
+        <div className="progress-dots" aria-hidden="true">
+          {STEPS.map((s) => (
+            <span key={s} className={s === step ? 'is-current' : s < step ? 'is-done' : ''} />
+          ))}
         </div>
 
-        <button
-          onClick={handleFinish}
-          className="text-xs text-[#68615C] hover:text-[#231F1D] underline font-medium"
-        >
-          Skip to App
+        <button type="button" onClick={() => void handleFinish()} className="btn btn-quiet btn-sm">
+          Skip
         </button>
       </div>
 
-      {/* Step 1: Storage Mode Choice */}
-      {step === 1 && (
-        <div className="space-y-6 animate-in fade-in duration-200">
-          <div>
-            <Badge variant="primary" className="mb-2">Step 1 of 3 • Privacy First</Badge>
-            <h1 className="text-2xl sm:text-3xl font-serif font-semibold text-[#231F1D] mb-2">
-              Where your health records live
+      <div className="flex flex-1 flex-col justify-center py-6" aria-live="polite">
+        {step === 1 && (
+          <section aria-labelledby="ob-1" className="grid justify-items-center gap-5 text-center">
+            <IlloDoctor className="h-32 w-32" />
+            <p className="eyebrow">Step 1 of 3</p>
+            <h1 id="ob-1" className="text-[length:var(--fs-h1)] leading-tight">
+              A private diary for your symptoms
             </h1>
-            <p className="text-sm text-[#554E48] leading-relaxed">
-              Your health journal belongs to you alone. Here is exactly where it is kept.
+            <p className="max-w-[30rem] text-[length:var(--fs-lead)] text-[var(--ink-muted)]">
+              A quick daily note of how you feel, kept on this device, that turns into something useful for you and your
+              doctor.
             </p>
-          </div>
-
-          <div className="space-y-3">
-            <div className="rounded-2xl border-2 border-[#1F5A4C] bg-[#FDF9F7] p-4">
-              <div className="flex items-start gap-3">
-                <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 bg-[#1F5A4C] text-white">
-                  <HardDrive className="w-5 h-5" />
-                </div>
-                <div className="flex-1 space-y-2">
-                  <div className="flex items-center justify-between gap-2">
-                    <p className="font-semibold text-sm text-[#231F1D]">In this browser, on this device</p>
-                    <Badge variant="success">No account</Badge>
-                  </div>
-                  <p className="text-xs text-[#554E48] leading-relaxed">
-                    Everything you log is saved in this browser&apos;s own storage. Nothing is uploaded, and nothing is
-                    deleted automatically. It stays until you delete it.
-                  </p>
-                  <p className="text-xs text-[#5C554F] bg-[#EEF1EF] p-2 rounded-lg leading-relaxed">
-                    It isn&apos;t synced to other devices or browsers, and clearing your browsing data or using private
-                    browsing can remove it. You can download a backup and restore it any time from Settings → Manage
-                    storage.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Step 2: Pinned Symptoms */}
-      {step === 2 && (
-        <div className="space-y-6 animate-in fade-in duration-200">
-          <div>
-            <Badge variant="secondary" className="mb-2">Step 2 of 3 • Custom Experience</Badge>
-            <h1 className="text-2xl sm:text-3xl font-serif font-semibold text-[#231F1D] mb-2">
-              What would you like to keep handy?
-            </h1>
-            <p className="text-sm text-[#554E48] leading-relaxed">
-              Select symptoms you frequently notice or wish to observe. You can always add custom symptoms or adjust these later.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-h-[50vh] overflow-y-auto pr-1">
-            {STANDARD_SYMPTOMS.map((symptom) => {
-              const isSelected = selectedSymptoms.includes(symptom.id);
-              return (
-                <button
-                  key={symptom.id}
-                  onClick={() => toggleSymptom(symptom.id)}
-                  type="button"
-                  className={`flex items-center justify-between p-3.5 rounded-xl border text-left text-xs transition-all ${
-                    isSelected
-                      ? 'border-[#1F5A4C] bg-[#E6EFEB] text-[#231F1D] font-medium'
-                      : 'border-[#E5DED5] bg-white text-[#554E48] hover:border-[#D0C7BC]'
-                  }`}
-                >
-                  <div>
-                    <p className="font-medium text-sm">{symptom.name}</p>
-                    <p className="text-xs text-[#68615C] mt-0.5">{symptom.categoryLabel}</p>
-                  </div>
-                  <div
-                    className={`w-5 h-5 rounded-full flex items-center justify-center border ${
-                      isSelected
-                        ? 'bg-[#1F5A4C] border-[#1F5A4C] text-white'
-                        : 'border-[#D9D1C7]'
-                    }`}
-                  >
-                    {isSelected && <Check className="w-3 h-3 stroke-[3]" />}
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      )}
-
-      {/* Step 3: Gentle Completion */}
-      {step === 3 && (
-        <div className="space-y-6 animate-in fade-in duration-200 text-center py-4">
-          <div className="w-16 h-16 rounded-2xl bg-[#EDF3EF] text-[#2C6E49] flex items-center justify-center mx-auto shadow-xs">
-            <ShieldCheck className="w-8 h-8" />
-          </div>
-
-          <div>
-            <h1 className="text-2xl sm:text-3xl font-serif font-semibold text-[#231F1D] mb-2">
-              Your journal is ready
-            </h1>
-            <p className="text-sm text-[#554E48] leading-relaxed max-w-sm mx-auto">
-              Everything you log stays private on this device. You can track symptoms in seconds, review longitudinal trends, and prepare concise reports for your clinician.
-            </p>
-          </div>
-
-          <Card variant="muted" className="text-left text-xs space-y-2 max-w-sm mx-auto p-4">
-            <div className="flex items-center justify-between pb-2 border-b border-[#E5DED5]">
-              <span className="text-[#68615C]">Stored:</span>
-              <span className="font-semibold text-[#231F1D]">This browser, this device</span>
-            </div>
-            <div className="flex items-center justify-between pb-2 border-b border-[#E5DED5]">
-              <span className="text-[#68615C]">Selected Symptoms:</span>
-              <span className="font-semibold text-[#231F1D]">{selectedSymptoms.length} pinned</span>
-            </div>
-            <div className="flex items-center justify-between">
-              <span className="text-[#68615C]">Account Required:</span>
-              <span className="font-semibold text-[#2C6E49]">None</span>
-            </div>
-          </Card>
-        </div>
-      )}
-
-      {/* Bottom Actions */}
-      <div className="pt-6 border-t border-[#E5DED5] flex items-center justify-between gap-3">
-        {step < 3 ? (
-          <Button
-            variant="primary"
-            fullWidth
-            onClick={() => setStep((s) => (s + 1) as 1 | 2 | 3)}
-            className="gap-2 text-sm"
-          >
-            <span>Continue</span>
-            <ArrowRight className="w-4 h-4" />
-          </Button>
-        ) : (
-          <Button
-            variant="primary"
-            fullWidth
-            onClick={handleFinish}
-            className="gap-2 text-sm"
-          >
-            <span>Open My Journal</span>
-            <ArrowRight className="w-4 h-4" />
-          </Button>
+            <ul className="grid w-full max-w-[26rem] gap-2 text-left">
+              {['Log today in under a minute', 'See your patterns over time', 'Print a report for your appointment'].map((t) => (
+                <li key={t} className="flex items-center gap-3 rounded-[var(--radius)] bg-[var(--paper-raised)] px-4 py-3 border border-[var(--rule)]">
+                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[var(--accent)] text-[var(--on-accent)]">
+                    <Icon.Check width={16} height={16} />
+                  </span>
+                  <span className="font-bold">{t}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
         )}
+
+        {step === 2 && (
+          <section aria-labelledby="ob-2" className="grid justify-items-center gap-5 text-center">
+            <IlloEmpty className="h-32 w-32" />
+            <p className="eyebrow">Step 2 of 3</p>
+            <h1 id="ob-2" className="text-[length:var(--fs-h1)] leading-tight">
+              Your entries stay on this device
+            </h1>
+            <p className="max-w-[30rem] text-[length:var(--fs-lead)] text-[var(--ink-muted)]">
+              Everything you log is saved in this browser. There’s no account, nothing is uploaded, and nothing is
+              deleted unless you delete it.
+            </p>
+            <div className="panel w-full max-w-[30rem] text-left">
+              <p className="flex items-start gap-3">
+                <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[var(--accent-soft)] text-[var(--accent)]">
+                  <Icon.Lock width={18} height={18} />
+                </span>
+                <span>
+                  <strong className="block">One thing to know</strong>
+                  <span className="text-[var(--ink-muted)]">
+                    It isn’t synced to other devices. Clearing your browsing data or using private browsing can remove
+                    it. You can download a backup any time from Settings → Manage storage.
+                  </span>
+                </span>
+              </p>
+            </div>
+          </section>
+        )}
+
+        {step === 3 && (
+          <section aria-labelledby="ob-3" className="grid gap-6">
+            <div className="grid justify-items-center gap-4 text-center">
+              <IlloSleep className="h-28 w-28" />
+              <p className="eyebrow">Step 3 of 3</p>
+              <h1 id="ob-3" className="text-[length:var(--fs-h1)] leading-tight">
+                Daily or weekly?
+              </h1>
+              <p className="max-w-[30rem] text-[length:var(--fs-lead)] text-[var(--ink-muted)]">
+                Pick what you’ll actually keep up. We’ll remind you on Today when it’s time. You can change this later.
+              </p>
+            </div>
+
+            <QuickPick
+              label="How often you’ll log"
+              columns={2}
+              value={frequency}
+              onChange={setFrequency}
+              options={[
+                { value: 'daily', label: 'Every day' },
+                { value: 'weekly', label: 'Once a week' },
+              ]}
+            />
+
+            <fieldset className="grid min-w-0 gap-3 border-0 p-0">
+              <legend className="label">Symptoms to keep handy (optional)</legend>
+              <p className="hint">These show first when you log. Tap any you notice.</p>
+              <div className="chip-row" role="group" aria-label="Symptoms to keep handy">
+                {(showAll ? STANDARD_SYMPTOMS : STANDARD_SYMPTOMS.slice(0, 8)).map((s) => (
+                  <button
+                    key={s.id}
+                    type="button"
+                    className="chip"
+                    aria-pressed={selectedSymptoms.includes(s.id)}
+                    onClick={() => toggleSymptom(s.id)}
+                  >
+                    {s.name}
+                  </button>
+                ))}
+              </div>
+              {!showAll && (
+                <button type="button" className="btn btn-quiet btn-sm justify-self-start" onClick={() => setShowAll(true)}>
+                  Show all {STANDARD_SYMPTOMS.length} symptoms
+                </button>
+              )}
+            </fieldset>
+          </section>
+        )}
+      </div>
+
+      <div className="grid gap-2 border-t border-[var(--rule)] pt-4">
+        <button type="button" onClick={next} className="btn btn-primary btn-lg btn-block">
+          {step < 3 ? 'Continue' : 'Start my diary'}
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </button>
       </div>
     </div>
   );

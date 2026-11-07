@@ -1,6 +1,10 @@
+import '@/app/styles/hubs.css';
+
 /**
- * The deep-green hero panel shared by the homepage, hubs, tools and search:
- * soft light wash plus a faint ring motif. Pure CSS/SVG, ships no JavaScript.
+ * The deep-green hero panel (tools, search). Hubs and articles now use calm
+ * editorial headers instead. Soft light wash plus a faint ring motif; pure
+ * CSS/SVG, ships no JavaScript. `.hero-panel` keeps it deep green in dark mode
+ * too (the accent token turns light mint there).
  */
 export function HeroPanel({
   children,
@@ -14,7 +18,7 @@ export function HeroPanel({
   return (
     <section
       aria-labelledby={labelledBy}
-      className={`relative overflow-hidden rounded-3xl bg-[var(--color-accent)] px-5 py-8 text-white sm:px-9 sm:py-11 ${className}`}
+      className={`hero-panel relative overflow-hidden rounded-3xl px-5 py-8 text-white sm:px-9 sm:py-11 ${className}`}
     >
       <div
         aria-hidden="true"
@@ -44,6 +48,6 @@ export const heroEyebrow = 'text-sm font-semibold uppercase tracking-[0.14em] te
 export const heroTitle = 'font-serif text-3xl font-semibold leading-tight text-white sm:text-4xl';
 export const heroLead = 'max-w-xl text-lg text-[#e4eeea]';
 export const heroPrimaryBtn =
-  'tap gap-2 rounded-xl bg-white px-6 py-3 font-semibold text-[var(--color-accent)] no-underline shadow-lg shadow-black/15 hover:bg-[var(--color-accent-soft)] focus-visible:outline-white';
+  'tap gap-2 rounded-xl bg-[var(--paper-raised)] px-6 py-3 font-semibold text-[var(--color-accent)] no-underline shadow-lg shadow-black/15 hover:bg-[var(--color-accent-soft)] focus-visible:outline-white';
 export const heroGhostBtn =
   'tap gap-2 rounded-xl border border-white/40 px-5 py-3 font-semibold text-white no-underline hover:bg-white/10 focus-visible:outline-white';

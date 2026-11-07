@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MenoVerdict redesign: before and after</title>
+<style>
+:root{--paper:#F7F3EA;--raised:#fff;--ink:#1d2421;--muted:#5a625e;--rule:#d8d2c4;--accent:#1F5A4C;--todo:#8a5a00;--todo-bg:#fbefd2}
+@media (prefers-color-scheme:dark){:root{--paper:#141B19;--raised:#1c2522;--ink:#E6E1D6;--muted:#a9b0aa;--rule:#33403b;--accent:#7cc4ad;--todo:#f0c46a;--todo-bg:#3a3020}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header,main{max-width:1400px;margin:0 auto;padding:16px}
+h1{font-family:Georgia,"Times New Roman",serif;margin:.2em 0}
+h2{font-family:Georgia,serif;border-top:3px double var(--rule);padding-top:.8em;margin-top:2em}
+h3{margin:1.2em 0 .4em}
+a{color:var(--accent)}
+.bar{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule);padding:8px 16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.bar fieldset{border:0;margin:0;padding:0;display:flex;gap:4px;align-items:center}
+.bar legend{float:left;margin-right:6px;font-weight:600}
+.bar label{border:1px solid var(--rule);border-radius:6px;padding:4px 10px;cursor:pointer;background:var(--raised)}
+.bar input{position:absolute;opacity:0}
+.bar input:checked+span{font-weight:700;color:var(--accent)}
+.bar label:has(input:checked){border-color:var(--accent)}
+.bar label:has(input:focus-visible){outline:2px solid var(--accent)}
+nav.toc a{margin-right:12px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:8px 0 20px}
+.cell{background:var(--raised);border:1px solid var(--rule);border-radius:6px;padding:8px}
+.cell h4{margin:0 0 6px;font-size:.9rem;color:var(--muted)}
+.shot{display:block;max-height:900px;overflow:hidden;border:1px solid var(--rule)}
+.shot img{display:block;width:100%;height:auto}
+.cap{font-size:.78rem;color:var(--muted);word-break:break-all;margin-top:4px}
+.none{color:var(--muted);font-style:italic;font-size:.9rem;padding:24px 8px}
+.todo{background:var(--todo-bg);color:var(--todo);font-weight:700;padding:1px 6px;border-radius:4px}
+table{border-collapse:collapse;width:100%;background:var(--raised)}
+th,td{border:1px solid var(--rule);padding:6px 8px;text-align:left;vertical-align:top}
+.note{color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+<h1>MenoVerdict redesign: before and after</h1>
+<p class="note">Direction A "Reading Room" with B's touches. Open this file from disk; images load from the folders next to it.
+Images that don't exist yet are hidden. Click a shot to open it full size. Report: <a href="REPORT.md">REPORT.md</a>.</p>
+<nav class="toc"><a href="#site">Public templates</a><a href="#utility">Utility pages</a><a href="#app">Tracker</a><a href="#ds">Design system</a><a href="#directions">Directions</a><a href="#audit">Audit (15)</a></nav>
+</header>
+<form class="bar" id="filters" aria-label="Filters">
+<fieldset><legend>Width</legend>
+<label><input type="radio" name="w" value="375" checked><span>375</span></label>
+<label><input type="radio" name="w" value="768"><span>768</span></label>
+<label><input type="radio" name="w" value="1280"><span>1280</span></label></fieldset>
+<fieldset><legend>Theme</legend>
+<label><input type="radio" name="t" value="light" checked><span>Light</span></label>
+<label><input type="radio" name="t" value="dark"><span>Dark</span></label></fieldset>
+<fieldset><legend>View</legend>
+<label><input type="radio" name="v" value="full" checked><span>Full page</span></label>
+<label><input type="radio" name="v" value="fold"><span>First screen</span></label></fieldset>
+</form>
+<main>
+<section id="site"><h2>Public templates</h2>
+<p class="note">Before: <code>before/</code>. After: <code>after-site/&lt;page&gt;_&lt;width&gt;_&lt;theme&gt;.jpg</code> (appears automatically once captured).
+Before the redesign there was no dark mode, so dark "before" shots match light. Full-page 768/1280 and dark "before" shots are kept locally only (gitignored); the first-screen shot is used when they're missing.</p>
+<div id="site-rows"></div></section>
+<section id="utility"><h2>Utility pages</h2>
+<p class="note">No "before" captures. Expected after names are a guess: <span class="todo">TODO</span> confirm page names when they're captured.</p>
+<div id="utility-rows"></div></section>
+<section id="app"><h2>Tracker (/app/*)</h2>
+<p class="note">Before: <code>before-app/</code> (375 and 1280, light only; <code>before/app-today</code> fills in for Today at other sizes). After: <code>after-app/</code>, 13 screens, seeded data, plus first-run (empty) states in light.</p>
+<div id="app-rows"></div></section>
+<section id="ds"><h2>Design system (/dev/design-system/)</h2><div id="ds-rows"></div></section>
+<section id="directions"><h2>Three directions (mockups)</h2>
+<p class="note">375 px has a hero and an article-top shot; 1280 px is the full mock. There are no 768 px shots.</p>
+<div id="dir-rows"></div></section>
+<section id="audit"><h2>The audit's 15 problems</h2>
+<p class="note">From <code>01-audit.md</code>. Status is filled in after the "after" captures are reviewed.</p>
+<table><thead><tr><th>#</th><th>Problem</th><th>Status</th></tr></thead><tbody id="audit-rows"></tbody></table></section>
+</main>
+<script>
+var SITE=[["home","Homepage"],["article-night-sweats","Article: night sweats"],["verdict-black-cohosh","Verdict: black cohosh"],["hub-symptoms","Hub: symptoms"],["compare-midi-vs-alloy","Comparison: Midi vs Alloy"],["tool-symptom-tracker","Tool: symptom tracker"],["tool-evidence-checker","Tool: evidence checker"]];
+var UTIL=[["urgent-help","Urgent help"],["tools","Tools index"],["search","Search"],["offline","Offline"],["not-found","404"]];
+var APP=["today","checkin","timeline","treatments","insights","report","onboarding","install","settings","saved","storage","privacy","catchup"];
+var DIRS=[["a-reading-room","A · Reading Room (chosen)"],["b-evening-edition","B · Evening Edition"],["c-field-notes","C · Field Notes"]];
+var AUDIT=["There is no dark mode","The answer starts about three phone screens down","The mobile navigation is a cut-off scrolling strip","On first visit, the storage-choice banner covers half the phone screen","Grades have no scale","The homepage's first phone screen doesn't do its job","No \"Short answer\", and everything is the same white card","Product cards look like editorial content","Callouts have no identity","Breadcrumbs take three lines on a phone","The evidence checker buries its own tool","The comparison page hides the decision","The symptoms hub is a long list, not a hub","The decorative motion fights \"calm\"","/app/today feels like a dev dashboard, not a calm app"];
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+// A cell tries each candidate path in turn; if none loads, it shows the fallback text.
+function cell(title,cands,emptyText){
+  var id="c"+Math.random().toString(36).slice(2);
+  return '<div class="cell"><h4>'+esc(title)+'</h4><a class="shot" target="_blank" rel="noopener" hidden id="'+id+'"><img loading="lazy" alt="'+esc(title)+'" data-c="'+esc(JSON.stringify(cands))+'" data-i="0" src="'+esc(cands[0])+'" onerror="nextSrc(this)" onload="shown(this)"></a><div class="cap" hidden></div><div class="none" hidden>'+esc(emptyText||"Not captured yet")+'</div></div>';
+}
+function nextSrc(img){var c=JSON.parse(img.getAttribute("data-c")),i=+img.getAttribute("data-i")+1;
+  if(i<c.length){img.setAttribute("data-i",i);img.src=c[i];}
+  else{var cl=img.closest(".cell");img.parentNode.hidden=true;img.removeAttribute("src");cl.querySelector(".cap").hidden=true;cl.querySelector(".none").hidden=false;}}
+function shown(img){var a=img.parentNode,cl=img.closest(".cell"),p=img.getAttribute("src");a.href=p;a.hidden=false;var cap=cl.querySelector(".cap");cap.textContent=p;cap.hidden=false;cl.querySelector(".none").hidden=true;}
+function f(){var fd=new FormData(document.getElementById("filters"));return{w:fd.get("w"),t:fd.get("t"),v:fd.get("v")}}
+function pair(dir,name,w,t,v,extra){var full=dir+"/"+name+"_"+w+"_"+t+".jpg",fold=dir+"/"+name+"_"+w+"_"+t+"_fold.jpg";var l=v==="fold"?[fold]:[full,fold];return l.concat(extra||[]);}
+function render(){var s=f(),h="";
+  SITE.forEach(function(p){h+='<h3>'+esc(p[1])+'</h3><div class="row">'+cell("Before · "+s.w+" "+s.t,pair("before",p[0],s.w,s.t,s.v,s.t==="dark"?pair("before",p[0],s.w,"light",s.v):[]))+cell("After · "+s.w+" "+s.t,pair("after-site",p[0],s.w,s.t,s.v),"After: not captured yet (after-site/"+p[0]+"_"+s.w+"_"+s.t+".jpg)")+'</div>';});
+  document.getElementById("site-rows").innerHTML=h;h="";
+  UTIL.forEach(function(p){h+='<h3>'+esc(p[1])+'</h3><div class="row">'+cell("After · "+s.w+" "+s.t,pair("after-site",p[0],s.w,s.t,s.v),"Not captured yet")+'</div>';});
+  document.getElementById("utility-rows").innerHTML=h;h="";
+  APP.forEach(function(n){var b=["before-app/"+n+"_"+s.w+"_"+s.t+".jpg","before-app/"+n+"_"+s.w+"_light.jpg"];if(n==="today")b=b.concat(pair("before","app-today",s.w,s.t,s.v));
+    h+='<h3>'+esc(n)+'</h3><div class="row">'+cell("Before · "+s.w+" "+s.t,b,"No before shot at this size")+cell("After · "+s.w+" "+s.t,["after-app/"+n+"_"+s.w+"_"+s.t+".jpg"])+cell("After, first run (empty) · "+s.w+" light",["after-app/"+n+"_"+s.w+"_light_empty.jpg"],"No empty-state shot at this size")+'</div>';});
+  document.getElementById("app-rows").innerHTML=h;
+  document.getElementById("ds-rows").innerHTML='<div class="row">'+cell("Design system · "+s.w+" "+s.t,["design-system/design-system_"+s.w+"_"+s.t+".jpg"])+'</div>';h="";
+  DIRS.forEach(function(d){var base="directions/shots/"+d[0]+"_";h+='<h3>'+esc(d[1])+'</h3><div class="row">'+(s.w==="1280"?cell("1280 "+s.t,[base+"1280_"+s.t+".jpg"]):cell("375 hero "+s.t,[base+"375_"+s.t+"_hero.jpg"],"No shot at this width")+cell("375 article "+s.t,[base+"375_"+s.t+"_article.jpg"],"No shot at this width"))+'</div>';});
+  document.getElementById("dir-rows").innerHTML=(s.w==="768"?'<p class="note">No 768 px direction shots; showing 375.</p>':"")+h;}
+document.getElementById("audit-rows").innerHTML=AUDIT.map(function(a,i){return"<tr><td>"+(i+1)+"</td><td>"+esc(a)+'</td><td><span class="todo">TODO</span></td></tr>'}).join("");
+document.getElementById("filters").addEventListener("change",render);render();
+</script>
+</body>
+</html>

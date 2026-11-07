@@ -1,15 +1,42 @@
 @import "tailwindcss";
+@import "./tokens.css";
+@import "./ds-components.css";
+@import "./print.css";
 
 /*
- * Design system. Readers are mostly 40-65 and on phones (AGENTS.md):
- *  - 18px minimum body text, generous line height, strong contrast (WCAG 2.2 AA)
- *  - 44px minimum tap targets, visible focus, reduced-motion support
+ * Design system. Readers are mostly 40-65 and on phones:
+ *  - 18px minimum body text (19px on desktop), generous line height, WCAG 2.2 AA
+ *    contrast in light AND dark (tokens.css)
+ *  - 48px tap targets for new components (44px minimum everywhere), visible
+ *    focus, reduced-motion support
  *  - calm, adult, editorial: ink on warm paper with one deep green accent.
- *    No pink wellness styling.
+ *    No pink wellness styling. See /dev/design-system/.
  *
  * The Tailwind type scale is raised so the existing tracker, which was written
  * with text-xs/text-sm, reads at 16-17px for labels and 18px for body.
  */
+@theme inline {
+  --font-serif: var(--font-newsreader), "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-sans: var(--font-atkinson), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-paper-sunk: var(--paper-sunk);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
+  --color-link: var(--link);
+  --color-brass: var(--brass);
+  --color-brass-soft: var(--brass-soft);
+  --color-urgent: var(--urgent);
+  --color-urgent-soft: var(--urgent-soft);
+  --color-draft: var(--draft);
+  --color-draft-soft: var(--draft-soft);
+}
+
 @theme {
   --text-xs: 1rem;          /* 16px: labels, metadata (was 12px) */
   --text-xs--line-height: 1.5;
@@ -22,34 +49,9 @@
   --text-2xl: 1.625rem;
   --text-3xl: 2rem;
   --text-4xl: 2.375rem;
-
-  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
-  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-
-  --color-paper: #f7f6f2;
-  --color-paper-raised: #ffffff;
-  --color-ink: #1c2321;
-  --color-ink-muted: #48514e;      /* 7.9:1 on paper */
-  --color-rule: #dcdad2;
-  --color-accent: #1f5a4c;         /* deep green, 7.4:1 on paper */
-  --color-accent-soft: #e6efeb;
-  --color-link: #1d4f7a;           /* 8.0:1 on paper */
-  --color-urgent: #8a1f1f;
-  --color-urgent-soft: #fff4f3;
-  --color-draft: #7a4b00;
-  --color-draft-soft: #fff6e0;
 }
 
 @layer base {
-  :root {
-    /* Legacy tracker tokens, kept so existing screens keep working. */
-    --background: #faf8f5;
-    --foreground: #231f1d;
-    --border: #e5ded5;
-    --ring: #1f5a4c;
-    --radius: 0.75rem;
-  }
-
   * {
     border-color: var(--border);
   }
@@ -67,19 +69,25 @@
     background-color: var(--color-paper);
     color: var(--color-ink);
     font-family: var(--font-sans);
-    font-size: 1.125rem;
+    font-size: var(--fs-body);
     line-height: 1.65;
     min-height: 100dvh;
     padding-left: env(safe-area-inset-left, 0px);
     padding-right: env(safe-area-inset-right, 0px);
+    -webkit-font-smoothing: antialiased;
   }
 
   h1, h2, h3, h4 {
     font-family: var(--font-serif);
     font-weight: 600;
-    line-height: 1.25;
+    line-height: 1.2;
+    letter-spacing: -0.012em;
     color: var(--color-ink);
     text-wrap: balance;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--accent) 28%, transparent);
   }
 
   /*
@@ -99,7 +107,7 @@
 
   /* Visible focus for every interactive element, not only <Button>. */
   :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
-    outline: 3px solid var(--color-accent);
+    outline: 3px solid var(--focus);
     outline-offset: 2px;
     border-radius: 4px;
   }
@@ -127,8 +135,8 @@
   left: 0.5rem;
   top: -4rem;
   z-index: 100;
-  background: var(--color-ink);
-  color: #fff;
+  background: var(--ink);
+  color: var(--paper);
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
 }
@@ -160,78 +168,77 @@
 /* --------------------------------------------------------------- article prose */
 
 /* Reading comfort for a 40-65 audience: 18px minimum on phones, 19px on wider
-   screens, generous line height, slightly softer ink than headings, balanced
-   wrapping, and clear rhythm between sections. */
+   screens, 1.7 line height, a 60-72 character measure, clear rhythm. */
 .prose {
-  max-width: 68ch;
-  font-size: 1.125rem;
-  line-height: 1.8;
-  color: #27302d;
+  max-width: none;
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  color: var(--ink);
 }
 @media (min-width: 768px) {
   .prose {
-    font-size: 1.1875rem;
+    font-size: var(--fs-body-lg);
   }
 }
+.prose > :not(.table-wrap, .wide) {
+  max-width: var(--measure);
+}
 .prose > * + * {
-  margin-top: 1.15em;
+  margin-top: 1.1em;
 }
 .prose p,
 .prose li {
   text-wrap: pretty;
 }
 .prose h2 {
-  font-size: 1.75rem;
-  line-height: 1.25;
-  letter-spacing: -0.01em;
-  margin-top: 2.4em;
-  scroll-margin-top: 1rem;
-}
-@media (min-width: 768px) {
-  .prose h2 {
-    font-size: 1.95rem;
-  }
+  font-size: var(--fs-h2);
+  line-height: 1.18;
+  margin-top: 2.2em;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--rule);
+  scroll-margin-top: 5rem;
 }
 .prose h2 + * {
-  margin-top: 0.7em;
+  margin-top: 0.6em;
 }
 .prose h3 {
-  font-size: 1.3rem;
-  color: var(--color-accent);
-  margin-top: 1.8em;
-  scroll-margin-top: 1rem;
+  font-size: var(--fs-h3);
+  margin-top: 1.7em;
+  scroll-margin-top: 5rem;
 }
 .prose h3 + * {
-  margin-top: 0.5em;
+  margin-top: 0.45em;
+}
+.prose h4 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h4);
+  font-weight: 700;
+  margin-top: 1.4em;
 }
 .prose strong {
-  color: var(--color-ink);
-  font-weight: 650;
+  color: var(--ink);
+  font-weight: 700;
 }
 .prose a {
-  color: var(--color-link);
+  color: var(--link);
   text-decoration: underline;
-  text-decoration-color: rgba(29, 79, 122, 0.4);
+  text-decoration-color: color-mix(in srgb, var(--link) 45%, transparent);
   text-decoration-thickness: 1.5px;
   text-underline-offset: 0.2em;
   border-radius: 3px;
-  transition: text-decoration-color 0.15s ease, background-color 0.15s ease;
+  transition: text-decoration-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
 }
 .prose a:hover {
+  color: var(--link-hover);
   text-decoration-color: currentColor;
-  background-color: var(--color-accent-soft);
 }
 .prose blockquote {
-  border-left: 4px solid var(--color-accent);
-  border-radius: 0 0.75rem 0.75rem 0;
-  background: var(--color-paper-raised);
-  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  padding: 0.25rem 0 0.25rem 1.25rem;
   font-family: var(--font-serif);
-  font-style: italic;
-  color: var(--color-ink);
-}
-.prose ::selection {
-  background: #cfe2da;
+  font-size: 1.15em;
+  line-height: 1.5;
+  color: var(--ink);
 }
 .prose ul,
 .prose ol {
@@ -246,23 +253,31 @@
 .prose li + li {
   margin-top: 0.4em;
 }
-/* Text stays at a comfortable measure; tables may use the full article width. */
-.prose {
-  max-width: none;
+.prose li::marker {
+  color: var(--ink-muted);
 }
-.prose > :not(.table-wrap) {
-  max-width: 68ch;
+.prose hr {
+  border: 0;
+  height: 1px;
+  background: var(--rule);
 }
+.prose code {
+  font-size: 0.9em;
+  background: var(--paper-sunk);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+/* Tables: a quiet ruled table on wide screens; under 600px each row becomes a
+   card (cells carry data-label from the header, added by the markdown pipeline). */
 .prose .table-wrap {
   overflow-x: auto;
-  border: 1px solid var(--color-rule);
-  border-radius: 1rem;
-  background: var(--color-paper-raised);
-  box-shadow: 0 1px 2px rgba(28, 35, 33, 0.05);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--paper-raised);
 }
 .prose table {
   width: 100%;
-  min-width: 40rem;
   border-collapse: separate;
   border-spacing: 0;
   font-size: 1rem;
@@ -273,73 +288,214 @@
   padding: 0.85rem 1rem;
   text-align: left;
   vertical-align: top;
-  border-bottom: 1px solid var(--color-rule);
+  border-bottom: 1px solid var(--rule);
 }
 .prose thead th {
-  background: var(--color-accent);
-  color: #fff;
-  font-weight: 600;
+  background: var(--paper-sunk);
+  color: var(--ink);
+  font-weight: 700;
   font-size: 0.95rem;
   vertical-align: bottom;
-}
-.prose thead th:first-child {
-  position: sticky;
-  left: 0;
-  z-index: 1;
-}
-.prose tbody tr:nth-child(even) td {
-  background: #f9f8f5;
+  border-bottom: 2px solid var(--rule-strong);
 }
 .prose tbody tr:last-child td {
   border-bottom: 0;
 }
-.prose tbody tr:hover td {
-  background: var(--color-accent-soft);
-}
-/* The first column names the option: bold, and pinned while the rest scrolls. */
 .prose tbody td:first-child {
-  position: sticky;
-  left: 0;
-  font-weight: 600;
-  color: var(--color-ink);
-  background: var(--color-paper-raised);
-  box-shadow: inset -1px 0 0 var(--color-rule);
-}
-.prose tbody tr:nth-child(even) td:first-child {
-  background: #f9f8f5;
-}
-.prose tbody tr:hover td:first-child {
-  background: var(--color-accent-soft);
+  font-weight: 700;
+  color: var(--ink);
 }
 .prose td .grade {
   white-space: normal;
 }
-.prose aside.urgent {
-  border: 2px solid var(--color-urgent);
-  background: var(--color-urgent-soft);
-  border-radius: 0.75rem;
-  padding: 1rem 1.25rem;
-}
-.prose aside.urgent::before {
-  content: "Urgent: get help now";
-  display: block;
-  font-weight: 700;
-  color: var(--color-urgent);
-  margin-bottom: 0.25rem;
-}
-.prose aside.note {
-  background: var(--color-accent-soft);
-  border-radius: 0.75rem;
-  padding: 1rem 1.25rem;
-}
-.prose .doctor-questions {
-  background: var(--color-paper-raised);
-  border: 1px solid var(--color-rule);
-  border-radius: 0.75rem;
-  padding: 1rem 1.25rem;
+@media (max-width: 599.98px) {
+  .prose .table-wrap:has(td[data-label]) {
+    border: 0;
+    background: none;
+    overflow: visible;
+  }
+  .prose table:has(td[data-label]),
+  .prose table:has(td[data-label]) tbody,
+  .prose table:has(td[data-label]) tr,
+  .prose table:has(td[data-label]) td {
+    display: block;
+    width: 100%;
+  }
+  .prose table:has(td[data-label]) thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .prose table:has(td[data-label]) tr {
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--paper-raised);
+    padding: 0.35rem 1rem;
+  }
+  .prose table:has(td[data-label]) tr + tr {
+    margin-top: 0.75rem;
+  }
+  .prose table:has(td[data-label]) td {
+    padding: 0.55rem 0;
+  }
+  .prose table:has(td[data-label]) td:last-child {
+    border-bottom: 0;
+  }
+  .prose table:has(td[data-label]) td:first-child {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+  }
+  .prose table:has(td[data-label]) td:not(:first-child)::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--ink-muted);
+  }
 }
 
-/* Tool guides: numbered steps as circles, accent bullets. */
+/* Markdown callouts (:::urgent, :::questions, :::note) drawn as the design
+   system's callouts: red-flag, "Ask your doctor", and a quiet note. The visible
+   titles are CSS-generated; the elements keep their own aria-labels. */
+.prose aside.urgent,
+.prose .doctor-questions,
+.prose aside.note {
+  position: relative;
+  padding: 1.1rem 1.25rem 1.2rem;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+.prose aside.urgent::before,
+.prose .doctor-questions::before {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+.prose aside.urgent {
+  border-top: 4px solid var(--urgent-rule);
+  background: var(--urgent-soft);
+}
+.prose aside.urgent::before {
+  content: "⚠  Get help now";
+  color: var(--urgent);
+}
+.prose aside.urgent > * + * {
+  margin-top: 0.6em;
+}
+.prose aside.urgent li::marker {
+  color: var(--urgent);
+}
+.prose .doctor-questions {
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--link);
+  background: var(--paper-raised);
+}
+.prose .doctor-questions::before {
+  content: "Ask your doctor";
+  color: var(--link);
+}
+.prose .doctor-questions ul,
+.prose .doctor-questions ol {
+  list-style: none;
+  padding-left: 0;
+}
+.prose .doctor-questions li {
+  position: relative;
+  padding-left: 1.6rem;
+  font-family: var(--font-serif);
+  font-size: 1.1em;
+  line-height: 1.45;
+}
+.prose .doctor-questions li::before {
+  content: "“";
+  position: absolute;
+  left: 0;
+  top: -0.1em;
+  font-size: 1.6em;
+  line-height: 1;
+  color: var(--link);
+}
+.prose .doctor-questions li + li {
+  margin-top: 0.7em;
+}
+/* :::try → <aside class="try">: "Try tonight", brass, with italic serif step numbers. */
+.prose aside.try {
+  position: relative;
+  padding: 1.1rem 1.25rem 1.2rem;
+  border-top: 3px solid var(--brass-rule);
+  border-radius: 0 0 var(--radius) var(--radius);
+  background: var(--brass-soft);
+}
+.prose aside.try::before {
+  content: "Try tonight";
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+.prose aside.try ol {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: t;
+}
+.prose aside.try ol > li {
+  counter-increment: t;
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  align-items: baseline;
+}
+.prose aside.try ol > li::before {
+  content: counter(t);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.5em;
+  line-height: 1;
+  color: var(--brass);
+}
+.prose aside.note {
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--accent-soft);
+}
+
+/* The opening paragraph, shown as the "Short answer" (B's pull-quote).
+   Applied by the article template with .lead-answer on the first prose part. */
+.prose.lead-answer > p:first-of-type {
+  position: relative;
+  margin-bottom: 1.6em;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 4px solid var(--accent);
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.4rem);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.prose.lead-answer > p:first-of-type::before {
+  content: "Short answer";
+  display: block;
+  margin-bottom: 0.3rem;
+  font-style: italic;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+/* Tool guides: numbered steps in B's italic serif numerals, quiet bullets. */
 .prose.steps ol {
   list-style: none;
   padding-left: 0;
@@ -348,38 +504,34 @@
 .prose.steps ol > li {
   counter-increment: step;
   position: relative;
-  padding-left: 3.1rem;
-  min-height: 2.2rem;
+  padding-left: 2.6rem;
 }
 .prose.steps ol > li + li {
-  margin-top: 1em;
+  margin-top: 0.9em;
 }
 .prose.steps ol > li::before {
   content: counter(step);
   position: absolute;
   left: 0;
-  top: 0;
-  width: 2.2rem;
-  height: 2.2rem;
-  border-radius: 999px;
-  background: var(--color-accent);
-  color: #fff;
+  top: -0.2em;
+  width: 2rem;
   font-family: var(--font-serif);
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.6em;
+  line-height: 1.2;
+  color: var(--brass);
 }
 /* A paragraph that is only a link into the tracker app reads as a button. */
 .prose.steps p > a[href^="/app/"]:only-child {
   display: inline-flex;
   align-items: center;
-  min-height: 48px;
+  min-height: var(--tap);
   padding: 0.65rem 1.4rem;
-  border-radius: 0.75rem;
-  background: var(--color-accent);
-  color: #fff;
-  font-weight: 600;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 700;
   text-decoration: none;
 }
 .prose.steps p > a[href^="/app/"]:only-child::after {
@@ -387,236 +539,31 @@
   margin-left: 0.5rem;
 }
 .prose.steps p > a[href^="/app/"]:only-child:hover {
-  opacity: 0.92;
+  background: var(--accent-hover);
 }
 .prose.steps ul > li::marker {
-  color: var(--color-accent);
+  color: var(--accent);
 }
 
-/* Guide text on tool and hub pages: accent rule over headings, card-style
-   numbered steps, ring bullets, softer links. */
-.prose.steps h2 {
-  position: relative;
-  padding-top: 1rem;
-}
-.prose.steps h2::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 2.75rem;
-  height: 4px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--color-accent), #5fb49c);
-}
-.prose.steps ol > li {
-  padding: 1rem 1.1rem 1rem 3.9rem;
-  border: 1px solid var(--color-rule);
-  border-radius: 1rem;
-  background: linear-gradient(160deg, #ffffff 0%, #f6faf8 100%);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-.prose.steps ol > li:hover {
-  border-color: var(--color-accent);
-  box-shadow: 0 6px 18px -10px rgba(31, 90, 76, 0.45);
-}
-.prose.steps ol > li::before {
-  left: 1rem;
-  top: 1rem;
-}
-.prose.steps ol > li + li {
-  margin-top: 0.75rem;
-}
-.prose.steps ul {
-  list-style: none;
-  padding-left: 0;
-}
-.prose.steps ul > li {
-  position: relative;
-  padding-left: 1.75rem;
-}
-.prose.steps ul > li::before {
-  content: "";
-  position: absolute;
-  left: 0.3rem;
-  top: 0.68em;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 999px;
-  background: var(--color-accent);
-  box-shadow: 0 0 0 4px var(--color-accent-soft);
-}
-.prose.steps li strong {
-  color: var(--color-ink);
-}
-.prose.steps a {
-  text-decoration-color: rgba(29, 79, 122, 0.35);
-  text-decoration-thickness: 1.5px;
-}
-.prose.steps a:hover {
-  text-decoration-color: currentColor;
-}
-.prose.steps hr {
-  border: 0;
-  height: 1px;
-  background: linear-gradient(90deg, var(--color-rule), transparent);
-}
-
-/* --------------------------------------------------------------- living cards
- * A light travels around the border (always on .is-always, on hover
- * otherwise), a soft wash on hover, and a faint icon watermark. */
-@property --glow-angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
+/* --------------------------------------------------------------- legacy card / hero effects
+ * Calmed for direction A (audit item 14): no spinning borders, drifting orbs or
+ * scanning sweeps. Class names stay so existing markup keeps rendering. */
 .card-live {
   position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  background: linear-gradient(160deg, #ffffff 0%, #f4f9f6 100%);
+  background: var(--paper-raised);
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
 }
-.card-live::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  border-radius: inherit;
-  padding: 2px;
-  background: conic-gradient(
-    from var(--glow-angle),
-    transparent 0deg 240deg,
-    rgba(95, 180, 156, 0.35) 290deg,
-    #5fb49c 330deg,
-    #1f5a4c 352deg,
-    transparent 360deg
-  );
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  animation: glow-spin 3.2s linear infinite;
-  animation-delay: var(--glow-delay, 0s);
-  animation-play-state: paused;
-}
-.card-live:hover::before,
-.card-live:focus-visible::before,
-.card-live.is-always::before {
-  opacity: 1;
-  animation-play-state: running;
-}
-.card-live.is-always::before {
-  animation-duration: 7s;
-}
-.card-live::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  border-radius: inherit;
-  background: radial-gradient(24rem 13rem at 100% 0%, rgba(31, 90, 76, 0.11), transparent 70%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-.card-live:hover::after {
-  opacity: 1;
+.card-live:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
 }
 .card-mark {
-  position: absolute;
-  right: -0.9rem;
-  bottom: -1rem;
-  z-index: -1;
-  width: 5.75rem;
-  height: 5.75rem;
-  color: var(--color-accent);
-  opacity: 0.07;
-  transform: rotate(-12deg);
-  transition: transform 0.45s ease, opacity 0.3s ease;
-  pointer-events: none;
+  display: none;
 }
-.card-live:hover .card-mark {
-  opacity: 0.14;
-  transform: rotate(0deg) scale(1.08);
-}
-@keyframes glow-spin {
-  to {
-    --glow-angle: 360deg;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .card-live.is-always::before {
-    opacity: 0;
-  }
-}
-
-/* --------------------------------------------------------------- homepage hero motion
- * Decorative only (aria-hidden). Reduced-motion users get the static layout:
- * the global reduced-motion rule stops every animation after one frame. */
-.hero-orb {
-  position: absolute;
-  border-radius: 999px;
-  filter: blur(70px);
-  pointer-events: none;
-}
-.hero-orb-a {
-  animation: orb-drift-a 18s ease-in-out infinite;
-}
-.hero-orb-b {
-  animation: orb-drift-b 22s ease-in-out infinite;
-}
-@keyframes orb-drift-a {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(8%, 10%) scale(1.15); }
-}
-@keyframes orb-drift-b {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-10%, -8%) scale(1.12); }
-}
-.hero-rings {
-  animation: ring-spin 90s linear infinite;
-  transform-origin: center;
-}
-@keyframes ring-spin {
-  to { transform: rotate(360deg); }
-}
+.hero-orb,
+.hero-rings,
 .hero-dots {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
-  background-size: 22px 22px;
-  -webkit-mask-image: radial-gradient(ellipse at 75% 45%, #000 0%, transparent 65%);
-  mask-image: radial-gradient(ellipse at 75% 45%, #000 0%, transparent 65%);
-}
-.hero-float {
-  animation: hero-float 6s ease-in-out infinite;
-  animation-delay: var(--float-delay, 0s);
-}
-@keyframes hero-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-9px); }
-}
-/* A light sweep that passes over each verdict card in turn, like a scan. */
-.hero-scan {
-  position: relative;
-  overflow: hidden;
-}
-.hero-scan::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(105deg, transparent 40%, rgba(95, 180, 156, 0.28) 50%, transparent 60%);
-  background-size: 260% 100%;
-  background-position: 160% 0;
-  animation: hero-scan 7.5s ease-in-out infinite;
-  animation-delay: var(--scan-delay, 0s);
-  pointer-events: none;
-}
-@keyframes hero-scan {
-  0% { background-position: 160% 0; }
-  30%, 100% { background-position: -60% 0; }
+  display: none;
 }
 
 /* --------------------------------------------------------------- evidence grades
@@ -626,10 +573,10 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4em;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 0.15em 0.75em;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   border: 1px solid currentColor;
   white-space: nowrap;
 }
@@ -640,17 +587,22 @@
   border-radius: 999px;
   background: currentColor;
 }
-.grade-strong { color: #1e5e3a; background: #e8f3ec; }
-.grade-moderate { color: #24577a; background: #e8f0f6; }
-.grade-limited { color: #6e5000; background: #fbf3dc; }
-.grade-comfort_only { color: #3f4a5c; background: #eceff5; }
-.grade-not_supported { color: #5c3a3a; background: #f4ecec; }
-.grade-harm_concern { color: #8a1f1f; background: #fdeceb; }
-.grade-per_option { color: var(--color-ink-muted); background: var(--color-paper-raised); }
+.grade-strong { color: var(--g-strong-ink); background: var(--g-strong-soft); }
+.grade-moderate { color: var(--g-moderate-ink); background: var(--g-moderate-soft); }
+.grade-limited { color: var(--g-limited-ink); background: var(--g-limited-soft); }
+.grade-comfort_only { color: var(--g-comfort-ink); background: var(--g-comfort-soft); }
+.grade-not_supported { color: var(--g-none-ink); background: var(--g-none-soft); }
+.grade-harm_concern { color: var(--g-harm-ink); background: var(--g-harm-soft); }
+.grade-per_option { color: var(--ink-muted); background: var(--paper-raised); }
 
 /* --------------------------------------------------------------- print */
 
 .print-only {
+  display: none;
+}
+
+/* The tracker's top honesty strip, once closed (components/app/notice-dismiss.tsx). */
+.notice-closed .app-notice {
   display: none;
 }
 
@@ -660,13 +612,32 @@
 }
 
 @media print {
+  /* Always print light, whatever the screen theme. */
+  :root,
+  [data-theme] {
+    --paper: #fff;
+    --paper-raised: #fff;
+    --paper-sunk: #f3f3f3;
+    --ink: #111;
+    --ink-muted: #333;
+    --rule: #bbb;
+    --accent: #1f5a4c;
+    --link: #1e4f73;
+  }
+  html {
+    font-size: 100% !important;
+  }
   .print-only {
     display: block;
   }
   .no-print,
   header[role="banner"],
   footer[role="contentinfo"],
-  nav {
+  nav,
+  .toc-rail,
+  .reading-progress,
+  .tab-bar,
+  .toast-region {
     display: none !important;
   }
   body {
@@ -676,9 +647,25 @@
        default when printing — so the evidence .grade-* badges and the
        safety-red UrgentGuidance box (the printed tools' whole purpose: a
        page to bring to an appointment) would print as plain white. Every
-       grade/urgent message also carries a text label, never color alone
-       (AGENTS.md), so this is a legibility fix, not a correctness one. */
+       grade/urgent message also carries a text label, never color alone,
+       so this is a legibility fix, not a correctness one. */
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
+  }
+  .prose > *,
+  .article-grid {
+    max-width: none !important;
+    display: block !important;
+  }
+  .prose a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #333;
+    word-break: break-all;
+  }
+  .callout,
+  .prose tr,
+  figure {
+    break-inside: avoid;
   }
 }

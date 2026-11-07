@@ -19,7 +19,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
     <>
       <JsonLd data={[organizationLd(), websiteLd()]} />
       <SiteHeader hubs={navHubs()} />
-      <main id="main" className="mx-auto w-full max-w-5xl px-4 py-8">
+      <main id="main" className="mx-auto w-full max-w-6xl px-4 py-8">
         {children}
       </main>
       <SiteFooter links={footerLinks} />

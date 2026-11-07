@@ -49,7 +49,7 @@ export function SiteHeader({ hubs }: { hubs: Array<{ href: string; label: string
       <a href="#main" className="skip-link">
         Skip to content
       </a>
-      <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-4 py-2.5">
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-4 py-2.5">
         <Link href="/" className="tap font-serif text-xl font-semibold text-[var(--color-ink)] no-underline">
           <BrandLogo size={30} />
         </Link>
@@ -110,7 +110,7 @@ export function SiteFooter({ links }: { links?: Array<{ href: string; label: str
 
   return (
     <footer role="contentinfo" className="mt-16 border-t border-[var(--color-rule)] bg-[var(--color-paper-raised)]">
-      <div className="mx-auto max-w-5xl px-4 pt-10 pb-8">
+      <div className="mx-auto max-w-6xl px-4 pt-10 pb-8">
         {/* Standard Notice */}
         <div className="mb-8 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper)] p-4 text-xs leading-relaxed text-[var(--color-ink-muted)]">
           <p>{STANDARD_NOTICE}</p>

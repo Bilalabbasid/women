@@ -61,6 +61,8 @@
   }
 
   body {
+    /* Lets a full-bleed section use 100vw without a sideways scrollbar. */
+    overflow-x: clip;
     margin: 0;
     background-color: var(--color-paper);
     color: var(--color-ink);
@@ -343,6 +345,232 @@
 }
 .prose.steps ul > li::marker {
   color: var(--color-accent);
+}
+
+/* Guide text on tool and hub pages: accent rule over headings, card-style
+   numbered steps, ring bullets, softer links. */
+.prose.steps h2 {
+  position: relative;
+  padding-top: 1rem;
+}
+.prose.steps h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.75rem;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-accent), #5fb49c);
+}
+.prose.steps ol > li {
+  padding: 1rem 1.1rem 1rem 3.9rem;
+  border: 1px solid var(--color-rule);
+  border-radius: 1rem;
+  background: linear-gradient(160deg, #ffffff 0%, #f6faf8 100%);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.prose.steps ol > li:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 6px 18px -10px rgba(31, 90, 76, 0.45);
+}
+.prose.steps ol > li::before {
+  left: 1rem;
+  top: 1rem;
+}
+.prose.steps ol > li + li {
+  margin-top: 0.75rem;
+}
+.prose.steps ul {
+  list-style: none;
+  padding-left: 0;
+}
+.prose.steps ul > li {
+  position: relative;
+  padding-left: 1.75rem;
+}
+.prose.steps ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0.3rem;
+  top: 0.68em;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--color-accent);
+  box-shadow: 0 0 0 4px var(--color-accent-soft);
+}
+.prose.steps li strong {
+  color: var(--color-ink);
+}
+.prose.steps a {
+  text-decoration-color: rgba(29, 79, 122, 0.35);
+  text-decoration-thickness: 1.5px;
+}
+.prose.steps a:hover {
+  text-decoration-color: currentColor;
+}
+.prose.steps hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-rule), transparent);
+}
+
+/* --------------------------------------------------------------- living cards
+ * A light travels around the border (always on .is-always, on hover
+ * otherwise), a soft wash on hover, and a faint icon watermark. */
+@property --glow-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.card-live {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(160deg, #ffffff 0%, #f4f9f6 100%);
+}
+.card-live::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(
+    from var(--glow-angle),
+    transparent 0deg 240deg,
+    rgba(95, 180, 156, 0.35) 290deg,
+    #5fb49c 330deg,
+    #1f5a4c 352deg,
+    transparent 360deg
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  animation: glow-spin 3.2s linear infinite;
+  animation-delay: var(--glow-delay, 0s);
+  animation-play-state: paused;
+}
+.card-live:hover::before,
+.card-live:focus-visible::before,
+.card-live.is-always::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+.card-live.is-always::before {
+  animation-duration: 7s;
+}
+.card-live::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(24rem 13rem at 100% 0%, rgba(31, 90, 76, 0.11), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.card-live:hover::after {
+  opacity: 1;
+}
+.card-mark {
+  position: absolute;
+  right: -0.9rem;
+  bottom: -1rem;
+  z-index: -1;
+  width: 5.75rem;
+  height: 5.75rem;
+  color: var(--color-accent);
+  opacity: 0.07;
+  transform: rotate(-12deg);
+  transition: transform 0.45s ease, opacity 0.3s ease;
+  pointer-events: none;
+}
+.card-live:hover .card-mark {
+  opacity: 0.14;
+  transform: rotate(0deg) scale(1.08);
+}
+@keyframes glow-spin {
+  to {
+    --glow-angle: 360deg;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-live.is-always::before {
+    opacity: 0;
+  }
+}
+
+/* --------------------------------------------------------------- homepage hero motion
+ * Decorative only (aria-hidden). Reduced-motion users get the static layout:
+ * the global reduced-motion rule stops every animation after one frame. */
+.hero-orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(70px);
+  pointer-events: none;
+}
+.hero-orb-a {
+  animation: orb-drift-a 18s ease-in-out infinite;
+}
+.hero-orb-b {
+  animation: orb-drift-b 22s ease-in-out infinite;
+}
+@keyframes orb-drift-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(8%, 10%) scale(1.15); }
+}
+@keyframes orb-drift-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-10%, -8%) scale(1.12); }
+}
+.hero-rings {
+  animation: ring-spin 90s linear infinite;
+  transform-origin: center;
+}
+@keyframes ring-spin {
+  to { transform: rotate(360deg); }
+}
+.hero-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(ellipse at 75% 45%, #000 0%, transparent 65%);
+  mask-image: radial-gradient(ellipse at 75% 45%, #000 0%, transparent 65%);
+}
+.hero-float {
+  animation: hero-float 6s ease-in-out infinite;
+  animation-delay: var(--float-delay, 0s);
+}
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+/* A light sweep that passes over each verdict card in turn, like a scan. */
+.hero-scan {
+  position: relative;
+  overflow: hidden;
+}
+.hero-scan::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(105deg, transparent 40%, rgba(95, 180, 156, 0.28) 50%, transparent 60%);
+  background-size: 260% 100%;
+  background-position: 160% 0;
+  animation: hero-scan 7.5s ease-in-out infinite;
+  animation-delay: var(--scan-delay, 0s);
+  pointer-events: none;
+}
+@keyframes hero-scan {
+  0% { background-position: 160% 0; }
+  30%, 100% { background-position: -60% 0; }
 }
 
 /* --------------------------------------------------------------- evidence grades

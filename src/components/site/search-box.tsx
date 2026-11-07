@@ -86,7 +86,7 @@ export function SearchBox({ suggestions }: { suggestions: Array<{ href: string; 
             <li key={r.url}>
               <a
                 href={r.url}
-                className="group flex items-start justify-between gap-4 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4 no-underline shadow-xs transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:shadow-md sm:p-5"
+                className="card-live group flex items-start justify-between gap-4 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4 no-underline shadow-xs transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:shadow-md sm:p-5"
               >
                 <span className="min-w-0 space-y-1">
                   <span className="inline-block rounded-full bg-[var(--color-accent-soft)] px-2.5 py-0.5 text-xs font-semibold text-[var(--color-accent)]">
@@ -117,7 +117,7 @@ export function SearchBox({ suggestions }: { suggestions: Array<{ href: string; 
               <li key={s.href}>
                 <a
                   href={s.href}
-                  className="tap group flex h-full w-full items-center justify-between gap-3 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4 font-semibold text-[var(--color-ink)] no-underline shadow-xs transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] hover:shadow-md"
+                  className="card-live tap group flex h-full w-full items-center justify-between gap-3 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4 font-semibold text-[var(--color-ink)] no-underline shadow-xs transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] hover:shadow-md"
                 >
                   {s.label}
                   <ArrowRight aria-hidden="true" className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" />

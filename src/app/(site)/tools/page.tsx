@@ -205,7 +205,7 @@ export default function ToolsHub() {
                 <li key={item.url}>
                   <Link
                     href={item.url}
-                    className="tap group flex h-full items-start gap-4 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-5 no-underline shadow-xs transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:shadow-md"
+                    className="card-live tap group flex h-full items-start gap-4 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-5 no-underline shadow-xs transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:shadow-md"
                   >
                     <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-accent)] text-white">
                       <Icon aria-hidden="true" className="h-6 w-6" />
@@ -260,7 +260,7 @@ export default function ToolsHub() {
             <li key={r.href}>
               <Link
                 href={r.href}
-                className="tap group flex h-full items-center justify-between gap-3 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4 font-semibold text-[var(--color-ink)] no-underline shadow-xs transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] hover:shadow-md"
+                className="card-live tap group flex h-full items-center justify-between gap-3 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4 font-semibold text-[var(--color-ink)] no-underline shadow-xs transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] hover:shadow-md"
               >
                 {r.label}
                 <ArrowRight aria-hidden="true" className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" />

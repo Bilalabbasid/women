@@ -1,16 +1,28 @@
 import type { Metadata } from 'next';
+import type { CSSProperties } from 'react';
 import Link from 'next/link';
 import {
   ArrowRight,
+  BatteryLow,
+  Bone,
   BookOpenCheck,
+  Brain,
+  CalendarDays,
   ClipboardCheck,
+  Droplets,
+  Flame,
+  Leaf,
   ListChecks,
   MessageCircleQuestion,
+  Moon,
   NotebookPen,
   Scale,
   Search,
   ShieldCheck,
   Smartphone,
+  Sprout,
+  Sun,
+  Zap,
 } from 'lucide-react';
 import { SITE } from '@/lib/site/config';
 import { buildMetadata } from '@/lib/seo/metadata';
@@ -30,14 +42,14 @@ export const metadata: Metadata = {
 };
 
 const TOP_SYMPTOMS = [
-  { label: 'Hot flashes', sub: 'Vasomotor surges', href: '/symptoms/hot-flashes/' },
-  { label: 'Night sweats', sub: '3 a.m. waking', href: '/symptoms/night-sweats/' },
-  { label: 'Brain fog', sub: 'Focus & recall', href: '/symptoms/brain-fog/' },
-  { label: 'Fatigue', sub: 'Waking unrefreshed', href: '/symptoms/fatigue/' },
-  { label: 'Joint pain', sub: 'Morning stiffness', href: '/symptoms/joint-pain/' },
-  { label: 'Irritability', sub: 'Sudden anger', href: '/symptoms/irritability/' },
-  { label: 'Irregular cycles', sub: 'Flow changes', href: '/perimenopause/irregular-periods/' },
-  { label: 'Vaginal dryness', sub: 'Pain & discomfort', href: '/symptoms/vaginal-dryness/' },
+  { label: 'Hot flashes', sub: 'Vasomotor surges', href: '/symptoms/hot-flashes/', Icon: Flame },
+  { label: 'Night sweats', sub: '3 a.m. waking', href: '/symptoms/night-sweats/', Icon: Moon },
+  { label: 'Brain fog', sub: 'Focus & recall', href: '/symptoms/brain-fog/', Icon: Brain },
+  { label: 'Fatigue', sub: 'Waking unrefreshed', href: '/symptoms/fatigue/', Icon: BatteryLow },
+  { label: 'Joint pain', sub: 'Morning stiffness', href: '/symptoms/joint-pain/', Icon: Bone },
+  { label: 'Irritability', sub: 'Sudden anger', href: '/symptoms/irritability/', Icon: Zap },
+  { label: 'Irregular cycles', sub: 'Flow changes', href: '/perimenopause/irregular-periods/', Icon: CalendarDays },
+  { label: 'Vaginal dryness', sub: 'Pain & discomfort', href: '/symptoms/vaginal-dryness/', Icon: Droplets },
 ];
 
 const STAGES = [
@@ -46,18 +58,21 @@ const STAGES = [
     title: 'Perimenopause',
     desc: 'The transition years: fluctuating hormones, cycle shifts, and the earliest symptoms.',
     href: '/perimenopause/',
+    Icon: Sprout,
   },
   {
     step: '2',
     title: 'Menopause',
     desc: 'The milestone itself: 12 consecutive months without a period, and what to expect.',
     href: '/menopause/',
+    Icon: Sun,
   },
   {
     step: '3',
     title: 'Postmenopause',
     desc: 'Life after the transition: protecting bone density, heart health, and tissue comfort.',
     href: '/postmenopause/',
+    Icon: Leaf,
   },
 ];
 
@@ -107,7 +122,16 @@ const HERO_VERDICTS = [
   { href: '/does-it-work/black-cohosh/', label: 'Black cohosh for hot flashes' },
 ];
 
+/** Staggered horizontal offsets so the verdict cards read as a loose deck. */
+const DECK_OFFSETS = ['lg:mr-10', 'lg:ml-10', 'lg:mr-4 lg:ml-4'];
+
 const STRIP_VERDICTS = ['/does-it-work/exercise/', '/does-it-work/cooling-products/', '/does-it-work/cannabis-cbd/'];
+
+/** Cards in one row light up in turn rather than all at once. */
+const delay = (i: number, step: number) => ({ '--glow-delay': `${-i * step}s` }) as CSSProperties;
+
+const cardBase =
+  'card-live tap group rounded-2xl border border-[var(--color-rule)] no-underline shadow-xs transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:shadow-md';
 
 export default function HomePage() {
   const { store, pages, byUrl } = getSiteData();
@@ -121,6 +145,9 @@ export default function HomePage() {
   // Real, self-updating numbers: never typed in by hand.
   const guideCount = pages.filter((p) => p.fm.page_type !== 'legal' && p.fm.page_type !== 'about').length;
   const sourceCount = store.sources.size;
+  const verdictCount = pages.filter(
+    (p) => p.fm.page_type === 'does_it_work' && p.fm.evidence_grade && p.fm.evidence_grade !== 'per_option',
+  ).length;
 
   const heroVerdicts = HERO_VERDICTS.map((v) => ({ ...v, page: byUrl.get(v.href) })).filter(
     (v) => v.page?.fm.evidence_grade && v.page.fm.evidence_grade !== 'per_option',
@@ -135,39 +162,49 @@ export default function HomePage() {
     .slice(0, 6);
 
   return (
-    <div className="space-y-16 py-2 sm:space-y-20">
-      {/* 1. Hero */}
+    <div className="space-y-16 pb-2 sm:space-y-20">
+      {/* 1. Hero: full-bleed, edge to edge, with content aligned to the site column. */}
       <section
         aria-labelledby="hero-heading"
-        className="relative overflow-hidden rounded-3xl bg-[var(--color-accent)] px-5 py-10 text-white sm:px-10 sm:py-14"
+        className="relative -mt-8 overflow-hidden bg-[var(--color-accent)] text-white"
+        style={{ marginInline: 'calc(50% - 50vw)' }}
       >
-        {/* Decorative layers: soft light wash + concentric rings. Pure CSS/SVG, no images. */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0"
-          style={{
-            backgroundImage:
-              'radial-gradient(52rem 30rem at 85% -20%, rgba(255,255,255,0.14), transparent 60%), radial-gradient(40rem 26rem at -10% 110%, rgba(0,0,0,0.18), transparent 55%)',
-          }}
-        />
-        <svg
-          aria-hidden="true"
-          focusable="false"
-          className="pointer-events-none absolute -right-28 -top-36 h-[30rem] w-[30rem] opacity-[0.1]"
-          viewBox="0 0 400 400"
-          fill="none"
-        >
-          {[70, 110, 150, 190].map((r) => (
-            <circle key={r} cx="200" cy="200" r={r} stroke="#fff" strokeWidth="1.5" />
-          ))}
-        </svg>
+        {/* Decorative motion layers: drifting light, slow rings, dot grid. */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          <div className="hero-orb hero-orb-a -left-24 -top-32 h-[28rem] w-[28rem] bg-[#5fb49c] opacity-40" />
+          <div className="hero-orb hero-orb-b -bottom-40 right-[8%] h-[32rem] w-[32rem] bg-[#0f3d33] opacity-70" />
+          <div className="hero-orb hero-orb-a right-[30%] top-[10%] h-64 w-64 bg-[#cfe2da] opacity-15" />
+          <div className="hero-dots absolute inset-0" />
+          <svg
+            focusable="false"
+            className="hero-rings absolute -right-40 top-1/2 h-[46rem] w-[46rem] -translate-y-1/2 opacity-[0.12]"
+            viewBox="0 0 400 400"
+            fill="none"
+          >
+            {[60, 95, 130, 165, 198].map((r, i) => (
+              <circle
+                key={r}
+                cx="200"
+                cy="200"
+                r={r}
+                stroke="#fff"
+                strokeWidth="1.2"
+                strokeDasharray={i % 2 ? '4 10' : undefined}
+              />
+            ))}
+          </svg>
+        </div>
 
-        <div className="relative grid items-center gap-10 lg:grid-cols-[7fr_5fr]">
+        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-14 sm:py-20 lg:grid-cols-2 lg:gap-16 lg:py-24">
           <div className="space-y-6">
-            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#cfe2da]">
+            <p className="inline-flex flex-wrap items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#e4eeea]">
+              <ShieldCheck aria-hidden="true" className="h-4 w-4" />
               Independent · Evidence-graded · Private by design
             </p>
-            <h1 id="hero-heading" className="font-serif text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-[2.75rem]">
+            <h1
+              id="hero-heading"
+              className="font-serif text-4xl font-semibold leading-[1.1] text-white sm:text-5xl lg:text-[3.5rem]"
+            >
               What&rsquo;s going on with your body right now?
             </h1>
             <p className="max-w-xl text-lg text-[#e4eeea] sm:text-xl">
@@ -177,7 +214,7 @@ export default function HomePage() {
 
             {/* Lead search */}
             <form action="/search/" method="get">
-              <div className="flex max-w-xl items-center gap-2 rounded-2xl bg-white p-2 shadow-lg shadow-black/15">
+              <div className="flex max-w-xl items-center gap-2 rounded-2xl bg-white p-2 shadow-xl shadow-black/20">
                 <Search aria-hidden="true" className="ml-2 h-5 w-5 shrink-0 text-[var(--color-ink-muted)]" />
                 <input
                   type="search"
@@ -203,7 +240,7 @@ export default function HomePage() {
                   <Link
                     key={q.href}
                     href={q.href}
-                    className="tap rounded-full border border-white/30 bg-white/10 px-3.5 py-1 text-sm font-medium text-white no-underline hover:bg-white/20 focus-visible:outline-white"
+                    className="tap rounded-full border border-white/30 bg-white/10 px-3.5 py-1 text-sm font-medium text-white no-underline backdrop-blur-sm hover:bg-white/20 focus-visible:outline-white"
                   >
                     {q.label}
                   </Link>
@@ -212,27 +249,49 @@ export default function HomePage() {
             )}
           </div>
 
-          {/* Real verdicts, graded by the pages themselves */}
+          {/* Right: real verdicts, graded by the pages themselves, as a floating deck. */}
           {heroVerdicts.length > 0 && (
-            <div className="relative mx-auto w-full max-w-md space-y-3 lg:mx-0">
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#cfe2da]">
-                From our evidence checker
+            <div className="relative mx-auto w-full max-w-lg lg:mx-0 lg:justify-self-end">
+              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.14em] text-[#cfe2da]">
+                Live from our evidence checker
               </p>
-              {heroVerdicts.map((v, i) => (
-                <Link
-                  key={v.href}
-                  href={v.href}
-                  className={`tap block rounded-2xl bg-white p-4 text-[var(--color-ink)] no-underline shadow-lg shadow-black/20 transition-transform hover:-translate-y-0.5 focus-visible:outline-white ${
-                    i === 0 ? 'lg:-rotate-1' : i === heroVerdicts.length - 1 ? 'lg:rotate-1' : ''
-                  }`}
+
+              <ul className="space-y-3.5">
+                {heroVerdicts.map((v, i) => (
+                  <li key={v.href} className={DECK_OFFSETS[i] ?? ''}>
+                    <div className="hero-float" style={{ '--float-delay': `${-i * 1.6}s` } as CSSProperties}>
+                      <Link
+                        href={v.href}
+                        className="hero-scan tap block rounded-2xl bg-white p-4 text-[var(--color-ink)] no-underline shadow-xl shadow-black/25 transition-transform hover:scale-[1.02] focus-visible:outline-white sm:p-5"
+                        style={{ '--scan-delay': `${i * 2.5}s` } as CSSProperties}
+                      >
+                        <span className="flex w-full flex-wrap items-center justify-between gap-x-3 gap-y-2">
+                          <span className="min-w-[11rem] flex-1 font-semibold leading-snug">{v.label}</span>
+                          <GradeBadge grade={v.page!.fm.evidence_grade!} />
+                        </span>
+                      </Link>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Real, build-time numbers. */}
+              <div className="mt-6 flex flex-wrap items-center gap-2.5">
+                <span
+                  className="hero-float inline-flex items-center gap-2 rounded-full bg-[#0f3d33]/80 px-3.5 py-1.5 text-sm font-semibold text-white shadow-lg ring-1 ring-white/15 backdrop-blur"
+                  style={{ '--float-delay': '-2s' } as CSSProperties}
                 >
-                  <span className="flex w-full flex-wrap items-center justify-between gap-x-3 gap-y-2">
-                    <span className="min-w-[11rem] flex-1 text-sm font-semibold leading-snug">{v.label}</span>
-                    <GradeBadge grade={v.page!.fm.evidence_grade!} />
-                  </span>
-                </Link>
-              ))}
-              <p className="text-sm text-[#cfe2da]">
+                  <BookOpenCheck aria-hidden="true" className="h-4 w-4 text-[#9fd4c3]" /> {sourceCount} sources linked
+                </span>
+                <span
+                  className="hero-float inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1.5 text-sm font-semibold text-[var(--color-accent)] shadow-lg"
+                  style={{ '--float-delay': '-4s' } as CSSProperties}
+                >
+                  <Scale aria-hidden="true" className="h-4 w-4" /> {verdictCount} remedies graded
+                </span>
+              </div>
+
+              <p className="mt-4 text-sm text-[#cfe2da]">
                 Commissions never change a grade.{' '}
                 <Link href="/evidence/how-we-grade/" className="font-semibold text-white underline focus-visible:outline-white">
                   How we grade
@@ -243,35 +302,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. Trust strip: real, build-time numbers */}
+      {/* 2. Trust strip: real, build-time numbers. The border light travels card to card. */}
       <section aria-label="What you can rely on" className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {[
-          {
-            Icon: BookOpenCheck,
-            stat: `${guideCount} guides`,
-            desc: 'written to answer one real question each',
-          },
-          {
-            Icon: ShieldCheck,
-            stat: `${sourceCount} sources`,
-            desc: 'in our registry — every citation linked',
-          },
-          {
-            Icon: Scale,
-            stat: '5-level grading',
-            desc: 'from Strong evidence to Harm concern',
-          },
-          {
-            Icon: Smartphone,
-            stat: 'On your device',
-            desc: 'tracker data never reaches a server',
-          },
-        ].map(({ Icon, stat, desc }) => (
+          { Icon: BookOpenCheck, stat: `${guideCount} guides`, desc: 'written to answer one real question each' },
+          { Icon: ShieldCheck, stat: `${sourceCount} sources`, desc: 'in our registry — every citation linked' },
+          { Icon: Scale, stat: '5-level grading', desc: 'from Strong evidence to Harm concern' },
+          { Icon: Smartphone, stat: 'On your device', desc: 'tracker data never reaches a server' },
+        ].map(({ Icon, stat, desc }, i) => (
           <div
             key={stat}
-            className="flex items-start gap-3 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4"
+            className="card-live is-always flex items-start gap-3 rounded-2xl border border-[var(--color-rule)] p-4"
+            style={delay(i, 1.75)}
           >
-            <span className="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--color-accent-soft)] text-[var(--color-accent)]">
+            <Icon aria-hidden="true" className="card-mark" />
+            <span className="mt-0.5 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[var(--color-accent)] text-white shadow-sm">
               <Icon aria-hidden="true" className="h-5 w-5" />
             </span>
             <span>
@@ -298,17 +343,18 @@ export default function HomePage() {
           </Link>
         </div>
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {symptoms.map((s) => (
-            <li key={s.href}>
-              <Link
-                href={s.href}
-                className="tap group flex h-full items-center justify-between gap-2 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4 no-underline shadow-xs transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:shadow-md"
-              >
-                <span>
+          {symptoms.map(({ label, sub, href, Icon }) => (
+            <li key={href}>
+              <Link href={href} className={`${cardBase} flex h-full w-full items-center gap-3 p-4`}>
+                <Icon aria-hidden="true" className="card-mark" />
+                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[var(--color-accent-soft)] text-[var(--color-accent)] transition-colors group-hover:bg-[var(--color-accent)] group-hover:text-white">
+                  <Icon aria-hidden="true" className="h-5 w-5" />
+                </span>
+                <span className="min-w-0 flex-1">
                   <span className="block font-semibold text-[var(--color-ink)] group-hover:text-[var(--color-accent)]">
-                    {s.label}
+                    {label}
                   </span>
-                  <span className="block text-sm text-[var(--color-ink-muted)]">{s.sub}</span>
+                  <span className="block text-sm text-[var(--color-ink-muted)]">{sub}</span>
                 </span>
                 <ArrowRight
                   aria-hidden="true"
@@ -332,22 +378,19 @@ export default function HomePage() {
         </div>
         <div className="grid gap-4 sm:grid-cols-3">
           {stages.map((st) => (
-            <Link
-              key={st.href}
-              href={st.href}
-              className="tap group flex h-full flex-col items-start gap-3 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-5 no-underline shadow-xs transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:shadow-md"
-            >
+            <Link key={st.href} href={st.href} className={`${cardBase} flex h-full flex-col items-start gap-3 p-5`}>
+              <st.Icon aria-hidden="true" className="card-mark" />
               <span className="flex w-full items-center gap-3" aria-hidden="true">
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[var(--color-accent)] font-serif text-lg font-bold text-white">
                   {st.step}
                 </span>
                 <span className="h-px flex-1 bg-[var(--color-rule)] group-hover:bg-[var(--color-accent)]" />
               </span>
-              <span className="font-serif text-xl font-semibold text-[var(--color-ink)] group-hover:text-[var(--color-accent)]">
+              <span className="self-stretch font-serif text-xl font-semibold text-[var(--color-ink)] group-hover:text-[var(--color-accent)]">
                 {st.title}
               </span>
-              <span className="text-sm leading-relaxed text-[var(--color-ink-muted)]">{st.desc}</span>
-              <span className="mt-auto inline-flex items-center gap-1 pt-1 text-sm font-semibold text-[var(--color-link)]">
+              <span className="self-stretch text-sm leading-relaxed text-[var(--color-ink-muted)]">{st.desc}</span>
+              <span className="mt-auto inline-flex items-center gap-1 self-start pt-1 text-sm font-semibold text-[var(--color-link)]">
                 Read the guide
                 <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </span>
@@ -373,12 +416,9 @@ export default function HomePage() {
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           {tools.map(({ title, desc, href, Icon }) => (
-            <Link
-              key={href}
-              href={href}
-              className="tap group flex h-full items-start gap-4 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-5 no-underline shadow-xs transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:shadow-md"
-            >
-              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-accent)] text-white transition-colors">
+            <Link key={href} href={href} className={`${cardBase} flex h-full items-start gap-4 p-5`}>
+              <Icon aria-hidden="true" className="card-mark" />
+              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-accent)] text-white shadow-sm">
                 <Icon aria-hidden="true" className="h-6 w-6" />
               </span>
               <span className="min-w-0">

@@ -82,7 +82,7 @@ function GuideCard({ page, showGrade }: { page: ContentPage; showGrade: boolean 
   return (
     <Link
       href={page.url}
-      className="tap group flex h-full flex-col items-start gap-2 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4 no-underline shadow-xs transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:shadow-md"
+      className="card-live tap group flex h-full flex-col items-start gap-2 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4 no-underline shadow-xs transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:shadow-md"
     >
       <span className="flex w-full items-start justify-between gap-3">
         <span className="font-semibold leading-snug text-[var(--color-ink)] group-hover:text-[var(--color-accent)]">

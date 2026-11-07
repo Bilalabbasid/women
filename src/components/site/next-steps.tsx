@@ -13,44 +13,75 @@ interface NextStepsProps {
   treatmentLabel?: string;
 }
 
+/**
+ * End-of-article next steps: one thing to read, one tool, one way to prepare
+ * for the doctor. Three clear cards, each a single tap.
+ */
 export function NextSteps({
   trackingUrl = '/tools/symptoms-checklist/',
-  trackingLabel = 'Log and spot your patterns with the symptom checklist',
+  trackingLabel = 'Try the symptoms checklist',
   doctorUrl = '/tools/treatment-questions/',
-  doctorLabel = 'Prepare your 10-minute doctor appointment questions',
+  doctorLabel = 'Build your doctor questions',
   treatmentUrl = '/treatments/',
-  treatmentLabel = 'Explore evidence-graded treatment and lifestyle options',
+  treatmentLabel = 'See treatments, graded',
 }: NextStepsProps) {
+  const steps = [
+    {
+      kicker: 'Not sure it fits?',
+      body: 'Tick what you’ve noticed and see which guides match. It stays on your device.',
+      href: trackingUrl,
+      label: trackingLabel,
+      icon: (
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <rect x="4" y="3.5" width="16" height="17" rx="2.5" />
+          <path d="M8 9l1.6 1.6L12.5 7.5M8 15.5l1.6 1.6 2.9-3.1M15 9.5h2M15 16h2" />
+        </svg>
+      ),
+    },
+    {
+      kicker: 'Seeing a doctor soon?',
+      body: 'Pick the questions that matter to you and print them for the appointment.',
+      href: doctorUrl,
+      label: doctorLabel,
+      icon: (
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M4 5h16v11H9l-5 4V5Z" />
+          <path d="M9.5 9.2a2.5 2.5 0 1 1 3.2 2.4c-.5.2-.7.6-.7 1v.2" />
+        </svg>
+      ),
+    },
+    {
+      kicker: 'Weighing your options?',
+      body: 'Every treatment with its evidence grade, from strong to not supported.',
+      href: treatmentUrl,
+      label: treatmentLabel,
+      icon: (
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" aria-hidden="true">
+          <path d="M5 20v-6M10 20V9M15 20v-9M20 20V5" />
+        </svg>
+      ),
+    },
+  ];
   return (
-    <section aria-labelledby="next-steps-heading" className="my-10 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-6">
-      <h2 id="next-steps-heading" className="font-serif text-2xl font-semibold mb-4">
+    <section aria-labelledby="next-steps-heading" className="no-print my-10 border-t border-[var(--rule)] pt-8">
+      <p className="kicker">What to do next</p>
+      <h2 id="next-steps-heading" className="mt-1 text-[length:var(--fs-h3)]">
         Where are you right now?
       </h2>
-      <div className="grid gap-4 sm:grid-cols-3">
-        <div className="rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper)] p-4 space-y-2">
-          <p className="text-xs font-bold uppercase tracking-wider text-[var(--color-ink-muted)]">Still tracking</p>
-          <p className="text-sm">Not sure if your symptoms fit? Start tracking your daily patterns.</p>
-          <Link href={trackingUrl} className="tap inline-block text-sm font-semibold text-[var(--color-link)] underline">
-            {trackingLabel} →
-          </Link>
-        </div>
-
-        <div className="rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper)] p-4 space-y-2">
-          <p className="text-xs font-bold uppercase tracking-wider text-[var(--color-ink-muted)]">Ready to talk to a doctor</p>
-          <p className="text-sm">Have an upcoming appointment? Bring structured questions and your history.</p>
-          <Link href={doctorUrl} className="tap inline-block text-sm font-semibold text-[var(--color-link)] underline">
-            {doctorLabel} →
-          </Link>
-        </div>
-
-        <div className="rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper)] p-4 space-y-2">
-          <p className="text-xs font-bold uppercase tracking-wider text-[var(--color-ink-muted)]">Already on treatment</p>
-          <p className="text-sm">Evaluating your response or wondering what to adjust next?</p>
-          <Link href={treatmentUrl} className="tap inline-block text-sm font-semibold text-[var(--color-link)] underline">
-            {treatmentLabel} →
-          </Link>
-        </div>
-      </div>
+      <ul className="mt-5 grid gap-3 sm:grid-cols-3">
+        {steps.map((s) => (
+          <li key={s.href}>
+            <Link href={s.href} className="card grid h-full content-start gap-2">
+              <span className="row-icon" aria-hidden="true">
+                {s.icon}
+              </span>
+              <span className="mt-1 font-bold">{s.kicker}</span>
+              <span className="text-[1.0625rem] leading-snug text-[var(--ink-muted)]">{s.body}</span>
+              <span className="link link-arrow mt-1">{s.label}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }
@@ -77,15 +108,11 @@ export function BookmarkButton({ url, title }: { url: string; title: string }) {
   };
 
   return (
-    <button
-      type="button"
-      onClick={toggleBookmark}
-      aria-pressed={bookmarked}
-      className="tap inline-flex items-center gap-1.5 rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper)] px-3 py-1.5 text-xs font-medium text-[var(--color-ink)] hover:bg-[var(--color-paper-raised)]"
-    >
-      <span aria-hidden="true">{bookmarked ? '★' : '☆'}</span>
-      <span>{bookmarked ? 'Saved on this device' : 'Save for later'}</span>
+    <button type="button" onClick={toggleBookmark} aria-pressed={bookmarked} className="btn btn-secondary btn-sm no-print">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill={bookmarked ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2" strokeLinejoin="round" aria-hidden="true">
+        <path d="M6 3.5h12v17l-6-4-6 4z" />
+      </svg>
+      <span>{bookmarked ? 'Saved' : 'Save for later'}</span>
     </button>
   );
 }
-

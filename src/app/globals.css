@@ -356,30 +356,103 @@
   }
 }
 
-/* Legacy markdown asides (until the pipeline emits the new callouts). */
+/* Markdown callouts (:::urgent, :::questions, :::note) drawn as the design
+   system's callouts: red-flag, "Ask your doctor", and a quiet note. The visible
+   titles are CSS-generated; the elements keep their own aria-labels. */
+.prose aside.urgent,
+.prose .doctor-questions,
+.prose aside.note {
+  position: relative;
+  padding: 1.1rem 1.25rem 1.2rem;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+.prose aside.urgent::before,
+.prose .doctor-questions::before {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
 .prose aside.urgent {
-  border: 2px solid var(--urgent-rule);
+  border-top: 4px solid var(--urgent-rule);
   background: var(--urgent-soft);
-  border-radius: var(--radius);
-  padding: 1rem 1.25rem;
 }
 .prose aside.urgent::before {
-  content: "Urgent: get help now";
-  display: block;
-  font-weight: 700;
+  content: "⚠  Get help now";
   color: var(--urgent);
-  margin-bottom: 0.25rem;
 }
-.prose aside.note {
-  background: var(--accent-soft);
-  border-radius: var(--radius);
-  padding: 1rem 1.25rem;
+.prose aside.urgent > * + * {
+  margin-top: 0.6em;
+}
+.prose aside.urgent li::marker {
+  color: var(--urgent);
 }
 .prose .doctor-questions {
-  background: var(--paper-raised);
   border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  padding: 1rem 1.25rem;
+  border-top: 3px solid var(--link);
+  background: var(--paper-raised);
+}
+.prose .doctor-questions::before {
+  content: "Ask your doctor";
+  color: var(--link);
+}
+.prose .doctor-questions ul,
+.prose .doctor-questions ol {
+  list-style: none;
+  padding-left: 0;
+}
+.prose .doctor-questions li {
+  position: relative;
+  padding-left: 1.6rem;
+  font-family: var(--font-serif);
+  font-size: 1.1em;
+  line-height: 1.45;
+}
+.prose .doctor-questions li::before {
+  content: "“";
+  position: absolute;
+  left: 0;
+  top: -0.1em;
+  font-size: 1.6em;
+  line-height: 1;
+  color: var(--link);
+}
+.prose .doctor-questions li + li {
+  margin-top: 0.7em;
+}
+.prose aside.note {
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--accent-soft);
+}
+
+/* The opening paragraph, shown as the "Short answer" (B's pull-quote).
+   Applied by the article template with .lead-answer on the first prose part. */
+.prose.lead-answer > p:first-of-type {
+  position: relative;
+  margin-bottom: 1.6em;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 4px solid var(--accent);
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.4rem);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.prose.lead-answer > p:first-of-type::before {
+  content: "Short answer";
+  display: block;
+  margin-bottom: 0.3rem;
+  font-style: italic;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--accent);
 }
 
 /* Tool guides: numbered steps in B's italic serif numerals, quiet bullets. */

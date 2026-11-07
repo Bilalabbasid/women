@@ -3,6 +3,8 @@ import type { EvidenceGrade, Source, Person } from '@/lib/content/schema';
 import type { ContentPage } from '@/lib/content/loader';
 import { SITE } from '@/lib/site/config';
 import { AI_GRADE_NOTE } from '@/lib/site/honesty';
+import { TocRail, TocSheet } from '@/components/ui/interactive';
+import { GradeIcon } from '@/components/ui/grade';
 
 export { GRADE_LABELS } from '@/lib/grades/labels';
 import { GRADE_LABELS } from '@/lib/grades/labels';
@@ -24,7 +26,16 @@ export function GradeAiNote({ methodHref = '/evidence/how-we-grade/' }: { method
 
 /** Evidence grade with a text label (never colour alone). Links to the grading method. */
 export function GradeBadge({ grade, methodHref }: { grade: EvidenceGrade; methodHref?: string }) {
-  const badge = <span className={`grade grade-${grade}`}>{GRADE_LABELS[grade]}</span>;
+  const badge = (
+    <span className={`g-${grade}`}>
+      <span className="grade-badge">
+        <span className="meter-icon">
+          <GradeIcon grade={grade} />
+        </span>
+        {GRADE_LABELS[grade]}
+      </span>
+    </span>
+  );
   return methodHref ? (
     <Link href={methodHref} className="no-underline" aria-label={`${GRADE_LABELS[grade]}: how we grade evidence`}>
       {badge}
@@ -43,16 +54,16 @@ export const displayName = (p: Person | undefined) =>
 export function References({ ids, sources }: { ids: string[]; sources: Map<string, Source> }) {
   if (ids.length === 0) return null;
   return (
-    <section aria-labelledby="references" className="space-y-3">
-      <h2 id="references" className="text-2xl">
+    <section aria-labelledby="references" className="references space-y-4 border-t border-[var(--rule)] pt-6">
+      <h2 id="references" className="text-[length:var(--fs-h3)]">
         References
       </h2>
-      <ol className="list-decimal space-y-2 pl-6">
+      <ol className="list-decimal space-y-3 pl-6 text-[1.0625rem] leading-relaxed marker:font-bold marker:text-[var(--ink-muted)]">
         {ids.map((id, i) => {
           const s = sources.get(id);
           const href = s?.url ?? (s?.doi ? `https://doi.org/${s.doi}` : undefined);
           return (
-            <li key={id} id={`ref-${i + 1}`}>
+            <li key={id} id={`ref-${i + 1}`} className="scroll-mt-24 pl-1 target:rounded target:bg-[var(--accent-soft)]">
               {s ? (
                 <>
                   {s.authors.length > 0 && `${s.authors.slice(0, 3).join(', ')}${s.authors.length > 3 ? ' et al.' : ''}. `}
@@ -125,33 +136,14 @@ export function Toc({
 }) {
   const h2s = headings.filter((h) => h.depth === 2 && h.id !== 'references');
   if (h2s.length < 3) return null;
-  const titleId = compact ? 'toc-title-side' : 'toc-title';
-  return (
-    <nav
-      aria-labelledby={titleId}
-      className="rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4 shadow-xs sm:p-5"
-    >
-      <p id={titleId} className="font-serif text-lg font-semibold">
-        {compact ? 'Contents' : 'On this page'}
-      </p>
-      <ol className={`mt-2 grid gap-x-6 ${compact ? 'text-base' : 'sm:grid-cols-2'}`}>
-        {h2s.map((h, i) => (
-          <li key={h.id}>
-            <a
-              href={`#${h.id}`}
-              className="tap group w-full gap-3 rounded-lg px-2 text-[var(--color-link)] no-underline hover:bg-[var(--color-accent-soft)]"
-            >
-              <span
-                aria-hidden="true"
-                className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent-soft)] text-sm font-semibold text-[var(--color-accent)] group-hover:bg-[var(--color-accent)] group-hover:text-white"
-              >
-                {i + 1}
-              </span>
-              <span className="underline-offset-4 group-hover:underline">{headingLabel(h.text)}</span>
-            </a>
-          </li>
-        ))}
-      </ol>
-    </nav>
+  const items = h2s.map((h) => ({ id: h.id, label: headingLabel(h.text) }));
+  // Desktop: a sticky § rail that marks the section being read. Phones (and tool
+  // pages): an "On this page" chip that opens a bottom sheet.
+  return compact ? (
+    <TocRail items={items} />
+  ) : (
+    <div className="no-print">
+      <TocSheet items={items} />
+    </div>
   );
 }

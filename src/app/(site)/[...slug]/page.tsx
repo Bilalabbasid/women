@@ -34,6 +34,7 @@ import { JsonLd, Breadcrumbs } from '@/components/site/site-chrome';
 import { GradeBadge, References, ChangeLog, DraftBanner, Toc, displayName } from '@/components/site/evidence';
 import { QuestionTools, SavedCopyNotice } from '@/components/site/client-islands';
 import { ToolHero, TOOL_HEROES } from '@/components/site/tool-hero';
+import '../../article.css';
 
 /** Only pages in this build exist. Anything else is a real 404. */
 export const dynamicParams = false;

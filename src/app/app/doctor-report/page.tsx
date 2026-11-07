@@ -163,10 +163,58 @@ export default function DoctorReportPage() {
           </p>
         </section>
 
+        {/* Questions (screen only: the chosen ones print inside the report above) */}
+        <div className="no-print">
+        <Panel
+          id="add-q"
+          title="Add your questions"
+          hint="They’re printed on your report and saved on this device only."
+          action={questions.length > 0 ? <CopyButton targetId="report-questions" label="Copy" className="btn btn-quiet btn-sm" /> : undefined}
+        >
+          <form onSubmit={addQuestion} className="grid gap-2 sm:grid-cols-[1fr_auto]">
+            <label htmlFor="custom-question" className="visually-hidden">
+              Your question
+            </label>
+            <input
+              id="custom-question"
+              type="text"
+              value={customQuestion}
+              onChange={(e) => setCustomQuestion(e.target.value)}
+              placeholder="Type a question for your doctor"
+              className="input"
+            />
+            <button type="submit" className="btn btn-secondary">
+              Add question
+            </button>
+          </form>
+          {DOCTOR_QUESTION_STARTERS.some((q) => !questions.includes(q)) && (
+            <div className="grid gap-2">
+              <p className="label">Or tap a starter to add it</p>
+              <ul className="grid gap-2">
+                {DOCTOR_QUESTION_STARTERS.filter((q) => !questions.includes(q)).map((q) => (
+                  <li key={q}>
+                    <button
+                      type="button"
+                      onClick={() => saveQuestions([...questions, q])}
+                      className="flex min-h-[48px] w-full items-start gap-3 rounded-[var(--radius)] border-[1.5px] border-[var(--rule-strong)] bg-[var(--paper-raised)] px-4 py-3 text-left text-[1rem] leading-snug text-[var(--ink)] transition-colors hover:border-[var(--accent)] hover:bg-[var(--accent-soft)]"
+                    >
+                      <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[var(--accent-soft)] text-[var(--accent)]">
+                        <Icon.Plus width={14} height={14} />
+                      </span>
+                      <span>{q}</span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </Panel>
+        </div>
         {/* The printable page: a live preview that looks like the sheet she'll hand over. */}
         <div className="grid gap-2">
           <p className="eyebrow no-print">Preview</p>
           <article
+            data-theme="light"
             aria-label="Doctor report"
             className="grid gap-6 rounded-[var(--radius-sm)] border border-[var(--rule)] bg-[var(--paper-raised)] px-5 py-6 text-[var(--ink)] shadow-[var(--shadow-lift)] sm:px-9 sm:py-9 print:rounded-none print:border-0 print:p-0 print:text-[11pt] print:shadow-none"
           >
@@ -324,53 +372,6 @@ export default function DoctorReportPage() {
           </article>
         </div>
 
-        {/* Questions (screen only: the chosen ones print inside the report above) */}
-        <div className="no-print">
-        <Panel
-          id="add-q"
-          title="Add your questions"
-          hint="They’re printed on your report and saved on this device only."
-          action={questions.length > 0 ? <CopyButton targetId="report-questions" label="Copy" className="btn btn-quiet btn-sm" /> : undefined}
-        >
-          <form onSubmit={addQuestion} className="grid gap-2 sm:grid-cols-[1fr_auto]">
-            <label htmlFor="custom-question" className="visually-hidden">
-              Your question
-            </label>
-            <input
-              id="custom-question"
-              type="text"
-              value={customQuestion}
-              onChange={(e) => setCustomQuestion(e.target.value)}
-              placeholder="Type a question for your doctor"
-              className="input"
-            />
-            <button type="submit" className="btn btn-secondary">
-              Add question
-            </button>
-          </form>
-          {DOCTOR_QUESTION_STARTERS.some((q) => !questions.includes(q)) && (
-            <div className="grid gap-2">
-              <p className="label">Or tap a starter to add it</p>
-              <ul className="grid gap-2">
-                {DOCTOR_QUESTION_STARTERS.filter((q) => !questions.includes(q)).map((q) => (
-                  <li key={q}>
-                    <button
-                      type="button"
-                      onClick={() => saveQuestions([...questions, q])}
-                      className="flex min-h-[48px] w-full items-start gap-3 rounded-[var(--radius)] border-[1.5px] border-[var(--rule-strong)] bg-[var(--paper-raised)] px-4 py-3 text-left text-[1rem] leading-snug text-[var(--ink)] transition-colors hover:border-[var(--accent)] hover:bg-[var(--accent-soft)]"
-                    >
-                      <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[var(--accent-soft)] text-[var(--accent)]">
-                        <Icon.Plus width={14} height={14} />
-                      </span>
-                      <span>{q}</span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </Panel>
-        </div>
       </AppPage>
     </div>
   );

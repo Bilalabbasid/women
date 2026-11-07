@@ -3,7 +3,6 @@ import { Suspense } from 'react';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { SearchBox } from '@/components/site/search-box';
 import { navHubs } from '@/lib/content/site-data';
-import { HeroPanel, heroTitle } from '@/components/site/hero-panel';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Search',
@@ -20,25 +19,17 @@ export default function SearchPage() {
     // Without JavaScript the form still submits; the results list needs JS.
     <Suspense
       fallback={
-        <HeroPanel labelledBy="search-title">
-          <div className="max-w-2xl space-y-5">
-            <h1 id="search-title" className={heroTitle}>
-              Search
-            </h1>
-            <form role="search" action="/search/" method="get">
-              <label htmlFor="q-static" className="sr-only">
-                Search the site
-              </label>
-              <input
-                id="q-static"
-                name="q"
-                type="search"
-                className="min-h-[56px] w-full rounded-2xl bg-[var(--paper-raised)] px-4 text-lg text-[var(--color-ink)] shadow-lg shadow-black/15"
-                placeholder="For example: night sweats, HRT patch"
-              />
-            </form>
-          </div>
-        </HeroPanel>
+        <header className="grid max-w-[42rem] gap-4">
+          <h1 id="search-title" className="text-[length:var(--fs-h1)] leading-tight">
+            What would you like to know?
+          </h1>
+          <form role="search" action="/search/" method="get">
+            <label htmlFor="q-static" className="visually-hidden">
+              Search MenoVerdict
+            </label>
+            <input id="q-static" name="q" type="search" className="input min-h-[64px] text-[1.25rem]" placeholder="What’s bothering you? e.g. hot at night" />
+          </form>
+        </header>
       }
     >
       <SearchBox suggestions={suggestions} />

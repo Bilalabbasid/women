@@ -3,11 +3,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { CONSENT_TEXT, FORM_ERROR, NEWSLETTER_TITLE, type FormType } from '@/lib/forms/subscribe';
 
-const boxClass = 'my-8 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-6 text-[var(--color-ink)]';
-const inputClass =
-  'w-full max-w-md rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper)] px-3 py-2 text-[var(--color-ink)]';
-const buttonClass =
-  'tap inline-flex items-center rounded-lg bg-[var(--color-ink)] px-5 py-2.5 font-semibold text-white no-underline hover:opacity-90 disabled:opacity-50';
+// Design-system classes (src/app/ds-components.css): calm panel, 48px fields, light and dark.
+const boxClass = 'no-print panel panel-quiet my-10 max-w-[var(--measure)] gap-3';
+const inputClass = 'input max-w-md';
+const buttonClass = 'btn btn-primary justify-self-start';
 
 /**
  * Shared submit logic for the two forms. Sends only what the person typed; the
@@ -50,15 +49,9 @@ function Honeypot({ value, onChange }: { value: string; onChange: (v: string) =>
 
 function ConsentBox({ id, checked, onChange }: { id: string; checked: boolean; onChange: (v: boolean) => void }) {
   return (
-    <div className="flex items-start gap-2">
-      <input
-        id={id}
-        type="checkbox"
-        checked={checked}
-        onChange={(e) => onChange(e.target.checked)}
-        className="mt-1 h-4 w-4 rounded border-[var(--color-rule)] text-[var(--color-accent)]"
-      />
-      <label htmlFor={id} className="text-sm leading-snug text-[var(--color-ink-muted)]">
+    <div className="check">
+      <input id={id} type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} />
+      <label htmlFor={id} className="cursor-pointer text-[1rem] leading-snug text-[var(--ink-muted)]">
         {CONSENT_TEXT}
       </label>
     </div>
@@ -67,7 +60,7 @@ function ConsentBox({ id, checked, onChange }: { id: string; checked: boolean; o
 
 function FormError() {
   return (
-    <p role="alert" className="text-sm text-[var(--color-urgent)]">
+    <p role="alert" className="field-error">
       {FORM_ERROR.split('contact@menoverdict.com')[0]}
       <a href="mailto:contact@menoverdict.com" className="font-semibold underline">
         contact@menoverdict.com
@@ -92,7 +85,7 @@ export function EmailCapture({
   if (state === 'sent') {
     return (
       <aside aria-label="Signup received" className={boxClass}>
-        <h2 className="mb-2 font-serif text-xl font-semibold">Thanks, you&apos;re on the list</h2>
+        <h2 className="panel-title">Thanks, you&apos;re on the list</h2>
         <p className="text-[var(--color-ink-muted)]">
           We&apos;ll email <strong>{email}</strong> when we launch new tools. To stop, reply to any email and say so.
         </p>
@@ -102,19 +95,19 @@ export function EmailCapture({
 
   return (
     <aside aria-labelledby="newsletter-title" className={boxClass}>
-      <h2 id="newsletter-title" className="mb-2 font-serif text-xl font-semibold">
+      <h2 id="newsletter-title" className="panel-title">
         {title}
       </h2>
-      <p className="mb-4 text-[var(--color-ink-muted)]">{itemDescription}</p>
+      <p className="text-[var(--ink-muted)]">{itemDescription}</p>
       <form
         onSubmit={(e) => {
           e.preventDefault();
           void submit({ email, consent, website });
         }}
-        className="relative space-y-4"
+        className="relative grid gap-4"
       >
         <div>
-          <label htmlFor="newsletter-email" className="mb-1 block text-sm font-semibold">
+          <label htmlFor="newsletter-email" className="label mb-1 block">
             Email address
           </label>
           <input
@@ -149,7 +142,7 @@ export function ContactForm() {
   if (state === 'sent') {
     return (
       <aside aria-label="Message sent" className={boxClass}>
-        <h2 className="mb-2 font-serif text-xl font-semibold">Message sent</h2>
+        <h2 className="panel-title">Message sent</h2>
         <p className="text-[var(--color-ink-muted)]">Thanks. We&apos;ll reply to {email}.</p>
       </aside>
     );
@@ -157,10 +150,10 @@ export function ContactForm() {
 
   return (
     <aside aria-labelledby="contact-form-title" className={boxClass}>
-      <h2 id="contact-form-title" className="mb-2 font-serif text-xl font-semibold">
+      <h2 id="contact-form-title" className="panel-title">
         Send us a message
       </h2>
-      <p className="mb-4 text-[var(--color-ink-muted)]">
+      <p className="text-[var(--ink-muted)]">
         Please don&apos;t include details about your health: we can&apos;t give personal medical advice.
       </p>
       <form
@@ -168,10 +161,10 @@ export function ContactForm() {
           e.preventDefault();
           void submit({ email, consent, message, website });
         }}
-        className="relative space-y-4"
+        className="relative grid gap-4"
       >
         <div>
-          <label htmlFor="contact-email" className="mb-1 block text-sm font-semibold">
+          <label htmlFor="contact-email" className="label mb-1 block">
             Your email address
           </label>
           <input
@@ -185,7 +178,7 @@ export function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor="contact-message" className="mb-1 block text-sm font-semibold">
+          <label htmlFor="contact-message" className="label mb-1 block">
             Message
           </label>
           <textarea
@@ -195,7 +188,7 @@ export function ContactForm() {
             required
             maxLength={5000}
             rows={6}
-            className={`${inputClass} max-w-xl`}
+            className="textarea max-w-xl"
           />
         </div>
         <ConsentBox id="contact-consent" checked={consent} onChange={setConsent} />

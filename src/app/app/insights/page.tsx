@@ -74,9 +74,11 @@ export default function InsightsPage() {
             <span className="label">Show the last</span>
             <QuickPick label="Time range" options={rangeOptions} value={selectedRange} onChange={setSelectedRange} />
           </div>
-          <p className="text-[1rem] text-[var(--ink-muted)]">
-            {recordCount} {recordCount === 1 ? 'day' : 'days'} logged in the last {selectedRange} days.
-          </p>
+          {!isLoading && recordCount > 0 && (
+            <p className="text-[1rem] text-[var(--ink-muted)]">
+              {recordCount} {recordCount === 1 ? 'day' : 'days'} logged in the last {selectedRange} days.
+            </p>
+          )}
         </Panel>
 
         {isLoading ? (
@@ -162,7 +164,8 @@ export default function InsightsPage() {
           </>
         )}
 
-        <section className="notice" aria-labelledby="ins-note">
+        {!isLoading && recordCount > 0 && (
+        <section className="notice [border-left-style:solid] [border-left-width:1px]" aria-labelledby="ins-note">
           <span className="notice-stamp" aria-hidden="true">
             i
           </span>
@@ -174,6 +177,7 @@ export default function InsightsPage() {
             caused them: sleep, stress, treatments and more can all change symptoms at once.
           </p>
         </section>
+        )}
       </AppPage>
     </div>
   );

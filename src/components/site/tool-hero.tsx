@@ -11,7 +11,6 @@ import {
   NotebookPen,
   Scale,
 } from 'lucide-react';
-import { HeroPanel, heroEyebrow, heroTitle, heroLead, heroPrimaryBtn, heroGhostBtn } from './hero-panel';
 
 interface ToolHeroConfig {
   Icon: LucideIcon;
@@ -81,6 +80,11 @@ export const TOOL_HEROES: Record<string, ToolHeroConfig> = {
   },
 };
 
+/**
+ * Tool page top: editorial, matching the article header (no banner). Kicker,
+ * H1, lead, the main action, then a quiet "What you get" panel. The tool
+ * itself follows on the page.
+ */
 export function ToolHero({
   config,
   title,
@@ -100,27 +104,29 @@ export function ToolHero({
   const inPage = primaryHref?.startsWith('#');
 
   return (
-    <HeroPanel>
-      <div className="grid items-center gap-8 md:grid-cols-[3fr_2fr]">
-        <div className="space-y-5">
-          <p className={heroEyebrow}>Free tool · No account · Stays on your device</p>
-          <h1 className={heroTitle}>{title}</h1>
-          <p className={heroLead}>{description}</p>
+    <header className="tool-hero">
+      <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+        <div>
+          <p className="kicker">Free tool · No account · Stays on your device</p>
+          <h1 className="mt-2 max-w-[20ch] text-[length:var(--fs-h1)] leading-[1.08]">{title}</h1>
+          <p className="mt-4 max-w-[var(--measure)] text-[length:var(--fs-lead)] leading-relaxed text-[var(--ink-muted)]">
+            {description}
+          </p>
           {primaryHref && (
-            <div className="no-print flex flex-wrap items-center gap-3 pt-1">
+            <div className="no-print mt-6 flex flex-wrap items-center gap-x-4 gap-y-3">
               {inPage ? (
-                <a href={primaryHref} className={heroPrimaryBtn}>
+                <a href={primaryHref} className="btn btn-primary btn-lg">
                   {cta}
-                  <ArrowDown aria-hidden="true" className="h-4 w-4" />
+                  <ArrowDown aria-hidden="true" className="h-5 w-5" />
                 </a>
               ) : (
-                <Link href={primaryHref} className={heroPrimaryBtn}>
+                <Link href={primaryHref} className="btn btn-primary btn-lg">
                   {cta}
-                  <ArrowRight aria-hidden="true" className="h-4 w-4" />
+                  <ArrowRight aria-hidden="true" className="h-5 w-5" />
                 </Link>
               )}
               {guideHref && (
-                <a href={guideHref} className={heroGhostBtn}>
+                <a href={guideHref} className="btn btn-quiet">
                   How it works
                 </a>
               )}
@@ -128,17 +134,17 @@ export function ToolHero({
           )}
         </div>
 
-        <div className="rounded-2xl bg-[var(--paper-raised)] p-5 text-[var(--color-ink)] shadow-xl shadow-black/20 sm:p-6">
+        <div className="panel panel-quiet">
           <div className="flex items-center gap-3">
-            <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-accent)] text-white">
-              <Icon aria-hidden="true" className="h-6 w-6" />
+            <span className="row-icon" aria-hidden="true">
+              <Icon className="h-6 w-6" />
             </span>
-            <p className="font-serif text-lg font-semibold">What you get</p>
+            <p className="font-serif text-[1.2rem] font-semibold">What you get</p>
           </div>
-          <ul className="mt-4 space-y-2.5">
+          <ul className="grid gap-2.5">
             {features.map((f) => (
-              <li key={f} className="flex items-start gap-2.5 text-base">
-                <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent-soft)] text-[var(--color-accent)]">
+              <li key={f} className="flex items-start gap-2.5">
+                <span className="mt-0.5 inline-grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[var(--accent)] text-[var(--on-accent)]">
                   <Check aria-hidden="true" className="h-4 w-4" strokeWidth={3} />
                 </span>
                 <span className="leading-snug">{f}</span>
@@ -147,6 +153,6 @@ export function ToolHero({
           </ul>
         </div>
       </div>
-    </HeroPanel>
+    </header>
   );
 }

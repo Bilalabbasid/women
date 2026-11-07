@@ -10,7 +10,7 @@ import { ToolLoader } from './tool-loader';
 export function ToolIsland({ id }: { id: string }) {
   if (!isToolLive(id)) {
     return (
-      <p role="note" className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
+      <p role="note" className="panel panel-quiet">
         This tool is being reviewed by a clinician and will be available here soon.
       </p>
     );

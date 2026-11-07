@@ -64,6 +64,20 @@ const TYPE_LABEL: Record<TreatmentType, string> = {
   other: 'Other',
 };
 
+/** Medicines get the capsule icon and a type badge; routines, devices and therapies (type other or lifestyle) don't. */
+const isMedicine = (t: LocalTreatment) => t.type !== 'other' && t.type !== 'lifestyle';
+/** An hour's snooze makes sense for a daytime dose, not for a nightly routine or a non-medicine item. */
+const canSnooze = (t: LocalTreatment) => isMedicine(t) && !/night|bedtime/i.test(t.frequency ?? '');
+
+function TreatmentIcon({ t }: { t: LocalTreatment }) {
+  return isMedicine(t) ? <Icon.Treatments width={22} height={22} /> : <Icon.Routine width={22} height={22} />;
+}
+
+function TypeBadge({ t }: { t: LocalTreatment }) {
+  if (!isMedicine(t)) return null;
+  return <span className="grade-badge bg-[var(--accent-soft)] text-[var(--accent)]">{TYPE_LABEL[t.type] ?? 'Other'}</span>;
+}
+
 const ACTION_LABEL: Record<TreatmentAction, string> = {
   applied: 'Applied',
   taken: 'Taken',
@@ -439,14 +453,14 @@ export default function TreatmentsPage() {
                 <article key={t.id} className="panel panel-feature" aria-labelledby={`due-${t.id}`}>
                   <div className="flex items-start gap-3">
                     <span className="row-icon" aria-hidden="true">
-                      <Icon.Treatments width={22} height={22} />
+                      <TreatmentIcon t={t} />
                     </span>
                     <div className="min-w-0 flex-1">
                       <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
                         <h3 id={`due-${t.id}`} className="text-[1.125rem] font-bold leading-snug">
                           {t.name}
                         </h3>
-                        <span className="grade-badge bg-[var(--accent-soft)] text-[var(--accent)]">{TYPE_LABEL[t.type] ?? 'Other'}</span>
+                        <TypeBadge t={t} />
                       </div>
                       <p className="row-meta mt-0.5">
                         {[t.dosage, t.frequency, t.defaultSite ? `Site: ${t.defaultSite}` : null].filter(Boolean).join(' · ')}
@@ -467,17 +481,19 @@ export default function TreatmentsPage() {
                     </p>
                   )}
 
-                  <button type="button" className="btn btn-primary btn-block" onClick={() => handleOpenActionModal(t, defaultActionFor(t))}>
+                  <button type="button" className="btn btn-secondary btn-block" onClick={() => handleOpenActionModal(t, defaultActionFor(t))}>
                     <Icon.Check width={20} height={20} />
                     {isPatch(t) ? 'Change patch' : 'Mark done'}
                   </button>
-                  <div className="-mt-1 grid grid-cols-2 gap-2">
+                  <div className={`-mt-1 grid gap-2 ${canSnooze(t) ? 'grid-cols-2' : 'grid-cols-1'}`}>
                     <button type="button" className="btn btn-quiet btn-sm" onClick={() => handleQuickSkip(t)}>
                       Skip today
                     </button>
-                    <button type="button" className="btn btn-quiet btn-sm" onClick={() => handleQuickSnooze(t)}>
-                      Snooze 1 hour
-                    </button>
+                    {canSnooze(t) && (
+                      <button type="button" className="btn btn-quiet btn-sm" onClick={() => handleQuickSnooze(t)}>
+                        Snooze 1 hour
+                      </button>
+                    )}
                   </div>
                 </article>
               ))}
@@ -543,14 +559,14 @@ export default function TreatmentsPage() {
                 <article key={t.id} className="panel" aria-labelledby={`trt-${t.id}`}>
                   <div className="flex items-start gap-3">
                     <span className="row-icon" aria-hidden="true">
-                      <Icon.Treatments width={22} height={22} />
+                      <TreatmentIcon t={t} />
                     </span>
                     <div className="min-w-0 flex-1">
                       <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
                         <h3 id={`trt-${t.id}`} className="text-[1.125rem] font-bold leading-snug">
                           {t.name}
                         </h3>
-                        <span className="grade-badge bg-[var(--accent-soft)] text-[var(--accent)]">{TYPE_LABEL[t.type] ?? 'Other'}</span>
+                        <TypeBadge t={t} />
                       </div>
                       <p className="row-meta mt-0.5">{[t.dosage, t.frequency].filter(Boolean).join(' · ')}</p>
                     </div>
@@ -708,12 +724,15 @@ export default function TreatmentsPage() {
         )}
 
         {/* ------------------------------------------------ guardrail */}
-        <Callout kind="careful" title="This is your own record" headingLevel={2}>
-          <p>
-            MenoVerdict keeps track of what you and your clinician decided. It never suggests starting, stopping or
+        <section className="panel panel-quiet gap-1" aria-labelledby="own-record">
+          <h2 id="own-record" className="font-bold">
+            This is your own record
+          </h2>
+          <p className="text-[var(--ink-muted)]">
+            MenoVerdict keeps track of what you and your doctor decided. It never suggests starting, stopping or
             changing a medicine or dose: talk to your doctor or pharmacist before changing anything.
           </p>
-        </Callout>
+        </section>
       </AppPage>
 
       {/* ================================================ sheet: add or edit */}
@@ -838,7 +857,7 @@ export default function TreatmentsPage() {
               onChange={(e) => setFormInstructions(e.target.value)}
               placeholder="e.g. Change the spot each time; clean, dry skin"
             />
-            <span className="hint">What your clinician or the leaflet told you.</span>
+            <span className="hint">What your doctor or the leaflet told you.</span>
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2">

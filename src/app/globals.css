@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./tokens.css";
 @import "./ds-components.css";
+@import "./print.css";
 
 /*
  * Design system. Readers are mostly 40-65 and on phones:
@@ -425,6 +426,45 @@
 }
 .prose .doctor-questions li + li {
   margin-top: 0.7em;
+}
+/* :::try → <aside class="try">: "Try tonight", brass, with italic serif step numbers. */
+.prose aside.try {
+  position: relative;
+  padding: 1.1rem 1.25rem 1.2rem;
+  border-top: 3px solid var(--brass-rule);
+  border-radius: 0 0 var(--radius) var(--radius);
+  background: var(--brass-soft);
+}
+.prose aside.try::before {
+  content: "Try tonight";
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+.prose aside.try ol {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: t;
+}
+.prose aside.try ol > li {
+  counter-increment: t;
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  align-items: baseline;
+}
+.prose aside.try ol > li::before {
+  content: counter(t);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.5em;
+  line-height: 1;
+  color: var(--brass);
 }
 .prose aside.note {
   border-left: 3px solid var(--accent);

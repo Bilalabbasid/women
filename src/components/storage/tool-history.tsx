@@ -103,10 +103,10 @@ export function ToolHistory<T>({ tool, noun, current, canSave, normalize, summar
   return (
     <section
       aria-labelledby={`${uid}-heading`}
-      className="no-print space-y-4 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4 sm:p-5"
+      className="no-print panel gap-4"
     >
       <div className="space-y-1">
-        <h2 id={`${uid}-heading`} className="text-2xl">
+        <h2 id={`${uid}-heading`} className="panel-title">
           Your saved {noun}s{entries ? ` (${list.length})` : ''}
         </h2>
         <p className="text-sm text-[var(--color-ink-muted)]">

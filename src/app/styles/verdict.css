@@ -1,0 +1,206 @@
+/*
+ * "Does it work?" verdict hero, better-evidence cards, and the evidence checker.
+ * Tokens only (tokens.css), so light and dark both work.
+ */
+@layer components {
+  /* ------------------------------------------------------------- verdict hero */
+  .verdict-hero {
+    position: relative;
+  }
+  .verdict-remedy {
+    margin-top: 0.5rem;
+    max-width: 20ch;
+    font-size: var(--fs-h1);
+    line-height: 1.08;
+  }
+  .verdict-use {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.6em;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.2;
+    color: var(--ink-muted);
+  }
+  .verdict-card {
+    --g: var(--accent);
+    display: grid;
+    gap: 1.25rem 2.5rem;
+    margin-top: 1.5rem;
+    padding: 1.25rem 1.25rem 1.35rem;
+    border: 1px solid var(--rule);
+    border-top: 5px solid var(--g);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    background: var(--paper-raised);
+    box-shadow: var(--shadow);
+  }
+  @media (min-width: 768px) {
+    .verdict-card {
+      grid-template-columns: minmax(16rem, 22rem) 1fr;
+      align-items: start;
+      padding: 1.6rem 1.75rem 1.7rem;
+    }
+  }
+  .verdict-meter .meter {
+    width: 100%;
+  }
+  .verdict-sentence {
+    font-family: var(--font-serif);
+    font-size: clamp(1.3rem, 1.1rem + 0.7vw, 1.6rem);
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--ink);
+    text-wrap: pretty;
+  }
+  .verdict-meta {
+    margin-top: 0.9rem;
+    font-size: var(--fs-meta);
+    color: var(--ink-muted);
+  }
+  /* The body repeats the hero's "**Our verdict: …**" line as an all-bold first paragraph. */
+  .prose.verdict-body > p:first-child:has(> strong:only-child) {
+    display: none;
+  }
+
+  /* ------------------------------------------------------------- better evidence */
+  .better-evidence {
+    margin-block: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+  .better-grid {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    padding: 0;
+    list-style: none;
+  }
+  @media (min-width: 640px) {
+    .better-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .better-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    height: 100%;
+  }
+  .better-name {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.3;
+  }
+  .better-use {
+    margin-top: -0.4rem;
+    font-size: var(--fs-meta);
+    color: var(--ink-muted);
+  }
+
+  /* ------------------------------------------------------------- evidence checker */
+  .checker {
+    display: grid;
+    gap: 1.25rem;
+  }
+  .checker-filters {
+    display: grid;
+    gap: 1rem;
+  }
+  .checker-filter-label {
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+  .checker-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+  }
+  .checker-list {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .checker-card {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1.1rem 1.15rem 1.15rem;
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--g, var(--rule));
+    border-radius: var(--radius);
+    background: var(--paper-raised);
+  }
+  .checker-card.is-saved {
+    border-color: var(--accent);
+    border-left-color: var(--g, var(--accent));
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+  .checker-card-name {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+  .checker-card-cat {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .checker-source {
+    font-size: var(--fs-meta);
+    color: var(--ink-muted);
+  }
+  .checker-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+  }
+  .save-toggle[aria-pressed='true'] {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--on-accent);
+  }
+
+  /* Mobile shortlist tray: a persistent bar above the page bottom. */
+  .shortlist-tray {
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 45;
+    padding: 0.6rem 1rem calc(0.6rem + env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid var(--rule);
+    background: color-mix(in srgb, var(--paper-raised) 95%, transparent);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 -8px 24px -16px rgb(0 0 0 / 0.35);
+  }
+  @media (min-width: 768px) {
+    .shortlist-tray {
+      display: none;
+    }
+  }
+  .tray-count {
+    display: inline-grid;
+    place-items: center;
+    min-width: 1.75rem;
+    height: 1.75rem;
+    padding: 0 0.4rem;
+    border-radius: var(--radius-pill);
+    background: var(--on-accent);
+    color: var(--accent);
+    font-size: 0.95rem;
+    font-weight: 800;
+  }
+  .checker-spacer {
+    height: 4.5rem;
+  }
+  @media (min-width: 768px) {
+    .checker-spacer {
+      display: none;
+    }
+  }
+}

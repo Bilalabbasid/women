@@ -72,15 +72,8 @@ export default function OnboardingPage() {
           <span className="w-12" aria-hidden="true" />
         )}
 
-        <div
-          className="progress-dots"
-          role="progressbar"
-          aria-label="Getting started"
-          aria-valuemin={1}
-          aria-valuemax={3}
-          aria-valuenow={step}
-          aria-valuetext={`Step ${step} of 3`}
-        >
+        {/* Decorative: each step's visible "Step N of 3" line is the label. */}
+        <div className="progress-dots" aria-hidden="true">
           {STEPS.map((s) => (
             <span key={s} className={s === step ? 'is-current' : s < step ? 'is-done' : ''} />
           ))}
@@ -100,8 +93,8 @@ export default function OnboardingPage() {
               A private diary for your symptoms
             </h1>
             <p className="max-w-[30rem] text-[length:var(--fs-lead)] text-[var(--ink-muted)]">
-              Log how you feel in under a minute. Over a few weeks you’ll see patterns, and you can print a one-page
-              report to take to your doctor.
+              A quick daily note of how you feel, kept on this device, that turns into something useful for you and your
+              doctor.
             </p>
             <ul className="grid w-full max-w-[26rem] gap-2 text-left">
               {['Log today in under a minute', 'See your patterns over time', 'Print a report for your appointment'].map((t) => (

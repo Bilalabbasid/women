@@ -14,18 +14,16 @@ export default function ErrorBoundary({ error, reset }: { error: Error & { diges
   }, [error]);
 
   return (
-    <main id="main" className="mx-auto max-w-xl space-y-5 px-4 py-12">
-      <h1 className="text-3xl">Something went wrong loading this page</h1>
-      <p>Anything saved in your tracker is still on this device. Try again, or go back to the home page.</p>
-      <p className="flex flex-wrap gap-3">
-        <button
-          type="button"
-          onClick={() => reset()}
-          className="tap rounded-xl bg-[var(--color-accent)] px-5 font-semibold text-white"
-        >
+    <main id="main" className="wrap max-w-[38rem] space-y-6 py-14">
+      <div className="error-state p-5 sm:p-6">
+        <h1 className="font-serif text-[length:var(--fs-h2)] leading-tight text-[var(--ink)]">Something went wrong loading this page</h1>
+        <p>Anything saved in your tracker is still on this device. Try again, or go back to the home page.</p>
+      </div>
+      <p className="flex flex-wrap items-center gap-3">
+        <button type="button" onClick={() => reset()} className="btn btn-primary">
           Try again
         </button>
-        <Link href="/" className="tap px-2 font-semibold text-[var(--color-link)] underline">
+        <Link href="/" className="btn btn-quiet">
           Home
         </Link>
       </p>

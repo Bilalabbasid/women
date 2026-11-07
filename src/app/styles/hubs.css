@@ -1,0 +1,372 @@
+/*
+ * Hubs (symptoms and other nav hubs) and comparison components.
+ * Tokens only (tokens.css), so light and dark both work.
+ * Components: components/site/hub-hero.tsx, hub-symptoms.tsx, compare-cards.tsx.
+ */
+@layer components {
+  /* ------------------------------------------------------------- legacy green hero panel
+   * Still used by a few templates. In dark mode --accent turns light mint, which
+   * would put white text on mint; light-dark() keeps it a deep green both ways. */
+  .hero-panel {
+    background: var(--accent);
+    background: light-dark(var(--accent), var(--accent-soft));
+  }
+
+  /* ------------------------------------------------------------- hub hero */
+  .hub-hero {
+    display: grid;
+    gap: 1.5rem;
+    padding-block: 0.5rem 0.25rem;
+  }
+  @media (min-width: 900px) {
+    .hub-hero {
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+      gap: 3rem;
+    }
+  }
+  .hub-hero h1 {
+    margin-top: 0.4rem;
+    max-width: 20ch;
+    font-size: var(--fs-h1);
+    line-height: 1.08;
+  }
+  .hub-hero-lead {
+    margin-top: 1rem;
+    max-width: var(--measure);
+    font-size: var(--fs-lead);
+    line-height: 1.6;
+    color: var(--ink-muted);
+  }
+  .hub-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+    margin-top: 1.25rem;
+  }
+  .hub-hero-count {
+    display: grid;
+    justify-items: start;
+    gap: 0.1rem;
+    padding-left: 1.25rem;
+    border-left: 3px solid var(--accent);
+  }
+  .hub-hero-count strong {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--ink);
+  }
+  .hub-hero-count span {
+    font-size: var(--fs-meta);
+    color: var(--ink-muted);
+  }
+  @media (max-width: 899.98px) {
+    .hub-hero-count {
+      display: none;
+    }
+  }
+
+  /* ------------------------------------------------------------- guide cards */
+  .guide-grid {
+    display: grid;
+    gap: 0.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  @media (min-width: 640px) {
+    .guide-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 1024px) {
+    .guide-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .guide-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.45rem;
+    height: 100%;
+    min-height: var(--tap);
+    padding: 1rem 1.1rem 1.05rem;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--paper-raised);
+    color: var(--ink);
+    text-decoration: none;
+    transition:
+      border-color var(--dur-fast) var(--ease),
+      box-shadow var(--dur-fast) var(--ease);
+  }
+  .guide-card:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow);
+  }
+  .guide-card-title {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    font-weight: 700;
+    font-size: 1.0625rem;
+    line-height: 1.35;
+  }
+  .guide-card-title svg {
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+    color: var(--ink-muted);
+    transition: translate var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+  }
+  .guide-card:hover .guide-card-title svg {
+    translate: 3px 0;
+    color: var(--accent);
+  }
+  .guide-card-desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--ink-muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .guide-card-grade {
+    margin-top: auto;
+    padding-top: 0.25rem;
+  }
+
+  /* ------------------------------------------------------------- symptoms directory */
+  .symptom-dir-tools {
+    display: grid;
+    gap: 0.85rem;
+    padding: 1rem;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-lg);
+    background: var(--paper-sunk);
+  }
+  @media (min-width: 900px) {
+    .symptom-dir-tools {
+      position: sticky;
+      top: 0.75rem;
+      z-index: 5;
+      box-shadow: var(--shadow);
+    }
+  }
+  .symptom-dir-tools .chip-row {
+    gap: 0.4rem;
+  }
+  .hub-group {
+    display: grid;
+    gap: 0.9rem;
+    scroll-margin-top: 9rem;
+  }
+  .hub-group + .hub-group {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+  }
+  .hub-group-head {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+  }
+  .hub-group-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+  .hub-group-icon svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  .hub-group-title {
+    font-family: var(--font-serif);
+    font-size: var(--fs-h3);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .hub-group-count {
+    font-size: var(--fs-meta);
+    color: var(--ink-muted);
+  }
+  .guide-card mark {
+    background: color-mix(in srgb, var(--brass-rule) 30%, transparent);
+    color: inherit;
+    border-radius: 2px;
+    padding: 0 0.05em;
+  }
+
+  /* ------------------------------------------------------------- comparison: choose cards */
+  .choose-cards {
+    display: grid;
+    gap: 0.85rem;
+    margin-block: 1.5rem 2rem;
+  }
+  @media (min-width: 640px) {
+    .choose-cards {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .choose-card {
+    display: grid;
+    align-content: start;
+    gap: 0.6rem;
+    padding: 1.15rem 1.2rem 1.25rem;
+    border: 1px solid var(--rule);
+    border-top: 4px solid var(--accent);
+    border-radius: 0 0 var(--radius) var(--radius);
+    background: var(--paper-raised);
+  }
+  .choose-card:nth-child(2) {
+    border-top-color: var(--link);
+  }
+  .choose-card-kicker {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--ink-muted);
+  }
+  .choose-card-name {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.15;
+  }
+  .choose-card ul {
+    display: grid;
+    gap: 0.45rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .choose-card li {
+    position: relative;
+    padding-left: 1.6rem;
+    line-height: 1.5;
+  }
+  .choose-card li::before {
+    content: '';
+    position: absolute;
+    left: 0.15rem;
+    top: 0.35em;
+    width: 0.55rem;
+    height: 0.9rem;
+    border: solid var(--accent);
+    border-width: 0 2.5px 2.5px 0;
+    rotate: 40deg;
+  }
+  .choose-card:nth-child(2) li::before {
+    border-color: var(--link);
+  }
+
+  /* ------------------------------------------------------------- comparison: table → cards */
+  .compare-table-wrap {
+    margin-block: 1.5rem;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--paper-raised);
+    overflow-x: auto;
+  }
+  .compare-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .compare-table caption {
+    padding: 0.9rem 1rem 0.2rem;
+    text-align: left;
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .compare-table th,
+  .compare-table td {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--rule);
+  }
+  .compare-table thead th {
+    background: var(--paper-sunk);
+    font-size: 0.95rem;
+    font-weight: 700;
+    vertical-align: bottom;
+    border-bottom: 2px solid var(--rule-strong);
+  }
+  .compare-table tbody th {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--ink);
+    min-width: 9rem;
+  }
+  .compare-table tbody tr:last-child > * {
+    border-bottom: 0;
+  }
+  @media (max-width: 599.98px) {
+    .compare-table-wrap {
+      border: 0;
+      background: none;
+      overflow: visible;
+    }
+    .compare-table,
+    .compare-table tbody,
+    .compare-table tr,
+    .compare-table th,
+    .compare-table td {
+      display: block;
+      width: 100%;
+    }
+    .compare-table caption {
+      display: block;
+      padding: 0 0 0.6rem;
+    }
+    .compare-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+    }
+    .compare-table tbody tr {
+      padding: 0.35rem 1rem 0.5rem;
+      border: 1px solid var(--rule);
+      border-top: 3px solid var(--accent);
+      border-radius: 0 0 var(--radius) var(--radius);
+      background: var(--paper-raised);
+    }
+    .compare-table tbody tr + tr {
+      margin-top: 0.75rem;
+    }
+    .compare-table tbody th {
+      padding: 0.6rem 0 0.35rem;
+      font-size: 1.25rem;
+    }
+    .compare-table td {
+      padding: 0.55rem 0;
+    }
+    .compare-table td::before {
+      content: attr(data-label);
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--ink-muted);
+    }
+  }
+}

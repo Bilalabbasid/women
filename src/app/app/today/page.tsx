@@ -243,8 +243,8 @@ export default function DashboardPage() {
           title="How are you today?"
           hint={
             todayCheckin
-              ? `Saved for today: ${FEELING_WORD[todayCheckin.overallFeeling]}. Tap to change.`
-              : 'Tap one. It saves straight away.'
+              ? `Saved for today: ${FEELING_WORD[todayCheckin.overallFeeling]}. Tap to change it.`
+              : 'Tap how you feel to save it.'
           }
         >
           <LevelPicker
@@ -256,11 +256,11 @@ export default function DashboardPage() {
           {justSaved && (
             <p className="saved-note" role="status">
               <Icon.Check width={20} height={20} />
-              Saved on this device.
+              Saved for today. You can add details below.
             </p>
           )}
           <Link href="/app/check-in/" className="btn btn-primary btn-lg btn-block">
-            {todayCheckin ? 'Add symptoms, sleep and notes' : 'Log today'}
+            {todayCheckin ? 'Add symptoms, sleep and more' : 'Log today in full'}
             <Icon.Chevron width={20} height={20} />
           </Link>
           <p className="hint text-center">Symptoms, hot flashes, sleep and bleeding. Under a minute.</p>
@@ -271,7 +271,7 @@ export default function DashboardPage() {
           <section aria-labelledby="week-heading" className="grid gap-3">
             <SectionHead
               id="week-heading"
-              title="Your last 7 entries"
+              title="This week at a glance"
               action={
                 <Link href="/app/insights/" className="link text-base">
                   Insights
@@ -281,18 +281,18 @@ export default function DashboardPage() {
             <div className="stats">
               <div className="stat">
                 <span className="stat-value">{recentCheckins.length}</span>
-                <span className="stat-label">{recentCheckins.length === 1 ? 'day logged' : 'days logged'} in all</span>
+                <span className="stat-label">{recentCheckins.length === 1 ? 'day logged' : 'days logged'}</span>
               </div>
               {avgFlashes !== null && (
                 <div className="stat">
                   <span className="stat-value">{avgFlashes.toFixed(1)}</span>
-                  <span className="stat-label">hot flashes a day</span>
+                  <span className="stat-label">flashes / day</span>
                 </div>
               )}
               {avgSleep !== null && (
                 <div className="stat">
                   <span className="stat-value">{avgSleep.toFixed(1)}h</span>
-                  <span className="stat-label">sleep a night</span>
+                  <span className="stat-label">sleep / night</span>
                 </div>
               )}
             </div>
@@ -329,7 +329,7 @@ export default function DashboardPage() {
                 {schedule.due.map((t) => (
                   <li key={t.id} className="row">
                     <span className="row-icon" aria-hidden="true">
-                      <Icon.Treatments width={22} height={22} />
+                      {t.type === 'other' || t.type === 'lifestyle' ? <Icon.Routine width={22} height={22} /> : <Icon.Treatments width={22} height={22} />}
                     </span>
                     <div className="row-main">
                       <p className="row-title">{t.name}</p>

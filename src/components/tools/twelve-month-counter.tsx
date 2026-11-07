@@ -169,8 +169,8 @@ export function TwelveMonthCounter() {
           browser on this device, never sent anywhere.
         </p>
 
-        <div className="space-y-3 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
-          <h3 className="font-serif text-xl font-semibold">1. First day of your periods</h3>
+        <div className="panel gap-3">
+          <h3 className="panel-title">1. First day of your periods</h3>
           <p className="text-sm text-[var(--color-ink-muted)]">
             Add the date your most recent period started. If a period comes back after a gap, add the new date — any
             period restarts the 12-month count. Adding earlier dates too shows the gaps between your periods.
@@ -200,7 +200,7 @@ export function TwelveMonthCounter() {
           {periods === null ? (
             <p className="text-[var(--color-ink-muted)]">Loading your dates…</p>
           ) : list.length === 0 ? (
-            <p className="rounded-lg bg-[var(--color-paper)] p-3 text-[var(--color-ink-muted)]">No period dates logged yet.</p>
+            <p className="empty-state py-6">No period dates logged yet.</p>
           ) : (
             <ul className="space-y-2" aria-label="Your logged period start dates">
               {list.map((p, i) => {
@@ -288,14 +288,14 @@ export function TwelveMonthCounter() {
           )}
         </div>
 
-        <fieldset className="space-y-2 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
-          <legend className="px-1 font-serif text-xl font-semibold">2. Context and bleeding safety check</legend>
-          <label className="tap flex cursor-pointer items-center gap-3 py-1">
+        <fieldset className="panel min-w-0 gap-1">
+          <legend className="panel-title mb-1">2. Context and bleeding safety check</legend>
+          <label className="check">
             <input
               type="checkbox"
               checked={state.usesHormonesOrHysterectomy}
               onChange={(e) => update({ ...state, usesHormonesOrHysterectomy: e.target.checked })}
-              className="h-5 w-5 shrink-0 accent-[var(--color-accent)]"
+             
             />
             <span>
               I use hormonal contraception (such as a Mirena IUD, pill, implant, or injection), take hormone therapy
@@ -303,12 +303,12 @@ export function TwelveMonthCounter() {
             </span>
           </label>
 
-          <label className="tap flex cursor-pointer items-center gap-3 py-1">
+          <label className="check">
             <input
               type="checkbox"
               checked={state.hadBleedingAfter12Months}
               onChange={(e) => update({ ...state, hadBleedingAfter12Months: e.target.checked })}
-              className="h-5 w-5 shrink-0 accent-[var(--color-accent)]"
+             
             />
             <span>
               I have had vaginal bleeding or spotting (even once or a small amount) after going 12 months or more without
@@ -321,12 +321,12 @@ export function TwelveMonthCounter() {
             { id: 'palpitations', label: 'I have heart palpitations with chest pain, shortness of breath, or fainting' },
             { id: 'low_mood', label: 'I am having thoughts of harming myself' },
           ].map((item) => (
-            <label key={item.id} className="tap flex cursor-pointer items-center gap-3 py-1">
+            <label key={item.id} className="check">
               <input
                 type="checkbox"
                 checked={state.redFlags.includes(item.id)}
                 onChange={() => toggleRedFlag(item.id)}
-                className="h-5 w-5 shrink-0 accent-[var(--color-accent)]"
+               
               />
               <span>{item.label}</span>
             </label>
@@ -348,28 +348,28 @@ export function TwelveMonthCounter() {
         {!latest ? (
           <p>Add the date your most recent period started to see your 12-month timeline.</p>
         ) : !calc.valid ? (
-          <p className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
+          <p className="panel">
             Your most recent date is in the future. Edit it to the day your period actually started.
           </p>
         ) : (
-          <div className="space-y-4 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-5">
-            <div className="grid gap-4 sm:grid-cols-3">
-              <div className="rounded-lg bg-[var(--color-paper)] p-4">
+          <div className="panel panel-feature gap-4">
+            <div className="stats">
+              <div className="stat">
                 <p className="text-sm text-[var(--color-ink-muted)]">Days since last period</p>
-                <p className="mt-1 font-serif text-3xl font-bold">{calc.daysElapsed}</p>
+                <p className="stat-value mt-1">{calc.daysElapsed}</p>
               </div>
-              <div className="rounded-lg bg-[var(--color-paper)] p-4">
+              <div className="stat">
                 <p className="text-sm text-[var(--color-ink-muted)]">Days until 12-month mark</p>
-                <p className="mt-1 font-serif text-3xl font-bold">{calc.daysRemaining}</p>
+                <p className="stat-value mt-1">{calc.daysRemaining}</p>
               </div>
-              <div className="rounded-lg bg-[var(--color-paper)] p-4">
+              <div className="stat">
                 <p className="text-sm text-[var(--color-ink-muted)]">12-month date</p>
-                <p className="mt-1 font-serif text-xl font-bold">{calc.anniversaryFormatted}</p>
+                <p className="mt-1 font-serif text-[1.35rem] font-semibold leading-tight">{calc.anniversaryFormatted}</p>
               </div>
             </div>
 
             {state.usesHormonesOrHysterectomy && (
-              <div className="rounded-lg border-l-4 border-[var(--color-accent)] bg-[var(--color-paper)] p-4">
+              <div className="rounded-[var(--radius)] border-l-4 border-[var(--accent)] bg-[var(--accent-soft)] p-4">
                 <p className="font-semibold">
                   Why the 12-month rule cannot confirm menopause on its own when hormones or surgery affect bleeding
                 </p>

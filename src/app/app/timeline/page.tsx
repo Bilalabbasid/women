@@ -40,6 +40,8 @@ export default function TimelinePage() {
   const [treatmentEvents, setTreatmentEvents] = useState<LocalTreatmentEvent[]>([]);
   const [allCheckins, setAllCheckins] = useState<Array<LocalCheckin & { symptoms: LocalSymptomEntry[] }>>([]);
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  /** Day cards shown; "Show more days" adds 10 at a time. */
+  const [visibleDays, setVisibleDays] = useState(10);
   const [isLoading, setIsLoading] = useState(true);
   const [reloadTrigger, setReloadTrigger] = useState(0);
 
@@ -128,12 +130,8 @@ export default function TimelinePage() {
 
   const filters = [
     { label: '7 days', value: 7 },
-    { label: '14 days', value: 14 },
     { label: '30 days', value: 30 },
-    { label: '60 days', value: 60 },
     { label: '90 days', value: 90 },
-    { label: '6 months', value: 182 },
-    { label: '1 year', value: 365 },
     { label: 'All', value: 0 },
   ];
 
@@ -160,6 +158,12 @@ export default function TimelinePage() {
   const hasWeekly = checkins.some((c) => c.coversDays === 7);
   const symptomBars = symptomBarsFromEntries(checkins);
   const showCharts = checkins.length > 0 && viewMode !== 'treatments';
+  // The days the list shows for the current "Include" choice (newest first).
+  const listDates = allDates.filter((d) => {
+    if (viewMode === 'checkins') return checkins.some((c) => c.date === d);
+    if (viewMode === 'treatments') return treatmentEvents.some((te) => te.date === d);
+    return true;
+  });
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -251,13 +255,9 @@ export default function TimelinePage() {
 
             <SectionHead title="Day by day" />
             <ol className="grid gap-3" aria-label="Your entries, newest first">
-              {allDates.map((dateStr) => {
+              {listDates.slice(0, visibleDays).map((dateStr) => {
                 const entry = checkins.find((c) => c.date === dateStr);
                 const dayEvents = treatmentEvents.filter((te) => te.date === dateStr);
-
-                // Filter based on viewMode
-                if (viewMode === 'checkins' && !entry) return null;
-                if (viewMode === 'treatments' && dayEvents.length === 0) return null;
 
                 const isExpanded = entry ? expandedId === entry.id : false;
                 const dateObj = new Date(dateStr + 'T00:00:00');
@@ -295,14 +295,6 @@ export default function TimelinePage() {
                             >
                               Edit
                             </Link>
-                            <button
-                              type="button"
-                              onClick={(e) => handleDeleteEntry(entry.id, e)}
-                              className="icon-btn text-[var(--ink-muted)] hover:text-[var(--urgent)]"
-                              aria-label={`Delete check-in for ${formattedDate}`}
-                            >
-                              <TrashIcon />
-                            </button>
                           </div>
                         </div>
 
@@ -335,7 +327,8 @@ export default function TimelinePage() {
                           </blockquote>
                         )}
 
-                        {entry.symptoms && entry.symptoms.length > 0 && (
+                        {/* Details: symptoms (if any) and, out of the way, Delete. */}
+                        {(
                           <div>
                             <button
                               type="button"
@@ -345,8 +338,10 @@ export default function TimelinePage() {
                               onClick={() => setExpandedId(isExpanded ? null : entry.id)}
                             >
                               <span>
-                                {entry.symptoms.length} {entry.symptoms.length === 1 ? 'symptom' : 'symptoms'}
-                                {!isExpanded && (
+                                {entry.symptoms.length > 0
+                                  ? `${entry.symptoms.length} ${entry.symptoms.length === 1 ? 'symptom' : 'symptoms'}`
+                                  : 'Details'}
+                                {!isExpanded && entry.symptoms.length > 0 && (
                                   <span className="font-normal text-[var(--ink-muted)]">
                                     {' '}
                                     · {entry.symptoms.slice(0, 2).map((s) => s.name).join(', ')}
@@ -361,19 +356,31 @@ export default function TimelinePage() {
                               />
                             </button>
                             {isExpanded && (
-                              <ul id={symId} className="mt-1 grid gap-2 sm:grid-cols-2">
-                                {entry.symptoms.map((s) => (
-                                  <li
-                                    key={s.id}
-                                    className="flex items-center justify-between gap-3 rounded-[var(--radius)] bg-[var(--paper-sunk)] px-3 py-2"
-                                  >
-                                    <span className="min-w-0 font-bold">{s.name}</span>
-                                    <span className="shrink-0 text-[1rem] text-[var(--ink-muted)]">
-                                      {s.severity} of 5
-                                    </span>
-                                  </li>
-                                ))}
-                              </ul>
+                              <div id={symId} className="mt-1 grid gap-3">
+                                {entry.symptoms.length > 0 && (
+                                  <ul className="grid gap-2 sm:grid-cols-2">
+                                    {entry.symptoms.map((s) => (
+                                      <li
+                                        key={s.id}
+                                        className="flex items-center justify-between gap-3 rounded-[var(--radius)] bg-[var(--paper-sunk)] px-3 py-2"
+                                      >
+                                        <span className="min-w-0 font-bold">{s.name}</span>
+                                        <span className="shrink-0 text-[1rem] text-[var(--ink-muted)]">
+                                          {s.severity} of 5
+                                        </span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                )}
+                                <button
+                                  type="button"
+                                  onClick={(e) => handleDeleteEntry(entry.id, e)}
+                                  className="btn btn-quiet btn-sm justify-self-end text-[var(--urgent)]"
+                                  aria-label={`Delete check-in for ${formattedDate}`}
+                                >
+                                  Delete this day
+                                </button>
+                              </div>
                             )}
                           </div>
                         )}
@@ -432,6 +439,12 @@ export default function TimelinePage() {
                 );
               })}
             </ol>
+            {listDates.length > visibleDays && (
+              <button type="button" className="btn btn-secondary justify-self-center" onClick={() => setVisibleDays((n) => n + 10)}>
+                Show more days
+                <span className="font-normal text-[var(--ink-muted)]">({listDates.length - visibleDays} more)</span>
+              </button>
+            )}
           </>
         )}
       </AppPage>

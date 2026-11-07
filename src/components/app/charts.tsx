@@ -88,6 +88,9 @@ function changeWords(first: number | null, last: number | null, unit: string) {
     : ` Higher in your last week (${last}) than your first (${first}).`;
 }
 
+/** Axis labels: 14px minimum, muted ink (inline so it beats the shared 13px rule). */
+const AXIS_TEXT = { fontSize: 14, fill: 'var(--ink-muted)' } as const;
+
 /** Thin the date axis so labels (≈60px each) never collide. */
 function labelEvery(n: number, width: number) {
   const fit = Math.max(2, Math.floor((width - 40) / 64));
@@ -150,7 +153,7 @@ export function HotFlashChart({ points }: { points: DayPoint[] }) {
         {[0, top / 2, top].map((v) => (
           <g key={v}>
             <line className="grid-line" x1={padL} x2={W} y1={y(v)} y2={y(v)} />
-            <text x={padL - 8} y={y(v) + 4} textAnchor="end">
+            <text style={AXIS_TEXT} x={padL - 8} y={y(v) + 4} textAnchor="end">
               {v}
             </text>
           </g>
@@ -165,7 +168,7 @@ export function HotFlashChart({ points }: { points: DayPoint[] }) {
                 <rect className="bar" x={cx - bw / 2} y={y(p.value)} width={bw} height={Math.max(2, H - padB - y(p.value))} rx={Math.min(3, bw / 3)} />
               )}
               {i % every === 0 && (
-                <text x={cx} y={H - 6} textAnchor="middle">
+                <text style={AXIS_TEXT} x={cx} y={H - 6} textAnchor="middle">
                   {shortDate(p.date)}
                 </text>
               )}
@@ -228,7 +231,7 @@ export function SleepChart({ points }: { points: DayPoint[] }) {
         {[0, 4, 8].concat(hi > 10 ? [hi] : []).map((v) => (
           <g key={v}>
             <line className="grid-line" x1={padL} x2={W} y1={y(v)} y2={y(v)} />
-            <text x={padL - 8} y={y(v) + 4} textAnchor="end">
+            <text style={AXIS_TEXT} x={padL - 8} y={y(v) + 4} textAnchor="end">
               {v}h
             </text>
           </g>
@@ -241,7 +244,7 @@ export function SleepChart({ points }: { points: DayPoint[] }) {
         )}
         {points.map((p, i) =>
           i % every === 0 ? (
-            <text key={`l-${p.date}`} x={x(i)} y={H - 6} textAnchor="middle">
+            <text style={AXIS_TEXT} key={`l-${p.date}`} x={x(i)} y={H - 6} textAnchor="middle">
               {shortDate(p.date)}
             </text>
           ) : null,

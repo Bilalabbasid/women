@@ -507,25 +507,33 @@
     gap: 0.4rem;
     min-width: 0;
   }
+  /* A rising five-step scale (not a slider): each step a little taller, the
+     current one filled in the grade colour, the ones below it in a neutral tone. */
   .meter-track {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    align-items: end;
     gap: 4px;
     width: 100%;
     max-width: 13.5rem;
-    padding: 3px 3px 3px 0;
+    height: 1.1rem;
   }
   .meter-seg {
-    height: 0.5rem;
+    height: 0.45rem;
     border-radius: 2px;
     background: var(--meter-off);
+    border: 1px solid var(--meter-dim);
   }
+  .meter-seg:nth-child(2) { height: 0.6rem; }
+  .meter-seg:nth-child(3) { height: 0.75rem; }
+  .meter-seg:nth-child(4) { height: 0.9rem; }
+  .meter-seg:nth-child(5) { height: 1.05rem; }
   .meter-seg.is-below {
     background: var(--meter-dim);
   }
   .meter-seg.is-on {
     background: var(--g);
-    box-shadow: 0 0 0 2px var(--paper-raised), 0 0 0 3.5px var(--g);
+    border-color: var(--g);
   }
   .meter-label {
     display: inline-flex;
@@ -554,10 +562,17 @@
     max-width: 22rem;
     gap: 6px;
   }
+  .meter-lg .meter-track {
+    height: 1.9rem;
+  }
   .meter-lg .meter-seg {
-    height: 0.9rem;
     border-radius: 3px;
   }
+  .meter-lg .meter-seg:nth-child(1) { height: 0.8rem; }
+  .meter-lg .meter-seg:nth-child(2) { height: 1.05rem; }
+  .meter-lg .meter-seg:nth-child(3) { height: 1.3rem; }
+  .meter-lg .meter-seg:nth-child(4) { height: 1.55rem; }
+  .meter-lg .meter-seg:nth-child(5) { height: 1.85rem; }
   .meter-lg .meter-label {
     font-size: 1.25rem;
   }

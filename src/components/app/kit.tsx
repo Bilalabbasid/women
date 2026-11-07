@@ -72,7 +72,28 @@ export interface Level<V extends number = number> {
   desc?: string;
 }
 
-/** Single choice from 5 levels, drawn as a rising ladder (no faces). Radio-group semantics. */
+/** How full each level's circle is, from Rough (nearly empty) to Great (full). */
+const LEVEL_FILL = [0.1, 0.32, 0.55, 0.78, 1];
+
+/** A circle that fills like a water level: reads as "how full do I feel", with no faces. */
+function LevelFill({ fraction }: { fraction: number }) {
+  const id = useId();
+  const top = 2 + 22 * (1 - fraction); // circle spans y 2..24 (r = 11 at cy 13)
+  return (
+    <svg viewBox="0 0 26 26" width="28" height="28" aria-hidden="true" className="shrink-0">
+      <defs>
+        <clipPath id={`${id}-c`}>
+          <circle cx="13" cy="13" r="11" />
+        </clipPath>
+      </defs>
+      <circle cx="13" cy="13" r="11" fill="currentColor" fillOpacity="0.14" />
+      <rect x="0" y={top} width="26" height={26 - top} fill="currentColor" clipPath={`url(#${id}-c)`} />
+      <circle cx="13" cy="13" r="11" fill="none" stroke="currentColor" strokeWidth="1.8" />
+    </svg>
+  );
+}
+
+/** Single choice from 5 levels, each drawn as a filling circle (no faces). Radio-group semantics. */
 export function LevelPicker<V extends number>({
   levels,
   value,
@@ -107,11 +128,7 @@ export function LevelPicker<V extends number>({
             onClick={() => onChange(l.value)}
             onKeyDown={(e) => onKey(e, i)}
           >
-            <span className="level-glyph" aria-hidden="true">
-              {levels.map((_, j) => (
-                <span key={j} className={j <= i ? 'is-on' : ''} style={{ height: `${30 + j * 17}%` }} />
-              ))}
-            </span>
+            <LevelFill fraction={LEVEL_FILL[Math.round((i / Math.max(1, levels.length - 1)) * 4)]} />
             <span>{l.label}</span>
             {l.desc && <span className="level-desc">{l.desc}</span>}
           </button>
@@ -288,6 +305,13 @@ export const Icon = {
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...p}>
       <rect x="3" y="8.5" width="18" height="7" rx="3.5" transform="rotate(-35 12 12)" />
       <path d="M9.6 8.6l4.6 6.6" />
+    </svg>
+  ),
+  /** Neutral icon for routines, devices and therapies (not medicines). */
+  Routine: (p: React.SVGProps<SVGSVGElement>) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...p}>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M12 7.5V12l3 2" />
     </svg>
   ),
   Insights: (p: React.SVGProps<SVGSVGElement>) => (

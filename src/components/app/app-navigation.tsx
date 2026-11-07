@@ -21,8 +21,9 @@ export function AppNavigation() {
   // Normalise so comparisons work whether or not the router reports a trailing slash.
   const pathname = rawPath.endsWith('/') ? rawPath : `${rawPath}/`;
 
-  // Hide on public landing and onboarding screens
-  if (pathname === '/' || pathname === '/app/onboarding/') {
+  // Hidden on onboarding, and on the focused entry screens (check-in, catch-up),
+  // which have a back button and their own sticky Save bar.
+  if (pathname === '/' || pathname === '/app/onboarding/' || pathname === '/app/check-in/' || pathname === '/app/catch-up/') {
     return null;
   }
 

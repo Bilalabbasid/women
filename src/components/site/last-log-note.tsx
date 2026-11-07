@@ -6,6 +6,7 @@ import { APP_ROUTES } from '@/lib/routes';
 import { DB_NAME } from '@/lib/db/name';
 import { localDateString } from '@/lib/utils/local-date';
 import { daysBetween } from '@/lib/storage/periods';
+import '@/app/styles/misc.css';
 
 /**
  * Reads the date of her most recent check-in straight from IndexedDB, without
@@ -71,9 +72,10 @@ export function LastLogNote() {
     days === 0 ? 'You logged today.' : `Your last log was ${days === 1 ? 'yesterday' : `${days} days ago`}.`;
 
   return (
-    <p role="status" className="inline-flex flex-wrap items-center gap-x-2 rounded-xl bg-white/10 px-4 py-2 text-sm text-white">
+    <p role="status" className="last-log">
+      <span className="last-log-dot" aria-hidden="true" />
       <span>{text}</span>
-      <Link href={days === 0 ? APP_ROUTES.today : days > 1 ? APP_ROUTES.catchUp : APP_ROUTES.checkIn} className="font-semibold underline underline-offset-4 focus-visible:outline-white">
+      <Link href={days === 0 ? APP_ROUTES.today : days > 1 ? APP_ROUTES.catchUp : APP_ROUTES.checkIn}>
         {days === 0 ? 'Open your tracker' : days > 1 ? 'Catch up' : 'Log today'}
       </Link>
     </p>

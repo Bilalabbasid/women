@@ -446,7 +446,8 @@ export default function CheckinPage() {
         <UrgentGuidance triggers={urgentTriggers} />
 
         {/* Save: sticky, so it stays in reach above the bottom navigation on phones */}
-        <div className="save-bar no-print">
+        {/* No tab bar on this screen, so the Save bar sits on the bottom edge (safe-area aware). */}
+        <div className="save-bar no-print bottom-0 pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))]">
           {savedSuccess ? (
             <p className="saved-note" role="status">
               <Icon.Check width={22} height={22} />

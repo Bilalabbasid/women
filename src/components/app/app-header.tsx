@@ -49,12 +49,13 @@ export function AppHeader({
 
         <div className="min-w-0 flex-1">
           <h1 className="app-title truncate">{title}</h1>
-          {subtitle && <p className="app-subtitle truncate">{subtitle}</p>}
+          {subtitle && <p className="app-subtitle line-clamp-2">{subtitle}</p>}
         </div>
 
         {showPrivacyBadge && (
           <Link href="/app/privacy/" className="device-chip" aria-label="Your entries stay on this device. How privacy works">
             <Icon.Lock width={16} height={16} />
+            <span className="min-[400px]:hidden">On device</span>
             <span className="hidden min-[400px]:inline">On this device</span>
           </Link>
         )}

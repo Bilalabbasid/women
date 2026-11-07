@@ -103,87 +103,252 @@ export function IlloEmpty(p: IlloProps) {
   );
 }
 
+type Stage = 'reproductive' | 'perimenopause' | 'menopause' | 'postmenopause';
+
+const TIMELINE_DESC =
+  'Four stages in order: reproductive years; perimenopause, which often starts in your 40s and lasts around 4 to 8 years, with changing periods and symptoms; menopause, one point in time 12 months after your last period, on average around age 51; then postmenopause, the rest of life after that.';
+
+const MARKER_LABEL: Record<Stage, string> = {
+  reproductive: 'before the transition',
+  perimenopause: 'in perimenopause',
+  menopause: 'around menopause',
+  postmenopause: 'in postmenopause',
+};
+
 /**
  * The transition timeline, as an accessible diagram. `marker` places a "you
- * are around here" pin (quiz result) on one stage.
+ * are around here" pin (quiz result) on one stage. Wide screens get a
+ * left-to-right line; phones (< 640px) a top-to-bottom one, so its text stays
+ * at reading size instead of shrinking to fit.
  */
-export function TransitionTimeline({
-  marker,
-  className,
-}: {
-  marker?: 'reproductive' | 'perimenopause' | 'menopause' | 'postmenopause';
-  className?: string;
-}) {
+export function TransitionTimeline({ marker, className }: { marker?: Stage; className?: string }) {
   const uid = useId();
-  const xs = { reproductive: 70, perimenopause: 250, menopause: 420, postmenopause: 560 } as const;
-  const markerLabel = marker
-    ? { reproductive: 'before the transition', perimenopause: 'in perimenopause', menopause: 'around menopause', postmenopause: 'in postmenopause' }[marker]
-    : null;
+  const markerLabel = marker ? MARKER_LABEL[marker] : null;
+  const desc = `${TIMELINE_DESC}${markerLabel ? ` You are marked as ${markerLabel}.` : ''}`;
   return (
     <figure className={className}>
+      <TimelineVertical uid={`${uid}v`} marker={marker} desc={desc} />
+      <TimelineHorizontal uid={`${uid}h`} marker={marker} desc={desc} />
+    </figure>
+  );
+}
+
+function TimelineVertical({ uid, marker, desc }: { uid: string; marker?: Stage; desc: string }) {
+  // Stage y positions on the vertical line, and where the marker label sits.
+  const ys: Record<Stage, number> = { reproductive: 40, perimenopause: 160, menopause: 272, postmenopause: 350 };
+  const markerTextY: Record<Stage, number> = { reproductive: 74, perimenopause: 216, menopause: 322, postmenopause: 386 };
+  return (
+    <svg
+      viewBox="0 0 340 404"
+      className="illo w-full max-w-[24rem] sm:hidden"
+      role="img"
+      aria-labelledby={`${uid}-t ${uid}-d`}
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+    >
+      <title id={`${uid}-t`}>The menopause transition</title>
+      <desc id={`${uid}-d`}>{desc}</desc>
+      {/* perimenopause band */}
+      <rect x="24" y="92" width="32" height="140" rx="16" className="i-fill" stroke="none" />
+      <path d="M40 18V388" strokeWidth="3" />
+      <path d="M32 380l8 10 8-10" strokeWidth="3" strokeLinejoin="round" />
+      <circle cx="40" cy="40" r="6" fill="currentColor" stroke="none" />
+      <circle cx="40" cy="350" r="6" fill="currentColor" stroke="none" />
+      {/* menopause point */}
+      <circle cx="40" cy="272" r="11" strokeWidth="3" style={{ fill: 'var(--paper-raised)' }} />
+      <circle cx="40" cy="272" r="4.5" stroke="none" style={{ fill: 'currentColor' }} />
+      <g fontFamily="var(--font-sans)" stroke="none" style={{ fill: 'var(--ink)' }}>
+        <text x="66" y="47" fontSize="19" fontWeight="700">Reproductive years</text>
+        <text x="66" y="140" fontSize="19" fontWeight="700">Perimenopause</text>
+        <text x="66" y="165" fontSize="17" style={{ fill: 'var(--ink-muted)' }}>often starts in your 40s</text>
+        <text x="66" y="188" fontSize="17" style={{ fill: 'var(--ink-muted)' }}>lasts about 4–8 years</text>
+        <text x="66" y="268" fontSize="19" fontWeight="700">Menopause</text>
+        <text x="66" y="293" fontSize="17" style={{ fill: 'var(--ink-muted)' }}>12 months after last period</text>
+        <text x="66" y="357" fontSize="19" fontWeight="700">Postmenopause</text>
+      </g>
+      {marker && (
+        <g>
+          <circle cx="40" cy={ys[marker]} r="15" strokeWidth="3" style={{ stroke: 'var(--brass-rule)', fill: 'var(--brass-soft)', fillOpacity: 0.6 }} />
+          <text x="66" y={markerTextY[marker]} fontFamily="var(--font-serif)" fontStyle="italic" fontSize="19" stroke="none" style={{ fill: 'var(--brass)' }}>
+            ← you are around here
+          </text>
+        </g>
+      )}
+    </svg>
+  );
+}
+
+function TimelineHorizontal({ uid, marker, desc }: { uid: string; marker?: Stage; desc: string }) {
+  // Stage centres along the line; every title sits above it, notes below, and
+  // the marker's label underneath everything so nothing overlaps.
+  const xs: Record<Stage, number> = { reproductive: 92, perimenopause: 280, menopause: 445, postmenopause: 565 };
+  return (
+    <svg
+      viewBox="0 0 640 192"
+      className="illo hidden w-full sm:block"
+      role="img"
+      aria-labelledby={`${uid}-t ${uid}-d`}
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+    >
+      <title id={`${uid}-t`}>The menopause transition</title>
+      <desc id={`${uid}-d`}>{desc}</desc>
+      {/* perimenopause band */}
+      <rect x="150" y="58" width="262" height="40" rx="20" className="i-fill" stroke="none" />
+      <path d="M30 78H610" strokeWidth="3" />
+      <path d="M600 70l10 8-10 8" strokeWidth="3" strokeLinejoin="round" />
+      <circle cx={xs.reproductive} cy="78" r="5.5" fill="currentColor" stroke="none" />
+      <circle cx={xs.postmenopause} cy="78" r="5.5" fill="currentColor" stroke="none" />
+      {/* menopause point */}
+      <circle cx={xs.menopause} cy="78" r="11" strokeWidth="3" style={{ fill: 'var(--paper-raised)' }} />
+      <circle cx={xs.menopause} cy="78" r="4.5" stroke="none" style={{ fill: 'currentColor' }} />
+      <g fontFamily="var(--font-sans)" stroke="none" style={{ fill: 'var(--ink)' }}>
+        <g fontSize="16" fontWeight="700">
+          <text x={xs.reproductive} y="40" textAnchor="middle">Reproductive years</text>
+          <text x={xs.perimenopause} y="40" textAnchor="middle">Perimenopause</text>
+          <text x={xs.menopause} y="40" textAnchor="middle">Menopause</text>
+          <text x={xs.postmenopause} y="40" textAnchor="middle">Postmenopause</text>
+        </g>
+        <g fontSize="15" textAnchor="middle" style={{ fill: 'var(--ink-muted)' }}>
+          <text x={xs.perimenopause} y="126">often starts in your 40s</text>
+          <text x={xs.perimenopause} y="146">lasts about 4–8 years</text>
+          <text x={xs.menopause} y="126">12 months after</text>
+          <text x={xs.menopause} y="146">your last period</text>
+        </g>
+      </g>
+      {marker && (
+        <g transform={`translate(${xs[marker]} 78)`}>
+          <path d="M0-14 0-26" strokeWidth="2.5" style={{ stroke: 'var(--brass-rule)' }} />
+          <circle r="10" strokeWidth="3" style={{ stroke: 'var(--brass-rule)', fill: 'var(--brass-soft)' }} />
+          <text y="100" textAnchor="middle" fontFamily="var(--font-serif)" fontStyle="italic" fontSize="18" stroke="none" style={{ fill: 'var(--brass)' }}>
+            ↑ you are around here
+          </text>
+        </g>
+      )}
+    </svg>
+  );
+}
+
+/* ------------------------------------------------------------- hot flash diagram */
+
+const HOT_FLASH_STEPS = [
+  {
+    t: 'Estrogen dips',
+    d: 'Changing hormone levels unsettle the part of the brain that keeps your temperature steady.',
+    tone: 'var(--accent)',
+  },
+  {
+    t: 'The thermostat narrows',
+    d: 'Its “comfortable” range shrinks, so a tiny rise in body heat reads as too hot.',
+    tone: 'var(--accent)',
+  },
+  {
+    t: 'Heat release',
+    d: 'Blood vessels in the skin widen, so you flush and sweat, and your heart beats faster.',
+    tone: 'var(--brass-rule)',
+  },
+  {
+    t: 'Chill after',
+    d: 'Losing that heat can leave you cold and clammy, which often wakes you at night.',
+    tone: 'var(--link)',
+  },
+];
+
+/**
+ * How a hot flash happens: four stages drawn as a clockwise loop (numbered
+ * nodes, a thermometer in the middle) with a numbered legend beside it on wide
+ * screens and below it on phones. The SVG carries the full sequence as its
+ * title and description; the legend is the visible text at reading size.
+ */
+export function HotFlashDiagram({ className }: { className?: string }) {
+  const uid = useId();
+  // Node centres on a circle (r=82 around 120,120): top, right, bottom, left.
+  const nodes = [
+    [120, 38],
+    [202, 120],
+    [120, 202],
+    [38, 120],
+  ] as const;
+  // Clockwise arcs between nodes, leaving room around each node.
+  const arcs = [
+    'M142.6 41.2A82 82 0 0 1 198.8 97.4',
+    'M198.8 142.6A82 82 0 0 1 142.6 198.8',
+    'M97.4 198.8A82 82 0 0 1 41.2 142.6',
+    'M41.2 97.4A82 82 0 0 1 97.4 41.2',
+  ];
+  return (
+    <figure className={`grid items-center gap-6 sm:grid-cols-[minmax(0,15rem)_1fr] ${className ?? ''}`}>
       <svg
-        viewBox="0 0 640 170"
-        className="illo w-full"
+        viewBox="0 0 240 240"
+        className="illo mx-auto w-full max-w-[15rem]"
         role="img"
         aria-labelledby={`${uid}-t ${uid}-d`}
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
+        strokeLinejoin="round"
       >
-        <title id={`${uid}-t`}>The menopause transition</title>
+        <title id={`${uid}-t`}>How a hot flash happens</title>
         <desc id={`${uid}-d`}>
-          Four stages in order: reproductive years; perimenopause, which often starts in your 40s and lasts around 4 to 8
-          years, with changing periods and symptoms; menopause, one point in time 12 months after your last period,
-          on average around age 51; then postmenopause, the rest of life after that.
-          {markerLabel ? ` You are marked as ${markerLabel}.` : ''}
+          A loop of four stages. One: estrogen dips, unsettling the brain’s temperature centre. Two: the brain’s
+          thermostat narrows its comfortable range, so a small rise in body heat reads as too hot. Three: heat
+          release: blood vessels in the skin widen, you flush and sweat, and your heart beats faster. Four: a chill
+          after, as the lost heat leaves you cold. Then the cycle can start again.
         </desc>
-        {/* perimenopause band */}
-        <rect x="150" y="54" width="250" height="40" rx="20" className="i-fill" stroke="none" />
-        <path d="M30 74H610" strokeWidth="3" />
-        <path d="M600 66l10 8-10 8" strokeWidth="3" strokeLinejoin="round" />
-        {/* menopause point */}
-        <circle cx="420" cy="74" r="11" strokeWidth="3" style={{ fill: 'var(--paper-raised)' }} />
-        <circle cx="420" cy="74" r="4.5" stroke="none" style={{ fill: 'currentColor' }} />
-        <g fontFamily="var(--font-sans)" fontSize="15" stroke="none" style={{ fill: 'var(--ink)' }}>
-          <text x="70" y="40" textAnchor="middle" fontWeight="700">Reproductive years</text>
-          <text x="275" y="40" textAnchor="middle" fontWeight="700">Perimenopause</text>
-          <text x="275" y="122" textAnchor="middle" style={{ fill: 'var(--ink-muted)' }}>often 40s · lasts about 4–8 years</text>
-          <text x="420" y="122" textAnchor="middle" fontWeight="700">Menopause</text>
-          <text x="420" y="142" textAnchor="middle" style={{ fill: 'var(--ink-muted)' }}>12 months after last period</text>
-          <text x="560" y="40" textAnchor="middle" fontWeight="700">Postmenopause</text>
-        </g>
-        {marker && (
-          <g transform={`translate(${xs[marker]} 74)`}>
-            <path d="M0-12 0-28" strokeWidth="2.5" style={{ stroke: 'var(--brass-rule)' }} />
-            <circle r="9" strokeWidth="3" style={{ stroke: 'var(--brass-rule)', fill: 'var(--brass-soft)' }} />
-            <text y="58" textAnchor="middle" fontFamily="var(--font-serif)" fontStyle="italic" fontSize="17" stroke="none" style={{ fill: 'var(--brass)' }}>
-              you are around here
+        <defs>
+          <marker id={`${uid}-arrow`} viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M1 1.5L8 5L1 8.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+          </marker>
+        </defs>
+        <circle cx="120" cy="120" r="82" className="i-fill" stroke="none" opacity=".55" />
+        {arcs.map((d) => (
+          <path key={d} d={d} strokeWidth="2.5" markerEnd={`url(#${uid}-arrow)`} />
+        ))}
+        {/* thermometer in the middle */}
+        <rect x="111" y="84" width="18" height="50" rx="9" strokeWidth="2.5" style={{ fill: 'var(--paper-raised)' }} />
+        <circle cx="120" cy="142" r="13" strokeWidth="2.5" style={{ fill: 'var(--brass-soft)', stroke: 'var(--brass-rule)' }} />
+        <path d="M120 130V100" strokeWidth="5" style={{ stroke: 'var(--brass-rule)' }} />
+        <path d="M133 96h6M133 106h6M133 116h6" strokeWidth="2" opacity=".55" />
+        {nodes.map(([cx, cy], i) => (
+          <g key={i}>
+            <circle cx={cx} cy={cy} r="17" strokeWidth="3" style={{ fill: 'var(--paper-raised)', stroke: HOT_FLASH_STEPS[i].tone }} />
+            <text
+              x={cx}
+              y={cy + 6}
+              textAnchor="middle"
+              fontFamily="var(--font-serif)"
+              fontStyle="italic"
+              fontWeight="600"
+              fontSize="18"
+              stroke="none"
+              style={{ fill: 'var(--ink)' }}
+            >
+              {i + 1}
             </text>
           </g>
-        )}
+        ))}
       </svg>
-    </figure>
-  );
-}
-
-/** How a hot flash happens: four steps, drawn as a loop. */
-export function HotFlashDiagram({ className }: { className?: string }) {
-  const steps = [
-    { t: 'Estrogen dips', d: 'Changing hormone levels unsettle the brain’s temperature centre.' },
-    { t: 'Thermostat narrows', d: 'Its “comfortable” range shrinks, so a tiny rise in body heat reads as too hot.' },
-    { t: 'Heat dump', d: 'Blood vessels in the skin widen and you flush and sweat; the heart may race.' },
-    { t: 'Chill after', d: 'Losing that heat can leave you cold and clammy, often waking you at night.' },
-  ];
-  return (
-    <figure className={className}>
-      <ol className="step-list" aria-label="How a hot flash happens">
-        {steps.map((s) => (
-          <li key={s.t}>
-            <span className="step-title">{s.t}</span>
-            <span className="block text-[var(--ink-muted)]">{s.d}</span>
+      <ol className="grid gap-4" aria-label="The four stages of a hot flash">
+        {HOT_FLASH_STEPS.map((s, i) => (
+          <li key={s.t} className="flex gap-3">
+            <span
+              aria-hidden="true"
+              className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full border-[3px] bg-[var(--paper-raised)] font-serif text-[1.05rem] font-semibold italic"
+              style={{ borderColor: s.tone }}
+            >
+              {i + 1}
+            </span>
+            <span>
+              <span className="block font-bold leading-snug">{s.t}</span>
+              <span className="block text-[1.0625rem] leading-snug text-[var(--ink-muted)]">{s.d}</span>
+            </span>
           </li>
         ))}
       </ol>
     </figure>
   );
 }
+
+export * from './illustrations-sections';

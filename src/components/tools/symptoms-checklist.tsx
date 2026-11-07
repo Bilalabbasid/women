@@ -113,25 +113,19 @@ export function SymptomsChecklist({ liveUrls, trackerLive }: { liveUrls: string[
           never sent anywhere.
         </p>
         {SYMPTOM_CATALOG.map((group) => (
-          <fieldset key={group.id} className="space-y-1 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
-            <legend className="px-1 font-serif text-xl font-semibold">{group.label}</legend>
-            <ul className="space-y-1">
+          <fieldset key={group.id} className="panel min-w-0 gap-1">
+            <legend className="panel-title mb-1">{group.label}</legend>
+            <ul className="divide-y divide-[var(--rule)]">
               {group.items.map((item) => {
                 const inputId = `chk-${item.id}`;
                 return (
-                  <li key={item.id} className="flex flex-wrap items-center gap-x-3">
-                    <input
-                      id={inputId}
-                      type="checkbox"
-                      checked={ticked.has(item.id)}
-                      onChange={() => toggle(item.id)}
-                      className="h-6 w-6 shrink-0 accent-[var(--color-accent)]"
-                    />
-                    <label htmlFor={inputId} className="tap flex-1 cursor-pointer py-1">
+                  <li key={item.id} className="check items-center gap-x-3 py-1">
+                    <input id={inputId} type="checkbox" checked={ticked.has(item.id)} onChange={() => toggle(item.id)} />
+                    <label htmlFor={inputId} className="flex min-h-11 flex-1 cursor-pointer items-center py-1">
                       {item.label}
                     </label>
                     {live.has(item.url) && (
-                      <Link href={item.url} className="tap text-[var(--color-link)] underline">
+                      <Link href={item.url} className="tap shrink-0 text-[1rem] font-bold text-[var(--link)] underline underline-offset-2">
                         Read more<span className="sr-only"> about {item.label.toLowerCase()}</span>
                       </Link>
                     )}
@@ -143,8 +137,8 @@ export function SymptomsChecklist({ liveUrls, trackerLive }: { liveUrls: string[
         ))}
       </form>
 
-      <section aria-labelledby="checklist-summary" aria-live="polite" className="space-y-4">
-        <h2 id="checklist-summary" className="text-2xl">
+      <section aria-labelledby="checklist-summary" aria-live="polite" className="panel panel-feature gap-4">
+        <h2 id="checklist-summary" className="panel-title">
           Your list
         </h2>
 
@@ -152,15 +146,17 @@ export function SymptomsChecklist({ liveUrls, trackerLive }: { liveUrls: string[
         <UrgentGuidance triggers={urgent} />
 
         {tickedItems.length === 0 ? (
-          <p>Nothing ticked yet.</p>
+          <p className="text-[var(--ink-muted)]">Nothing ticked yet. Tick anything you’ve noticed above and it appears here.</p>
         ) : (
           <>
-            <ul className="list-disc space-y-1 pl-6">
+            <ul className="chip-row" aria-label="Symptoms you ticked">
               {tickedItems.map((i) => (
-                <li key={i.id}>{i.label}</li>
+                <li key={i.id} className="chip cursor-default hover:border-[var(--rule-strong)]">
+                  {i.label}
+                </li>
               ))}
             </ul>
-            <p className="rounded-xl bg-[var(--color-accent-soft)] p-4">
+            <p className="rounded-[var(--radius)] border-l-4 border-[var(--accent)] bg-[var(--accent-soft)] p-4">
               This list can&apos;t tell you whether you are in perimenopause or menopause. Many of these symptoms have
               other possible causes, so they are worth talking through with a clinician who can look at the whole
               picture. Take this list with you.

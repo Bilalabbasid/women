@@ -1,6 +1,10 @@
+import '@/app/styles/hubs.css';
+
 /**
- * The deep-green hero panel shared by the homepage, hubs, tools and search:
- * soft light wash plus a faint ring motif. Pure CSS/SVG, ships no JavaScript.
+ * The deep-green hero panel (tools, search). Hubs and articles now use calm
+ * editorial headers instead. Soft light wash plus a faint ring motif; pure
+ * CSS/SVG, ships no JavaScript. `.hero-panel` keeps it deep green in dark mode
+ * too (the accent token turns light mint there).
  */
 export function HeroPanel({
   children,
@@ -14,7 +18,7 @@ export function HeroPanel({
   return (
     <section
       aria-labelledby={labelledBy}
-      className={`relative overflow-hidden rounded-3xl bg-[var(--color-accent)] px-5 py-8 text-white sm:px-9 sm:py-11 ${className}`}
+      className={`hero-panel relative overflow-hidden rounded-3xl px-5 py-8 text-white sm:px-9 sm:py-11 ${className}`}
     >
       <div
         aria-hidden="true"

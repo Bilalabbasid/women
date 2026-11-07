@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-06T21:31:21.689Z",
+  "generated_at": "2026-11-07T19:10:47.395Z",
   "total_pages": 160,
   "nodes": {
     "/about/how-we-make-money/": {
       "url": "/about/how-we-make-money/",
-      "title": "How we make money",
+      "title": "How MenoVerdict is funded",
       "status": "published",
       "primary_keyword": "how we make money",
       "intent": "navigational",
@@ -20,60 +20,56 @@
       "tool_tags": [],
       "required_links": [],
       "related": [
-        "/privacy/",
-        "/evidence/how-we-grade/",
-        "/medical-disclaimer/"
+        "/about/",
+        "/evidence/editorial-policy/",
+        "/evidence/how-we-grade/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/about/how-we-make-money/",
       "redirect_from": [],
       "outgoing_links": [
         {
+          "url": "/evidence/how-we-grade/",
+          "anchor": "how we grade the evidence",
+          "contextual": true
+        },
+        {
           "url": "/evidence/editorial-policy/",
           "anchor": "editorial policy",
           "contextual": true
         },
         {
-          "url": "/evidence/how-we-grade/",
-          "anchor": "how we grade clinical evidence",
-          "contextual": true
-        },
-        {
-          "url": "/tools/",
-          "anchor": "free on-device menopause tools",
+          "url": "/privacy/",
+          "anchor": "privacy policy",
           "contextual": true
         }
       ],
       "incoming_links": [
         {
           "url": "/about/",
-          "anchor": "how we make money"
-        },
-        {
-          "url": "/contact/",
-          "anchor": "how we make money"
+          "anchor": "how MenoVerdict is funded"
         },
         {
           "url": "/evidence/editorial-policy/",
-          "anchor": "affiliate disclosure"
+          "anchor": "how MenoVerdict is funded"
         },
         {
           "url": "/evidence/how-we-grade/",
-          "anchor": "commercial independence rules"
+          "anchor": "how MenoVerdict is funded"
         },
         {
           "url": "/evidence/",
-          "anchor": "How we make money"
+          "anchor": "How MenoVerdict is funded"
         },
         {
           "url": "/evidence/medical-review/",
-          "anchor": "commercial disclosure"
+          "anchor": "how MenoVerdict is funded"
         },
         {
           "url": "/medical-disclaimer/",
-          "anchor": "how we make money"
+          "anchor": "how MenoVerdict is funded"
         },
         {
           "url": "/",
@@ -104,30 +100,40 @@
         "/evidence/how-we-grade/",
         "/privacy/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/about/",
       "redirect_from": [],
       "outgoing_links": [
         {
-          "url": "/about/how-we-make-money/",
-          "anchor": "how we make money",
-          "contextual": true
-        },
-        {
           "url": "/evidence/how-we-grade/",
-          "anchor": "methodology for grading evidence",
-          "contextual": true
-        },
-        {
-          "url": "/evidence/medical-review/",
-          "anchor": "medical review process",
+          "anchor": "evidence grading method",
           "contextual": true
         },
         {
           "url": "/privacy/",
           "anchor": "privacy policy",
+          "contextual": true
+        },
+        {
+          "url": "/about/how-we-make-money/",
+          "anchor": "how MenoVerdict is funded",
+          "contextual": true
+        },
+        {
+          "url": "/evidence/medical-review/",
+          "anchor": "review process",
+          "contextual": true
+        },
+        {
+          "url": "/contact/",
+          "anchor": "contact us",
+          "contextual": true
+        },
+        {
+          "url": "/evidence/updates/",
+          "anchor": "corrections log",
           "contextual": true
         }
       ],
@@ -370,7 +376,7 @@
         },
         {
           "url": "/care/sleepwear-for-night-sweats/",
-          "anchor": "Best sleepwear for night sweats",
+          "anchor": "How to choose sleepwear for night sweats",
           "contextual": true
         },
         {
@@ -425,7 +431,7 @@
         },
         {
           "url": "/care/sleepwear-for-night-sweats/",
-          "anchor": "Best Sleepwear for Night Sweats: How to Choose",
+          "anchor": "Sleepwear for Night Sweats: How to Choose",
           "contextual": true
         },
         {
@@ -598,7 +604,7 @@
         "/does-it-work/exercise/",
         "/tools/symptom-tracker/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/care/menopause-books/",
@@ -690,7 +696,7 @@
         "/care/",
         "/tools/symptoms-checklist/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/care/moisturizers-and-lubricants/",
@@ -796,7 +802,7 @@
         "/tools/symptoms-checklist/",
         "/symptoms/vaginal-dryness/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/care/pelvic-floor-exercises/",
@@ -845,7 +851,7 @@
     },
     "/care/sleepwear-for-night-sweats/": {
       "url": "/care/sleepwear-for-night-sweats/",
-      "title": "Best Sleepwear for Night Sweats: How to Choose",
+      "title": "Sleepwear for Night Sweats: How to Choose",
       "status": "published",
       "primary_keyword": "sleepwear for night sweats",
       "intent": "commercial",
@@ -872,7 +878,7 @@
         "/care/",
         "/tools/symptom-tracker/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/care/sleepwear-for-night-sweats/",
@@ -907,15 +913,19 @@
       "incoming_links": [
         {
           "url": "/care/",
-          "anchor": "Best sleepwear for night sweats"
+          "anchor": "How to choose sleepwear for night sweats"
         },
         {
           "url": "/does-it-work/cooling-products/",
-          "anchor": "best sleepwear for night sweats"
+          "anchor": "how to choose sleepwear for night sweats"
         },
         {
           "url": "/does-it-work/evening-primrose-oil/",
           "anchor": "sleepwear for night sweats"
+        },
+        {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "guide to sleepwear for night sweats"
         },
         {
           "url": "/symptoms/insomnia/",
@@ -923,7 +933,7 @@
         },
         {
           "url": "/symptoms/night-sweats/",
-          "anchor": "best sleepwear for night sweats"
+          "anchor": "how to choose sleepwear for night sweats"
         },
         {
           "url": "/symptoms/waking-at-3am/",
@@ -931,7 +941,7 @@
         },
         {
           "url": "/care/",
-          "anchor": "Best Sleepwear for Night Sweats: How to Choose"
+          "anchor": "Sleepwear for Night Sweats: How to Choose"
         }
       ],
       "click_depth": 2
@@ -1878,19 +1888,13 @@
           "url": "/privacy/",
           "anchor": "privacy policy",
           "contextual": true
-        },
-        {
-          "url": "/about/how-we-make-money/",
-          "anchor": "how we make money",
-          "contextual": true
-        },
-        {
-          "url": "/evidence/how-we-grade/",
-          "anchor": "evidence grades",
-          "contextual": true
         }
       ],
       "incoming_links": [
+        {
+          "url": "/about/",
+          "anchor": "contact us"
+        },
         {
           "url": "/evidence/editorial-policy/",
           "anchor": "contact page"
@@ -1905,11 +1909,11 @@
         },
         {
           "url": "/evidence/updates/",
-          "anchor": "contact our editorial team"
+          "anchor": "email us"
         },
         {
-          "url": "/privacy/",
-          "anchor": "contact page"
+          "url": "/medical-disclaimer/",
+          "anchor": "tell us"
         },
         {
           "url": "/",
@@ -1946,12 +1950,20 @@
       "redirect_from": [],
       "outgoing_links": [
         {
-          "url": "/tools/symptom-tracker/",
-          "anchor": "symptom tracker and doctor report",
+          "url": "/privacy/",
+          "anchor": "privacy policy",
           "contextual": true
         }
       ],
       "incoming_links": [
+        {
+          "url": "/privacy/",
+          "anchor": "cookie page"
+        },
+        {
+          "url": "/privacy/",
+          "anchor": "cookie page"
+        },
         {
           "url": "/",
           "anchor": "Home navigation"
@@ -2578,7 +2590,7 @@
         "/does-it-work/",
         "/tools/symptom-tracker/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/does-it-work/cooling-products/",
@@ -2596,7 +2608,7 @@
         },
         {
           "url": "/care/sleepwear-for-night-sweats/",
-          "anchor": "best sleepwear for night sweats",
+          "anchor": "how to choose sleepwear for night sweats",
           "contextual": true
         },
         {
@@ -3058,7 +3070,7 @@
         "/perimenopause/",
         "/tools/symptom-tracker/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/does-it-work/exercise/",
@@ -3252,7 +3264,7 @@
     },
     "/does-it-work/": {
       "url": "/does-it-work/",
-      "title": "Does it work? Menopause treatments tested against evidence",
+      "title": "Do menopause supplements and remedies work? Our verdicts",
       "status": "published",
       "primary_keyword": "do menopause supplements work",
       "intent": "informational",
@@ -3331,6 +3343,11 @@
       "canonical": "/does-it-work/",
       "redirect_from": [],
       "outgoing_links": [
+        {
+          "url": "/tools/does-it-work-checker/",
+          "anchor": "evidence checker tool",
+          "contextual": true
+        },
         {
           "url": "/does-it-work/magnesium/",
           "anchor": "Does magnesium help menopause symptoms?",
@@ -3751,6 +3768,10 @@
         },
         {
           "url": "/tools/does-it-work-checker/",
+          "anchor": "verdicts directory"
+        },
+        {
+          "url": "/tools/does-it-work-checker/",
           "anchor": "Does it work? directory of verdicts"
         },
         {
@@ -4049,7 +4070,7 @@
         "/symptoms/hot-flashes/",
         "/treatments/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/does-it-work/magnesium/",
@@ -4500,7 +4521,7 @@
         },
         {
           "url": "/evidence/products-we-wont-recommend/",
-          "anchor": "products we won't recommend",
+          "anchor": "products the evidence doesn't support",
           "contextual": true
         },
         {
@@ -4847,7 +4868,7 @@
         "/evidence/updates/",
         "/about/how-we-make-money/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/evidence/editorial-policy/",
@@ -4869,13 +4890,8 @@
           "contextual": true
         },
         {
-          "url": "/evidence/how-we-grade/",
-          "anchor": "evidence grades",
-          "contextual": true
-        },
-        {
           "url": "/about/how-we-make-money/",
-          "anchor": "affiliate disclosure",
+          "anchor": "how MenoVerdict is funded",
           "contextual": true
         },
         {
@@ -4978,28 +4994,24 @@
           "contextual": true
         },
         {
-          "url": "/evidence/medical-review/",
-          "anchor": "medical review process",
+          "url": "/about/how-we-make-money/",
+          "anchor": "how MenoVerdict is funded",
           "contextual": true
         },
         {
-          "url": "/about/how-we-make-money/",
-          "anchor": "commercial independence rules",
+          "url": "/evidence/medical-review/",
+          "anchor": "medical review process",
           "contextual": true
         }
       ],
       "incoming_links": [
         {
           "url": "/about/how-we-make-money/",
-          "anchor": "how we grade clinical evidence"
+          "anchor": "how we grade the evidence"
         },
         {
           "url": "/about/",
-          "anchor": "methodology for grading evidence"
-        },
-        {
-          "url": "/contact/",
-          "anchor": "evidence grades"
+          "anchor": "evidence grading method"
         },
         {
           "url": "/does-it-work/black-cohosh/",
@@ -5018,10 +5030,6 @@
           "anchor": "evidence grading method"
         },
         {
-          "url": "/evidence/editorial-policy/",
-          "anchor": "evidence grades"
-        },
-        {
           "url": "/evidence/",
           "anchor": "How we grade evidence"
         },
@@ -5036,6 +5044,10 @@
         {
           "url": "/evidence/sources/",
           "anchor": "evidence grading method"
+        },
+        {
+          "url": "/medical-disclaimer/",
+          "anchor": "grading method"
         },
         {
           "url": "/tools/does-it-work-checker/",
@@ -5095,12 +5107,12 @@
         },
         {
           "url": "/about/how-we-make-money/",
-          "anchor": "How we make money",
+          "anchor": "How MenoVerdict is funded",
           "contextual": true
         },
         {
           "url": "/evidence/products-we-wont-recommend/",
-          "anchor": "Products we won't recommend",
+          "anchor": "Products the evidence doesn't support",
           "contextual": true
         },
         {
@@ -5118,10 +5130,6 @@
         {
           "url": "/evidence/editorial-policy/",
           "anchor": "evidence evaluation standards"
-        },
-        {
-          "url": "/evidence/medical-review/",
-          "anchor": "how we check the evidence"
         },
         {
           "url": "/evidence/editorial-policy/",
@@ -5170,17 +5178,12 @@
         "/evidence/how-we-grade/",
         "/evidence/editorial-policy/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/evidence/medical-review/",
       "redirect_from": [],
       "outgoing_links": [
-        {
-          "url": "/evidence/",
-          "anchor": "how we check the evidence",
-          "contextual": true
-        },
         {
           "url": "/evidence/how-we-grade/",
           "anchor": "how we grade evidence",
@@ -5188,7 +5191,7 @@
         },
         {
           "url": "/tools/",
-          "anchor": "free menopause tools hub",
+          "anchor": "free tools",
           "contextual": true
         },
         {
@@ -5198,7 +5201,7 @@
         },
         {
           "url": "/about/how-we-make-money/",
-          "anchor": "commercial disclosure",
+          "anchor": "how MenoVerdict is funded",
           "contextual": true
         },
         {
@@ -5210,7 +5213,7 @@
       "incoming_links": [
         {
           "url": "/about/",
-          "anchor": "medical review process"
+          "anchor": "review process"
         },
         {
           "url": "/evidence/how-we-grade/",
@@ -5221,7 +5224,7 @@
     },
     "/evidence/products-we-wont-recommend/": {
       "url": "/evidence/products-we-wont-recommend/",
-      "title": "Products we won't recommend",
+      "title": "Products the evidence doesn't support",
       "status": "published",
       "primary_keyword": "menopause products to avoid",
       "intent": "navigational",
@@ -5245,7 +5248,7 @@
         "/about/how-we-make-money/",
         "/does-it-work/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/evidence/products-we-wont-recommend/",
@@ -5305,15 +5308,15 @@
       "incoming_links": [
         {
           "url": "/does-it-work/relizen/",
-          "anchor": "products we won't recommend"
+          "anchor": "products the evidence doesn't support"
         },
         {
           "url": "/evidence/",
-          "anchor": "Products we won't recommend"
+          "anchor": "Products the evidence doesn't support"
         },
         {
           "url": "/treatments/hormone-therapy/pellets/",
-          "anchor": "products we won't recommend"
+          "anchor": "products the evidence doesn't support"
         }
       ],
       "click_depth": 2
@@ -5427,27 +5430,21 @@
           "contextual": true
         },
         {
-          "url": "/symptoms/hot-flashes/",
-          "anchor": "Hot flashes",
-          "contextual": true
-        },
-        {
-          "url": "/symptoms/night-sweats/",
-          "anchor": "Night sweats",
+          "url": "/treatments/hormone-therapy/boxed-warning/",
+          "anchor": "The FDA HRT boxed warning change, explained",
           "contextual": true
         },
         {
           "url": "/contact/",
-          "anchor": "contact our editorial team",
-          "contextual": true
-        },
-        {
-          "url": "/tools/does-it-work-checker/",
-          "anchor": "interactive evidence checker tool",
+          "anchor": "email us",
           "contextual": true
         }
       ],
       "incoming_links": [
+        {
+          "url": "/about/",
+          "anchor": "corrections log"
+        },
         {
           "url": "/contact/",
           "anchor": "corrections and updates page"
@@ -5463,6 +5460,10 @@
         {
           "url": "/evidence/sources/",
           "anchor": "corrections and updates log"
+        },
+        {
+          "url": "/medical-disclaimer/",
+          "anchor": "corrections log"
         },
         {
           "url": "/",
@@ -6460,13 +6461,28 @@
       "redirect_from": [],
       "outgoing_links": [
         {
+          "url": "/evidence/how-we-grade/",
+          "anchor": "grading method",
+          "contextual": true
+        },
+        {
           "url": "/about/how-we-make-money/",
-          "anchor": "how we make money",
+          "anchor": "how MenoVerdict is funded",
           "contextual": true
         },
         {
           "url": "/urgent-help/",
-          "anchor": "urgent help and crisis lines",
+          "anchor": "urgent help page",
+          "contextual": true
+        },
+        {
+          "url": "/contact/",
+          "anchor": "tell us",
+          "contextual": true
+        },
+        {
+          "url": "/evidence/updates/",
+          "anchor": "corrections log",
           "contextual": true
         }
       ],
@@ -9562,7 +9578,7 @@
     },
     "/privacy/": {
       "url": "/privacy/",
-      "title": "Privacy notice and health data retention policy",
+      "title": "Privacy policy: your health data stays on your device",
       "status": "published",
       "primary_keyword": "privacy policy",
       "intent": "navigational",
@@ -9589,23 +9605,36 @@
       "redirect_from": [],
       "outgoing_links": [
         {
-          "url": "/medical-disclaimer/",
-          "anchor": "medical disclaimer",
+          "url": "/cookies/",
+          "anchor": "cookie page",
           "contextual": true
         },
         {
-          "url": "/contact/",
-          "anchor": "contact page",
+          "url": "/cookies/",
+          "anchor": "cookie page",
+          "contextual": true
+        },
+        {
+          "url": "/medical-disclaimer/",
+          "anchor": "medical disclaimer",
           "contextual": true
         }
       ],
       "incoming_links": [
+        {
+          "url": "/about/how-we-make-money/",
+          "anchor": "privacy policy"
+        },
         {
           "url": "/about/",
           "anchor": "privacy policy"
         },
         {
           "url": "/contact/",
+          "anchor": "privacy policy"
+        },
+        {
+          "url": "/cookies/",
           "anchor": "privacy policy"
         },
         {
@@ -11025,7 +11054,7 @@
         "/does-it-work/",
         "/tools/symptom-tracker/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/hair-thinning/",
@@ -11313,7 +11342,7 @@
         "/tools/symptoms-checklist/",
         "/tools/symptom-tracker/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/hot-flashes/",
@@ -11327,6 +11356,11 @@
         {
           "url": "/does-it-work/magnesium/",
           "anchor": "magnesium for relaxation",
+          "contextual": true
+        },
+        {
+          "url": "/care/sleepwear-for-night-sweats/",
+          "anchor": "guide to sleepwear for night sweats",
           "contextual": true
         },
         {
@@ -11410,10 +11444,6 @@
         {
           "url": "/evidence/updates/",
           "anchor": "Hot flashes in perimenopause"
-        },
-        {
-          "url": "/evidence/updates/",
-          "anchor": "Hot flashes"
         },
         {
           "url": "/groups/breast-cancer-survivors/",
@@ -11595,7 +11625,7 @@
         "/symptoms/vaginal-dryness/",
         "/tools/symptoms-checklist/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/incontinence/",
@@ -12344,7 +12374,7 @@
         "/care/sleepwear-for-night-sweats/",
         "/does-it-work/magnesium/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/insomnia/",
@@ -12986,7 +13016,7 @@
         "/does-it-work/cooling-products/",
         "/tools/symptom-tracker/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/night-sweats/",
@@ -13004,7 +13034,7 @@
         },
         {
           "url": "/care/sleepwear-for-night-sweats/",
-          "anchor": "best sleepwear for night sweats",
+          "anchor": "how to choose sleepwear for night sweats",
           "contextual": true
         },
         {
@@ -13042,10 +13072,6 @@
         {
           "url": "/does-it-work/magnesium/",
           "anchor": "night sweats and waking at 3 a.m."
-        },
-        {
-          "url": "/evidence/updates/",
-          "anchor": "Night sweats"
         },
         {
           "url": "/groups/breast-cancer-survivors/",
@@ -13204,7 +13230,7 @@
         "/symptoms/",
         "/tools/symptoms-checklist/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/painful-sex/",
@@ -13665,7 +13691,7 @@
         "/symptoms/",
         "/tools/symptoms-checklist/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/vaginal-dryness/",
@@ -13820,7 +13846,7 @@
         "/care/sleepwear-for-night-sweats/",
         "/tools/symptom-tracker/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/waking-at-3am/",
@@ -14189,7 +14215,7 @@
     },
     "/tools/does-it-work-checker/": {
       "url": "/tools/does-it-work-checker/",
-      "title": "Does it work? Menopause treatment evidence checker",
+      "title": "Evidence checker: filter menopause treatments by symptom",
       "status": "published",
       "primary_keyword": "menopause treatment evidence",
       "intent": "transactional",
@@ -14227,6 +14253,11 @@
       "canonical": "/tools/does-it-work-checker/",
       "redirect_from": [],
       "outgoing_links": [
+        {
+          "url": "/does-it-work/",
+          "anchor": "verdicts directory",
+          "contextual": true
+        },
         {
           "url": "/evidence/how-we-grade/",
           "anchor": "how we grade evidence",
@@ -14330,6 +14361,10 @@
         },
         {
           "url": "/does-it-work/",
+          "anchor": "evidence checker tool"
+        },
+        {
+          "url": "/does-it-work/",
           "anchor": "Does it work? evidence checker"
         },
         {
@@ -14361,10 +14396,6 @@
           "anchor": "Does it work? evidence checker"
         },
         {
-          "url": "/evidence/updates/",
-          "anchor": "interactive evidence checker tool"
-        },
-        {
           "url": "/symptoms/joint-pain/",
           "anchor": "Does it work? evidence checker"
         },
@@ -14382,7 +14413,7 @@
         },
         {
           "url": "/tools/",
-          "anchor": "Does it work? Menopause treatment evidence checker"
+          "anchor": "Evidence checker: filter menopause treatments by symptom"
         }
       ],
       "click_depth": 2
@@ -14571,6 +14602,11 @@
           "contextual": true
         },
         {
+          "url": "/app/install/",
+          "anchor": "install it as an app",
+          "contextual": true
+        },
+        {
           "url": "/tools/symptoms-checklist/",
           "anchor": "symptoms checklist you can print",
           "contextual": true
@@ -14628,10 +14664,6 @@
         {
           "url": "/contact/",
           "anchor": "symptom tracker"
-        },
-        {
-          "url": "/cookies/",
-          "anchor": "symptom tracker and doctor report"
         },
         {
           "url": "/does-it-work/black-cohosh/",
@@ -15628,6 +15660,10 @@
         {
           "url": "/compare/",
           "anchor": "FDA boxed warning considerations"
+        },
+        {
+          "url": "/evidence/updates/",
+          "anchor": "The FDA HRT boxed warning change, explained"
         },
         {
           "url": "/evidence/updates/",
@@ -16651,7 +16687,7 @@
         },
         {
           "url": "/evidence/products-we-wont-recommend/",
-          "anchor": "products we won't recommend",
+          "anchor": "products the evidence doesn't support",
           "contextual": true
         },
         {

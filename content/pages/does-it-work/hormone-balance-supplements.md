@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-08"
 change_log:
+  - { date: "2026-11-08", summary: "Sweep: verdict now shown from the grade registry, elinzanetant no longer listed as part of the 2023 guideline, US spelling", material: true }
   - { date: "2026-11-06", summary: "Published evidence verdict on multi-ingredient hormone balance supplements", material: true }
 evidence_grade: not_supported
 claims:
@@ -26,7 +27,7 @@ claims:
     text: "The Menopause Society (2023) does not recommend over-the-counter supplements and herbal remedies for menopause-associated vasomotor symptoms (Levels I-II)."
     sources: [nams-2023-nonhormone-therapy]
   - id: gunter-hormone-balance-myth
-    text: "Gynaecological evidence reviews explain that perimenopause involves fluctuating ovarian follicle depletion that cannot be 'balanced' by over-the-counter botanical blends."
+    text: "Gynecological evidence reviews explain that perimenopause involves fluctuating ovarian follicle depletion that cannot be 'balanced' by over-the-counter botanical blends."
     sources: [gunter-menopause-manifesto, straw-10-2012]
 safety_flags: [medication_interactions]
 cta_profile: diw_pending
@@ -42,12 +43,12 @@ faq:
   - q: What does "balancing hormones" actually mean in medicine?
     a: '"Hormone balance" is a marketing phrase, not a medical diagnosis. In perimenopause, hormone levels fluctuate because the ovarian follicle reserve is declining, and no over-the-counter herbal gummy or capsule restores premenopausal ovarian cycling.'
   - q: Why doesn't MenoVerdict recommend "hormone balance" supplements?
-    a: Because over-the-counter herbal and "hormone balance" blends are graded Not supported by clinical guidelines (The Menopause Society 2023), so we don't recommend them.
+    a: "Because The Menopause Society's 2023 guideline does not recommend over-the-counter supplements and herbal remedies for hot flashes and night sweats, and multi-ingredient \"hormone balance\" blends are made from those same kinds of ingredients."
 ---
 
-**Our verdict: Not supported (Levels I–II).**
+**Our verdict:** :grade{id="hormone-balance-supplements"}. The Menopause Society does not recommend over-the-counter supplements or herbal remedies for menopause hot flashes and night sweats (Levels I–II) [@nams-2023-nonhormone-therapy].
 
-Social media ads are filled with capsules, powders, and gummies claiming to "balance your hormones" during [perimenopause](/perimenopause/) and [menopause](/menopause/). In clinical medicine, "hormone imbalance" is a marketing slogan rather than a diagnosis [@gunter-menopause-manifesto]. In its **2023 Nonhormone Therapy Position Statement**, The Menopause Society explicitly states that over-the-counter supplements and herbal remedies are **not recommended** for treating menopausal vasomotor symptoms (Levels I–II) [@nams-2023-nonhormone-therapy].
+Social media ads are filled with capsules, powders, and gummies claiming to "balance your hormones" during [perimenopause](/perimenopause/) and [menopause](/menopause/). In clinical medicine, "hormone imbalance" is a marketing slogan rather than a diagnosis [@gunter-menopause-manifesto]. That verdict comes from The Menopause Society's **2023 Nonhormone Therapy Position Statement** [@nams-2023-nonhormone-therapy].
 
 ## Why botanical blends cannot "balance" perimenopause
 
@@ -55,10 +56,10 @@ During perimenopause, ovarian follicle depletion causes wide fluctuations in est
 
 ## What has real clinical trial evidence instead
 
-Instead of spending money every month on proprietary supplement blends, look at options backed by randomized clinical trials:
+Instead of a monthly supplement blend, look at options backed by randomized clinical trials:
 
-- **[Menopausal hormone therapy (HRT)](/treatments/hormone-therapy/)**: Proven most effective for [hot flashes](/symptoms/hot-flashes/), [night sweats](/symptoms/night-sweats/), and bone preservation [@nams-2022-hormone-therapy].
-- **[Level I non-hormonal treatments](/treatments/nonhormonal/)**: Including CBT, clinical hypnosis, SSRIs/SNRIs, gabapentin, [fezolinetant](/treatments/nonhormonal/fezolinetant/), and [elinzanetant](/treatments/nonhormonal/elinzanetant/) [@nams-2023-nonhormone-therapy].
+- **[Menopausal hormone therapy (HRT)](/treatments/hormone-therapy/)**: The most effective treatment for [hot flashes](/symptoms/hot-flashes/) and [night sweats](/symptoms/night-sweats/), and it also prevents bone loss [@nams-2022-hormone-therapy].
+- **[Level I non-hormonal treatments](/treatments/nonhormonal/)**: Including CBT, clinical hypnosis, SSRIs/SNRIs, gabapentin and [fezolinetant](/treatments/nonhormonal/fezolinetant/) [@nams-2023-nonhormone-therapy]. Our [elinzanetant](/treatments/nonhormonal/elinzanetant/) page covers a newer prescription option.
 - Use our [Does it work? evidence checker](/tools/does-it-work-checker/) and [treatment conversation builder](/tools/treatment-questions/) to prepare for an evidence-based appointment.
 
 :::questions

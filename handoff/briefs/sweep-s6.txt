@@ -1,0 +1,11 @@
+does-it-work/acupuncture.md
+does-it-work/amberen.md
+does-it-work/calcium.md
+does-it-work/cannabis-cbd.md
+does-it-work/collagen.md
+does-it-work/dhea.md
+does-it-work/diet.md
+does-it-work/dong-quai.md
+does-it-work/equelle.md
+does-it-work/evening-primrose-oil.md
+does-it-work/exercise.md

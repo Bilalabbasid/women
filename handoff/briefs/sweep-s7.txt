@@ -1,0 +1,11 @@
+does-it-work/hormone-balance-supplements.md
+does-it-work/index.md
+does-it-work/maca.md
+does-it-work/omega-3.md
+does-it-work/paced-breathing.md
+does-it-work/probiotics.md
+does-it-work/red-clover.md
+does-it-work/relizen.md
+does-it-work/soy-isoflavones.md
+does-it-work/vitamin-d.md
+does-it-work/yoga.md

@@ -1,0 +1,15 @@
+symptoms/acne.md
+symptoms/bladder-urgency.md
+symptoms/bloating.md
+symptoms/body-odor.md
+symptoms/breast-tenderness.md
+symptoms/burning-mouth.md
+symptoms/depression.md
+symptoms/digestive-changes.md
+symptoms/dizziness.md
+symptoms/dry-eyes.md
+symptoms/dry-itchy-skin.md
+symptoms/facial-hair.md
+symptoms/fatigue.md
+symptoms/frozen-shoulder.md
+symptoms/hair-thinning.md

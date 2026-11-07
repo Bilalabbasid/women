@@ -18,7 +18,7 @@ export function ToolLoader({ id, liveUrls, trackerLive }: { id: string; liveUrls
     case 'symptoms-checklist':
       return <SymptomsChecklist liveUrls={liveUrls} trackerLive={trackerLive} />;
     case 'stage-guide':
-      return <StageGuide />;
+      return <StageGuide liveUrls={liveUrls} trackerLive={trackerLive} />;
     case 'does-it-work-checker':
       return <DoesItWorkChecker liveUrls={liveUrls} />;
     case 'treatment-questions':

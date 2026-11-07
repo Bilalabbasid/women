@@ -58,7 +58,7 @@ export function toolHash(raw: Record<string, unknown>, repoRoot: string = proces
   for (const f of (raw.code as string[]) ?? []) {
     const abs = path.join(/*turbopackIgnore: true*/ repoRoot, f);
     h.update(`\n--- ${f}\n`);
-    h.update(fs.existsSync(abs) ? fs.readFileSync(abs, 'utf8').replace(/\r\n/g, '\n') : 'MISSING');
+    h.update(fs.existsSync(/*turbopackIgnore: true*/ abs) ? fs.readFileSync(/*turbopackIgnore: true*/ abs, 'utf8').replace(/\r\n/g, '\n') : 'MISSING');
   }
   return h.digest('hex');
 }
@@ -72,10 +72,10 @@ export interface LoadedTool {
 export function loadToolLogic(dir: string = TOOLS_DIR(), repoRoot: string = process.cwd()): { tools: LoadedTool[]; errors: string[] } {
   const errors: string[] = [];
   const tools: LoadedTool[] = [];
-  if (!fs.existsSync(dir)) return { tools, errors };
-  for (const name of fs.readdirSync(dir).filter((f) => f.endsWith('.yaml')).sort()) {
+  if (!fs.existsSync(/*turbopackIgnore: true*/ dir)) return { tools, errors };
+  for (const name of fs.readdirSync(/*turbopackIgnore: true*/ dir).filter((f) => f.endsWith('.yaml')).sort()) {
     const file = path.join(/*turbopackIgnore: true*/ dir, name);
-    const raw = parseDocument(fs.readFileSync(file, 'utf8')).toJS() as Record<string, unknown>;
+    const raw = parseDocument(fs.readFileSync(/*turbopackIgnore: true*/ file, 'utf8')).toJS() as Record<string, unknown>;
     const parsed = toolLogicSchema.safeParse(raw);
     const rel = path.relative(repoRoot, file).replace(/\\/g, '/');
     if (!parsed.success) {
@@ -83,7 +83,7 @@ export function loadToolLogic(dir: string = TOOLS_DIR(), repoRoot: string = proc
       continue;
     }
     if (`${parsed.data.id}.yaml` !== name) errors.push(`${rel}: id "${parsed.data.id}" must match the file name`);
-    for (const c of parsed.data.code) if (!fs.existsSync(path.join(/*turbopackIgnore: true*/ repoRoot, c))) errors.push(`${rel}: code file ${c} not found`);
+    for (const c of parsed.data.code) if (!fs.existsSync(/*turbopackIgnore: true*/ path.join(/*turbopackIgnore: true*/ repoRoot, c))) errors.push(`${rel}: code file ${c} not found`);
     tools.push({ logic: parsed.data, file: rel, hash: toolHash(raw, repoRoot) });
   }
   return { tools, errors };

@@ -1,0 +1,15 @@
+symptoms/headaches.md
+symptoms/heart-palpitations.md
+symptoms/incontinence.md
+symptoms/index.md
+symptoms/insomnia.md
+symptoms/irritability.md
+symptoms/low-libido.md
+symptoms/memory-problems.md
+symptoms/migraines.md
+symptoms/painful-sex.md
+symptoms/panic-attacks.md
+symptoms/recurrent-utis.md
+symptoms/tingling.md
+symptoms/tinnitus.md
+symptoms/vaginal-dryness.md

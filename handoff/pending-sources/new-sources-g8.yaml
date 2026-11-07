@@ -1,0 +1,62 @@
+# New sources for group g8 (black-cohosh, magnesium). All opened and read on 2026-11-08.
+# Not yet in content/_sources/sources.yaml; for the lead to merge.
+
+- id: nih-ods-black-cohosh-2020
+  title: "Black Cohosh: Fact Sheet for Health Professionals"
+  authors: []
+  publisher: National Institutes of Health, Office of Dietary Supplements
+  year: 2020
+  type: other
+  url: https://ods.od.nih.gov/factsheets/BlackCohosh-HealthProfessional/
+  doi: null
+  accessed: "2026-11-08"
+  population: Perimenopausal and postmenopausal women using black cohosh for menopausal symptoms
+  key_finding: "Preparations vary considerably in chemical composition and the active ingredients are unknown. Two high-quality RCTs (351 and 88 women; 160 mg/day and 128 mg/day extract) found no difference from placebo for hot flashes and night sweats; a 2012 Cochrane review of 16 RCTs (2,027 women, 8-160 mg/day, median 40 mg/day) found insufficient evidence to support or oppose use. Side effects in trials were usually mild GI upset and rash; most studies lasted 6 months or less, so long-term safety is unstudied. At least 83 reported cases of liver damage worldwide (no proven causal link). USP (2008) recommends a label: stop use and consult a healthcare practitioner if you have a liver disorder or develop abdominal pain, dark urine or jaundice; FDA does not require this warning. People with liver disorders should avoid it; pregnant women should not take it except under supervision. No known clinically relevant drug interactions, though not systematically studied."
+  funding_conflict: null
+  verified: true
+  notes: "Page says 'Updated: June 3, 2020'. Read in full via a page-to-markdown fetcher (direct curl gets 403 per earlier research notes). The liver section says 'there is no evidence of a causal relationship'; some cases may reflect impurities, adulterants or the wrong Actaea species. Australia has required a liver warning label since 2007."
+
+- id: nih-ods-magnesium-2026
+  title: "Magnesium: Fact Sheet for Health Professionals"
+  authors: []
+  publisher: National Institutes of Health, Office of Dietary Supplements
+  year: 2026
+  type: other
+  url: https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/
+  doi: null
+  accessed: "2026-11-08"
+  population: Healthy adults and people at risk of magnesium inadequacy (US)
+  key_finding: "RDA for women 51+ is 320 mg/day. Tolerable Upper Intake Level for supplemental magnesium (supplements and medicines, not food) is 350 mg/day for adults. Forms that dissolve well in liquid are more completely absorbed; small studies found aspartate, citrate, lactate and chloride more bioavailable than oxide and sulfate. Supplement labels list elemental magnesium. High supplemental doses often cause diarrhea, nausea and abdominal cramping (most often carbonate, chloride, gluconate, oxide). Toxicity (hypotension, nausea, vomiting, facial flushing, urine retention, lethargy, muscle weakness, difficulty breathing, irregular heartbeat, cardiac arrest) is more likely with impaired kidney function. Interactions: oral bisphosphonates (separate by at least 2 hours); tetracycline and quinolone antibiotics (take the antibiotic at least 2 hours before or 4-6 hours after magnesium); loop and thiazide diuretics and long-term PPIs can lower magnesium. Good food sources: green leafy vegetables, legumes, nuts, seeds, whole grains."
+  funding_conflict: null
+  verified: true
+  notes: "Page says 'Updated: January 6, 2026'. Read in full via a page-to-markdown fetcher. The fact sheet does not discuss sleep, insomnia, anxiety or hot flashes, and gives no absorption percentage for magnesium oxide. Food table: pumpkin seeds 156 mg/oz, chia 111 mg/oz, almonds 80 mg/oz, boiled spinach 78 mg per half cup."
+
+- id: mah-pitre-magnesium-insomnia-2021
+  title: "Oral magnesium supplementation for insomnia in older adults: a Systematic Review & Meta-Analysis"
+  authors: [Mah J, Pitre T]
+  publisher: BMC Complementary Medicine and Therapies
+  year: 2021
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/33865376/
+  doi: 10.1186/s12906-021-03297-z
+  accessed: "2026-11-08"
+  population: Older adults with insomnia (3 RCTs, 151 participants, three countries); not menopause-specific
+  key_finding: "Pooled analysis: sleep onset latency 17.36 minutes shorter with oral magnesium than placebo (95% CI -27.27 to -7.44); total sleep time 16.06 minutes longer but not statistically significant. All trials at moderate-to-high risk of bias; low to very low quality evidence (GRADE). Authors: literature quality is 'substandard for physicians to make well-informed recommendations'."
+  funding_conflict: "Conflict of interest statement: none declared."
+  verified: true
+  notes: "Abstract read via NCBI E-utilities efetch (PMID 33865376). A 2024 correction (PMID 39702257, doi 10.1186/s12906-024-04721-w) was read on the BMC site: it fixes wording, an abbreviation and PRISMA record counts only; results are unchanged. The trials were in older adults, not specifically perimenopausal or menopausal women."
+
+- id: park-magnesium-oxide-hot-flash-rct-2015
+  title: "North Central Cancer Treatment Group N10C2 (Alliance): a double-blind placebo-controlled study of magnesium supplements to reduce menopausal hot flashes"
+  authors: [Park H, Qin R, Smith TJ, Atherton PJ, Barton DL, Sturtz K, Dakhil SR, Anderson DM, Flynn K, Puttabasavaiah S, Le-Lindqwister NA, Padula GD, Loprinzi CL]
+  publisher: Menopause
+  year: 2015
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/25423327/
+  doi: 10.1097/GME.0000000000000374
+  accessed: "2026-11-08"
+  population: 289 postmenopausal women with a history of breast cancer and bothersome hot flashes
+  key_finding: "Four-arm double-blind RCT of magnesium oxide 800 mg or 1,200 mg daily vs placebo. Hot flash scores and frequencies were similar in every group; magnesium arms had more diarrhea (and less constipation). Conclusion: 'The results of this trial do not support the use of magnesium oxide for hot flashes.'"
+  funding_conflict: null
+  verified: true
+  notes: "Abstract read via NCBI E-utilities efetch (PMID 25423327). Funding not checked (NCI cooperative-group trial; full text PMC4442087). Population was breast cancer survivors, so generalize with care."

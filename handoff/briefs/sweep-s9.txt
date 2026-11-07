@@ -1,0 +1,17 @@
+about/how-we-make-money.md
+about/index.md
+contact.md
+cookies.md
+evidence/editorial-policy.md
+evidence/how-we-grade.md
+evidence/index.md
+evidence/medical-review.md
+evidence/products-we-wont-recommend.md
+evidence/sources.md
+evidence/updates.md
+medical-disclaimer.md
+privacy.md
+terms.md
+tools/12-month-counter.md
+tools/does-it-work-checker.md
+tools/treatment-questions.md

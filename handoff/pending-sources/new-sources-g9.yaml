@@ -1,0 +1,76 @@
+# New sources proposed by group g9 (ashwagandha, cooling-products). All opened and read 2026-11-08.
+
+- id: ods-ashwagandha-hp-2025
+  title: "Ashwagandha: Is it helpful for stress, anxiety, or sleep? Health Professional Fact Sheet"
+  authors: [NIH Office of Dietary Supplements]
+  publisher: National Institutes of Health, Office of Dietary Supplements
+  year: 2025
+  type: patient_information
+  url: https://ods.od.nih.gov/factsheets/Ashwagandha-HealthProfessional/
+  doi: null
+  accessed: "2026-11-08"
+  population: Adults (evidence review of ashwagandha trials and case reports; not menopause-specific)
+  key_finding: "Ashwagandha appears well tolerated for up to about 3 months; long-term safety is not known. Common mild side effects: stomach upset, loose stools, nausea, drowsiness. Case reports link it to acute liver injury (signs included jaundice, pruritus, nausea, lethargy, abdominal discomfort, hyperbilirubinemia; people improved after stopping; product contents not always verified). It may raise thyroid hormone levels; three case reports of thyrotoxicosis; might interact with thyroid hormone medications, and also antidiabetes medications, antihypertensives, immunosuppressants and sedatives. Some experts advise against use in pregnancy; ANSES (2024) recommended against use in pregnant and breastfeeding women and people with endocrine disorders; Denmark banned ashwagandha in 2023. Studies used varied preparations and doses, so specific extracts or amounts are hard to identify."
+  funding_conflict: null
+  verified: true
+  notes: "Updated May 2, 2025. Fetched full text 2026-11-08 (direct fetch returned 403; read via a text fetcher). Does not discuss menopause."
+
+- id: vani-ashwagandha-menopause-rct-2026
+  title: "A prospective, randomized, double-blind, placebo-controlled study on efficacy and safety of Ashwagandha root extract (Withania somnifera) for managing menopausal symptoms in women"
+  authors: [Vani I, Muralidhar G, Rao BS]
+  publisher: Frontiers in Reproductive Health
+  year: 2026
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/41561822/
+  doi: 10.3389/frph.2025.1647721
+  accessed: "2026-11-08"
+  population: "60 women aged 45-55 with menopausal symptoms, single government hospital in India; 56-day RCT (30 per group)"
+  key_finding: "300 mg ashwagandha root extract twice daily vs placebo for 56 days. Significant reduction in total Menopause Rating Scale score (p<0.0001) and its psychological, somatic and urogenital domains; fewer hot flash events (p<0.001); lower Perceived Stress Scale scores; higher SF-12 quality of life; higher serum estradiol and progesterone and lower FSH and LH vs placebo. 3 women reported adverse events (1 ashwagandha, 2 placebo); none stopped because of them."
+  funding_conflict: "Authors declare no financial support and no conflicts; the extract was supplied by its manufacturer (Ixoreal Biomed, KSM-66), which the authors acknowledge."
+  verified: true
+  notes: "Volume 7, eCollection 2025; published 2026-01-05. PMC12812913. Registered CTRI/2022/02/040551. Dose and supplier read from the PMC full text."
+
+- id: obhrai-ashwagandha-postmenopause-rct-2026
+  title: "Effects of Withania somnifera root extract on sleep quality, body composition, and menopausal symptoms in postmenopausal women: a randomized, double-blind, placebo-controlled trial"
+  authors: [Obhrai S, Shenoy S, Arora M]
+  publisher: "Menopause (The Menopause Society)"
+  year: 2026
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/42742071/
+  doi: 10.1097/GME.0000000000002894
+  accessed: "2026-11-08"
+  population: "66 postmenopausal women aged 45-65, single center in Amritsar, India (63 completed); 12-week RCT"
+  key_finding: "600 mg/day ashwagandha root extract vs placebo for 12 weeks. Greater improvement in Pittsburgh Sleep Quality Index (mean change -5.2 vs -0.8; P<0.001), Menopause Rating Scale (-8.1 vs -1.2; P<0.001) and body fat percentage (-0.6% vs +0.03%; P<0.01). No difference in bone mineral density. Well tolerated, no serious adverse events."
+  funding_conflict: "Abstract states no financial disclosures or conflicts of interest reported."
+  verified: true
+  notes: "Online ahead of print 2026-09-15. Read from the PubMed abstract."
+
+- id: pingali-ashwagandha-shatavari-rct-2025
+  title: "Ashwagandha and Shatavari Extracts Dose-Dependently Reduce Menopause Symptoms, Vascular Dysfunction, and Bone Resorption in Postmenopausal Women: A Randomized, Double-Blind, Placebo-Controlled Study"
+  authors: [Pingali U, Nutalapati C, Wang Y]
+  publisher: Journal of Menopausal Medicine
+  year: 2025
+  type: brand_funded
+  url: https://pubmed.ncbi.nlm.nih.gov/40347163/
+  doi: 10.6118/jmm.24025
+  accessed: "2026-11-08"
+  population: "127 postmenopausal women aged 40-55 enrolled at one institute in Hyderabad, India; 24-week RCT with six arms"
+  key_finding: "Arms: placebo; shatavari 250 or 500 mg; ashwagandha 250 or 500 mg; or a 500 mg combination. Supplemented groups had significant, dose-dependent decreases in MENQOL scores vs placebo (P<0.0001), plus changes in bone turnover, vascular and inflammatory markers. No participants discontinued because of adverse events."
+  funding_conflict: "Full text: 'This work was supported by Natreon, Inc.' The abstract reports no relevant conflicts."
+  verified: true
+  notes: "PMC12070120. Enrollment number and funding read from the PMC full text."
+
+- id: mayo-night-sweats-when-to-see-doctor
+  title: "Night sweats: When to see a doctor"
+  authors: [Mayo Clinic Staff]
+  publisher: Mayo Clinic
+  year: 2024
+  type: patient_information
+  url: https://www.mayoclinic.org/symptoms/night-sweats/basics/when-to-see-doctor/sym-20050768
+  doi: null
+  accessed: "2026-11-08"
+  population: Adults with night sweats
+  key_finding: "See a health care provider if night sweats occur on a regular basis, interrupt sleep, are accompanied by a fever, weight loss, pain in a specific area, cough, diarrhea or other symptoms of concern, or start months or years after menopause symptoms ended."
+  funding_conflict: null
+  verified: true
+  notes: "Page dated Jan. 20, 2024."

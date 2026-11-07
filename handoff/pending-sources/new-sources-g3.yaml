@@ -1,0 +1,91 @@
+# New sources proposed by content group g3 (anxiety, weight-gain). Each was opened on 2026-11-08.
+
+- id: nimh-generalized-anxiety-disorder
+  title: "Generalized Anxiety Disorder: When Worry Gets Out of Control"
+  authors: []
+  publisher: National Institute of Mental Health (NIH)
+  year: 2025
+  type: patient_information
+  url: https://www.nimh.nih.gov/health/publications/generalized-anxiety-disorder-gad
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (US)
+  key_finding: "Lists GAD symptoms (excessive worry, feeling on edge or irritable, restlessness, trouble concentrating, trouble sleeping or fatigue, headaches, muscle aches, stomachaches or tension). A health care provider may do a physical exam to make sure an unrelated physical problem is not causing the symptoms. Treatment usually involves psychotherapy, medication or both; CBT is described as the well-studied 'gold standard' psychotherapy. Medications include SSRIs and SNRIs (which can take several weeks to work and may cause headaches, nausea or difficulty sleeping), benzodiazepines (tolerance and dependence possible, so often prescribed only briefly) and buspirone (3-4 weeks to be fully effective). Gives crisis guidance: call or text 988; in life-threatening situations, call 911."
+  funding_conflict: null
+  verified: true
+  notes: "NIMH publication, revised 2025. Not menopause-specific: use for general anxiety treatment facts and US crisis numbers."
+
+- id: nhs-urgent-help-mental-health
+  title: Where to get urgent help for mental health
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/nhs-services/mental-health-services/where-to-get-urgent-help-for-mental-health/
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (UK)
+  key_finding: "For urgent mental health help, get advice from NHS 111 (call 111 and choose the mental health option, or use 111 online) or ask for an urgent GP appointment. Call 999 or go to A&E now if someone's life is at risk, for example they have seriously injured themselves or taken an overdose. Samaritans offer a free, confidential listening service on 116 123."
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 23 October 2026.
+
+- id: nhs-overactive-thyroid-symptoms
+  title: "Overactive thyroid (hyperthyroidism): Symptoms"
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2023
+  type: patient_information
+  url: https://www.nhs.uk/conditions/overactive-thyroid-hyperthyroidism/symptoms/
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (UK)
+  key_finding: "Common symptoms include nervousness, anxiety and irritability; common signs include an irregular and/or unusually fast heart rate (palpitations) and weight loss, often despite an increased appetite. See a GP if you have symptoms or signs of an overactive thyroid."
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 11 April 2023.
+
+- id: nhs-underactive-thyroid-symptoms
+  title: "Underactive thyroid (hypothyroidism): Symptoms"
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2025
+  type: patient_information
+  url: https://www.nhs.uk/conditions/underactive-thyroid-hypothyroidism/symptoms/
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (UK)
+  key_finding: "Symptoms include feeling extremely tired, feeling cold more than usual, putting on weight, low mood or depression, constipation, difficulty concentrating, dry skin or hair or hair loss, a hoarse voice, and irregular or heavy periods. Many symptoms are common and can have other causes, so they should be checked by a GP; blood tests check TSH and thyroxine (T4)."
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 28 April 2025. The page does not mention menopause.
+
+- id: lovejoy-visceral-fat-menopause-2008
+  title: Increased visceral fat and decreased energy expenditure during the menopausal transition
+  authors: [Lovejoy JC, Champagne CM, de Jonge L, Xie H, Smith SR]
+  publisher: International Journal of Obesity
+  year: 2008
+  type: cohort
+  url: https://pubmed.ncbi.nlm.nih.gov/18332882/
+  doi: 10.1038/ijo.2008.25
+  accessed: "2026-11-08"
+  population: "156 healthy, initially premenopausal women (103 Caucasian, 53 African-American) measured yearly for 4 years (DEXA, CT, accelerometry; calorimetry in a subset of 34)"
+  key_finding: "Body fat and weight increased significantly only in women who became postmenopausal by year 4 (n=51). All women gained subcutaneous abdominal fat with age, but only those who became postmenopausal had a significant increase in visceral fat. Physical activity fell significantly 2 years before menopause and stayed low. Sleeping energy expenditure fell 1.5-fold more in women who became postmenopausal (-7.9% vs -5.3%), and fat oxidation fell 32% in that group. Authors conclude menopause onset is associated with lower energy expenditure and fat oxidation that can predispose to obesity if lifestyle changes are not made."
+  funding_conflict: null
+  verified: true
+  notes: "Abstract read via NCBI E-utilities efetch. Small single-center cohort (Pennington Biomedical); funding and disclosures not checked."
+
+- id: davis-ims-weight-gain-menopause-2012
+  title: Understanding weight gain at menopause
+  authors: [Davis SR, Castelo-Branco C, Chedraui P, Lumsden MA, Nappi RE, Shah D, Villaseca P]
+  publisher: Climacteric (International Menopause Society, World Menopause Day 2012 writing group)
+  year: 2012
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/22978257/
+  doi: 10.3109/13697137.2012.707385
+  accessed: "2026-11-08"
+  population: Literature review of studies on menopause, midlife, body weight and body composition
+  key_finding: "Weight gain per se cannot be attributed to the menopause transition, but the hormonal change at menopause is associated with an increase in total body fat and in abdominal fat. Weight excess at midlife is associated with higher risk of cardiovascular and metabolic disease and affects quality of life and sexual function. Studies mostly show less overall fat mass with estrogen or estrogen-progestin therapy, but further studies are needed to identify which women benefit before evidence-based clinical recommendations can be made."
+  funding_conflict: null
+  verified: true
+  notes: "Abstract read via NCBI E-utilities efetch. Narrative review, not a systematic review, so typed 'other'. Author disclosures not checked."

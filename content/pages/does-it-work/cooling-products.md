@@ -1,7 +1,7 @@
 ---
-title: "Cooling Your Bed: Fans, Sheets, and Climate Systems Compared"
+title: "Cooling your bed: fans, sheets, and climate systems compared"
 seo_title: "Do Cooling Products Help Hot Flashes?"
-meta_description: "Do cooling products help night sweats? Compare bed fans, cooling sheets, and active climate control systems by price, noise, setup, and evidence."
+meta_description: "Do cooling products help night sweats? What the research says about fans, breathable bedding and bed cooling systems, how they compare, and when night sweats need a doctor."
 cluster: does-it-work
 primary_keyword: cooling products for hot flashes
 slug: cooling-products
@@ -17,58 +17,84 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-07"
+updated_at: "2026-11-08"
 change_log:
+  - { date: "2026-11-08", summary: "Rewrote in plain words around what the cooling studies found; added a sourced 'try' box of cooling steps and a sourced when-to-see-a-doctor list; removed unsourced cost, suitability and relief claims", material: true }
   - { date: "2026-11-06", summary: "Initial publication comparing passive bedding, fans, and active convective bed climate systems", material: true }
   - { date: "2026-11-07", summary: "Grade corrected from Moderate to Comfort only: The Menopause Society (2023) does not recommend cooling as a treatment for hot flashes; it can still make nights more comfortable", material: true }
   - { date: "2026-11-07", summary: "Now a how-to-choose guide, with no products to buy", material: true }
 evidence_grade: comfort_only
 claims:
   - id: cooling-environmental-only
-    text: "Environmental cooling products relieve surface thermal sensation and dissipate trapped heat, but clinical guidelines note they do not treat or prevent underlying hypothalamic vasomotor surges."
+    text: "The Menopause Society (2023) found no strong evidence that cooling techniques improve hot flashes and does not recommend them as a treatment; in a small 4-week randomized crossover trial (39 women), a nighttime thermal comfort device did not change the number or duration of nighttime hot flashes, though women reported some improvement in sleep."
     sources: [nams-2023-nonhormone-therapy]
+  - id: night-sweats-see-doctor
+    text: "See a health care provider if night sweats happen regularly, interrupt sleep, come with fever, weight loss, pain in a specific area, cough or diarrhea, or start months or years after menopause symptoms ended."
+    sources: [mayo-night-sweats-when-to-see-doctor]
 safety_flags: []
 cta_profile: diw_supported
 hub: /does-it-work/
-sources: [nams-2023-nonhormone-therapy, nams-2022-hormone-therapy]
+sources: [nams-2023-nonhormone-therapy, nams-2022-hormone-therapy, mayo-night-sweats-when-to-see-doctor]
 related: [/symptoms/night-sweats/, /care/sleepwear-for-night-sweats/, /does-it-work/, /tools/symptom-tracker/]
 ---
 
-A dedicated bed cooling system can be worth the investment if frequent night sweats repeatedly wake you drenched and regular room air conditioning or bedside fans fail to clear the heat trapped between your mattress and sheets, as reviewed in our [Does It Work directory](/does-it-work/) [@nams-2023-nonhormone-therapy]. However, bed cooling products are environmental comfort aids: they dissipate body heat rapidly, but they do not treat the underlying hormonal fluctuations causing vasomotor surges [@nams-2022-hormone-therapy].
+Fans, breathable bedding and bed cooling systems can make hot nights feel more comfortable, but they haven't been shown to reduce hot flashes or night sweats [@nams-2023-nonhormone-therapy]. Tonight, simple steps like lighter layers, a fan and a cooler room are worth a try. For actually reducing night sweats, hormone therapy has the strongest evidence [@nams-2022-hormone-therapy].
 
-## How cooling products work
+**Our verdict:** :grade{id="cooling-comfort"} for making nights more comfortable, and :grade{id="cooling-vms"} as a treatment for hot flashes and night sweats.
 
-During a night sweat, your body releases a surge of heat and perspiration into the microclimate between your mattress and top sheet. If that heat cannot escape, humidity and temperature spike, intensifying discomfort and interrupting sleep.
+## Why cooling seems like it should help
 
-Cooling products fall into three broad categories:
-1. **Passive cooling sheets**: Fibers like eucalyptus (Tencel), linen, or bamboo that maximize breathability and wick away perspiration.
-2. **Ambient bedroom and bedside fans**: Move room air over exposed skin to enhance convective and evaporative cooling.
-3. **Active convective bed systems**: Motorized units that pump conditioned air directly beneath the top sheet into the mattress cavity.
+Small rises in body temperature can set off a hot flash, so it makes sense that keeping your body and bedroom cooler might help. These are the cooling steps The Menopause Society lists, and they are for comfort only [@nams-2023-nonhormone-therapy]:
 
-To explore medical treatments that stop the hormonal trigger at its source, read our medical guide on [night sweats in perimenopause and menopause](/symptoms/night-sweats/).
+:::try
+1. Dress in light layers and breathable fabrics, and skip pullover sweaters and scarves.
+2. Lower the bedroom temperature, or use a hand fan, an electric fan or a bed fan.
+3. Keep a cold pack under your pillow, or turn the pillow over when it feels warm.
+4. If you share a bed, a dual-control electric blanket lets each side be set differently.
+:::
 
-## Comparison: sheets vs fans vs active bed systems
+## What the research found
 
-| Solution | Relative cost | Noise level | Setup required | Who it suits best |
-| --- | --- | --- | --- | --- |
-| **Breathable sheets (bamboo/linen)** | Low | Completely silent | Standard bed making | Mild temperature spikes; women wanting natural, non-electric solutions |
-| **Quiet bedside fan** | Low | Low hum | Plug in on nightstand | Moderate night sweats; sleepers who benefit from gentle white noise |
-| **Active bed air systems** | High | Low to medium (whisper quiet to low fan) | Hose attaches under sheet at mattress foot | Severe, frequent night sweats; women waking drenched multiple times per night |
-| **Water-circulating mattress pads** | Very high | Low pump hum | Water reservoir maintenance and mattress pad fitting | Sleepers with severe chronic heat retention needing continuous conductive cooling |
+Only a few small studies have tested cooling for hot flashes:
 
-## When is an active bed cooling system worth the price?
+- **A forehead cooling device**: In a small study of 20 postmenopausal women with no comparison group, a forehead cooling device plus sleep advice was linked with fewer self-reported sleep problems and hot flashes over 4 weeks [@nams-2023-nonhormone-therapy].
+- **A nighttime cooling device**: In a 4-week randomized trial of 39 women, where each woman tried more than one setup (a crossover trial), the device did not change the number or length of nighttime hot flashes. Women did report sleeping somewhat better than before they used it [@nams-2023-nonhormone-therapy].
 
-If you wake up drenched several times per night, have to change sheets or pajamas at 3 a.m., and sharing a bed with a partner makes lowering the entire bedroom thermostat impractical, an **active convective bed system** delivers noticeable relief.
+The Menopause Society found no strong evidence that cooling techniques improve hot flashes. It says cooling needs to be tested in larger trials that compare it with a fake (sham) treatment [@nams-2023-nonhormone-therapy]. That's why we grade cooling as a comfort aid, not a treatment.
 
-Unlike a standard fan that merely blows across your duvet, forced-air bed systems blow air directly under your top sheet, instantly evaporating perspiration and stripping away trapped thermal energy before sweat pools.
+## Comparing the main options
 
-When comparing systems, check the noise level at the setting you would actually sleep on, whether each side of the bed can be set separately, and the return period, since comfort is personal and hard to judge before a few nights' use.
+| Option | How it works | Needs power? | Things to check |
+| --- | --- | --- | --- |
+| **Breathable sheets and sleepwear** | Lighter, breathable fabrics in place of heavier bedding or clothes | No | How the fabric feels and how easy it is to wash |
+| **Bedside or bed fan** | Moves air over you, or under the covers with a bed fan | Yes | Noise at the speed you would sleep on; whether you can aim it |
+| **Lower room temperature** | Thermostat, air conditioning or an open window | Sometimes | Whether a bed partner is comfortable at the same setting |
+| **Cold packs and pillow turning** | A cool surface for your head and neck | No | Whether it stays cool long enough to help you settle |
+| **Active air bed systems** | A motorized unit blows air under the top sheet | Yes | Noise at the setting you would sleep on; separate controls for each side; a timer |
+| **Water-circulating mattress pads** | A pump moves water through a pad on the mattress | Yes | Pump noise; refilling and cleaning the water tank; separate controls for each side |
 
-## What bed cooling products cannot do
+Comfort is personal, so it helps to note whether you actually sleep better with whatever you try. For fabrics, see our guide on [how to choose sleepwear for night sweats](/care/sleepwear-for-night-sweats/).
 
-Be realistic about what cooling products achieve:
-- **They do not reduce hot flash frequency**: When estrogen fluctuates, your hypothalamus triggers vasodilation regardless of bed temperature [@nams-2022-hormone-therapy].
-- **They do not replace medical evaluation**: If your night sweats are accompanied by fever, unexplained weight loss, or swollen glands, see a doctor to rule out non-hormonal medical conditions.
-- **They can cause post-sweat chills if overused**: Setting a cooling unit too low can cause intense shivering once the brief hot flush subsides. Look for systems with programmable timers or remote controls.
+## What cooling products can't do
 
-To pair cooling equipment with proper fabrics, read our guide on [how to choose sleepwear for night sweats](/care/sleepwear-for-night-sweats/), or track your daily episodes with our [symptom tracker](/tools/symptom-tracker/).
+- **They haven't been shown to cut hot flashes**: In the one randomized trial The Menopause Society describes, a nighttime cooling device did not change how many nighttime hot flashes women had or how long they lasted [@nams-2023-nonhormone-therapy].
+- **They don't replace treatment**: Hormone therapy is the most effective treatment for hot flashes and night sweats, graded :grade{id="mht-vms"} [@nams-2022-hormone-therapy]. Several non-hormonal prescription options are graded :grade{id="nonhormonal-rx-vms"} [@nams-2023-nonhormone-therapy].
+- **They don't rule out other causes**: Some patterns of night sweats are worth a doctor's check, whatever you do to stay cool (see below) [@mayo-night-sweats-when-to-see-doctor].
+
+Our guide to [night sweats in perimenopause and menopause](/symptoms/night-sweats/) covers the treatments in more detail.
+
+## When to see a doctor
+
+Make an appointment with your doctor if your night sweats:
+
+- Happen on a regular basis
+- Interrupt your sleep
+- Come with a fever, weight loss, pain in one specific area, a cough, diarrhea, or other symptoms that worry you
+- Start months or years after your other menopause symptoms ended
+
+A doctor can check for other causes of night sweats [@mayo-night-sweats-when-to-see-doctor]. Keeping a record of your night sweats in our [symptom tracker](/tools/symptom-tracker/) can help you describe them at the appointment.
+
+:::questions
+- Could my night sweats have a cause other than menopause?
+- Would a treatment that reduces hot flashes, such as hormone therapy or a non-hormonal prescription, suit me?
+:::

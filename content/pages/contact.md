@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-07"
+updated_at: "2026-11-08"
 change_log:
+  - { date: "2026-11-08", summary: "Crisis lines: US first (911, 988 call or text), UK numbers on their own line", material: false }
   - { date: "2026-11-06", summary: "Published MenoVerdict contact and corrections intake guide", material: true }
   - { date: "2026-11-07", summary: "Consolidated to the one real mailbox (contact@menoverdict.com) instead of listing two addresses that were never set up", material: true }
 evidence_grade: null
@@ -36,8 +37,9 @@ We welcome questions about our sources, requests for corrections, accessibility 
 
 **MenoVerdict cannot provide medical advice or emergency support.** We are an editorial team, not a medical clinic, and we cannot answer questions about your personal symptoms, lab results, or prescriptions.
 
-- If you have severe or sudden symptoms (such as chest pain, shortness of breath, fainting, or heavy bleeding), seek emergency medical care immediately.
-- If you are in distress or thinking about harming yourself, visit our [crisis and urgent help page](/urgent-help/) for free, confidential 24/7 support lines in the US (`988`) and the UK (`116 123`).
+- If you have severe or sudden symptoms (such as chest pain, shortness of breath, fainting, or heavy bleeding), call 911 or seek emergency medical care immediately.
+- If you are in distress or thinking about harming yourself, call or text 988 (Suicide & Crisis Lifeline), free, confidential and 24/7. More support lines are on our [crisis and urgent help page](/urgent-help/).
+- If you're in the UK: call 999 for an emergency or NHS 111 for urgent medical help, and Samaritans are on 116 123, free and 24/7.
 
 ## How to reach us
 

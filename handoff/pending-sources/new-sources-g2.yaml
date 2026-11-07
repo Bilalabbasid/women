@@ -1,0 +1,123 @@
+# New sources from group g2 (waking-at-3am, brain-fog). Each one opened on 2026-11-08.
+# Also cited but NOT duplicated here: cdc-stroke-signs-2026 (already in new-sources-g5.yaml; g6 has the same URL as cdc-stroke-signs),
+# nhs-urgent-help-mental-health (already in new-sources-g3.yaml).
+
+- id: nia-sleep-problems-menopause
+  title: "Sleep Problems and Menopause: What Can I Do?"
+  authors: []
+  publisher: National Institute on Aging (NIH)
+  year: 2021
+  type: patient_information
+  url: https://www.nia.nih.gov/health/menopause/sleep-problems-and-menopause-what-can-i-do
+  doi: null
+  accessed: "2026-11-08"
+  population: Women in the menopausal transition (US)
+  key_finding: "Hot flashes, especially night sweats, and mood changes (depression in particular) can contribute to poor sleep. Lack of sleep can make you irritable or depressed and may make you more forgetful than normal; research suggests waking from sleep itself may trigger hot flashes, rather than the other way around. Over-the-counter sleep aids such as melatonin and prescription sleep medicines may help for a short time but are not a cure and should not be used long term. Tips: regular sleep schedule; avoid late-afternoon or evening naps; bedtime routine; no TV, computer or mobile device in the bedroom; bedroom at a comfortable temperature and quiet; regular exercise but not close to bedtime; avoid large meals close to bedtime; avoid caffeine late in the day; even small amounts of alcohol make it harder to stay asleep. If these changes don't help, consider cognitive behavioral therapy for insomnia, shown to improve sleep in women with menopausal symptoms."
+  funding_conflict: null
+  verified: true
+  notes: "Content reviewed September 30, 2021."
+
+- id: nia-sleep-older-adults
+  title: Sleep and Older Adults
+  authors: []
+  publisher: National Institute on Aging (NIH)
+  year: 2025
+  type: patient_information
+  url: https://www.nia.nih.gov/health/sleep/sleep-and-older-adults
+  doi: null
+  accessed: "2026-11-08"
+  population: Older adults (US)
+  key_finding: "If you have trouble sleeping, keep a sleep diary for a couple of weeks: when you go to bed, when you wake during the night and when you wake for the day, and whether you had caffeine or alcohol or exercised; it helps identify patterns to discuss with your doctor. Sleep apnea causes repeated breathing pauses during sleep; snoring can be a sign but not everyone who snores has it; if you suspect it, talk to your doctor, because undiagnosed or untreated sleep apnea can lead to serious health problems, including heart attack. Avoid caffeine late in the day and avoid alcohol, even small amounts."
+  funding_conflict: null
+  verified: true
+  notes: "Content reviewed February 6, 2025. The old URL /health/sleep/good-nights-sleep redirects here."
+
+- id: nia-memory-forgetfulness-aging
+  title: "Memory Problems, Forgetfulness, and Aging"
+  authors: []
+  publisher: National Institute on Aging (NIH)
+  year: 2023
+  type: patient_information
+  url: https://www.nia.nih.gov/health/memory-loss-and-forgetfulness/memory-problems-forgetfulness-and-aging
+  doi: null
+  accessed: "2026-11-08"
+  population: Older adults and the general public (US)
+  key_finding: "Signs it may be time to talk with a doctor: asking the same questions over and over; getting lost in places you used to know well; trouble following recipes or directions; becoming more confused about time, people and places; not taking care of yourself. Serious memory problems make it hard to do everyday things. Factors that may cause memory problems include head injury; blood clots, tumors or infections in the brain; thyroid, kidney or liver problems; medication side effects; depression and anxiety; alcohol or drug misuse; sleep problems; low levels of nutrients such as vitamin B12; stress. These usually go away once the condition is treated; if memory problems persist after a few weeks, talk with your doctor. Be cautious of pills, supplements and brain-training games that promise to improve memory or prevent brain disorders: they might be unsafe, a waste of money, or both, and might interfere with other treatments. Tips include a daily routine, to-do lists, calendars and notes, keeping keys and phone in the same place, enough sleep, exercise, controlling blood pressure and limiting alcohol."
+  funding_conflict: null
+  verified: true
+  notes: "Content reviewed November 22, 2023. Written for older adults, not menopause-specific."
+
+- id: nhlbi-sleep-apnea-symptoms
+  title: "Sleep Apnea: Symptoms"
+  authors: []
+  publisher: National Heart, Lung, and Blood Institute (NIH)
+  year: 2025
+  type: patient_information
+  url: https://www.nhlbi.nih.gov/health/sleep-apnea/symptoms
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (US)
+  key_finding: "Symptoms while asleep: breathing that starts and stops; frequent loud snoring (more common in men); gasping for air. Symptoms you may notice: daytime sleepiness and tiredness, which can lead to problems with learning, focusing and reacting; dry mouth; fatigue (more common in women); headache (more common in women); insomnia (more common in women); sexual dysfunction or decreased libido; waking up often during the night to urinate. Talk to your healthcare provider about your symptoms; you may need a sleep study."
+  funding_conflict: null
+  verified: true
+  notes: "Last updated January 9, 2025."
+
+- id: nimh-depression-booklet
+  title: Depression
+  authors: []
+  publisher: National Institute of Mental Health (NIH)
+  year: 2024
+  type: patient_information
+  url: https://www.nimh.nih.gov/health/publications/depression
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (US)
+  key_finding: "Signs and symptoms include persistent sad, anxious or 'empty' mood; loss of interest or pleasure; fatigue; difficulty concentrating, remembering or making decisions; difficulty sleeping, waking too early in the morning, or oversleeping; thoughts of death or suicide. Diagnosis requires symptoms most of the day, nearly every day, for at least 2 weeks. If you are struggling or having thoughts of suicide, call or text the 988 Suicide and Crisis Lifeline at 988; in life-threatening situations, call 911."
+  funding_conflict: null
+  verified: true
+  notes: "NIH Publication No. 24-MH-8079, revised 2024. The topic page https://www.nimh.nih.gov/health/topics/depression does not list the symptoms; cite this booklet instead."
+
+- id: young-menopause-sleep-disordered-breathing-2003
+  title: "Menopausal status and sleep-disordered breathing in the Wisconsin Sleep Cohort Study"
+  authors: [Young T, Finn L, Austin D, Peterson A]
+  publisher: American Journal of Respiratory and Critical Care Medicine
+  year: 2003
+  type: cohort
+  url: https://pubmed.ncbi.nlm.nih.gov/12615621/
+  doi: 10.1164/rccm.200209-1055OC
+  accessed: "2026-11-08"
+  population: "589 women in the population-based Wisconsin Sleep Cohort Study (US), with in-laboratory polysomnography"
+  key_finding: "Adjusted for age, body habitus, smoking and other confounders, odds ratios for 5 or more apnea/hypopnea events per hour were 1.2 (0.7-2.2) in perimenopause and 2.6 (1.4-4.8) in postmenopause versus premenopause; for 15 or more events per hour, 1.1 (0.5-2.2) and 3.5 (1.4-8.8). The authors conclude that evaluation for sleep-disordered breathing should be a priority for menopausal women with complaints of snoring, daytime sleepiness or unsatisfactory sleep."
+  funding_conflict: null
+  verified: true
+  notes: "Read via PubMed abstract (NCBI E-utilities). Cross-sectional analysis of a cohort; the perimenopause result was not significant."
+
+- id: baker-sleep-menopausal-transition-review-2018
+  title: "Sleep problems during the menopausal transition: prevalence, impact, and management challenges"
+  authors: [Baker FC, de Zambotti M, Colrain IM, Bei B]
+  publisher: Nature and Science of Sleep
+  year: 2018
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/29445307/
+  doi: 10.2147/NSS.S125807
+  accessed: "2026-11-08"
+  population: Women in the menopausal transition and postmenopause (narrative review)
+  key_finding: "26% of women in the approach to menopause and beyond have severe sleep symptoms that affect daytime functioning. Longitudinal studies link sleep difficulties with menopausal stage and changes in FSH and estradiol, beyond age. Many, though not all, hot flashes are linked with polysomnographic awakenings. Agreement between self-reported and objectively measured hot flashes is particularly low at night because of under-reporting. SWAN: women with moderate-to-severe hot flashes were almost three times more likely to report frequent night-time awakenings. Some sleep complaints are linked with depression or with sleep-related breathing and movement disorders, which increase in prevalence especially after menopause; stress, rumination and anxiety overlap with menopause-related insomnia. Limited data suggest an advanced circadian phase could contribute to fragmented sleep or early-morning awakening in postmenopausal women. CBT for insomnia should be considered for women with insomnia in the menopausal transition."
+  funding_conflict: "Authors report no conflicts of interest."
+  verified: true
+  notes: "Narrative review, so typed 'other'. Abstract read via NCBI E-utilities; full text read from PMC5810528."
+
+- id: de-zambotti-hot-flashes-sleep-2014
+  title: "Magnitude of the impact of hot flashes on sleep in perimenopausal women"
+  authors: [de Zambotti M, Colrain IM, Javitz HS, Baker FC]
+  publisher: Fertility and Sterility
+  year: 2014
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/25256933/
+  doi: 10.1016/j.fertnstert.2014.08.016
+  accessed: "2026-11-08"
+  population: "34 perimenopausal women (mean age 50.4) studied over 63 laboratory nights with polysomnography and sternal skin-conductance recording"
+  key_finding: "Women had an average of 3.5 objectively recorded hot flashes per night; 69.4% of hot flashes were associated with an awakening. Hot flash-associated time awake averaged 16.6 minutes a night, accounting for 27.2% of total awake time. The presence of physiological hot flashes accounts for a significant proportion of total objective night-time wakefulness."
+  funding_conflict: "One author (Colrain) reports grants with Apnicure Inc."
+  verified: true
+  notes: "Small cross-sectional sleep-lab study; weight it accordingly. Abstract read via NCBI E-utilities."

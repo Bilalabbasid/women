@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-07"
+updated_at: "2026-11-08"
 change_log:
+  - { date: "2026-11-08", summary: "Link text to the contact page now says where it goes", material: false }
   - { date: "2026-11-06", summary: "Initial publication of medical disclaimer", material: true }
   - { date: "2026-11-07", summary: "Added an explicit line that comparisons are not personal doctor or product recommendations", material: true }
 evidence_grade: null
@@ -63,4 +64,4 @@ More options are on our [urgent help page](/urgent-help/).
 
 ## Spotted a mistake?
 
-Please [tell us](/contact/). We check every report against the original sources and record corrections in our [corrections log](/evidence/updates/).
+Please [contact us](/contact/). We check every report against the original sources and record corrections in our [corrections log](/evidence/updates/).

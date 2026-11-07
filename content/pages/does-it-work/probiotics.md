@@ -1,6 +1,6 @@
 ---
 title: "Does probiotics work for menopause bone health?"
-seo_title: "Probiotics for Menopause: Bone Health Evidence"
+seo_title: "Probiotics for menopause: bone health evidence"
 meta_description: "What a 2024 meta-analysis of 12 trials found about probiotics and bone density in postmenopausal women, and what the evidence doesn't yet cover."
 cluster: does-it-work
 primary_keyword: probiotics menopause
@@ -17,55 +17,57 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-07"
+updated_at: "2026-11-08"
 change_log:
+  - { date: "2026-11-08", summary: "Sweep: verdict shown from the grade registry; corrected CTX and BALP to bone-turnover markers (BALP is not a breakdown marker); removed an unsourced claim about strains", material: true }
   - { date: "2026-11-07", summary: "Published evidence verdict on probiotics for postmenopausal bone health", material: true }
   - { date: "2026-11-07", summary: "Added inline citations to figures already sourced in the same paragraph", material: false }
 evidence_grade: moderate
 claims:
   - id: wang-probiotics-bmd-metaanalysis
-    text: "A 2024 systematic review and meta-analysis of 12 randomized controlled trials (1,183 postmenopausal women) found probiotic supplementation significantly increased bone mineral density at the lumbar spine (SMD 0.60, 95% CI 0.14-1.05) and hip (SMD 0.74, 95% CI 0.15-1.33), and reduced two bone-breakdown markers (CTX and BALP), compared with controls. The increase was more pronounced in women with osteopenia than those with osteoporosis. The authors still call for further RCTs to confirm and refine the findings."
+    text: "A 2024 systematic review and meta-analysis of 12 randomized controlled trials (1,183 postmenopausal women) found probiotic supplementation significantly increased bone mineral density at the lumbar spine (SMD 0.60, 95% CI 0.14-1.05) and hip (SMD 0.74, 95% CI 0.15-1.33), and reduced two bone-turnover markers (CTX and BALP), compared with controls. The increase was more pronounced in women with osteopenia than those with osteoporosis. The authors still call for further RCTs to confirm and refine the findings."
     sources: [wang-probiotics-bone-health-metaanalysis-2024]
 safety_flags: []
 cta_profile: diw_pending
 hub: /does-it-work/
-sources: [wang-probiotics-bone-health-metaanalysis-2024]
+sources: [wang-probiotics-bone-health-metaanalysis-2024, nams-2022-hormone-therapy]
 related: [/does-it-work/, /symptoms/digestive-changes/, /postmenopause/bone-health/, /tools/does-it-work-checker/]
 faq:
   - q: Do probiotics actually help bone density after menopause?
-    a: "This is a case where the evidence is better than many people expect. A 2024 meta-analysis of 12 randomized controlled trials (1,183 postmenopausal women) found probiotic supplementation significantly increased bone mineral density at both the lumbar spine and hip compared with controls, with the effect more pronounced in women with osteopenia (earlier bone loss) than full osteoporosis. That's a genuinely encouraging, moderate-strength finding — though the review authors still call for more research to confirm and refine the specific strains and doses that work best."
+    a: "The evidence is better than many people expect. A 2024 meta-analysis of 12 randomized controlled trials (1,183 postmenopausal women) found probiotic supplementation significantly increased bone density at both the lower spine and hip compared with controls. The effect was larger in women with osteopenia (earlier bone loss) than in women with osteoporosis. The review authors still call for more trials to confirm and refine the findings."
   - q: Do probiotics help with menopause-related bloating or digestive changes?
-    a: "This page focuses on the bone-health evidence, which is the area with the strongest menopause-specific research we could verify. Probiotics are separately studied for general digestive symptoms like IBS, but we don't have a menopause-specific claim to cite for bloating here — see our digestive changes page for what the research actually shows about perimenopausal digestive symptoms."
+    a: "This page covers the bone-health evidence, the area with the strongest menopause-specific research we could verify. We don't have a menopause-specific source on probiotics for bloating to cite here. See our digestive changes page for what the research shows about digestive symptoms around menopause."
 ---
 
-**Our verdict: Moderate evidence for bone density specifically — a genuinely useful finding, better than most menopause supplements on this site.**
+**Our verdict:** :grade{id="probiotics-bone"}, for bone density only. A 2024 review of 12 trials found probiotics raised bone density in postmenopausal women [@wang-probiotics-bone-health-metaanalysis-2024]. Hormone therapy has stronger evidence: it prevents bone loss and fractures [@nams-2022-hormone-therapy].
 
 Probiotics aren't usually the first thing that comes to mind for menopause, but the research on bone health is more substantial than for most of the "menopause supplement" category.
 
 ## What the meta-analysis actually found
 
-A 2024 systematic review and meta-analysis pooled **12 randomized controlled trials covering 1,183 postmenopausal women** to assess probiotic supplementation's effect on bone mineral density (BMD) and bone turnover markers [@wang-probiotics-bone-health-metaanalysis-2024]. Compared with controls, probiotic supplementation was associated with:
+A 2024 systematic review and meta-analysis pooled **12 randomized controlled trials covering 1,183 postmenopausal women** to see how probiotic supplements affect bone mineral density (bone density) and markers of bone turnover in the blood [@wang-probiotics-bone-health-metaanalysis-2024]. Compared with controls, probiotic supplementation was linked to:
 
-- A **statistically significant increase in lumbar spine BMD** (standardized mean difference 0.60, 95% CI 0.14–1.05) [@wang-probiotics-bone-health-metaanalysis-2024]
-- A **statistically significant increase in hip BMD** (standardized mean difference 0.74, 95% CI 0.15–1.33) [@wang-probiotics-bone-health-metaanalysis-2024]
-- **Reduced levels of two bone-breakdown markers** (CTX and BALP), suggesting less active bone loss
+- **Lower spine**: A statistically significant increase in bone density (standardized mean difference 0.60, 95% CI 0.14–1.05) [@wang-probiotics-bone-health-metaanalysis-2024].
+- **Hip**: A statistically significant increase in bone density (standardized mean difference 0.74, 95% CI 0.15–1.33) [@wang-probiotics-bone-health-metaanalysis-2024].
+- **Bone-turnover markers**: Lower levels of two of them, CTX and BALP [@wang-probiotics-bone-health-metaanalysis-2024].
 
-A subgroup analysis found the increase in BMD was **more pronounced in women with osteopenia** (an earlier stage of bone density loss) than in women who already had full osteoporosis [@wang-probiotics-bone-health-metaanalysis-2024]. The authors describe the results as robust across sensitivity analyses, while still calling for further trials to confirm and refine exactly which strains and doses work best [@wang-probiotics-bone-health-metaanalysis-2024].
+A subgroup analysis found the increase in bone density was **larger in women with osteopenia** (an earlier stage of bone loss) than in women who already had osteoporosis [@wang-probiotics-bone-health-metaanalysis-2024]. The results held up in sensitivity analyses, and the authors still call for further trials to confirm and refine the findings [@wang-probiotics-bone-health-metaanalysis-2024].
 
 ## Why this is a notable finding
 
-Unlike several other items on our [does it work? directory](/does-it-work/), this isn't a single small trial or a category-wide "not recommended" verdict — it's a meta-analysis of a reasonable number of trials with a consistent, statistically significant direction of effect on an objective, measurable outcome (bone density by scan, not just a symptom questionnaire). That's part of why we're grading this **Moderate** rather than Limited.
+Unlike several other items in our [does it work? directory](/does-it-work/), this isn't a single small trial or a guideline "not recommended" verdict. It's a meta-analysis of a reasonable number of trials, with a consistent, statistically significant effect on something measured by a scan (bone density), not just a symptom questionnaire. That's why its grade is higher than most supplements on this site.
 
-It's still not the same tier as established first-line osteoporosis treatments, and this evidence is specifically about **bone density**, not about hot flashes, mood, or other menopause symptoms — we're not extending this verdict beyond what the research actually tested.
+It is still not in the same league as established bone treatments. And this evidence is only about **bone density**, not hot flashes, mood or other menopause symptoms, so we don't extend the verdict beyond what the research tested.
 
 ## What to consider
 
-- **Strain matters**: the included trials used different probiotic strains and combinations, so there isn't yet one single confirmed "best" product
-- **This supports, not replaces, standard bone health steps** like adequate calcium, vitamin D, weight-bearing exercise, and any bone medication your doctor has prescribed
-- If bone health is your main concern, see our broader [bone health](/postmenopause/bone-health/) guide for the full picture alongside this specific finding
-- Compare this verdict against [collagen](/does-it-work/collagen/) and other options in our [does it work? evidence checker](/tools/does-it-work-checker/)
+- **No single proven product**: The review's summary doesn't name one strain, product or dose as the one that works, and the authors call for more trials to refine the findings [@wang-probiotics-bone-health-metaanalysis-2024].
+- **Safety and who should avoid them**: We haven't yet checked a source on probiotic side effects, interactions or who should avoid them, so we don't list them here. Ask your doctor or pharmacist before you start.
+- **Alongside, not instead of, your bone plan**: Keep up any bone treatment your doctor has prescribed. Our [bone health after menopause](/postmenopause/bone-health/) guide covers the full picture.
+
+Compare this verdict with other options in our [does it work? evidence checker](/tools/does-it-work-checker/).
 
 :::questions
-- Given my bone density results (or risk factors), would adding a probiotic alongside my current calcium, vitamin D, and exercise routine make sense?
-- Is there a specific probiotic strain or product the research actually used that I should look for on a label?
+- Given my bone density results (or risk factors), would adding a probiotic alongside my current bone plan make sense?
+- Which probiotic strains did the trials in this research use, and do any products match them?
 :::

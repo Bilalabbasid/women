@@ -1,0 +1,31 @@
+# New sources proposed by group g5 (opened and checked on 2026-11-08). Not yet in content/_sources/sources.yaml.
+
+- id: cdc-blood-clots-about-2025
+  title: About Venous Thromboembolism (Blood Clots)
+  authors: []
+  publisher: U.S. Centers for Disease Control and Prevention
+  year: 2025
+  type: patient_information
+  url: https://www.cdc.gov/blood-clots/about/index.html
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (US)
+  key_finding: "Most common DVT signs in the affected leg or arm are swelling, pain or tenderness, warmth, and redness or discoloration; anyone with these should see a doctor as soon as possible. Pulmonary embolism signs are difficulty breathing, a faster than normal or irregular heartbeat, chest pain or discomfort that usually worsens with a deep breath or coughing, cough or coughing up blood, and very low blood pressure, lightheadedness or fainting; anyone with these should seek medical help immediately. Increased estrogen levels are listed among risk factors."
+  funding_conflict: null
+  verified: true
+  notes: Page dated March 5, 2025. It does not mention calling 911 or hormone therapy by name.
+
+- id: cdc-stroke-signs-2026
+  title: Signs and Symptoms of Stroke
+  authors: []
+  publisher: U.S. Centers for Disease Control and Prevention
+  year: 2026
+  type: patient_information
+  url: https://www.cdc.gov/stroke/signs-symptoms/index.html
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (US)
+  key_finding: "Sudden stroke signs: numbness or weakness in the face, arm or leg, especially on one side of the body; confusion, trouble speaking or difficulty understanding speech; trouble seeing; trouble walking, dizziness, loss of balance or lack of coordination; severe headache with no known cause. Call 9-1-1 right away if you or someone else has any of these symptoms."
+  funding_conflict: null
+  verified: true
+  notes: Page dated May 19, 2026.

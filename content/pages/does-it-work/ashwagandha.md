@@ -1,7 +1,7 @@
 ---
 title: "Does ashwagandha help menopause symptoms?"
 seo_title: "Ashwagandha for Menopause: What the Evidence Shows"
-meta_description: "What a 2021 randomized trial found about ashwagandha for perimenopause symptoms, why one positive trial isn't the same as proven, and what to check before trying it."
+meta_description: "What small randomized trials found about ashwagandha for perimenopause and menopause symptoms, why the evidence is still limited, and the liver, thyroid and medication concerns to know first."
 cluster: does-it-work
 primary_keyword: ashwagandha menopause
 slug: ashwagandha
@@ -17,59 +17,85 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-07"
+updated_at: "2026-11-08"
 change_log:
+  - { date: "2026-11-08", summary: "Added three newer small trials, NIH safety information (liver, thyroid, interactions, pregnancy), doses used in studies, and a when-to-see-a-doctor section; removed unsourced claims", material: true }
   - { date: "2026-11-07", summary: "Published evidence verdict on ashwagandha for perimenopause symptoms", material: true }
 evidence_grade: limited
 claims:
   - id: gopal-ashwagandha-mrs-reduction
     text: "In an 8-week randomized, double-blind, placebo-controlled trial of 100 perimenopausal women (91 completed) given either placebo or 300mg ashwagandha root extract twice daily, ashwagandha was associated with a statistically significant reduction in total Menopause Rating Scale score (p<0.0001) and total MENQoL score (p<0.0001), plus a significant increase in serum estradiol and significant reductions in FSH and LH, with no significant change in testosterone."
     sources: [gopal-ashwagandha-perimenopause-2021]
+  - id: ashwagandha-later-small-trials
+    text: "Three later small randomized, placebo-controlled trials in India (60, 66 and 127 women; 56 days to 24 weeks) also reported lower menopause symptom scores with ashwagandha root extract than with placebo; one also reported fewer hot flash events."
+    sources: [vani-ashwagandha-menopause-rct-2026, obhrai-ashwagandha-postmenopause-rct-2026, pingali-ashwagandha-shatavari-rct-2025]
   - id: nams-supplement-caution-general
-    text: "The Menopause Society's 2023 position statement does not recommend over-the-counter supplements and herbal remedies generally for vasomotor symptoms (Levels I-II), reflecting a broader pattern of inconsistent trial results across the supplement category."
+    text: "The Menopause Society's 2023 position statement does not recommend over-the-counter supplements and herbal therapies for hot flashes (Levels I-II), citing a lack of rigorous research; it does not discuss ashwagandha by name."
     sources: [nams-2023-nonhormone-therapy]
-safety_flags: [medication_interactions]
+  - id: ods-ashwagandha-safety
+    text: "Ashwagandha appears well tolerated for up to about 3 months, but its long-term safety is unknown; case reports link it to liver injury and thyrotoxicosis, and it might interact with thyroid, diabetes, blood pressure, immunosuppressant and sedative medicines."
+    sources: [ods-ashwagandha-hp-2025]
+safety_flags: [medication_interactions, pregnancy, urgent_symptoms]
 cta_profile: diw_pending
 hub: /does-it-work/
-sources: [gopal-ashwagandha-perimenopause-2021, nams-2023-nonhormone-therapy]
+sources: [gopal-ashwagandha-perimenopause-2021, vani-ashwagandha-menopause-rct-2026, obhrai-ashwagandha-postmenopause-rct-2026, pingali-ashwagandha-shatavari-rct-2025, nams-2023-nonhormone-therapy, nams-2022-hormone-therapy, ods-ashwagandha-hp-2025]
 related: [/does-it-work/, /does-it-work/black-cohosh/, /symptoms/hot-flashes/, /symptoms/insomnia/, /tools/does-it-work-checker/]
 faq:
   - q: Does ashwagandha actually help with menopause symptoms?
-    a: "One 8-week randomized, placebo-controlled trial of 100 perimenopausal women found a statistically significant reduction in overall menopause symptom scores with ashwagandha compared to placebo, plus favorable changes in estradiol, FSH, and LH. That's a genuinely positive result — but it's one trial, and a single positive trial isn't the same as an evidence base guideline bodies have reviewed and endorsed, the way they have for options like CBT or certain prescription medications."
-  - q: Why isn't ashwagandha rated higher if the trial was positive?
-    a: "We grade based on the overall weight of evidence, not just whether one trial succeeded. The Menopause Society's broad position on over-the-counter herbal supplements for hot flashes is that they aren't recommended, reflecting how often single positive trials in this category fail to replicate. Until ashwagandha specifically has been evaluated by a systematic review or confirmed in independent, larger trials, we're rating it Limited rather than citing the one trial as settled proof."
+    a: "Possibly. Four small randomized trials from India, with 60 to 127 women each and lasting 8 to 24 weeks, found lower menopause symptom scores with ashwagandha root extract than with a placebo. One of them also counted fewer hot flashes. But the trials were small and short, used different extracts and doses, and haven't been confirmed by larger or longer studies."
+  - q: Why isn't ashwagandha rated higher if the trials were positive?
+    a: "We grade on the overall weight of evidence. The trials so far are small, short and all from one country, and The Menopause Society's 2023 statement does not recommend any over-the-counter supplements or herbal therapies for hot flashes because rigorous research is lacking. There are also safety questions: the NIH notes case reports of liver injury and thyroid problems, and long-term safety is unknown."
+  - q: Is ashwagandha safe to take during menopause?
+    a: "The NIH Office of Dietary Supplements says it appears well tolerated for up to about 3 months, with mostly mild side effects such as stomach upset, loose stools, nausea and drowsiness. Its long-term safety is not known, it has been linked to rare cases of liver injury and thyroid problems, and it might interact with several common medicines. Check with your doctor or pharmacist first."
 ---
 
-**Our verdict: Limited evidence — one positive trial, not yet independently confirmed.**
+Ashwagandha is an herbal supplement made from the root of a shrub used in traditional Indian medicine [@ods-ashwagandha-hp-2025]. A few small, short trials found it eased menopause symptoms more than a dummy pill, but it has been linked to rare liver and thyroid problems [@gopal-ashwagandha-perimenopause-2021; @ods-ashwagandha-hp-2025]. For hot flashes, hormone therapy has the strongest evidence [@nams-2022-hormone-therapy].
 
-Unlike several menopause supplements where trials consistently show no benefit over placebo, ashwagandha (*Withania somnifera*) actually has a real randomized trial behind it with a positive result. That makes it worth a genuinely different conversation than, say, [black cohosh](/does-it-work/black-cohosh/) — but one positive trial still isn't the same as settled, guideline-reviewed evidence.
+**Our verdict:** :grade{id="ashwagandha"}. The early trials are positive, but they are small and short, and there are some safety questions about the liver and thyroid.
 
-## What the trial actually found
+Its plant name is *Withania somnifera* [@ods-ashwagandha-hp-2025]. Unlike [black cohosh](/does-it-work/black-cohosh/), which The Menopause Society says lacks evidence for hot flashes [@nams-2023-nonhormone-therapy], ashwagandha has several menopause trials with positive results. That makes it worth a closer look, but not yet a proven treatment.
 
-An 8-week, randomized, double-blind, placebo-controlled trial gave 100 women with climacteric (perimenopause) symptoms either a placebo or 300 mg of ashwagandha root extract twice daily; 91 completed the study [@gopal-ashwagandha-perimenopause-2021]. Compared with placebo, the ashwagandha group showed:
+## What the trials found
 
-- A **statistically significant reduction in total Menopause Rating Scale (MRS) score** (p<0.0001), across psychological, somato-vegetative, and urogenital symptom domains
-- A **statistically significant reduction in menopause-specific quality of life (MENQoL) scores** (p<0.0001)
-- A **significant increase in serum estradiol** and **significant reductions in FSH and LH** (the pituitary hormones that rise as ovarian estrogen production declines)
-- **No significant change in testosterone** between groups
+All four trials were run in India. In each one, women were picked at random to get ashwagandha or a dummy pill (placebo), and neither they nor the researchers knew who got which:
 
-The researchers concluded ashwagandha root extract "can be a safe and effective option to relieve mild to moderate climacteric symptoms" [@gopal-ashwagandha-perimenopause-2021].
+- **Perimenopause, 8 weeks (2021)**: 100 women took 300 mg of root extract twice a day or a placebo; 91 finished. The ashwagandha group had lower total Menopause Rating Scale scores (covering mood, physical, and bladder and vaginal symptoms) and better menopause quality-of-life scores. They also had higher estrogen (estradiol) levels and lower levels of two pituitary hormones, FSH and LH, with no change in testosterone [@gopal-ashwagandha-perimenopause-2021].
+- **Menopause, 56 days (2026)**: 60 women aged 45 to 55 took 300 mg twice a day or a placebo. The ashwagandha group had lower symptom scores, fewer hot flash events, lower stress scores and better quality of life, plus higher estrogen and progesterone and lower FSH and LH [@vani-ashwagandha-menopause-rct-2026].
+- **Postmenopause, 12 weeks (2026)**: 66 women aged 45 to 65 took 600 mg a day or a placebo; 63 finished. The ashwagandha group improved more in sleep quality and menopause symptom scores and lost slightly more body fat. Bone density did not differ between groups [@obhrai-ashwagandha-postmenopause-rct-2026].
+- **Postmenopause, 24 weeks (2025)**: 127 women aged 40 to 55 were split into six groups, including placebo and 250 mg or 500 mg of ashwagandha a day. The supplement groups had fewer menopause symptoms on a quality-of-life questionnaire, with bigger changes at higher doses. This trial was funded by a company, Natreon, Inc. [@pingali-ashwagandha-shatavari-rct-2025].
 
-## Why we're not calling this "proven" yet
+## Why the evidence is still thin
 
-This is a real, reasonably well-designed trial — randomized, double-blind, and placebo-controlled, which puts it well above testimonial-level evidence. But our evidence grading isn't based on any single trial, however well it's designed: it's based on the overall weight of evidence a treatment has accumulated, including independent replication and review by clinical guideline bodies.
+- **Small and short**: The trials enrolled 60 to 127 women and lasted 8 to 24 weeks. The NIH says ashwagandha's safety over many months or years is not known [@ods-ashwagandha-hp-2025].
+- **Different products and doses**: Each trial used its own extract and dose. The NIH notes that because studies use different preparations and doses, it's hard to say which extract or amount works [@ods-ashwagandha-hp-2025].
+- **No guideline support yet**: The Menopause Society's 2023 statement does not recommend any over-the-counter supplements or herbal therapies for hot flashes, because rigorous research is lacking. It does not discuss ashwagandha by name, and three of the four trials above were published after it [@nams-2023-nonhormone-therapy].
+- **Supplement quality varies**: The same statement points out that no government regulation ensures supplements' purity and safety [@nams-2023-nonhormone-therapy].
 
-On that broader measure, ashwagandha hasn't yet cleared the bar. The Menopause Society's 2023 position statement on non-hormone therapies does not recommend over-the-counter supplements and herbal remedies generally for vasomotor symptoms, a conclusion driven by a pattern across the supplement category of individual trials showing benefit that don't hold up under independent replication or larger follow-up studies [@nams-2023-nonhormone-therapy]. We can't yet say whether ashwagandha specifically will follow that same pattern or buck it — that's exactly why we're grading it **Limited** rather than treating one positive trial as the final word.
+## Doses used in studies
 
-## What to check before trying it
+The trials used 300 mg of root extract twice a day [@gopal-ashwagandha-perimenopause-2021; @vani-ashwagandha-menopause-rct-2026], 600 mg a day [@obhrai-ashwagandha-postmenopause-rct-2026], or 250 to 500 mg a day [@pingali-ashwagandha-shatavari-rct-2025]. These are the amounts studied, not a recommended dose, and products sold in stores may not match them.
 
-- **Medication interactions**: ashwagandha can interact with thyroid medication, sedatives, and immunosuppressants — tell your doctor if you're on any of these
-- **Dose used in the trial**: 300 mg twice daily of a standardized root extract; products vary widely in concentration and standardization
-- **It's not evaluated for safety in pregnancy or with hormone-sensitive conditions** in this trial, so discuss your full health history first
+## Safety, interactions and who should be careful
 
-If you want options with a larger, independently reviewed evidence base for hot flashes specifically, see our [does it work? evidence checker](/tools/does-it-work-checker/) or explore [non-hormonal prescription options](/treatments/nonhormonal/).
+- **Common side effects**: Usually mild, such as stomach upset, loose stools, nausea and drowsiness [@ods-ashwagandha-hp-2025].
+- **Liver injury**: Case reports link ashwagandha to acute liver injury, including in some people who already had liver disease. Not every case confirmed what the product contained, and some were combination products [@ods-ashwagandha-hp-2025].
+- **Thyroid effects**: Ashwagandha may raise thyroid hormone levels. Three case reports describe thyrotoxicosis (too much thyroid hormone) in women taking it, which went away after they stopped [@ods-ashwagandha-hp-2025].
+- **Medication interactions**: It might interact with thyroid hormone medicine, diabetes medicines, blood pressure medicines, medicines that dampen the immune system (immunosuppressants) and sedatives [@ods-ashwagandha-hp-2025].
+- **Pregnancy and breastfeeding**: Some experts advise against it in pregnancy. France's food safety agency recommended against it for pregnant and breastfeeding women and people with hormone (endocrine) disorders, and Denmark banned it in 2023 [@ods-ashwagandha-hp-2025].
+- **Hormone-sensitive conditions**: Two trials found higher estrogen levels with ashwagandha [@gopal-ashwagandha-perimenopause-2021; @vani-ashwagandha-menopause-rct-2026]. If you have a condition affected by hormones, ask your doctor before trying it.
+
+## When to see a doctor
+
+:::urgent
+Stop taking ashwagandha and contact a doctor promptly if you notice possible signs of liver injury: yellowing of the skin or eyes (jaundice), itching, nausea, unusual tiredness, or stomach discomfort. These were the signs seen in reported cases, and people improved after stopping the supplement [@ods-ashwagandha-hp-2025].
+:::
+
+Talk with your doctor or pharmacist before starting ashwagandha if you take any of the medicines listed above, have a thyroid or liver condition, or are pregnant or breastfeeding [@ods-ashwagandha-hp-2025].
+
+If hot flashes are your main problem, guideline-recommended [non-hormonal prescription options](/treatments/nonhormonal/) are graded :grade{id="nonhormonal-rx-vms"} [@nams-2023-nonhormone-therapy]. You can compare other options in our [does it work? evidence checker](/tools/does-it-work-checker/).
 
 :::questions
-- Given the trial's hormonal findings (higher estradiol, lower FSH/LH), could ashwagandha interact with any hormone-sensitive condition I have?
+- Given the trials' hormone findings (higher estrogen, lower FSH and LH), could ashwagandha affect any condition I have?
+- Could ashwagandha interact with my thyroid, diabetes, blood pressure or other medicines?
 - Would it be reasonable to try this alongside, or instead of, a guideline-recommended option for my main symptoms?
 :::

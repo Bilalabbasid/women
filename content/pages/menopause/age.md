@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-08"
 change_log:
+  - { date: "2026-11-08", summary: "Plain short answer; removed an unsourced 16.7% figure; cited every number", material: true }
   - { date: "2026-11-06", summary: "Published guide on the average age of menopause", material: true }
 evidence_grade: strong
 claims:
@@ -43,9 +44,11 @@ faq:
     a: "A national survey found several factors associated with earlier menopause, including smoking, poverty, and Black or Hispanic race/ethnicity, while more years of education and oral contraceptive use were linked to later menopause and a longer reproductive life span. These are population-level associations, not individual predictions."
 ---
 
-The **average age of natural menopause** in the US, based on a national survey spanning 60 years of data (1959-1962 through 2015-2018), was **49.9 years** in the most recent survey period — a small but statistically significant increase from **48.4 years** in 1959-1962 [@appiah-menopause-age-trends-2021]. Over that same period, the average reproductive life span (from first period to menopause) grew from 35.0 to 37.1 years.
+In the US, the average age of natural menopause is about 50. A national survey found it was 49.9 years in 2015-2018, up from 48.4 years in 1959-1962 [@appiah-menopause-age-trends-2021]. Your own timing can be earlier or later, so your own cycle changes tell you more than the average.
 
-"Average" describes a population, not a prediction for you individually — the same study found meaningful variation tied to specific factors.
+The survey covered 60 years of data. Over that time, the average reproductive life span (from first period to menopause) grew from 35.0 to 37.1 years [@appiah-menopause-age-trends-2021].
+
+"Average" describes a population, not a prediction for you. The same study found real differences linked to specific factors.
 
 ## What's linked to earlier or later menopause
 
@@ -58,7 +61,7 @@ These are population-level associations observed in survey data, not causal pred
 
 ## How common is menopause before 45?
 
-Not rare. The same survey found **11.8%** of women with natural menopause reported it occurring between ages 40 and 45 ("early menopause" in this study's definition) in the most recent period, down from 16.7% decades earlier [@appiah-menopause-age-trends-2021]. See our dedicated [early menopause](/groups/early-menopause/) guide if this applies to you, or our [premature ovarian insufficiency](/groups/premature-ovarian-insufficiency/) guide if your periods stopped before age 40.
+Not rare. The same survey found **11.8%** of women with natural menopause reported it occurring between ages 40 and 45 ("early menopause" in this study's definition) in the most recent period (2015-2018) [@appiah-menopause-age-trends-2021]. See our dedicated [early menopause](/groups/early-menopause/) guide if this applies to you, or our [premature ovarian insufficiency](/groups/premature-ovarian-insufficiency/) guide if your periods stopped before age 40.
 
 ## Why this number matters less than your own pattern
 

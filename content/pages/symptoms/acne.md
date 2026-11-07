@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-07"
+updated_at: "2026-11-08"
 change_log:
+  - { date: "2026-11-08", summary: "Sweep: plain short answer, cited the comorbidity check and topical-therapy caution, softened the contraceptive explanation to what the review says", material: true }
   - { date: "2026-11-07", summary: "Published evidence guide on menopausal acne", material: true }
 evidence_grade: per_option
 claims:
@@ -31,6 +32,9 @@ claims:
   - id: khunger-treatment-approach
     text: "In mild menopausal acne without virilization, prolonged topical therapy is the mainstay of treatment. Combined oral contraceptives are effective for hormonal acne generally but are relatively contraindicated in the postmenopausal period; spironolactone is the first-choice oral anti-androgen for patients who need systemic therapy."
     sources: [khunger-mehrotra-menopausal-acne-2019]
+  - id: khunger-comorbidities-and-topical-caution
+    text: "Women with menopausal acne should also be evaluated for associated conditions such as obesity, diabetes, hypertension and dyslipidemia. Topical therapies should be chosen with care because they can cause dryness and irritation in older women."
+    sources: [khunger-mehrotra-menopausal-acne-2019]
 safety_flags: []
 cta_profile: skin_hair
 hub: /symptoms/
@@ -42,28 +46,28 @@ faq:
   - q: Do I need blood tests for new acne after 45?
     a: "Usually not, if it's a few isolated lesions. The review notes most menopausal women with mild, isolated acne have normal androgen levels and don't need extensive testing. Baseline testosterone testing becomes more useful when acne is more severe or comes with other signs like new hirsutism, scalp hair thinning, or irregular periods, which can point toward a different underlying cause."
   - q: Can I take the birth control pill for menopausal acne?
-    a: "Combined oral contraceptives are effective for hormonal acne in general, but the same review notes they are relatively contraindicated during the postmenopausal period, largely due to the cardiovascular and clotting risks of estrogen-containing contraceptives rising with age. Ask your doctor about alternatives like topical treatment or spironolactone instead."
+    a: "Combined oral contraceptives are effective for hormonal acne in general, but the same review notes they are relatively contraindicated during the postmenopausal period, because the risk of side effects is greater after menopause. Ask your doctor about alternatives like topical treatment or spironolactone instead."
 ---
 
-Breaking out for the first time in decades — or seeing old acne return — is a genuinely recognized pattern around [menopause](/menopause/), not just a coincidence of stress or skincare habits. A 2019 dermatology review describes **menopausal acne** as a distinct subtype with its own evaluation and treatment considerations [@khunger-mehrotra-menopausal-acne-2019].
+Acne can appear for the first time, or come back, around menopause, and a 2019 dermatology review treats menopausal acne as its own recognized type [@khunger-mehrotra-menopausal-acne-2019]. Most women with a few spots don't need blood tests [@khunger-mehrotra-menopausal-acne-2019]. For mild acne, long-term treatment applied to the skin is the main approach [@khunger-mehrotra-menopausal-acne-2019].
 
 ## Why it happens
 
-The review describes the cause as **multifactorial**, with hormonal imbalance as the major driver: as estrogen falls faster than androgens (male hormones) during the menopause transition, the *relative* balance shifts toward androgen influence — even without androgen levels actually rising [@khunger-mehrotra-menopausal-acne-2019]. This relative shift can also show up alongside [new facial hair](/symptoms/facial-hair/) or scalp thinning, since all three are driven by the same androgen-to-estrogen balance.
+The review describes the cause as having **several causes** (multifactorial), with hormonal imbalance as the major driver: as estrogen falls faster than androgens (male hormones) during the menopause transition, the *relative* balance shifts toward androgen influence — even without androgen levels actually rising [@khunger-mehrotra-menopausal-acne-2019]. This relative shift can also show up alongside [new facial hair](/symptoms/facial-hair/) or scalp thinning, since all three are driven by the same androgen-to-estrogen balance.
 
 Other contributors the review identifies include **thyroid abnormalities, elevated prolactin, and insulin resistance**, plus everyday triggers like genetics, stress, dietary changes, poor sleep, and reduced exercise [@khunger-mehrotra-menopausal-acne-2019].
 
 ## When testing is actually useful
 
-Most women with a handful of isolated acne lesions and no other symptoms have **normal androgen levels** and don't need extensive lab work [@khunger-mehrotra-menopausal-acne-2019]. Baseline total testosterone testing becomes more relevant when acne is more severe, or comes with other features — such as new or worsening hirsutism, hair thinning at the crown, or (if you're still cycling) irregular periods — that could point toward conditions like polycystic ovary syndrome or late-onset congenital adrenal hyperplasia [@khunger-mehrotra-menopausal-acne-2019]. Associated conditions worth screening for include obesity, diabetes, high blood pressure, and abnormal cholesterol.
+Most women with a handful of isolated acne lesions and no other symptoms have **normal androgen levels** and don't need extensive lab work [@khunger-mehrotra-menopausal-acne-2019]. Baseline total testosterone testing becomes more relevant when acne is more severe, or comes with other features — such as new or worsening hirsutism, hair thinning at the crown, or (if you're still cycling) irregular periods — that could point toward conditions like polycystic ovary syndrome or late-onset congenital adrenal hyperplasia (an inherited adrenal gland condition) [@khunger-mehrotra-menopausal-acne-2019]. The review also says doctors should check for related conditions such as obesity, diabetes, high blood pressure, and high cholesterol [@khunger-mehrotra-menopausal-acne-2019].
 
 ## What has evidence behind it
 
 | Option | Who it may suit | Key caution |
 | --- | --- | --- |
-| **Topical therapy** (retinoids, benzoyl peroxide, etc.) | Mild acne without signs of androgen excess; the mainstay first-line approach [@khunger-mehrotra-menopausal-acne-2019] | May take weeks to show improvement; can cause dryness or irritation |
+| **Topical therapy** (retinoids, benzoyl peroxide, etc.) | Mild acne without signs of androgen excess; the mainstay first-line approach [@khunger-mehrotra-menopausal-acne-2019] | Can cause dryness and irritation in older skin, so products need choosing with care [@khunger-mehrotra-menopausal-acne-2019] |
 | **Combined oral contraceptives** | Effective for hormonal acne broadly | Relatively contraindicated after menopause [@khunger-mehrotra-menopausal-acne-2019] |
-| **Spironolactone** | First-choice oral anti-androgen when systemic therapy is needed [@khunger-mehrotra-menopausal-acne-2019] | Prescription only; requires monitoring |
+| **Spironolactone** | First-choice oral anti-androgen when systemic therapy is needed [@khunger-mehrotra-menopausal-acne-2019] | Prescription only |
 | **Procedural treatment** (e.g., chemical peels, lasers) | Can also help concurrent acne scarring and skin aging [@khunger-mehrotra-menopausal-acne-2019] | Cost and access vary; discuss with a dermatologist |
 
 Lifestyle changes the review highlights as supportive, not standalone fixes on their own, include reducing stress, managing weight, eating a balanced diet, exercising, and following a consistent, non-irritating skincare routine [@khunger-mehrotra-menopausal-acne-2019].

@@ -1,0 +1,18 @@
+# New sources proposed by group g7 (fezolinetant, elinzanetant pages). Merge into content/_sources/sources.yaml.
+# Duplicate check: no existing entry has a dailymed.nlm.nih.gov URL or NDA 219469; the only Lynkuet entry is
+# lynkuet-approval-bayer-2025 (press release), whose own notes ask for this label to be added.
+
+- id: lynkuet-prescribing-information
+  title: LYNKUET (elinzanetant) capsules, prescribing information
+  authors: []
+  publisher: Bayer HealthCare Pharmaceuticals Inc. (FDA-approved label, via DailyMed, U.S. National Library of Medicine)
+  year: 2026
+  type: regulator_label
+  url: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f42884ff-7dff-419c-8a0c-affe2ed73818
+  doi: null
+  accessed: "2026-11-08"
+  population: Adults with moderate to severe vasomotor symptoms due to menopause (OASIS 1, 2 and 3 trials; 1,420 women in the safety set)
+  key_finding: "NK1 and NK3 receptor antagonist indicated for moderate to severe vasomotor symptoms due to menopause. Dose: 120 mg (two 60 mg capsules) once daily at bedtime; 60 mg with moderate CYP3A4 inhibitors; avoid strong CYP3A4 inhibitors, grapefruit juice and moderate/strong CYP3A4 inducers. Contraindicated in pregnancy (may cause pregnancy loss or stillbirth; exclude pregnancy first, effective contraception during and for 2 weeks after). Warnings: CNS depressant effect and daytime impairment (nervous system effects 11.9% vs 3.5% placebo); hepatic transaminase elevations (baseline liver tests, do not start if ALT/AST or total bilirubin is 2 or more times ULN, follow-up at 3 months; 0.6% vs 0.4% had ALT/AST 3 or more times ULN up to 12 weeks); pregnancy loss; seizure (added 08/2026). No boxed warning. Most frequent adverse reactions (5% or more): headache, fatigue, dizziness, somnolence. Efficacy: OASIS 1 and 2 randomized 796 women (at least 50 moderate to severe hot flashes per week) 1:1 to 120 mg or placebo for 12 weeks; frequency fell by about 3.2 more hot flashes per day than placebo at week 12 (difference -3.22 and -3.24), with significant reductions in frequency and severity at weeks 4 and 12. Safety: 1,420 women across OASIS 1-3, including 627 in the 52-week OASIS 3 study. Not recommended with end-stage renal disease or moderate to severe hepatic impairment."
+  funding_conflict: Manufacturer-issued label (FDA-approved text)
+  verified: true
+  notes: "Label revised 08/2026 (DailyMed 'Updated June 16, 2026' header; Section 5.4 seizure warning is a recent major change, 08/2026). NDA 219469; marketing start 10/24/2025. The original 2025 label PDF (https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/219469s000lbl.pdf) was also opened but predates the seizure warning; cite the DailyMed label. Doses are for reference only; pages never give individual dosing advice. Once merged, the elinzanetant-vms grade in grades.json could cite this label instead of the press release."

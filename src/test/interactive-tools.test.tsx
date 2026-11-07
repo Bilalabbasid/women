@@ -9,7 +9,6 @@ beforeEach(async () => {
   window.localStorage.clear();
   await LocalDataService.purgeAllData();
 });
-import { StageGuide } from '@/components/tools/stage-guide';
 import { DoesItWorkChecker } from '@/components/tools/does-it-work-checker';
 import { TreatmentQuestionsBuilder } from '@/components/tools/treatment-questions';
 import { TwelveMonthCounter, calculateTwelveMonthWindow } from '@/components/tools/twelve-month-counter';
@@ -30,50 +29,7 @@ describe('tool logic registry', () => {
   });
 });
 
-describe('StageGuide UI', () => {
-  it('explains STRAW+10 early transition without diagnosing, autosaves on device, and clears on request', async () => {
-    render(<StageGuide />);
-    fireEvent.click(screen.getByLabelText('45 or over'));
-    fireEvent.click(screen.getByLabelText(/Shifting — cycle length has varied by 7 days or more/));
-    const region = screen.getByRole('region', { name: /How guidelines describe your answers/i });
-    expect(region.textContent).toMatch(/Early Menopausal Transition/i);
-    expect(region.textContent).toMatch(/cannot diagnose/i);
-    expect(region.textContent).not.toMatch(/\byou have\b|\byou should take\b/i);
-
-    await waitFor(async () => expect((await ToolRecords.getDraft('stage-guide'))?.data).toMatchObject({ ageGroup: '45_plus' }), { timeout: 2000 });
-
-    fireEvent.click(screen.getByRole('button', { name: 'Clear my answers' }));
-    await waitFor(async () => expect(await ToolRecords.getDraft('stage-guide')).toBeUndefined());
-  });
-
-  it('restores saved answers after a reload and keeps a dated history entry', async () => {
-    const { unmount } = render(<StageGuide />);
-    fireEvent.click(screen.getByLabelText('40 to 44'));
-    await waitFor(async () => expect(await ToolRecords.getDraft('stage-guide')).toBeDefined(), { timeout: 2000 });
-
-    fireEvent.change(screen.getByLabelText('Date'), { target: { value: '2026-05-01' } });
-    fireEvent.click(screen.getByRole('button', { name: 'Save this answer set' }));
-    await screen.findByText(/Saved your answer set for May 1, 2026/);
-
-    unmount();
-    cleanup();
-    render(<StageGuide />);
-    await waitFor(() => expect(screen.getByLabelText('40 to 44')).toBeChecked());
-    expect(await screen.findByText('May 1, 2026', undefined, { timeout: 4000 })).toBeInTheDocument();
-
-    fireEvent.click(screen.getByRole('button', { name: /^Delete\s*the answer set from May 1, 2026$/ }));
-    fireEvent.click(screen.getByRole('button', { name: 'Yes, delete' }));
-    await waitFor(async () => expect(await ToolRecords.listEntries('stage-guide')).toEqual([]));
-  });
-
-  it('shows both 988 (US) and Samaritans 116 123 (UK) when self-harm red flag is ticked', () => {
-    render(<StageGuide />);
-    fireEvent.click(screen.getByLabelText(/thoughts of harming yourself/i));
-    const urgent = screen.getByRole('region', { name: 'Urgent guidance' });
-    expect(urgent.textContent).toMatch(/988/);
-    expect(urgent.textContent).toMatch(/116 123/);
-  });
-});
+// StageGuide UI tests live in stage-guide.test.tsx.
 
 describe('DoesItWorkChecker UI', () => {
   it('filters evidence verdicts and saves shortlist items on device without prescribing', async () => {

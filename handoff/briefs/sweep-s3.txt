@@ -1,0 +1,17 @@
+menopause/age.md
+menopause/diagnosis.md
+menopause/how-long-symptoms-last.md
+menopause/index.md
+perimenopause/age.md
+perimenopause/blood-tests.md
+perimenopause/contraception.md
+perimenopause/heavy-periods.md
+perimenopause/how-long.md
+perimenopause/in-your-30s.md
+perimenopause/index.md
+perimenopause/irregular-periods.md
+perimenopause/pregnancy.md
+perimenopause/questions-for-your-doctor.md
+perimenopause/stages.md
+perimenopause/when-to-see-a-doctor.md
+perimenopause/year-by-year.md

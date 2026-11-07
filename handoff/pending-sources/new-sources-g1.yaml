@@ -1,0 +1,124 @@
+# New sources for group g1 (symptoms/hot-flashes.md, symptoms/night-sweats.md).
+# Each page below was opened on 2026-11-08 and the key finding checked against the page text.
+
+- id: nia-what-is-menopause
+  title: What Is Menopause?
+  authors: []
+  publisher: National Institute on Aging (NIH)
+  year: 2024
+  type: patient_information
+  url: https://www.nia.nih.gov/health/menopause/what-menopause
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (US)
+  key_finding: "Hot flashes and night sweats (vasomotor symptoms) are among the most common symptoms of menopause. A hot flash is a sudden feeling of heat, most often in the upper body and face; the face and neck may flush, red blotches may appear on the chest, back and arms, and heavy sweating and cold shivering can follow. Night sweats are hot flashes that occur during the night and may disrupt sleep. Most hot flashes last between 30 seconds and 10 minutes and can happen several times an hour, a few times a day, or just once or twice a week. Women concerned by menopausal symptoms should talk with a doctor about lifestyle changes or medications that might help."
+  funding_conflict: null
+  verified: true
+  notes: Content reviewed October 16, 2024.
+
+- id: nia-hot-flashes-what-can-i-do
+  title: "Hot Flashes: What Can I Do?"
+  authors: []
+  publisher: National Institute on Aging (NIH)
+  year: 2021
+  type: patient_information
+  url: https://www.nia.nih.gov/health/menopause/hot-flashes-what-can-i-do
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (US)
+  key_finding: "When hot flashes happen at night they are called night sweats. Lifestyle steps: if hot flashes keep you up at night, lower the bedroom temperature, try drinking small amounts of cold water before bed, layer bedding so it can be adjusted, and turn on a fan; dress in layers that can be removed at the start of a hot flash; carry a portable fan; avoid alcohol, spicy foods and caffeine, which can make menopausal symptoms worse; quit smoking; maintain a healthy weight. Note what triggers hot flashes. Black cohosh, DHEA and soy isoflavones are not proven to be effective, and some carry risks such as liver damage."
+  funding_conflict: null
+  verified: true
+  notes: "Content reviewed September 30, 2021. Its hormone therapy section still says 'lowest dose, for the shortest period of time', which predates the FDA's 2025 labeling change; do not cite this page for hormone therapy dosing or duration."
+
+- id: medlineplus-sweating
+  title: Sweating
+  authors: []
+  publisher: MedlinePlus Medical Encyclopedia (U.S. National Library of Medicine)
+  year: 2025
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/003218.htm
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (US)
+  key_finding: "Causes of sweating include alcohol, caffeine, cancer, anxiety, fever, infection, low blood sugar (hypoglycemia), some medicines (such as thyroid hormone, morphine, fever reducers and medicines for mental disorders), menopause, spicy foods, warm temperatures, and withdrawal from alcohol, sedatives or narcotic painkillers. Contact a provider if sweating occurs with chest pain, fever, a rapid pounding heartbeat, shortness of breath or weight loss, which may indicate a problem such as an overactive thyroid or an infection; also if you sweat a lot, sweating lasts a long time or cannot be explained, sweating occurs with or is followed by chest pain or pressure, or you lose weight from sweating or often sweat during sleep."
+  funding_conflict: null
+  verified: true
+  notes: Review date 5/19/2025.
+
+- id: medlineplus-flushing
+  title: Skin blushing / flushing
+  authors: []
+  publisher: MedlinePlus Medical Encyclopedia (U.S. National Library of Medicine)
+  year: 2025
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/003241.htm
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (US)
+  key_finding: "Flushing is a sudden reddening of the face, neck or upper chest due to increased blood flow. Causes include high fever, menopause, rosacea, carcinoid syndrome, alcohol use, certain medicines used to treat diabetes and high cholesterol, exercise, extreme emotions, hot or spicy foods, and rapid changes in temperature or heat exposure. Contact a provider for persistent flushing, especially with other symptoms such as diarrhea."
+  funding_conflict: null
+  verified: true
+  notes: Review date 6/3/2025.
+
+- id: medlineplus-cancer-hot-flashes-night-sweats
+  title: "Cancer treatment: dealing with hot flashes and night sweats"
+  authors: []
+  publisher: MedlinePlus Medical Encyclopedia (U.S. National Library of Medicine)
+  year: 2026
+  type: patient_information
+  url: https://medlineplus.gov/ency/patientinstructions/000826.htm
+  doi: null
+  accessed: "2026-11-08"
+  population: People having cancer treatment (US)
+  key_finding: "Hot flashes and night sweats can be caused by cancer treatments (radiation, chemotherapy, hormone treatment, surgery such as removing the ovaries) and by some medicines, including aromatase inhibitors, opioids, tamoxifen, tricyclic antidepressants and steroids."
+  funding_conflict: null
+  verified: true
+  notes: Review date 8/6/2026.
+
+- id: nhs-night-sweats
+  title: Night sweats
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2023
+  type: patient_information
+  url: https://www.nhs.uk/conditions/night-sweats/
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (UK)
+  key_finding: "It is normal to sweat at night if the room or bedding is too hot. Common causes of night sweats: menopause symptoms (hot flushes), anxiety, medicines such as some antidepressants, steroids and painkillers, low blood sugar (hypoglycaemia), alcohol or drug use, and hyperhidrosis (a harmless condition that makes you sweat too much all the time); sometimes the cause is unknown. See a GP if night sweats regularly wake you up or worry you, if you also have a very high temperature (or feel hot, cold or shivery), a cough or diarrhoea, or if you have night sweats and are losing weight for no reason."
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 9 November 2023. UK guidance; the page has no emergency section.
+
+- id: medlineplus-chest-pain
+  title: Chest pain
+  authors: []
+  publisher: MedlinePlus Medical Encyclopedia (U.S. National Library of Medicine)
+  year: 2026
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/003079.htm
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (US)
+  key_finding: "Call 911 or the local emergency number if you have sudden crushing, squeezing, tightening or pressure in the chest; pain that spreads to the jaw, left arm or between the shoulder blades; nausea, dizziness, sweating, a racing heart or shortness of breath; or sudden sharp chest pain with shortness of breath, especially after a long trip, bedrest or other lack of movement (possible blood clot in the lungs)."
+  funding_conflict: null
+  verified: true
+  notes: Review date 4/28/2026.
+
+# Same id and URL as the entry in new-sources-g7.yaml. I opened the DailyMed label myself on 2026-11-08
+# and confirmed the points below; merge once (keep g7's fuller key_finding).
+- id: lynkuet-prescribing-information
+  title: LYNKUET (elinzanetant) capsules, prescribing information
+  authors: []
+  publisher: Bayer HealthCare Pharmaceuticals Inc. (FDA-approved label, via DailyMed, U.S. National Library of Medicine)
+  year: 2026
+  type: regulator_label
+  url: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f42884ff-7dff-419c-8a0c-affe2ed73818
+  doi: null
+  accessed: "2026-11-08"
+  population: Adults with moderate to severe vasomotor symptoms due to menopause
+  key_finding: "Indicated for moderate to severe vasomotor symptoms due to menopause. No boxed warning. Warnings and precautions: 5.1 CNS depressant effect and daytime impairment (sleepiness and other nervous system effects in 11.9% vs 3.5% on placebo; avoid driving or hazardous activities until effects resolve); 5.2 hepatic transaminase elevations (baseline liver bloodwork; do not start if transaminases or total bilirubin are 2 or more times the upper limit of normal; repeat at 3 months); 5.3 risk of pregnancy loss (contraindicated in pregnancy); 5.4 risk of seizure."
+  funding_conflict: Manufacturer-issued label (FDA-approved text)
+  verified: true
+  notes: "Label text reads 'Revised: 8/2026'. Duplicate of g7's entry; dedupe on merge."

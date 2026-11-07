@@ -1,0 +1,31 @@
+# New sources proposed by group g6 (patch-vs-pill, boxed-warning). Opened and checked on 2026-11-08.
+
+- id: cdc-vte-about
+  title: About Venous Thromboembolism (Blood Clots)
+  authors: []
+  publisher: U.S. Centers for Disease Control and Prevention
+  year: 2025
+  type: patient_information
+  url: https://www.cdc.gov/blood-clots/about/
+  doi: null
+  accessed: "2026-11-08"
+  population: General U.S. public
+  key_finding: "VTE includes deep vein thrombosis (DVT) and pulmonary embolism (PE). DVT signs in the affected leg or arm: swelling, pain or tenderness, warmth, redness or discoloration; see a doctor as soon as possible. PE signs: difficulty breathing, faster than normal or irregular heartbeat, chest pain or discomfort that usually worsens with a deep breath or coughing, cough or coughing up blood, very low blood pressure, lightheadedness or fainting; seek medical help immediately. Lists increased estrogen levels as a risk factor."
+  funding_conflict: null
+  verified: true
+  notes: Page dated March 5, 2025. It does not mention 911 or hormone therapy by name.
+
+- id: cdc-stroke-signs
+  title: Signs and Symptoms of Stroke
+  authors: []
+  publisher: U.S. Centers for Disease Control and Prevention
+  year: 2026
+  type: patient_information
+  url: https://www.cdc.gov/stroke/signs-symptoms/index.html
+  doi: null
+  accessed: "2026-11-08"
+  population: General U.S. public
+  key_finding: "Stroke signs: sudden numbness or weakness in the face, arm or leg, especially on one side of the body; sudden confusion, trouble speaking or difficulty understanding speech; sudden trouble seeing; sudden trouble walking, dizziness, loss of balance or lack of coordination; sudden severe headache with no known cause. B.E. F.A.S.T. (Balance, Eyes, Face, Arms, Speech, Time). Call 9-1-1 right away if you or someone else has any of these symptoms."
+  funding_conflict: null
+  verified: true
+  notes: Page shows May 19, 2026.

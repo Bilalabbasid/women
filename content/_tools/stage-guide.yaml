@@ -12,23 +12,27 @@ reviewed_at: null
 approved_hash: null
 
 code:
+  - src/lib/tools/stage-quiz.ts
   - src/components/tools/stage-guide.tsx
   - src/lib/safety/urgent-triggers.ts
 
 purpose: >-
-  An educational guide that explains how the STRAW+10 reproductive aging criteria
+  A short educational quiz (one question per screen) that explains how the STRAW+10 reproductive aging criteria
   and NICE NG23 clinical rules interpret cycle changes and vasomotor symptoms,
   and when those bleeding criteria do not apply. It never diagnoses or scores.
 
 inputs:
   - Age group (under 40, 40 to 44, 45 or over)
-  - Whether periods are affected by hormonal contraception/HRT or a prior hysterectomy/ablation
-  - Cycle pattern over the past year (regular, varying by 7+ days, skipped for 60+ days, or stopped for 12+ months)
-  - Whether hot flashes or night sweats started recently
-  - Safety red-flag checkboxes (bleeding after 12 months without a period, heavy/unusual bleeding, palpitations with red flags, self-harm thoughts)
+  - Whether periods are natural, affected by hormonal contraception or a hormonal IUD, by a prior hysterectomy/ablation, or by something else (such as HRT) or not sure
+  - "Natural periods only: 12 months or more with no period or spotting (yes/no)"
+  - "Only if not 12 months: a gap of 60 days or more between periods in the past year (yes/no/not sure)"
+  - "Only if no 60-day gap: whether cycle length changes by 7 days or more, recurring within 10 cycles (fewer than 7 days / 7 or more / not sure)"
+  - Whether hot flashes or night sweats started recently (yes/no)
+  - Safety red-flag checkboxes, or None of these (bleeding after 12 months without a period, heavy/unusual bleeding, palpitations with red flags, self-harm thoughts)
 
 computes:
-  - "Which STRAW+10 stage description corresponds to the selected natural cycle pattern, or why STRAW+10 bleeding criteria cannot be used when hormones or surgery affect bleeding"
+  - "Which STRAW+10 stage the natural period answers resemble: 12+ months without a period = postmenopause; 60+ day gap = late transition (Stage -1); cycle length changing by 7+ days = early transition (Stage -2); fewer than 7 days = late reproductive stage; not sure of either = no stage matched"
+  - "Headline result order: under 40 (POI note, with the period pattern shown as background only) > hormonal contraception or hysterectomy/ablation (STRAW+10 bleeding criteria do not apply) > the period-pattern stage > no stage matched"
   - "Whether the under-40 premature ovarian insufficiency (POI) note or the age 45+ NICE NG23 clinical note applies"
   - "Urgent triggers from any ticked safety red flags"
 
@@ -36,15 +40,18 @@ shows:
   - Urgent guidance first when any safety trigger applies, including 988 (US) and Samaritans 116 123 (UK)
   - Plain-language explanation of the STRAW+10 stage pattern and NICE NG23 guidance
   - Explicit notice when STRAW+10 cycle rules do not apply (under 40, hysterectomy, hormonal contraception)
-  - Print and Clear my answers actions
-  - Her saved, dated answer sets (open, update, re-date, rename, delete), and with two or more, how her period-pattern answer has changed
+  - Progress (Question N of M), Back and Next, one question per screen
+  - What the quiz cannot tell her (not a diagnosis; cannot rule out pregnancy, thyroid conditions, iron deficiency or gynecological conditions) and her answers
+  - Next-step links to live guide pages, the 12-month counter and checklist, and the symptom tracker and Install the app only when the tracker is live
+  - Print, Download PDF (built in the browser), and Clear my answers actions
+  - Her saved, dated answer sets (open, update, re-date, rename, delete), and with two or more, how her result has changed
 
 never:
   - Diagnose perimenopause, menopause, or premature ovarian insufficiency
   - Say "you have" or assign a numerical score
   - Recommend any medication or dose
   - Show commercial content or affiliate links
-  - Send any input off the device
+  - Send any input off the device, or ask for an email
 
 limits:
   - STRAW+10 bleeding criteria apply only to natural cycles without hormonal contraception or uterine surgery
@@ -55,5 +62,5 @@ urgent_triggers: [self_harm_thoughts, palpitations_red_flags, bleeding_after_men
 sources: [straw-10-2012, nice-ng23-recommendations, nhs-postmenopausal-bleeding, nhs-heart-palpitations, lifeline-988, samaritans-contact]
 
 privacy: >-
-  Current answers autosave in this browser's IndexedDB (menowell_local_db, toolRecords) on her device; dated answer sets she chooses to save are kept there too. Answers from the older localStorage key (menoverdict_stage_guide_v1) are moved in once, then that key is removed. No account or login. Nothing is sent to a server, analytics, or partners. Everything is included in the backup file she can download and restore from /app/storage/, and nothing is deleted automatically: she deletes entries one at a time, by date range, by tool, or all at once.
+  Current answers autosave in this browser's IndexedDB (menowell_local_db, toolRecords) on her device; dated answer sets she chooses to save are kept there too. Answers from the older localStorage key (menoverdict_stage_guide_v1) are moved in once, then that key is removed. Answers saved by the earlier one-page guide are read into the quiz's questions. The PDF is made in the browser and saved by it; nothing is uploaded. No account or login. Nothing is sent to a server, analytics, or partners. Everything is included in the backup file she can download and restore from /app/storage/, and nothing is deleted automatically: she deletes entries one at a time, by date range, by tool, or all at once.
 

@@ -1,0 +1,14 @@
+- id: soares-junior-energy-devices-gsm-2021
+  title: "Energy-based devices in gynecology: the new frontier for the treatment of genitourinary syndrome of postmenopause?"
+  authors: [Soares-Júnior JM, Barbosa MTA, Aguiar LM, Seganfredo IB, Gay de Pereyra EA, de Melo NR, Haddad JM, Baracat EC]
+  publisher: "Clinics (Sao Paulo)"
+  year: 2021
+  type: other
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8221554/
+  doi: 10.6061/clinics/2021/e3066
+  accessed: "2026-11-08"
+  population: Postmenopausal women with genitourinary syndrome of menopause (editorial review)
+  key_finding: "Energy-based devices (lasers, radiofrequency) are authorized by the FDA only for general gynecological instrument use and have not been approved for genitourinary syndrome of menopause, so that use remains experimental. The 2018 FDA warning on devices marketed for vaginal 'rejuvenation' cited serious adverse events including vaginal burns, scarring, painful intercourse and recurrent or chronic pain. Further studies of long-term benefits and risks are needed."
+  funding_conflict: null
+  verified: true
+  notes: "Editorial, not a systematic review. Opened in full on PMC 2026-11-08. The FDA safety communication itself (July 30, 2018, updated November 20, 2018) could not be fetched (fda.gov returned 404 to the fetcher); replace with the FDA page if it can be opened."

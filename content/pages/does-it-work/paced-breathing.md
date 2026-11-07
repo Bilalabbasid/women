@@ -1,6 +1,6 @@
 ---
 title: "Does paced breathing help hot flashes?"
-seo_title: "Paced Breathing for Hot Flashes: Evidence"
+seo_title: "Paced breathing for hot flashes: evidence"
 meta_description: "What The Menopause Society (2023) concludes about paced respiration for hot flashes (Level I), and what to try instead."
 cluster: does-it-work
 primary_keyword: paced breathing hot flashes
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-08"
 change_log:
+  - { date: "2026-11-08", summary: "Sweep: verdict shown from the grade registry, plain short answer, removed unsourced 'no risk' and 'evidence against it is strong' wording", material: true }
   - { date: "2026-11-06", summary: "Published evidence verdict on paced breathing for hot flashes", material: true }
 evidence_grade: not_supported
 claims:
@@ -35,26 +36,26 @@ sources: [nams-2023-nonhormone-therapy, nams-2022-hormone-therapy]
 related: [/does-it-work/, /treatments/nonhormonal/cbt-and-hypnosis/, /treatments/nonhormonal/, /tools/does-it-work-checker/]
 faq:
   - q: Does slow, paced breathing help hot flashes?
-    a: "According to The Menopause Society's 2023 review of the trial evidence, no — paced respiration is specifically classified as not recommended for vasomotor symptoms, and this is a Level I rating, meaning the evidence against it is fairly strong, not just inconclusive."
+    a: "According to The Menopause Society's 2023 review of the trial evidence, no. It lists paced respiration as not recommended for hot flashes and night sweats, at Level I, which means the panel judged the evidence good and consistent."
   - q: Is paced breathing still worth doing for any reason?
-    a: "Slow breathing can be a generally useful relaxation and stress-management tool, and it carries no risk. The point of this verdict is narrower: it isn't an effective treatment specifically for reducing hot flash frequency or severity, so it shouldn't be relied on as your main strategy if hot flashes are significantly disrupting your life."
+    a: "This verdict is narrow: it is only about whether paced breathing reduces hot flashes, and the guideline says it doesn't do that well enough to recommend. It says nothing about breathing exercises for other reasons. If hot flashes are disrupting your life, don't rely on paced breathing as your main plan."
 ---
 
-**Our verdict: Not recommended as a treatment for hot flashes (Level I).**
+**Our verdict:** :grade{id="paced-breathing-vms"}. The Menopause Society does not recommend slow, paced breathing as a treatment for hot flashes [@nams-2023-nonhormone-therapy]. That verdict is about hot flashes only, not breathing exercises in general. Hormone therapy is the most effective treatment for hot flashes [@nams-2022-hormone-therapy].
 
-Paced breathing — slow, controlled breathing exercises, often practiced at a set rate during a hot flash or preventively — is a commonly suggested self-help technique for [hot flashes](/symptoms/hot-flashes/). After reviewing the randomized trial literature in its **2023 Nonhormone Therapy Position Statement**, The Menopause Society placed **paced respiration** specifically in the **not recommended** category for vasomotor symptoms, at **Level I** — meaning the evidence against it as an effective treatment is fairly strong, not merely inconclusive [@nams-2023-nonhormone-therapy].
+Paced breathing means slow, controlled breathing, often done at a set rate during a hot flash or ahead of time. It is a commonly suggested self-help technique for [hot flashes](/symptoms/hot-flashes/). After reviewing the trial evidence in its **2023 Nonhormone Therapy Position Statement**, The Menopause Society placed **paced respiration** in the **not recommended** group for hot flashes and night sweats, at **Level I** [@nams-2023-nonhormone-therapy].
 
-## Why this one gets a clear "no," not just "unclear"
+## What a Level I "not recommended" means
 
-A Level I "not recommended" rating is different from "not enough research yet." It means well-designed trials specifically tested paced breathing against hot flash frequency and severity, and it didn't hold up as an effective treatment [@nams-2023-nonhormone-therapy].
+Level I means the panel judged the evidence good and consistent [@nams-2023-nonhormone-therapy]. So this is not a case of "no one has studied it yet." Some experts read "not recommended" as "not a first-line choice" rather than "proven useless", but either way it isn't a reliable way to cut hot flashes.
 
-That doesn't make breathing exercises useless for everything — slow breathing remains a reasonable general relaxation technique with no downside. The verdict here is narrower and more specific: don't rely on it as your main strategy if hot flashes are significantly affecting your life.
+The verdict is narrow. It says nothing about breathing exercises for relaxing or for other reasons. It means: don't rely on paced breathing as your main plan if hot flashes are seriously affecting your life.
 
 ## What actually has evidence behind it
 
-- **[Hormone therapy](/treatments/hormone-therapy/)**: The most effective treatment for vasomotor symptoms in women without contraindications [@nams-2022-hormone-therapy].
-- **[CBT and clinical hypnosis](/treatments/nonhormonal/cbt-and-hypnosis/)**: Level I non-hormonal options with no drug interactions [@nams-2023-nonhormone-therapy].
-- **[Non-hormonal prescription options](/treatments/nonhormonal/)**: Including SSRIs/SNRIs, gabapentin, and NK3 antagonists, all Level I [@nams-2023-nonhormone-therapy].
+- **[Hormone therapy](/treatments/hormone-therapy/)**: The most effective treatment for hot flashes and night sweats in women who can take it [@nams-2022-hormone-therapy].
+- **[CBT and clinical hypnosis](/treatments/nonhormonal/cbt-and-hypnosis/)**: Non-drug options with Level I support [@nams-2023-nonhormone-therapy].
+- **[Non-hormonal prescription options](/treatments/nonhormonal/)**: SSRIs/SNRIs, gabapentin and fezolinetant, all Level I [@nams-2023-nonhormone-therapy].
 
 Use our [Does it work? evidence checker](/tools/does-it-work-checker/) to compare every graded option by symptom.
 

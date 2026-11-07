@@ -1,0 +1,136 @@
+# New sources proposed by group g4 (joint-pain, early-signs). Each one opened and read on 2026-11-08.
+
+- id: chlebowski-whi-estrogen-joint-symptoms-2013
+  title: "Estrogen alone and joint symptoms in the Women's Health Initiative randomized trial"
+  authors: [Chlebowski RT, Cirillo DJ, Eaton CB, Stefanick ML, Pettinger M, Carbone LD, Johnson KC, Simon MS, Woods NF, Wactawski-Wende J]
+  publisher: Menopause
+  year: 2013
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/23511705/
+  doi: 10.1097/GME.0b013e31828392c4
+  accessed: "2026-11-08"
+  population: 10,739 postmenopausal women who had had a hysterectomy, randomized to daily oral conjugated equine estrogens 0.625 mg or placebo (US)
+  key_finding: "Post hoc analysis. At entry about 77% reported joint pain and 40% joint swelling. After 1 year joint pain frequency was lower with estrogen alone than placebo (76.3% vs 79.2%, P = 0.001), as was severity, and the difference persisted through year 3. Joint swelling was more frequent with estrogen (42.1% vs 39.7%, P = 0.02). Authors conclude estrogen alone gives a modest but sustained reduction in joint pain frequency."
+  funding_conflict: null
+  verified: true
+  notes: Abstract read via NCBI E-utilities efetch. Republished in Menopause 2018;25(11):1313-1320 (PMID 30358728). Post hoc; estrogen-alone arm only; years 3 and 6 assessed in a 9.9% subsample.
+
+- id: nhs-menopause-symptoms
+  title: Symptoms of menopause and perimenopause
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/conditions/menopause/symptoms/
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (UK)
+  key_finding: "Periods may happen more often or less often, and bleeding may get heavier or lighter. Other symptoms include hot flushes and night sweats, trouble getting to sleep or staying asleep, mood swings, low mood or depression, problems with memory or concentration, palpitations, headaches and migraines worse than usual, muscle aches and joint pains, vaginal dryness, more UTIs and reduced sex drive. Contact a GP if you think you have symptoms and want to know your options, have palpitations, are bleeding more (not less) than before, or have any bleeding after 12 months without a period."
+  funding_conflict: null
+  verified: true
+  notes: Last reviewed 19 May 2026. The page does not give an age threshold (such as under 45) in its GP advice.
+
+- id: nhs-joint-pain
+  title: Joint pain
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/conditions/joint-pain/
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (UK)
+  key_finding: "See a GP if pain or swelling is getting worse or keeps coming back, has not improved after 2 weeks of home treatment, disrupts daily life or sleep, or joints are stiff for more than 30 minutes after waking. Urgent GP appointment or NHS 111 if the skin around a painful joint is swollen and hot, or if joint pain comes with feeling unwell, a high temperature or feeling hot, cold or shivery. A&E or 999 for very bad joint pain after a fall or injury, being unable to walk or put weight on a joint, a joint that has moved out of place, or tingling or no feeling around a joint after an injury."
+  funding_conflict: null
+  verified: true
+  notes: Last reviewed 26 February 2026. Also has a symptom-to-cause table (osteoarthritis, rheumatoid arthritis, bursitis, gout, septic arthritis, sprains).
+
+- id: medlineplus-joint-pain
+  title: "Joint pain: MedlinePlus Medical Encyclopedia"
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2026
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/003261.htm
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (US)
+  key_finding: "Causes of joint pain include autoimmune diseases such as rheumatoid arthritis and lupus, bursitis, gout and pseudogout, viral infections, injury, osteoarthritis, bone or joint infection, tendinitis, and overuse, strains or sprains. Contact your provider if you have a fever not associated with flu symptoms, have lost 10 pounds or more without trying, joint pain lasts more than several days, or you have severe, unexplained joint pain and swelling."
+  funding_conflict: null
+  verified: true
+  notes: Review date 1/14/2026. No separate emergency-room section.
+
+- id: medlineplus-hypothyroidism
+  title: "Hypothyroidism: MedlinePlus Medical Encyclopedia"
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2026
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/000353.htm
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (US)
+  key_finding: "Early symptoms of an underactive thyroid include joint or muscle pain, fatigue or feeling slowed down, sadness or depression, heavier and irregular menstrual periods, weight gain, constipation, feeling cold, dry skin, hair loss and weakness."
+  funding_conflict: null
+  verified: true
+  notes: Review date 8/19/2026.
+
+- id: medlineplus-hyperthyroidism
+  title: "Hyperthyroidism: MedlinePlus Medical Encyclopedia"
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2026
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/000356.htm
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (US)
+  key_finding: "Symptoms of an overactive thyroid include anxiety, nervousness, sleep problems, a pounding or racing heartbeat (palpitations), increased sweating, heat intolerance and irregular menstrual periods."
+  funding_conflict: null
+  verified: true
+  notes: Review date 8/19/2026.
+
+- id: medlineplus-iron-deficiency-anemia
+  title: "Iron deficiency anemia: MedlinePlus Medical Encyclopedia"
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2025
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/000584.htm
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (US)
+  key_finding: "Heavy, long or frequent menstrual periods are a common cause of the blood loss that leads to iron deficiency anemia. Early symptoms include feeling weak or tired more often than usual or with exercise, and problems concentrating or thinking."
+  funding_conflict: null
+  verified: true
+  notes: Review date 4/1/2025. The page does not describe low iron without anemia as a separate stage.
+
+- id: medlineplus-vaginal-uterine-bleeding
+  title: "Vaginal or uterine bleeding: MedlinePlus Medical Encyclopedia"
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2024
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/007496.htm
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (US)
+  key_finding: "Contact your provider if you soak through a pad or tampon every hour for 2 to 3 hours, bleeding lasts longer than 1 week, you bleed and are or could be pregnant, have severe pain, periods have been heavier or longer than normal for 3 or more cycles, bleed after menopause, between periods or after sex, bleeding becomes heavy enough to cause weakness or lightheadedness, or you have fever or lower abdominal pain. Causes of abnormal uterine bleeding include irregular or absent ovulation (more common approaching menopause), fibroids, polyps, adenomyosis, thyroid or pituitary disorders, PCOS, pregnancy complications, infection, certain cancers, bleeding disorders, IUDs and medicines such as blood thinners."
+  funding_conflict: null
+  verified: true
+  notes: Review date 10/15/2024. Advises contacting a provider; it gives no 911/emergency threshold for heavy menstrual bleeding.
+
+- id: cdc-heavy-menstrual-bleeding
+  title: "About Heavy Menstrual Bleeding"
+  authors: []
+  publisher: Centers for Disease Control and Prevention (CDC)
+  year: 2024
+  type: patient_information
+  url: https://www.cdc.gov/ncbddd/blooddisorders/women/menorrhagia.html
+  doi: null
+  accessed: "2026-11-08"
+  population: General public (US)
+  key_finding: "Signs of heavy menstrual bleeding: changing a tampon or pad after less than 2 hours; soaking through one or more pads or tampons every hour for several hours in a row; doubling up on pads; changing pads or tampons during the night; periods lasting more than 7 days; blood clots the size of a quarter or larger; flow that stops normal activities; constant lower stomach pain during periods; being tired, low on energy or short of breath. People with these signs should see a healthcare provider."
+  funding_conflict: null
+  verified: true
+  notes: Page dated May 15, 2024 (may redirect to a newer CDC URL).

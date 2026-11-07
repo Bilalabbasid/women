@@ -17,58 +17,82 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-08"
 change_log:
+  - { date: "2026-11-08", summary: "Plain short answer added; calm list of other causes; HRT bleeding advice and NHS tests from the sources; softened cancer wording to match NHS", material: true }
   - { date: "2026-11-06", summary: "Published clinical safety guide on postmenopausal bleeding", material: true }
 evidence_grade: strong
 claims:
   - id: nhs-pmb-always-check
     text: "Any bleeding from the vagina after menopause should be checked by a GP or doctor, even a small amount or a single episode. It is not usually serious, but it can be a sign of cancer."
     sources: [nhs-postmenopausal-bleeding]
+  - id: nhs-pmb-causes-and-tests
+    text: "Causes include thinning of the vaginal lining (atrophic vaginitis), cervical or womb polyps, a thickened womb lining (endometrial hyperplasia) and HRT side effects; less commonly, cancer. Checks can include a vaginal ultrasound, a pelvic exam and a hysteroscopy, and in the UK you should not have to wait more than 2 weeks to see a specialist."
+    sources: [nhs-postmenopausal-bleeding]
   - id: nice-hrt-bleeding-update
-    text: "NICE guideline NG23 covers identifying and managing menopause and was updated in April 2026 with amended advice on vaginal bleeding while taking systemic HRT."
-    sources: [nice-ng23]
+    text: "NICE NG23 (amended April 2026) says vaginal bleeding is a common side effect in the first 6 months of systemic HRT or within 3 months of a dose or product change, and advises seeking medical help promptly for unscheduled bleeding beyond these timeframes."
+    sources: [nice-ng23-recommendations, nice-ng23]
   - id: gsm-atrophy-context
     text: "Genitourinary syndrome of menopause involves thinning and dryness of vulvovaginal tissues due to low estrogen."
     sources: [nams-2020-gsm]
 safety_flags: [urgent_symptoms, bleeding]
 cta_profile: bleeding
 hub: /postmenopause/
-sources: [nhs-postmenopausal-bleeding, nice-ng23, nams-2020-gsm]
+sources: [nhs-postmenopausal-bleeding, nice-ng23, nice-ng23-recommendations, nams-2020-gsm]
 related: [/postmenopause/, /tools/12-month-counter/, /tools/symptom-tracker/, /symptoms/vaginal-dryness/]
 faq:
   - q: Should I see a doctor if I only noticed pink or brown discharge once after menopause?
-    a: Yes. NHS guidance explicitly states that any postmenopausal bleeding — even a small amount, a single episode, or light pink or brown discharge — should be checked by a doctor.
+    a: Yes. NHS guidance says any bleeding after menopause should be checked by a doctor, even a small amount or a single episode.
   - q: Is bleeding after menopause usually cancer?
-    a: No. According to NHS patient guidance, postmenopausal bleeding is not usually caused by something serious (common benign causes include vaginal atrophy or uterine polyps), but it must always be checked promptly because it can be an early sign of endometrial (womb lining) cancer.
+    a: No. NHS guidance says bleeding after menopause is not usually serious, and common causes include thinning of the vaginal lining and polyps. It must still always be checked by a doctor, because it can be a sign of cancer, and cancer may be easier to treat if it's found early.
 ---
 
+Any vaginal bleeding or spotting once you've gone 12 months without a period should be checked by a doctor, even if it was light or happened only once [@nhs-postmenopausal-bleeding]. Most of the time the cause is not serious, but it can be a sign of cancer, so make an appointment soon rather than waiting to see if it happens again [@nhs-postmenopausal-bleeding].
+
 :::urgent
-**Get this checked:** If it has been **12 months or more** since your last period, **any vaginal bleeding or spotting** should be checked by a doctor, even if it happens only once, is very light, or looks like pink or brown discharge [@nhs-postmenopausal-bleeding]. Postmenopausal bleeding is usually not serious, but it is important to get it checked promptly because it can be a sign of womb (endometrial) cancer [@nhs-postmenopausal-bleeding].
+**Get this checked:** If it has been **12 months or more** since your last period, **any vaginal bleeding or spotting** should be checked by a doctor, even if it happens only once or is very light [@nhs-postmenopausal-bleeding]. It is usually not serious, but a doctor needs to check because it can be a sign of cancer [@nhs-postmenopausal-bleeding].
 :::
 
 ## What counts as postmenopausal bleeding?
 
-Once you have gone 12 consecutive months without a menstrual period (see our [postmenopause guide](/postmenopause/) and [12-month counter](/tools/12-month-counter/)), any vaginal bleeding that occurs afterward is classed as postmenopausal bleeding [@nhs-postmenopausal-bleeding]. That includes:
+Once you have gone 12 months in a row without a period (see our [postmenopause guide](/postmenopause/) and [12-month counter](/tools/12-month-counter/)), any vaginal bleeding after that counts as postmenopausal bleeding [@nhs-postmenopausal-bleeding]. That includes:
 
-- A single episode of spotting on toilet paper or underwear
-- Pink, rusty, or brown vaginal discharge
+- A single spot of blood on toilet paper or underwear
+- Pink, rusty, or brown discharge
 - Bleeding after sex
 - Period-like bleeding, with or without cramps
 
-If you are taking systemic [hormone therapy (HRT)](/treatments/hormone-therapy/), let your clinician know exactly which regimen you take and when the bleeding started; UK NICE guideline NG23 includes specific assessment pathways for unscheduled bleeding on systemic HRT [@nice-ng23].
+## If you take HRT
 
-## Why it happens — and why doctors always check
+Tell your doctor about any bleeding, and say which HRT you take and when the bleeding started. UK NICE guidance (amended in April 2026) says bleeding is a common side effect in the first 6 months of systemic [hormone therapy (HRT)](/treatments/hormone-therapy/) or within 3 months of changing the dose or product, and that you'll be asked about it at your 3-month review [@nice-ng23-recommendations; @nice-ng23]. Outside those times, NICE advises getting medical help promptly for any unexpected bleeding [@nice-ng23-recommendations].
 
-Many cases of postmenopausal bleeding turn out to have benign, treatable causes, such as fragile, dry vaginal or cervical tissue ([vaginal dryness and atrophy](/symptoms/vaginal-dryness/)) [@nams-2020-gsm] or non-cancerous polyps. However, because bleeding after menopause is also the most common early warning sign of endometrial hyperplasia or endometrial cancer, clinicians investigate every case rather than waiting to see if it happens again [@nhs-postmenopausal-bleeding].
+## What a doctor will check for
 
-While you wait for your appointment, avoid using unverified over-the-counter [menopause supplements](/does-it-work/) to self-treat bleeding, and record the dates and amount of any spotting in your [private symptom tracker](/tools/symptom-tracker/) to show your clinician.
+Bleeding after menopause is checked every time, even though most causes are not serious [@nhs-postmenopausal-bleeding]. A doctor can check for other causes, such as:
+
+- **Vaginal atrophy**: thinning and dryness of the vaginal lining from low estrogen ([vaginal dryness](/symptoms/vaginal-dryness/)) [@nhs-postmenopausal-bleeding; @nams-2020-gsm]
+- **Polyps**: small growths in the cervix or womb, usually not cancer [@nhs-postmenopausal-bleeding]
+- **A thickened womb lining**: also called endometrial hyperplasia [@nhs-postmenopausal-bleeding]
+- **HRT**: bleeding can be a side effect of hormone therapy [@nhs-postmenopausal-bleeding]
+
+Less often, the cause is cancer, such as womb (endometrial) cancer [@nhs-postmenopausal-bleeding]. Cancer may be easier to treat if it's found early, which is why the check matters [@nhs-postmenopausal-bleeding].
+
+## What to expect at the appointment
+
+The NHS lists these as common checks [@nhs-postmenopausal-bleeding]:
+
+- **Pelvic exam**: the doctor looks at the vagina and cervix and feels for lumps or tenderness
+- **Vaginal ultrasound**: a scan using a small probe placed in the vagina
+- **Hysteroscopy**: a thin camera passed through the cervix to look inside the womb, sometimes with a small tissue sample (biopsy)
+
+If you're in the UK: the NHS says you should not have to wait more than 2 weeks to see a specialist [@nhs-postmenopausal-bleeding].
+
+While you wait, don't try to treat the bleeding yourself with over-the-counter [menopause supplements](/does-it-work/). Note the dates and amount of any spotting in your [private symptom tracker](/tools/symptom-tracker/) to show your doctor.
 
 ## Questions to take to your appointment
 
 :::questions
-- Could you note the exact date of my last period and the dates of this bleeding episode?
-- Which investigations (such as a pelvic exam or transvaginal ultrasound) do you recommend next, and how soon will they be scheduled?
-- Since I take systemic HRT (if applicable), should I continue my current dose while we complete this check?
+- What do you think is the most likely cause, and what else do we need to rule out?
+- Which tests (such as a pelvic exam or vaginal ultrasound) do you recommend, and how soon can they happen?
+- If I take systemic HRT, should I keep taking it while we finish these checks?
 :::
-

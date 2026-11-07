@@ -1,7 +1,7 @@
 ---
 title: "Medical disclaimer"
 seo_title: Medical disclaimer and safety advice
-meta_description: "Important safety and medical disclaimer: general information only, not personal medical advice, diagnosis, or treatment plan."
+meta_description: "We are not doctors. MenoVerdict compiles published sources with AI help, so it can be wrong. Nothing here is medical advice or a diagnosis."
 cluster: site
 primary_keyword: medical disclaimer
 slug: medical-disclaimer
@@ -31,20 +31,37 @@ related: [/privacy/, /terms/]
 affiliate_disclosure: false
 ---
 
-General information based on published sources and the symptoms you searched for. This isn't medical or legal advice, a diagnosis or a treatment plan. Please consult a doctor about your own symptoms. If your symptoms are severe or sudden, seek urgent care.
+**We are not doctors.** MenoVerdict is not a medical service. It's run by an independent editorial team, and no doctor wrote the pages on this site.
 
-## Not personal healthcare advice
+## What this site is
 
-The content, tools, calculators, checklists, and symptom tracking features provided on this website are designed for educational, informational, and organizational purposes only. Nothing on this website constitutes the practice of medicine, nursing, pharmacy, or other professional healthcare advice.
+We gather information that is already published online, such as medical society guidelines, research studies, government health pages and medicine labels, and put it in one place so it's easier to read. Every page links its sources under References.
 
-## Always consult a qualified professional
+AI tools help us read, summarize and grade that evidence, using our published [grading method](/evidence/how-we-grade/). AI and people both make mistakes, so a summary or grade here can be wrong, incomplete or out of date.
 
-Always seek the advice of your physician, gynecologist, or other qualified healthcare provider with any questions you may have regarding a medical condition, symptom, or treatment regimen. Never disregard professional medical advice or delay in seeking it because of something you have read on this website.
+## What it isn't
 
-## We don't recommend a specific doctor, clinic, or product for you
+Nothing on this site is medical advice, a diagnosis or a treatment plan, and using it doesn't make anyone your doctor. That includes the articles, the evidence grades, the comparisons and the tools: the symptom tracker, checklist, quiz and question builder record and organize what you tell them. They don't diagnose you or tell you what to take.
 
-Our evidence grades and comparisons describe what the research says about a treatment, supplement, or provider category in general — they are never a personal recommendation that you, specifically, should use it. Where we list or compare named telehealth providers or products, that's information for you to weigh yourself, not a referral, and it has no bearing on how honestly we grade the underlying evidence (see [how we make money](/about/how-we-make-money/)).
+If what you're feeling matches something described here, those are possible reasons, not a diagnosis. Only a doctor who knows your health history can tell you what's going on and what's safe for you.
 
-## Emergency guidance
+## Please see a doctor
 
-If you believe you may have a medical emergency, call your local emergency services (such as 911 in the United States, 999 in the United Kingdom, or 112 in the European Union) or proceed to the nearest hospital emergency department immediately. For crisis support and mental health hotlines, see our [urgent help and crisis lines](/urgent-help/) page.
+Use this site to prepare for an appointment, not to replace one. Never ignore or delay medical advice because of something you read here.
+
+## We don't recommend a specific doctor, clinic or product for you
+
+Our grades and comparisons describe what the research says about a treatment, supplement or type of service in general. They are never a personal recommendation. Where we compare named telehealth services or products, that's information for you to weigh yourself, not a referral, and it has no effect on how we grade the evidence (see our [affiliate disclosure](/about/how-we-make-money/)).
+
+## Emergencies
+
+If symptoms are severe or sudden, get urgent care now.
+
+- **In the US:** call 911 for an emergency. If you're thinking about harming yourself, call or text 988 (Suicide & Crisis Lifeline), free and 24/7.
+- **If you're in the UK:** call 999 for an emergency, or 111 for urgent medical help. Samaritans are on 116 123, free and 24/7.
+
+More options are on our [urgent help page](/urgent-help/).
+
+## Spotted a mistake?
+
+Please [tell us](/contact/). We check every report against the original sources and record corrections in our [corrections log](/evidence/updates/).

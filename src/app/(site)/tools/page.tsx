@@ -8,6 +8,7 @@ import { JsonLd, Breadcrumbs } from '@/components/site/site-chrome';
 import { isToolLive } from '@/lib/tools/logic';
 import { ArrowDown, ArrowRight, Lock, Wrench } from 'lucide-react';
 import { TOOL_HEROES } from '@/components/site/tool-hero';
+import { HonestyNotice } from '@/components/site/honesty-notice';
 import {
   HeroPanel,
   heroEyebrow,
@@ -189,6 +190,8 @@ export default function ToolsHub() {
           </div>
         </HeroPanel>
       </div>
+
+      <HonestyNotice variant="short" href="/medical-disclaimer/" />
 
       {sections.map((s) => (
         <section key={s.id} aria-labelledby={s.id} className="scroll-mt-4 space-y-4">

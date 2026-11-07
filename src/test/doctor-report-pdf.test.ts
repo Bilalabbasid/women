@@ -43,6 +43,20 @@ describe('doctor report PDF', () => {
     expect(raw).toContain('Page 1 of 1');
   });
 
+  it('carries the honesty notice (we are not doctors; AI-assisted) on every page', () => {
+    const long = buildDoctorReportPdf(
+      { ...report, symptoms: Array.from({ length: 60 }, (_, i) => ({ ...report.symptoms[0], symptomId: `s${i}`, name: `Symptom ${i}` })) },
+      questions,
+      '2026-11-06',
+    );
+    const pages = long.getNumberOfPages();
+    expect(pages).toBeGreaterThan(1);
+    const text = long.output();
+    // jsPDF writes each page's text stream once; count the footer line per page.
+    expect(text.split('is not a medical service').length - 1).toBeGreaterThanOrEqual(pages);
+    expect(text).toContain('not by a doctor');
+  });
+
   it('contains no links and no commercial content', () => {
     expect(raw).not.toMatch(/\/URI|amazon|\/go\/|commission/i);
   });

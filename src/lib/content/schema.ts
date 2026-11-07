@@ -119,10 +119,20 @@ export const frontmatterSchema = z
     /** Explicit, reasoned exceptions to the banned-phrase list (for example, quoted debunking). */
     banned_phrase_overrides: z.array(z.object({ phrase: z.string(), reason: z.string().min(10) })).optional(),
     locale: z.enum(['en-US', 'en-GB']).optional(),
+    /** When the page's facts were last checked against its sources. Defaults to the latest change-log date. */
+    last_checked: isoDate.optional(),
+    /** Editor-only notes. Never rendered on the site. */
+    editor_notes: z.string().optional(),
   })
   .strict();
 
 export type Frontmatter = z.infer<typeof frontmatterSchema>;
+
+/** The page's "Last checked" date: last_checked, else its latest change-log date, else updated_at. */
+export function lastCheckedDate(fm: Pick<Frontmatter, 'last_checked' | 'change_log' | 'updated_at'>): string {
+  if (fm.last_checked) return fm.last_checked;
+  return fm.change_log.map((c) => c.date).sort().at(-1) ?? fm.updated_at;
+}
 
 /** The required frontmatter keys, exactly as AGENTS.md lists them. */
 export const REQUIRED_FIELDS = [

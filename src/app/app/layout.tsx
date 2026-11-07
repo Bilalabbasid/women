@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { MedicalDisclaimerBanner } from '@/components/app/medical-disclaimer';
+import { MedicalDisclaimerBanner, AppFooterNotice } from '@/components/app/medical-disclaimer';
 import { PWAInstallBanner } from '@/components/app/pwa-install-banner';
 import { OfflineIndicator } from '@/components/app/service-worker-registrar';
 import { AppNavigation } from '@/components/app/app-navigation';
@@ -27,9 +27,10 @@ export default function TrackerLayout({ children }: { children: React.ReactNode 
       <MedicalDisclaimerBanner />
       <PWAInstallBanner />
       <AppNavigation />
-      <main id="main" className="flex flex-1 flex-col pb-20 md:pb-8">
+      <main id="main" className="flex flex-1 flex-col">
         {children}
       </main>
+      <AppFooterNotice />
     </div>
   );
 }

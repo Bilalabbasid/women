@@ -603,7 +603,14 @@
 
 /* --------------------------------------------------------------- print */
 
+.print-only {
+  display: none;
+}
+
 @media print {
+  .print-only {
+    display: block;
+  }
   .no-print,
   header[role="banner"],
   footer[role="contentinfo"],

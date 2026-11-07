@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { BookOpen, Clock, Scale } from 'lucide-react';
 import type { EvidenceGrade, PageType } from '@/lib/content/schema';
 import { HeroPanel, heroEyebrow, heroTitle, heroLead } from './hero-panel';
-import { GradeBadge } from './evidence';
+import { GradeBadge, GradeAiNote } from './evidence';
 
 const TYPE_LABELS: Record<PageType, string> = {
   hub: 'Overview',
@@ -71,6 +71,9 @@ export function ArticleHero({
                 </dt>
                 <dd>
                   <GradeBadge grade={grade} methodHref={methodHref} />
+                  <span className="mt-1.5 block">
+                    <GradeAiNote methodHref={methodHref} />
+                  </span>
                 </dd>
               </div>
             )}

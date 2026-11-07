@@ -3,7 +3,8 @@ import { ArrowDown, ArrowRight } from 'lucide-react';
 import type { ContentPage } from '@/lib/content/loader';
 import type { EvidenceGrade } from '@/lib/content/schema';
 import { HeroPanel, heroEyebrow, heroTitle, heroLead, heroPrimaryBtn } from './hero-panel';
-import { GradeBadge, GRADE_LABELS } from './evidence';
+import { GradeBadge, GRADE_LABELS, headingLabel } from './evidence';
+import { HOW_SITE_WORKS_LINK } from '@/lib/site/honesty';
 
 const MAX_JUMPS = 6;
 
@@ -28,6 +29,11 @@ export function HubHero({
         <div className="space-y-5">
           <p className={heroEyebrow}>{eyebrow}</p>
           <h1 className={heroTitle}>{title}</h1>
+          <p>
+            <Link href="/about/" className="text-sm font-semibold text-white underline underline-offset-2 focus-visible:outline-white">
+              {HOW_SITE_WORKS_LINK}
+            </Link>
+          </p>
           <p className={heroLead}>{description}</p>
           {guideCount > 0 && (
             <div className="no-print flex flex-wrap items-center gap-3 pt-1">
@@ -58,7 +64,7 @@ export function HubHero({
                     >
                       {i + 1}
                     </span>
-                    <span className="leading-snug group-hover:underline">{s.text}</span>
+                    <span className="leading-snug group-hover:underline">{headingLabel(s.text)}</span>
                   </a>
                 </li>
               ))}

@@ -18,14 +18,15 @@
     "validate:seo": "tsx scripts/validate-seo.ts",
     "validate:a11y": "tsx scripts/validate-a11y.ts",
     "validate:source": "npm run validate:content && npm run validate:plan && npm run validate:links && npm run validate:graph && npm run validate:cta",
-    "validate:build": "npm run validate:seo && npm run validate:a11y && npm run validate:privacy",
+    "validate:build": "npm run validate:seo && npm run validate:a11y && npm run validate:privacy && npm run validate:honesty",
     "validate": "npm run validate:source && npm run build && npm run validate:build",
     "report:slots": "tsx scripts/generate-slot-report.ts",
     "prebuild": "tsx scripts/validate-content.ts",
     "content:approve": "tsx scripts/approve-page.ts",
     "validate:plan": "tsx scripts/validate-plan.ts",
     "plan:import": "tsx scripts/keyword-import.ts",
-    "tool:approve": "tsx scripts/approve-tool.ts"
+    "tool:approve": "tsx scripts/approve-tool.ts",
+    "validate:honesty": "tsx scripts/validate-honesty.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",

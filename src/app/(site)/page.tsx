@@ -11,6 +11,7 @@ import {
   ClipboardCheck,
   Droplets,
   Flame,
+  Info,
   Leaf,
   ListChecks,
   MessageCircleQuestion,
@@ -28,6 +29,7 @@ import { SITE } from '@/lib/site/config';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { getSiteData, CLUSTER_LABELS, isStaticTarget } from '@/lib/content/site-data';
 import { GradeBadge } from '@/components/site/evidence';
+import { HOW_SITE_WORKS_LINK } from '@/lib/site/honesty';
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -211,6 +213,15 @@ export default function HomePage() {
               Clear answers to real perimenopause and menopause questions — every claim graded against the evidence,
               every source linked. No login to read, no sponsored verdicts, and no health data leaves your device.
             </p>
+            <p>
+              <Link
+                href="/about/"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-white underline underline-offset-4 focus-visible:outline-white"
+              >
+                <Info aria-hidden="true" className="h-4 w-4 text-[#9fd4c3]" />
+                {HOW_SITE_WORKS_LINK}
+              </Link>
+            </p>
 
             {/* Lead search */}
             <form action="/search/" method="get">
@@ -292,7 +303,7 @@ export default function HomePage() {
               </div>
 
               <p className="mt-4 text-sm text-[#cfe2da]">
-                Commissions never change a grade.{' '}
+                Grades are AI-assisted and can be wrong. Commissions never change a grade.{' '}
                 <Link href="/evidence/how-we-grade/" className="font-semibold text-white underline focus-visible:outline-white">
                   How we grade
                 </Link>
@@ -471,7 +482,7 @@ export default function HomePage() {
             ))}
           </ul>
           <p className="text-sm text-[var(--color-ink-muted)]">
-            Each grade covers the specific use, links its sources, and is set before we ever look at whether an
+            Grades are AI-assisted, so they can be wrong. Each grade covers the specific use, links its sources, and is set before we ever look at whether an
             affiliate programme exists.{' '}
             <Link href="/evidence/how-we-grade/" className="font-semibold text-[var(--color-link)] underline">
               Read the grading method

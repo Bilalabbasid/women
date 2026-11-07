@@ -1,7 +1,7 @@
 ---
 title: Our medical review process
 seo_title: How our medical and evidence review process works
-meta_description: "How MenoVerdict verifies clinical claims against primary sources, separates editorial writing from clinician review, and handles updates."
+meta_description: "No doctor has checked our pages yet. How we check sources today, and what a clinician check will mean: name, credentials, date, and only for that exact version."
 cluster: evidence
 primary_keyword: medical review process
 slug: medical-review
@@ -17,7 +17,7 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Published medical review and honesty process page", material: true }
 evidence_grade: null
@@ -30,23 +30,28 @@ related: [/evidence/, /evidence/how-we-grade/, /evidence/editorial-policy/]
 affiliate_disclosure: false
 ---
 
-At MenoVerdict, we never fake or imply clinical sign-off where none has taken place. This page explains how our source verification works today, what our honesty notice means on every page, and how clinician review is cryptographically locked to page versions.
+**No doctor has checked the pages on this site yet.** This page explains how we check our sources today, and what will change on a page if a clinician checks it.
 
-## 1. Source verification before publication
+## How we check sources before a page goes live
 
-Before any health page is published, every factual claim in the article must be mapped in the page's frontmatter to a specific entry in our verified source registry and cited inline in the text. See [how we check the evidence](/evidence/) and [how we grade evidence](/evidence/how-we-grade/) for the source hierarchy we use (regulator labels and statements first, followed by medical society position statements, systematic reviews, and randomized controlled trials).
+Every medical claim on a page has to come from a source we've opened and read: medicine labels and regulators first, then medical society guidelines, then research reviews and large trials. You can see the order we use in [how we grade evidence](/evidence/how-we-grade/).
 
-If a statistic or medical claim cannot be confirmed directly from a source we have opened and checked, we remove the claim and log it rather than guessing.
+If we can't confirm a statistic or claim from a source we've read, we take it out rather than guess. AI tools help us read and summarize sources, and they can make mistakes, which is why every claim links back to its source so you can check it yourself.
 
-## 2. Our honesty rule on medical review
+## What "checked by a doctor" will mean here
 
-Many health websites display a "Medically reviewed" badge on pages that have not been reviewed by a named clinician, or keep the badge visible after the text has been edited. Our publishing gate forbids both:
+Many health sites show a "medically reviewed" badge on pages no doctor has looked at, or keep it after the page has been changed. We don't:
 
-- **When a page has not yet been reviewed by a named clinician:** The page displays a clear notice at the top stating that the article was written by the MenoVerdict editorial team from cited sources, **has not been written by a doctor**, and **has not yet been reviewed by a named clinician**. No `reviewedBy` structured data is emitted in the page's JSON-LD.
-- **When a verified clinician reviews a page:** Their full name, credentials, and review date are recorded in `content/_people/people.yaml` alongside a SHA-256 hash (`approved_hash`) of the exact article text and frontmatter they approved.
-- **Automatic reset on edit:** If a single sentence of a clinically reviewed article or tool is later changed, the SHA-256 hash no longer matches and the page automatically reverts to the unreviewed honesty notice until the clinician approves the updated version.
+- **Today, no page says it was checked by a doctor.** Each one says plainly that it was compiled from published sources with AI help and not by a doctor.
+- **When a clinician checks a page,** their name, credentials and the date will appear on that page.
+- **If the page changes afterwards,** even by one sentence, that "checked by" line disappears automatically until the clinician checks the new version. A check always applies to the exact words they read.
 
-## 3. Interactive tool logic review
+A clinician's check confirms the page is accurate. It isn't personal medical advice for you.
 
-Each interactive tool on our [free menopause tools hub](/tools/) is governed by a plain-language specification file (`content/_tools/<id>.yaml`) that lists every input, calculation, output, safety trigger, and code file implementing the tool. Our [editorial policy](/evidence/editorial-policy/) and [commercial disclosure](/about/how-we-make-money/) set out how we keep commercial links strictly separate from clinical evidence and tool outputs.
+## We're looking for a clinical reviewer
 
+We'd like a Menopause Society Certified Practitioner to check our pages, starting with the most-read symptom and treatment guides.
+
+## How the tools are checked
+
+Each of our [free tools](/tools/) follows a written description of what it asks, what it calculates, what it shows and which answers should send you to urgent care. The tools record and organize what you tell them; they never diagnose you or recommend a treatment. Our [editorial policy](/evidence/editorial-policy/) and [affiliate disclosure](/about/how-we-make-money/) explain how commercial links are kept apart from evidence and from tool results.

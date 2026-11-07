@@ -21,12 +21,14 @@ import { ToolIsland } from '@/components/tools/tool-island';
 import { ProductSlotView } from '@/components/products/product-slot';
 import { SourcesList } from '@/components/site/sources-list';
 import { ProductBlock } from '@/components/products/product-block';
-import { StandardNotice } from '@/components/site/standard-notice';
+import { HonestyNotice } from '@/components/site/honesty-notice';
+import { PRICES_CHECKED, formatCheckedDate } from '@/lib/site/honesty';
+import { lastCheckedDate } from '@/lib/content/schema';
 import { EmailCapture } from '@/components/site/email-capture';
 import { NextSteps, BookmarkButton } from '@/components/site/next-steps';
 import { isToolLive } from '@/lib/tools/logic';
 import { JsonLd, Breadcrumbs } from '@/components/site/site-chrome';
-import { GradeBadge, ReviewLine, References, ChangeLog, DraftBanner, Toc } from '@/components/site/evidence';
+import { GradeBadge, References, ChangeLog, DraftBanner, Toc, displayName } from '@/components/site/evidence';
 import { QuestionTools, SavedCopyNotice } from '@/components/site/client-islands';
 import { ToolHero, TOOL_HEROES } from '@/components/site/tool-hero';
 
@@ -88,6 +90,23 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
   const toolHeroHref = toolHero?.appHref
     ? isToolLive('symptom-tracker') ? toolHero.appHref : null
     : hasTool ? '#tool' : null;
+  // Every medical page except the nav hubs carries the short notice under its H1 and the
+  // full "How this page was made" notice at the end. Nav hubs link to /about/ from the hero.
+  const fullNotice = page.isMedical && !isNavHub;
+  const checkedIso = lastCheckedDate(fm);
+  const reviewerInfo =
+    reviewed && reviewer && fm.reviewed_at
+      ? { name: displayName(reviewer), credentials: reviewer.credentials ?? '', date: formatCheckedDate(fm.reviewed_at) }
+      : undefined;
+  // Shown where the page's own text starts, just below the hero (not inside it).
+  const bodyNotice = fullNotice ? (
+    <div className="space-y-1.5 border-b border-[var(--color-rule)] pb-4">
+      <HonestyNotice variant="short" />
+      {(fm.page_type === 'comparison' || fm.page_type === 'review') && (
+        <p className="pl-6 text-sm text-[var(--color-ink-muted)]">{PRICES_CHECKED(formatCheckedDate(checkedIso))}</p>
+      )}
+    </div>
+  ) : null;
   const ld = [
     contentPageLd(page, store),
     breadcrumbLd(crumbs),
@@ -101,6 +120,7 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
 
   const body = (
     <>
+        {bodyNotice}
         <header className="space-y-3">
           {hasTool && !toolHero && (
             <p className="no-print">
@@ -109,8 +129,6 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
               </a>
             </p>
           )}
-          <ReviewLine page={page} author={author} reviewer={reviewer} reviewed={reviewed} />
-          {page.isMedical && <StandardNotice />}
           {fm.evidence_grade && !isArticle && (
             <p className="flex flex-wrap items-center gap-2">
               <span className="text-[var(--color-ink-muted)]">Evidence:</span>
@@ -245,6 +263,8 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
 
         <References ids={citationIds} sources={store.sources} />
         <ChangeLog entries={fm.change_log} />
+        {fullNotice && <HonestyNotice variant="full" lastChecked={checkedIso} reviewer={reviewerInfo} />}
+        <HonestyNotice variant="footer" className="print-only text-sm" />
     </>
   );
 

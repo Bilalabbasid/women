@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/lib/site/config';
-import { STANDARD_NOTICE } from '@/lib/site/notice';
+import { HONESTY_FOOTER } from '@/lib/site/honesty';
 import { APP_ROUTES } from '@/lib/routes';
 import { isToolLive } from '@/lib/tools/logic';
 import type { Crumb } from '@/lib/seo/jsonld';
@@ -177,7 +177,7 @@ export function SiteFooter({
 
         {/* Standard notice */}
         <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm leading-relaxed text-[#cfe2da]">
-          <p>{STANDARD_NOTICE}</p>
+          <p data-honesty="footer">{HONESTY_FOOTER}</p>
         </div>
 
         <div className="mt-8 flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-[#a9c7bc] sm:flex-row sm:items-center sm:justify-between">

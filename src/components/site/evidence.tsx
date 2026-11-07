@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { EvidenceGrade, Source, Person } from '@/lib/content/schema';
 import type { ContentPage } from '@/lib/content/loader';
 import { SITE } from '@/lib/site/config';
+import { AI_GRADE_NOTE } from '@/lib/site/honesty';
 
 export const GRADE_LABELS: Record<EvidenceGrade, string> = {
   strong: 'Strong evidence',
@@ -11,6 +12,21 @@ export const GRADE_LABELS: Record<EvidenceGrade, string> = {
   harm_concern: 'Harm concern',
   per_option: 'Graded per option below',
 };
+
+/** A heading's label for a contents list, without a leading "1. " (the list numbers it already). */
+export const headingLabel = (text: string) => text.replace(/^\d+[.)]\s+/, '');
+
+/** The line shown next to a grade badge: grades are AI-assisted, and the method is public. */
+export function GradeAiNote({ methodHref = '/evidence/how-we-grade/' }: { methodHref?: string }) {
+  return (
+    <span className="text-xs text-[var(--color-ink-muted)]">
+      {AI_GRADE_NOTE} ·{' '}
+      <Link href={methodHref} className="font-semibold text-[var(--color-link)] underline">
+        method
+      </Link>
+    </span>
+  );
+}
 
 /** Evidence grade with a text label (never colour alone). Links to the grading method. */
 export function GradeBadge({ grade, methodHref }: { grade: EvidenceGrade; methodHref?: string }) {
@@ -29,56 +45,6 @@ const fmtDate = (iso: string) =>
 
 export const displayName = (p: Person | undefined) =>
   !p ? 'Unknown' : p.name ?? `${SITE.name} editorial team`;
-
-/**
- * Author/Reviewed line. The reviewer is shown only when isMedicallyReviewed() is true.
- * Otherwise the line says plainly that it is not yet reviewed.
- *
- * Deliberately does not show an "Updated <date>" stamp (owner decision,
- * 2026-11-06, see DECISIONS.md): with ~90+ pages launching in the same short
- * window, a visible per-page update date would make every page's date read
- * identically in search results, which can look like batch-produced content.
- * This omits the date for everyone (readers and crawlers alike) rather than
- * hiding it from crawlers only, which would be cloaking, or inventing varied
- * dates, which would be fabrication (AGENTS.md rule 1) — both were considered
- * and rejected. The genuine "Medically reviewed by X on <date>" stamp below is
- * unaffected: it only ever appears on a page an actual clinician has approved,
- * so it can't cluster the same way.
- */
-export function ReviewLine({
-  page,
-  author,
-  reviewer,
-  reviewed,
-}: {
-  page: ContentPage;
-  author: Person | undefined;
-  reviewer: Person | undefined;
-  /** isMedicallyReviewed(page, store) — NOT whether the page is published/live. See gate.ts. */
-  reviewed: boolean;
-}) {
-  const { fm } = page;
-  if (page.isMedical && (!reviewed || !reviewer || !fm.reviewed_at)) {
-    return (
-      <p className="text-[var(--color-ink-muted)]">
-        This is not medical advice — it is general information based on what you searched for that may help.
-      </p>
-    );
-  }
-  return (
-    <p className="text-[var(--color-ink-muted)]">
-      By {displayName(author)}
-      {page.isMedical && reviewed && reviewer && fm.reviewed_at && (
-        <>
-          {' '}
-          · Medically reviewed by {displayName(reviewer)}
-          {reviewer.credentials ? `, ${reviewer.credentials}` : ''} on{' '}
-          <time dateTime={fm.reviewed_at}>{fmtDate(fm.reviewed_at)}</time>
-        </>
-      )}
-    </p>
-  );
-}
 
 export function References({ ids, sources }: { ids: string[]; sources: Map<string, Source> }) {
   if (ids.length === 0) return null;
@@ -187,7 +153,7 @@ export function Toc({
               >
                 {i + 1}
               </span>
-              <span className="underline-offset-4 group-hover:underline">{h.text}</span>
+              <span className="underline-offset-4 group-hover:underline">{headingLabel(h.text)}</span>
             </a>
           </li>
         ))}

@@ -2,6 +2,7 @@ import { jsPDF } from 'jspdf';
 import { autoTable } from 'jspdf-autotable';
 import type { DoctorReport } from './doctor-report';
 import { localDateString } from '../utils/local-date';
+import { HONESTY_FOOTER, HONESTY_SHORT } from '../site/honesty';
 
 /**
  * Builds the doctor report as a formatted PDF, entirely in the browser.
@@ -52,7 +53,7 @@ export function buildDoctorReportPdf(report: DoctorReport, questions: string[], 
   let y = MARGIN;
 
   const heading = (text: string) => {
-    if (y > doc.internal.pageSize.getHeight() - 40) {
+    if (y > doc.internal.pageSize.getHeight() - 50) {
       doc.addPage();
       y = MARGIN;
     }
@@ -63,7 +64,8 @@ export function buildDoctorReportPdf(report: DoctorReport, questions: string[], 
   };
   const lastY = () => (doc as unknown as { lastAutoTable: { finalY: number } }).lastAutoTable.finalY;
   const tableBase = {
-    margin: { left: MARGIN, right: MARGIN },
+    // Bottom margin keeps tables clear of the honesty notice printed on every page.
+    margin: { left: MARGIN, right: MARGIN, bottom: 30 },
     styles: { font: 'helvetica', fontSize: 10, textColor: INK, cellPadding: 2.2, lineColor: RULE, lineWidth: 0.2 },
     headStyles: { fillColor: ACCENT, textColor: [255, 255, 255] as [number, number, number], fontStyle: 'bold' as const },
     alternateRowStyles: { fillColor: [247, 246, 242] as [number, number, number] },
@@ -163,7 +165,7 @@ export function buildDoctorReportPdf(report: DoctorReport, questions: string[], 
   // Space for the appointment
   heading('Notes from my appointment');
   doc.setDrawColor(...RULE);
-  for (let i = 0; i < 4 && y + 9 < doc.internal.pageSize.getHeight() - 20; i++) {
+  for (let i = 0; i < 4 && y + 9 < doc.internal.pageSize.getHeight() - 32; i++) {
     y += 9;
     doc.line(MARGIN, y, width - MARGIN, y);
   }
@@ -173,7 +175,11 @@ export function buildDoctorReportPdf(report: DoctorReport, questions: string[], 
   for (let p = 1; p <= pages; p++) {
     doc.setPage(p);
     const h = doc.internal.pageSize.getHeight();
-    doc.setFont('helvetica', 'normal').setFontSize(8.5).setTextColor(...MUTED);
+    // The honesty notice (short line and footer line) on every page.
+    doc.setDrawColor(...RULE).line(MARGIN, h - 25, width - MARGIN, h - 25);
+    doc.setFont('helvetica', 'normal').setFontSize(7.5).setTextColor(...MUTED);
+    doc.text(doc.splitTextToSize(`${HONESTY_SHORT.text} ${HONESTY_FOOTER}`, contentWidth), MARGIN, h - 21);
+    doc.setFontSize(8.5);
     doc.text(`Recorded by me with the MenoVerdict tracker. Not a diagnosis.  Printed ${fmt(printedOn)}.`, MARGIN, h - 10);
     doc.text(`Page ${p} of ${pages}`, width - MARGIN, h - 10, { align: 'right' });
   }

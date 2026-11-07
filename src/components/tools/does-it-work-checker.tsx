@@ -9,7 +9,7 @@ import { useToolState, savedLabel } from '@/components/storage/use-tool-state';
 import { ToolHistory } from '@/components/storage/tool-history';
 import { btnDanger, btnPrimary } from '@/components/storage/styles';
 import type { EvidenceGrade } from '@/lib/content/schema';
-import { GradeBadge, GRADE_LABELS } from '@/components/site/evidence';
+import { GradeBadge, GRADE_LABELS, GradeAiNote } from '@/components/site/evidence';
 
 /** Catalog grades use the site-wide scale (`EvidenceGrade`) so a verdict reads the
  * same way here as it does on an article page — same words, same colors. */
@@ -378,7 +378,10 @@ export function DoesItWorkChecker({ liveUrls }: { liveUrls: string[] }) {
                       </span>
                       <h3 className="text-xl font-semibold">{item.name}</h3>
                     </div>
-                    <GradeBadge grade={item.grade} methodHref="/evidence/how-we-grade/" />
+                    <div className="flex flex-col items-start gap-1">
+                      <GradeBadge grade={item.grade} methodHref="/evidence/how-we-grade/" />
+                      <GradeAiNote />
+                    </div>
                   </div>
                   {item.gradeNote && (
                     <p className="text-sm text-[var(--color-ink-muted)]">{item.gradeNote}</p>

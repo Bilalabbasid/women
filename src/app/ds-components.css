@@ -1445,6 +1445,547 @@
     color: var(--urgent);
   }
 
+  /* ============================================================= tracker app (/app/*)
+   * A calm native-feeling app: 48px+ targets, one column, generous spacing,
+   * bottom tab bar on phones. Components: components/app/kit.tsx. */
+  .app-page {
+    width: 100%;
+    max-width: 42rem;
+    margin-inline: auto;
+    padding: 1.25rem 1rem calc(6.5rem + env(safe-area-inset-bottom, 0px));
+    display: grid;
+    gap: 1.25rem;
+    align-content: start;
+  }
+  @media (min-width: 768px) {
+    .app-page {
+      padding: 2rem 1.5rem 3rem;
+      gap: 1.5rem;
+    }
+  }
+  .app-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .app-topbar-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 42rem;
+    min-height: 3.75rem;
+    margin-inline: auto;
+    padding: 0.35rem 0.5rem 0.35rem 1rem;
+  }
+  .app-title {
+    font-family: var(--font-serif);
+    font-size: 1.45rem;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  .app-subtitle {
+    font-size: 0.95rem;
+    color: var(--ink-muted);
+    line-height: 1.3;
+  }
+  .device-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    min-height: 2.25rem;
+    padding: 0 0.7rem;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-pill);
+    background: var(--paper-raised);
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .device-chip:hover {
+    border-color: var(--accent);
+  }
+
+  /* Bottom tab bar (phones) and top tabs (tablet/desktop). */
+  .tab-bar {
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 40;
+    border-top: 1px solid var(--rule);
+    background: color-mix(in srgb, var(--paper-raised) 94%, transparent);
+    backdrop-filter: blur(12px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .tab-bar ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 32rem;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+  }
+  .tab-bar a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    min-height: 4rem;
+    padding: 0.4rem 0.15rem;
+    color: var(--ink-muted);
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-decoration: none;
+    transition: color var(--dur-fast) var(--ease);
+  }
+  .tab-bar a svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .tab-bar a[aria-current='page'] {
+    color: var(--accent);
+  }
+  .tab-bar a[aria-current='page']::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 28%;
+    right: 28%;
+    height: 3px;
+    border-radius: 0 0 3px 3px;
+    background: var(--accent);
+  }
+  .tab-top {
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper);
+  }
+  .tab-top ul {
+    display: flex;
+    gap: 0.25rem;
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    list-style: none;
+  }
+  .tab-top a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 3.25rem;
+    padding: 0 0.85rem;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -1px;
+    color: var(--ink-muted);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .tab-top a:hover {
+    color: var(--ink);
+  }
+  .tab-top a[aria-current='page'] {
+    color: var(--ink);
+    border-bottom-color: var(--accent);
+  }
+  .tab-top svg {
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+
+  /* Panels: the app's card. */
+  .panel {
+    display: grid;
+    gap: 0.9rem;
+    padding: 1.1rem 1.1rem 1.2rem;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-lg);
+    background: var(--paper-raised);
+  }
+  @media (min-width: 640px) {
+    .panel {
+      padding: 1.35rem 1.4rem 1.45rem;
+    }
+  }
+  .panel-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+  .panel-title {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .panel-hint {
+    margin-top: 0.15rem;
+    font-size: 1rem;
+    color: var(--ink-muted);
+  }
+  .panel-quiet {
+    background: var(--paper-sunk);
+    border-color: transparent;
+  }
+  .panel-feature {
+    border-color: color-mix(in srgb, var(--accent) 40%, var(--rule));
+    box-shadow: var(--shadow);
+  }
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-inline: 0.15rem;
+  }
+  .section-title {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  /* Five-level picker: big targets, a rising ladder glyph instead of faces. */
+  .level-picker {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.4rem;
+  }
+  .level-picker button {
+    display: grid;
+    justify-items: center;
+    gap: 0.4rem;
+    min-height: 5.25rem;
+    padding: 0.7rem 0.15rem 0.6rem;
+    border: 1.5px solid var(--rule-strong);
+    border-radius: var(--radius);
+    background: var(--paper-raised);
+    color: var(--ink);
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.15;
+    cursor: pointer;
+    transition:
+      background-color var(--dur-fast) var(--ease),
+      border-color var(--dur-fast) var(--ease),
+      transform var(--dur-fast) var(--ease);
+  }
+  .level-picker button:hover {
+    border-color: var(--accent);
+  }
+  .level-picker button:active {
+    transform: scale(0.97);
+  }
+  .level-picker button[aria-checked='true'] {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--on-accent);
+  }
+  .level-glyph {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 1.6rem;
+  }
+  .level-glyph span {
+    width: 5px;
+    border-radius: 2px;
+    background: currentColor;
+    opacity: 0.22;
+  }
+  .level-glyph span.is-on {
+    opacity: 1;
+  }
+  .level-desc {
+    font-weight: 400;
+    font-size: 0.8rem;
+    opacity: 0.85;
+  }
+  @media (max-width: 380px) {
+    .level-desc {
+      display: none;
+    }
+  }
+
+  /* +/- stepper: hot flash counter, sleep hours. */
+  .stepper {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr 3.5rem;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .stepper button {
+    display: grid;
+    place-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 1.5px solid var(--rule-strong);
+    border-radius: 50%;
+    background: var(--paper-raised);
+    color: var(--ink);
+    cursor: pointer;
+    transition: background-color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+  }
+  .stepper button:hover:not(:disabled) {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+  .stepper button:active:not(:disabled) {
+    transform: scale(0.94);
+  }
+  .stepper button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .stepper button.is-plus {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--on-accent);
+  }
+  .stepper output {
+    display: grid;
+    justify-items: center;
+    font-family: var(--font-serif);
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .stepper output small {
+    margin-top: 0.3rem;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--ink-muted);
+  }
+
+  /* Quick picks: a single-choice row of large options (sleep, bleeding, covers). */
+  .quickpick {
+    display: grid;
+    grid-template-columns: repeat(var(--qp-cols, 5), minmax(0, 1fr));
+    gap: 0.4rem;
+  }
+  .quickpick button {
+    min-height: 3rem;
+    padding: 0.4rem 0.25rem;
+    border: 1.5px solid var(--rule-strong);
+    border-radius: var(--radius);
+    background: var(--paper-raised);
+    color: var(--ink);
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.2;
+    cursor: pointer;
+    transition: background-color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+  }
+  .quickpick button:hover {
+    border-color: var(--accent);
+  }
+  .quickpick button[aria-checked='true'] {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--on-accent);
+  }
+
+  /* Symptom chips that reveal a 1–5 strength row when chosen. */
+  .symptom-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .symptom-item {
+    display: contents;
+  }
+  .symptom-item.is-on {
+    display: block;
+    flex-basis: 100%;
+    padding: 0.75rem;
+    border: 1.5px solid var(--accent);
+    border-radius: var(--radius);
+    background: var(--accent-soft);
+  }
+  .symptom-item.is-on .chip {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--on-accent);
+  }
+  .strength {
+    margin-top: 0.65rem;
+  }
+  .strength-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--ink-muted);
+    margin-bottom: 0.35rem;
+  }
+
+  /* Stat tiles. */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+    gap: 0.6rem;
+  }
+  .stat {
+    display: grid;
+    gap: 0.15rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--paper-raised);
+  }
+  .stat-value {
+    font-family: var(--font-serif);
+    font-size: 1.9rem;
+    font-weight: 600;
+    line-height: 1.05;
+    font-variant-numeric: tabular-nums;
+  }
+  .stat-label {
+    font-size: 0.95rem;
+    color: var(--ink-muted);
+    line-height: 1.3;
+  }
+
+  /* List rows (recent logs, treatments). */
+  .row-list {
+    display: grid;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-lg);
+    background: var(--paper-raised);
+    overflow: hidden;
+  }
+  .row-list > * + * {
+    border-top: 1px solid var(--rule);
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    min-height: 4rem;
+    padding: 0.75rem 1rem;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  a.row:hover {
+    background: var(--accent-soft);
+  }
+  .row-main {
+    flex: 1;
+    min-width: 0;
+  }
+  .row-title {
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .row-meta {
+    font-size: 0.95rem;
+    color: var(--ink-muted);
+    line-height: 1.35;
+  }
+  .row-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: var(--radius);
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+  .feel-dot {
+    display: inline-grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  /* Sticky save bar above the tab bar. */
+  .save-bar {
+    position: sticky;
+    bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
+    z-index: 30;
+    display: grid;
+    gap: 0.35rem;
+    margin-inline: -1rem;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid var(--rule);
+    background: color-mix(in srgb, var(--paper) 94%, transparent);
+    backdrop-filter: blur(10px);
+  }
+  @media (min-width: 768px) {
+    .save-bar {
+      bottom: 0;
+      margin-inline: 0;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-lg);
+    }
+  }
+  .saved-note {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius);
+    background: var(--g-strong-soft);
+    color: var(--g-strong-ink);
+    font-weight: 700;
+    animation: toast-in var(--dur) var(--ease);
+  }
+
+  /* Charts (SVG): axis text and gridlines use tokens. */
+  .chart {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  .chart text {
+    fill: var(--ink-muted);
+    font-family: var(--font-sans);
+    font-size: 13px;
+  }
+  .chart .grid-line {
+    stroke: var(--rule);
+    stroke-width: 1;
+  }
+  .chart .bar {
+    fill: var(--accent);
+  }
+  .chart .bar-soft {
+    fill: color-mix(in srgb, var(--accent) 35%, transparent);
+  }
+  .chart .line {
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .chart .dot {
+    fill: var(--paper-raised);
+    stroke: var(--accent);
+    stroke-width: 2.5;
+  }
+  .chart-summary {
+    font-size: 1.0625rem;
+    line-height: 1.55;
+  }
+
   /* ------------------------------------------------------------- misc */
   .visually-hidden {
     position: absolute !important;

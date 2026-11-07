@@ -79,6 +79,13 @@ export function SiteHeader({ hubs }: { hubs: Array<{ href: string; label: string
                 Search
               </Link>
             </li>
+            {isToolLive('symptom-tracker') && (
+              <li>
+                <Link href={APP_ROUTES.saved} className="tap text-[var(--color-ink)] underline-offset-4 hover:underline">
+                  Saved
+                </Link>
+              </li>
+            )}
           </ul>
         </nav>
       </div>
@@ -133,7 +140,13 @@ export function SiteFooter({
   const seen = new Set<string>(['/urgent-help/', ...TRUST_LINKS.map((l) => l.href), ...LEGAL_LINKS.map((l) => l.href)]);
   const extraLinks = (links ?? []).filter((l) => !seen.has(l.href));
   const explore = [...hubs, { href: '/tools/', label: 'Tools' }, { href: '/search/', label: 'Search' }];
-  if (isToolLive('symptom-tracker')) explore.push({ href: APP_ROUTES.today, label: 'Your private tracker' });
+  if (isToolLive('symptom-tracker')) {
+    explore.push(
+      { href: APP_ROUTES.today, label: 'Your private tracker' },
+      { href: APP_ROUTES.saved, label: 'Saved pages' },
+      { href: APP_ROUTES.install, label: 'Install the app' },
+    );
+  }
 
   return (
     <footer role="contentinfo" className="relative mt-20 overflow-hidden bg-[#14382f] text-[#e4eeea]">

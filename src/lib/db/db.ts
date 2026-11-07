@@ -12,7 +12,9 @@ import {
   LocalToolRecord,
 } from './schema';
 
-export const DB_NAME = 'menowell_local_db';
+import { DB_NAME } from './name';
+
+export { DB_NAME };
 
 export class MenoWellDatabase extends Dexie {
   checkins!: EntityTable<LocalCheckin, 'id'>;

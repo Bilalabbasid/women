@@ -30,6 +30,9 @@ import { buildMetadata } from '@/lib/seo/metadata';
 import { getSiteData, CLUSTER_LABELS, isStaticTarget } from '@/lib/content/site-data';
 import { GradeBadge } from '@/components/site/evidence';
 import { HOW_SITE_WORKS_LINK } from '@/lib/site/honesty';
+import { RecentEvidenceUpdates } from '@/components/site/recent-updates';
+import { LastLogNote } from '@/components/site/last-log-note';
+import { isToolLive } from '@/lib/tools/logic';
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -222,6 +225,8 @@ export default function HomePage() {
                 {HOW_SITE_WORKS_LINK}
               </Link>
             </p>
+
+            {isToolLive('symptom-tracker') && <LastLogNote />}
 
             {/* Lead search */}
             <form action="/search/" method="get">
@@ -491,12 +496,14 @@ export default function HomePage() {
         </section>
       )}
 
+      <RecentEvidenceUpdates />
+
       {/* 7. Latest updates */}
       {recent.length > 0 && (
         <section aria-labelledby="recent-heading" className="space-y-5">
           <div className="flex flex-wrap items-end justify-between gap-2">
             <h2 id="recent-heading" className="font-serif text-2xl font-semibold text-[var(--color-ink)] sm:text-3xl">
-              Latest articles &amp; evidence updates
+              Recently updated guides
             </h2>
             <Link href="/evidence/updates/" className="tap text-sm font-semibold text-[var(--color-link)] underline">
               What&rsquo;s changed →

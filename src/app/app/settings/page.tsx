@@ -6,6 +6,8 @@ import { HardDrive, ChevronRight } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { AppHeader } from '@/components/app/app-header';
 import { PWAInstallBanner } from '@/components/app/pwa-install-banner';
+import { LogReminderSettings } from '@/components/app/log-reminder-settings';
+import { APP_ROUTES } from '@/lib/routes';
 import { APP_CONFIG } from '@/lib/config/constants';
 
 export default function SettingsPage() {
@@ -54,11 +56,14 @@ export default function SettingsPage() {
           </Link>
         </section>
 
-        {/* Reminders: only treatment reminders exist, and they are set up on the Treatments page. */}
+        {/* Reminders: shown inside the app when she opens it (no push server), plus treatment reminders. */}
         <section className="space-y-3" aria-labelledby="reminders-heading">
           <h2 id="reminders-heading" className="font-serif font-semibold text-base text-[#231F1D]">
             Reminders
           </h2>
+          <Card className="p-4 bg-white">
+            <LogReminderSettings />
+          </Card>
           <Card className="p-4 bg-white space-y-2">
             <p className="text-xs text-[#554E48] leading-relaxed">
               Reminders for treatments you log (such as a patch change) are set up on the Treatments page, where you can
@@ -76,6 +81,9 @@ export default function SettingsPage() {
             Install the app
           </h2>
           <PWAInstallBanner variant="settings" />
+          <Link href={APP_ROUTES.install} className="inline-block text-xs text-[#1F5A4C] hover:underline font-semibold">
+            How installing works
+          </Link>
         </section>
 
         {/* Section 5: Legal & App Version */}

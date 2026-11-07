@@ -321,6 +321,33 @@ export default function ManageStoragePage() {
           </div>
         )}
 
+        <Card id="backup-heading" title="Back up your data">
+          <p>
+            A backup is one file containing everything from the tracker and the tools. Anyone who opens it can read it, so
+            keep it somewhere private. To move your data to another device or browser, download a backup here and restore it
+            there.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <button
+              type="button"
+              disabled={busy}
+              className={btnPrimary}
+              onClick={() =>
+                void act(async () => {
+                  const { records } = await downloadBackup();
+                  return `Backup downloaded with ${records} record${records === 1 ? '' : 's'}. Check your downloads folder.`;
+                })
+              }
+            >
+              Download backup
+            </button>
+            <label className={`${btnSecondary} cursor-pointer`}>
+              Restore from a backup file
+              <input ref={fileRef} type="file" accept="application/json,.json" className="sr-only" onChange={(e) => void onPickFile(e.target.files?.[0])} />
+            </label>
+          </div>
+        </Card>
+
         <Card id="where-heading" title="Where your data lives">
           <ul className="list-disc space-y-1.5 pl-6">
             <li>Everything you enter in the tracker and the tools is saved only in this browser on this device. No account is needed and nothing is uploaded.</li>
@@ -389,33 +416,6 @@ export default function ManageStoragePage() {
               )}
             </div>
           )}
-        </Card>
-
-        <Card id="backup-heading" title="Back up and restore">
-          <p>
-            A backup is one file containing everything from the tracker and the tools. Anyone who opens it can read it, so
-            keep it somewhere private. To move your data to another device or browser, download a backup here and restore it
-            there.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <button
-              type="button"
-              disabled={busy}
-              className={btnPrimary}
-              onClick={() =>
-                void act(async () => {
-                  const { records } = await downloadBackup();
-                  return `Backup downloaded with ${records} record${records === 1 ? '' : 's'}. Check your downloads folder.`;
-                })
-              }
-            >
-              Download backup
-            </button>
-            <label className={`${btnSecondary} cursor-pointer`}>
-              Restore from a backup file
-              <input ref={fileRef} type="file" accept="application/json,.json" className="sr-only" onChange={(e) => void onPickFile(e.target.files?.[0])} />
-            </label>
-          </div>
         </Card>
 
         <Card id="stored-heading" title="What’s stored">

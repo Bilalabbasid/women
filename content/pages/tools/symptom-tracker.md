@@ -52,6 +52,8 @@ Log how you feel in under a minute, daily or once a week, and print a one-page s
 
 [Open the tracker and log today](/app/today/)
 
+To open it from your home screen and use it without a connection, [install it as an app](/app/install/). Nothing is downloaded from an app store, and your entries still stay on your device.
+
 ## How it works
 
 1. **Log a day or a week.** Pick how you feel overall, tap the symptoms you've had and rate each from 1 (mild) to 5 (severe), then add sleep, hot flashes and any bleeding.

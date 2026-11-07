@@ -25,6 +25,7 @@ import { NotificationService } from '@/lib/notifications/treatment-reminders';
 import { describeStorageError } from '@/lib/storage/errors';
 import { useLocalToday } from '@/components/storage/use-tool-state';
 import { getMissedDays } from '@/lib/tracker/catch-up';
+import { TodayNudges } from '@/components/app/today-nudges';
 import { canStorePreferences } from '@/lib/storage/consent';
 
 const CATCH_UP_DISMISSED_KEY = 'catch_up_dismissed_on';
@@ -214,6 +215,14 @@ export default function DashboardPage() {
               <X className="w-4 h-4" />
             </button>
           </Card>
+        )}
+
+        {todayStr && (
+          <TodayNudges
+            todayStr={todayStr}
+            lastLoggedDate={recentCheckins[0]?.date ?? null}
+            firstEntryDate={recentCheckins[recentCheckins.length - 1]?.date ?? null}
+          />
         )}
 
         {/* Storage status banner */}

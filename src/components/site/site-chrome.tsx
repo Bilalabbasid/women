@@ -9,6 +9,7 @@ import { serializeLd } from '@/lib/seo/jsonld';
 import { getSiteData } from '@/lib/content/site-data';
 import { MenuSheet, NavGroups, ReadingControls, UrgentLink, type NavGroup } from './menu-sheet';
 import { SearchLauncher } from './search-launcher';
+import { ThemeToggle } from '@/components/ui/display-controls';
 import '@/app/styles/chrome.css';
 
 /**
@@ -143,6 +144,20 @@ export function SiteHeader(_props: { hubs: Array<{ href: string; label: string }
         </nav>
 
         <div className="site-header-actions">
+          <Link
+            href="/app/install/"
+            className="site-nav-link site-install flex items-center gap-1.5 text-sm"
+            aria-label="Download app guide and offline install"
+            title="Download app guide & install"
+          >
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            <span className="hidden md:inline">Download App</span>
+          </Link>
+          <ThemeToggle className="site-nav-link flex items-center gap-1.5 text-sm" />
           <SearchLauncher label className="site-nav-link site-search" />
           <button type="button" className="site-nav-link site-more" popoverTarget="site-more" aria-haspopup="true">
             More

@@ -76,7 +76,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     // data-theme / data-text-size are set before hydration by DISPLAY_PAINT_SCRIPT.
-    <html lang="en-US" className={`${serif.variable} ${sans.variable}`} suppressHydrationWarning>
+    <html lang="en-US" data-theme="light" className={`${serif.variable} ${sans.variable}`} suppressHydrationWarning>
       <head>
         {/* Hides the storage-choice banner before first paint when a choice is already stored. */}
         <script dangerouslySetInnerHTML={{ __html: CONSENT_PAINT_SCRIPT }} />

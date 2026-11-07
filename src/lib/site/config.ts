@@ -35,11 +35,6 @@ export interface SiteConfig {
   emailProvider: string | null;
   defaultLocale: 'en-US';
   env: SiteEnv;
-  flags: {
-    login: boolean;
-    aiPromotion: boolean;
-    appDownloadPromotion: boolean;
-  };
 }
 
 export function readSiteConfig(env: NodeJS.ProcessEnv = process.env): SiteConfig {
@@ -54,11 +49,6 @@ export function readSiteConfig(env: NodeJS.ProcessEnv = process.env): SiteConfig
     emailProvider: clean(env.EMAIL_PROVIDER),
     defaultLocale: 'en-US',
     env: siteEnv,
-    flags: {
-      login: env.FEATURE_LOGIN === 'true',
-      aiPromotion: env.FEATURE_AI_PROMOTION === 'true',
-      appDownloadPromotion: env.FEATURE_APP_DOWNLOAD_PROMOTION === 'true',
-    },
   };
 }
 

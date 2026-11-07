@@ -32,12 +32,7 @@ const NETWORK = /\b(fetch\s*\(|XMLHttpRequest|sendBeacon|new WebSocket|new Event
 const ALLOWED: Record<string, string> = {
   'src/components/site/search-box.tsx': "GET /search-index.json (static file; the query is never sent)",
   'src/app/sw.js/route.ts': 'service worker re-fetches same-origin pages and assets; never reads IndexedDB',
-  'src/components/account/health-sync-consent.tsx': 'POST /api/user/consent (consent preferences; contains no health details)',
-  'src/components/site/email-capture.tsx': 'email capture form for printable doctor questions guide',
-  'src/app/app/account/account-client.tsx':
-    'POST /api/auth/login (email only), POST /api/user/consent (consent/retention choice or withdrawal, no health content), ' +
-    'GET /api/user/export with userId in a header (downloads her own previously-synced data back to her own device, only after she already gave separate sync consent above - required by the account settings spec; never sent onward to anyone else), ' +
-    'POST /api/user/delete-account (userId header only)',
+  'src/components/site/email-capture.tsx': 'POST /api/subscribe: an email address the visitor typed, the form type and the consent value; nothing else',
 };
 const sourceFiles = walk(path.join(root, 'src'), /\.(tsx?|jsx?)$/);
 for (const f of sourceFiles) {
@@ -57,13 +52,48 @@ for (const d of deps) if (BANNED_SDK.test(d)) r.error('package.json', `third-par
 const built = path.join(root, '.next', 'server', 'app');
 const htmlFiles = walk(built, /\.html$/);
 if (htmlFiles.length === 0) r.warn('.next', 'no build output found: run `npm run build` first to check built HTML');
-const EXTERNAL_RES = /<(script|link|img|iframe|source|video|audio)\b[^>]*\b(src|href)="(https?:)?\/\/(?!localhost)[^"]+"/gi;
+const EXTERNAL_RES = /<(script|link|img|iframe|source|video|audio|embed|object)\b[^>]*\b(src|href|data|srcset)="(https?:)?\/\/(?!localhost)[^"]+"/gi;
+const EXTERNAL_CSS = /(@import\s+(url\()?["']?(https?:)?\/\/|url\(\s*["']?(https?:)?\/\/)/i;
+// Known tracker and analytics snippets. Domain-style patterns, so ordinary prose
+// ("biologically plausible", "clarity") never trips them.
+const TRACKER_SNIPPETS = [
+  /gtag\(/,
+  /googletagmanager/i,
+  /google-analytics\.com/i,
+  /\bfbq\(/,
+  /connect\.facebook\.net/i,
+  /pintrk\(/,
+  /\bttq\.(load|page|track)/,
+  /plausible\.io/i,
+  /umami\.is|data-website-id=/i,
+  /clarity\.ms/i,
+  /hotjar/i,
+  /vercel-insights|\/_vercel\/insights/i,
+];
 for (const f of htmlFiles) {
   const html = fs.readFileSync(f, 'utf8');
   for (const m of html.matchAll(EXTERNAL_RES)) {
     // <link rel="canonical"> / alternate point at our own canonical origin and load nothing.
     if (/rel="(canonical|alternate)"/.test(m[0])) continue;
     r.error(rel(f), `loads a third-party resource: ${m[0].slice(0, 120)}`);
+  }
+  for (const style of html.matchAll(/<style\b[^>]*>([\s\S]*?)<\/style>/gi)) {
+    if (EXTERNAL_CSS.test(style[1])) r.error(rel(f), 'inline CSS loads a third-party resource (@import or url())');
+  }
+  for (const re of TRACKER_SNIPPETS) {
+    if (re.test(html)) r.error(rel(f), `contains a tracker snippet matching ${re}`);
+  }
+}
+
+// Built CSS bundles: no third-party fonts or images.
+for (const f of walk(path.join(root, '.next', 'static'), /\.css$/)) {
+  if (EXTERNAL_CSS.test(fs.readFileSync(f, 'utf8'))) r.error(rel(f), 'stylesheet loads a third-party resource (@import or url())');
+}
+
+// API routes must not log anything: no form data, IPs, user agents or referrers.
+for (const f of walk(path.join(root, 'src', 'app', 'api'), /\.tsx?$/)) {
+  if (/\bconsole\.(log|info|warn|error|debug)\(/.test(fs.readFileSync(f, 'utf8'))) {
+    r.error(rel(f), 'API routes must not log (form submissions, IPs, user agents and referrers are never recorded)');
   }
 }
 

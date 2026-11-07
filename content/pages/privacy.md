@@ -1,7 +1,7 @@
 ---
 title: "Privacy policy: your health data stays on your device"
 seo_title: "Privacy policy: data stays on your device"
-meta_description: "How MenoVerdict handles your information: tracker entries stay in your browser, there are no accounts or health-data servers, and no tracking."
+meta_description: "No accounts, database, analytics, ads or tracking. Your health and tracker data stays on your device; we only receive an email you choose to send."
 cluster: site
 primary_keyword: privacy policy
 slug: privacy
@@ -21,6 +21,7 @@ updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Legal draft for UK GDPR special category, GDPR, and US health privacy", material: true }
   - { date: "2026-11-07", summary: "Rewrote to describe the site as it actually works today (no accounts, no server, nothing stored by us) instead of a planned server-sync system that was never built", material: true }
+  - { date: "2026-11-07", summary: "Set out exactly what is and is not collected, US and UK rights, form handling via Resend, and host logs", material: true }
 evidence_grade: null
 claims: []
 safety_flags: []
@@ -31,36 +32,50 @@ related: [/cookies/, /terms/, /medical-disclaimer/]
 affiliate_disclosure: false
 ---
 
-> **Notice to readers:** This is a working legal draft, written to describe what this site and its tools actually do today, not what we might build later. It is scheduled for review by a qualified privacy lawyer before it is treated as final, and it is not a substitute for that review.
+**Last updated: November 7, 2026.** This policy describes what the site's code actually does today. It hasn't had a formal legal review yet.
 
-## What this site is, in plain terms
+## The short version
 
-MenoVerdict publishes independent, sourced articles and free tools about perimenopause and menopause. We don't give you medical advice, diagnose anything, or recommend a specific doctor, clinic, or treatment for your situation — see our [medical disclaimer](/medical-disclaimer/) for exactly what that means. Where we compare telehealth providers or products, that's information for you to evaluate yourself, never a personal referral.
+- **No accounts and no database.** There is nothing to sign up for, and we don't run a database of visitors or users.
+- **No analytics, no ads, no tracking pixels.** We don't count visits, record clicks, build profiles or use any advertising or social media tags.
+- **Your health information stays on your device.** Tracker entries, checklist ticks, quiz answers, saved pages and reminder settings are stored only in your own browser. We never receive them.
+- **The only personal information we ever receive is an email address you choose to type into a form and send us.**
 
-## Your health information: we don't store it. You do, on your own device.
+## What we don't collect
 
-- The symptom tracker, symptoms checklist, treatment log, and doctor-report tool save everything you enter — symptoms, notes, dates, anything else — directly inside your own browser, using a built-in browser storage technology called IndexedDB.
-- **We have no server behind these tools.** There is no database that receives or holds your entries. Nothing you type into them is ever sent to us, to an advertiser, or to any affiliate partner, and we have no way to see, read, or recover it.
-- You can export your entries or permanently delete all of them at any time from inside the app's settings. Because we never had a copy, deleting it on your device removes it completely — there's nothing left anywhere for us to also delete.
+We don't collect your symptoms, tracker entries, quiz or tool answers, treatments, appointment dates, saved pages or anything else you enter into the site's tools. They're saved in your browser's own storage on your device (IndexedDB and local storage), and nothing in the site's code sends them anywhere. They never appear in web addresses, in emails or in any request to us or anyone else.
 
-## Reading the site needs no account
+That also means we can't see, recover or delete them for you. You can export them or delete them at any time from the app's settings. Clearing your browser data, using a private window or switching device removes them.
 
-Every article, evidence grade, and tool works without creating an account or giving us an email address. An email signup is only ever for a guide or update you actively ask for, and only sends what you asked for to the address you gave.
+## Forms: the one thing you can send us
 
-## Accounts, membership, sign-in, and the AI assistant
+If you fill in one of our forms (for example, to hear about new tools, to join a waitlist, or to contact us):
 
-These are not built yet. Where a button for one of them is shown, tapping it only tells you it's coming soon and returns you to where you were — it doesn't save, read, or send anything, because there is nothing behind it to save, read, or send to.
+- **What's sent:** the email address you typed, which form you used, whether you ticked the consent box, the time, and, for the contact form only, the message you wrote. Nothing else: not the page you were on, your symptoms, tracker data or quiz answers.
+- **How:** it's sent as a single email to our own inbox through Resend, an email delivery service. We don't store it in a database, file or spreadsheet. Resend may keep a record of delivered emails for a short period, under its own privacy policy.
+- **What we use it for:** only what you asked for, such as telling you about a new tool. We don't send newsletters or sales sequences.
+- **Deleting it:** reply to any email from us, or write to `contact@menoverdict.com`, and we'll delete it.
 
-If we build real accounts or any feature that would send health information off your device, we will, before that happens:
+## We don't sell or share your personal information
 
-- ask for your separate, explicit consent — never bundled into a general sign-up,
-- tell you plainly what would be stored, where, for how long, and how to delete it,
-- update this page first, so it never falls out of date with what the product actually does.
+We don't sell or share personal information, as those terms are used in California's CCPA/CPRA, and we don't use it for targeted advertising. So there's nothing to opt out of. If your browser sends a Global Privacy Control signal, it's respected automatically, because we never sell or share in the first place. The site is built so that health information never leaves your device, with US state health-privacy laws such as Washington's My Health My Data Act in mind.
 
-## Analytics and tracking
+## Server logs kept by our host
 
-We currently run no analytics or tracking of any kind on this site: no page-view tracking, no advertising pixels, no session replay. If we add basic, privacy-friendly analytics later, it will never include anything from the tools or tracker — only non-health events like which page was viewed — and this page will be updated first.
+Like any website, the company that hosts this site keeps standard server logs (such as IP addresses and the pages requested) for security and to keep the site running. Our own code doesn't record or read these logs, and we don't use them to track or identify anyone.
 
-## Your rights, and how to reach us
+## Links to other websites
 
-Because we don't hold your health data, there's nothing server-side for us to export or erase on your behalf — it's already entirely in your control, on your device, right now. For anything else — a correction, an accessibility issue, or a question about this notice — contact us using the details on our [contact page](/contact/). If you believe we're handling something incorrectly, you also have the right to raise it with your local data protection authority (for example, the UK Information Commissioner's Office).
+Some pages link to retailers or telehealth services, and some of those links earn us a commission. Once you click through, that company's own privacy policy and cookies apply. See [how we make money](/about/how-we-make-money/).
+
+## Your rights
+
+Wherever you live, you can ask us what personal information we hold about you (at most, an email address you sent us) and ask us to delete it. Email `contact@menoverdict.com`.
+
+**If you're in the UK:** you have rights under UK data protection law, including access and erasure, and you can complain to the Information Commissioner's Office (ICO). The data controller is **[DATA CONTROLLER NAME: to be added]**.
+
+## Changes to this policy
+
+If what the site collects ever changes, we'll update this page first, change the date at the top, and record the change in the change log below.
+
+See also our [cookie page](/cookies/) and [medical disclaimer](/medical-disclaimer/).

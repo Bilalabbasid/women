@@ -3,21 +3,40 @@ import path from 'node:path';
 import { z } from 'zod';
 import { parseDocument } from 'yaml';
 
-export const amazonProductSchema = z.object({
-  id: z.string().min(1),
-  name: z.string().min(1),
-  brand: z.string().min(1),
-  asin: z.string().min(1),
-  short_link: z.string().url(),
-  amazon_url: z.string().url(),
-  tracking_id: z.string().min(1),
-  best_for: z.string().min(5),
-  why_included: z.string().min(10),
-  what_it_wont_do: z.string().min(10),
-  who_should_check_first: z.string().min(10),
-  allowed_topics: z.array(z.string()).default([]),
-  banned_contexts: z.array(z.string()).default([]),
-});
+/**
+ * True when an affiliate URL carries only the network's own tag. SiteStripe
+ * copies add tracking (ascsubtag, btn_ref, gaOptInStatus, ref_, linkId…) that
+ * we never send.
+ */
+export function isCleanAmazonUrl(url: string, tag: string): boolean {
+  try {
+    const u = new URL(url);
+    const keys = [...u.searchParams.keys()];
+    return u.hostname === 'www.amazon.com' && keys.length === 1 && u.searchParams.get('tag') === tag;
+  } catch {
+    return false;
+  }
+}
+
+export const amazonProductSchema = z
+  .object({
+    id: z.string().min(1),
+    name: z.string().min(1),
+    brand: z.string().min(1),
+    asin: z.string().min(1),
+    amazon_url: z.string().url(),
+    tracking_id: z.string().min(1),
+    best_for: z.string().min(5),
+    why_included: z.string().min(10),
+    what_it_wont_do: z.string().min(10),
+    who_should_check_first: z.string().min(10),
+    allowed_topics: z.array(z.string()).default([]),
+    banned_contexts: z.array(z.string()).default([]),
+  })
+  .refine((p) => isCleanAmazonUrl(p.amazon_url, p.tracking_id), {
+    message: 'amazon_url must be https://www.amazon.com/dp/{ASIN}?tag={tracking_id} with no other parameters',
+    path: ['amazon_url'],
+  });
 
 export type AmazonProduct = z.infer<typeof amazonProductSchema>;
 

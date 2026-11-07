@@ -38,6 +38,8 @@ As an Amazon Associate we earn from qualifying purchases.
 
 When you click on certain product recommendation links (such as cooling sleepwear, pelvic floor exercise devices, books, or lubricants) and make a purchase, we may earn an affiliate commission from the retailer or merchant.
 
+We don't track clicks or set cookies ourselves. Once you click through, the retailer or service may set its own cookies on its own site so it can credit the sale; its privacy and cookie policies apply there.
+
 Every commercial link on this website:
 - Carries a clear visible notice: &ldquo;Paid link: we may earn a commission. We aren't doctors.&rdquo;
 - Links straight to the retailer URL without link-cloaking or internal redirect tricks, using `rel="sponsored nofollow noopener"` as required by search engine, FTC, and retailer guidelines.

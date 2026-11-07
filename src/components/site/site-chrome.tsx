@@ -78,13 +78,6 @@ export function SiteHeader({ hubs }: { hubs: Array<{ href: string; label: string
                 Search
               </Link>
             </li>
-            {SITE.flags.login && (
-              <li>
-                <Link href="/app/account/" className="tap font-semibold text-[var(--color-ink)] underline-offset-4 hover:underline">
-                  Account
-                </Link>
-              </li>
-            )}
           </ul>
         </nav>
       </div>

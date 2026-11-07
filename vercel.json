@@ -33,11 +33,5 @@
       "destination": "https://menoverdict.com/:path*",
       "permanent": true
     }
-  ],
-  "crons": [
-    {
-      "path": "/api/cron/data-deletion",
-      "schedule": "0 0 * * *"
-    }
   ]
 }

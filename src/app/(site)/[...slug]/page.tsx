@@ -109,9 +109,9 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
       : undefined;
   // Shown where the page's own text starts, just below the hero (not inside it).
   const bodyNotice = fullNotice ? (
-    <div className="space-y-1.5 border-b border-[var(--color-rule)] pb-4">
+    <div className="space-y-1">
       <HonestyNotice variant="short" />
-      <p className="byline pl-6 text-sm text-[var(--color-ink-muted)]" data-byline="">
+      <p className="byline pl-6 text-[1rem] text-[var(--color-ink-muted)]" data-byline="">
         {BYLINE_AUTHOR} · {reviewerInfo ? `Checked by ${reviewerInfo.name}, ${reviewerInfo.credentials}` : BYLINE_NOT_REVIEWED} · Last checked{' '}
         <time dateTime={checkedIso}>{formatCheckedDate(checkedIso)}</time>
       </p>
@@ -184,16 +184,13 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
           // "quick answer", does-it-work verdict, comparison "quick answer: ...").
           // Give it a distinct card so it reads as the answer at a glance,
           // without changing or duplicating any wording.
+          // On articles that opening is shown as the "Short answer" (serif pull-quote).
           const isLead = i === 0;
           const prose = 'prose steps';
           return (
             <div
               key={`html-${i}`}
-              className={
-                isLead
-                  ? `${prose} [&>p:first-of-type]:rounded-xl [&>p:first-of-type]:border [&>p:first-of-type]:border-[var(--color-rule)] [&>p:first-of-type]:bg-[var(--color-paper-raised)] [&>p:first-of-type]:p-4 [&>p:first-of-type]:text-lg [&>p:first-of-type]:leading-relaxed`
-                  : prose
-              }
+              className={isLead && isArticle ? `${prose} lead-answer` : prose}
               dangerouslySetInnerHTML={{ __html: part.html }}
             />
           );
@@ -210,18 +207,16 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
         {page.isMedical && <EmailCapture />}
 
         {children.length > 0 && !isNavHub && (
-          <section aria-labelledby="in-this-section" className="space-y-3">
-            <h2 id="in-this-section" className="text-2xl">
+          <section aria-labelledby="in-this-section" className="no-print space-y-4">
+            <h2 id="in-this-section" className="text-[length:var(--fs-h3)]">
               In this section
             </h2>
             <ul className="grid gap-3 sm:grid-cols-2">
               {children.map((c) => (
                 <li key={c.url}>
-                  <Link
-                    href={c.url}
-                    className="tap block rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-3 font-semibold text-[var(--color-link)] no-underline hover:bg-[var(--color-accent-soft)]"
-                  >
-                    {c.fm.title} →
+                  <Link href={c.url} className="card grid h-full gap-1">
+                    <span className="font-bold leading-snug">{c.fm.title}</span>
+                    <span className="link link-arrow text-base">Read</span>
                   </Link>
                 </li>
               ))}
@@ -231,33 +226,37 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
 
         {faq.length > 0 && (
           <section aria-labelledby="faq" className="space-y-3">
-            <h2 id="faq" className="text-2xl">
+            <h2 id="faq" className="text-[length:var(--fs-h3)]">
               Questions people ask
             </h2>
-            <div className="space-y-3">
+            <div className="accordion">
               {faq.map((f) => (
-                <div key={f.q} className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
-                  <h3 className="text-lg font-semibold">{f.q}</h3>
-                  <p className="mt-1.5 text-[var(--color-ink-muted)]">{f.a}</p>
-                </div>
+                <details key={f.q}>
+                  <summary>
+                    <h3 className="font-sans text-[1.125rem] font-bold">{f.q}</h3>
+                  </summary>
+                  <div className="accordion-body text-[var(--ink-muted)]">{f.a}</div>
+                </details>
               ))}
             </div>
           </section>
         )}
 
         {related.length > 0 && (
-          <section aria-labelledby="related" className="space-y-3">
-            <h2 id="related" className="text-2xl">
-              Related pages
+          <section aria-labelledby="related" className="no-print space-y-4">
+            <h2 id="related" className="text-[length:var(--fs-h3)]">
+              Related guides
             </h2>
             <ul className="grid gap-3 sm:grid-cols-2">
               {related.map((r) => (
                 <li key={r.url}>
-                  <Link
-                    href={r.url}
-                    className="tap block rounded-lg border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-3 font-semibold text-[var(--color-link)] no-underline hover:bg-[var(--color-accent-soft)]"
-                  >
-                    {r.fm.title} →
+                  <Link href={r.url} className="card grid h-full gap-1">
+                    <span className="font-bold leading-snug">{r.fm.title}</span>
+                    {r.fm.evidence_grade && r.fm.evidence_grade !== 'per_option' ? (
+                      <GradeBadge grade={r.fm.evidence_grade} />
+                    ) : (
+                      <span className="link link-arrow text-base">Read</span>
+                    )}
                   </Link>
                 </li>
               ))}
@@ -315,10 +314,10 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
           />
         )}
         {showSidebar ? (
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_17rem]">
+          <div className="article-grid grid gap-12 lg:grid-cols-[minmax(0,1fr)_15rem]">
             <div className="min-w-0 space-y-6">{body}</div>
             <aside className="no-print hidden lg:block">
-              <div className="sticky top-6">
+              <div className="sticky top-24 pt-2">
                 <Toc headings={rendered.headings} compact />
               </div>
             </aside>

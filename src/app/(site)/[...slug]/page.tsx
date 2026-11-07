@@ -19,6 +19,7 @@ import { contentPageLd, breadcrumbLd, faqLd, webApplicationLd } from '@/lib/seo/
 import { splitContentIslands } from '@/lib/content/markdown';
 import { ToolIsland } from '@/components/tools/tool-island';
 import { ProductSlotView } from '@/components/products/product-slot';
+import { getProductSlot } from '@/lib/products/slots';
 import { SourcesList } from '@/components/site/sources-list';
 import { ProductBlock } from '@/components/products/product-block';
 import { HonestyNotice } from '@/components/site/honesty-notice';
@@ -81,6 +82,18 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
   const parts = splitContentIslands(rendered.html);
   const firstToolIndex = parts.findIndex((p) => p.type === 'tool' && isToolLive(p.tool));
   const hasTool = firstToolIndex >= 0;
+  // Which paid-link networks actually appear on this page. The disclosure (and its
+  // Amazon sentence) shows only for links really present, not for a frontmatter flag.
+  const paidNetworks = new Set<'amazon' | 'other'>();
+  for (const p of parts) {
+    if (p.type === 'product') paidNetworks.add('amazon');
+    if (p.type === 'product-slot') {
+      const slot = getProductSlot(p.slot);
+      const active = slot?.status === 'filled' ? (slot.products ?? []).filter((x) => x.active) : [];
+      for (const prod of active) paidNetworks.add(/amazon\./i.test(prod.url) ? 'amazon' : 'other');
+    }
+  }
+  if (/rel="[^"]*\bsponsored\b/.test(rendered.html)) paidNetworks.add('other');
   const toolHero = fm.page_type === 'tool' ? TOOL_HEROES[page.url] : undefined;
   const isArticle = !toolHero && !isNavHub;
   const sectionHeadings = rendered.headings.filter((h) => h.depth === 2 && h.id !== 'references');
@@ -159,10 +172,12 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
         {/* Out of the header so it isn't the very first thing under the H1, but still ahead of every
             part below — including the first paid link, if any — per the FTC-grounded "disclose before
             the link, not behind it" rule in AGENTS.md. */}
-        {(fm.affiliate_disclosure || parts.some((p) => p.type === 'product')) && (
-          <p role="note" className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-3 text-xs leading-relaxed text-[var(--color-ink-muted)]">
-            <strong>Disclosure:</strong> this page contains paid links, which are labelled. As an Amazon Associate we earn from
-            qualifying purchases. We may earn a commission if you use them. That never changes an evidence grade or a ranking.
+        {paidNetworks.size > 0 && (
+          <p role="note" data-disclosure="affiliate" className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-3 text-xs leading-relaxed text-[var(--color-ink-muted)]">
+            <strong>Disclosure:</strong> this page contains paid links, which are labeled. We may earn a commission if you use
+            them. That never changes an evidence grade or a ranking.
+            {paidNetworks.has('amazon') && ' As an Amazon Associate we earn from qualifying purchases.'} Once you click through,
+            the retailer may set its own cookies.
           </p>
         )}
 
@@ -203,7 +218,7 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
         {/* A "doctor question sheet" makes sense for a symptom/treatment page, not
             for a legal or about-the-site page ("Get the terms of use doctor question
             sheet" was a real, nonsensical result of running this on every page). */}
-        {page.isMedical && <EmailCapture title={`Get the ${fm.title.toLowerCase()} doctor question sheet`} />}
+        {page.isMedical && <EmailCapture title="Get notified when we launch new tools" />}
 
         {children.length > 0 && !isNavHub && (
           <section aria-labelledby="in-this-section" className="space-y-3">

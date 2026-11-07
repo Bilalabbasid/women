@@ -28,6 +28,18 @@ const store = loadContent(DEFAULT_CONTENT_ROOT);
 
 for (const e of store.errors) r.error(e.file, e.message);
 
+/** [what the description promises, what a heading must mention to deliver it, label] */
+const DESCRIPTION_PROMISES: Array<[RegExp, RegExp, string]> = [
+  [/\bsafety\b|\bsafe\b/i, /safe|risk|caution|side effect|who should|avoid|interaction|warning|harm/i, 'safety'],
+  [/side effects?/i, /side effect|risk|safe/i, 'side effects'],
+  [/\b(cost|costs|price|prices|pricing)\b/i, /cost|price|pricing|pay|insurance|afford/i, 'cost'],
+  [/\bdos(e|es|age|ing)\b/i, /dose|dosage|dosing|how much/i, 'dosage'],
+  [/\binteractions?\b/i, /interaction|medication|drug/i, 'interactions'],
+  [/\bhow long\b/i, /how long|duration|last|timeline/i, 'how long'],
+  [/\balternatives?\b/i, /alternative|instead|what (else|works|helps)|options/i, 'alternatives'],
+  [/when to (see|call|get)/i, /when to|doctor|get help|urgent|appointment/i, 'when to see a doctor'],
+];
+
 const claimsApproval = (s: string) => ['clinician_approved', 'owner_approved', 'published'].includes(s);
 const published = store.pages.filter((p) => isPublishable(p, store));
 const allPaths = new Set(store.pages.map((p) => p.url));
@@ -78,6 +90,15 @@ for (const page of store.pages) {
   const visibleText = [fm.title, fm.meta_description, rendered.text, ...(fm.faq ?? []).flatMap((f) => [f.q, f.a])].join('\n');
   for (const hit of findBannedPhrases(visibleText, fm.banned_phrase_overrides)) {
     r.error(file, `banned phrase "${hit.match}" (${hit.why}). Remove it, or add a reasoned banned_phrase_overrides entry`);
+  }
+
+  // The meta description must not promise a topic the page has no section for
+  // (e.g. "safety considerations" on a page with no safety heading).
+  const headingText = [fm.title, ...rendered.headings.map((h) => h.text)].join(' | ');
+  for (const [promise, covered, topic] of DESCRIPTION_PROMISES) {
+    if (promise.test(fm.meta_description) && !covered.test(headingText)) {
+      r.warn(file, `meta description promises "${topic}" but no heading covers it`);
+    }
   }
 
   // Structure.

@@ -94,7 +94,7 @@ const CORE_TOOLS = [
   {
     title: 'Does It Work? Evidence Checker',
     desc: 'Supplements, diets, and therapies graded by clinical trial strength — including the ones that fail.',
-    href: '/does-it-work/',
+    href: '/tools/does-it-work-checker/',
     Icon: Scale,
   },
   {

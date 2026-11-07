@@ -81,7 +81,8 @@
   accessed: "2026-11-06"
   population: Menopausal women with moderate to severe hot flashes (OASIS 1-3 trials)
   key_finding: The FDA approved elinzanetant (Lynkuet), a dual NK1 and NK3 receptor antagonist, on October 24, 2025. Efficacy came from 12 weeks of OASIS 1 and 2 in 796 women; safety from OASIS 1-3 in 1,420 women, including 627 followed for up to 52 weeks in OASIS 3.
-  funding_conflict: Manufacturer press release. Replace with the FDA label for efficacy and safety figures.
+  funding_conflict: Manufacturer press release.
+  notes: "Editor: replace with the FDA label (prescribing information) for efficacy and safety figures once it is added to the registry."
   verified: true
 
 # ---------------------------------------------------------------- Society guidelines and statements
@@ -97,7 +98,8 @@
   accessed: "2026-11-06"
   population: Peri- and postmenopausal women
   key_finding: Hormone therapy is the most effective treatment for vasomotor symptoms and genitourinary syndrome of menopause, and prevents bone loss and fracture. For women under 60 or within 10 years of menopause without contraindications, the benefit-risk ratio is favorable; starting more than 10 years after menopause or after 60 is less favorable because of greater absolute risks of coronary heart disease, stroke, venous thromboembolism and dementia.
-  funding_conflict: Funded by donations to the NAMS Education & Research Fund; the statement reports no commercial support. Individual panel disclosures not yet reviewed.
+  funding_conflict: Funded by donations to the NAMS Education & Research Fund; the statement reports no commercial support.
+  notes: "Editor: individual panel members' disclosures still to be checked."
   verified: true
 
 - id: nams-2023-nonhormone-therapy

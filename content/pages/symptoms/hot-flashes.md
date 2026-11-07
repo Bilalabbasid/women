@@ -74,7 +74,7 @@ Clinical research grades hot flash therapies by how effectively they reduce dail
 | **SSRI / SNRI Antidepressants** | **Moderate** | Low-dose prescription agents (e.g. venlafaxine, paroxetine) provide modest relief for women who cannot take hormones. |
 | **Moisture-wicking layered clothing** | **Comfort only** | Natural fibers and breathable performance fabrics allow rapid temperature adjustment during unpredictable daytime surges. |
 
-When evaluating clothing for temperature regulation, focus on breathable weaves and quick-drying fabrics:
+When choosing clothing for temperature comfort, look for breathable weaves and quick-drying fabrics. Our [guide to sleepwear for night sweats](/care/sleepwear-for-night-sweats/) compares the main fabric types.
 
 <ProductSlot id="moisture-wicking-sleepwear" />
 

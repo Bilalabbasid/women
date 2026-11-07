@@ -111,7 +111,8 @@ export function splitToolIslands(html: string): Array<{ html: string } | { tool:
 
 const CITE_ID = `[a-z0-9]+(?:-[a-z0-9]+)*`;
 // One bracket may hold one or more @id refs, separated by `;` — e.g. `[@a]` or `[@a; @b; @c]`.
-const CITE_RE = new RegExp(`\\[@${CITE_ID}(?:\\s*;\\s*@${CITE_ID})*\\]`, 'g');
+// Several sources may be separated by ";" (Pandoc style) or ",": both are common in drafts.
+const CITE_RE = new RegExp(`\\[@${CITE_ID}(?:\\s*[;,]\\s*@${CITE_ID})*\\]`, 'g');
 const CITE_ID_RE = new RegExp(`@(${CITE_ID})`, 'g');
 
 /**

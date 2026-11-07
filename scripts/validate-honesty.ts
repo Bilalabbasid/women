@@ -42,6 +42,9 @@ const decode = (html: string) =>
     .replace(/&amp;/g, '&')
     .replace(/&quot;/g, '"');
 
+/** Editor-only notes that must never be published. */
+const EDITOR_NOTES = [/Replace with/, /\bTODO\b/, /\bFIXME\b/, /not yet reviewed/i];
+
 // Framework-only error shells that never render site chrome.
 const SKIP = new Set(['/_global-error/']);
 
@@ -63,6 +66,23 @@ for (const f of files) {
   checked++;
 
   if (!html.includes(HONESTY_FOOTER)) r.error(url, 'missing the footer honesty line');
+
+  // Published-output hygiene: nothing meant for editors may reach readers.
+  const visible = html.replace(/<script\b[\s\S]*?<\/script>/gi, ' ');
+  if (visible.includes('[@')) r.error(url, 'raw citation key "[@" in the page (the citation renderer missed it)');
+  for (const note of EDITOR_NOTES) {
+    if (note.test(visible)) r.error(url, `editor note published: ${note}`);
+  }
+  for (const m of visible.matchAll(/:<\/p>/gi)) {
+    // The next element that opens, skipping closing tags (an island such as a product card
+    // starts right after the text block that introduces it closes).
+    const after = visible.slice(m.index! + m[0].length);
+    const next = after.match(/^(?:\s|<\/[a-z]+>|<!--[\s\S]*?-->)*(<[a-z]+[^>]*>)?/i)?.[1] ?? '';
+    // A colon may introduce a list, table, quote, a doctor-questions box or numbered sub-steps.
+    if (!/^<(ul|ol|table|blockquote|aside|pre|h3|h4)\b|^<div class="(table-wrap|doctor-questions)/.test(next)) {
+      r.error(url, `a paragraph ends with ":" but nothing follows it (next: ${next.slice(0, 40) || 'end'})`);
+    }
+  }
   if (/based on what you searched for|the symptoms you searched for/.test(html)) {
     r.error(url, 'contains the retired "based on what you searched for" wording');
   }

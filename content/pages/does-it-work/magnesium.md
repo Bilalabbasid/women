@@ -54,9 +54,7 @@ Not all magnesium supplements behave identically in the digestive tract:
 
 ## How to evaluate magnesium options
 
-Some women choose to try magnesium for sleep comfort and muscle relaxation. When selecting a supplement, consider elemental dosage, form bioavailability, and third-party purity testing:
-
-<ProductSlot id="magnesium-supplement" />
+Some women choose to try magnesium for sleep comfort and muscle relaxation. If you do, check the label for the elemental magnesium dose and the form, and look for independent third-party purity testing.
 
 ## Important safety cautions and drug interactions
 

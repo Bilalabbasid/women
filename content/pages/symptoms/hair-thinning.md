@@ -43,7 +43,6 @@ cta_profile: skin_hair
 hub: /symptoms/
 sources: [kamp-menopause-hair-disorders-2022]
 related: [/symptoms/, /symptoms/dry-itchy-skin/, /does-it-work/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Why is my hair thinning around menopause?
     a: "A 2022 dermatology review found a measurable reduction in growth-phase (anagen) hairs in postmenopausal women, most noticeable over the frontal scalp. The most common pattern, female pattern hair loss, shows thinning over the crown and front of the scalp with the hairline itself staying intact, and is thought to involve reduced estrogen rather than excess androgens in most women."

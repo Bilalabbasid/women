@@ -36,7 +36,6 @@ cta_profile: hrt_evaluating
 hub: /treatments/hormone-therapy/
 sources: [nice-ng23-recommendations]
 related: [/treatments/hormone-therapy/, /treatments/hormone-therapy/estrogen/, /treatments/hormone-therapy/types/, /treatments/hormone-therapy/breast-cancer-risk/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Why do I need progesterone if estrogen is what treats my symptoms?
     a: "If you have a uterus, estrogen taken alone can thicken the uterine lining over time, raising endometrial cancer risk. A progestogen (progesterone or a synthetic equivalent) protects against that. It's not there to treat your hot flashes directly — it's there to make taking estrogen safe for your uterus."

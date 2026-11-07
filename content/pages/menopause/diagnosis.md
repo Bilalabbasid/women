@@ -41,7 +41,6 @@ cta_profile: learn_stage
 hub: /menopause/
 sources: [nice-ng23-recommendations, straw-10-2012, nhs-postmenopausal-bleeding]
 related: [/menopause/, /perimenopause/blood-tests/, /tools/12-month-counter/, /tools/stage-guide/]
-affiliate_disclosure: false
 faq:
   - q: Do I need a blood test to confirm menopause at age 50?
     a: Usually not. UK guidance (NICE NG23) advises clinicians to identify natural menopause in otherwise healthy people aged 45 and over once they have gone 12 consecutive months without a period (when not using hormonal contraception), without ordering hormone blood tests.

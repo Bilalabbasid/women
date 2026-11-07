@@ -37,7 +37,6 @@ cta_profile: specialist_group
 hub: /groups/
 sources: [nams-2022-hormone-therapy, fda-mht-labeling-request-2025, jmir-online-menopause-information-2025, nams-2023-nonhormone-therapy]
 related: [/groups/, /treatments/hormone-therapy/, /postmenopause/bone-health/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Is a hysterectomy the same as surgical menopause?
     a: Only if both ovaries are removed (bilateral oophorectomy) at the same time. Removing the uterus alone stops menstrual periods, but if one or both ovaries remain, they continue producing hormones until menopause occurs later.

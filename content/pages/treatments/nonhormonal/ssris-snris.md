@@ -34,7 +34,6 @@ cta_profile: nonhormonal_evaluating
 hub: /treatments/nonhormonal/
 sources: [nams-2023-nonhormone-therapy]
 related: [/treatments/nonhormonal/, /treatments/nonhormonal/gabapentin/, /groups/breast-cancer-survivors/, /symptoms/hot-flashes/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Do antidepressants help hot flashes even if you're not depressed?
     a: "Yes. Certain SSRIs and SNRIs reduce hot flash frequency and severity through an effect on the brain's temperature-regulation center, separate from their effect on mood. The Menopause Society (2023) rates this a Level I non-hormonal option for vasomotor symptoms, usable whether or not you have depression."

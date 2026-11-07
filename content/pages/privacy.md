@@ -22,6 +22,7 @@ change_log:
   - { date: "2026-11-06", summary: "Legal draft for UK GDPR special category, GDPR, and US health privacy", material: true }
   - { date: "2026-11-07", summary: "Rewrote to describe the site as it actually works today (no accounts, no server, nothing stored by us) instead of a planned server-sync system that was never built", material: true }
   - { date: "2026-11-07", summary: "Set out exactly what is and is not collected, US and UK rights, form handling via Resend, and host logs", material: true }
+  - { date: "2026-11-07", summary: "Removed references to retailer links", material: true }
 evidence_grade: null
 claims: []
 safety_flags: []
@@ -29,7 +30,6 @@ cta_profile: site_none
 hub: null
 sources: []
 related: [/cookies/, /terms/, /medical-disclaimer/]
-affiliate_disclosure: false
 ---
 
 **Last updated: November 7, 2026.** This policy describes what the site's code actually does today. It hasn't had a formal legal review yet.
@@ -68,7 +68,7 @@ Like any website, the company that hosts this site keeps standard server logs (s
 
 ## Links to other websites
 
-Some pages link to retailers or telehealth services, and some of those links earn us a commission. Once you click through, that company's own privacy policy and cookies apply. See [how we make money](/about/how-we-make-money/).
+Some pages link to other websites, such as telehealth services and research publishers. Once you click through, that site's own privacy policy and cookies apply.
 
 ## Your rights
 

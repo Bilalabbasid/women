@@ -36,7 +36,6 @@ cta_profile: cognitive
 hub: /symptoms/
 sources: [nice-ng23-recommendations, nams-2022-hormone-therapy, nams-2023-nonhormone-therapy]
 related: [/symptoms/, /symptoms/insomnia/, /symptoms/anxiety/, /tools/symptoms-checklist/]
-affiliate_disclosure: false
 faq:
   - q: Is brain fog in perimenopause a sign of early dementia?
     a: Midlife word-finding slips and trouble concentrating during perimenopause are very common and are usually linked to fluctuating estrogen, fragmented sleep from night sweats, and stress rather than dementia. Still, any progressive memory change that interferes with daily functioning should be evaluated by a doctor.

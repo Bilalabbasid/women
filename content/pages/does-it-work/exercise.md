@@ -17,9 +17,10 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Initial publication on resistance training physiology, bone loading, and starter progression", material: true }
+  - { date: "2026-11-07", summary: "Removed product recommendations; the guidance is unchanged", material: true }
 evidence_grade: strong
 claims:
   - id: resistance-training-bone-density
@@ -33,7 +34,6 @@ cta_profile: diw_supported
 hub: /does-it-work/
 sources: [sims-next-level, liftmor-trial-bone-density, nice-ng23]
 related: [/does-it-work/, /care/menopause-books/, /perimenopause/, /tools/symptom-tracker/]
-affiliate_disclosure: true
 ---
 
 The most effective form of exercise for women experiencing perimenopause and menopause is progressive resistance training (lifting challenging weights) combined with brief impact loading [@liftmor-trial-bone-density, @sims-next-level]. While moderate walking and cardio support heart health, they do not provide enough mechanical force to halt the accelerated loss of muscle mass (sarcopenia) and bone mineral density that follows the postmenopausal estrogen decline, as documented in our [Does It Work evidence directory](/does-it-work/) [@liftmor-trial-bone-density].
@@ -73,11 +73,7 @@ You do not need to spend hours in the gym. Doing two to three focused 30-to-40-m
 
 ### Further reading on menopause athletic physiology
 
-For women who want a thorough training roadmap, exercise modifications for fluctuating hormones, and protein distribution guidelines:
-
-<Product id="book-next-level" />
-
-For reviews of other doctor-written books covering medical and hormonal options, read our guide to [evidence-based menopause books](/care/menopause-books/).
+If you want a thorough training roadmap, exercise changes for fluctuating hormones and guidance on protein, Dr Stacy Sims's book *Next Level* covers all three. Our guide to [evidence-based menopause books](/care/menopause-books/) reviews it alongside doctor-written books on medical and hormonal options.
 
 ## Safety precautions and progression
 

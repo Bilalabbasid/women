@@ -34,7 +34,6 @@ cta_profile: learn_stage
 hub: /perimenopause/
 sources: [nice-ng23-recommendations, straw-10-2012]
 related: [/perimenopause/, /perimenopause/irregular-periods/, /perimenopause/contraception/, /perimenopause/vs-menopause/, /tools/12-month-counter/]
-affiliate_disclosure: false
 faq:
   - q: Can you get pregnant during perimenopause?
     a: "Yes. Perimenopause means your cycles are changing and becoming less predictable, not that ovulation has stopped. Fertility declines as you move through the transition, but pregnancy remains possible until menopause itself is confirmed, which is 12 consecutive months without a period."

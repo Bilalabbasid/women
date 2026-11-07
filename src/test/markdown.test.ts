@@ -42,18 +42,18 @@ describe('markdown renderer', () => {
     expect(r.links.find((l) => l.href === '/symptoms/night-sweats/')?.dropped).toBe(true);
   });
 
-  it('marks /go/ links as sponsored nofollow and leaves external links followed', () => {
-    const r = render('[Partner](/go/partner-x/) and [NHS](https://www.nhs.uk/).');
-    expect(r.html).toMatch(/href="\/go\/partner-x\/" rel="sponsored nofollow"/);
-    expect(r.html).toMatch(/href="https:\/\/www\.nhs\.uk\/">/);
+  it('gives external links rel="noopener" and leaves them followed', () => {
+    const r = render('[NHS](https://www.nhs.uk/).');
+    expect(r.html).toMatch(/href="https:\/\/www\.nhs\.uk\/" rel="noopener"/);
+    expect(r.html).not.toMatch(/nofollow|sponsored/);
   });
 
   it('marks urgent sections and records links inside them', () => {
-    const r = render(':::urgent\nCall 911. [Partner](/go/x/)\n:::\n\nOutside [Partner](/go/y/).');
+    const r = render(':::urgent\nCall 911. [NHS](https://www.nhs.uk/)\n:::\n\nOutside [CDC](https://www.cdc.gov/).');
     expect(r.urgentSections).toBe(1);
     expect(r.html).toContain('data-urgent="true"');
-    expect(r.links.find((l) => l.href === '/go/x/')?.inUrgent).toBe(true);
-    expect(r.links.find((l) => l.href === '/go/y/')?.inUrgent).toBe(false);
+    expect(r.links.find((l) => l.href === 'https://www.nhs.uk/')?.inUrgent).toBe(true);
+    expect(r.links.find((l) => l.href === 'https://www.cdc.gov/')?.inUrgent).toBe(false);
   });
 
   it('collects h2/h3 headings with ids for the table of contents, and detects body h1s', () => {

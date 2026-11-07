@@ -33,7 +33,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [nams-2023-nonhormone-therapy, nams-2022-hormone-therapy]
 related: [/does-it-work/, /treatments/nonhormonal/cbt-and-hypnosis/, /treatments/nonhormonal/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: Does acupuncture work for hot flashes?
     a: "According to The Menopause Society's 2023 review of randomized trial evidence, acupuncture is classified as not recommended for vasomotor symptoms (Level II) — trials have not shown it to be reliably more effective than sham or placebo acupuncture for reducing hot flash frequency or severity."

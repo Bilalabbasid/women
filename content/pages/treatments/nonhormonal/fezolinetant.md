@@ -37,7 +37,6 @@ cta_profile: nonhormonal_evaluating
 hub: /treatments/nonhormonal/
 sources: [nams-2023-nonhormone-therapy, veozah-prescribing-information]
 related: [/treatments/nonhormonal/, /treatments/nonhormonal/elinzanetant/, /symptoms/hot-flashes/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Is Veozah a hormone?
     a: No. Veozah (fezolinetant) is a non-hormonal neurokinin 3 (NK3) receptor antagonist that targets temperature-regulating neurons in the hypothalamus without estrogen or progestogen activity.

@@ -36,7 +36,6 @@ cta_profile: hrt_evaluating
 hub: /treatments/hormone-therapy/
 sources: [nice-ng23-recommendations]
 related: [/treatments/hormone-therapy/, /treatments/hormone-therapy/patch-vs-pill/, /treatments/hormone-therapy/vaginal-estrogen/, /treatments/hormone-therapy/is-it-right-for-me/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: What's the difference between combined and estrogen-only HRT?
     a: "Combined HRT contains both estrogen and a progestogen, and is offered to people who still have a uterus, because the progestogen protects the uterine lining. Estrogen-only HRT is offered to people who have had a total hysterectomy, since there's no uterine lining left to protect."

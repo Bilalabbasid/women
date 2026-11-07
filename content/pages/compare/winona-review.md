@@ -41,7 +41,6 @@ cta_profile: care_comparison
 hub: /compare/
 sources: [winona-own-site-2026, acog-compounded-bioidentical-2023]
 related: [/compare/, /treatments/hormone-therapy/bioidentical-vs-compounded/, /treatments/hormone-therapy/types/, /evidence/products-we-wont-recommend/, /tools/treatment-questions/]
-affiliate_disclosure: false
 noindex: true
 faq:
   - q: Is Winona's HRT FDA-approved?
@@ -50,7 +49,7 @@ faq:
     a: "No, and Winona's site frames this as consistent with guidance from The Menopause Society and ACOG, which generally don't require hormone blood or saliva testing to identify perimenopause or guide treatment in typical cases. This part of their approach lines up with mainstream clinical guidance."
 ---
 
-**What it is:** Winona is a direct-to-consumer telehealth company offering what it describes as bioidentical hormone replacement therapy, with treatment prescribed by board-certified doctors based on symptoms rather than hormone testing. We reviewed Winona's own site directly; this isn't a paid placement, and nothing here is ranked by commission.
+**What it is:** Winona is a direct-to-consumer telehealth company offering what it describes as bioidentical hormone replacement therapy, with treatment prescribed by board-certified doctors based on symptoms rather than hormone testing. We reviewed Winona's own site directly; this isn't a paid placement, and nobody pays to be reviewed here.
 
 ## The most important thing to know: most formats are compounded, not FDA-approved
 

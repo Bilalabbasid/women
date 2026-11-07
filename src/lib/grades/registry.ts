@@ -4,8 +4,8 @@
  * pages) is read from content/_grades/grades.json, so the same treatment can't be
  * "Strong" on one page and "Moderate" on another. Edit grades there, nowhere else.
  *
- * Grades are set from the evidence before anyone checks for an affiliate
- * programme, and a commission never changes one.
+ * Grades are set from the evidence alone. MenoVerdict carries no ads,
+ * affiliate links or sponsored content.
  */
 import data from '../../../content/_grades/grades.json';
 import type { EvidenceGrade } from '../content/schema';

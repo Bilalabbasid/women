@@ -30,7 +30,6 @@ cta_profile: general_symptom
 hub: /symptoms/
 sources: [nams-2023-nonhormone-therapy]
 related: [/symptoms/, /symptoms/hot-flashes/, /symptoms/night-sweats/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Does menopause actually change how you smell?
     a: "We want to be honest here: we could not find research that has directly studied body odor itself in postmenopausal women. What is well-established is that hot flashes and night sweats involve genuinely increased sweating as part of the body's heat-regulation response, and more sweat sitting on skin for longer (especially overnight) gives skin bacteria more to break down, which is what produces body odor. That's a plausible chain of cause and effect, but it's our reasoning connecting two separately studied facts, not a study that tested odor itself — so take it as a reasonable explanation rather than a proven one."

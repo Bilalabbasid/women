@@ -30,7 +30,6 @@ cta_profile: musculoskeletal
 hub: /symptoms/
 sources: [reinke-frozen-shoulder-hrt-2026]
 related: [/symptoms/, /symptoms/joint-pain/, /treatments/hormone-therapy/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Does menopause actually cause frozen shoulder?
     a: "There's a long-standing clinical impression that frozen shoulder is more common in midlife women, but rigorous evidence directly testing a menopause link is limited. A 2026 pilot study found a higher rate of adhesive capsulitis diagnosis in one group compared to another (7.65% versus 3.95%), but this difference did not reach statistical significance — the study was explicitly a pilot, meant to inform larger research rather than settle the question."

@@ -30,7 +30,6 @@ cta_profile: learn_stage
 hub: /postmenopause/
 sources: [swan-vms-duration-avis-2015, nhs-postmenopausal-bleeding]
 related: [/postmenopause/, /postmenopause/health-checklist/, /postmenopause/bone-health/, /postmenopause/heart-health/, /postmenopause/sexual-health/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Does it get easier after menopause?
     a: "For most women, vasomotor symptoms (hot flashes and night sweats) do eventually ease, though the timeline varies a lot by individual. The SWAN study found a median total duration of frequent vasomotor symptoms of 7.4 years, with about 4.5 of those years typically falling after the final period — meaning many women do still have some symptoms well into postmenopause before they settle. Other symptoms, like vaginal dryness, often don't resolve on their own the way vasomotor symptoms tend to, and usually need ongoing, separate management."

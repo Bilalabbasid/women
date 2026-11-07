@@ -35,7 +35,6 @@ banned_phrase_overrides:
 hub: /symptoms/
 sources: [sims-next-level, liftmor-trial-bone-density, nams-2023-nonhormone-therapy, nice-ng23-recommendations]
 related: [/symptoms/, /does-it-work/exercise/, /care/menopause-books/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Why does fat shift to my stomach in perimenopause even when my diet hasn't changed?
     a: Declining estrogen during perimenopause and menopause alters where the body stores fat (shifting from hips and thighs toward visceral abdominal fat), while age-related loss of lean muscle mass (sarcopenia) lowers resting energy expenditure and fragmented sleep affects hunger hormones.

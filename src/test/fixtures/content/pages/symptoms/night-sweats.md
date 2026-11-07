@@ -28,7 +28,6 @@ cta_profile: vasomotor
 hub: /symptoms/
 sources: [fixture-guideline]
 related: []
-affiliate_disclosure: false
 ---
 
 Draft body. Links back to [hot flashes](/symptoms/hot-flashes/).

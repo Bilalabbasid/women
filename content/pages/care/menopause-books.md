@@ -1,6 +1,6 @@
 ---
 title: "Menopause Books Worth Reading, Chosen by Evidence"
-seo_title: "Best Evidence-Based Menopause Books"
+seo_title: "Evidence-Based Menopause Books"
 meta_description: "Which menopause books can you trust? Honest, evidence-focused reviews of The Menopause Manifesto, The New Menopause, and Next Level: who each suits and limits."
 cluster: care
 primary_keyword: best menopause books
@@ -17,9 +17,10 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Initial publication of evidence-evaluated menopause books guide", material: true }
+  - { date: "2026-11-07", summary: "Replaced retailer links with publisher links", material: true }
 evidence_grade: per_option
 claims: []
 safety_flags: []
@@ -27,7 +28,6 @@ cta_profile: books
 hub: /care/
 sources: [gunter-menopause-manifesto, haver-new-menopause, sims-next-level, nams-2022-hormone-therapy]
 related: [/care/, /perimenopause/, /treatments/, /does-it-work/exercise/, /tools/symptom-tracker/]
-affiliate_disclosure: true
 ---
 
 The menopause book market is filled with conflicting advice, ranging from predatory anti-aging promises to outdated medical warnings. As part of our [menopause care guides](/care/), we reviewed the three most prominent doctor- and scientist-authored books available today to help you find guides grounded in clinical science [@gunter-menopause-manifesto, @haver-new-menopause, @sims-next-level].
@@ -48,7 +48,7 @@ Dr. Jen Gunter is a board-certified obstetrician and gynaecologist known for her
 - **Who it suits best**: Readers who value hard data, peer-reviewed study citations, and a no-nonsense medical perspective.
 - **Limitations**: The tone can be clinical and blunt, and readers looking for gentle lifestyle approaches may find her dismissal of alternative remedies unyielding.
 
-<Product id="book-menopause-manifesto" />
+*The Menopause Manifesto*, Jen Gunter. [Citadel Press, 2021](https://www.citadelpress.com/books/the-menopause-manifesto/).
 
 ## 2. The New Menopause by Dr. Mary Claire Haver
 
@@ -58,7 +58,7 @@ Dr. Mary Claire Haver is an experienced OB/GYN who developed an extensive follow
 - **Who it suits best**: Women preparing for an upcoming healthcare appointment who need help articulating complex, fluctuating symptoms and evaluating hormone therapy options.
 - **Limitations**: Her enthusiastic endorsement of hormone therapy for broad prevention should be viewed as one clinical perspective; every woman needs an individualized assessment of her personal cardiovascular and oncologic risk profile [@nams-2022-hormone-therapy].
 
-<Product id="book-new-menopause" />
+*The New Menopause*, Mary Claire Haver. [Rodale Books, 2024](https://www.rodalebooks.com/new-menopause).
 
 ## 3. Next Level by Dr. Stacy Sims
 
@@ -68,10 +68,10 @@ Exercise physiologist and nutrition scientist Dr. Stacy Sims coined the phrase &
 - **Who it suits best**: Women who want an actionable training and nutrition roadmap to maintain power, muscle, joint stability, and bone density through midlife and beyond.
 - **Limitations**: It is an athletic and nutritional performance book, not a medical treatise. It does not address medical management of vasomotor symptoms, genitourinary changes, or hormone replacement protocols in depth.
 
-<Product id="book-next-level" />
+*Next Level*, Stacy Sims. [Rodale Books, 2022](https://www.rodalebooks.com/next-level).
 
 ## How to use these books with your care team
 
-Reading evidence-based books helps you become an informed advocate for your own health. As you read, make notes on questions that resonate with your situation, and bring them to your doctor. 
+Reading evidence-based books helps you become an informed advocate for your own health. All three are widely stocked by public libraries, often as e-books and audiobooks too. As you read, make notes on questions that resonate with your situation, and bring them to your doctor. 
 
 To help structure your medical discussions, explore our guide on [questions to ask your doctor about perimenopause](/perimenopause/questions-for-your-doctor/) or start tracking your daily patterns with our [symptom tracker](/tools/symptom-tracker/).

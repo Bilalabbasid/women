@@ -48,7 +48,6 @@ cta_profile: tool
 hub: /tools/
 sources: [nice-ng23-recommendations, nhs-postmenopausal-bleeding, nhs-heart-palpitations, lifeline-988]
 related: [/tools/stage-guide/, /tools/symptom-tracker/, /perimenopause/early-signs/, /symptoms/]
-affiliate_disclosure: false
 faq:
   - q: "How many symptoms do I need to tick to be in perimenopause?"
     a: "There is no number. This checklist is not a test and it doesn't add up your answers. It helps you remember what to mention to a clinician, who looks at your age, your periods and your symptoms together."

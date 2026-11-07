@@ -37,7 +37,6 @@ cta_profile: learn_stage
 hub: /perimenopause/
 sources: [nice-ng23-recommendations, nice-ng23, straw-10-2012]
 related: [/perimenopause/, /menopause/diagnosis/, /groups/premature-ovarian-insufficiency/, /tools/stage-guide/]
-affiliate_disclosure: false
 faq:
   - q: Why did my hormone blood test come back "normal" when I have clear perimenopause symptoms?
     a: During perimenopause, follicle-stimulating hormone (FSH) and estradiol fluctuate sharply from cycle to cycle. A normal result on one day cannot rule out perimenopause, which is why NICE NG23 advises diagnosing perimenopause from symptoms and cycle changes at age 45 and over.

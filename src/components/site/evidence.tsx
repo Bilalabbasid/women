@@ -57,7 +57,7 @@ export function References({ ids, sources }: { ids: string[]; sources: Map<strin
                 <>
                   {s.authors.length > 0 && `${s.authors.slice(0, 3).join(', ')}${s.authors.length > 3 ? ' et al.' : ''}. `}
                   {href ? (
-                    <a href={href} className="text-[var(--color-link)] underline">
+                    <a href={href} rel="noopener" className="text-[var(--color-link)] underline">
                       {s.title}
                     </a>
                   ) : (

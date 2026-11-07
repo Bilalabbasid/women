@@ -40,7 +40,6 @@ cta_profile: hrt_evaluating
 hub: /treatments/hormone-therapy/
 sources: [nice-ng23-recommendations]
 related: [/treatments/hormone-therapy/, /treatments/hormone-therapy/boxed-warning/, /treatments/hormone-therapy/types/, /groups/breast-cancer-survivors/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Does HRT cause breast cancer?
     a: "The evidence shows an association, not a simple yes/no. NICE guidance states combined HRT (estrogen plus a progestogen) increases breast cancer risk, with the increase rising the longer you use it. Estrogen-only HRT, used by people who have had a hysterectomy, shows very little or no increase in breast cancer risk."

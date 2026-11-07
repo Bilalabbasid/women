@@ -37,7 +37,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [uspstf-vitamin-d-calcium-fractures-2018]
 related: [/does-it-work/, /does-it-work/calcium/, /postmenopause/bone-health/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: Does taking vitamin D prevent fractures after menopause?
     a: "At low doses, the evidence says no for fracture prevention specifically: the US Preventive Services Task Force recommends against daily supplementation with 400 IU or less of vitamin D for this purpose in postmenopausal women, with moderate certainty of no net benefit. At higher doses, the evidence is currently insufficient to say either way."

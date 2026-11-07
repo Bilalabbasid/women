@@ -35,7 +35,6 @@ cta_profile: care_comparison
 hub: /compare/
 sources: [midi-health-own-site-2026]
 related: [/compare/, /treatments/hormone-therapy/, /care/find-a-menopause-specialist/, /tools/treatment-questions/]
-affiliate_disclosure: false
 noindex: true
 faq:
   - q: Does Midi Health take insurance?
@@ -44,7 +43,7 @@ faq:
     a: "As of our last check (November 2026), Midi's listed self-pay cash price was $250 for a first visit and $150 for follow-ups, not including labs or medications. With insurance, Midi states most patients pay around $50 out-of-pocket per visit on average, though your deductible, copay, and coinsurance depend on your specific plan. Confirm current pricing directly with Midi before booking, since prices change."
 ---
 
-**What it is:** Midi Health is a telehealth clinic focused on women's midlife health, offering live video visits with clinicians (MDs, nurse practitioners, and other licensed providers) who the company says specialize in perimenopause, menopause, and related symptoms. We reviewed Midi's own site and help center directly; this isn't a paid placement, and nothing here is ranked by commission.
+**What it is:** Midi Health is a telehealth clinic focused on women's midlife health, offering live video visits with clinicians (MDs, nurse practitioners, and other licensed providers) who the company says specialize in perimenopause, menopause, and related symptoms. We reviewed Midi's own site and help center directly; this isn't a paid placement, and nobody pays to be reviewed here.
 
 ## What Midi actually offers
 

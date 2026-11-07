@@ -27,7 +27,6 @@ cta_profile: site_none
 hub: null
 sources: []
 related: [/about/how-we-make-money/, /evidence/updates/, /medical-disclaimer/]
-affiliate_disclosure: false
 ---
 
 In health publishing, bold claims are easy to make but difficult to prove. We evaluate treatments, supplements, and lifestyle interventions against a rigorous hierarchy of scientific evidence.
@@ -55,5 +54,5 @@ When reviewing options, we prioritize sources in the following order:
 
 - Look up any treatment or supplement by symptom and evidence grade in our interactive [Does it work? evidence checker](/tools/does-it-work-checker/).
 - Browse our full [Does It Work? evidence directory](/does-it-work/) and [editorial policy](/evidence/editorial-policy/).
-- Read how our [medical review process](/evidence/medical-review/) and [commercial independence rules](/about/how-we-make-money/) keep commissions separate from evidence grades.
+- MenoVerdict carries no ads, affiliate links or sponsored content. Read [how MenoVerdict is funded](/about/how-we-make-money/) and how our [medical review process](/evidence/medical-review/) works.
 

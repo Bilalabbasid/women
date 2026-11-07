@@ -33,7 +33,6 @@ cta_profile: skin_hair
 hub: /symptoms/
 sources: [viscomi-menopausal-skin-hrt-2025]
 related: [/symptoms/, /symptoms/hair-thinning/, /does-it-work/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Why does my skin feel so much drier and itchier since perimenopause started?
     a: "A 2025 dermatology review explains that falling estrogen reduces collagen production, elasticity, and moisture retention in the skin, leading to dryness and, for some women, itching. This is a structural change in the skin itself, not just a cosmetic one."

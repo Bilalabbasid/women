@@ -37,7 +37,6 @@ cta_profile: vasomotor
 hub: /symptoms/
 sources: [nams-2022-hormone-therapy, veozah-prescribing-information, nams-2023-nonhormone-therapy, nice-ng23-recommendations, khalifey-hrt-cardiovascular-2026]
 related: [/symptoms/night-sweats/, /treatments/hormone-therapy/boxed-warning/, /tools/symptoms-checklist/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 ---
 
 A hot flash (vasomotor symptom) is a sudden feeling of intense heat that spreads rapidly through your chest, neck, and face, often accompanied by flushed skin, sweating, and a racing pulse [@nams-2022-hormone-therapy]. In our comprehensive [symptoms list](/symptoms/), vasomotor episodes are among the most frequently reported.
@@ -76,8 +75,6 @@ Clinical research grades hot flash therapies by how effectively they reduce dail
 | **Moisture-wicking layered clothing** | :grade{id="cooling-comfort"} | Natural fibers and breathable performance fabrics allow rapid temperature adjustment during unpredictable daytime surges. |
 
 When choosing clothing for temperature comfort, look for breathable weaves and quick-drying fabrics. Our [guide to sleepwear for night sweats](/care/sleepwear-for-night-sweats/) compares the main fabric types.
-
-<ProductSlot id="moisture-wicking-sleepwear" />
 
 Frequent hot flashes are also linked with higher cardiovascular risk, not just discomfort [@khalifey-hrt-cardiovascular-2026] — see our [heart health after menopause](/postmenopause/heart-health/) guide for what that means and what doesn't change about how HRT is used.
 

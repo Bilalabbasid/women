@@ -39,7 +39,6 @@ cta_profile: mood
 hub: /symptoms/
 sources: [nice-ng23-recommendations, nams-2023-nonhormone-therapy, nams-2022-hormone-therapy, nhs-heart-palpitations, lifeline-988, samaritans-contact]
 related: [/symptoms/, /symptoms/insomnia/, /symptoms/heart-palpitations/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Can perimenopause cause sudden anxiety if I have never been an anxious person?
     a: Yes. Fluctuating estrogen and progesterone during perimenopause, combined with sleep disruption from night sweats, are recognized by clinical guidelines (NICE NG23) as associated with mood changes and new or heightened anxiety.

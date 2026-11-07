@@ -34,7 +34,6 @@ cta_profile: urinary
 hub: /symptoms/
 sources: [nams-2020-gsm, cochrane-vaginal-moisturizers, nice-ng23-recommendations, acog-clinical-consensus-gsm]
 related: [/symptoms/, /treatments/hormone-therapy/vaginal-estrogen/, /symptoms/vaginal-dryness/, /symptoms/incontinence/]
-affiliate_disclosure: false
 faq:
   - q: Why do I keep getting UTIs after menopause when I rarely had them before?
     a: Before menopause, estrogen helps vaginal Lactobacilli maintain an acidic pH that discourages urinary pathogens. After menopause, lower estrogen raises vaginal pH and thins urethral and bladder tissues (part of genitourinary syndrome of menopause), making recurrent infections much more likely.

@@ -36,7 +36,6 @@ cta_profile: care_access
 hub: /care/
 sources: [jmir-online-menopause-information-2025, nice-ng23-recommendations]
 related: [/care/, /care/find-a-menopause-specialist/, /perimenopause/questions-for-your-doctor/, /tools/treatment-questions/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: What do I do if my doctor says my symptoms are "just stress" or "just aging"?
     a: "Ask directly whether perimenopause or menopause has been considered and ruled out, and why. NICE guidance recommends individualized care that adapts as symptoms change — a generic dismissal without that specific consideration is reasonable to push back on, calmly and specifically."

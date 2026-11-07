@@ -34,7 +34,6 @@ cta_profile: cardio_urgent
 hub: /symptoms/
 sources: [owada-suzuki-dizziness-menopause-2014, castillo-bustamante-vestibular-menopause-2024]
 related: [/symptoms/, /symptoms/heart-palpitations/, /symptoms/headaches/, /symptoms/migraines/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Is dizziness a normal perimenopause symptom?
     a: "Dizziness and a sense of imbalance are commonly reported during perimenopause and menopause. A retrospective study of women with diagnosed menopause-related dizziness found that those who also had vasomotor symptoms (hot flashes and night sweats) took significantly longer to recover than those without. A 2024 review also points to estrogen and progesterone receptors in the inner ear and vestibular system as a plausible mechanism. But dizziness has many possible causes, and a new or worsening pattern still deserves a medical check rather than being assumed to be hormonal."

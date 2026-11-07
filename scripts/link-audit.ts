@@ -11,7 +11,7 @@
  *  - weak hubs (fewer than 3 child pages)                    → warning
  *  - over-used anchors (same text for many links, or one text for different pages) → warning
  *  - pages without a tool link or a "Does it work" link where one exists → warning
- * Sponsored /go/ links are excluded from the graph (they never pass authority).
+ * External links are excluded from the graph.
  *
  * It also writes content/_review/link-suggestions.md: older pages that share
  * tags with newer pages but don't link to them. Suggestions only. Nothing is
@@ -73,7 +73,7 @@ const anchorCount = new Map<string, number>();
 for (const page of pages) {
   const rendered = renderMarkdown(page.body, { knownPaths: known, isAlwaysValid: isStaticTarget });
   for (const l of rendered.links) {
-    if (!l.internal) continue; // /go/ and external links are not part of the graph
+    if (!l.internal) continue; // external links are not part of the graph
     const target = l.href.split('#')[0].split('?')[0];
     if (redirectSources.has(target)) r.error(page.file, `links to ${target}, which redirects: link to the final URL`);
     if (l.dropped) {

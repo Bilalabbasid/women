@@ -31,7 +31,6 @@ cta_profile: learn_stage
 hub: /groups/
 sources: [kapoor-vms-workplace-survey-2026]
 related: [/groups/, /symptoms/hot-flashes/, /symptoms/brain-fog/, /tools/symptom-tracker/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Is it normal for hot flashes to affect my work performance?
     a: "You're far from alone. A 2026 US survey of over 1,000 employed women with vasomotor symptoms found more than a third reported some activity impairment at work, and about a third reported presenteeism (being at work but not functioning at full capacity), with impact increasing alongside symptom severity. Despite this, over 80% of the women surveyed had never received treatment, and almost 80% had never even discussed their symptoms with their employer."

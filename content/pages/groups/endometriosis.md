@@ -37,7 +37,6 @@ cta_profile: specialist_group
 hub: /groups/
 sources: [emas-endometriosis-menopause-guide-2025]
 related: [/groups/, /groups/surgical-menopause/, /groups/hysterectomy-ovaries-retained/, /treatments/hormone-therapy/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: If I had a hysterectomy for endometriosis, can I still take estrogen-only HRT?
     a: "A 2025 clinical guide from the European Menopause and Andropause Society specifically recommends against this. Normally, a hysterectomy means estrogen-only therapy is an option because there's no uterus to protect — but with a history of endometriosis, residual endometrial tissue can still be present elsewhere in the pelvis, and estrogen-only therapy carries a risk of reactivating it or, rarely, triggering malignant transformation. The guide instead recommends continuous combined hormone therapy (estrogen plus a progestogen) as the safer choice, even after hysterectomy."

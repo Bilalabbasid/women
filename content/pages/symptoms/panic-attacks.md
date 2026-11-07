@@ -42,7 +42,6 @@ cta_profile: mood
 hub: /symptoms/
 sources: [nice-ng23-recommendations, neda-stepan-vms-mood-systematic-review-2026, nhs-heart-palpitations, nams-2023-nonhormone-therapy, lifeline-988, samaritans-contact]
 related: [/symptoms/, /symptoms/anxiety/, /symptoms/heart-palpitations/, /symptoms/hot-flashes/, /tools/symptom-tracker/, /does-it-work/]
-affiliate_disclosure: false
 faq:
   - q: Can perimenopause really cause panic attacks if I've never had one before?
     a: "A first panic attack can start around perimenopause. NICE guideline NG23 lists mood effects as a core menopause-associated symptom, and a 2026 systematic review found vasomotor symptom burden was linked with anxiety symptoms, though this evidence is weaker than the link with depression. A new panic attack should still be checked by a clinician to rule out thyroid, cardiac and other causes."

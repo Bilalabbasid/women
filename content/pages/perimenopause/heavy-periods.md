@@ -33,7 +33,6 @@ cta_profile: bleeding
 hub: /perimenopause/
 sources: [nhs-heavy-periods, straw-10-2012]
 related: [/perimenopause/, /perimenopause/irregular-periods/, /perimenopause/when-to-see-a-doctor/, /tools/symptom-tracker/, /tools/12-month-counter/]
-affiliate_disclosure: false
 faq:
   - q: Is heavy bleeding normal in perimenopause?
     a: "Heavier or more variable flow is common as ovulation becomes less predictable during the menopause transition. That said, heavy periods that affect your daily life, last an unusually long time, or come with pain or bleeding between periods or after sex should be assessed by a doctor rather than assumed to be 'just perimenopause.'"

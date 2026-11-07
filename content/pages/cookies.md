@@ -21,8 +21,9 @@ updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Initial cookie and browser storage policy", material: true }
   - { date: "2026-11-07", summary: "Corrected to say plainly that we use no cookies at all today, rather than describing hypothetical server session cookies", material: true }
-  - { date: "2026-11-07", summary: "Listed every item stored in the browser and why, and noted retailers may set their own cookies after a click", material: true }
+  - { date: "2026-11-07", summary: "Listed every item stored in the browser and why, and noted other websites may set their own cookies after a click", material: true }
   - { date: "2026-11-07", summary: "Added the storage choice (essential only or allow preferences) and split the inventory accordingly", material: true }
+  - { date: "2026-11-07", summary: "Removed references to retailer links", material: true }
 evidence_grade: null
 claims: []
 safety_flags: []
@@ -30,7 +31,6 @@ cta_profile: site_none
 hub: null
 sources: []
 related: [/privacy/, /terms/]
-affiliate_disclosure: false
 ---
 
 **Last updated: November 7, 2026.** This page lists everything the site stores in your browser, taken from the site's code.
@@ -68,6 +68,6 @@ Nothing is stored to measure you, count your visits or recognize you. You can de
 
 ## Other websites
 
-When you click a link to a retailer or telehealth service, including our labeled affiliate links, that company may set its own cookies on its own site. Their cookie and privacy policies apply there. Read our [affiliate disclosure](/about/how-we-make-money/).
+When you click a link to another website, such as a telehealth service or a research publisher, that site may set its own cookies. Its own cookie and privacy policies apply there.
 
 See also our [privacy policy](/privacy/).

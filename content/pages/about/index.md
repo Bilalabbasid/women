@@ -20,6 +20,7 @@ reviewer: null
 updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Initial about page publication", material: true }
+  - { date: "2026-11-07", summary: "MenoVerdict is now free, with no ads or sponsors", material: true }
 evidence_grade: null
 claims: []
 safety_flags: []
@@ -27,7 +28,6 @@ cta_profile: site_none
 hub: null
 sources: []
 related: [/about/how-we-make-money/, /evidence/how-we-grade/, /privacy/]
-affiliate_disclosure: false
 ---
 
 **We are not doctors.** MenoVerdict is an independent editorial team. We aren't a medical service, and no doctor writes our pages.
@@ -43,7 +43,7 @@ affiliate_disclosure: false
 
 1. **No login and no tracking.** Every article and tool works without an account, and the site runs no analytics, ads or tracking pixels. See our [privacy policy](/privacy/).
 2. **Your data stays on your device.** What you log in the tracker and tools is saved in your own browser and never sent to us.
-3. **Evidence before commission.** A grade is set from the evidence before we look at whether any product or service pays a commission, and a commission never changes it. See [how we make money](/about/how-we-make-money/).
+3. **Free and independent.** There are no ads and no sponsors, and nobody pays to be mentioned or graded. Grades come from the evidence alone. See [how MenoVerdict is funded](/about/how-we-make-money/).
 4. **No faked medical review.** A page only says it was checked by a doctor when a named, verified clinician has checked that exact version. See our [review process](/evidence/medical-review/).
 
 ## We're looking for a clinical reviewer

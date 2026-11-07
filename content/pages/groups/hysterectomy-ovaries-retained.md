@@ -34,7 +34,6 @@ cta_profile: specialist_group
 hub: /groups/
 sources: [ahn-hysterectomy-ovarian-function-2002, atay-hysterectomy-ovarian-preservation-2007]
 related: [/groups/, /groups/surgical-menopause/, /groups/early-menopause/, /perimenopause/how-long/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: If I had a hysterectomy but kept my ovaries, am I in menopause now?
     a: "No, not from the surgery itself. Removing the uterus stops periods, but your ovaries keep producing hormones (estrogen, progesterone, testosterone) on their own schedule, so you won't have hot flashes or other menopause symptoms from the surgery alone. You'll experience menopause later, when your ovaries naturally reduce hormone production — you just won't have periods to mark exactly when it happens."

@@ -34,7 +34,6 @@ cta_profile: care_comparison
 hub: /compare/
 sources: [evernow-own-site-2026]
 related: [/compare/, /treatments/hormone-therapy/, /treatments/nonhormonal/, /tools/treatment-questions/]
-affiliate_disclosure: false
 noindex: true
 faq:
   - q: Does Evernow take insurance?
@@ -43,7 +42,7 @@ faq:
     a: "No. Evernow's own site describes a one-time, pay-per-visit option with no membership required, alongside an ongoing membership option (stated to start at $35/month) for continued messaging access and optional additional visits."
 ---
 
-**What it is:** Evernow is a telehealth company offering menopause and perimenopause care, with two distinct pricing paths: a one-time visit, or an ongoing membership. We reviewed Evernow's own site directly; this isn't a paid placement, and nothing here is ranked by commission.
+**What it is:** Evernow is a telehealth company offering menopause and perimenopause care, with two distinct pricing paths: a one-time visit, or an ongoing membership. We reviewed Evernow's own site directly; this isn't a paid placement, and nobody pays to be reviewed here.
 
 ## What Evernow actually offers
 

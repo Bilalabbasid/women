@@ -34,7 +34,6 @@ cta_profile: tool
 hub: /tools/
 sources: [nice-ng23-recommendations, swan-vms-duration-avis-2015, nhs-postmenopausal-bleeding, nhs-heart-palpitations, lifeline-988]
 related: [/tools/symptoms-checklist/, /tools/treatment-questions/, /perimenopause/questions-for-your-doctor/, /symptoms/]
-affiliate_disclosure: false
 faq:
   - q: "Do I need to download an app?"
     a: "No. The tracker runs in your web browser on your phone, tablet or computer, with no app store and no account. If you'd like it on your home screen, you can install it from your browser once you've used it."

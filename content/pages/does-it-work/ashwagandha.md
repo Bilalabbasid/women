@@ -33,7 +33,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [gopal-ashwagandha-perimenopause-2021, nams-2023-nonhormone-therapy]
 related: [/does-it-work/, /does-it-work/black-cohosh/, /symptoms/hot-flashes/, /symptoms/insomnia/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: Does ashwagandha actually help with menopause symptoms?
     a: "One 8-week randomized, placebo-controlled trial of 100 perimenopausal women found a statistically significant reduction in overall menopause symptom scores with ashwagandha compared to placebo, plus favorable changes in estradiol, FSH, and LH. That's a genuinely positive result — but it's one trial, and a single positive trial isn't the same as an evidence base guideline bodies have reviewed and endorsed, the way they have for options like CBT or certain prescription medications."

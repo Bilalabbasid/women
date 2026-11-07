@@ -40,7 +40,6 @@ cta_profile: hrt_evaluating
 hub: /treatments/hormone-therapy/
 sources: [nice-ng23-recommendations]
 related: [/treatments/hormone-therapy/, /treatments/hormone-therapy/patch-vs-pill/, /treatments/hormone-therapy/breast-cancer-risk/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Does HRT increase blood clot risk?
     a: "It depends heavily on the route. NICE guidance states that oral HRT (pills) increases VTE (blood clot) risk, and that risk is higher than with transdermal HRT (patches or gel), which NICE states does not increase VTE risk."

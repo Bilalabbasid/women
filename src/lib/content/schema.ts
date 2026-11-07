@@ -108,7 +108,6 @@ export const frontmatterSchema = z
     hub: sitePath.nullable(),
     sources: z.array(sourceId),
     related: z.array(sitePath),
-    affiliate_disclosure: z.boolean(),
 
     // Optional fields.
     /** sha256 of the approved content. Changing the content invalidates approval. */
@@ -164,7 +163,6 @@ export const REQUIRED_FIELDS = [
   'hub',
   'sources',
   'related',
-  'affiliate_disclosure',
 ] as const;
 
 // ---------------------------------------------------------------- sources

@@ -36,7 +36,6 @@ cta_profile: hrt_evaluating
 hub: /treatments/
 sources: [fda-mht-labeling-changes-2026, fda-mht-labeling-request-2025, hhs-mht-fact-sheet-2025, menopause-society-fda-comment-2025, ims-statement-boxed-warning-2025]
 related: [/treatments/, /symptoms/hot-flashes/, /symptoms/night-sweats/, /perimenopause/questions-for-your-doctor/]
-affiliate_disclosure: false
 ---
 
 In late 2025 and early 2026, the U.S. Food and Drug Administration (FDA) initiated landmark labeling modernizations for menopausal hormone therapy (MHT) products [@fda-mht-labeling-request-2025, @fda-mht-labeling-changes-2026]. As covered in our guide to [menopause treatment options](/treatments/), the agency instructed manufacturers to remove broad risk statements regarding cardiovascular disease, breast cancer, and dementia from the prominent boxed warning (often called the &ldquo;black box warning&rdquo;).

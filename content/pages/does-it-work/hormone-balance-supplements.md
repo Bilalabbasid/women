@@ -38,12 +38,11 @@ banned_phrase_overrides:
     reason: "Debunking commercial marketing claims that over-the-counter supplements can 'balance your hormones'."
   - phrase: hormone balance
     reason: "This page's entire subject is debunking '\"hormone balance\" supplements' as a marketing phrase — the title, verdict and FAQ quote and explain the term specifically to show it has no basis in how perimenopausal hormone decline actually works."
-affiliate_disclosure: false
 faq:
   - q: What does "balancing hormones" actually mean in medicine?
     a: '"Hormone balance" is a marketing phrase, not a medical diagnosis. In perimenopause, hormone levels fluctuate because the ovarian follicle reserve is declining, and no over-the-counter herbal gummy or capsule restores premenopausal ovarian cycling.'
-  - q: Why do we never put affiliate links on "hormone balance" supplement pages?
-    a: Because over-the-counter herbal and "hormone balance" blends are graded Not supported by clinical guidelines (The Menopause Society 2023), our editorial policy prohibits recommending or monetizing them.
+  - q: Why doesn't MenoVerdict recommend "hormone balance" supplements?
+    a: Because over-the-counter herbal and "hormone balance" blends are graded Not supported by clinical guidelines (The Menopause Society 2023), so we don't recommend them.
 ---
 
 **Our verdict: Not supported (Levels I–II).**

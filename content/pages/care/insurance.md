@@ -31,7 +31,6 @@ cta_profile: care_access
 hub: /care/
 sources: [chesnokova-insurance-mht-disparity-2026]
 related: [/care/, /care/hrt-cost/, /care/find-a-menopause-specialist/, /compare/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Does insurance type actually affect whether women get menopause treatment?
     a: "Yes, according to a 2026 study using nationally representative US data. Women with Medicaid reported a history of menopausal hormone therapy use at less than half the rate of women with private insurance (10.7% vs 20.7%), and had significantly lower odds of use even after the researchers controlled for other factors. This points to a real access gap tied to insurance type, not just personal choice."

@@ -39,7 +39,6 @@ cta_profile: cognitive
 hub: /symptoms/
 sources: [maki-jaff-brain-fog-2024, nice-ng23-recommendations, stute-nonhormonal-transition-2026]
 related: [/symptoms/, /symptoms/brain-fog/, /symptoms/insomnia/, /tools/symptom-tracker/, /does-it-work/]
-affiliate_disclosure: false
 faq:
   - q: Is memory loss in perimenopause a sign of dementia?
     a: "For almost all women, no. Research cited in a 2024 clinical review found that while objective memory performance shows a small, measurable decline during the perimenopause transition, it stays within normal limits for all but a very small number of women. NICE guidance also does not recommend hormone therapy for dementia prevention, reflecting that this is a separate question from ordinary perimenopausal memory changes."

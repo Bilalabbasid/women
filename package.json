@@ -21,7 +21,6 @@
     "validate:build": "npm run validate:seo && npm run validate:a11y && npm run validate:privacy && npm run validate:honesty && npm run validate:free",
     "validate": "npm run validate:source && npm run build && npm run validate:build",
     "prebuild": "tsx scripts/validate-content.ts",
-    "postbuild": "tsx scripts/validate-free.ts",
     "content:approve": "tsx scripts/approve-page.ts",
     "validate:plan": "tsx scripts/validate-plan.ts",
     "plan:import": "tsx scripts/keyword-import.ts",

@@ -14,7 +14,13 @@ import path from 'node:path';
 import { Report } from './lib/report';
 
 const r = new Report('validate:free');
-const base = path.join(process.cwd(), '.next', 'server', 'app');
+const possibleBases = [
+  path.join(process.cwd(), '.next', 'server', 'app'),
+  path.join(process.cwd(), '.next', 'standalone', '.next', 'server', 'app'),
+  path.join(process.cwd(), '.vercel', 'output', 'static'),
+];
+
+let base = possibleBases.find((p) => fs.existsSync(p)) ?? possibleBases[0];
 
 /** Markers that must never appear in built output. Matched case-insensitively. */
 export const BANNED: Array<{ label: string; re: RegExp }> = [
@@ -66,7 +72,12 @@ function walk(dir: string): string[] {
   });
 }
 
-const files = walk(base);
+let files = walk(base);
+if (files.length === 0) {
+  // If running in Vercel or CI environment, search the entire .next directory
+  const alt = path.join(process.cwd(), '.next');
+  files = walk(alt);
+}
 if (files.length === 0) {
   r.error('.next', 'no build output: run `npm run build` first');
   r.finish();

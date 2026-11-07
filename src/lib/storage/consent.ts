@@ -21,6 +21,8 @@ export const PREFERENCE_KEYS = [
   'menowell_tool_used',
   'menowell_onboarding_completed',
   'menoverdict_install_dismissed_until',
+  // Theme and text size (lib/site/display.ts); without consent they live in sessionStorage.
+  'menoverdict_display',
   // Left by earlier versions of the notice.
   'menoverdict_notice_dismissed',
   'menoverdict_cookie_consent',

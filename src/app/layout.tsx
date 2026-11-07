@@ -1,10 +1,35 @@
 import type { Metadata, Viewport } from 'next';
+import { Atkinson_Hyperlegible_Next, Newsreader } from 'next/font/google';
 import './globals.css';
 import { SwRegister } from '@/components/pwa/sw-register';
 import { SITE, absoluteUrl, isIndexable } from '@/lib/site/config';
 import { CONSENT_KEY } from '@/lib/storage/consent';
+import { DISPLAY_PAINT_SCRIPT } from '@/lib/site/display';
 
 const CONSENT_PAINT_SCRIPT = "try{if(localStorage.getItem('" + CONSENT_KEY + "'))document.documentElement.classList.add('consent-set')}catch(e){}";
+
+/*
+ * Two families, self-hosted and subset by next/font (no request to Google at
+ * runtime). Newsreader for headings (optical sizes keep big heads crisp and small
+ * ones sturdy); Atkinson Hyperlegible Next for body text, designed for readers
+ * with low or changing vision. Only the body face is preloaded (it carries LCP
+ * text); headings swap in.
+ */
+const serif = Newsreader({
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
+  axes: ['opsz'],
+  display: 'swap',
+  variable: '--font-newsreader',
+  preload: false,
+  fallback: ['Iowan Old Style', 'Palatino Linotype', 'Georgia', 'serif'],
+});
+const sans = Atkinson_Hyperlegible_Next({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-atkinson',
+  fallback: ['system-ui', 'Segoe UI', 'Arial', 'sans-serif'],
+});
 
 /**
  * Root layout. Kept deliberately thin and server-only: no tracker shell, no
@@ -15,7 +40,11 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
-  themeColor: '#1F5A4C',
+  // Matches the page paper so the browser bar is calm, not a green band.
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#F5F1E8' },
+    { media: '(prefers-color-scheme: dark)', color: '#141B19' },
+  ],
 };
 
 export const metadata: Metadata = {
@@ -46,10 +75,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-US">
+    // data-theme / data-text-size are set before hydration by DISPLAY_PAINT_SCRIPT.
+    <html lang="en-US" className={`${serif.variable} ${sans.variable}`} suppressHydrationWarning>
       <head>
         {/* Hides the storage-choice banner before first paint when a choice is already stored. */}
         <script dangerouslySetInnerHTML={{ __html: CONSENT_PAINT_SCRIPT }} />
+        {/* Applies the reader's theme and text size before first paint (no flash). */}
+        <script dangerouslySetInnerHTML={{ __html: DISPLAY_PAINT_SCRIPT }} />
       </head>
       <body>
         <SwRegister />

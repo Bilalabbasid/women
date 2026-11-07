@@ -12,7 +12,7 @@ describe('Button Component', () => {
   it('applies primary variant styling', () => {
     render(<Button variant="primary">Submit</Button>);
     const btn = screen.getByRole('button', { name: /submit/i });
-    expect(btn.className).toContain('bg-[var(--color-accent)]');
+    expect(btn.className).toContain('btn-primary');
   });
 
   it('respects disabled attribute', () => {

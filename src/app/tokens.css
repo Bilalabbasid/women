@@ -1,0 +1,253 @@
+/*
+ * MenoVerdict design tokens: direction A, "Reading Room".
+ *
+ * A good medical library crossed with a thoughtful magazine: ink on warm paper,
+ * brand green #1F5A4C as the anchor, brass for "try this" moments, and a dark
+ * theme for 3 a.m. reading (deep green-black, parchment text: no pure black, no
+ * pure white, low glare).
+ *
+ * Theme resolution:
+ *   - default follows the OS (prefers-color-scheme)
+ *   - html[data-theme="light" | "dark"] forces one (set by the theme control)
+ *   - any element with data-theme="light" pins its subtree (used by /app/* until
+ *     those screens are redesigned; they still hard-code light colours)
+ *
+ * Every Tailwind-facing --color-* alias is re-declared inside each theme scope,
+ * because a custom property that references var() resolves where it is
+ * declared: a nested data-theme would otherwise keep the parent's colours.
+ *
+ * Contrast (WCAG 2.2 AA, checked in docs/ui-review/03-design-system.md):
+ * body ink ≥ 12:1, muted ≥ 7:1, links and accents ≥ 7:1 on paper in both themes;
+ * grade inks ≥ 4.5:1 on their soft backgrounds.
+ */
+
+/* ---------------------------------------------------------------- light */
+/* .app-shell (/app/* tracker) is pinned light until those screens are redesigned:
+   they still hard-code light colours in hundreds of places. */
+:root,
+[data-theme='light'],
+:root[data-theme] .app-shell,
+.app-shell {
+  color-scheme: light;
+  --paper: #f5f1e8;
+  --paper-raised: #fcfaf5;
+  --paper-sunk: #ede7da;
+  --ink: #1d2422;
+  --ink-muted: #4a5350;
+  --ink-faint: #6b726e; /* decorative/meta only, 4.6:1 */
+  --rule: #ddd6c7;
+  --rule-strong: #8a8170; /* input/chip borders: 3:1+ (WCAG 1.4.11) */
+  --accent: #1f5a4c;
+  --accent-hover: #174538;
+  --accent-soft: #e2ebe5;
+  --on-accent: #fcfaf5;
+  --link: #1e4f73;
+  --link-hover: #143a56;
+  --brass: #7d5a10;
+  --brass-rule: #b8862a;
+  --brass-soft: #f3ead6;
+  --urgent: #9b2420;
+  --urgent-soft: #fbece9;
+  --urgent-rule: #c4473f;
+  --focus: #1f5a4c;
+  --shadow: 0 1px 2px rgb(29 36 34 / 0.06), 0 4px 16px -6px rgb(29 36 34 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(29 36 34 / 0.06), 0 16px 40px -12px rgb(29 36 34 / 0.22);
+  --scrim: rgb(20 27 25 / 0.42);
+
+  /* Evidence grades: fill (meter), ink (text), soft (background). */
+  --g-strong: #2e7a55;
+  --g-strong-ink: #1d5639;
+  --g-strong-soft: #e2efe6;
+  --g-moderate: #2f6690;
+  --g-moderate-ink: #214c6c;
+  --g-moderate-soft: #e3ecf4;
+  --g-limited: #8f6510;
+  --g-limited-ink: #664805;
+  --g-limited-soft: #f5ecd4;
+  --g-none: #7b6a5e;
+  --g-none-ink: #52453c;
+  --g-none-soft: #eee8e1;
+  --g-harm: #a3352d;
+  --g-harm-ink: #85231d;
+  --g-harm-soft: #f9e5e2;
+  --g-comfort: #5a6680;
+  --g-comfort-ink: #3d4860;
+  --g-comfort-soft: #e7eaf1;
+  --meter-off: #e2dbcc;
+  --meter-dim: #cbc2af;
+
+  --draft: #7a4b00;
+  --draft-soft: #fff6e0;
+}
+
+/* ---------------------------------------------------------------- dark */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --paper: #141b19;
+    --paper-raised: #1b2421;
+    --paper-sunk: #101513;
+    --ink: #e6e1d6;
+    --ink-muted: #aab1ab;
+    --ink-faint: #858d88;
+    --rule: #2c3733;
+    --rule-strong: #6b7871;
+    --accent: #7fc3ab;
+    --accent-hover: #9dd3c0;
+    --accent-soft: #1e2e29;
+    --on-accent: #0f1d18;
+    --link: #9dc6e8;
+    --link-hover: #c0dbf1;
+    --brass: #e2b964;
+    --brass-rule: #c99a3e;
+    --brass-soft: #29251a;
+    --urgent: #f39a91;
+    --urgent-soft: #2f1b19;
+    --urgent-rule: #d9675d;
+    --focus: #9dd3c0;
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 4px 16px -6px rgb(0 0 0 / 0.45);
+    --shadow-lift: 0 2px 4px rgb(0 0 0 / 0.3), 0 16px 40px -12px rgb(0 0 0 / 0.6);
+    --scrim: rgb(5 9 8 / 0.62);
+
+    --g-strong: #6cc394;
+    --g-strong-ink: #93d4b0;
+    --g-strong-soft: #182a20;
+    --g-moderate: #79aedb;
+    --g-moderate-ink: #a4c8ea;
+    --g-moderate-soft: #16222e;
+    --g-limited: #dbb05a;
+    --g-limited-ink: #e8c67e;
+    --g-limited-soft: #2a2415;
+    --g-none: #b3a194;
+    --g-none-ink: #cfc1b5;
+    --g-none-soft: #25201c;
+    --g-harm: #ee8a80;
+    --g-harm-ink: #f3aaa2;
+    --g-harm-soft: #2f1b19;
+    --g-comfort: #a3aec7;
+    --g-comfort-ink: #c3cadb;
+    --g-comfort-soft: #1d212b;
+    --meter-off: #26302c;
+    --meter-dim: #3e4a45;
+
+    --draft: #e8c67e;
+    --draft-soft: #2a2415;
+  }
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --paper: #141b19;
+  --paper-raised: #1b2421;
+  --paper-sunk: #101513;
+  --ink: #e6e1d6;
+  --ink-muted: #aab1ab;
+  --ink-faint: #858d88;
+  --rule: #2c3733;
+  --rule-strong: #6b7871;
+  --accent: #7fc3ab;
+  --accent-hover: #9dd3c0;
+  --accent-soft: #1e2e29;
+  --on-accent: #0f1d18;
+  --link: #9dc6e8;
+  --link-hover: #c0dbf1;
+  --brass: #e2b964;
+  --brass-rule: #c99a3e;
+  --brass-soft: #29251a;
+  --urgent: #f39a91;
+  --urgent-soft: #2f1b19;
+  --urgent-rule: #d9675d;
+  --focus: #9dd3c0;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 4px 16px -6px rgb(0 0 0 / 0.45);
+  --shadow-lift: 0 2px 4px rgb(0 0 0 / 0.3), 0 16px 40px -12px rgb(0 0 0 / 0.6);
+  --scrim: rgb(5 9 8 / 0.62);
+
+  --g-strong: #6cc394;
+  --g-strong-ink: #93d4b0;
+  --g-strong-soft: #182a20;
+  --g-moderate: #79aedb;
+  --g-moderate-ink: #a4c8ea;
+  --g-moderate-soft: #16222e;
+  --g-limited: #dbb05a;
+  --g-limited-ink: #e8c67e;
+  --g-limited-soft: #2a2415;
+  --g-none: #b3a194;
+  --g-none-ink: #cfc1b5;
+  --g-none-soft: #25201c;
+  --g-harm: #ee8a80;
+  --g-harm-ink: #f3aaa2;
+  --g-harm-soft: #2f1b19;
+  --g-comfort: #a3aec7;
+  --g-comfort-ink: #c3cadb;
+  --g-comfort-soft: #1d212b;
+  --meter-off: #26302c;
+  --meter-dim: #3e4a45;
+
+  --draft: #e8c67e;
+  --draft-soft: #2a2415;
+}
+
+/* ------------------------------------------------ aliases, re-resolved per scope */
+:root,
+[data-theme],
+.app-shell {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-paper-sunk: var(--paper-sunk);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
+  --color-link: var(--link);
+  --color-brass: var(--brass);
+  --color-brass-soft: var(--brass-soft);
+  --color-urgent: var(--urgent);
+  --color-urgent-soft: var(--urgent-soft);
+  --color-draft: var(--draft);
+  --color-draft-soft: var(--draft-soft);
+
+  /* Legacy tracker tokens. */
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --border: var(--rule);
+  --ring: var(--focus);
+}
+
+/* ---------------------------------------------------------------- scale */
+:root {
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+
+  --measure: 68ch;
+  --tap: 48px;
+
+  --dur-fast: 150ms;
+  --dur: 200ms;
+  --dur-slow: 250ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Type scale (rem; html font-size changes with the A / A+ / A++ control). */
+  --fs-meta: 1rem; /* 16px: metadata, labels */
+  --fs-small: 1.0625rem; /* 17px */
+  --fs-body: 1.125rem; /* 18px phone minimum */
+  --fs-body-lg: 1.1875rem; /* 19px desktop */
+  --fs-lead: clamp(1.1875rem, 1.05rem + 0.5vw, 1.3125rem);
+  --fs-h4: 1.1875rem;
+  --fs-h3: clamp(1.3125rem, 1.2rem + 0.4vw, 1.5rem);
+  --fs-h2: clamp(1.625rem, 1.35rem + 1.2vw, 2.125rem);
+  --fs-h1: clamp(2.125rem, 1.6rem + 2.4vw, 3.125rem);
+  --fs-display: clamp(2.375rem, 1.7rem + 3.4vw, 3.75rem);
+}
+
+/* Text size control (A / A+ / A++). Everything is rem-based, so this scales the
+   whole interface, including the tracker. */
+html[data-text-size='lg'] {
+  font-size: 112.5%;
+}
+html[data-text-size='xl'] {
+  font-size: 125%;
+}

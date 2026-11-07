@@ -965,21 +965,32 @@
   /* ------------------------------------------------------------- cards */
   .card {
     display: block;
-    padding: 1.1rem 1.2rem;
+    padding: 1.25rem 1.35rem;
     border: 1px solid var(--rule);
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg, 16px);
     background: var(--paper-raised);
     color: var(--ink);
     text-decoration: none;
+    box-shadow: 0 1px 3px -1px rgb(0 0 0 / 0.05);
   }
   a.card,
   button.card {
-    transition: border-color var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease), translate var(--dur-fast) var(--ease);
+    transition:
+      border-color 0.25s ease,
+      box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+      background-color 0.2s ease;
   }
   a.card:hover,
   button.card:hover {
     border-color: var(--accent);
-    box-shadow: var(--shadow);
+    box-shadow: 0 12px 28px -10px rgb(0 0 0 / 0.1), 0 4px 8px -4px rgb(0 0 0 / 0.04);
+    transform: translateY(-3px);
+  }
+  a.card:active,
+  button.card:active {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px -6px rgb(0 0 0 / 0.1);
   }
   .card-title {
     font-family: var(--font-serif);

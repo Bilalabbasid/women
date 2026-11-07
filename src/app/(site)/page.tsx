@@ -127,32 +127,39 @@ export default function HomePage() {
 
   return (
     <div className="space-y-16 pb-2 sm:space-y-20">
-      {/* 1. Hero: styled in the brand dark-teal banner container with rounded corners */}
+      {/* 1. Hero: styled in the brand dark-teal banner container with rounded corners and subtle radial depth */}
       <section
         aria-labelledby="hero-heading"
-        className="-mt-4 sm:mt-0 rounded-2xl sm:rounded-3xl bg-[#1F5A4C] p-6 sm:p-10 lg:p-12 text-[#F7F6F2] shadow-sm relative overflow-hidden"
+        className="-mt-4 sm:mt-0 rounded-2xl sm:rounded-3xl bg-[#1F5A4C] p-6 sm:p-10 lg:p-12 text-[#F7F6F2] shadow-xl relative overflow-hidden"
+        style={{
+          backgroundImage: 'radial-gradient(circle at 85% 15%, rgba(127, 195, 171, 0.18) 0%, transparent 60%), radial-gradient(circle at 10% 90%, rgba(23, 69, 56, 0.5) 0%, transparent 50%)',
+        }}
       >
         <div className="relative z-10 grid gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:items-start lg:gap-14">
-          <div className="space-y-5">
-            <p className="text-xs font-bold tracking-widest uppercase text-[#A3D9C9]">
-              Independent · Evidence-Graded · Private by Design
-            </p>
-            <h1 id="hero-heading" className="max-w-[14ch] text-[length:var(--fs-display)] leading-[1.05] tracking-[-0.02em] text-[#FCFAF5]">
+          <div className="space-y-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#174538]/80 backdrop-blur-sm border border-[#2C6B5C] px-3.5 py-1 text-xs font-semibold tracking-wider uppercase text-[#A3D9C9]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#7FC3AB] animate-pulse" />
+              Independent · Evidence-Graded · Private
+            </div>
+            <h1 id="hero-heading" className="max-w-[14ch] text-[length:var(--fs-display)] leading-[1.05] tracking-[-0.025em] text-[#FCFAF5] font-serif font-bold">
               What&rsquo;s going on with your body right now?
             </h1>
-            <p className="max-w-xl text-[length:var(--fs-lead)] leading-snug text-[#E2EBE5]">
-              Plain answers, graded against the evidence. Free, private, no sign-up.
+            <p className="max-w-xl text-[length:var(--fs-lead)] leading-relaxed text-[#E2EBE5]">
+              Plain answers, graded against clinical evidence. Free, private, and always available without an account.
             </p>
 
             {chips.length > 0 && (
-              <div className="[&_button]:bg-[#174538] [&_button]:text-[#FCFAF5] [&_button]:border-[#2C6B5C] [&_button:hover]:bg-[#245D4F]">
+              <div className="space-y-2 [&_legend]:text-[#D2E4DC] [&_button]:bg-[#174538]/90 [&_button]:backdrop-blur-sm [&_button]:text-[#FCFAF5] [&_button]:border-[#2C6B5C] [&_button:hover]:bg-[#245D4F] [&_button:hover]:border-[#7FC3AB] [&_button]:transition-all [&_button]:duration-200">
                 <HomeSymptomPicker chips={chips} />
               </div>
             )}
 
-            <div className="flex flex-wrap items-center gap-x-5 gap-y-3 pt-1">
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-3 pt-2">
               {quizLive && (
-                <Link href={QUIZ_HREF} className="btn btn-lg bg-[#FCFAF5] text-[#1F5A4C] hover:bg-[#EAE5D9] font-bold border-0">
+                <Link
+                  href={QUIZ_HREF}
+                  className="btn btn-lg bg-[#FCFAF5] text-[#1F5A4C] hover:bg-[#FFFFFF] hover:shadow-lg font-bold border-0 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
+                >
                   Where am I in the transition?
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M5 12h14M13 6l6 6-6 6" />
@@ -160,38 +167,46 @@ export default function HomePage() {
                 </Link>
               )}
               {trackerLive && (
-                <Link href="/app/today/" className="btn text-[#FCFAF5] hover:bg-[#174538] border border-[#3A7E6E]">
+                <Link
+                  href="/app/today/"
+                  className="btn text-[#FCFAF5] bg-[#174538]/60 hover:bg-[#174538] border border-[#3A7E6E] backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5"
+                >
                   Start tracking
                 </Link>
               )}
             </div>
 
             {trackerLive && (
-              <div className="[&_a]:text-[#A3D9C9] [&_p]:bg-[#174538] [&_p]:text-[#FCFAF5] [&_p]:border [&_p]:border-[#2C6B5C]">
+              <div className="[&_a]:text-[#A3D9C9] [&_p]:bg-[#174538]/90 [&_p]:backdrop-blur-sm [&_p]:text-[#FCFAF5] [&_p]:border [&_p]:border-[#2C6B5C] [&_p]:rounded-xl">
                 <LastLogNote />
               </div>
             )}
 
-            <p className="notice-line text-[#D2E4DC]">
+            <p className="notice-line text-[#D2E4DC] text-sm pt-1">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true" className="mt-0.5 shrink-0 text-[#A3D9C9]">
                 <circle cx="12" cy="12" r="9" />
                 <path d="M12 11v5M12 7.5v.01" />
               </svg>
-              <Link href="/about/" className="text-[#A3D9C9] hover:underline">{HOW_SITE_WORKS_LINK}</Link>
+              <Link href="/about/" className="text-[#A3D9C9] font-medium hover:underline hover:text-[#FCFAF5] transition-colors">{HOW_SITE_WORKS_LINK}</Link>
             </p>
           </div>
 
-          {/* Verdicts: graded plainly, in clean white rounded cards */}
+          {/* Verdicts: graded plainly, with micro-interaction hover depth */}
           {verdicts.length > 0 && (
-            <aside aria-labelledby="verdicts-heading" className="space-y-3 lg:pt-3">
-              <h2 id="verdicts-heading" className="text-xs font-bold tracking-widest uppercase text-[#A3D9C9]">
-                From our evidence checker
-              </h2>
+            <aside aria-labelledby="verdicts-heading" className="space-y-3.5 lg:pt-3">
+              <div className="flex items-center justify-between">
+                <h2 id="verdicts-heading" className="text-xs font-bold tracking-widest uppercase text-[#A3D9C9]">
+                  From our evidence checker
+                </h2>
+              </div>
               <ul className="grid gap-3">
                 {verdicts.map((v) => (
                   <li key={v.id}>
-                    <Link href={v.href} className="card bg-[#FCFAF5] text-[#1D2422] rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow block">
-                      <span className="font-bold leading-snug block mb-2">
+                    <Link
+                      href={v.href}
+                      className="group bg-[#FCFAF5] text-[#1D2422] rounded-xl p-4 shadow-sm border border-[#E5DFD0] hover:border-[#1F5A4C] hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 block active:translate-y-0"
+                    >
+                      <span className="font-bold leading-snug block mb-2 group-hover:text-[#1F5A4C] transition-colors">
                         {v.label} <span className="font-normal text-[#4A5350]">{v.use}</span>
                       </span>
                       <GradeMeter grade={v.grade} use={v.use} explain={false} />
@@ -199,12 +214,12 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <p className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-[#D2E4DC]">
+              <p className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 text-sm text-[#D2E4DC] pt-1">
                 <span>
                   {verdictCount} remedies graded · {sourceCount} sources linked
                 </span>
-                <Link href="/does-it-work/" className="text-[#A3D9C9] font-bold hover:underline">
-                  All verdicts &rarr;
+                <Link href="/does-it-work/" className="text-[#A3D9C9] font-bold hover:underline hover:text-[#FCFAF5] transition-colors inline-flex items-center gap-1">
+                  All verdicts <span>&rarr;</span>
                 </Link>
               </p>
             </aside>
@@ -214,20 +229,29 @@ export default function HomePage() {
 
       {/* 2. Start here */}
       {startHere.length > 0 && (
-        <section aria-labelledby="start-heading" className="space-y-5">
-          <div>
+        <section aria-labelledby="start-heading" className="space-y-6">
+          <div className="flex flex-col gap-1">
             <p className="kicker">Not sure where to begin?</p>
-            <h2 id="start-heading" className="mt-1 text-[length:var(--fs-h2)]">
+            <h2 id="start-heading" className="text-[length:var(--fs-h2)] tracking-tight">
               Start here
             </h2>
           </div>
-          <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {startHere.map(({ title, body, href, Illo }) => (
               <li key={title}>
-                <Link href={href} className="card grid h-full content-start gap-2">
-                  <Illo className="h-14 w-14" />
-                  <span className="mt-1 font-serif text-[1.3rem] font-semibold leading-snug">{title}</span>
-                  <span className="text-[1.0625rem] leading-snug text-[var(--ink-muted)]">{body}</span>
+                <Link
+                  href={href}
+                  className="card group grid h-full content-start gap-3 p-5 rounded-2xl border border-[var(--rule)] bg-[var(--paper-raised)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[var(--accent)]"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-[var(--accent-soft)] grid place-items-center transition-transform duration-300 group-hover:scale-105">
+                    <Illo className="h-8 w-8 text-[var(--accent)]" />
+                  </div>
+                  <span className="font-serif text-[1.25rem] font-bold leading-snug group-hover:text-[var(--accent)] transition-colors">
+                    {title}
+                  </span>
+                  <span className="text-[1rem] leading-relaxed text-[var(--ink-muted)]">
+                    {body}
+                  </span>
                 </Link>
               </li>
             ))}
@@ -249,11 +273,11 @@ export default function HomePage() {
 
       {/* 4. Tools */}
       {tools.length > 0 && (
-        <section aria-labelledby="tools-heading" className="space-y-5">
+        <section aria-labelledby="tools-heading" className="space-y-6">
           <div className="flex flex-wrap items-end justify-between gap-2">
             <div>
               <p className="kicker">Free · no account · saved on your device</p>
-              <h2 id="tools-heading" className="mt-1 text-[length:var(--fs-h2)]">
+              <h2 id="tools-heading" className="mt-1 text-[length:var(--fs-h2)] tracking-tight">
                 Get ready for your appointment
               </h2>
             </div>
@@ -261,13 +285,22 @@ export default function HomePage() {
               All tools
             </Link>
           </div>
-          <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {tools.map((t) => (
               <li key={t.href}>
-                <Link href={t.href} className="card grid h-full content-start gap-1.5">
-                  <span className="font-bold">{t.title}</span>
-                  <span className="text-[1.0625rem] leading-snug text-[var(--ink-muted)]">{t.desc}</span>
-                  <span className="link link-arrow mt-1 text-[1rem]">Open</span>
+                <Link
+                  href={t.href}
+                  className="card group grid h-full content-start gap-2.5 p-5 rounded-2xl border border-[var(--rule)] bg-[var(--paper-raised)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[var(--accent)]"
+                >
+                  <span className="font-bold text-[1.15rem] leading-snug group-hover:text-[var(--accent)] transition-colors">
+                    {t.title}
+                  </span>
+                  <span className="text-[1rem] leading-relaxed text-[var(--ink-muted)]">
+                    {t.desc}
+                  </span>
+                  <span className="link link-arrow mt-2 text-[0.95rem] inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                    Open
+                  </span>
                 </Link>
               </li>
             ))}

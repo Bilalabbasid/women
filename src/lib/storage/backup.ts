@@ -4,6 +4,7 @@ import { TOOL_KEYS } from '../db/schema';
 import { APP_CONFIG } from '../config/constants';
 import { appLocalStorageKeys } from './manager';
 import { localDateString } from '../utils/local-date';
+import { LAST_BACKUP_KEY } from '../tracker/nudges';
 
 /**
  * Backup and restore. A backup is a JSON file she downloads and keeps herself;
@@ -84,6 +85,8 @@ export async function downloadBackup(): Promise<{ records: number }> {
   document.body.removeChild(a);
   // Revoke on the next tick: some browsers start the download asynchronously.
   setTimeout(() => URL.revokeObjectURL(url), 0);
+  // Remembered so the tracker can suggest a fresh backup after 30 days (src/lib/tracker/nudges.ts).
+  await db.settings.put({ key: LAST_BACKUP_KEY, value: Date.now(), updatedAt: Date.now() }).catch(() => {});
   return { records: Object.values(backup.data).reduce((n, list) => n + list.length, 0) };
 }
 

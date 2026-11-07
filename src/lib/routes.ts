@@ -15,7 +15,26 @@ export const APP_ROUTES = {
   onboarding: '/app/onboarding/',
   privacy: '/app/privacy/',
   membership: '/app/membership/',
+  install: '/app/install/',
+  saved: '/app/saved/',
+  catchUp: '/app/catch-up/',
+  storage: '/app/storage/',
 } as const;
+
+/** App screens the service worker precaches (with their scripts) so the tracker works offline. */
+export const OFFLINE_APP_SHELL = [
+  APP_ROUTES.today,
+  APP_ROUTES.checkIn,
+  APP_ROUTES.timeline,
+  APP_ROUTES.treatments,
+  APP_ROUTES.insights,
+  APP_ROUTES.doctorReport,
+  APP_ROUTES.settings,
+  APP_ROUTES.install,
+  APP_ROUTES.saved,
+  APP_ROUTES.catchUp,
+  APP_ROUTES.storage,
+] as const;
 
 /** Old flat tracker paths, redirected permanently to their /app/ home. */
 export const LEGACY_APP_REDIRECTS: Array<{ source: string; destination: string }> = [

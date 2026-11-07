@@ -4,6 +4,20 @@ import React, { useEffect, useState, useSyncExternalStore } from 'react';
 import { Download, Share2, PlusSquare, X } from 'lucide-react';
 import { Button } from '../ui/button';
 import { hasUsedTool } from '@/lib/pwa/install-gate';
+import { setPreference } from '@/lib/storage/consent';
+import { APP_ROUTES } from '@/lib/routes';
+
+const DISMISS_KEY = 'menoverdict_install_dismissed_until';
+const DISMISS_DAYS = 30;
+
+function getDismissedSnapshot() {
+  try {
+    const until = Number(window.localStorage.getItem(DISMISS_KEY));
+    return Number.isFinite(until) && until > Date.now();
+  } catch {
+    return false;
+  }
+}
 
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
@@ -45,6 +59,8 @@ export function PWAInstallBanner({ variant = 'banner' }: { variant?: 'banner' | 
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showIOSModal, setShowIOSModal] = useState(false);
   const [bannerDismissed, setBannerDismissed] = useState(false);
+  const [installed, setInstalled] = useState(false);
+  const dismissedEarlier = useSyncExternalStore(subscribeNoop, getDismissedSnapshot, serverFalse);
   const toolUsed = useSyncExternalStore(subscribeNoop, hasUsedTool, serverFalse);
   const isStandalone = useSyncExternalStore(subscribeStandalone, getStandaloneSnapshot, serverFalse);
   const isIOS = useSyncExternalStore(subscribeNoop, getIOSSnapshot, serverFalse);
@@ -54,11 +70,25 @@ export function PWAInstallBanner({ variant = 'banner' }: { variant?: 'banner' | 
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
     };
+    const handleInstalled = () => {
+      setInstalled(true);
+      setDeferredPrompt(null);
+    };
     window.addEventListener('beforeinstallprompt', handleBeforeInstall);
-    return () => window.removeEventListener('beforeinstallprompt', handleBeforeInstall);
+    window.addEventListener('appinstalled', handleInstalled);
+    return () => {
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstall);
+      window.removeEventListener('appinstalled', handleInstalled);
+    };
   }, []);
 
   const canInstall = Boolean(deferredPrompt) || isIOS;
+
+  // Hidden for 30 days after closing it (remembered only if she allowed preferences).
+  const dismiss = () => {
+    setBannerDismissed(true);
+    setPreference(DISMISS_KEY, String(Date.now() + DISMISS_DAYS * 24 * 60 * 60 * 1000));
+  };
 
   const handleInstallClick = async () => {
     if (deferredPrompt) {
@@ -114,7 +144,7 @@ export function PWAInstallBanner({ variant = 'banner' }: { variant?: 'banner' | 
   if (variant === 'settings') {
     return (
       <div className="space-y-2">
-        {isStandalone ? (
+        {isStandalone || installed ? (
           <p className="text-[var(--color-ink-muted)]">The app is already installed on this device.</p>
         ) : canInstall ? (
           <Button variant="outline" onClick={handleInstallClick} className="gap-2">
@@ -132,14 +162,17 @@ export function PWAInstallBanner({ variant = 'banner' }: { variant?: 'banner' | 
     );
   }
 
-  if (isStandalone || bannerDismissed || !toolUsed || !canInstall) return null;
+  if (isStandalone || installed || bannerDismissed || dismissedEarlier || !toolUsed || !canInstall) return null;
 
   return (
     <>
       <div role="region" aria-label="Install the app" className="border-b border-[var(--color-accent)]/30 bg-[var(--color-accent-soft)] px-4 py-2.5">
         <div className="mx-auto flex max-w-2xl items-center justify-between gap-3">
           <p className="text-[var(--color-ink)]">
-            <strong>Install the tracker</strong> so it opens from your home screen and works offline.
+            <strong>Install MenoVerdict</strong> — works offline, your data stays on this phone.{' '}
+            <a href={APP_ROUTES.install} className="font-semibold text-[var(--color-link)] underline">
+              How it works
+            </a>
           </p>
           <div className="flex items-center gap-2">
             <Button size="sm" variant="primary" onClick={handleInstallClick}>
@@ -147,7 +180,7 @@ export function PWAInstallBanner({ variant = 'banner' }: { variant?: 'banner' | 
             </Button>
             <button
               type="button"
-              onClick={() => setBannerDismissed(true)}
+              onClick={dismiss}
               aria-label="Dismiss install banner"
               className="min-h-[44px] min-w-[44px] p-2 text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]"
             >

@@ -2,6 +2,7 @@
 
 import React, { useSyncExternalStore } from 'react';
 import Link from 'next/link';
+import { readSavedPages, removeSavedPage, savePage, subscribeSavedPages } from '@/lib/saved-pages';
 
 interface NextStepsProps {
   trackingUrl?: string;
@@ -54,27 +55,6 @@ export function NextSteps({
   );
 }
 
-const BOOKMARKS_KEY = 'menowell_bookmarks';
-const BOOKMARKS_EVENT = 'menowell-bookmarks-change';
-
-function readBookmarks(): Array<{ url: string; title?: string; savedAt?: string }> {
-  try {
-    const saved: unknown = JSON.parse(localStorage.getItem(BOOKMARKS_KEY) || '[]');
-    return Array.isArray(saved) ? saved.filter((b) => b && typeof b.url === 'string') : [];
-  } catch {
-    return [];
-  }
-}
-
-function subscribeBookmarks(onChange: () => void) {
-  window.addEventListener('storage', onChange);
-  window.addEventListener(BOOKMARKS_EVENT, onChange);
-  return () => {
-    window.removeEventListener('storage', onChange);
-    window.removeEventListener(BOOKMARKS_EVENT, onChange);
-  };
-}
-
 /**
  * "Save for later" for an article, kept in this browser. Read through
  * useSyncExternalStore so the server render and the first client render agree
@@ -82,19 +62,15 @@ function subscribeBookmarks(onChange: () => void) {
  */
 export function BookmarkButton({ url, title }: { url: string; title: string }) {
   const bookmarked = useSyncExternalStore(
-    subscribeBookmarks,
-    () => readBookmarks().some((b) => b.url === url),
+    subscribeSavedPages,
+    () => readSavedPages().some((b) => b.url === url),
     () => false,
   );
 
   const toggleBookmark = () => {
     try {
-      const saved = readBookmarks();
-      const next = bookmarked
-        ? saved.filter((b) => b.url !== url)
-        : [...saved, { url, title, savedAt: new Date().toISOString() }];
-      localStorage.setItem(BOOKMARKS_KEY, JSON.stringify(next));
-      window.dispatchEvent(new Event(BOOKMARKS_EVENT));
+      if (bookmarked) removeSavedPage(url);
+      else savePage(url, title);
     } catch {
       // Storage blocked or full: the button simply doesn't change.
     }

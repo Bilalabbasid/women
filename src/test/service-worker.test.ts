@@ -13,6 +13,9 @@ class FakeCache {
   async put(req: Request | string, res: Response) {
     this.store.set(typeof req === 'string' ? new URL(req, 'https://site.test').href : req.url, res);
   }
+  async add(url: string) {
+    await this.put(url, new Response(`cached ${url}`, { status: 200 }));
+  }
   async addAll(urls: string[]) {
     for (const u of urls) await this.put(u, new Response(`precached ${u}`, { status: 200 }));
   }
@@ -24,7 +27,7 @@ class FakeCache {
   }
 }
 
-function makeSw(network: (req: Request) => Promise<Response>) {
+function makeSw(network: (req: Request | string) => Promise<Response>) {
   const named = new Map<string, FakeCache>();
   const caches = {
     async open(name: string) {
@@ -75,9 +78,9 @@ function makeSw(network: (req: Request) => Promise<Response>) {
 describe('service worker', () => {
   let online = true;
   let responses: Record<string, () => Response>;
-  const net = async (req: Request) => {
+  const net = async (req: Request | string) => {
     if (!online) throw new TypeError('offline');
-    const make = responses[new URL(req.url).pathname];
+    const make = responses[new URL(typeof req === 'string' ? req : req.url, 'https://site.test').pathname];
     const res = make ? make() : new Response('not found', { status: 404 });
     // Real same-origin fetches have type "basic"; constructed Responses are "default".
     Object.defineProperty(res, 'type', { value: 'basic' });
@@ -123,11 +126,24 @@ describe('service worker', () => {
     expect(html).toMatch(/<html data-sw-cached-at="\d{4}-\d{2}-\d{2}T[^"]+" lang="en-US">/);
   });
 
-  it('offline with no saved copy, serves the offline page', async () => {
+  it('offline with no saved copy, redirects to the offline page, which is precached', async () => {
     const sw = makeSw(net);
     await sw.run('install');
     online = false;
-    expect(await (await sw.navigate('/never-visited/')).text()).toContain('precached /offline/');
+    const res = await sw.navigate('/never-visited/');
+    expect(res.status).toBe(302);
+    expect(new URL(res.headers.get('location') ?? '').pathname).toBe('/offline/');
+    expect(await (await sw.navigate('/offline/')).text()).toContain('precached /offline/');
+  });
+
+  it('offline, opens a tracker screen precached at install', async () => {
+    responses['/app/insights/'] = () =>
+      new Response('<html><script src="/_next/static/chunks/app.js"></script>/app/insights/</html>', { status: 200 });
+    responses['/_next/static/chunks/app.js'] = () => new Response('/* chunk */', { status: 200 });
+    const sw = makeSw(net);
+    await sw.run('install');
+    online = false;
+    expect(await (await sw.navigate('/app/insights/')).text()).toContain('/app/insights/');
   });
 
   it('deletes caches from previous builds on activate', async () => {

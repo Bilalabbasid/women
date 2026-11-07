@@ -28,6 +28,8 @@ import { HonestyNotice } from '@/components/site/honesty-notice';
 import { PRICES_CHECKED, formatCheckedDate } from '@/lib/site/honesty';
 import { lastCheckedDate } from '@/lib/content/schema';
 import { EmailCapture } from '@/components/site/email-capture';
+import { RecentEvidenceUpdates } from '@/components/site/recent-updates';
+import { UPDATES_URL } from '@/lib/content/updates';
 import { NextSteps, BookmarkButton } from '@/components/site/next-steps';
 import { isToolLive } from '@/lib/tools/logic';
 import { JsonLd, Breadcrumbs } from '@/components/site/site-chrome';
@@ -221,6 +223,7 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
         })}
         {rendered.questionLists > 0 && <QuestionTools />}
 
+        {page.url.startsWith('/evidence/') && page.url !== UPDATES_URL && <RecentEvidenceUpdates headingLevel={2} />}
         <NextSteps />
         {/* A "doctor question sheet" makes sense for a symptom/treatment page, not
             for a legal or about-the-site page ("Get the terms of use doctor question

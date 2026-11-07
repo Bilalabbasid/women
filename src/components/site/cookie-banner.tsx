@@ -6,8 +6,9 @@ import { getConsent, resetConsent, setConsent, subscribeConsent } from '@/lib/st
 
 const NO_CHOICE = 'none';
 const snapshot = () => getConsent() ?? NO_CHOICE;
-// Server HTML renders nothing; the banner appears after hydration if no choice exists.
-const serverSnapshot = () => 'all';
+// The banner is in the server HTML, so a first-time visitor sees it at first paint. A returning
+// visitor's choice hides it before paint (inline script in the root layout + .consent-set CSS).
+const serverSnapshot = () => NO_CHOICE;
 
 /**
  * Storage choice. Both options are equally easy, and "Essential only" really
@@ -20,7 +21,7 @@ export function CookieBanner() {
   return (
     <aside
       aria-label="Storage choices"
-      className="no-print fixed inset-x-3 bottom-3 z-50 mx-auto max-w-2xl rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] px-4 py-4 shadow-lg sm:inset-x-6"
+      className="storage-choices no-print fixed inset-x-3 bottom-3 z-50 mx-auto max-w-2xl rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] px-4 py-4 shadow-lg sm:inset-x-6"
     >
       <p className="font-semibold text-[var(--color-ink)]">Your choice about this device</p>
       <p className="mt-1 text-sm leading-relaxed text-[var(--color-ink-muted)]">

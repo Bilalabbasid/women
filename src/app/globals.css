@@ -654,6 +654,11 @@
   display: none;
 }
 
+/* A stored storage choice hides the banner before hydration (see the root layout). */
+.consent-set .storage-choices {
+  display: none;
+}
+
 @media print {
   .print-only {
     display: block;

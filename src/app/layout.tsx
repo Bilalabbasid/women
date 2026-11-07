@@ -2,6 +2,9 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { SwRegister } from '@/components/pwa/sw-register';
 import { SITE, absoluteUrl, isIndexable } from '@/lib/site/config';
+import { CONSENT_KEY } from '@/lib/storage/consent';
+
+const CONSENT_PAINT_SCRIPT = "try{if(localStorage.getItem('" + CONSENT_KEY + "'))document.documentElement.classList.add('consent-set')}catch(e){}";
 
 /**
  * Root layout. Kept deliberately thin and server-only: no tracker shell, no
@@ -44,6 +47,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en-US">
+      <head>
+        {/* Hides the storage-choice banner before first paint when a choice is already stored. */}
+        <script dangerouslySetInnerHTML={{ __html: CONSENT_PAINT_SCRIPT }} />
+      </head>
       <body>
         <SwRegister />
         {children}

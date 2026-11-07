@@ -14,7 +14,6 @@ light and dark.
 | Grade meter, badge, explain popover | `ui/grade.tsx` | 5 steps, Harm concern → Strong. Icon + word, never colour alone. "What does … mean?" is a native `[popover]` (zero JS), rendered once per page by `<GradeExplainers/>` in the site layout. |
 | Callouts | `ui/callout.tsx` | Short answer (B's serif pull-quote), Try tonight (brass, B's italic numerals), See a doctor if… (red flag), Ask your doctor (Copy + Print), What the evidence says, Comfort not treatment, Who should be careful. Plus `.urgent-block`. |
 | Notice | `site/honesty-notice.tsx` (restyled) | Index card with a stamp and a double rule. Copy is still only in `lib/site/honesty.ts`. |
-| Product card | `.product-card` (CSS + sample on the DS page) | Dashed frame on sunk paper, "Paid link" tag, grade, "What it won't do", "Check first". The real `products/*` components are not changed yet (content owned by the nextecom session). |
 | Citation popover | `ui/citation.tsx` | Native `[popover]`; the number still links to References. |
 | Tables → cards < 600 px | `.prose table:has(td[data-label])` | Needs `data-label` on cells (the markdown pipeline adds it in the article step). |
 | Accordion, tabs, step list, progress (bar, dots), toast, bottom sheet, mini-TOC (rail + sheet) | `ds-components.css`, `ui/interactive.tsx` | Sheet = `<dialog>`; reading progress = CSS scroll-driven (no JS). |
@@ -61,6 +60,9 @@ borders (2.1 → 3.7 light, 2.0 → 3.4 dark).
 - The tracker's top "Not medical advice…" strip has a close (×) button (requested by the owner). The strip stays in
   the server HTML (`validate:honesty`), and the full notice stays in the tracker footer. It's remembered with
   preferences consent (`menoverdict_notice_dismissed`), otherwise for the visit.
+
+- The brief's product card was dropped. After the "free site" merge (a85d69a), MenoVerdict has no products, paid links
+  or commissions, and `validate:free` fails the build on that wording.
 
 ## Known issues
 

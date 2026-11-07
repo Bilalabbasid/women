@@ -13,17 +13,17 @@ export function Card({
   ...props
 }: CardProps) {
   const variants = {
-    default: 'bg-[var(--color-paper-raised)] border-[var(--color-rule)] text-[var(--color-ink)]',
-    muted: 'bg-[var(--color-paper)] border-[var(--color-rule)] text-[var(--color-ink)]',
-    accent: 'bg-[var(--color-accent-soft)] border-transparent text-[var(--color-ink)]',
-    highlight: 'bg-[var(--color-accent-soft)] border-[var(--color-accent)] text-[var(--color-ink)]',
+    default: 'bg-[var(--paper-raised)] border-[var(--rule)] text-[var(--ink)]',
+    muted: 'bg-[var(--paper-sunk)] border-transparent text-[var(--ink)]',
+    accent: 'bg-[var(--accent-soft)] border-transparent text-[var(--ink)]',
+    highlight: 'bg-[var(--accent-soft)] border-[var(--accent)] text-[var(--ink)]',
   };
 
   return (
     <div
       className={twMerge(
         clsx(
-          'rounded-2xl border p-4 sm:p-5 shadow-[0_1px_3px_rgba(0,0,0,0.03)]',
+          'rounded-[var(--radius-lg)] border p-4 sm:p-5',
           variants[variant],
           className
         )

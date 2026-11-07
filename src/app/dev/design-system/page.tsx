@@ -32,7 +32,6 @@ const SECTIONS = [
   { id: 'grades', label: 'Grade meter' },
   { id: 'callouts', label: 'Callouts' },
   { id: 'notice', label: 'Notice' },
-  { id: 'product', label: 'Product card' },
   { id: 'citations', label: 'Citations and tables' },
   { id: 'disclosure', label: 'Accordion, tabs, steps' },
   { id: 'feedback', label: 'Progress, toast, sheet' },
@@ -388,46 +387,6 @@ export default function DesignSystemPage() {
             <Section id="notice" title="Notice" intro="The site’s “not medical advice / how this page was made” text: calm, clearly readable, its own index-card style.">
               <HonestyNotice variant="short" />
               <HonestyNotice variant="full" lastChecked="2026-11-02" />
-            </Section>
-
-            {/* ------------------------------------------------ product */}
-            <Section
-              id="product"
-              title="Product card"
-              intro="Clearly labelled, shows the grade, “What it won’t do” and “Check first”. Dashed frame on sunk paper: distinct from editorial without looking like an ad. (Sample content.)"
-            >
-              <article className="product-card" aria-labelledby="ds-pc">
-                <p className="product-card-tag">
-                  <span>Paid link · we may earn a commission</span>
-                  <span>Sample</span>
-                </p>
-                <div className="product-card-body">
-                  <h3 id="ds-pc" className="product-card-name">
-                    Example moisture-wicking pyjamas
-                  </h3>
-                  <GradeBadge grade="comfort_only" explain />
-                  <dl>
-                    <div>
-                      <dt>Best for</dt>
-                      <dd>Waking damp after a night sweat and needing to get back to sleep.</dd>
-                    </div>
-                    <div className="pc-wont">
-                      <dt>What it won’t do</dt>
-                      <dd>It won’t prevent or reduce hot flashes.</dd>
-                    </div>
-                    <div className="pc-check">
-                      <dt>Check first</dt>
-                      <dd>See a doctor if night sweats come with fever, weight loss or swollen glands.</dd>
-                    </div>
-                  </dl>
-                  <div className="flex flex-wrap items-center gap-3">
-                    <a href="#product" className="btn btn-secondary">
-                      See it at the retailer ↗
-                    </a>
-                  </div>
-                  <p className="product-card-fine">A commission never changes a grade.</p>
-                </div>
-              </article>
             </Section>
 
             {/* ------------------------------------------------ citations */}

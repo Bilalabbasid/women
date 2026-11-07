@@ -1,9 +1,8 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
-import { ShieldCheck, ChevronLeft, Settings } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { Icon } from './kit';
 
 export interface AppHeaderProps {
   title: string;
@@ -14,6 +13,7 @@ export interface AppHeaderProps {
   showSettings?: boolean;
 }
 
+/** The tracker's top bar: brand mark or back, screen title, "On this device", settings. */
 export function AppHeader({
   title,
   subtitle,
@@ -24,72 +24,45 @@ export function AppHeader({
 }: AppHeaderProps) {
   const router = useRouter();
 
-  const handleBack = () => {
-    if (backHref) {
-      router.push(backHref);
-    } else {
-      router.back();
-    }
-  };
-
   return (
-    <header className="no-print sticky top-0 z-30 bg-[var(--color-paper)]/90 backdrop-blur-md border-b border-[var(--color-rule)] transition-all">
-      <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
-        {/* Left: Back or Brand Icon */}
-        <div className="flex items-center gap-2.5">
-          {showBack ? (
-            <button
-              onClick={handleBack}
-              aria-label="Go back"
-              className="w-10 h-10 -ml-1 rounded-xl flex items-center justify-center text-[var(--color-ink-muted)] hover:bg-[var(--color-accent-soft)] active:scale-95 transition"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-          ) : (
-            <Link
-              href="/app/today/"
-              className="flex items-center gap-2 group"
-              aria-label="MenoVerdict Dashboard"
-            >
-              <div className="w-8 h-8 rounded-lg bg-[var(--color-accent)] flex items-center justify-center shadow-xs">
-                <span className="text-white font-serif font-bold text-base leading-none">MV</span>
-              </div>
-            </Link>
-          )}
+    <header className="app-topbar no-print">
+      <div className="app-topbar-row">
+        {showBack ? (
+          <button
+            type="button"
+            onClick={() => (backHref ? router.push(backHref) : router.back())}
+            aria-label="Go back"
+            className="icon-btn -ml-2"
+          >
+            <Icon.Back width={24} height={24} />
+          </button>
+        ) : (
+          <Link href="/" className="icon-btn -ml-2" aria-label="MenoVerdict home">
+            <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true">
+              <rect width="64" height="64" rx="14" fill="var(--accent)" />
+              <path d="M13 46V18H19.5L27.5 34.5L35.5 18H42V46H36.5V27.5L29.2 42.5H25.8L18.5 27.5V46H13Z" fill="var(--on-accent)" />
+              <path d="M38 35.5L43.5 41L53 27.5" stroke="var(--on-accent)" strokeOpacity=".75" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            </svg>
+          </Link>
+        )}
 
-          <div>
-            <h1 className="text-base sm:text-lg font-serif font-semibold text-[var(--color-ink)] leading-tight">
-              {title}
-            </h1>
-            {subtitle && (
-              <p className="text-xs text-[var(--color-ink-muted)] mt-0.5 line-clamp-1">{subtitle}</p>
-            )}
-          </div>
+        <div className="min-w-0 flex-1">
+          <h1 className="app-title truncate">{title}</h1>
+          {subtitle && <p className="app-subtitle truncate">{subtitle}</p>}
         </div>
 
-        {/* Right: Privacy Indicator & Settings */}
-        <div className="flex items-center gap-2">
-          {showPrivacyBadge && (
-            <Link
-              href="/app/privacy/"
-              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-[var(--color-accent-soft)] text-[var(--color-accent)] border border-[var(--color-accent)]/30 hover:bg-[var(--color-accent)]/15 transition"
-              title="Your health data stays on this device"
-            >
-              <ShieldCheck className="w-3.5 h-3.5 text-[var(--color-accent)]" />
-              <span className="hidden xs:inline">Device Only</span>
-            </Link>
-          )}
+        {showPrivacyBadge && (
+          <Link href="/app/privacy/" className="device-chip" aria-label="Your entries stay on this device. How privacy works">
+            <Icon.Lock width={16} height={16} />
+            <span className="hidden min-[400px]:inline">On this device</span>
+          </Link>
+        )}
 
-          {showSettings && (
-            <Link
-              href="/app/settings/"
-              aria-label="App Settings"
-              className="w-9 h-9 rounded-xl flex items-center justify-center text-[var(--color-ink-muted)] hover:bg-[var(--color-accent-soft)] hover:text-[var(--color-ink)] transition"
-            >
-              <Settings className="w-4 h-4" />
-            </Link>
-          )}
-        </div>
+        {showSettings && (
+          <Link href="/app/settings/" aria-label="Settings" className="icon-btn">
+            <Icon.Settings width={22} height={22} />
+          </Link>
+        )}
       </div>
     </header>
   );

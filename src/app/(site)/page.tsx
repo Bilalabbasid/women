@@ -127,22 +127,32 @@ export default function HomePage() {
 
   return (
     <div className="space-y-16 pb-2 sm:space-y-20">
-      {/* 1. Hero: the question, the chip picker and the quiz first. Calm, editorial, no banner. */}
-      <section aria-labelledby="hero-heading" className="-mt-4 sm:mt-0">
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:items-start lg:gap-14">
+      {/* 1. Hero: styled in the brand dark-teal banner container with rounded corners */}
+      <section
+        aria-labelledby="hero-heading"
+        className="-mt-4 sm:mt-0 rounded-2xl sm:rounded-3xl bg-[#1F5A4C] p-6 sm:p-10 lg:p-12 text-[#F7F6F2] shadow-sm relative overflow-hidden"
+      >
+        <div className="relative z-10 grid gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:items-start lg:gap-14">
           <div className="space-y-5">
-            <h1 id="hero-heading" className="max-w-[14ch] text-[length:var(--fs-display)] leading-[1.05] tracking-[-0.02em]">
+            <p className="text-xs font-bold tracking-widest uppercase text-[#A3D9C9]">
+              Independent · Evidence-Graded · Private by Design
+            </p>
+            <h1 id="hero-heading" className="max-w-[14ch] text-[length:var(--fs-display)] leading-[1.05] tracking-[-0.02em] text-[#FCFAF5]">
               What&rsquo;s going on with your body right now?
             </h1>
-            <p className="max-w-xl text-[length:var(--fs-lead)] leading-snug text-[var(--ink-muted)]">
+            <p className="max-w-xl text-[length:var(--fs-lead)] leading-snug text-[#E2EBE5]">
               Plain answers, graded against the evidence. Free, private, no sign-up.
             </p>
 
-            {chips.length > 0 && <HomeSymptomPicker chips={chips} />}
+            {chips.length > 0 && (
+              <div className="[&_button]:bg-[#174538] [&_button]:text-[#FCFAF5] [&_button]:border-[#2C6B5C] [&_button:hover]:bg-[#245D4F]">
+                <HomeSymptomPicker chips={chips} />
+              </div>
+            )}
 
             <div className="flex flex-wrap items-center gap-x-5 gap-y-3 pt-1">
               {quizLive && (
-                <Link href={QUIZ_HREF} className="btn btn-primary btn-lg">
+                <Link href={QUIZ_HREF} className="btn btn-lg bg-[#FCFAF5] text-[#1F5A4C] hover:bg-[#EAE5D9] font-bold border-0">
                   Where am I in the transition?
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M5 12h14M13 6l6 6-6 6" />
@@ -150,51 +160,51 @@ export default function HomePage() {
                 </Link>
               )}
               {trackerLive && (
-                <Link href="/app/today/" className="btn btn-quiet">
+                <Link href="/app/today/" className="btn text-[#FCFAF5] hover:bg-[#174538] border border-[#3A7E6E]">
                   Start tracking
                 </Link>
               )}
             </div>
 
             {trackerLive && (
-              <div className="[&_a]:text-[var(--link)] [&_p]:bg-[var(--accent-soft)] [&_p]:text-[var(--ink)]">
+              <div className="[&_a]:text-[#A3D9C9] [&_p]:bg-[#174538] [&_p]:text-[#FCFAF5] [&_p]:border [&_p]:border-[#2C6B5C]">
                 <LastLogNote />
               </div>
             )}
 
-            <p className="notice-line">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true" className="mt-0.5 shrink-0 text-[var(--accent)]">
+            <p className="notice-line text-[#D2E4DC]">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true" className="mt-0.5 shrink-0 text-[#A3D9C9]">
                 <circle cx="12" cy="12" r="9" />
                 <path d="M12 11v5M12 7.5v.01" />
               </svg>
-              <Link href="/about/">{HOW_SITE_WORKS_LINK}</Link>
+              <Link href="/about/" className="text-[#A3D9C9] hover:underline">{HOW_SITE_WORKS_LINK}</Link>
             </p>
           </div>
 
-          {/* Verdicts: graded plainly, from the grade registry. */}
+          {/* Verdicts: graded plainly, in clean white rounded cards */}
           {verdicts.length > 0 && (
             <aside aria-labelledby="verdicts-heading" className="space-y-3 lg:pt-3">
-              <h2 id="verdicts-heading" className="kicker">
-                We say it plainly when something doesn&rsquo;t work
+              <h2 id="verdicts-heading" className="text-xs font-bold tracking-widest uppercase text-[#A3D9C9]">
+                From our evidence checker
               </h2>
               <ul className="grid gap-3">
                 {verdicts.map((v) => (
                   <li key={v.id}>
-                    <Link href={v.href} className={`card verdict-card g-${v.grade}`}>
-                      <span className="font-bold leading-snug">
-                        {v.label} <span className="font-normal text-[var(--ink-muted)]">{v.use}</span>
+                    <Link href={v.href} className="card bg-[#FCFAF5] text-[#1D2422] rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow block">
+                      <span className="font-bold leading-snug block mb-2">
+                        {v.label} <span className="font-normal text-[#4A5350]">{v.use}</span>
                       </span>
                       <GradeMeter grade={v.grade} use={v.use} explain={false} />
                     </Link>
                   </li>
                 ))}
               </ul>
-              <p className="flex flex-wrap gap-x-4 gap-y-1 text-[1rem] text-[var(--ink-muted)]">
+              <p className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-[#D2E4DC]">
                 <span>
                   {verdictCount} remedies graded · {sourceCount} sources linked
                 </span>
-                <Link href="/does-it-work/" className="link link-arrow">
-                  All verdicts
+                <Link href="/does-it-work/" className="text-[#A3D9C9] font-bold hover:underline">
+                  All verdicts &rarr;
                 </Link>
               </p>
             </aside>

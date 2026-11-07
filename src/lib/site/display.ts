@@ -25,9 +25,9 @@ export const DEFAULT_DISPLAY: DisplayPrefs = { t: 'system', z: 'md' };
 export const DISPLAY_PAINT_SCRIPT =
   "try{var k='" +
   DISPLAY_KEY +
-  "',s=localStorage.getItem(k)||sessionStorage.getItem(k);if(s){var p=JSON.parse(s),d=document.documentElement;" +
-  "if(p.t==='light'||p.t==='dark')d.setAttribute('data-theme',p.t);" +
-  "if(p.z==='lg'||p.z==='xl')d.setAttribute('data-text-size',p.z)}}catch(e){}";
+  "',s=localStorage.getItem(k)||sessionStorage.getItem(k);var p=s?JSON.parse(s):{t:'light'};var d=document.documentElement;" +
+  "d.setAttribute('data-theme',p.t==='dark'?'dark':'light');" +
+  "if(p.z==='lg'||p.z==='xl')d.setAttribute('data-text-size',p.z)}catch(e){}";
 
 export function applyDisplay(p: DisplayPrefs): void {
   const d = document.documentElement;

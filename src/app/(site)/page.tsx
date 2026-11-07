@@ -127,41 +127,77 @@ export default function HomePage() {
 
   return (
     <div className="space-y-16 pb-2 sm:space-y-20">
-      {/* 1. Hero: styled in the brand dark-teal banner container with rounded corners and subtle radial depth */}
+      {/* 1. Hero: compact, above-the-fold teal banner with search and 3D evidence cards */}
       <section
         aria-labelledby="hero-heading"
-        className="-mt-4 sm:mt-0 rounded-2xl sm:rounded-3xl bg-[#1F5A4C] p-6 sm:p-10 lg:p-12 text-[#F7F6F2] shadow-xl relative overflow-hidden"
+        className="w-full rounded-2xl sm:rounded-3xl bg-[#1F5A4C] p-6 sm:p-7 lg:p-8 text-[#F7F6F2] shadow-xl relative overflow-hidden"
         style={{
-          backgroundImage: 'radial-gradient(circle at 85% 15%, rgba(127, 195, 171, 0.18) 0%, transparent 60%), radial-gradient(circle at 10% 90%, rgba(23, 69, 56, 0.5) 0%, transparent 50%)',
+          backgroundImage: 'radial-gradient(circle at 85% 15%, rgba(127, 195, 171, 0.22) 0%, transparent 60%), radial-gradient(circle at 10% 90%, rgba(23, 69, 56, 0.5) 0%, transparent 50%)',
         }}
       >
-        <div className="relative z-10 grid gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:items-start lg:gap-14">
-          <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#174538]/80 backdrop-blur-sm border border-[#2C6B5C] px-3.5 py-1 text-xs font-semibold tracking-wider uppercase text-[#A3D9C9]">
+        <div className="relative z-10 grid gap-6 lg:grid-cols-[minmax(0,1.28fr)_minmax(0,1fr)] lg:items-center lg:gap-10">
+          <div className="space-y-3.5">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#174538]/85 backdrop-blur-sm border border-[#2C6B5C] px-3 py-1 text-xs font-semibold tracking-wider uppercase text-[#A3D9C9]">
               <span className="w-1.5 h-1.5 rounded-full bg-[#7FC3AB] animate-pulse" />
-              Independent · Evidence-Graded · Private
+              Independent · Evidence-Graded · Private by design
             </div>
-            <h1 id="hero-heading" className="max-w-[14ch] text-[length:var(--fs-display)] leading-[1.05] tracking-[-0.025em] text-[#FCFAF5] font-serif font-bold">
+            <h1 id="hero-heading" className="max-w-[16ch] text-2xl sm:text-3xl lg:text-[2.65rem] leading-[1.1] tracking-[-0.025em] text-[#FCFAF5] font-serif font-bold">
               What&rsquo;s going on with your body right now?
             </h1>
-            <p className="max-w-xl text-[length:var(--fs-lead)] leading-relaxed text-[#E2EBE5]">
-              Plain answers, graded against clinical evidence. Free, private, and always available without an account.
+            <p className="max-w-xl text-sm sm:text-base leading-relaxed text-[#D8E6DF]">
+              Clear answers to real perimenopause and menopause questions &mdash; every claim graded against clinical evidence, every source linked. No login to read, no sponsored verdicts, and no health data leaves your device.
             </p>
 
-            {chips.length > 0 && (
-              <div className="space-y-2 [&_legend]:text-[#D2E4DC] [&_button]:bg-[#174538]/90 [&_button]:backdrop-blur-sm [&_button]:text-[#FCFAF5] [&_button]:border-[#2C6B5C] [&_button:hover]:bg-[#245D4F] [&_button:hover]:border-[#7FC3AB] [&_button]:transition-all [&_button]:duration-200">
-                <HomeSymptomPicker chips={chips} />
+            {/* Direct private search bar */}
+            <form
+              action="/search/"
+              method="get"
+              role="search"
+              className="relative flex items-center max-w-xl rounded-xl bg-[#FCFAF5] shadow-md border border-[#E5DFD0] p-1 transition-all duration-200 focus-within:ring-2 focus-within:ring-[#A3D9C9] focus-within:border-transparent"
+            >
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#4A5350" strokeWidth="2.2" strokeLinecap="round" className="ml-2.5 mr-1.5 shrink-0 pointer-events-none" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.5-3.5" />
+              </svg>
+              <input
+                type="search"
+                name="q"
+                placeholder="Search symptoms, treatments, questions…"
+                className="w-full bg-transparent text-[#1D2422] text-sm sm:text-base outline-none placeholder:text-[#6B726E] py-1.5 px-1 font-sans"
+              />
+              <button
+                type="submit"
+                className="shrink-0 bg-[#1F5A4C] hover:bg-[#174538] text-[#FCFAF5] font-bold text-xs sm:text-sm px-4 py-2 rounded-lg transition-all duration-150 hover:scale-[1.02] active:scale-[0.98]"
+              >
+                Search
+              </button>
+            </form>
+
+            {/* Popular quick links */}
+            {quickLinks.length > 0 && (
+              <div className="flex flex-wrap items-center gap-1.5 text-xs text-[#D8E6DF] pt-0.5">
+                <span className="font-semibold text-[#A3D9C9]">Popular:</span>
+                {quickLinks.map((q) => (
+                  <Link
+                    key={q.href}
+                    href={q.href}
+                    className="rounded-full bg-[#174538]/70 hover:bg-[#174538] border border-[#2C6B5C] hover:border-[#7FC3AB] px-2.5 py-0.5 text-xs text-[#FCFAF5] transition-all duration-150 hover:-translate-y-0.5 active:translate-y-0"
+                  >
+                    {q.label}
+                  </Link>
+                ))}
               </div>
             )}
 
-            <div className="flex flex-wrap items-center gap-x-5 gap-y-3 pt-2">
+            {/* Primary Action Buttons */}
+            <div className="flex flex-wrap items-center gap-3 pt-1">
               {quizLive && (
                 <Link
                   href={QUIZ_HREF}
-                  className="btn btn-lg bg-[#FCFAF5] text-[#1F5A4C] hover:bg-[#FFFFFF] hover:shadow-lg font-bold border-0 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
+                  className="btn bg-[#FCFAF5] text-[#1F5A4C] hover:bg-[#FFFFFF] hover:shadow-lg font-bold border-0 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 text-sm py-2 px-4 rounded-xl"
                 >
                   Where am I in the transition?
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M5 12h14M13 6l6 6-6 6" />
                   </svg>
                 </Link>
@@ -169,7 +205,7 @@ export default function HomePage() {
               {trackerLive && (
                 <Link
                   href="/app/today/"
-                  className="btn text-[#FCFAF5] bg-[#174538]/60 hover:bg-[#174538] border border-[#3A7E6E] backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5"
+                  className="btn text-[#FCFAF5] bg-[#174538]/70 hover:bg-[#174538] border border-[#3A7E6E] backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 text-sm py-2 px-3.5 rounded-xl"
                 >
                   Start tracking
                 </Link>
@@ -177,13 +213,13 @@ export default function HomePage() {
             </div>
 
             {trackerLive && (
-              <div className="[&_a]:text-[#A3D9C9] [&_p]:bg-[#174538]/90 [&_p]:backdrop-blur-sm [&_p]:text-[#FCFAF5] [&_p]:border [&_p]:border-[#2C6B5C] [&_p]:rounded-xl">
+              <div className="[&_a]:text-[#A3D9C9] [&_p]:bg-[#174538]/90 [&_p]:backdrop-blur-sm [&_p]:text-[#FCFAF5] [&_p]:border [&_p]:border-[#2C6B5C] [&_p]:rounded-xl [&_p]:py-1.5 [&_p]:px-3 [&_p]:text-xs">
                 <LastLogNote />
               </div>
             )}
 
-            <p className="notice-line text-[#D2E4DC] text-sm pt-1">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true" className="mt-0.5 shrink-0 text-[#A3D9C9]">
+            <p className="notice-line text-[#D2E4DC] text-xs pt-0.5">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true" className="shrink-0 text-[#A3D9C9]">
                 <circle cx="12" cy="12" r="9" />
                 <path d="M12 11v5M12 7.5v.01" />
               </svg>
@@ -191,30 +227,30 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Verdicts: graded plainly, with micro-interaction hover depth */}
+          {/* Verdicts: compact, elegant 3D white cards */}
           {verdicts.length > 0 && (
-            <aside aria-labelledby="verdicts-heading" className="space-y-3.5 lg:pt-3">
+            <aside aria-labelledby="verdicts-heading" className="space-y-2.5">
               <div className="flex items-center justify-between">
                 <h2 id="verdicts-heading" className="text-xs font-bold tracking-widest uppercase text-[#A3D9C9]">
                   From our evidence checker
                 </h2>
               </div>
-              <ul className="grid gap-3">
+              <ul className="grid gap-2 sm:gap-2.5">
                 {verdicts.map((v) => (
                   <li key={v.id}>
                     <Link
                       href={v.href}
-                      className="group bg-[#FCFAF5] text-[#1D2422] rounded-xl p-4 shadow-sm border border-[#E5DFD0] hover:border-[#1F5A4C] hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 block active:translate-y-0"
+                      className="group bg-[#FCFAF5] text-[#1D2422] rounded-xl p-3 sm:p-3.5 shadow-md border border-[#E5DFD0] hover:border-[#7FC3AB] hover:shadow-xl transition-all duration-200 hover:-translate-y-1 block active:translate-y-0"
                     >
-                      <span className="font-bold leading-snug block mb-2 group-hover:text-[#1F5A4C] transition-colors">
-                        {v.label} <span className="font-normal text-[#4A5350]">{v.use}</span>
+                      <span className="font-bold text-sm leading-snug block mb-1 group-hover:text-[#1F5A4C] transition-colors">
+                        {v.label} <span className="font-normal text-[#4A5350] text-xs">{v.use}</span>
                       </span>
                       <GradeMeter grade={v.grade} use={v.use} explain={false} />
                     </Link>
                   </li>
                 ))}
               </ul>
-              <p className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 text-sm text-[#D2E4DC] pt-1">
+              <p className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 text-xs text-[#D2E4DC] pt-0.5">
                 <span>
                   {verdictCount} remedies graded · {sourceCount} sources linked
                 </span>
@@ -226,6 +262,19 @@ export default function HomePage() {
           )}
         </div>
       </section>
+
+      {/* 2. Tap what you're feeling */}
+      {chips.length > 0 && (
+        <section aria-labelledby="feelings-heading" className="rounded-2xl border border-[var(--rule)] bg-[var(--paper-raised)] p-5 sm:p-6 shadow-sm space-y-3">
+          <div className="flex flex-col gap-0.5">
+            <p className="kicker">Tap what you&rsquo;re feeling</p>
+            <h2 id="feelings-heading" className="text-[length:var(--fs-h3)] tracking-tight">
+              Everyday words to clinical guides
+            </h2>
+          </div>
+          <HomeSymptomPicker chips={chips} />
+        </section>
+      )}
 
       {/* 2. Start here */}
       {startHere.length > 0 && (

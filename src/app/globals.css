@@ -364,8 +364,10 @@
 .prose .doctor-questions,
 .prose aside.note {
   position: relative;
-  padding: 1.1rem 1.25rem 1.2rem;
-  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 1.2rem 1.35rem 1.3rem;
+  border-radius: var(--radius-lg, 14px);
+  box-shadow: 0 1px 3px -1px rgb(0 0 0 / 0.05);
+  transform-style: preserve-3d;
 }
 .prose aside.urgent::before,
 .prose .doctor-questions::before {
@@ -381,8 +383,10 @@
   line-height: 1.3;
 }
 .prose aside.urgent {
-  border-top: 4px solid var(--urgent-rule);
+  border: 1px solid var(--urgent-rule);
+  border-top: 5px solid var(--urgent-rule);
   background: var(--urgent-soft);
+  box-shadow: 0 4px 14px -4px color-mix(in srgb, var(--urgent) 16%, transparent);
 }
 .prose aside.urgent::before {
   content: "⚠  Get help now";
@@ -396,8 +400,9 @@
 }
 .prose .doctor-questions {
   border: 1px solid var(--rule);
-  border-top: 3px solid var(--link);
+  border-top: 5px solid var(--link);
   background: var(--paper-raised);
+  box-shadow: 0 4px 14px -4px color-mix(in srgb, var(--link) 12%, transparent);
 }
 .prose .doctor-questions::before {
   content: "Ask your doctor";
@@ -430,10 +435,12 @@
 /* :::try → <aside class="try">: "Try tonight", brass, with italic serif step numbers. */
 .prose aside.try {
   position: relative;
-  padding: 1.1rem 1.25rem 1.2rem;
-  border-top: 3px solid var(--brass-rule);
-  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 1.2rem 1.35rem 1.3rem;
+  border: 1px solid var(--brass-rule);
+  border-top: 5px solid var(--brass-rule);
+  border-radius: var(--radius-lg, 14px);
   background: var(--brass-soft);
+  box-shadow: 0 4px 14px -4px color-mix(in srgb, var(--brass) 14%, transparent);
 }
 .prose aside.try::before {
   content: "Try tonight";
@@ -467,31 +474,37 @@
   color: var(--brass);
 }
 .prose aside.note {
-  border-left: 3px solid var(--accent);
-  border-radius: 0 var(--radius) var(--radius) 0;
+  border: 1px solid var(--rule);
+  border-left: 5px solid var(--accent);
+  border-radius: var(--radius-lg, 14px);
   background: var(--accent-soft);
+  box-shadow: 0 2px 8px -2px rgb(0 0 0 / 0.05);
 }
 
 /* The opening paragraph, shown as the "Short answer" (B's pull-quote).
    Applied by the article template with .lead-answer on the first prose part. */
 .prose.lead-answer > p:first-of-type {
   position: relative;
-  margin-bottom: 1.6em;
-  padding: 0.25rem 0 0.25rem 1.25rem;
-  border-left: 4px solid var(--accent);
+  margin-bottom: 1.8em;
+  padding: 1.15rem 1.35rem 1.25rem 1.35rem;
+  border: 1px solid var(--rule);
+  border-left: 5px solid var(--accent);
+  border-radius: var(--radius-lg, 14px);
+  background: var(--paper-raised);
+  box-shadow: 0 1px 3px -1px rgb(0 0 0 / 0.05), 0 4px 12px -4px rgb(0 0 0 / 0.05);
   font-family: var(--font-serif);
-  font-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.4rem);
+  font-size: clamp(1.22rem, 1.08rem + 0.5vw, 1.38rem);
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.55;
   color: var(--ink);
 }
 .prose.lead-answer > p:first-of-type::before {
   content: "Short answer";
   display: block;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.35rem;
   font-style: italic;
   font-size: 1.05rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--accent);
 }
 

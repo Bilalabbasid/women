@@ -55,6 +55,7 @@ If you fill in one of our forms (for example, to hear about new tools, to join a
 
 - **What's sent:** the email address you typed, which form you used, whether you ticked the consent box, the time, and, for the contact form only, the message you wrote. Nothing else: not the page you were on, your symptoms, tracker data or quiz answers.
 - **How:** it's sent as a single email to our own inbox through Resend, an email delivery service. We don't store it in a database, file or spreadsheet. Resend may keep a record of delivered emails for a short period, under its own privacy policy.
+- **Spam protection:** to limit each connection to 5 submissions in 10 minutes, the server keeps a scrambled (hashed) form of your IP address in memory for up to 10 minutes. It isn't written down or sent anywhere, and it's gone when the server restarts.
 - **What we use it for:** only what you asked for, such as telling you about a new tool. We don't send newsletters or sales sequences.
 - **Deleting it:** reply to any email from us, or write to `contact@menoverdict.com`, and we'll delete it.
 

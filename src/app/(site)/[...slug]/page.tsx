@@ -24,7 +24,7 @@ import { SourcesList } from '@/components/site/sources-list';
 import { HonestyNotice } from '@/components/site/honesty-notice';
 import { PRICES_CHECKED, formatCheckedDate } from '@/lib/site/honesty';
 import { lastCheckedDate } from '@/lib/content/schema';
-import { EmailCapture } from '@/components/site/email-capture';
+import { ContactForm, EmailCapture } from '@/components/site/email-capture';
 import { RecentEvidenceUpdates } from '@/components/site/recent-updates';
 import { UPDATES_URL } from '@/lib/content/updates';
 import { NextSteps, BookmarkButton } from '@/components/site/next-steps';
@@ -199,7 +199,8 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
         {/* A "doctor question sheet" makes sense for a symptom/treatment page, not
             for a legal or about-the-site page ("Get the terms of use doctor question
             sheet" was a real, nonsensical result of running this on every page). */}
-        {page.isMedical && <EmailCapture title="Get notified when we launch new tools" />}
+        {page.url === '/contact/' && <ContactForm />}
+        {page.isMedical && <EmailCapture />}
 
         {children.length > 0 && !isNavHub && (
           <section aria-labelledby="in-this-section" className="space-y-3">

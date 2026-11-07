@@ -32,7 +32,10 @@ const NETWORK = /\b(fetch\s*\(|XMLHttpRequest|sendBeacon|new WebSocket|new Event
 const ALLOWED: Record<string, string> = {
   'src/components/site/search-box.tsx': "GET /search-index.json (static file; the query is never sent)",
   'src/app/sw.js/route.ts': 'service worker re-fetches same-origin pages and assets; never reads IndexedDB',
-  'src/components/site/email-capture.tsx': 'POST /api/subscribe: an email address the visitor typed, the form type and the consent value; nothing else',
+  'src/components/site/email-capture.tsx':
+    'POST /api/subscribe: the email address the visitor typed, the form type, the consent value, the contact message (contact form only), the empty honeypot field and the time since the form appeared; nothing else',
+  'src/app/api/subscribe/route.ts':
+    'POST to Resend: one notification email to the site owner with the submitted email, form type, consent, timestamp and contact message; the IP is only hashed in memory for the rate limit and never sent',
 };
 const sourceFiles = walk(path.join(root, 'src'), /\.(tsx?|jsx?)$/);
 for (const f of sourceFiles) {

@@ -22,10 +22,11 @@ import { splitContentIslands } from '@/lib/content/markdown';
 import { ToolIsland } from '@/components/tools/tool-island';
 import { SourcesList } from '@/components/site/sources-list';
 import { HonestyNotice } from '@/components/site/honesty-notice';
-import { PRICES_CHECKED, formatCheckedDate } from '@/lib/site/honesty';
+import { BYLINE_AUTHOR, BYLINE_NOT_REVIEWED, PRICES_CHECKED, formatCheckedDate } from '@/lib/site/honesty';
 import { lastCheckedDate } from '@/lib/content/schema';
 import { ContactForm, EmailCapture } from '@/components/site/email-capture';
 import { RecentEvidenceUpdates } from '@/components/site/recent-updates';
+import { ReaderQuotes } from '@/components/site/reader-quotes';
 import { UPDATES_URL } from '@/lib/content/updates';
 import { NextSteps, BookmarkButton } from '@/components/site/next-steps';
 import { isToolLive } from '@/lib/tools/logic';
@@ -109,6 +110,10 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
   const bodyNotice = fullNotice ? (
     <div className="space-y-1.5 border-b border-[var(--color-rule)] pb-4">
       <HonestyNotice variant="short" />
+      <p className="byline pl-6 text-sm text-[var(--color-ink-muted)]" data-byline="">
+        {BYLINE_AUTHOR} · {reviewerInfo ? `Checked by ${reviewerInfo.name}, ${reviewerInfo.credentials}` : BYLINE_NOT_REVIEWED} · Last checked{' '}
+        <time dateTime={checkedIso}>{formatCheckedDate(checkedIso)}</time>
+      </p>
       {(fm.page_type === 'comparison' || fm.page_type === 'review' || /\$\d/.test(page.body)) && (
         <p className="pl-6 text-sm text-[var(--color-ink-muted)]">{PRICES_CHECKED(formatCheckedDate(checkedIso))}</p>
       )}
@@ -194,6 +199,7 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
         })}
         {rendered.questionLists > 0 && <QuestionTools />}
 
+        <ReaderQuotes url={page.url} />
         {page.url.startsWith('/evidence/') && page.url !== UPDATES_URL && <RecentEvidenceUpdates headingLevel={2} />}
         <NextSteps />
         {/* A "doctor question sheet" makes sense for a symptom/treatment page, not

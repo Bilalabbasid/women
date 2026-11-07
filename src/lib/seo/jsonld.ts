@@ -70,6 +70,18 @@ export function breadcrumbLd(crumbs: Crumb[], c: SiteConfig = SITE): Json {
 
 function personOrOrg(p: Person | undefined, c: SiteConfig): Json {
   if (!p || p.kind === 'organization') return { '@id': orgId(c) };
+  return personLd(p);
+}
+
+/** Matches the visible byline: "Compiled by the MenoVerdict editorial team". */
+function authorLd(p: Person | undefined, c: SiteConfig): Json {
+  if (!p || p.kind === 'organization') {
+    return { '@type': 'Organization', name: `${c.name} editorial team`, parentOrganization: { '@id': orgId(c) } };
+  }
+  return personLd(p);
+}
+
+function personLd(p: Person): Json {
   return {
     '@type': 'Person',
     name: p.name,
@@ -98,7 +110,7 @@ export function contentPageLd(page: ContentPage, store: Pick<ContentStore, 'sour
     inLanguage: fm.locale ?? c.defaultLocale,
     isPartOf: { '@id': siteId(c) },
     publisher: { '@id': orgId(c) },
-    author: personOrOrg(store.people.get(fm.author), c),
+    author: authorLd(store.people.get(fm.author), c),
     // Real dates from the page's own change log: first entry, and latest material change.
     datePublished: fm.change_log.map((e) => e.date).sort()[0] ?? fm.updated_at,
     dateModified: fm.change_log.filter((e) => e.material).map((e) => e.date).sort().at(-1) ?? fm.updated_at,

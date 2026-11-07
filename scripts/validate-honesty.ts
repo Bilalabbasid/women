@@ -4,7 +4,8 @@
  * The site's first rule: say plainly, everywhere, that we are not doctors and
  * that AI helped. This fails the build when:
  *  - any built page (home, hubs, legal pages, 404, the app) lacks the footer line
- *  - any article, tool or comparison page lacks the short notice under its H1
+ *  - any article, tool or comparison page lacks the short notice under its H1, or the byline
+ *    ("Not reviewed by a doctor" unless a verified clinician approved this version)
  *    or the full "How this page was made" notice
  *  - the retired "based on what you searched for" wording reappears
  *  - a page shows "medically reviewed" without a verified clinician approval
@@ -16,7 +17,7 @@ import { getContent } from '../src/lib/content/loader';
 import { isPublishable, isMedicallyReviewed } from '../src/lib/content/gate';
 import { NAV_HUBS } from '../src/lib/content/site-data';
 import { getGrade } from '../src/lib/grades/registry';
-import { HONESTY_ANCHOR, HONESTY_FOOTER, HONESTY_SHORT } from '../src/lib/site/honesty';
+import { HONESTY_ANCHOR, HONESTY_FOOTER, HONESTY_SHORT, BYLINE_AUTHOR, BYLINE_NOT_REVIEWED } from '../src/lib/site/honesty';
 
 const r = new Report('validate:honesty');
 const root = path.join(process.cwd(), '.next', 'server', 'app');
@@ -105,6 +106,10 @@ for (const f of files) {
     full++;
     if (!html.includes(HONESTY_SHORT.text)) r.error(url, 'missing the short honesty notice under the H1');
     if (!html.includes(`id="${HONESTY_ANCHOR}"`)) r.error(url, 'missing the full "How this page was made" notice');
+    if (!html.includes('data-byline') || !html.includes(BYLINE_AUTHOR)) r.error(url, 'missing the byline under the short notice');
+    else if (!isMedicallyReviewed(page, store) && !html.includes(BYLINE_NOT_REVIEWED)) {
+      r.error(url, 'byline must say "Not reviewed by a doctor" (no verified clinician approved this version)');
+    }
   }
 
   if (/medically reviewed by/i.test(html) && !isMedicallyReviewed(page, store)) {

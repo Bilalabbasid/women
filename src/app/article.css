@@ -128,6 +128,33 @@
   background: var(--color-paper);
 }
 
+/* Phones: keep lines long enough to read. Thinner card padding, and inner panels
+   drop their box (only the accent edge stays). */
+@media (max-width: 599px) {
+  .prose > section.prose-section {
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+    padding: 1.1rem 0.9rem 1.2rem;
+    border-radius: 1rem;
+  }
+  .prose ul.kv-list {
+    gap: 0.9rem;
+  }
+  .prose ul.kv-list > li.kv {
+    padding: 0.1rem 0 0.1rem 0.8rem;
+    border: 0;
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0;
+    background: none;
+  }
+  .prose > ul.kv-list > li.kv {
+    background: none;
+  }
+  .prose section.prose-section h3 {
+    padding-left: 0.6rem;
+  }
+}
+
 @media print {
   .prose > section.prose-section {
     padding: 0;

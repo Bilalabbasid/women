@@ -201,8 +201,12 @@ function remarkDirectivesToHtml() {
       } else if (d.name === 'note') {
         data.hName = 'aside';
         data.hProperties = { className: ['note'] };
+      } else if (d.name === 'try') {
+        // "Try tonight": a few safe, sourced self-care steps. Styled by .prose aside.try.
+        data.hName = 'aside';
+        data.hProperties = { className: ['try'], 'data-try': 'true', 'aria-label': 'Try tonight' };
       } else {
-        throw new Error(`Unknown content directive ":::${d.name}" (allowed: urgent, questions, note)`);
+        throw new Error(`Unknown content directive ":::${d.name}" (allowed: urgent, questions, note, try)`);
       }
     });
   };

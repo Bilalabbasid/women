@@ -49,28 +49,36 @@
   margin-top: 1.1em;
 }
 
-/* Section heading: no rule above it inside the card; a small accent mark before it. */
+/* Section heading: styled hero-teal banner with accent indicator. */
 .prose > section.prose-section > h2 {
   margin-top: 0;
-  padding-top: 0;
+  padding: 0.7rem 1.15rem;
   border-top: 0;
   display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: var(--radius, 10px);
+  background: #1F5A4C;
+  background-image: radial-gradient(circle at 90% 20%, rgba(127, 195, 171, 0.22) 0%, transparent 60%);
+  color: #FCFAF5;
+  border: 1px solid #2C6B5C;
+  box-shadow: 0 3px 12px -3px rgba(31, 90, 76, 0.25);
+  line-height: 1.25;
 }
 .prose > section.prose-section > h2::before {
   content: "";
   position: static;
   flex: none;
-  width: 0.7rem;
-  height: 0.7rem;
-  border-radius: 0.25rem;
-  background: var(--color-accent);
-  transform: translateY(-0.1em) rotate(45deg);
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: #7FC3AB;
+  box-shadow: 0 0 8px rgba(127, 195, 171, 0.8);
 }
 .prose > section.prose-section > h2 + p {
   font-size: 1.04em;
   color: var(--color-ink);
+  margin-top: 1.1em;
 }
 
 /* Sub-headings inside a section. */

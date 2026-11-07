@@ -55,9 +55,11 @@ export function References({ ids, sources }: { ids: string[]; sources: Map<strin
   if (ids.length === 0) return null;
   return (
     <section aria-labelledby="references" className="references space-y-4 border-t border-[var(--rule)] pt-6">
-      <h2 id="references" className="text-[length:var(--fs-h3)]">
-        References
-      </h2>
+      <div className="section-header-teal">
+        <h2 id="references" className="text-[length:var(--fs-h3)] font-serif font-bold text-[#FCFAF5]">
+          References
+        </h2>
+      </div>
       <ol className="list-decimal space-y-3 pl-6 text-[1.0625rem] leading-relaxed marker:font-bold marker:text-[var(--ink-muted)]">
         {ids.map((id, i) => {
           const s = sources.get(id);

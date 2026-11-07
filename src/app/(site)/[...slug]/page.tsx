@@ -225,9 +225,11 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
 
         {children.length > 0 && !isNavHub && (
           <section aria-labelledby="in-this-section" className="no-print space-y-4">
-            <h2 id="in-this-section" className="text-[length:var(--fs-h3)]">
-              In this section
-            </h2>
+            <div className="section-header-teal">
+              <h2 id="in-this-section" className="text-[length:var(--fs-h3)] font-serif font-bold text-[#FCFAF5]">
+                In this section
+              </h2>
+            </div>
             <ul className="grid gap-3 sm:grid-cols-2">
               {children.map((c) => (
                 <li key={c.url}>
@@ -243,9 +245,11 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
 
         {faq.length > 0 && (
           <section aria-labelledby="faq" className="space-y-3">
-            <h2 id="faq" className="text-[length:var(--fs-h3)]">
-              Questions people ask
-            </h2>
+            <div className="section-header-teal">
+              <h2 id="faq" className="text-[length:var(--fs-h3)] font-serif font-bold text-[#FCFAF5]">
+                Questions people ask
+              </h2>
+            </div>
             <div className="accordion">
               {faq.map((f) => (
                 <details key={f.q}>
@@ -261,9 +265,11 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
 
         {related.length > 0 && (
           <section aria-labelledby="related" className="no-print space-y-4">
-            <h2 id="related" className="text-[length:var(--fs-h3)]">
-              Related guides
-            </h2>
+            <div className="section-header-teal">
+              <h2 id="related" className="text-[length:var(--fs-h3)] font-serif font-bold text-[#FCFAF5]">
+                Related guides
+              </h2>
+            </div>
             <ul className="grid gap-3 sm:grid-cols-2">
               {related.map((r) => (
                 <li key={r.url}>

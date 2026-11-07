@@ -265,25 +265,29 @@ export default function HomePage() {
 
       {/* 2. Tap what you're feeling */}
       {chips.length > 0 && (
-        <section aria-labelledby="feelings-heading" className="rounded-2xl border border-[var(--rule)] bg-[var(--paper-raised)] p-5 sm:p-6 shadow-sm space-y-3">
-          <div className="flex flex-col gap-0.5">
-            <p className="kicker">Tap what you&rsquo;re feeling</p>
-            <h2 id="feelings-heading" className="text-[length:var(--fs-h3)] tracking-tight">
-              Everyday words to clinical guides
-            </h2>
+        <section aria-labelledby="feelings-heading" className="rounded-2xl border border-[var(--rule)] bg-[var(--paper-raised)] p-5 sm:p-6 shadow-sm space-y-4">
+          <div className="section-header-teal">
+            <div>
+              <p className="kicker">Tap what you&rsquo;re feeling</p>
+              <h2 id="feelings-heading" className="text-[length:var(--fs-h3)] font-serif font-bold text-[#FCFAF5]">
+                Everyday words to clinical guides
+              </h2>
+            </div>
           </div>
           <HomeSymptomPicker chips={chips} />
         </section>
       )}
 
-      {/* 2. Start here */}
+      {/* 3. Start here */}
       {startHere.length > 0 && (
-        <section aria-labelledby="start-heading" className="space-y-6">
-          <div className="flex flex-col gap-1">
-            <p className="kicker">Not sure where to begin?</p>
-            <h2 id="start-heading" className="text-[length:var(--fs-h2)] tracking-tight">
-              Start here
-            </h2>
+        <section aria-labelledby="start-heading" className="space-y-4">
+          <div className="section-header-teal">
+            <div>
+              <p className="kicker">Not sure where to begin?</p>
+              <h2 id="start-heading" className="text-[length:var(--fs-h2)] font-serif font-bold text-[#FCFAF5] tracking-tight">
+                Start here
+              </h2>
+            </div>
           </div>
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {startHere.map(({ title, body, href, Illo }) => (
@@ -308,30 +312,18 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* 3. Search, for when she already knows what to ask */}
-      <section aria-labelledby="search-heading" className="space-y-4 border-y border-[var(--rule)] py-8">
-        <h2 id="search-heading" className="text-[length:var(--fs-h3)]">
-          Or ask in your own words
-        </h2>
-        <div className="max-w-2xl">
-          <Suspense fallback={<div className="h-16 rounded-xl bg-[var(--color-paper-raised)]" />}>
-            <SearchBox suggestions={quickLinks} />
-          </Suspense>
-        </div>
-      </section>
-
       {/* 4. Tools */}
       {tools.length > 0 && (
-        <section aria-labelledby="tools-heading" className="space-y-6">
-          <div className="flex flex-wrap items-end justify-between gap-2">
+        <section aria-labelledby="tools-heading" className="space-y-4">
+          <div className="section-header-teal justify-between">
             <div>
               <p className="kicker">Free · no account · saved on your device</p>
-              <h2 id="tools-heading" className="mt-1 text-[length:var(--fs-h2)] tracking-tight">
+              <h2 id="tools-heading" className="text-[length:var(--fs-h2)] font-serif font-bold text-[#FCFAF5] tracking-tight">
                 Get ready for your appointment
               </h2>
             </div>
-            <Link href="/tools/" className="link link-arrow">
-              All tools
+            <Link href="/tools/" className="text-[#A3D9C9] hover:text-[#FCFAF5] font-bold text-sm underline transition-colors">
+              All tools &rarr;
             </Link>
           </div>
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -361,13 +353,13 @@ export default function HomePage() {
 
       {/* 5. Latest updates */}
       {recent.length > 0 && (
-        <section aria-labelledby="recent-heading" className="space-y-5">
-          <div className="flex flex-wrap items-end justify-between gap-2">
-            <h2 id="recent-heading" className="text-[length:var(--fs-h3)]">
+        <section aria-labelledby="recent-heading" className="space-y-4">
+          <div className="section-header-teal justify-between">
+            <h2 id="recent-heading" className="text-[length:var(--fs-h3)] font-serif font-bold text-[#FCFAF5]">
               Recently updated guides
             </h2>
-            <Link href="/evidence/updates/" className="link link-arrow">
-              What&rsquo;s changed
+            <Link href="/evidence/updates/" className="text-[#A3D9C9] hover:text-[#FCFAF5] font-bold text-sm underline transition-colors">
+              What&rsquo;s changed &rarr;
             </Link>
           </div>
           <ul className="row-list">

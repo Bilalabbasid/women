@@ -179,7 +179,14 @@
   .hub-group-head {
     display: flex;
     align-items: center;
-    gap: 0.85rem;
+    gap: 1.1rem;
+    padding: 0.95rem 1.35rem;
+    border-radius: var(--radius-lg, 16px);
+    background: #1F5A4C;
+    background-image: radial-gradient(circle at 90% 20%, rgba(127, 195, 171, 0.22) 0%, transparent 60%), radial-gradient(circle at 10% 80%, rgba(23, 69, 56, 0.5) 0%, transparent 50%);
+    color: #FCFAF5;
+    border: 1px solid #2C6B5C;
+    box-shadow: 0 4px 16px -4px rgba(31, 90, 76, 0.3), 0 1px 3px rgba(0, 0, 0, 0.08);
   }
   .hub-group-icon {
     display: grid;
@@ -188,22 +195,46 @@
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background: var(--accent-soft);
-    color: var(--accent);
+    background: #174538;
+    border: 1.5px solid #3A7E6E;
+    color: #A3D9C9;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   }
   .hub-group-icon svg {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.65rem;
+    height: 1.65rem;
   }
   .hub-group-title {
     font-family: var(--font-serif);
     font-size: var(--fs-h3);
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.2;
+    color: #FCFAF5;
+    letter-spacing: -0.015em;
   }
   .hub-group-count {
     font-size: var(--fs-meta);
-    color: var(--ink-muted);
+    color: #D8E6DF;
+    margin-top: 0.15rem;
+  }
+  .hub-group > h3:not(.choose-card-name) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.85rem 1.35rem;
+    border-radius: var(--radius-lg, 16px);
+    background: #1F5A4C;
+    background-image: radial-gradient(circle at 90% 20%, rgba(127, 195, 171, 0.22) 0%, transparent 60%);
+    color: #FCFAF5;
+    border: 1px solid #2C6B5C;
+    box-shadow: 0 4px 14px -4px rgba(31, 90, 76, 0.25);
+    margin-bottom: 0.85rem;
+    font-family: var(--font-serif);
+    font-weight: 700;
+  }
+  .hub-group > h3:not(.choose-card-name) span {
+    color: #D8E6DF !important;
   }
   .guide-card mark {
     background: color-mix(in srgb, var(--brass-rule) 30%, transparent);

@@ -126,11 +126,11 @@ export function HubDirectory({ pages, heading }: { pages: ContentPage[]; heading
 
   return (
     <section aria-labelledby="in-this-section" className="scroll-mt-4 space-y-5">
-      <div className="flex flex-wrap items-baseline justify-between gap-2 border-t border-[var(--rule)] pt-6">
-        <h2 id="in-this-section" className="text-[length:var(--fs-h2)]">
+      <div className="section-header-teal justify-between">
+        <h2 id="in-this-section" className="text-[length:var(--fs-h2)] font-serif font-bold text-[#FCFAF5]">
           {heading}
         </h2>
-        <p className="text-[var(--fs-meta)] text-[var(--ink-muted)]">{total} guides</p>
+        <p className="text-[var(--fs-meta)] text-[#A3D9C9] font-bold">{total} guides</p>
       </div>
 
       {isSymptoms ? (

@@ -196,7 +196,7 @@ export default function TimelinePage() {
         </Panel>
 
         {isLoading ? (
-          <div className="grid gap-3" aria-busy="true" aria-label="Loading your timeline">
+          <div className="grid gap-3" role="status" aria-busy="true" aria-label="Loading your timeline">
             <span className="skeleton h-40 w-full" />
             <span className="skeleton h-24 w-full" />
           </div>

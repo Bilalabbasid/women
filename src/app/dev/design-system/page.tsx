@@ -502,7 +502,7 @@ export default function DesignSystemPage() {
                     Log today
                   </a>
                 </div>
-                <div className="card grid gap-3" aria-busy="true" aria-label="Loading your timeline">
+                <div className="card grid gap-3" role="status" aria-busy="true" aria-label="Loading your timeline">
                   <span className="skeleton h-6 w-2/3" />
                   <span className="skeleton h-24 w-full" />
                   <span className="skeleton h-4 w-1/2" />

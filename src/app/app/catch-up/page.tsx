@@ -90,7 +90,7 @@ export default function CatchUpPage() {
         )}
 
         {missedDays === null ? (
-          <div className="grid gap-3" aria-busy="true" aria-label="Loading the days you missed">
+          <div className="grid gap-3" role="status" aria-busy="true" aria-label="Loading the days you missed">
             <span className="skeleton h-40 w-full" />
             <span className="skeleton h-40 w-full" />
           </div>

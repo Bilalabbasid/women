@@ -39,7 +39,9 @@ const attr = (html: string, re: RegExp) => {
 };
 
 const seen = { title: new Map<string, string>(), desc: new Map<string, string>(), canon: new Map<string, string>() };
-const isPrivate = (p: string) => p.startsWith('/app/') || p === '/app/' || p === '/offline/' || p === '/search/';
+// /dev/ holds internal reference pages (the design system), noindex on purpose.
+const isPrivate = (p: string) =>
+  p.startsWith('/app/') || p === '/app/' || p.startsWith('/dev/') || p === '/offline/' || p === '/search/';
 
 for (const { path: p, html, file } of pages) {
   const robots = attr(html, /<meta name="robots" content="([^"]+)"/) ?? '';

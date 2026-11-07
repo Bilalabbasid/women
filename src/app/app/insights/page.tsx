@@ -80,7 +80,7 @@ export default function InsightsPage() {
         </Panel>
 
         {isLoading ? (
-          <div className="grid gap-3" aria-busy="true" aria-label="Loading your insights">
+          <div className="grid gap-3" role="status" aria-busy="true" aria-label="Loading your insights">
             <span className="skeleton h-28 w-full" />
             <span className="skeleton h-48 w-full" />
           </div>

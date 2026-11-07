@@ -421,7 +421,7 @@ export default function TreatmentsPage() {
           />
 
           {!loaded ? (
-            <div className="panel" aria-busy="true" aria-label="Loading your treatments">
+            <div className="panel" role="status" aria-busy="true" aria-label="Loading your treatments">
               <span className="skeleton h-6 w-1/2" />
               <span className="skeleton h-12 w-full" />
             </div>

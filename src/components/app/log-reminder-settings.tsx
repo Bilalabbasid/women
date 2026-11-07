@@ -53,7 +53,7 @@ export function LogReminderSettings() {
 
   if (!settings)
     return (
-      <div className="grid gap-3" aria-busy="true" aria-label="Loading your reminder settings">
+      <div className="grid gap-3" role="status" aria-busy="true" aria-label="Loading your reminder settings">
         <span className="skeleton h-12 w-full" />
         <span className="skeleton h-5 w-2/3" />
       </div>

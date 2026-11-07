@@ -386,7 +386,7 @@ export default function ManageStoragePage() {
 
         <Card id="space-heading" title="Storage on this device">
           {estimate === null ? (
-            <span className="skeleton h-6 w-2/3" aria-label="Checking storage" />
+            <span className="skeleton h-6 w-2/3" role="status" aria-label="Checking storage" />
           ) : !estimate.supported ? (
             <p>This browser doesn&apos;t report how much space is available. Saving still works.</p>
           ) : (
@@ -443,7 +443,7 @@ export default function ManageStoragePage() {
 
         <Card id="stored-heading" title="What’s stored">
           {summaries === null ? (
-            <div className="grid gap-2" aria-busy="true" aria-label="Counting your records">
+            <div className="grid gap-2" role="status" aria-busy="true" aria-label="Counting your records">
               <span className="skeleton h-12 w-full" />
               <span className="skeleton h-12 w-full" />
             </div>

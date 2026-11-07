@@ -98,7 +98,7 @@ These steps come from US National Institute on Aging advice for sleep problems a
 | **Breathable sleepwear and bedding** | :grade{id="cooling-comfort"} | Can make you more comfortable, but does not stop the hot flashes themselves [@nams-2023-nonhormone-therapy] |
 | **Over-the-counter [magnesium](/does-it-work/magnesium/) and herbal sleep supplements** | :grade{id="otc-sleep-supplements-vms"} | Supplements and herbal remedies are not recommended by The Menopause Society (2023) for hot flashes (Levels I–II) [@nams-2023-nonhormone-therapy] |
 
-Sleeping pills, including over-the-counter aids such as melatonin, may help for a short time. They are not a cure for insomnia and should not be used long term [@nia-sleep-problems-menopause].
+Sleeping pills, including over-the-counter aids such as melatonin, may help for a short time. They do not resolve underlying insomnia and should not be used long term [@nia-sleep-problems-menopause].
 
 ## Track your wake times
 

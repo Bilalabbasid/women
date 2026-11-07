@@ -58,7 +58,7 @@ The Menopause Society maintains a searchable **"Find a Menopause Clinician"** da
 
 NICE guidance specifically recommends considering a referral to someone with menopause expertise in situations where [@nice-ng23-recommendations]:
 
-- You have menopause symptoms and a reason you **shouldn't take HRT** (a contraindication)
+- You have menopausal symptoms and a reason you **shouldn't take HRT** (a contraindication)
 - There's **real uncertainty** about which treatment option fits your symptoms
 
 If your situation is straightforward, a well-informed primary care doctor or OB/GYN may be all you need. If you've been told "I don't really prescribe HRT" or your history is complicated (clotting risk, cancer history, early menopause), a specialist search is worth the extra step. See [who HRT may suit, and who needs specialist advice](/treatments/hormone-therapy/is-it-right-for-me/) for the specific situations that call for this.

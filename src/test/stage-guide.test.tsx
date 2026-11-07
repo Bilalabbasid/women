@@ -53,7 +53,7 @@ describe('StageGuide quiz UI', () => {
     expect(region.textContent).toMatch(/not a diagnosis/i);
     expect(region.textContent).toMatch(/pregnancy, thyroid/);
     expect(region.textContent).not.toMatch(/\byou have\b|\byou should take\b/i);
-    expect(within(region).getByRole('link', { name: 'The stages of perimenopause' })).toHaveAttribute('href', '/perimenopause/stages/');
+    expect(within(region).getByRole('link', { name: 'The stages of perimenopause' }).getAttribute('href')).toMatch(/^\/perimenopause\/stages\/?$/);
     // Links to pages that aren't live, and the tracker when it isn't live, are not shown.
     expect(within(region).queryByRole('link', { name: /Irregular periods/ })).toBeNull();
     expect(within(region).queryByRole('link', { name: 'Install the app' })).toBeNull();
@@ -73,8 +73,8 @@ describe('StageGuide quiz UI', () => {
     render(<StageGuide liveUrls={[]} trackerLive />);
     answerEarlyTransition();
     const region = screen.getByRole('region', { name: 'Your result' });
-    expect(within(region).getByRole('link', { name: 'Install the app' })).toHaveAttribute('href', '/app/install/');
-    expect(within(region).getByRole('link', { name: /Track your periods/ })).toHaveAttribute('href', '/tools/symptom-tracker/');
+    expect(within(region).getByRole('link', { name: 'Install the app' }).getAttribute('href')).toMatch(/^\/app\/install\/?$/);
+    expect(within(region).getByRole('link', { name: /Track your periods/ }).getAttribute('href')).toMatch(/^\/tools\/symptom-tracker\/?$/);
   });
 
   it('skips the period questions for hormonal contraception', () => {

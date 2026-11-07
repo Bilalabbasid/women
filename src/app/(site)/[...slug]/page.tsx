@@ -34,6 +34,8 @@ import { JsonLd, Breadcrumbs } from '@/components/site/site-chrome';
 import { GradeBadge, References, ChangeLog, DraftBanner, Toc, displayName } from '@/components/site/evidence';
 import { QuestionTools, SavedCopyNotice } from '@/components/site/client-islands';
 import { ToolHero, TOOL_HEROES } from '@/components/site/tool-hero';
+import { VerdictHero, BetterEvidenceCards, verdictData } from '@/components/site/verdict-hero';
+import { ChooseCards, extractChoices } from '@/components/site/compare-cards';
 import '../../article.css';
 
 /** Only pages in this build exist. Anything else is a real 404. */
@@ -91,7 +93,20 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
   const firstToolIndex = parts.findIndex((p) => p.type === 'tool' && isToolLive(p.tool));
   const hasTool = firstToolIndex >= 0;
   const toolHero = fm.page_type === 'tool' ? TOOL_HEROES[page.url] : undefined;
-  const isArticle = !toolHero && !isNavHub;
+  const checkedIso = lastCheckedDate(fm);
+  const isVerdict = fm.page_type === 'does_it_work' && page.url !== '/does-it-work/';
+  const verdict = isVerdict
+    ? verdictData({
+        url: page.url,
+        title: fm.title,
+        grade: fm.evidence_grade ?? null,
+        body: page.body,
+        metaDescription: fm.meta_description,
+        lastChecked: checkedIso,
+      })
+    : null;
+  const choices = fm.page_type === 'comparison' ? extractChoices(page.body) : [];
+  const isArticle = !toolHero && !isNavHub && !verdict;
   const sectionHeadings = rendered.headings.filter((h) => h.depth === 2 && h.id !== 'references');
   // The contents list moves to a sticky sidebar on wide screens, when there's enough to list.
   const showSidebar = isArticle && sectionHeadings.length >= 3;
@@ -102,7 +117,6 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
   // Every medical page except the nav hubs carries the short notice under its H1 and the
   // full "How this page was made" notice at the end. Nav hubs link to /about/ from the hero.
   const fullNotice = page.isMedical && !isNavHub;
-  const checkedIso = lastCheckedDate(fm);
   const reviewerInfo =
     reviewed && reviewer && fm.reviewed_at
       ? { name: displayName(reviewer), credentials: reviewer.credentials ?? '', date: formatCheckedDate(fm.reviewed_at) }
@@ -134,6 +148,7 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
   const body = (
     <>
         {bodyNotice}
+        {choices.length >= 2 && <ChooseCards choices={choices} />}
         <header className="space-y-3">
           {hasTool && !toolHero && (
             <p className="no-print">
@@ -187,10 +202,11 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
           // On articles that opening is shown as the "Short answer" (serif pull-quote).
           const isLead = i === 0;
           const prose = 'prose steps';
+          const leadClass = isVerdict ? `${prose} verdict-body` : isArticle ? `${prose} lead-answer` : prose;
           return (
             <div
               key={`html-${i}`}
-              className={isLead && isArticle ? `${prose} lead-answer` : prose}
+              className={isLead ? leadClass : prose}
               dangerouslySetInnerHTML={{ __html: part.html }}
             />
           );
@@ -199,6 +215,7 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
 
         <ReaderQuotes url={page.url} />
         {page.url.startsWith('/evidence/') && page.url !== UPDATES_URL && <RecentEvidenceUpdates headingLevel={2} />}
+        {verdict?.entry && <BetterEvidenceCards entry={verdict.entry} isLive={(u) => byUrl.has(u)} />}
         <NextSteps />
         {/* A "doctor question sheet" makes sense for a symptom/treatment page, not
             for a legal or about-the-site page ("Get the terms of use doctor question
@@ -300,6 +317,9 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
             guideCount={children.length}
             sections={sectionHeadings}
           />
+        )}
+        {verdict && (
+          <VerdictHero {...verdict} sourceCount={citationIds.length} />
         )}
         {isArticle && (
           <ArticleHero

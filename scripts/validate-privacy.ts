@@ -31,6 +31,7 @@ function walk(dir: string, re: RegExp): string[] {
 const NETWORK = /\b(fetch\s*\(|XMLHttpRequest|sendBeacon|new WebSocket|new EventSource|navigator\.share\s*\()/;
 const ALLOWED: Record<string, string> = {
   'src/components/site/search-box.tsx': "GET /search-index.json (static file; the query is never sent)",
+  'src/components/site/search-engine.ts': "GET /search-index.json (static file; the query is never sent)",
   'src/app/sw.js/route.ts': 'service worker re-fetches same-origin pages and assets; never reads IndexedDB',
   'src/components/site/email-capture.tsx':
     'POST /api/subscribe: the email address the visitor typed, the form type, the consent value, the contact message (contact form only), the empty honeypot field and the time since the form appeared; nothing else',

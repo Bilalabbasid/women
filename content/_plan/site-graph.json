@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T19:10:47.395Z",
+  "generated_at": "2026-11-07T20:25:15.443Z",
   "total_pages": 160,
   "nodes": {
     "/about/how-we-make-money/": {
@@ -172,7 +172,7 @@
         "/treatments/hormone-therapy/is-it-right-for-me/",
         "/tools/treatment-questions/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/care/find-a-menopause-specialist/",
@@ -247,7 +247,7 @@
         "/treatments/hormone-therapy/types/",
         "/tools/treatment-questions/"
       ],
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/care/hrt-cost/",
@@ -653,10 +653,6 @@
           "anchor": "The Menopause Manifesto by Dr Jen Gunter"
         },
         {
-          "url": "/symptoms/weight-gain/",
-          "anchor": "Next Level by Dr Stacy Sims"
-        },
-        {
           "url": "/treatments/",
           "anchor": "The New Menopause by Dr Mary Claire Haver"
         },
@@ -924,20 +920,12 @@
           "anchor": "sleepwear for night sweats"
         },
         {
-          "url": "/symptoms/hot-flashes/",
-          "anchor": "guide to sleepwear for night sweats"
-        },
-        {
           "url": "/symptoms/insomnia/",
           "anchor": "sleepwear"
         },
         {
           "url": "/symptoms/night-sweats/",
-          "anchor": "how to choose sleepwear for night sweats"
-        },
-        {
-          "url": "/symptoms/waking-at-3am/",
-          "anchor": "sleepwear"
+          "anchor": "sleepwear for night sweats"
         },
         {
           "url": "/care/",
@@ -1853,7 +1841,7 @@
         "/privacy/",
         "/evidence/editorial-policy/"
       ],
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/contact/",
@@ -1913,7 +1901,7 @@
         },
         {
           "url": "/medical-disclaimer/",
-          "anchor": "tell us"
+          "anchor": "contact us"
         },
         {
           "url": "/",
@@ -2153,7 +2141,7 @@
         "/symptoms/insomnia/",
         "/tools/does-it-work-checker/"
       ],
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/does-it-work/ashwagandha/",
@@ -2165,13 +2153,13 @@
           "contextual": true
         },
         {
-          "url": "/tools/does-it-work-checker/",
-          "anchor": "does it work? evidence checker",
+          "url": "/treatments/nonhormonal/",
+          "anchor": "non-hormonal prescription options",
           "contextual": true
         },
         {
-          "url": "/treatments/nonhormonal/",
-          "anchor": "non-hormonal prescription options",
+          "url": "/tools/does-it-work-checker/",
+          "anchor": "does it work? evidence checker",
           "contextual": true
         },
         {
@@ -2225,7 +2213,7 @@
         "/treatments/nonhormonal/",
         "/tools/does-it-work-checker/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/does-it-work/black-cohosh/",
@@ -2253,17 +2241,17 @@
         },
         {
           "url": "/treatments/nonhormonal/",
-          "anchor": "Non-hormonal prescription and behavioral treatments for hot flashes",
+          "anchor": "non-hormonal prescription and behavioral treatments for hot flashes",
           "contextual": true
         },
         {
           "url": "/treatments/nonhormonal/fezolinetant/",
-          "anchor": "Veozah",
+          "anchor": "Veozah (fezolinetant)",
           "contextual": true
         },
         {
           "url": "/treatments/nonhormonal/elinzanetant/",
-          "anchor": "Lynkuet",
+          "anchor": "Lynkuet (elinzanetant)",
           "contextual": true
         },
         {
@@ -2550,10 +2538,6 @@
           "anchor": "Does collagen help menopause skin and joints?"
         },
         {
-          "url": "/does-it-work/probiotics/",
-          "anchor": "collagen"
-        },
-        {
           "url": "/does-it-work/",
           "anchor": "Does collagen work for menopause skin and joints?"
         }
@@ -2562,7 +2546,7 @@
     },
     "/does-it-work/cooling-products/": {
       "url": "/does-it-work/cooling-products/",
-      "title": "Cooling Your Bed: Fans, Sheets, and Climate Systems Compared",
+      "title": "Cooling your bed: fans, sheets, and climate systems compared",
       "status": "published",
       "primary_keyword": "cooling products for hot flashes",
       "intent": "informational",
@@ -2590,25 +2574,20 @@
         "/does-it-work/",
         "/tools/symptom-tracker/"
       ],
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/does-it-work/cooling-products/",
       "redirect_from": [],
       "outgoing_links": [
         {
-          "url": "/does-it-work/",
-          "anchor": "Does It Work directory",
+          "url": "/care/sleepwear-for-night-sweats/",
+          "anchor": "how to choose sleepwear for night sweats",
           "contextual": true
         },
         {
           "url": "/symptoms/night-sweats/",
           "anchor": "night sweats in perimenopause and menopause",
-          "contextual": true
-        },
-        {
-          "url": "/care/sleepwear-for-night-sweats/",
-          "anchor": "how to choose sleepwear for night sweats",
           "contextual": true
         },
         {
@@ -2640,12 +2619,8 @@
           "anchor": "cooling products"
         },
         {
-          "url": "/symptoms/night-sweats/",
-          "anchor": "cooling products and bed climate systems"
-        },
-        {
           "url": "/does-it-work/",
-          "anchor": "Cooling Your Bed: Fans, Sheets, and Climate Systems Compared"
+          "anchor": "Cooling your bed: fans, sheets, and climate systems compared"
         }
       ],
       "click_depth": 2
@@ -3108,7 +3083,7 @@
         },
         {
           "url": "/menopause/",
-          "anchor": "evidence-graded lifestyle strategies"
+          "anchor": "exercise"
         },
         {
           "url": "/perimenopause/year-by-year/",
@@ -3174,7 +3149,7 @@
         "/does-it-work/soy-isoflavones/",
         "/tools/does-it-work-checker/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/does-it-work/hormone-balance-supplements/",
@@ -3337,7 +3312,7 @@
         "/does-it-work/equelle/",
         "/tools/symptoms-checklist/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/does-it-work/",
@@ -3455,7 +3430,7 @@
         },
         {
           "url": "/does-it-work/probiotics/",
-          "anchor": "Does probiotics help menopause bone health?",
+          "anchor": "Do probiotics help bone health after menopause?",
           "contextual": true
         },
         {
@@ -3481,6 +3456,11 @@
         {
           "url": "/tools/symptoms-checklist/",
           "anchor": "printable symptoms checklist",
+          "contextual": true
+        },
+        {
+          "url": "/evidence/how-we-grade/",
+          "anchor": "how we grade evidence",
           "contextual": true
         },
         {
@@ -3520,7 +3500,7 @@
         },
         {
           "url": "/does-it-work/cooling-products/",
-          "anchor": "Cooling Your Bed: Fans, Sheets, and Climate Systems Compared",
+          "anchor": "Cooling your bed: fans, sheets, and climate systems compared",
           "contextual": true
         },
         {
@@ -3619,20 +3599,12 @@
           "anchor": "does it work? directory"
         },
         {
-          "url": "/does-it-work/cooling-products/",
-          "anchor": "Does It Work directory"
-        },
-        {
           "url": "/does-it-work/equelle/",
           "anchor": "does it work? directory"
         },
         {
           "url": "/does-it-work/exercise/",
           "anchor": "Does It Work evidence directory"
-        },
-        {
-          "url": "/does-it-work/magnesium/",
-          "anchor": "Does It Work? evidence directory"
         },
         {
           "url": "/does-it-work/probiotics/",
@@ -3745,6 +3717,10 @@
         {
           "url": "/symptoms/heart-palpitations/",
           "anchor": "menopause supplements"
+        },
+        {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "does it work?"
         },
         {
           "url": "/symptoms/irritability/",
@@ -4000,7 +3976,7 @@
         "/symptoms/hot-flashes/",
         "/tools/does-it-work-checker/"
       ],
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/does-it-work/maca/",
@@ -4013,7 +3989,7 @@
         },
         {
           "url": "/treatments/nonhormonal/",
-          "anchor": "non-hormonal prescription options",
+          "anchor": "non-hormonal prescription options for hot flashes",
           "contextual": true
         },
         {
@@ -4066,24 +4042,25 @@
       ],
       "related": [
         "/does-it-work/",
+        "/symptoms/insomnia/",
         "/symptoms/night-sweats/",
         "/symptoms/hot-flashes/",
         "/treatments/"
       ],
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/does-it-work/magnesium/",
       "redirect_from": [],
       "outgoing_links": [
         {
-          "url": "/does-it-work/",
-          "anchor": "Does It Work? evidence directory",
+          "url": "/symptoms/night-sweats/",
+          "anchor": "night sweats",
           "contextual": true
         },
         {
-          "url": "/symptoms/night-sweats/",
-          "anchor": "night sweats and waking at 3 a.m.",
+          "url": "/symptoms/insomnia/",
+          "anchor": "insomnia",
           "contextual": true
         },
         {
@@ -4093,7 +4070,7 @@
         },
         {
           "url": "/tools/symptom-tracker/",
-          "anchor": "Symptom tracker",
+          "anchor": "symptom tracker",
           "contextual": true
         },
         {
@@ -4108,20 +4085,12 @@
           "anchor": "Does magnesium help menopause symptoms?"
         },
         {
-          "url": "/perimenopause/early-signs/",
-          "anchor": "magnesium for sleep and muscle tension"
-        },
-        {
           "url": "/perimenopause/",
           "anchor": "Does magnesium help menopause symptoms?"
         },
         {
           "url": "/perimenopause/questions-for-your-doctor/",
           "anchor": "magnesium for sleep"
-        },
-        {
-          "url": "/symptoms/hot-flashes/",
-          "anchor": "magnesium for relaxation"
         },
         {
           "url": "/symptoms/",
@@ -4175,7 +4144,7 @@
         "/symptoms/insomnia/",
         "/tools/does-it-work-checker/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/does-it-work/omega-3/",
@@ -4248,7 +4217,7 @@
         "/treatments/nonhormonal/",
         "/tools/does-it-work-checker/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/does-it-work/paced-breathing/",
@@ -4334,7 +4303,7 @@
         "/postmenopause/bone-health/",
         "/tools/does-it-work-checker/"
       ],
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/does-it-work/probiotics/",
@@ -4347,12 +4316,7 @@
         },
         {
           "url": "/postmenopause/bone-health/",
-          "anchor": "bone health",
-          "contextual": true
-        },
-        {
-          "url": "/does-it-work/collagen/",
-          "anchor": "collagen",
+          "anchor": "bone health after menopause",
           "contextual": true
         },
         {
@@ -4373,7 +4337,7 @@
         },
         {
           "url": "/does-it-work/",
-          "anchor": "Does probiotics help menopause bone health?"
+          "anchor": "Do probiotics help bone health after menopause?"
         },
         {
           "url": "/symptoms/bloating/",
@@ -4420,7 +4384,7 @@
         "/groups/breast-cancer-survivors/",
         "/tools/does-it-work-checker/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/does-it-work/red-clover/",
@@ -4508,7 +4472,7 @@
         "/treatments/nonhormonal/",
         "/tools/does-it-work-checker/"
       ],
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/does-it-work/relizen/",
@@ -4525,13 +4489,13 @@
           "contextual": true
         },
         {
-          "url": "/tools/does-it-work-checker/",
-          "anchor": "does it work? evidence checker",
+          "url": "/treatments/nonhormonal/",
+          "anchor": "non-hormonal prescription and behavioral treatments",
           "contextual": true
         },
         {
-          "url": "/treatments/nonhormonal/",
-          "anchor": "non-hormonal prescription and behavioral treatments",
+          "url": "/tools/does-it-work-checker/",
+          "anchor": "does it work? evidence checker",
           "contextual": true
         },
         {
@@ -4868,7 +4832,7 @@
         "/evidence/updates/",
         "/about/how-we-make-money/"
       ],
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/evidence/editorial-policy/",
@@ -5019,6 +4983,10 @@
         },
         {
           "url": "/does-it-work/dong-quai/",
+          "anchor": "how we grade evidence"
+        },
+        {
+          "url": "/does-it-work/",
           "anchor": "how we grade evidence"
         },
         {
@@ -5502,7 +5470,7 @@
         "/symptoms/vaginal-dryness/",
         "/tools/treatment-questions/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/groups/breast-cancer-survivors/",
@@ -5536,6 +5504,11 @@
         {
           "url": "/does-it-work/",
           "anchor": "menopause supplements",
+          "contextual": true
+        },
+        {
+          "url": "/postmenopause/bleeding/",
+          "anchor": "bleeding after menopause",
           "contextual": true
         },
         {
@@ -5771,6 +5744,10 @@
           "anchor": "early menopause"
         },
         {
+          "url": "/perimenopause/vs-menopause/",
+          "anchor": "early menopause"
+        },
+        {
           "url": "/groups/",
           "anchor": "Early menopause"
         }
@@ -5925,6 +5902,10 @@
         {
           "url": "/groups/",
           "anchor": "Hysterectomy with ovaries retained"
+        },
+        {
+          "url": "/perimenopause/vs-menopause/",
+          "anchor": "hysterectomy with ovaries retained"
         },
         {
           "url": "/groups/",
@@ -6292,11 +6273,19 @@
           "anchor": "premature ovarian insufficiency (POI)"
         },
         {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "premature ovarian insufficiency"
+        },
+        {
           "url": "/perimenopause/in-your-30s/",
           "anchor": "premature ovarian insufficiency"
         },
         {
           "url": "/perimenopause/stages/",
+          "anchor": "premature ovarian insufficiency"
+        },
+        {
+          "url": "/perimenopause/vs-menopause/",
           "anchor": "premature ovarian insufficiency"
         },
         {
@@ -6454,7 +6443,7 @@
         "/privacy/",
         "/terms/"
       ],
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/medical-disclaimer/",
@@ -6477,7 +6466,7 @@
         },
         {
           "url": "/contact/",
-          "anchor": "tell us",
+          "anchor": "contact us",
           "contextual": true
         },
         {
@@ -6528,7 +6517,7 @@
         "/groups/premature-ovarian-insufficiency/",
         "/tools/stage-guide/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/menopause/age/",
@@ -6608,7 +6597,7 @@
         "/tools/12-month-counter/",
         "/tools/stage-guide/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/menopause/diagnosis/",
@@ -6702,7 +6691,7 @@
         "/symptoms/vaginal-dryness/",
         "/tools/symptom-tracker/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/menopause/how-long-symptoms-last/",
@@ -6764,6 +6753,11 @@
           "contextual": true
         },
         {
+          "url": "/postmenopause/bleeding/",
+          "anchor": "bleeding after menopause",
+          "contextual": false
+        },
+        {
           "url": "/menopause/",
           "anchor": "breadcrumb",
           "contextual": true
@@ -6776,6 +6770,10 @@
         },
         {
           "url": "/perimenopause/how-long/",
+          "anchor": "how long menopause symptoms last"
+        },
+        {
+          "url": "/perimenopause/vs-menopause/",
           "anchor": "how long menopause symptoms last"
         },
         {
@@ -6871,7 +6869,7 @@
         },
         {
           "url": "/symptoms/vaginal-dryness/",
-          "anchor": "Vaginal dryness",
+          "anchor": "vaginal dryness",
           "contextual": true
         },
         {
@@ -6880,13 +6878,18 @@
           "contextual": true
         },
         {
-          "url": "/symptoms/incontinence/",
-          "anchor": "incontinence",
+          "url": "/symptoms/depression/",
+          "anchor": "depression",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/joint-pain/",
+          "anchor": "joint and muscle pain",
           "contextual": true
         },
         {
           "url": "/symptoms/insomnia/",
-          "anchor": "Insomnia",
+          "anchor": "insomnia",
           "contextual": true
         },
         {
@@ -6900,13 +6903,13 @@
           "contextual": true
         },
         {
-          "url": "/symptoms/joint-pain/",
-          "anchor": "Joint and muscle pain",
+          "url": "/symptoms/incontinence/",
+          "anchor": "bladder leaks",
           "contextual": true
         },
         {
           "url": "/postmenopause/bone-health/",
-          "anchor": "bone mineral density loss",
+          "anchor": "bone health after menopause",
           "contextual": true
         },
         {
@@ -6921,22 +6924,22 @@
         },
         {
           "url": "/does-it-work/exercise/",
-          "anchor": "evidence-graded lifestyle strategies",
+          "anchor": "exercise",
+          "contextual": true
+        },
+        {
+          "url": "/postmenopause/health-checklist/",
+          "anchor": "long-term health checklist",
+          "contextual": true
+        },
+        {
+          "url": "/postmenopause/life-after-menopause/",
+          "anchor": "life after menopause",
           "contextual": true
         },
         {
           "url": "/postmenopause/bleeding/",
           "anchor": "bleeding after menopause",
-          "contextual": false
-        },
-        {
-          "url": "/postmenopause/health-checklist/",
-          "anchor": "long-term health checklist",
-          "contextual": false
-        },
-        {
-          "url": "/postmenopause/life-after-menopause/",
-          "anchor": "life after menopause",
           "contextual": false
         },
         {
@@ -6986,10 +6989,6 @@
         },
         {
           "url": "/postmenopause/heart-health/",
-          "anchor": "menopause"
-        },
-        {
-          "url": "/symptoms/acne/",
           "anchor": "menopause"
         },
         {
@@ -7230,6 +7229,10 @@
           "anchor": "Is there a blood test for perimenopause?"
         },
         {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "blood tests for perimenopause"
+        },
+        {
           "url": "/perimenopause/in-your-30s/",
           "anchor": "blood tests for perimenopause"
         },
@@ -7240,6 +7243,10 @@
         {
           "url": "/perimenopause/irregular-periods/",
           "anchor": "is there a blood test for perimenopause?"
+        },
+        {
+          "url": "/perimenopause/vs-menopause/",
+          "anchor": "blood tests for perimenopause"
         },
         {
           "url": "/tools/symptoms-checklist/",
@@ -7322,6 +7329,10 @@
           "anchor": "contraception in perimenopause"
         },
         {
+          "url": "/treatments/nonhormonal/elinzanetant/",
+          "anchor": "birth control in perimenopause"
+        },
+        {
           "url": "/perimenopause/",
           "anchor": "Contraception in perimenopause"
         }
@@ -7359,7 +7370,7 @@
         "/symptoms/",
         "/tools/symptoms-checklist/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/perimenopause/early-signs/",
@@ -7371,23 +7382,88 @@
           "contextual": true
         },
         {
-          "url": "/does-it-work/magnesium/",
-          "anchor": "magnesium for sleep and muscle tension",
+          "url": "/perimenopause/stages/",
+          "anchor": "the stages of perimenopause",
+          "contextual": true
+        },
+        {
+          "url": "/perimenopause/irregular-periods/",
+          "anchor": "irregular periods",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "hot flashes",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/waking-at-3am/",
+          "anchor": "waking at 3 a.m.",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/insomnia/",
+          "anchor": "insomnia",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/irritability/",
+          "anchor": "irritability",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/brain-fog/",
+          "anchor": "brain fog",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/joint-pain/",
+          "anchor": "joint and muscle pain",
+          "contextual": true
+        },
+        {
+          "url": "/groups/premature-ovarian-insufficiency/",
+          "anchor": "premature ovarian insufficiency",
+          "contextual": true
+        },
+        {
+          "url": "/perimenopause/blood-tests/",
+          "anchor": "blood tests for perimenopause",
+          "contextual": true
+        },
+        {
+          "url": "/perimenopause/pregnancy/",
+          "anchor": "pregnancy in perimenopause",
+          "contextual": true
+        },
+        {
+          "url": "/postmenopause/bleeding/",
+          "anchor": "bleeding after menopause",
+          "contextual": false
+        },
+        {
+          "url": "/perimenopause/heavy-periods/",
+          "anchor": "heavy periods in perimenopause",
+          "contextual": true
+        },
+        {
+          "url": "/perimenopause/when-to-see-a-doctor/",
+          "anchor": "when to see a doctor about perimenopause",
           "contextual": true
         },
         {
           "url": "/tools/symptoms-checklist/",
-          "anchor": "Perimenopause symptoms checklist",
+          "anchor": "perimenopause symptoms checklist",
           "contextual": true
         },
         {
           "url": "/tools/symptom-tracker/",
-          "anchor": "Symptom tracker and doctor report",
+          "anchor": "symptom tracker and doctor report",
           "contextual": true
         },
         {
           "url": "/perimenopause/questions-for-your-doctor/",
-          "anchor": "What to ask your doctor about perimenopause",
+          "anchor": "what to ask your doctor about perimenopause",
           "contextual": true
         },
         {
@@ -7487,7 +7563,15 @@
           "anchor": "heavy periods"
         },
         {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "heavy periods in perimenopause"
+        },
+        {
           "url": "/perimenopause/irregular-periods/",
+          "anchor": "heavy periods in perimenopause"
+        },
+        {
+          "url": "/perimenopause/vs-menopause/",
           "anchor": "heavy periods in perimenopause"
         },
         {
@@ -8159,6 +8243,10 @@
           "anchor": "irregular"
         },
         {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "irregular periods"
+        },
+        {
           "url": "/perimenopause/heavy-periods/",
           "anchor": "irregular cycles"
         },
@@ -8260,6 +8348,10 @@
           "anchor": "pregnancy remains possible during perimenopause"
         },
         {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "pregnancy in perimenopause"
+        },
+        {
           "url": "/perimenopause/",
           "anchor": "pregnancy remains possible"
         },
@@ -8356,7 +8448,7 @@
         },
         {
           "url": "/perimenopause/early-signs/",
-          "anchor": "What to ask your doctor about perimenopause"
+          "anchor": "what to ask your doctor about perimenopause"
         },
         {
           "url": "/perimenopause/",
@@ -8452,6 +8544,10 @@
           "anchor": "stages of perimenopause"
         },
         {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "the stages of perimenopause"
+        },
+        {
           "url": "/perimenopause/how-long/",
           "anchor": "stages of perimenopause"
         },
@@ -8504,7 +8600,7 @@
         "/tools/stage-guide/",
         "/tools/12-month-counter/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/perimenopause/vs-menopause/",
@@ -8526,6 +8622,31 @@
           "contextual": true
         },
         {
+          "url": "/perimenopause/blood-tests/",
+          "anchor": "blood tests for perimenopause",
+          "contextual": true
+        },
+        {
+          "url": "/groups/early-menopause/",
+          "anchor": "early menopause",
+          "contextual": true
+        },
+        {
+          "url": "/groups/premature-ovarian-insufficiency/",
+          "anchor": "premature ovarian insufficiency",
+          "contextual": true
+        },
+        {
+          "url": "/groups/hysterectomy-ovaries-retained/",
+          "anchor": "hysterectomy with ovaries retained",
+          "contextual": true
+        },
+        {
+          "url": "/menopause/how-long-symptoms-last/",
+          "anchor": "how long menopause symptoms last",
+          "contextual": true
+        },
+        {
           "url": "/tools/stage-guide/",
           "anchor": "STRAW+10 perimenopause stage guide",
           "contextual": true
@@ -8538,6 +8659,16 @@
         {
           "url": "/does-it-work/",
           "anchor": "Does It Work? evidence directory",
+          "contextual": true
+        },
+        {
+          "url": "/perimenopause/heavy-periods/",
+          "anchor": "heavy periods in perimenopause",
+          "contextual": true
+        },
+        {
+          "url": "/perimenopause/when-to-see-a-doctor/",
+          "anchor": "when to see a doctor in perimenopause",
           "contextual": true
         },
         {
@@ -8656,6 +8787,14 @@
       ],
       "incoming_links": [
         {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "when to see a doctor about perimenopause"
+        },
+        {
+          "url": "/perimenopause/vs-menopause/",
+          "anchor": "when to see a doctor in perimenopause"
+        },
+        {
           "url": "/tools/symptoms-checklist/",
           "anchor": "when to see a doctor"
         },
@@ -8770,7 +8909,7 @@
         "/tools/symptom-tracker/",
         "/symptoms/vaginal-dryness/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/postmenopause/bleeding/",
@@ -8793,7 +8932,7 @@
         },
         {
           "url": "/symptoms/vaginal-dryness/",
-          "anchor": "vaginal dryness and atrophy",
+          "anchor": "vaginal dryness",
           "contextual": true
         },
         {
@@ -8814,11 +8953,23 @@
       ],
       "incoming_links": [
         {
+          "url": "/groups/breast-cancer-survivors/",
+          "anchor": "bleeding after menopause"
+        },
+        {
           "url": "/menopause/diagnosis/",
           "anchor": "bleeding after menopause"
         },
         {
+          "url": "/menopause/how-long-symptoms-last/",
+          "anchor": "bleeding after menopause"
+        },
+        {
           "url": "/menopause/",
+          "anchor": "bleeding after menopause"
+        },
+        {
+          "url": "/perimenopause/early-signs/",
           "anchor": "bleeding after menopause"
         },
         {
@@ -8847,7 +8998,7 @@
         },
         {
           "url": "/treatments/hormone-therapy/",
-          "anchor": "vaginal bleeding"
+          "anchor": "bleeding after menopause"
         },
         {
           "url": "/treatments/hormone-therapy/side-effects/",
@@ -8940,7 +9091,7 @@
         },
         {
           "url": "/does-it-work/probiotics/",
-          "anchor": "bone health"
+          "anchor": "bone health after menopause"
         },
         {
           "url": "/does-it-work/vitamin-d/",
@@ -8964,7 +9115,7 @@
         },
         {
           "url": "/menopause/",
-          "anchor": "bone mineral density loss"
+          "anchor": "bone health after menopause"
         },
         {
           "url": "/postmenopause/health-checklist/",
@@ -8984,7 +9135,7 @@
         },
         {
           "url": "/treatments/hormone-therapy/",
-          "anchor": "bone loss"
+          "anchor": "bone health"
         },
         {
           "url": "/postmenopause/",
@@ -9678,17 +9829,12 @@
         "/symptoms/dry-itchy-skin/",
         "/tools/symptom-tracker/"
       ],
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/acne/",
       "redirect_from": [],
       "outgoing_links": [
-        {
-          "url": "/menopause/",
-          "anchor": "menopause",
-          "contextual": true
-        },
         {
           "url": "/symptoms/facial-hair/",
           "anchor": "new facial hair",
@@ -9750,17 +9896,12 @@
         "/symptoms/heart-palpitations/",
         "/tools/symptom-tracker/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/anxiety/",
       "redirect_from": [],
       "outgoing_links": [
-        {
-          "url": "/perimenopause/",
-          "anchor": "perimenopause",
-          "contextual": true
-        },
         {
           "url": "/symptoms/insomnia/",
           "anchor": "insomnia",
@@ -9772,18 +9913,23 @@
           "contextual": true
         },
         {
+          "url": "/perimenopause/",
+          "anchor": "perimenopause",
+          "contextual": true
+        },
+        {
           "url": "/symptoms/heart-palpitations/",
           "anchor": "heart palpitations",
           "contextual": true
         },
         {
-          "url": "/treatments/hormone-therapy/",
-          "anchor": "hormone therapy",
+          "url": "/treatments/nonhormonal/ssris-snris/",
+          "anchor": "SSRIs and SNRIs",
           "contextual": true
         },
         {
           "url": "/treatments/nonhormonal/",
-          "anchor": "Level I non-hormonal options",
+          "anchor": "non-hormonal options",
           "contextual": true
         },
         {
@@ -9941,6 +10087,10 @@
         {
           "url": "/symptoms/",
           "anchor": "Bladder urgency"
+        },
+        {
+          "url": "/symptoms/waking-at-3am/",
+          "anchor": "bladder urgency"
         },
         {
           "url": "/treatments/nonhormonal/oxybutynin/",
@@ -10212,6 +10362,10 @@
           "anchor": "brain fog"
         },
         {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "brain fog"
+        },
+        {
           "url": "/symptoms/",
           "anchor": "Menopause brain fog"
         },
@@ -10451,6 +10605,10 @@
       ],
       "incoming_links": [
         {
+          "url": "/menopause/",
+          "anchor": "depression"
+        },
+        {
           "url": "/perimenopause/year-by-year/",
           "anchor": "low mood and depression"
         },
@@ -10461,6 +10619,10 @@
         {
           "url": "/symptoms/",
           "anchor": "Low mood and depression"
+        },
+        {
+          "url": "/symptoms/waking-at-3am/",
+          "anchor": "menopause depression"
         },
         {
           "url": "/symptoms/",
@@ -11019,6 +11181,10 @@
           "anchor": "Frozen shoulder"
         },
         {
+          "url": "/symptoms/joint-pain/",
+          "anchor": "frozen shoulder"
+        },
+        {
           "url": "/symptoms/",
           "anchor": "Frozen shoulder and menopause"
         }
@@ -11127,7 +11293,7 @@
         "/tools/symptom-tracker/",
         "/does-it-work/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/headaches/",
@@ -11228,7 +11394,7 @@
         "/symptoms/anxiety/",
         "/tools/symptom-tracker/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/heart-palpitations/",
@@ -11342,7 +11508,7 @@
         "/tools/symptoms-checklist/",
         "/tools/symptom-tracker/"
       ],
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/hot-flashes/",
@@ -11354,13 +11520,38 @@
           "contextual": true
         },
         {
-          "url": "/does-it-work/magnesium/",
-          "anchor": "magnesium for relaxation",
+          "url": "/treatments/hormone-therapy/is-it-right-for-me/",
+          "anchor": "is hormone therapy right for me?",
           "contextual": true
         },
         {
-          "url": "/care/sleepwear-for-night-sweats/",
-          "anchor": "guide to sleepwear for night sweats",
+          "url": "/treatments/nonhormonal/fezolinetant/",
+          "anchor": "Fezolinetant (Veozah)",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/nonhormonal/elinzanetant/",
+          "anchor": "Elinzanetant (Lynkuet)",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/nonhormonal/ssris-snris/",
+          "anchor": "SSRIs and SNRIs",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/nonhormonal/gabapentin/",
+          "anchor": "gabapentin",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/nonhormonal/cbt-and-hypnosis/",
+          "anchor": "CBT and hypnosis",
+          "contextual": true
+        },
+        {
+          "url": "/does-it-work/",
+          "anchor": "does it work?",
           "contextual": true
         },
         {
@@ -11369,13 +11560,13 @@
           "contextual": true
         },
         {
-          "url": "/tools/symptoms-checklist/",
-          "anchor": "Perimenopause symptoms checklist",
+          "url": "/tools/symptom-tracker/",
+          "anchor": "symptom tracker and doctor report",
           "contextual": true
         },
         {
-          "url": "/tools/symptom-tracker/",
-          "anchor": "Symptom tracker and doctor report",
+          "url": "/tools/symptoms-checklist/",
+          "anchor": "perimenopause symptoms checklist",
           "contextual": true
         },
         {
@@ -11468,6 +11659,10 @@
         {
           "url": "/menopause/",
           "anchor": "Hot flashes"
+        },
+        {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "hot flashes"
         },
         {
           "url": "/perimenopause/how-long/",
@@ -11598,7 +11793,7 @@
     },
     "/symptoms/incontinence/": {
       "url": "/symptoms/incontinence/",
-      "title": "Bladder Leaks in Menopause: Causes, Types, and What Actually Helps",
+      "title": "Bladder leaks in menopause: causes, types, and what actually helps",
       "status": "published",
       "primary_keyword": "menopause incontinence",
       "intent": "informational",
@@ -11625,17 +11820,12 @@
         "/symptoms/vaginal-dryness/",
         "/tools/symptoms-checklist/"
       ],
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/incontinence/",
       "redirect_from": [],
       "outgoing_links": [
-        {
-          "url": "/symptoms/",
-          "anchor": "menopause symptoms overview",
-          "contextual": true
-        },
         {
           "url": "/tools/symptoms-checklist/",
           "anchor": "menopause symptoms checklist",
@@ -11659,7 +11849,7 @@
         },
         {
           "url": "/menopause/",
-          "anchor": "incontinence"
+          "anchor": "bladder leaks"
         },
         {
           "url": "/symptoms/bladder-urgency/",
@@ -11679,7 +11869,7 @@
         },
         {
           "url": "/symptoms/",
-          "anchor": "Bladder Leaks in Menopause: Causes, Types, and What Actually Helps"
+          "anchor": "Bladder leaks in menopause: causes, types, and what actually helps"
         }
       ],
       "click_depth": 2
@@ -11754,7 +11944,7 @@
         "/care/menopause-books/",
         "/tools/symptoms-checklist/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/",
@@ -11767,7 +11957,7 @@
         },
         {
           "url": "/symptoms/night-sweats/",
-          "anchor": "Night sweats and nocturnal awakenings",
+          "anchor": "Night sweats and waking at night",
           "contextual": true
         },
         {
@@ -12082,7 +12272,7 @@
         },
         {
           "url": "/symptoms/incontinence/",
-          "anchor": "Bladder Leaks in Menopause: Causes, Types, and What Actually Helps",
+          "anchor": "Bladder leaks in menopause: causes, types, and what actually helps",
           "contextual": true
         },
         {
@@ -12117,7 +12307,7 @@
         },
         {
           "url": "/symptoms/night-sweats/",
-          "anchor": "Night Sweats: How to Sleep Cooler Tonight",
+          "anchor": "Night sweats: how to sleep cooler tonight",
           "contextual": true
         },
         {
@@ -12169,14 +12359,6 @@
         {
           "url": "/symptoms/hot-flashes/",
           "anchor": "symptoms list"
-        },
-        {
-          "url": "/symptoms/incontinence/",
-          "anchor": "menopause symptoms overview"
-        },
-        {
-          "url": "/symptoms/night-sweats/",
-          "anchor": "menopause symptoms directory"
         },
         {
           "url": "/symptoms/painful-sex/",
@@ -12374,7 +12556,7 @@
         "/care/sleepwear-for-night-sweats/",
         "/does-it-work/magnesium/"
       ],
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/insomnia/",
@@ -12431,6 +12613,11 @@
           "contextual": true
         },
         {
+          "url": "/treatments/hormone-therapy/",
+          "anchor": "hormone or non-hormonal treatment",
+          "contextual": true
+        },
+        {
           "url": "/tools/symptom-tracker/",
           "anchor": "private symptom tracker and doctor report",
           "contextual": true
@@ -12447,6 +12634,10 @@
           "anchor": "insomnia"
         },
         {
+          "url": "/does-it-work/magnesium/",
+          "anchor": "insomnia"
+        },
+        {
           "url": "/does-it-work/omega-3/",
           "anchor": "insomnia"
         },
@@ -12456,7 +12647,11 @@
         },
         {
           "url": "/menopause/",
-          "anchor": "Insomnia"
+          "anchor": "insomnia"
+        },
+        {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "insomnia"
         },
         {
           "url": "/symptoms/anxiety/",
@@ -12484,14 +12679,6 @@
         },
         {
           "url": "/symptoms/waking-at-3am/",
-          "anchor": "insomnia"
-        },
-        {
-          "url": "/symptoms/weight-gain/",
-          "anchor": "insomnia"
-        },
-        {
-          "url": "/symptoms/weight-gain/",
           "anchor": "insomnia"
         },
         {
@@ -12594,6 +12781,10 @@
       ],
       "incoming_links": [
         {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "irritability"
+        },
+        {
           "url": "/symptoms/depression/",
           "anchor": "irritability"
         },
@@ -12637,7 +12828,7 @@
         "/postmenopause/bone-health/",
         "/tools/symptoms-checklist/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/joint-pain/",
@@ -12654,6 +12845,11 @@
           "contextual": true
         },
         {
+          "url": "/symptoms/frozen-shoulder/",
+          "anchor": "frozen shoulder",
+          "contextual": true
+        },
+        {
           "url": "/does-it-work/exercise/",
           "anchor": "Does exercise help menopause symptoms?",
           "contextual": true
@@ -12665,7 +12861,7 @@
         },
         {
           "url": "/treatments/hormone-therapy/",
-          "anchor": "Menopausal hormone therapy (HRT)",
+          "anchor": "Hormone therapy (HRT)",
           "contextual": true
         },
         {
@@ -12691,7 +12887,11 @@
         },
         {
           "url": "/menopause/",
-          "anchor": "Joint and muscle pain"
+          "anchor": "joint and muscle pain"
+        },
+        {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "joint and muscle pain"
         },
         {
           "url": "/symptoms/frozen-shoulder/",
@@ -12987,7 +13187,7 @@
     },
     "/symptoms/night-sweats/": {
       "url": "/symptoms/night-sweats/",
-      "title": "Night Sweats: How to Sleep Cooler Tonight",
+      "title": "Night sweats: how to sleep cooler tonight",
       "status": "published",
       "primary_keyword": "menopause night sweats",
       "intent": "informational",
@@ -13016,17 +13216,12 @@
         "/does-it-work/cooling-products/",
         "/tools/symptom-tracker/"
       ],
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/night-sweats/",
       "redirect_from": [],
       "outgoing_links": [
-        {
-          "url": "/symptoms/",
-          "anchor": "menopause symptoms directory",
-          "contextual": true
-        },
         {
           "url": "/tools/symptom-tracker/",
           "anchor": "symptom tracker and doctor summary",
@@ -13034,12 +13229,27 @@
         },
         {
           "url": "/care/sleepwear-for-night-sweats/",
-          "anchor": "how to choose sleepwear for night sweats",
+          "anchor": "sleepwear for night sweats",
           "contextual": true
         },
         {
-          "url": "/does-it-work/cooling-products/",
-          "anchor": "cooling products and bed climate systems",
+          "url": "/treatments/hormone-therapy/patch-vs-pill/",
+          "anchor": "hormone therapy: patch vs pill",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/nonhormonal/ssris-snris/",
+          "anchor": "SSRIs and SNRIs",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/nonhormonal/gabapentin/",
+          "anchor": "gabapentin",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/nonhormonal/cbt-and-hypnosis/",
+          "anchor": "CBT and hypnosis",
           "contextual": true
         },
         {
@@ -13071,7 +13281,7 @@
         },
         {
           "url": "/does-it-work/magnesium/",
-          "anchor": "night sweats and waking at 3 a.m."
+          "anchor": "night sweats"
         },
         {
           "url": "/groups/breast-cancer-survivors/",
@@ -13127,7 +13337,7 @@
         },
         {
           "url": "/symptoms/",
-          "anchor": "Night sweats and nocturnal awakenings"
+          "anchor": "Night sweats and waking at night"
         },
         {
           "url": "/symptoms/insomnia/",
@@ -13148,10 +13358,6 @@
         {
           "url": "/symptoms/waking-at-3am/",
           "anchor": "night sweat"
-        },
-        {
-          "url": "/symptoms/weight-gain/",
-          "anchor": "night sweats"
         },
         {
           "url": "/treatments/hormone-therapy/estrogen/",
@@ -13195,7 +13401,7 @@
         },
         {
           "url": "/symptoms/",
-          "anchor": "Night Sweats: How to Sleep Cooler Tonight"
+          "anchor": "Night sweats: how to sleep cooler tonight"
         }
       ],
       "click_depth": 2
@@ -13750,11 +13956,11 @@
         },
         {
           "url": "/menopause/",
-          "anchor": "Vaginal dryness"
+          "anchor": "vaginal dryness"
         },
         {
           "url": "/postmenopause/bleeding/",
-          "anchor": "vaginal dryness and atrophy"
+          "anchor": "vaginal dryness"
         },
         {
           "url": "/postmenopause/",
@@ -13846,20 +14052,20 @@
         "/care/sleepwear-for-night-sweats/",
         "/tools/symptom-tracker/"
       ],
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/waking-at-3am/",
       "redirect_from": [],
       "outgoing_links": [
         {
-          "url": "/perimenopause/",
-          "anchor": "perimenopause",
+          "url": "/symptoms/insomnia/",
+          "anchor": "insomnia",
           "contextual": true
         },
         {
-          "url": "/symptoms/insomnia/",
-          "anchor": "insomnia",
+          "url": "/perimenopause/",
+          "anchor": "perimenopause",
           "contextual": true
         },
         {
@@ -13868,8 +14074,18 @@
           "contextual": true
         },
         {
+          "url": "/symptoms/depression/",
+          "anchor": "menopause depression",
+          "contextual": true
+        },
+        {
           "url": "/symptoms/anxiety/",
           "anchor": "menopause anxiety",
+          "contextual": true
+        },
+        {
+          "url": "/symptoms/bladder-urgency/",
+          "anchor": "bladder urgency",
           "contextual": true
         },
         {
@@ -13880,11 +14096,6 @@
         {
           "url": "/treatments/nonhormonal/",
           "anchor": "Non-hormonal prescription options",
-          "contextual": true
-        },
-        {
-          "url": "/care/sleepwear-for-night-sweats/",
-          "anchor": "sleepwear",
           "contextual": true
         },
         {
@@ -13904,6 +14115,10 @@
         }
       ],
       "incoming_links": [
+        {
+          "url": "/perimenopause/early-signs/",
+          "anchor": "waking at 3 a.m."
+        },
         {
           "url": "/symptoms/",
           "anchor": "Waking at 3 a.m."
@@ -13944,7 +14159,7 @@
         "/care/menopause-books/",
         "/tools/symptom-tracker/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/symptoms/weight-gain/",
@@ -13961,33 +14176,18 @@
           "contextual": true
         },
         {
-          "url": "/symptoms/night-sweats/",
-          "anchor": "night sweats",
-          "contextual": true
-        },
-        {
-          "url": "/symptoms/insomnia/",
-          "anchor": "insomnia",
-          "contextual": true
-        },
-        {
-          "url": "/does-it-work/exercise/",
-          "anchor": "Does exercise help menopause symptoms?",
-          "contextual": true
-        },
-        {
-          "url": "/care/menopause-books/",
-          "anchor": "Next Level by Dr Stacy Sims",
-          "contextual": true
-        },
-        {
-          "url": "/symptoms/insomnia/",
-          "anchor": "insomnia",
+          "url": "/treatments/hormone-therapy/",
+          "anchor": "hormone therapy",
           "contextual": true
         },
         {
           "url": "/does-it-work/hormone-balance-supplements/",
           "anchor": "Do \"hormone balance\" supplements work?",
+          "contextual": true
+        },
+        {
+          "url": "/does-it-work/exercise/",
+          "anchor": "Does exercise help menopause symptoms?",
           "contextual": true
         },
         {
@@ -14590,7 +14790,7 @@
         "/perimenopause/questions-for-your-doctor/",
         "/symptoms/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/tools/symptom-tracker/",
@@ -14614,6 +14814,16 @@
         {
           "url": "/tools/treatment-questions/",
           "anchor": "HRT and treatment question builder",
+          "contextual": true
+        },
+        {
+          "url": "/app/install/",
+          "anchor": "install the tracker",
+          "contextual": true
+        },
+        {
+          "url": "/app/storage/",
+          "anchor": "Manage storage",
           "contextual": true
         },
         {
@@ -14687,7 +14897,7 @@
         },
         {
           "url": "/does-it-work/magnesium/",
-          "anchor": "Symptom tracker"
+          "anchor": "symptom tracker"
         },
         {
           "url": "/does-it-work/red-clover/",
@@ -14735,7 +14945,7 @@
         },
         {
           "url": "/perimenopause/early-signs/",
-          "anchor": "Symptom tracker and doctor report"
+          "anchor": "symptom tracker and doctor report"
         },
         {
           "url": "/perimenopause/heavy-periods/",
@@ -14843,7 +15053,7 @@
         },
         {
           "url": "/symptoms/hot-flashes/",
-          "anchor": "Symptom tracker and doctor report"
+          "anchor": "symptom tracker and doctor report"
         },
         {
           "url": "/symptoms/",
@@ -14962,7 +15172,7 @@
         "/perimenopause/early-signs/",
         "/symptoms/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/tools/symptoms-checklist/",
@@ -14979,19 +15189,24 @@
           "contextual": true
         },
         {
-          "url": "/perimenopause/blood-tests/",
-          "anchor": "blood tests for perimenopause",
+          "url": "/groups/premature-ovarian-insufficiency/",
+          "anchor": "premature ovarian insufficiency",
           "contextual": true
         },
         {
-          "url": "/groups/premature-ovarian-insufficiency/",
-          "anchor": "premature ovarian insufficiency",
+          "url": "/perimenopause/blood-tests/",
+          "anchor": "blood tests for perimenopause",
           "contextual": true
         },
         {
           "url": "/urgent-help/",
           "anchor": "urgent help page",
           "contextual": false
+        },
+        {
+          "url": "/app/storage/",
+          "anchor": "Manage storage",
+          "contextual": true
         },
         {
           "url": "/tools/12-month-counter/",
@@ -15046,7 +15261,7 @@
         },
         {
           "url": "/perimenopause/early-signs/",
-          "anchor": "Perimenopause symptoms checklist"
+          "anchor": "perimenopause symptoms checklist"
         },
         {
           "url": "/perimenopause/in-your-30s/",
@@ -15070,7 +15285,7 @@
         },
         {
           "url": "/symptoms/hot-flashes/",
-          "anchor": "Perimenopause symptoms checklist"
+          "anchor": "perimenopause symptoms checklist"
         },
         {
           "url": "/symptoms/incontinence/",
@@ -15575,6 +15790,10 @@
           "anchor": "HRT and blood clot risk"
         },
         {
+          "url": "/treatments/hormone-therapy/",
+          "anchor": "HRT and blood clot risk"
+        },
+        {
           "url": "/treatments/hormone-therapy/is-it-right-for-me/",
           "anchor": "HRT and blood clot risk"
         },
@@ -15619,7 +15838,7 @@
         "/symptoms/night-sweats/",
         "/perimenopause/questions-for-your-doctor/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/treatments/hormone-therapy/boxed-warning/",
@@ -15631,13 +15850,23 @@
           "contextual": true
         },
         {
-          "url": "/tools/symptom-tracker/",
-          "anchor": "symptom diary and report",
+          "url": "/treatments/hormone-therapy/timing/",
+          "anchor": "HRT timing",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/hormone-therapy/vaginal-estrogen/",
+          "anchor": "vaginal estrogen",
           "contextual": true
         },
         {
           "url": "/treatments/hormone-therapy/",
           "anchor": "hormone therapy",
+          "contextual": true
+        },
+        {
+          "url": "/tools/symptom-tracker/",
+          "anchor": "symptom diary and report",
           "contextual": true
         },
         {
@@ -15680,6 +15909,10 @@
         {
           "url": "/treatments/hormone-therapy/breast-cancer-risk/",
           "anchor": "the FDA boxed warning change, explained"
+        },
+        {
+          "url": "/treatments/hormone-therapy/",
+          "anchor": "boxed warning explainer"
         },
         {
           "url": "/treatments/hormone-therapy/",
@@ -15768,6 +16001,10 @@
         }
       ],
       "incoming_links": [
+        {
+          "url": "/treatments/hormone-therapy/",
+          "anchor": "HRT and breast cancer risk"
+        },
         {
           "url": "/treatments/hormone-therapy/",
           "anchor": "HRT and breast cancer risk"
@@ -15959,7 +16196,7 @@
         "/treatments/hormone-therapy/vaginal-estrogen/",
         "/tools/treatment-questions/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/treatments/hormone-therapy/",
@@ -15976,18 +16213,68 @@
           "contextual": true
         },
         {
-          "url": "/postmenopause/bone-health/",
-          "anchor": "bone loss",
-          "contextual": true
-        },
-        {
           "url": "/postmenopause/health-checklist/",
           "anchor": "long-term health checklist",
           "contextual": true
         },
         {
+          "url": "/postmenopause/bone-health/",
+          "anchor": "bone health",
+          "contextual": true
+        },
+        {
           "url": "/postmenopause/life-after-menopause/",
           "anchor": "life after menopause",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/hormone-therapy/vaginal-estrogen/",
+          "anchor": "vaginal estrogen",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/hormone-therapy/boxed-warning/",
+          "anchor": "boxed warning explainer",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/hormone-therapy/progesterone/",
+          "anchor": "progesterone and progestogens in HRT",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/hormone-therapy/blood-clot-risk/",
+          "anchor": "HRT and blood clot risk",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/hormone-therapy/breast-cancer-risk/",
+          "anchor": "HRT and breast cancer risk",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/hormone-therapy/timing/",
+          "anchor": "the HRT timing window",
+          "contextual": true
+        },
+        {
+          "url": "/postmenopause/bleeding/",
+          "anchor": "bleeding after menopause",
+          "contextual": true
+        },
+        {
+          "url": "/groups/breast-cancer-survivors/",
+          "anchor": "breast cancer",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/hormone-therapy/is-it-right-for-me/",
+          "anchor": "who HRT may suit, and who needs specialist advice",
+          "contextual": true
+        },
+        {
+          "url": "/treatments/nonhormonal/",
+          "anchor": "non-hormonal treatments",
           "contextual": true
         },
         {
@@ -16093,16 +16380,6 @@
         {
           "url": "/does-it-work/",
           "anchor": "evidence-graded lifestyle options",
-          "contextual": true
-        },
-        {
-          "url": "/groups/breast-cancer-survivors/",
-          "anchor": "breast cancer",
-          "contextual": true
-        },
-        {
-          "url": "/postmenopause/bleeding/",
-          "anchor": "vaginal bleeding",
           "contextual": true
         },
         {
@@ -16245,10 +16522,6 @@
           "anchor": "hormone therapy"
         },
         {
-          "url": "/symptoms/anxiety/",
-          "anchor": "hormone therapy"
-        },
-        {
           "url": "/symptoms/brain-fog/",
           "anchor": "hormone therapy"
         },
@@ -16273,12 +16546,16 @@
           "anchor": "Menopausal hormone therapy (HRT)"
         },
         {
+          "url": "/symptoms/insomnia/",
+          "anchor": "hormone or non-hormonal treatment"
+        },
+        {
           "url": "/symptoms/irritability/",
           "anchor": "hormone therapy"
         },
         {
           "url": "/symptoms/joint-pain/",
-          "anchor": "Menopausal hormone therapy (HRT)"
+          "anchor": "Hormone therapy (HRT)"
         },
         {
           "url": "/symptoms/low-libido/",
@@ -16295,6 +16572,10 @@
         {
           "url": "/symptoms/waking-at-3am/",
           "anchor": "Hormone therapy"
+        },
+        {
+          "url": "/symptoms/weight-gain/",
+          "anchor": "hormone therapy"
         },
         {
           "url": "/treatments/hormone-therapy/bioidentical-vs-compounded/",
@@ -16322,7 +16603,7 @@
         },
         {
           "url": "/treatments/hormone-therapy/patch-vs-pill/",
-          "anchor": "Hormone therapy"
+          "anchor": "hormone therapy"
         },
         {
           "url": "/treatments/hormone-therapy/side-effects/",
@@ -16504,6 +16785,10 @@
           "anchor": "HRT guidance"
         },
         {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "is hormone therapy right for me?"
+        },
+        {
           "url": "/tools/does-it-work-checker/",
           "anchor": "Is hormone therapy right for me?"
         },
@@ -16513,6 +16798,10 @@
         },
         {
           "url": "/treatments/hormone-therapy/estrogen/",
+          "anchor": "who HRT may suit, and who needs specialist advice"
+        },
+        {
+          "url": "/treatments/hormone-therapy/",
           "anchor": "who HRT may suit, and who needs specialist advice"
         },
         {
@@ -16564,7 +16853,7 @@
         "/treatments/hormone-therapy/types/",
         "/tools/treatment-questions/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/treatments/hormone-therapy/patch-vs-pill/",
@@ -16572,7 +16861,7 @@
       "outgoing_links": [
         {
           "url": "/treatments/hormone-therapy/",
-          "anchor": "Hormone therapy",
+          "anchor": "hormone therapy",
           "contextual": true
         },
         {
@@ -16600,6 +16889,10 @@
         {
           "url": "/compare/alloy-review/",
           "anchor": "patch vs. pill"
+        },
+        {
+          "url": "/symptoms/night-sweats/",
+          "anchor": "hormone therapy: patch vs pill"
         },
         {
           "url": "/tools/treatment-questions/",
@@ -16798,6 +17091,10 @@
         {
           "url": "/treatments/hormone-therapy/estrogen/",
           "anchor": "progesterone and progestogens"
+        },
+        {
+          "url": "/treatments/hormone-therapy/",
+          "anchor": "progesterone and progestogens in HRT"
         },
         {
           "url": "/treatments/hormone-therapy/",
@@ -17138,6 +17435,14 @@
       ],
       "incoming_links": [
         {
+          "url": "/treatments/hormone-therapy/boxed-warning/",
+          "anchor": "HRT timing"
+        },
+        {
+          "url": "/treatments/hormone-therapy/",
+          "anchor": "the HRT timing window"
+        },
+        {
           "url": "/treatments/hormone-therapy/",
           "anchor": "The HRT timing window"
         },
@@ -17366,7 +17671,15 @@
           "anchor": "vaginal estrogen"
         },
         {
+          "url": "/treatments/hormone-therapy/boxed-warning/",
+          "anchor": "vaginal estrogen"
+        },
+        {
           "url": "/treatments/hormone-therapy/estrogen/",
+          "anchor": "vaginal estrogen"
+        },
+        {
+          "url": "/treatments/hormone-therapy/",
           "anchor": "vaginal estrogen"
         },
         {
@@ -17650,6 +17963,14 @@
           "anchor": "CBT and clinical hypnosis"
         },
         {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "CBT and hypnosis"
+        },
+        {
+          "url": "/symptoms/night-sweats/",
+          "anchor": "CBT and hypnosis"
+        },
+        {
           "url": "/treatments/nonhormonal/gabapentin/",
           "anchor": "CBT and clinical hypnosis"
         },
@@ -17703,7 +18024,7 @@
         "/symptoms/hot-flashes/",
         "/tools/treatment-questions/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/treatments/nonhormonal/elinzanetant/",
@@ -17730,6 +18051,11 @@
           "contextual": true
         },
         {
+          "url": "/perimenopause/contraception/",
+          "anchor": "birth control in perimenopause",
+          "contextual": true
+        },
+        {
           "url": "/tools/treatment-questions/",
           "anchor": "treatment conversation builder",
           "contextual": true
@@ -17748,11 +18074,15 @@
       "incoming_links": [
         {
           "url": "/does-it-work/black-cohosh/",
-          "anchor": "Lynkuet"
+          "anchor": "Lynkuet (elinzanetant)"
         },
         {
           "url": "/does-it-work/hormone-balance-supplements/",
           "anchor": "elinzanetant"
+        },
+        {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "Elinzanetant (Lynkuet)"
         },
         {
           "url": "/tools/does-it-work-checker/",
@@ -17808,7 +18138,7 @@
         "/symptoms/hot-flashes/",
         "/tools/treatment-questions/"
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "next_pages": [],
       "previous_pages": [],
       "canonical": "/treatments/nonhormonal/fezolinetant/",
@@ -17853,7 +18183,7 @@
       "incoming_links": [
         {
           "url": "/does-it-work/black-cohosh/",
-          "anchor": "Veozah"
+          "anchor": "Veozah (fezolinetant)"
         },
         {
           "url": "/does-it-work/hormone-balance-supplements/",
@@ -17866,6 +18196,10 @@
         {
           "url": "/groups/endometriosis/",
           "anchor": "fezolinetant"
+        },
+        {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "Fezolinetant (Veozah)"
         },
         {
           "url": "/tools/does-it-work-checker/",
@@ -17980,6 +18314,14 @@
         }
       ],
       "incoming_links": [
+        {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "gabapentin"
+        },
+        {
+          "url": "/symptoms/night-sweats/",
+          "anchor": "gabapentin"
+        },
         {
           "url": "/treatments/nonhormonal/",
           "anchor": "Gabapentin"
@@ -18195,7 +18537,7 @@
         },
         {
           "url": "/does-it-work/black-cohosh/",
-          "anchor": "Non-hormonal prescription and behavioral treatments for hot flashes"
+          "anchor": "non-hormonal prescription and behavioral treatments for hot flashes"
         },
         {
           "url": "/does-it-work/cannabis-cbd/",
@@ -18223,7 +18565,7 @@
         },
         {
           "url": "/does-it-work/maca/",
-          "anchor": "non-hormonal prescription options"
+          "anchor": "non-hormonal prescription options for hot flashes"
         },
         {
           "url": "/does-it-work/omega-3/",
@@ -18271,7 +18613,7 @@
         },
         {
           "url": "/symptoms/anxiety/",
-          "anchor": "Level I non-hormonal options"
+          "anchor": "non-hormonal options"
         },
         {
           "url": "/symptoms/brain-fog/",
@@ -18304,6 +18646,10 @@
         {
           "url": "/tools/treatment-questions/",
           "anchor": "non-hormonal treatments for hot flashes"
+        },
+        {
+          "url": "/treatments/hormone-therapy/",
+          "anchor": "non-hormonal treatments"
         },
         {
           "url": "/treatments/hormone-therapy/",
@@ -18553,6 +18899,18 @@
         }
       ],
       "incoming_links": [
+        {
+          "url": "/symptoms/anxiety/",
+          "anchor": "SSRIs and SNRIs"
+        },
+        {
+          "url": "/symptoms/hot-flashes/",
+          "anchor": "SSRIs and SNRIs"
+        },
+        {
+          "url": "/symptoms/night-sweats/",
+          "anchor": "SSRIs and SNRIs"
+        },
         {
           "url": "/treatments/nonhormonal/gabapentin/",
           "anchor": "SSRIs and SNRIs"

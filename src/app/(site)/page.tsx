@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { Suspense } from 'react';
 import { SITE } from '@/lib/site/config';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { getSiteData, CLUSTER_LABELS, isStaticTarget } from '@/lib/content/site-data';
@@ -230,7 +231,9 @@ export default function HomePage() {
           Or ask in your own words
         </h2>
         <div className="max-w-2xl">
-          <SearchBox suggestions={quickLinks} />
+          <Suspense fallback={<div className="h-16 rounded-xl bg-[var(--color-paper-raised)]" />}>
+            <SearchBox suggestions={quickLinks} />
+          </Suspense>
         </div>
       </section>
 

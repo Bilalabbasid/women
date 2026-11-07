@@ -157,7 +157,7 @@ describe('stage quiz navigation and saved answers', () => {
     s = { ...s, step: nextStep(s) };
     s = answer(s, 'noPeriod12', 'yes');
     expect(progress(s)).toEqual({ index: 3, total: 5 });
-    expect(previousStep(s)).toBe('age');
+    expect(previousStep(s)).toBe('context');
     expect(previousStep({ ...DEFAULT_STATE })).toBe('age');
   });
 

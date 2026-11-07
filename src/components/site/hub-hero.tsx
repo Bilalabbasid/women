@@ -144,7 +144,7 @@ export function HubDirectory({ pages, heading }: { pages: ContentPage[]; heading
               <div key={g} className="hub-group">
                 <h3 className="flex flex-wrap items-center gap-3 text-[length:var(--fs-h4)]">
                   <GradeBadge grade={g} />
-                  <span className="font-sans text-[1rem] font-normal text-[var(--ink-muted)]">
+                  <span className="hub-group-verdict-count font-sans text-[1rem] font-medium text-[#D8E6DF]">
                     {group.length} {group.length === 1 ? 'verdict' : 'verdicts'}
                   </span>
                   <span className="visually-hidden">: {GRADE_LABELS[g]}</span>

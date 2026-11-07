@@ -233,8 +233,10 @@
     font-family: var(--font-serif);
     font-weight: 700;
   }
-  .hub-group > h3:not(.choose-card-name) span {
-    color: #D8E6DF !important;
+  .hub-group > h3:not(.choose-card-name) .hub-group-verdict-count {
+    color: #D8E6DF;
+    font-size: 1rem;
+    font-weight: 500;
   }
   .guide-card mark {
     background: color-mix(in srgb, var(--brass-rule) 30%, transparent);

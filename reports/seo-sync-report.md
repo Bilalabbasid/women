@@ -1,5 +1,5 @@
 # SEO & Site Graph Sync Report
-Generated: 2026-11-07T22:32:35.469Z
+Generated: 2026-11-07T22:44:17.764Z
 Total indexed nodes: 160
 
 ## Summary

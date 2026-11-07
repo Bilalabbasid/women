@@ -666,12 +666,15 @@
     gap: 0.4rem;
     padding: 0.2rem 0.7rem 0.2rem 0.35rem;
     border-radius: var(--radius-pill);
-    background: var(--g-soft);
-    color: var(--g-ink);
+    background: var(--g-soft) !important;
+    color: var(--g-ink) !important;
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.35;
     white-space: nowrap;
+  }
+  .grade-badge * {
+    color: var(--g-ink) !important;
   }
 
   /* ------------------------------------------------------------- popovers

@@ -35,7 +35,6 @@ banned_phrase_overrides:
 hub: /symptoms/
 sources: [korn-bernstein-migraine-menopause-2026, stute-nonhormonal-transition-2026]
 related: [/symptoms/, /symptoms/migraines/, /symptoms/insomnia/, /tools/symptom-tracker/, /does-it-work/]
-affiliate_disclosure: false
 faq:
   - q: Why do my headaches feel different or more frequent in perimenopause?
     a: "A 2026 clinical review on headache disorders and the menopausal transition notes that unstable estrogen and progesterone levels during perimenopause can worsen headache frequency and make headaches less predictable than they were when your cycle was regular."

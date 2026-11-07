@@ -110,7 +110,7 @@ export function buildSiteGraph(repoRoot: string = process.cwd()): SiteGraph {
 
     const rendered = renderMarkdown(page.body, { knownPaths: allKnownPaths, isAlwaysValid: () => true });
     for (const link of rendered.links) {
-      if (link.internal && !link.sponsored) {
+      if (link.internal) {
         const cleanHref = link.href.split('#')[0].split('?')[0];
         node.outgoing_links.push({
           url: cleanHref,

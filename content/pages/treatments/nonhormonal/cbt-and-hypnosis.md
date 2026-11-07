@@ -33,7 +33,6 @@ cta_profile: vasomotor
 hub: /treatments/nonhormonal/
 sources: [nams-2023-nonhormone-therapy, nice-ng23-recommendations]
 related: [/treatments/nonhormonal/, /symptoms/hot-flashes/, /symptoms/insomnia/, /symptoms/anxiety/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Can CBT really reduce hot flashes, not just help me cope with them?
     a: "Both. CBT is rated a Level I option by The Menopause Society specifically for vasomotor symptoms, meaning trials show it reduces how much hot flashes bother and disrupt you, and some research also shows a reduction in how frequently they're reported. NICE guidance recommends it as an option alongside or instead of HRT."

@@ -12,7 +12,7 @@ export const dynamic = 'force-static';
  *    <html data-sw-cached-at> so the page can warn it may be out of date.
  *  - /_next/static/: cache-first (content-hashed, immutable).
  *  - Other same-origin GETs: stale-while-revalidate, 200s only.
- *  - /api/ and /go/: never touched.
+ *  - /api/: never touched.
  *  - The service worker never reads or stores tracker data (that lives in IndexedDB).
  */
 const VERSION = process.env.BUILD_VERSION ?? new Date().toISOString().replace(/[^0-9]/g, '');
@@ -105,7 +105,7 @@ self.addEventListener('fetch', (event) => {
   if (request.method !== 'GET') return;
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
-  if (url.pathname.startsWith('/api/') || url.pathname.startsWith('/go/') || url.pathname === '/sw.js') return;
+  if (url.pathname.startsWith('/api/') || url.pathname === '/sw.js') return;
 
   if (request.mode === 'navigate') {
     event.respondWith(networkFirstPage(request));

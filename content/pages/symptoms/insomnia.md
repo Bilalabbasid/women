@@ -37,7 +37,6 @@ cta_profile: sleep
 hub: /symptoms/
 sources: [nams-2023-nonhormone-therapy, nams-2022-hormone-therapy, nice-ng23-recommendations]
 related: [/symptoms/, /symptoms/night-sweats/, /care/sleepwear-for-night-sweats/, /does-it-work/magnesium/]
-affiliate_disclosure: false
 faq:
   - q: Why do I wake up at 2 or 3 a.m. in perimenopause even when I don't feel hot?
     a: Nocturnal vasomotor episodes (night sweats or brief thermoregulatory surges) frequently trigger an awakening just before or without noticeable drenching sweat, alongside shifting hormone levels and primary sleep disorders such as sleep apnea.
@@ -56,8 +55,6 @@ Trouble falling asleep or waking repeatedly at 2 or 3 a.m. is one of the most di
 | **[Non-hormonal Rx](/treatments/nonhormonal/)** (gabapentin, SSRIs/SNRIs, NK3 antagonists) | :grade{id="nonhormonal-rx-sleep-vms"} | Level I non-hormonal options when night sweats drive awakenings [@nams-2023-nonhormone-therapy] |
 | **Breathable [sleepwear](/care/sleepwear-for-night-sweats/) & [cooling products](/does-it-work/cooling-products/)** | :grade{id="cooling-comfort"} | Practical comfort aid for night sweats; not a medical treatment that stops vasomotor surges [@nams-2023-nonhormone-therapy] |
 | **Over-the-counter [magnesium](/does-it-work/magnesium/) & herbal sleep supplements** | :grade{id="otc-sleep-supplements-vms"} | Not recommended by The Menopause Society (2023) for vasomotor symptoms (Levels I–II) [@nams-2023-nonhormone-therapy] |
-
-::product-slot{id="sleep-cooling-pad"}
 
 ## Track your sleep and night wakings
 

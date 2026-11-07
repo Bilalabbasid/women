@@ -36,7 +36,6 @@ banned_phrase_overrides:
 hub: null
 sources: [nams-2023-nonhormone-therapy]
 related: [/does-it-work/magnesium/, /does-it-work/cooling-products/, /does-it-work/exercise/, /does-it-work/paced-breathing/, /does-it-work/diet/, /does-it-work/acupuncture/, /does-it-work/yoga/, /does-it-work/cannabis-cbd/, /does-it-work/red-clover/, /does-it-work/evening-primrose-oil/, /does-it-work/vitamin-d/, /does-it-work/calcium/, /does-it-work/omega-3/, /does-it-work/ashwagandha/, /does-it-work/maca/, /does-it-work/dong-quai/, /does-it-work/dhea/, /does-it-work/collagen/, /does-it-work/probiotics/, /does-it-work/relizen/, /does-it-work/amberen/, /does-it-work/equelle/, /tools/symptoms-checklist/]
-affiliate_disclosure: false
 ---
 
 Many women turn to non-prescription supplements and alternative remedies seeking natural relief, but clinical trial results frequently contradict marketing promises [@nams-2023-nonhormone-therapy]. 
@@ -81,6 +80,6 @@ We examine each product and ingredient using four criteria:
 
 You can look up any treatment or supplement by symptom and evidence grade in our interactive [Does it work? evidence checker](/tools/does-it-work-checker/), or record your active symptoms with our [printable symptoms checklist](/tools/symptoms-checklist/).
 
-## Commercial integrity notice
+## How grades are set
 
-Our evidence grades are established strictly from clinical trial literature before any commercial links are considered. If a product is graded "Not supported" or "Harm concern", that grade will never be altered by commercial partnerships.
+Evidence grades come from clinical trials and clinical guidelines alone, and nobody pays to be listed or graded. If a product is graded "Not supported" or "Harm concern", we say so plainly.

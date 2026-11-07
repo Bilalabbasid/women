@@ -27,7 +27,6 @@ cta_profile: site_none
 hub: null
 sources: []
 related: [/evidence/how-we-grade/, /treatments/hormone-therapy/boxed-warning/, /about/how-we-make-money/]
-affiliate_disclosure: false
 ---
 
 Science and regulatory guidance evolve continuously. When health authorities release new prescribing guidance, clinical societies update treatment recommendations, or our editorial team corrects an error, we log every change here.

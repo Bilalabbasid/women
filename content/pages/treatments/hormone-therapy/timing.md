@@ -36,7 +36,6 @@ cta_profile: hrt_evaluating
 hub: /treatments/hormone-therapy/
 sources: [nams-2022-hormone-therapy, khalifey-hrt-cardiovascular-2026, nice-ng23-recommendations]
 related: [/treatments/hormone-therapy/, /treatments/hormone-therapy/is-it-right-for-me/, /postmenopause/heart-health/, /treatments/hormone-therapy/boxed-warning/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Is 60 a hard cutoff for starting HRT?
     a: "No, it's a guideline, not a wall. The Menopause Society describes a more favorable benefit-risk ratio for starting under 60 or within 10 years of menopause onset, meaning risks are generally lower in that window, not that HRT becomes impossible or forbidden outside it. Starting later is a more individualized decision, usually best made with a menopause specialist."

@@ -36,7 +36,6 @@ cta_profile: learn_stage
 hub: /perimenopause/
 sources: [straw-10-2012]
 related: [/perimenopause/, /perimenopause/vs-menopause/, /perimenopause/irregular-periods/, /perimenopause/how-long/, /tools/stage-guide/]
-affiliate_disclosure: false
 faq:
   - q: What's the difference between early and late perimenopause?
     a: "In early perimenopause, cycle lengths vary by 7 or more days from one cycle to the next, but periods still happen regularly enough to track that pattern. In late perimenopause, you go 60 days or more without a period at least once — this stage lasts 1 to 3 years on average and often comes with more noticeable symptoms."

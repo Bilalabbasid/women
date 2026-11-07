@@ -34,7 +34,6 @@ cta_profile: specialist_group
 hub: /groups/
 sources: [nice-ng23, nice-ng23-recommendations, nams-2022-hormone-therapy, lifeline-988, samaritans-contact]
 related: [/groups/, /perimenopause/blood-tests/, /postmenopause/bone-health/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Why is hormone therapy viewed differently in POI (under 40) than in menopause after 50?
     a: Under age 40, hormone therapy (or combined hormonal contraception) replaces estrogen that the ovaries would normally produce until the average age of natural menopause, helping protect long-term bone mineral density and cardiovascular health unless medically contraindicated.

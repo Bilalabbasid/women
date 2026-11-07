@@ -37,7 +37,6 @@ cta_profile: general_symptom
 hub: /symptoms/
 sources: [hubbard-breast-pain-assessment-2020]
 related: [/symptoms/, /groups/breast-cancer-survivors/, /does-it-work/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Is sore, tender breast tissue normal in perimenopause?
     a: "It's common. A 2020 clinical review notes that breast pain (mastalgia) affects up to 70% of women at some point, and the cyclical type — tied to hormonal changes, worse before a period and easing afterward — accounts for about two-thirds of cases. Perimenopause's erratic hormone swings can make this pattern more noticeable for some women."

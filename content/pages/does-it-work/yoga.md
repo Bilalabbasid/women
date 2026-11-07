@@ -33,7 +33,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [nams-2023-nonhormone-therapy, nams-2022-hormone-therapy]
 related: [/does-it-work/, /does-it-work/exercise/, /treatments/nonhormonal/cbt-and-hypnosis/, /symptoms/anxiety/, /symptoms/insomnia/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: Does yoga reduce hot flashes?
     a: "Specifically for reducing hot flash frequency or severity, no — The Menopause Society's 2023 review classified yoga as not recommended for vasomotor symptoms (Level II). This is a narrower finding than 'yoga doesn't help with menopause at all'; it's about hot flashes specifically as a measured outcome in trials."

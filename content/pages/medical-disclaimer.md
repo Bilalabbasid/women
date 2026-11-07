@@ -28,7 +28,6 @@ cta_profile: site_none
 hub: null
 sources: []
 related: [/privacy/, /terms/]
-affiliate_disclosure: false
 ---
 
 **We are not doctors.** MenoVerdict is not a medical service. It's run by an independent editorial team, and no doctor wrote the pages on this site.
@@ -51,7 +50,7 @@ Use this site to prepare for an appointment, not to replace one. Never ignore or
 
 ## We don't recommend a specific doctor, clinic or product for you
 
-Our grades and comparisons describe what the research says about a treatment, supplement or type of service in general. They are never a personal recommendation. Where we compare named telehealth services or products, that's information for you to weigh yourself, not a referral, and it has no effect on how we grade the evidence (see our [affiliate disclosure](/about/how-we-make-money/)).
+Our grades and comparisons describe what the research says about a treatment, supplement or type of service in general. They are never a personal recommendation. Where we compare named telehealth services or products, that's information for you to weigh yourself, not a referral. Nobody pays to be mentioned or graded (see [how MenoVerdict is funded](/about/how-we-make-money/)).
 
 ## Emergencies
 

@@ -1,7 +1,7 @@
 ---
 title: Menopause after breast cancer
 seo_title: "Menopause after breast cancer: non-hormonal options"
-meta_description: "Evidence-graded non-hormonal treatments for hot flashes and vaginal dryness after breast cancer or on tamoxifen/aromatase inhibitors. Zero commercial CTAs."
+meta_description: "Evidence-graded non-hormonal treatments for hot flashes and vaginal dryness after breast cancer or on tamoxifen/aromatase inhibitors."
 cluster: groups
 primary_keyword: menopause after breast cancer
 slug: breast-cancer-survivors
@@ -37,7 +37,6 @@ cta_profile: cancer_history
 hub: /groups/
 sources: [nams-2023-nonhormone-therapy, nams-2020-gsm, acog-clinical-consensus-gsm]
 related: [/groups/, /treatments/nonhormonal/, /symptoms/vaginal-dryness/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Are "natural phytoestrogen" supplements safe to take for hot flashes after breast cancer?
     a: Do not start over-the-counter herbal or phytoestrogen supplements without oncology approval. The Menopause Society (2023) does not recommend herbal supplements or soy extracts for hot flashes because trial evidence does not show consistent benefit, and concentrated extracts may have uncertain effects or drug interactions.

@@ -31,7 +31,6 @@ cta_profile: nonhormonal_evaluating
 hub: /treatments/nonhormonal/
 sources: [nams-2023-nonhormone-therapy]
 related: [/treatments/nonhormonal/, /treatments/nonhormonal/gabapentin/, /symptoms/bladder-urgency/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Isn't oxybutynin a bladder medication?
     a: "Yes, it's most commonly prescribed for overactive bladder, but it also reduces hot flashes through a separate mechanism. The Menopause Society rates it a Levels I-II non-hormonal option for vasomotor symptoms, a somewhat lower confidence rating than the clearest Level I options."

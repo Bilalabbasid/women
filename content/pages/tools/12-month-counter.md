@@ -45,7 +45,6 @@ cta_profile: bleeding
 hub: /tools/
 sources: [straw-10-2012, nice-ng23-recommendations, nhs-postmenopausal-bleeding, nhs-heavy-periods, appiah-menopause-age-trends-2021, nhs-heart-palpitations, lifeline-988, samaritans-contact]
 related: [/tools/stage-guide/, /tools/symptom-tracker/, /postmenopause/bleeding/, /menopause/diagnosis/]
-affiliate_disclosure: false
 faq:
   - q: "How long without a period is menopause?"
     a: "12 consecutive months. Under the STRAW+10 criteria and UK NICE guidance, natural menopause is identified looking back, once you have gone a full year with no period, as long as you aren't using hormonal contraception and nothing else explains it."

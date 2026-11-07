@@ -37,7 +37,6 @@ cta_profile: libido
 hub: /symptoms/
 sources: [nice-ng23-recommendations, nams-2022-hormone-therapy]
 related: [/symptoms/, /symptoms/vaginal-dryness/, /symptoms/painful-sex/, /treatments/hormone-therapy/, /tools/treatment-questions/, /does-it-work/]
-affiliate_disclosure: false
 faq:
   - q: Is low sex drive a normal part of menopause?
     a: "It's common and recognized in clinical guidance. NICE NG23 lists sexual difficulties, including low sexual desire, among the core symptoms associated with menopause. It's not something you have to simply accept without discussing options, though."

@@ -30,7 +30,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [pu-collagen-skin-aging-metaanalysis-2023]
 related: [/does-it-work/, /symptoms/dry-itchy-skin/, /symptoms/joint-pain/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: Does collagen help with menopause-related skin changes?
     a: "There's reasonably good general evidence that oral collagen improves skin hydration and elasticity: a 2023 meta-analysis of 26 randomized trials (1,721 people) found significant improvements on both measures compared with placebo. The important caveat is that this evidence comes from the general adult population studied for skin aging broadly — we could not find a trial that specifically recruited and studied menopausal or postmenopausal women as its own group. The mechanism (skin collagen declining with age and estrogen loss) is plausible, but the direct evidence is general, not menopause-specific."

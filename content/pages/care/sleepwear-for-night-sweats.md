@@ -1,7 +1,7 @@
 ---
-title: "Best Sleepwear for Night Sweats: How to Choose"
-seo_title: "Best Sleepwear for Night Sweats"
-meta_description: "How to choose the best sleepwear for night sweats: why cotton fails, how moisture-wicking fabrics work, fit considerations, and honest limitations."
+title: "Sleepwear for Night Sweats: How to Choose"
+seo_title: "How to Choose Sleepwear for Night Sweats"
+meta_description: "How to choose sleepwear for night sweats: why cotton fails, how moisture-wicking fabrics work, fit considerations, and honest limitations."
 cluster: care
 primary_keyword: sleepwear for night sweats
 slug: sleepwear-for-night-sweats
@@ -17,9 +17,10 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Initial publication on moisture-wicking sleepwear selection and fabric mechanics", material: true }
+  - { date: "2026-11-07", summary: "Now a how-to-choose guide, with no products to buy", material: true }
 evidence_grade: per_option
 claims:
   - id: wicking-prevents-chill
@@ -30,14 +31,13 @@ cta_profile: sleep
 hub: /care/
 sources: [nams-2023-nonhormone-therapy, nice-ng23]
 related: [/symptoms/night-sweats/, /does-it-work/cooling-products/, /care/, /tools/symptom-tracker/]
-affiliate_disclosure: true
 ---
 
-The best sleepwear for night sweats is made from specialized moisture-wicking synthetic microfibers, bamboo viscose, or lightweight modal rather than traditional cotton, as highlighted in our [daily menopause care guides](/care/) [@nams-2023-nonhormone-therapy]. While cotton absorbs perspiration well, it retains water in its fibers, leaving you lying in cold, damp pajamas that trigger violent shivering twenty minutes after a night sweat passes.
+Sleepwear that works best for night sweats is made from specialized moisture-wicking synthetic microfibers, bamboo viscose, or lightweight modal rather than traditional cotton, as highlighted in our [daily menopause care guides](/care/) [@nams-2023-nonhormone-therapy]. While cotton absorbs perspiration well, it retains water in its fibers, leaving you lying in cold, damp pajamas that trigger violent shivering twenty minutes after a night sweat passes.
 
 ## What sleepwear can and cannot do
 
-Before investing in specialized sleepwear, understand what it is designed to achieve:
+Before buying new sleepwear, understand what it is designed to achieve:
 
 - **What it can do**: It pulls moisture rapidly away from your skin, accelerates evaporation, dries quickly, and eliminates the drenched, clammy feeling that jolts you awake.
 - **What it cannot do**: It does not lower your internal core body temperature, stop hot flashes, or fix the underlying hormonal fluctuations driving night sweats [@nams-2023-nonhormone-therapy].
@@ -62,11 +62,7 @@ When shopping for sleepwear to manage nighttime temperature spikes, prioritize t
 3. **Short sleeves or sleeveless tops**: Exposing your neck, shoulders, and wrists allows surface blood vessels to dissipate heat rapidly during a flush.
 4. **Machine washable and fast-drying**: You will be laundering sleepwear frequently; choose durable materials that retain wicking properties after dozens of wash cycles without requiring delicate hand washing.
 
-### Our recommended sleepwear set
-
-For women seeking technical moisture-wicking microfibers designed specifically to pull perspiration away from skin and prevent post-sweat chills:
-
-<Product id="cooljams-pyjamas" />
+Before you buy, check the fabric label rather than the marketing name: "cooling" on a label isn't a standard term, so look for the fibre content (technical microfibre, bamboo viscose or modal) and the care instructions.
 
 ## Pairing sleepwear with your sleep environment
 

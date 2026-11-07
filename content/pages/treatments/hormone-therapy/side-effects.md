@@ -36,7 +36,6 @@ cta_profile: hrt_evaluating
 hub: /treatments/hormone-therapy/
 sources: [nice-ng23-recommendations]
 related: [/treatments/hormone-therapy/, /treatments/hormone-therapy/starting-and-stopping/, /treatments/hormone-therapy/types/, /postmenopause/bleeding/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Is it normal to have side effects when starting HRT?
     a: "Some adjustment period is common, and bleeding changes in particular are expected early on. NICE guidance specifically notes that vaginal bleeding is a common side effect during the first 6 months of systemic HRT, or within 3 months of any dose or preparation change, and recommends a formal review at the 3-month mark to check how you're tolerating treatment."

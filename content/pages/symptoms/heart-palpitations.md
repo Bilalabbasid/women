@@ -33,7 +33,6 @@ cta_profile: cardio_urgent
 hub: /symptoms/
 sources: [nhs-heart-palpitations, nice-ng23-recommendations]
 related: [/symptoms/, /symptoms/hot-flashes/, /symptoms/anxiety/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: When are heart palpitations an emergency?
     a: Call 911 (US) or 999 (UK) or go to the emergency room immediately if palpitations do not go away, or if they come with chest pain, shortness of breath, dizziness, feeling faint, or fainting.
@@ -56,7 +55,7 @@ However, **you should never assume heart palpitations are "just hormones" withou
 - Iron-deficiency anemia (especially if you have had heavy perimenopausal periods)
 - Dehydration, caffeine, alcohol, fever, or medication side effects
 
-Notice that MenoVerdict never places commercial product links on cardiac or urgent symptom pages, and over-the-counter [menopause supplements](/does-it-work/) should never be used to self-treat heart palpitations.
+Over-the-counter [menopause supplements](/does-it-work/) should never be used to self-treat heart palpitations.
 
 ## What to record for your doctor
 

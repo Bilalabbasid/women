@@ -30,7 +30,6 @@ cta_profile: care_comparison
 hub: /compare/
 sources: [alloy-own-site-2026, evernow-own-site-2026]
 related: [/compare/, /compare/alloy-review/, /compare/evernow-review/, /treatments/hormone-therapy/, /tools/treatment-questions/]
-affiliate_disclosure: true
 faq:
   - q: Does Alloy or Evernow take insurance?
     a: "Alloy explicitly does not bill insurance — it's a cash-pay model, FSA/HSA accepted. Evernow states it now accepts insurance for video visits, with both a one-time insurance-eligible visit and an insurance-eligible video visit available within its membership. If insurance billing matters to you, Evernow is the one to check first."

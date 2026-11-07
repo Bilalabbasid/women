@@ -1,7 +1,7 @@
 ---
 title: Editorial policy
-seo_title: Editorial policy and independence standards
-meta_description: "How MenoVerdict researches, writes, fact-checks, and updates menopause health content, and how we separate editorial decisions from affiliate revenue."
+seo_title: Editorial policy and evidence standards
+meta_description: "How MenoVerdict researches, writes, fact-checks, and updates menopause health content."
 cluster: evidence
 primary_keyword: editorial policy
 slug: editorial-policy
@@ -17,9 +17,10 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Published MenoVerdict editorial policy and source verification rules", material: true }
+  - { date: "2026-11-07", summary: "MenoVerdict is now free, with no ads or sponsors", material: true }
 evidence_grade: null
 claims: []
 safety_flags: []
@@ -27,10 +28,9 @@ cta_profile: site_none
 hub: /evidence/
 sources: []
 related: [/evidence/how-we-grade/, /evidence/updates/, /about/how-we-make-money/]
-affiliate_disclosure: false
 ---
 
-**MenoVerdict** publishes independent, evidence-graded information for women in perimenopause, menopause, and postmenopause. Every article, tool, and buying guide follows our [evidence evaluation standards](/evidence/) for source verification, medical honesty, and commercial independence.
+**MenoVerdict** publishes independent, evidence-graded information for women in perimenopause, menopause, and postmenopause. Every article, tool, and guide follows our [evidence evaluation standards](/evidence/) for source verification and medical honesty.
 
 ## 1. Source hierarchy and verification
 
@@ -53,12 +53,9 @@ Until a page has been reviewed by a named clinician, it displays a clear notice 
 
 Our articles and [interactive tools](/tools/) explain possible causes, clinical guidelines, and questions to take to an appointment. They never diagnose a condition, tell you which stage of menopause you are in as a medical fact, recommend that you take a specific drug, or give personalized medication doses.
 
-## 4. Safety outranks commercial revenue
+## 4. Independence
 
-Reader safety always comes before affiliate revenue:
-
-- We never place affiliate links or product blocks in urgent care alerts, abnormal bleeding guides, cancer history sections, crisis pages, or tool results.
-- Commercial partners have zero say in our [evidence grades](/evidence/how-we-grade/), article rankings, or verdicts. Read our full [affiliate disclosure](/about/how-we-make-money/) for details.
+MenoVerdict carries no ads, affiliate links or sponsored content. See [how MenoVerdict is funded](/about/how-we-make-money/).
 
 ## 5. Corrections and updates
 

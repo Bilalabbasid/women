@@ -21,6 +21,7 @@ updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Initial publication of pelvic floor training and biofeedback guide", material: true }
   - { date: "2026-11-07", summary: "Removed an unsourced 'up to 50%' figure; replaced with NICE guidance on checking technique", material: true }
+  - { date: "2026-11-07", summary: "Removed product recommendations; the guidance is unchanged", material: true }
 evidence_grade: strong
 claims:
   - id: pfmt-efficacy-incontinence
@@ -34,7 +35,6 @@ cta_profile: urinary
 hub: /care/
 sources: [nice-ng123-urinary-incontinence, cochrane-pfmt-incontinence, nams-2020-gsm]
 related: [/symptoms/incontinence/, /care/, /tools/symptoms-checklist/, /symptoms/vaginal-dryness/]
-affiliate_disclosure: true
 ---
 
 To do pelvic floor exercises correctly, you must actively squeeze and lift your pelvic muscles upward and inward toward your belly button, while keeping your abdominal, buttock, and thigh muscles completely relaxed, as detailed in our [menopause care guides](/care/) [@nice-ng123-urinary-incontinence]. Up to half of all women inadvertently bear down (push outward) when attempting unassisted exercises, which can worsen bladder leaks and increase downward pressure on pelvic organs [@cochrane-pfmt-incontinence].
@@ -77,9 +77,7 @@ Aim to perform this combined set **three times per day** [@nice-ng123-urinary-in
 
 ## Using biofeedback devices at home
 
-If you find it difficult to tell whether you are lifting or bearing down, biofeedback technology can bridge the gap. App-connected pelvic trainers use internal force sensors to monitor the direction of your muscle contraction, providing instant visual feedback on your phone screen so you know with certainty that you are lifting [@cochrane-pfmt-incontinence].
-
-<Product id="elvie-trainer" />
+If you find it difficult to tell whether you are lifting or bearing down, biofeedback technology can bridge the gap. App-connected pelvic trainers use internal force sensors to monitor the direction of your muscle contraction, providing instant visual feedback on your phone screen so you know with certainty that you are lifting [@cochrane-pfmt-incontinence]. A pelvic floor physiotherapist can also give you biofeedback in the clinic, which is a good place to start before buying a device.
 
 ## How long before you see results?
 

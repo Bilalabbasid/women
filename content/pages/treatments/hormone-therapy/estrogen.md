@@ -37,7 +37,6 @@ cta_profile: hrt_evaluating
 hub: /treatments/hormone-therapy/
 sources: [nice-ng23-recommendations, nams-2022-hormone-therapy]
 related: [/treatments/hormone-therapy/, /treatments/hormone-therapy/progesterone/, /treatments/hormone-therapy/types/, /treatments/hormone-therapy/patch-vs-pill/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Why do some women take estrogen alone, and others take it with a progestogen?
     a: "It depends on whether you have a uterus. Estrogen alone can thicken the uterine lining over time, raising the risk of endometrial cancer, so people who still have a uterus are offered estrogen combined with a progestogen to protect against that. People who've had a total hysterectomy can take estrogen alone, since there's no uterine lining to protect."

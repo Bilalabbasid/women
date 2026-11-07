@@ -17,9 +17,10 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Initial publication covering GSM, non-hormonal hydrators, and medical therapies", material: true }
+  - { date: "2026-11-07", summary: "Removed product recommendations; the guidance is unchanged", material: true }
 evidence_grade: per_option
 claims:
   - id: gsm-estrogen-loss
@@ -33,7 +34,6 @@ cta_profile: genitourinary_vaginal
 hub: /symptoms/
 sources: [nams-2020-gsm, acog-clinical-consensus-gsm, cochrane-vaginal-moisturizers, nhs-postmenopausal-bleeding]
 related: [/symptoms/painful-sex/, /care/moisturizers-and-lubricants/, /symptoms/, /tools/symptoms-checklist/]
-affiliate_disclosure: true
 ---
 
 As cataloged in our [menopause symptoms directory](/symptoms/), vaginal dryness after menopause happens because declining estrogen levels cause vaginal tissues to become thinner, less elastic, and produce less natural lubrication [@nams-2020-gsm]. Unlike hot flashes, which usually improve over time, vaginal dryness typically persists without active management, but non-hormonal moisturisers, personal lubricants, and low-dose prescription vaginal estrogen provide reliable relief [@acog-clinical-consensus-gsm].
@@ -65,21 +65,13 @@ Medical societies recommend starting with non-hormonal comfort measures, adding 
 
 Vaginal moisturisers are designed for continuous, everyday comfort [@acog-clinical-consensus-gsm]. They contain water-binding polymers or hyaluronic acid that adhere to the mucosal lining, keeping tissues hydrated for several days per application [@cochrane-vaginal-moisturizers].
 
-If daily dryness causes discomfort while sitting, walking, or wearing tight clothing, regular application of a non-hormonal moisturiser provides a sensible first step.
-
-<Product id="replens-moisturiser" />
-
-For women who prefer an applicator-free insert with hyaluronic acid, dedicated vaginal suppositories offer an alternative non-hormonal approach.
-
-<Product id="revaree-ha" />
+If daily dryness causes discomfort while sitting, walking, or wearing tight clothing, regular application of a non-hormonal moisturiser provides a sensible first step. If you prefer not to use an applicator, hyaluronic acid moisturisers also come as small vaginal inserts (suppositories), another non-hormonal option.
 
 ### 2. Personal lubricants for sexual comfort
 
 While moisturisers work continuously over several days, lubricants are formulated for immediate friction relief during intimacy [@nams-2020-gsm]. Thinning vaginal tissues require significant lubrication to prevent painful friction and micro-tears during sex [@acog-clinical-consensus-gsm].
 
 High-grade silicone lubricants provide long-lasting surface glide because silicone does not evaporate or absorb into tissue during use.
-
-<Product id="uberlube" />
 
 To learn more about how moisturisers and lubricants work together, read our complete guide comparing [vaginal moisturisers and lubricants](/care/moisturizers-and-lubricants/).
 

@@ -45,7 +45,6 @@ banned_phrase_overrides:
 hub: /symptoms/
 sources: [nice-ng23-recommendations, neda-stepan-vms-mood-systematic-review-2026, nams-2023-nonhormone-therapy, lifeline-988, samaritans-contact]
 related: [/symptoms/, /symptoms/anxiety/, /symptoms/irritability/, /treatments/hormone-therapy/, /tools/symptom-tracker/, /does-it-work/]
-affiliate_disclosure: false
 faq:
   - q: Is perimenopause depression different from depression at other times of life?
     a: "The symptoms can look the same, but NICE guidance draws a distinction between depressive symptoms that start around the same time as other menopause symptoms (where HRT or menopause-specific CBT may help) and depression that meets full diagnostic criteria, which should be managed using standard depression treatment guidelines alongside menopause care."

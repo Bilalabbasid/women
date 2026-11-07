@@ -100,7 +100,7 @@ export function ArticleHero({
           </dl>
             {methodHref && grade && (
               <p className="mt-4 border-t border-[var(--color-rule)] pt-3 text-sm text-[var(--color-ink-muted)]">
-                Grades are set before we check for any commission.{' '}
+                Grades come from the published evidence, and nobody pays to be graded.{' '}
                 <Link href={methodHref} className="font-semibold text-[var(--color-link)] underline">
                   How we grade
                 </Link>

@@ -28,18 +28,17 @@ cta_profile: site_none
 hub: null
 sources: []
 related: [/evidence/how-we-grade/, /evidence/updates/, /evidence/products-we-wont-recommend/, /evidence/sources/, /about/how-we-make-money/]
-affiliate_disclosure: false
 ---
 
 We believe women seeking menopause information deserve scientific accuracy without hype, fear, or unverified claims.
 
 ## Evidence sections
 
-- [Editorial policy](/evidence/editorial-policy/): Our standards for primary source verification, clinical review honesty, and commercial independence.
+- [Editorial policy](/evidence/editorial-policy/): Our standards for primary source verification and clinical review honesty.
 - [How we grade evidence](/evidence/how-we-grade/): Our complete methodology for ranking trials, systematic reviews, and consensus guidelines.
 - [What&apos;s changed: updates log](/evidence/updates/): Real-time records of regulatory label actions, newly reviewed studies, and editorial corrections.
-- [How we make money](/about/how-we-make-money/): Full commercial disclosures explaining our strict editorial separation between evidence ratings and affiliate partnerships.
-- [Products we won't recommend](/evidence/products-we-wont-recommend/): The categories we reject outright, regardless of commission.
+- [How MenoVerdict is funded](/about/how-we-make-money/): Free, with no ads and no sponsors. Nobody pays to be mentioned or graded.
+- [Products the evidence doesn't support](/evidence/products-we-wont-recommend/): Categories of menopause product the evidence doesn't back, as they're commonly marketed.
 - [Our sources](/evidence/sources/): Every regulator label, guideline, and study in our registry, in one place, linked to the pages that cite it.
 - [Interactive tools](/tools/): Free, on-device symptom tracking and appointment checklists that follow our non-diagnostic safety rules.
 

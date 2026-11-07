@@ -43,7 +43,6 @@ cta_profile: specialist_group
 hub: /groups/
 sources: [appiah-menopause-age-trends-2021, nice-ng23-recommendations, nams-2022-hormone-therapy, lifeline-988, samaritans-contact]
 related: [/groups/, /groups/premature-ovarian-insufficiency/, /perimenopause/age/, /postmenopause/bone-health/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: What counts as early menopause?
     a: "In the research behind this page, 'early menopause' specifically means natural menopause occurring between ages 40 and 45. Menopause before age 40 is a different diagnosis, premature ovarian insufficiency (POI), with its own diagnostic criteria."

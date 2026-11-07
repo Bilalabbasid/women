@@ -32,7 +32,6 @@ cta_profile: cancer_history
 hub: /groups/
 sources: [overbeek-chemotherapy-ovarian-function-2017]
 related: [/groups/, /groups/breast-cancer-survivors/, /groups/premature-ovarian-insufficiency/, /groups/early-menopause/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Will chemotherapy definitely cause menopause?
     a: "Not necessarily — it depends heavily on which drugs you're receiving and your age. A systematic review of 45 studies found amenorrhoea rates after chemotherapy ranged anywhere from 0% to 83%, depending on the specific regimen. Alkylating agents (particularly procarbazine and busulfan) carry the highest risk, and older age at the time of treatment also increases risk. Younger women and those on lower-risk regimens are more likely to keep or regain ovarian function."

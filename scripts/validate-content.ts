@@ -8,7 +8,6 @@
  *  - a frontmatter claim has no source, or a [@citation] isn't listed in `sources`
  *  - two published pages share a primary keyword without an explicit override
  *  - titles or descriptions are missing or duplicated, or the body contains an H1
- *  - a page has /go/ affiliate links without affiliate_disclosure
  *  - banned phrases appear without a reasoned override
  *  - a published page's review date has passed (the owner must update or unpublish)
  *  - a content URL collides with a code route or the private tracker
@@ -84,8 +83,6 @@ for (const page of store.pages) {
   for (const id of rendered.citations) {
     if (!fm.sources.includes(id)) r.error(file, `body cites [@${id}] but it is not in the page's sources list`);
   }
-  const goLinks = rendered.links.filter((l) => l.sponsored);
-  if (goLinks.length && !fm.affiliate_disclosure) r.error(file, 'has /go/ affiliate links but affiliate_disclosure is false');
   if (rendered.text.split(/\s+/).length < 40 && fm.page_type !== 'hub') r.warn(file, 'body is very short');
 
   // Banned phrases across everything a reader sees.
@@ -104,7 +101,7 @@ for (const page of store.pages) {
   }
 
   // Structure.
-  if ((STATIC_PUBLIC_PATHS as readonly string[]).includes(page.url) || page.url.startsWith('/app/') || page.url.startsWith('/go/')) {
+  if ((STATIC_PUBLIC_PATHS as readonly string[]).includes(page.url) || page.url.startsWith('/app/')) {
     r.error(file, `URL ${page.url} is reserved for a code route or the private tracker`);
   }
   if (fm.hub && !allPaths.has(fm.hub) && !(STATIC_PUBLIC_PATHS as readonly string[]).includes(fm.hub)) {

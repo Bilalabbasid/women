@@ -33,7 +33,6 @@ cta_profile: care_access
 hub: /care/
 sources: [goodrx-estradiol-pricing-2026, midi-health-own-site-2026, evernow-own-site-2026, alloy-own-site-2026]
 related: [/care/, /care/insurance/, /compare/, /treatments/hormone-therapy/types/, /tools/treatment-questions/]
-affiliate_disclosure: true
 faq:
   - q: What does hormone therapy actually cost without insurance?
     a: "It depends heavily on the form. As of November 2026, GoodRx listed US retail prices for a month's supply of generic estradiol patches at roughly $37-69, depending on dose. Gel pricing was far less consistent, ranging from about $39 up to $545 for some dose/quantity combinations — pricing for topical hormone products can vary unusually widely by exact strength and pharmacy, so always check the specific product and dose you've been prescribed rather than assuming one number applies broadly."

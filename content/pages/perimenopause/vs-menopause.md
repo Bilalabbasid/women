@@ -36,7 +36,6 @@ cta_profile: learn_stage
 hub: /perimenopause/
 sources: [straw-10-2012, nice-ng23-recommendations, nhs-postmenopausal-bleeding]
 related: [/perimenopause/, /menopause/, /tools/stage-guide/, /tools/12-month-counter/]
-affiliate_disclosure: false
 faq:
   - q: Is perimenopause the same as menopause?
     a: No. Perimenopause is the multi-year transition when hormone levels fluctuate and cycles shift. Menopause is the milestone reached once you have gone 12 consecutive months with no menstrual period.

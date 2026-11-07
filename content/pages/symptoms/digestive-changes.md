@@ -30,7 +30,6 @@ cta_profile: general_symptom
 hub: /symptoms/
 sources: [heitkemper-chang-ibs-hormones-2009]
 related: [/symptoms/, /symptoms/bloating/, /symptoms/weight-gain/, /does-it-work/probiotics/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Can menopause really change your digestion?
     a: "Many women report new or changed digestive symptoms — constipation, looser stools, reflux, or an existing IBS getting worse — around perimenopause. A 2009 literature review found GI symptoms increase during perimenopause in women with and without IBS, and proposes fluctuating ovarian hormones as a possible contributor. But the researchers are explicit that this mechanism isn't established and needs more confirmatory research, so treat it as a real, common pattern without one settled explanation."

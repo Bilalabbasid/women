@@ -37,7 +37,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [nams-2023-nonhormone-therapy, nams-2022-hormone-therapy, lethaby-cochrane-phytoestrogens-2013]
 related: [/does-it-work/, /does-it-work/black-cohosh/, /does-it-work/red-clover/, /treatments/nonhormonal/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: Why does The Menopause Society not recommend soy isoflavone supplements for hot flashes?
     a: Across randomized controlled trials, soy extracts and S-equol showed mixed, modest results that did not consistently outperform placebo enough to be recommended as a clinical treatment for vasomotor symptoms (Level II).

@@ -31,7 +31,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [nams-2023-nonhormone-therapy]
 related: [/does-it-work/, /symptoms/night-sweats/, /symptoms/hot-flashes/, /treatments/]
-affiliate_disclosure: false
 ---
 
 Magnesium is widely promoted on social media as an all-in-one remedy for menopause sleep, anxiety, and hot flashes. The clinical reality is more nuanced: while magnesium supports muscle relaxation and can modestly improve subjective sleep quality, peer-reviewed trials show limited evidence that it reduces nocturnal hot flashes or resolves severe perimenopause insomnia [@nams-2023-nonhormone-therapy].

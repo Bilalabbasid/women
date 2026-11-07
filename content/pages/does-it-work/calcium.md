@@ -36,7 +36,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [uspstf-vitamin-d-calcium-fractures-2018]
 related: [/does-it-work/, /does-it-work/vitamin-d/, /postmenopause/bone-health/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: Do calcium supplements protect bones after menopause?
     a: "At commonly used doses, the USPSTF recommends against calcium supplementation (1,000mg or less daily, combined with vitamin D) specifically for fracture prevention, citing moderate certainty of no net benefit. At higher doses, the evidence is currently insufficient to judge either way."

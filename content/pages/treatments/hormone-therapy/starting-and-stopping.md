@@ -42,7 +42,6 @@ cta_profile: hrt_evaluating
 hub: /treatments/hormone-therapy/
 sources: [nice-ng23-recommendations]
 related: [/treatments/hormone-therapy/, /treatments/hormone-therapy/side-effects/, /treatments/hormone-therapy/timing/, /postmenopause/bleeding/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: What should I expect in the first few months of starting HRT?
     a: "NICE guidance recommends starting at the lowest effective dose, with a formal review at 3 months to check how well it's working and how you're tolerating it. Some bleeding is common during the first 6 months, or within 3 months of any dose change, as your body adjusts."

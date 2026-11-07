@@ -1,7 +1,7 @@
 ---
-title: "How we make money"
-seo_title: How we make money and editorial independence
-meta_description: "Clear disclosure of our revenue model: affiliate links, clear editorial separation, and why commissions never change evidence grades."
+title: "How MenoVerdict is funded"
+seo_title: How MenoVerdict is funded
+meta_description: "MenoVerdict is free. There are no ads, no affiliate links and no sponsors, and nobody pays to be mentioned or graded."
 cluster: site
 primary_keyword: how we make money
 slug: how-we-make-money
@@ -17,43 +17,26 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
-  - { date: "2026-11-06", summary: "Initial commercial disclosure policy", material: true }
+  - { date: "2026-11-06", summary: "First version of this page", material: true }
+  - { date: "2026-11-07", summary: "Rewritten: MenoVerdict is free, with no ads or sponsors", material: true }
 evidence_grade: null
 claims: []
 safety_flags: []
 cta_profile: site_none
 hub: null
 sources: []
-related: [/privacy/, /evidence/how-we-grade/, /medical-disclaimer/]
-affiliate_disclosure: false
+related: [/about/, /evidence/editorial-policy/, /evidence/how-we-grade/]
 ---
 
-We believe that readers deserve complete transparency regarding how health publications earn revenue. Trust is built through honest reporting and strict commercial boundaries.
+MenoVerdict is free. There are no ads, no affiliate links and no sponsors on this site, and nobody pays to be mentioned or graded.
 
-## 1. Affiliate partnerships & Amazon Associate disclosure
+## What that means for you
 
-As an Amazon Associate we earn from qualifying purchases.
+- Every article and every tool is free to use, with no login.
+- We don't sell or recommend products to buy, and no link on this site earns us money.
+- Evidence grades come from published research and clinical guidelines alone. You can read [how we grade the evidence](/evidence/how-we-grade/) and our [editorial policy](/evidence/editorial-policy/).
+- Your tracker data stays on your device. See our [privacy policy](/privacy/).
 
-When you click on certain product recommendation links (such as cooling sleepwear, pelvic floor exercise devices, books, or lubricants) and make a purchase, we may earn an affiliate commission from the retailer or merchant.
-
-We don't track clicks or set cookies ourselves. Once you click through, the retailer or service may set its own cookies on its own site so it can credit the sale; its privacy and cookie policies apply there.
-
-Every commercial link on this website:
-- Carries a clear visible notice: &ldquo;Paid link: we may earn a commission. We aren't doctors.&rdquo;
-- Links straight to the retailer URL without link-cloaking or internal redirect tricks, using `rel="sponsored nofollow noopener"` as required by search engine, FTC, and retailer guidelines.
-- Never displays dynamic pricing, star ratings, or copied customer reviews that could become inaccurate or misleading.
-- Sits below the objective clinical answer and evidence assessment, never in urgent health sections, emergency guidance, or cancer/bleeding articles.
-
-## 2. Editorial separation: evidence before commission
-
-Our evidence grades are determined strictly by clinical trial literature, meta-analyses, and medical society guidelines before any commercial relationships are established.
-
-- **Commissions never change an evidence grade**: A supplement with poor trial evidence will remain graded **Not supported** regardless of affiliate commissions.
-- **No banned-offer monetization**: We never recommend products with harm concerns, unverified health claims, or fake clinical trials.
-- **No paid reviews**: We do not accept sponsored posts, paid positive reviews, or brand-dictated editorial copy.
-
-## 3. Our long-term commitment
-
-We exist to answer real questions and solve real problems for women experiencing perimenopause and menopause. Read more in our [editorial policy](/evidence/editorial-policy/), see [how we grade clinical evidence](/evidence/how-we-grade/), and explore our [free on-device menopause tools](/tools/). If a product does not serve your real-world comfort or clinical care, it has no place on this site.
+If that ever changes, we'll say so on this page first.

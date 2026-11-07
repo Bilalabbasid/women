@@ -30,7 +30,6 @@ cta_profile: general_symptom
 hub: /symptoms/
 sources: [baharvand-burning-mouth-syndrome-2013]
 related: [/symptoms/, /symptoms/dry-itchy-skin/, /symptoms/vaginal-dryness/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Is burning mouth a real menopause symptom?
     a: "Yes — burning, tingling, or scalded sensations in the mouth without a visible cause are a recognized condition called burning mouth syndrome (BMS), and a study of dental patients found menopause had a significant association with it (odds ratio 4.45). BMS is diagnosed by ruling out other causes, such as an oral infection, nutritional deficiency, or dental problem, since there's no single visible sign that confirms it on exam."

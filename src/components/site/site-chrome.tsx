@@ -90,7 +90,7 @@ const TRUST_LINKS: Array<{ href: string; label: string }> = [
   { href: '/about/', label: 'About' },
   { href: '/evidence/editorial-policy/', label: 'Editorial Policy' },
   { href: '/evidence/how-we-grade/', label: 'Evidence Grading Method' },
-  { href: '/about/how-we-make-money/', label: 'Affiliate Disclosure' },
+  { href: '/about/how-we-make-money/', label: "How we're funded" },
   { href: '/evidence/updates/', label: 'Corrections' },
 ];
 
@@ -158,7 +158,7 @@ export function SiteFooter({
             <p className="font-serif text-xl font-medium text-white">{SITE.tagline}</p>
             <p className="max-w-sm text-sm leading-relaxed text-[#cfe2da]">
               Independent, evidence-graded information on perimenopause and menopause. Every claim graded, every
-              source linked, every commission disclosed.
+              source linked. Free, with no ads and no sponsors.
             </p>
             <Link
               href="/urgent-help/"
@@ -189,7 +189,6 @@ export function SiteFooter({
             © {new Date().getFullYear()} {SITE.name}
             {SITE.legalEntity ? ` · Operated by ${SITE.legalEntity}` : ''}
           </p>
-          <p>As an Amazon Associate we earn from qualifying purchases.</p>
         </div>
       </div>
     </footer>

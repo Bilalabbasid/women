@@ -37,7 +37,6 @@ cta_profile: learn_stage
 hub: null
 sources: [straw-10-2012, nice-ng23-recommendations, nams-2022-hormone-therapy, nhs-postmenopausal-bleeding]
 related: [/menopause/diagnosis/, /menopause/how-long-symptoms-last/, /menopause/age/, /perimenopause/vs-menopause/, /tools/12-month-counter/]
-affiliate_disclosure: false
 faq:
   - q: How do I know when I have officially reached menopause?
     a: Natural menopause is confirmed retrospectively once you have gone 12 consecutive months without a menstrual period (when not using hormonal contraception and with no other medical cause).

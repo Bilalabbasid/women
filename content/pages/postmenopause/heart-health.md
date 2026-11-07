@@ -39,7 +39,6 @@ cta_profile: learn_stage
 hub: /postmenopause/
 sources: [khalifey-hrt-cardiovascular-2026, nice-ng23-recommendations]
 related: [/postmenopause/, /postmenopause/bone-health/, /treatments/hormone-therapy/is-it-right-for-me/, /treatments/hormone-therapy/blood-clot-risk/, /symptoms/heart-palpitations/, /does-it-work/exercise/]
-affiliate_disclosure: false
 faq:
   - q: Does menopause itself cause heart disease?
     a: "Menopause doesn't cause heart disease directly, but cardiovascular risk rises significantly around this time of life. A 2026 review notes the proportion of women at intermediate-to-high cardiovascular risk nearly doubles between ages 51 and 55, and that risk is linked to aging, the loss of estrogen's effects on blood vessels, and other factors that tend to cluster at midlife (blood pressure, cholesterol, weight)."

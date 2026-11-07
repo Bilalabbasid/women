@@ -29,7 +29,6 @@ cta_profile: care_access
 hub: null
 sources: [nams-2022-hormone-therapy, nice-ng23]
 related: [/care/find-a-menopause-specialist/, /care/when-your-doctor-dismisses-you/, /care/insurance/, /care/hrt-cost/, /symptoms/, /treatments/, /tools/symptom-tracker/, /perimenopause/]
-affiliate_disclosure: false
 ---
 
 Getting effective menopause care starts with knowing your options, understanding what the evidence supports, and having practical tools to communicate with healthcare providers [@nams-2022-hormone-therapy]. 
@@ -43,7 +42,7 @@ Whether you are preparing for a first discussion about hormone therapy, looking 
 - **[Vaginal moisturisers and lubricants](/care/moisturizers-and-lubricants/)**: How continuous tissue hydrators and intercourse lubricants differ, how to choose pH-balanced formulas, and when prescription treatment is needed.
 - **[Evidence-based menopause books](/care/menopause-books/)**: Thorough reviews of doctor-authored guides that break down the science of perimenopause, hormones, and fitness without wellness marketing.
 - **[How to do pelvic floor exercises correctly](/care/pelvic-floor-exercises/)**: A step-by-step method for muscle training at home, common mistakes to avoid, and guidance on biofeedback devices.
-- **[Best sleepwear for night sweats](/care/sleepwear-for-night-sweats/)**: How breathable moisture-wicking fabrics help manage post-sweat chills and nighttime comfort.
+- **[How to choose sleepwear for night sweats](/care/sleepwear-for-night-sweats/)**: How breathable moisture-wicking fabrics help manage post-sweat chills and nighttime comfort.
 - **[Does insurance cover menopause care?](/care/insurance/)**: What a 2026 study found about Medicaid vs. private insurance and hormone therapy access.
 - **[How much does HRT cost?](/care/hrt-cost/)**: Real, dated price ranges for medication and telehealth visits, and why your number will differ.
 

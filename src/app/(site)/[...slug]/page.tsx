@@ -20,10 +20,7 @@ import { buildMetadata } from '@/lib/seo/metadata';
 import { contentPageLd, breadcrumbLd, faqLd, webApplicationLd } from '@/lib/seo/jsonld';
 import { splitContentIslands } from '@/lib/content/markdown';
 import { ToolIsland } from '@/components/tools/tool-island';
-import { ProductSlotView } from '@/components/products/product-slot';
-import { getProductSlot } from '@/lib/products/slots';
 import { SourcesList } from '@/components/site/sources-list';
-import { ProductBlock } from '@/components/products/product-block';
 import { HonestyNotice } from '@/components/site/honesty-notice';
 import { PRICES_CHECKED, formatCheckedDate } from '@/lib/site/honesty';
 import { lastCheckedDate } from '@/lib/content/schema';
@@ -89,18 +86,6 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
   const parts = splitContentIslands(rendered.html);
   const firstToolIndex = parts.findIndex((p) => p.type === 'tool' && isToolLive(p.tool));
   const hasTool = firstToolIndex >= 0;
-  // Which paid-link networks actually appear on this page. The disclosure (and its
-  // Amazon sentence) shows only for links really present, not for a frontmatter flag.
-  const paidNetworks = new Set<'amazon' | 'other'>();
-  for (const p of parts) {
-    if (p.type === 'product') paidNetworks.add('amazon');
-    if (p.type === 'product-slot') {
-      const slot = getProductSlot(p.slot);
-      const active = slot?.status === 'filled' ? (slot.products ?? []).filter((x) => x.active) : [];
-      for (const prod of active) paidNetworks.add(/amazon\./i.test(prod.url) ? 'amazon' : 'other');
-    }
-  }
-  if (/rel="[^"]*\bsponsored\b/.test(rendered.html)) paidNetworks.add('other');
   const toolHero = fm.page_type === 'tool' ? TOOL_HEROES[page.url] : undefined;
   const isArticle = !toolHero && !isNavHub;
   const sectionHeadings = rendered.headings.filter((h) => h.depth === 2 && h.id !== 'references');
@@ -176,18 +161,6 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
         )}
         {isNavHub && children.length > 0 && <HubDirectory pages={children} heading="Guides in this section" />}
 
-        {/* Out of the header so it isn't the very first thing under the H1, but still ahead of every
-            part below — including the first paid link, if any — per the FTC-grounded "disclose before
-            the link, not behind it" rule in AGENTS.md. */}
-        {paidNetworks.size > 0 && (
-          <p role="note" data-disclosure="affiliate" className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-3 text-xs leading-relaxed text-[var(--color-ink-muted)]">
-            <strong>Disclosure:</strong> this page contains paid links, which are labeled. We may earn a commission if you use
-            them. That never changes an evidence grade or a ranking.
-            {paidNetworks.has('amazon') && ' As an Amazon Associate we earn from qualifying purchases.'} Once you click through,
-            the retailer may set its own cookies.
-          </p>
-        )}
-
         {parts.map((part, i) => {
           if (part.type === 'tool') {
             const first = i === firstToolIndex;
@@ -198,8 +171,6 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
               </div>
             );
           }
-          if (part.type === 'product-slot') return <ProductSlotView key={`slot-${i}`} id={part.slot} />;
-          if (part.type === 'product') return <ProductBlock key={`product-${i}`} id={part.product} />;
           if (part.type === 'sources-list') return <SourcesList key={`sources-${i}`} sources={store.sources} pages={indexablePages(store)} />;
           // The opening paragraph is the page's stand-alone answer (symptom
           // "quick answer", does-it-work verdict, comparison "quick answer: ...").

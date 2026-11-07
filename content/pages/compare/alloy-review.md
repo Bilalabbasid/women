@@ -35,7 +35,6 @@ cta_profile: care_comparison
 hub: /compare/
 sources: [alloy-own-site-2026]
 related: [/compare/, /treatments/hormone-therapy/, /treatments/hormone-therapy/patch-vs-pill/, /tools/treatment-questions/]
-affiliate_disclosure: false
 noindex: true
 faq:
   - q: Does Alloy accept insurance?
@@ -44,7 +43,7 @@ faq:
     a: "No. Alongside hormone therapy, Alloy's site also sells skincare, sexual health products, GLP-1 weight-care treatment, hair/lash/brow treatments, and a gut-health supplement — it's a broader midlife wellness product line, not only HRT. Be clear with yourself about which category you're actually signing up for."
 ---
 
-**What it is:** Alloy is a direct-to-consumer telehealth company offering hormone therapy and a range of other midlife wellness products, with care from board-certified physicians who the company describes as menopause-specialized. We reviewed Alloy's own site directly; this isn't a paid placement, and nothing here is ranked by commission.
+**What it is:** Alloy is a direct-to-consumer telehealth company offering hormone therapy and a range of other midlife wellness products, with care from board-certified physicians who the company describes as menopause-specialized. We reviewed Alloy's own site directly; this isn't a paid placement, and nobody pays to be reviewed here.
 
 ## What Alloy actually offers
 

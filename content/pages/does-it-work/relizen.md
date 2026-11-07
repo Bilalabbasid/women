@@ -34,7 +34,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [acquarulo-pollen-extract-vms-metaanalysis-2024, relizen-own-site-2026]
 related: [/does-it-work/, /does-it-work/black-cohosh/, /symptoms/hot-flashes/, /treatments/nonhormonal/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: Does Relizen actually reduce hot flashes?
     a: "A 2024 systematic review and meta-analysis of this exact ingredient category (purified pollen extract, which includes Relizen) found that when all available studies were pooled, there were significant improvements — but when the analysis was limited to only the placebo-controlled studies, those improvements were no longer statistically significant. The reviewers concluded the apparent benefit seen in uncontrolled studies may have been a placebo effect, though they also found no significant safety concerns."
@@ -62,7 +61,7 @@ That distinction matters a lot. A survey of people who were already loyal, payin
 
 - **No proven benefit over placebo** once controlled trials are isolated, per the most recent independent meta-analysis
 - **No significant safety concerns** were identified — this isn't a safety warning, just an efficacy one
-- Because our grade is :grade{id="relizen-vms"}, we don't place affiliate links for Relizen on this page — see [how we grade evidence](/evidence/how-we-grade/) and [products we won't recommend](/evidence/products-we-wont-recommend/)
+- Our grade is :grade{id="relizen-vms"} — see [how we grade evidence](/evidence/how-we-grade/) and [products the evidence doesn't support](/evidence/products-we-wont-recommend/)
 
 If you're looking for hot flash options with stronger controlled-trial evidence, see our [does it work? evidence checker](/tools/does-it-work-checker/) or [non-hormonal prescription and behavioral treatments](/treatments/nonhormonal/).
 

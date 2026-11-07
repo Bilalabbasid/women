@@ -30,7 +30,6 @@ cta_profile: general_symptom
 hub: /symptoms/
 sources: [liu-menopausal-symptoms-nurses-2015]
 related: [/symptoms/, /symptoms/heart-palpitations/, /symptoms/anxiety/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Is tingling or crawling-skin a real menopause symptom?
     a: "Yes — tingling and numbness sensations (paresthesiae) and a crawling or prickling skin sensation (formication) are both recognized, commonly reported menopause symptoms. A survey of 2,100 middle-aged nurses found menopausal status was the single strongest factor associated with menopausal symptoms overall, including these two, alongside hot flashes, insomnia, and joint aches. The exact mechanism in the nervous system isn't fully mapped out, but the symptom pattern itself is well documented."

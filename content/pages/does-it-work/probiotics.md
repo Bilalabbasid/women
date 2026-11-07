@@ -31,7 +31,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [wang-probiotics-bone-health-metaanalysis-2024]
 related: [/does-it-work/, /symptoms/digestive-changes/, /postmenopause/bone-health/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: Do probiotics actually help bone density after menopause?
     a: "This is a case where the evidence is better than many people expect. A 2024 meta-analysis of 12 randomized controlled trials (1,183 postmenopausal women) found probiotic supplementation significantly increased bone mineral density at both the lumbar spine and hip compared with controls, with the effect more pronounced in women with osteopenia (earlier bone loss) than full osteoporosis. That's a genuinely encouraging, moderate-strength finding — though the review authors still call for more research to confirm and refine the specific strains and doses that work best."

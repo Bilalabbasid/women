@@ -85,7 +85,7 @@ export function SourcesList({ sources, pages }: { sources: Map<string, Source>; 
                   <li key={s.id} className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4">
                     <p className="font-semibold">
                       {href ? (
-                        <a href={href} className="text-[var(--color-link)] underline">
+                        <a href={href} rel="noopener" className="text-[var(--color-link)] underline">
                           {s.title}
                         </a>
                       ) : (

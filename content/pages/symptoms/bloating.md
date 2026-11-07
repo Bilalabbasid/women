@@ -30,7 +30,6 @@ cta_profile: general_symptom
 hub: /symptoms/
 sources: [heitkemper-chang-ibs-hormones-2009]
 related: [/symptoms/, /symptoms/weight-gain/, /does-it-work/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Why am I so bloated in perimenopause?
     a: "Bloating is widely reported during perimenopause, and a 2009 literature review found that GI symptoms including bloating increase during this time and around menstruation, in women with and without irritable bowel syndrome. The researchers propose changing hormone levels as one possible contributor, but they are explicit that the underlying mechanism isn't yet established and needs more research — so treat this as a real, common experience without an exact, settled explanation."

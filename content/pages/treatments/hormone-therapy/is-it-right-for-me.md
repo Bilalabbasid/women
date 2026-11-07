@@ -40,7 +40,6 @@ cta_profile: hrt_evaluating
 hub: /treatments/hormone-therapy/
 sources: [nice-ng23-recommendations, nams-2022-hormone-therapy]
 related: [/treatments/hormone-therapy/, /treatments/hormone-therapy/types/, /treatments/hormone-therapy/blood-clot-risk/, /treatments/hormone-therapy/breast-cancer-risk/, /groups/breast-cancer-survivors/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Who is a good candidate for HRT?
     a: "There's no single checklist, but NICE and The Menopause Society guidance points to a more favorable benefit-risk balance for people under 60 or within 10 years of menopause onset, without contraindications like a personal history of breast cancer, active liver disease, or unexplained vaginal bleeding. Beyond that, it comes down to your specific symptoms and personal and family health history."

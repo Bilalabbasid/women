@@ -33,7 +33,6 @@ cta_profile: genitourinary_vaginal
 hub: /postmenopause/
 sources: [trento-postmenopausal-sexual-function-2021, silva-sexual-counseling-metaanalysis-2022]
 related: [/postmenopause/, /symptoms/low-libido/, /symptoms/painful-sex/, /symptoms/vaginal-dryness/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Is it normal to lose interest in sex after menopause?
     a: "It's genuinely common, but 'normal' doesn't mean nothing can be done. A study of 380 postmenopausal women found 64% were at risk of some degree of sexual dysfunction, with desire, comfort, orgasm, and satisfaction all commonly affected. The same study found specific factors — sleep problems, depressed mood, sexual complaints generally, and vaginal dryness — were strongly linked to a higher chance of difficulty, which means there are concrete, addressable targets rather than one vague 'hormones' explanation."

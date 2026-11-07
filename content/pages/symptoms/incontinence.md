@@ -21,6 +21,7 @@ updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Initial publication covering stress vs urge incontinence and pelvic floor rehabilitation", material: true }
   - { date: "2026-11-07", summary: "Removed an unsourced 'up to 50%' figure; replaced with NICE guidance on checking technique", material: true }
+  - { date: "2026-11-07", summary: "Removed product recommendations; the guidance is unchanged", material: true }
 evidence_grade: per_option
 claims:
   - id: incontinence-pfmt-firstline
@@ -34,7 +35,6 @@ cta_profile: urinary
 hub: /symptoms/
 sources: [nice-ng123-urinary-incontinence, cochrane-pfmt-incontinence, nams-2020-gsm, nhs-heart-palpitations]
 related: [/care/pelvic-floor-exercises/, /symptoms/, /symptoms/vaginal-dryness/, /tools/symptoms-checklist/]
-affiliate_disclosure: true
 ---
 
 As outlined in our [menopause symptoms overview](/symptoms/), bladder leaks during perimenopause and menopause happen because declining estrogen weakens the urethral lining while pelvic floor muscles lose tone and collagen support [@nams-2020-gsm]. Leaks are not an unavoidable consequence of aging: structured pelvic floor muscle training is recommended by medical guidelines as the first-line treatment and helps up to 80% of women reduce or completely resolve leaking [@nice-ng123-urinary-incontinence, @cochrane-pfmt-incontinence].
@@ -68,9 +68,7 @@ Cochrane systematic reviews confirm that women who undertake structured pelvic f
 
 For muscle training to work, exercises must be performed correctly: lifting upward and inward rather than pushing outward or bearing down. NICE advises a routine internal (digital) check to confirm a correct pelvic floor contraction before starting supervised training [@nice-ng123-urinary-incontinence]. 
 
-App-connected biofeedback devices help ensure you contract the correct muscles and track your strength progression at home.
-
-<Product id="elvie-trainer" />
+App-connected biofeedback devices can help you check that you are contracting the right muscles and track your progress at home, and a pelvic floor physiotherapist can give you the same feedback in the clinic.
 
 For detailed exercise instructions, read our companion guide on [how to do pelvic floor exercises correctly](/care/pelvic-floor-exercises/).
 

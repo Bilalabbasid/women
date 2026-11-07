@@ -36,7 +36,6 @@ cta_profile: learn_stage
 hub: /postmenopause/
 sources: [nams-2022-hormone-therapy, liftmor-trial-bone-density, nice-ng23]
 related: [/postmenopause/, /does-it-work/exercise/, /treatments/hormone-therapy/, /groups/premature-ovarian-insufficiency/]
-affiliate_disclosure: false
 faq:
   - q: Does walking alone rebuild bone density after menopause?
     a: Walking is great for general cardiovascular health, but bone remodeling responds to heavier mechanical loading. In the LIFTMOR randomized trial, supervised high-intensity resistance and impact training (HiRIT) significantly improved spine and hip bone mineral density compared to low-intensity home exercise.

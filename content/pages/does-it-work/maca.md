@@ -30,7 +30,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [lee-maca-menopause-systematic-review-2011]
 related: [/does-it-work/, /does-it-work/black-cohosh/, /does-it-work/ashwagandha/, /symptoms/hot-flashes/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: Does maca root help with menopause symptoms?
     a: "A 2011 systematic review found all 4 available randomized controlled trials showed a favorable effect on menopausal symptom scores. That sounds promising, but the reviewers themselves concluded the evidence is limited, because there were so few trials, the total number of women studied was small, and the trials had methodological quality issues. They explicitly said the evidence isn't strong enough to draw firm conclusions, and that safety hasn't yet been proven."

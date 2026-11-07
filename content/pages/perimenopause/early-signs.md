@@ -33,7 +33,6 @@ cta_profile: learn_stage
 hub: /perimenopause/
 sources: [straw-10-2012, nice-ng23-recommendations, nhs-heavy-periods]
 related: [/perimenopause/, /perimenopause/questions-for-your-doctor/, /symptoms/, /tools/symptoms-checklist/]
-affiliate_disclosure: false
 ---
 
 Many women expect perimenopause to begin with dramatic hot flashes and stopped periods. As discussed in our [perimenopause guide](/perimenopause/), the earliest indicators are often subtle and non-physical: waking suddenly at 3 a.m. with your mind spinning, finding that small annoyances provoke intense frustration, or noticing that your cycle has shortened from 28 days to 24 days [@straw-10-2012].

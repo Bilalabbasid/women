@@ -40,7 +40,6 @@ cta_profile: tool
 hub: /tools/
 sources: [nice-ng23-recommendations, nams-2022-hormone-therapy, nams-2023-nonhormone-therapy, fda-mht-labeling-request-2025, fda-mht-labeling-changes-2026, veozah-prescribing-information, nams-2020-gsm, nice-ng123-urinary-incontinence, nhs-postmenopausal-bleeding, nhs-heart-palpitations, lifeline-988, samaritans-contact]
 related: [/treatments/hormone-therapy/is-it-right-for-me/, /treatments/hormone-therapy/boxed-warning/, /perimenopause/questions-for-your-doctor/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: "What questions should I ask my doctor before starting HRT?"
     a: "Useful starting points are how the benefits and risks look for your age and time since your last period, which type and route (patch, gel, spray or tablet) suits your health history, whether you need a progestogen to protect the womb lining, what side effects or bleeding to expect, and when you'll review how it's working. Tick the topics above and the builder lists the questions for you."

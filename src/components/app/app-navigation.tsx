@@ -43,18 +43,27 @@ export function AppNavigation() {
         </ul>
       </nav>
 
-      <nav aria-label="Tracker" className="tab-top no-print hidden md:block">
-        <ul>
-          {NAV_ITEMS.map(({ href, label, icon: I }) => (
-            <li key={href}>
-              <Link href={href} aria-current={isActive(href) ? 'page' : undefined}>
-                <I />
-                <span>{label}</span>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
     </>
+  );
+}
+
+/** Tablet/desktop tabs: rendered inside the app header (under the title row). */
+export function AppTopTabs() {
+  const rawPath = usePathname() ?? '/';
+  const pathname = rawPath.endsWith('/') ? rawPath : `${rawPath}/`;
+  const isActive = (href: string) => pathname === href || (href !== '/app/today/' && pathname.startsWith(href));
+  return (
+    <nav aria-label="Tracker" className="tab-top hidden md:block">
+      <ul>
+        {NAV_ITEMS.map(({ href, label, icon: I }) => (
+          <li key={href}>
+            <Link href={href} aria-current={isActive(href) ? 'page' : undefined}>
+              <I />
+              <span>{label}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }

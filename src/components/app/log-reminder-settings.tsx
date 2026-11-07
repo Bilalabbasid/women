@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { LocalDataService } from '@/lib/db/service';
-import { btnSecondary, field } from '@/components/storage/styles';
+import { QuickPick } from '@/components/app/kit';
 import {
   APPOINTMENT_KEY,
   APPOINTMENT_LEAD_DAYS,
@@ -51,7 +51,13 @@ export function LogReminderSettings() {
     });
   }, []);
 
-  if (!settings) return <p className="text-sm text-[var(--color-ink-muted)]">Loading…</p>;
+  if (!settings)
+    return (
+      <div className="grid gap-3" aria-busy="true" aria-label="Loading your reminder settings">
+        <span className="skeleton h-12 w-full" />
+        <span className="skeleton h-5 w-2/3" />
+      </div>
+    );
 
   const save = async (next: Settings) => {
     setSettings(next);
@@ -66,32 +72,26 @@ export function LogReminderSettings() {
   };
 
   return (
-    <div className="space-y-5">
-      <fieldset className="space-y-3">
-        <legend className="font-semibold text-[var(--color-ink)]">Reminder to log</legend>
-        <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="How often">
-          {FREQUENCIES.map((f) => (
-            <label key={f.value} className={`${btnSecondary} cursor-pointer ${settings.frequency === f.value ? 'border-[var(--color-accent)] bg-[var(--color-accent-soft)]' : ''}`}>
-              <input
-                type="radio"
-                name="log-frequency"
-                value={f.value}
-                checked={settings.frequency === f.value}
-                onChange={() => void save({ ...settings, frequency: f.value })}
-                className="sr-only"
-              />
-              {f.label}
-            </label>
-          ))}
-        </div>
+    <div className="grid gap-6">
+      <fieldset className="grid min-w-0 gap-3 border-0 p-0">
+        <legend className="label mb-1">Reminder to log</legend>
+        <QuickPick
+          label="How often"
+          options={FREQUENCIES}
+          value={settings.frequency}
+          onChange={(v) => void save({ ...settings, frequency: v })}
+        />
 
         {settings.frequency !== 'off' && (
           <div className="grid gap-3 sm:grid-cols-2">
             {settings.frequency === 'weekly' && (
-              <label className="block text-sm">
-                <span className="font-semibold">Day</span>
+              <div className="field">
+                <label className="label" htmlFor="reminder-day">
+                  Day
+                </label>
                 <select
-                  className={field}
+                  id="reminder-day"
+                  className="select"
                   value={settings.weekday}
                   onChange={(e) => void save({ ...settings, weekday: Number(e.target.value) })}
                 >
@@ -101,29 +101,32 @@ export function LogReminderSettings() {
                     </option>
                   ))}
                 </select>
-              </label>
+              </div>
             )}
-            <label className="block text-sm">
-              <span className="font-semibold">Time</span>
+            <div className="field">
+              <label className="label" htmlFor="reminder-time">
+                Time
+              </label>
               <input
+                id="reminder-time"
                 type="time"
-                className={field}
+                className="input"
                 value={settings.time}
                 onChange={(e) => e.target.value && void save({ ...settings, time: e.target.value })}
               />
-            </label>
+            </div>
           </div>
         )}
 
-        <p className="text-sm text-[var(--color-ink-muted)]">
+        <p className="hint">
           The reminder shows on the Today screen when you open the app. Nothing is sent to you, because nothing about
           you is stored anywhere but this device.
         </p>
 
-        <div>
+        <div className="grid gap-1">
           <button
             type="button"
-            className={btnSecondary}
+            className="btn btn-secondary justify-self-start"
             onClick={() =>
               downloadText(
                 buildWeeklyReminderIcs(settings.weekday, settings.time, window.location.origin),
@@ -132,31 +135,47 @@ export function LogReminderSettings() {
               )
             }
           >
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" />
+              <path d="M3.5 10h17M8 3v4M16 3v4M12 13v5M9.5 15.5h5" />
+            </svg>
             Add a weekly reminder to my calendar
           </button>
-          <p className="mt-1 text-sm text-[var(--color-ink-muted)]">
+          <p className="hint">
             Downloads a calendar file for {weekdayName(settings.weekday)}s at {settings.time}. Your calendar app does the
             reminding. The file holds only a title and a link.
           </p>
         </div>
       </fieldset>
 
-      <fieldset className="space-y-2">
-        <legend className="font-semibold text-[var(--color-ink)]">Next appointment</legend>
-        <label className="block text-sm">
-          <span>Date</span>
-          <input type="date" className={field} value={appointment} onChange={(e) => void saveAppointment(e.target.value)} />
-        </label>
-        <p className="text-sm text-[var(--color-ink-muted)]">
-          From {APPOINTMENT_LEAD_DAYS} days before, the Today screen reminds you to prepare your report and questions.
-        </p>
+      <fieldset className="grid min-w-0 gap-2 border-0 border-t border-[var(--rule)] p-0 pt-5">
+        <legend className="visually-hidden">Next appointment</legend>
+        <div className="field">
+          <label className="label" htmlFor="appointment-date">
+            Next appointment
+          </label>
+          <input
+            id="appointment-date"
+            type="date"
+            className="input sm:max-w-xs"
+            value={appointment}
+            onChange={(e) => void saveAppointment(e.target.value)}
+            aria-describedby="appointment-hint"
+          />
+          <span id="appointment-hint" className="hint">
+            From {APPOINTMENT_LEAD_DAYS} days before, the Today screen reminds you to prepare your report and questions.
+          </span>
+        </div>
       </fieldset>
 
-      {status && (
-        <p role="status" className="text-sm text-[var(--color-ink-muted)]">
-          {status}
-        </p>
-      )}
+      <p role="status" className={status ? 'flex items-center gap-2 font-bold text-[var(--g-strong-ink)]' : 'visually-hidden'}>
+        {status && (
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M5 12.5l4.5 4.5L19 7" />
+          </svg>
+        )}
+        {status ?? ''}
+      </p>
     </div>
   );
 }

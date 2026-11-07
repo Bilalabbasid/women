@@ -2,18 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import {
-  TrendingDown,
-  Moon,
-  Flame,
-  Info,
-  PlusCircle,
-  BarChart3,
-} from 'lucide-react';
-import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { AppHeader } from '@/components/app/app-header';
+import { AppPage, Icon, Panel, QuickPick } from '@/components/app/kit';
+import { FeelingSpread, SymptomBars, type Entry } from '@/components/app/charts';
+import { IlloEmpty } from '@/components/ui/illustrations';
 import { LocalDataService } from '@/lib/db/service';
 import { InsightsEngine, SymptomStats, SleepStats, HotFlashStats } from '@/lib/insights/calculations';
 import { localDateString, localDaysAgo } from '@/lib/utils/local-date';
@@ -23,6 +15,7 @@ export default function InsightsPage() {
   const [symptomStats, setSymptomStats] = useState<SymptomStats[]>([]);
   const [sleepStats, setSleepStats] = useState<SleepStats | null>(null);
   const [hotFlashStats, setHotFlashStats] = useState<HotFlashStats | null>(null);
+  const [entries, setEntries] = useState<Entry[]>([]);
   const [recordCount, setRecordCount] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -39,6 +32,7 @@ export default function InsightsPage() {
       if (!isMounted) return;
 
       setRecordCount(checkinsWithSymptoms.length);
+      setEntries(checkinsWithSymptoms);
 
       if (checkinsWithSymptoms.length > 0) {
         const allSymptoms = checkinsWithSymptoms.flatMap((c) => c.symptoms);
@@ -64,148 +58,123 @@ export default function InsightsPage() {
     };
   }, [selectedRange]);
 
+  const rangeOptions = [
+    { value: '30' as const, label: '30 days' },
+    { value: '60' as const, label: '60 days' },
+    { value: '90' as const, label: '90 days' },
+  ];
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <AppHeader
-        title="Insights & Trends"
-        subtitle="Verifiable local calculations"
-        showPrivacyBadge={true}
-        showSettings={true}
-      />
+    <div className="flex min-h-screen flex-col">
+      <AppHeader title="Insights" subtitle="Patterns in what you’ve logged" showPrivacyBadge={true} showSettings={true} />
 
-      <div className="flex-1 max-w-2xl mx-auto w-full px-4 py-5 space-y-6">
-        {/* Association vs Causation Guardrail Card */}
-        <Card variant="muted" className="p-4 flex items-start gap-3 text-xs text-[#554E48]">
-          <Info className="w-4 h-4 text-[#1F5A4C] shrink-0 mt-0.5" />
-          <div>
-            <p className="font-semibold text-[#231F1D] mb-0.5">Scientific Rigor Notice</p>
-            <p className="leading-relaxed">
-              These metrics reflect mathematically calculated frequencies from your personal logs. Timelines illustrate <em>associations over time</em>, never medical causation. Multiple lifestyle and biological factors influence symptoms simultaneously.
-            </p>
+      <AppPage>
+        <Panel tone="quiet">
+          <div className="grid gap-2">
+            <span className="label">Show the last</span>
+            <QuickPick label="Time range" options={rangeOptions} value={selectedRange} onChange={setSelectedRange} />
           </div>
-        </Card>
+          <p className="text-[1rem] text-[var(--ink-muted)]">
+            {recordCount} {recordCount === 1 ? 'day' : 'days'} logged in the last {selectedRange} days.
+          </p>
+        </Panel>
 
-        {/* Range Selector */}
-        <div className="flex items-center justify-between">
-          <h2 className="text-base font-serif font-semibold text-[#231F1D]">
-            Observed Window ({recordCount} {recordCount === 1 ? 'day' : 'days'} logged)
-          </h2>
-          <div className="flex items-center gap-1 bg-white p-1 rounded-xl border border-[#E5DED5]">
-            {(['30', '60', '90'] as const).map((r) => (
-              <button
-                key={r}
-                onClick={() => setSelectedRange(r)}
-                className={`px-3 py-1 rounded-lg text-xs font-semibold transition ${
-                  selectedRange === r
-                    ? 'bg-[#1F5A4C] text-white shadow-xs'
-                    : 'text-[#68615C] hover:text-[#231F1D]'
-                }`}
-              >
-                {r} Days
-              </button>
-            ))}
+        {isLoading ? (
+          <div className="grid gap-3" aria-busy="true" aria-label="Loading your insights">
+            <span className="skeleton h-28 w-full" />
+            <span className="skeleton h-48 w-full" />
           </div>
-        </div>
-
-        {recordCount === 0 && !isLoading ? (
-          <Card variant="muted" className="p-8 text-center space-y-4">
-            <div className="w-12 h-12 rounded-2xl bg-[#E6EFEB] text-[#1F5A4C] flex items-center justify-center mx-auto">
-              <BarChart3 className="w-6 h-6" />
-            </div>
-            <div>
-              <h3 className="font-serif font-semibold text-base text-[#231F1D]">
-                No data recorded in this {selectedRange}-day window
-              </h3>
-              <p className="text-xs text-[#68615C] mt-1 max-w-xs mx-auto">
-                Log a few daily check-ins to generate mathematical summaries and trend observations.
-              </p>
-            </div>
-            <div className="flex items-center justify-center gap-2 pt-2">
-              <Link href="/app/check-in/">
-                <Button size="sm" variant="primary" className="gap-1.5 text-xs">
-                  <PlusCircle className="w-3.5 h-3.5" />
-                  <span>Log Check-in</span>
-                </Button>
-              </Link>
-            </div>
-          </Card>
+        ) : recordCount === 0 ? (
+          <div className="empty-state">
+            <IlloEmpty />
+            <strong>Nothing logged in the last {selectedRange} days</strong>
+            <span className="max-w-[26rem]">
+              Log a few days and you’ll see how often your symptoms come up, your average sleep and your hot flashes here.
+            </span>
+            <Link href="/app/check-in/" className="btn btn-primary mt-2">
+              Log today
+            </Link>
+          </div>
         ) : (
           <>
-            {/* Key Deterministic Stats Grid */}
-            <div className="grid grid-cols-2 gap-3">
-              <Card className="p-4 bg-white space-y-2">
-                <span className="text-xs text-[#68615C] flex items-center gap-1.5">
-                  <Flame className="w-3.5 h-3.5 text-[#1F5A4C]" />
-                  Hot Flash Frequency
+            <div className="stats grid-cols-2 sm:grid-cols-3">
+              <div className="stat">
+                <span className="stat-label inline-flex items-center gap-1.5">
+                  <Icon.Flame width={18} height={18} className="text-[var(--accent)]" />
+                  Hot flashes
                 </span>
-                <p className="text-2xl font-serif font-bold text-[#231F1D]">
-                  {hotFlashStats?.dailyAverage ?? 0}{' '}
-                  <span className="text-xs font-sans font-normal text-[#68615C]">/ day avg</span>
-                </p>
-                <div className="flex items-center gap-1 text-xs text-[#2C6E49] font-medium">
-                  <TrendingDown className="w-3.5 h-3.5" />
-                  <span>{hotFlashStats?.totalRecorded ?? 0} total in window</span>
-                </div>
-              </Card>
-
-              <Card className="p-4 bg-white space-y-2">
-                <span className="text-xs text-[#68615C] flex items-center gap-1.5">
-                  <Moon className="w-3.5 h-3.5 text-[#577060]" />
-                  Sleep Average
+                <span className="stat-value">{hotFlashStats?.dailyAverage ?? 0}</span>
+                <span className="stat-label">
+                  a day on average · {hotFlashStats?.totalRecorded ?? 0} in all
                 </span>
-                <p className="text-2xl font-serif font-bold text-[#231F1D]">
-                  {sleepStats?.averageHours ?? 0}{' '}
-                  <span className="text-xs font-sans font-normal text-[#68615C]">hours/night</span>
-                </p>
-                <p className="text-xs text-[#68615C]">
-                  Night waking: {sleepStats?.nightsWokeAtNight ?? 0} of {recordCount} nights ({sleepStats?.wakingPercent ?? 0}%)
-                </p>
-              </Card>
+              </div>
+              <div className="stat">
+                <span className="stat-label inline-flex items-center gap-1.5">
+                  <Icon.Moon width={18} height={18} className="text-[var(--accent)]" />
+                  Sleep
+                </span>
+                <span className="stat-value">
+                  {sleepStats?.averageHours ?? 0}
+                  <span className="ml-1 font-sans text-[1rem] font-bold text-[var(--ink-muted)]">h</span>
+                </span>
+                <span className="stat-label">a night on average</span>
+              </div>
+              <div className="stat col-span-2 sm:col-span-1">
+                <span className="stat-label">Woke at night</span>
+                <span className="stat-value">{sleepStats?.wakingPercent ?? 0}%</span>
+                <span className="stat-label">
+                  {sleepStats?.nightsWokeAtNight ?? 0} of {recordCount} nights
+                </span>
+              </div>
             </div>
 
-            {/* Most Frequently Recorded Symptoms */}
-            <Card className="p-5 bg-white space-y-4">
-              <div className="flex items-center justify-between">
-                <h3 className="font-serif font-semibold text-sm text-[#231F1D]">
-                  Symptom Frequency & Severity ({selectedRange} Days)
-                </h3>
-                <Badge variant="outline">Deterministic</Badge>
-              </div>
+            <Panel
+              title="How often each symptom came up"
+              hint={`Share of your ${recordCount} ${recordCount === 1 ? 'entry' : 'entries'}, with your average strength (1 mild, 5 severe).`}
+            >
+              <SymptomBars
+                total={recordCount}
+                limit={12}
+                items={symptomStats.map((s) => ({
+                  id: s.symptomId,
+                  name: s.name,
+                  count: s.count,
+                  percent: s.frequencyPercent,
+                  strength: s.averageSeverity,
+                }))}
+              />
+            </Panel>
 
-              {symptomStats.length === 0 ? (
-                <p className="text-xs text-[#5C554F] italic">
-                  No specific symptoms rated above zero during this period.
-                </p>
-              ) : (
-                <div className="space-y-3.5 text-xs">
-                  {symptomStats.map((sym) => (
-                    <div key={sym.symptomId} className="space-y-1.5">
-                      <div className="flex items-center justify-between">
-                        <span className="text-[#231F1D] font-medium">{sym.name}</span>
-                        <div className="flex items-center gap-2">
-                          <span className="text-[#1F5A4C] font-semibold">
-                            Avg Sev: {sym.averageSeverity}/5
-                          </span>
-                          <span className="text-[#68615C]">
-                            {sym.count} {sym.count === 1 ? 'entry' : 'entries'} ({sym.frequencyPercent}% of entries)
-                          </span>
-                        </div>
-                      </div>
-                      <div className="w-full bg-[#EEF1EF] rounded-full h-2 overflow-hidden">
-                        <div
-                          className="bg-[#1F5A4C] h-full rounded-full transition-all duration-300"
-                          style={{ width: `${sym.frequencyPercent}%` }}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </Card>
+            <Panel title="How you felt" hint="Your overall rating on each day you logged.">
+              <FeelingSpread entries={entries} />
+            </Panel>
+
+            <Link href="/app/timeline/" className="row rounded-[var(--radius-lg)] border border-[var(--rule)] bg-[var(--paper-raised)]">
+              <span className="row-icon" aria-hidden="true">
+                <Icon.Timeline width={22} height={22} />
+              </span>
+              <span className="row-main">
+                <span className="row-title block">See it day by day</span>
+                <span className="row-meta block">Charts of your hot flashes and sleep on the Timeline</span>
+              </span>
+              <Icon.Chevron width={20} height={20} className="text-[var(--ink-muted)]" />
+            </Link>
           </>
         )}
-      </div>
+
+        <section className="notice" aria-labelledby="ins-note">
+          <span className="notice-stamp" aria-hidden="true">
+            i
+          </span>
+          <h2 id="ins-note" className="font-serif text-[1.15rem] font-semibold">
+            What these numbers are
+          </h2>
+          <p className="text-[1rem]">
+            Counts and averages from your own entries, worked out on this device. They show patterns over time, not what
+            caused them: sleep, stress, treatments and more can all change symptoms at once.
+          </p>
+        </section>
+      </AppPage>
     </div>
   );
 }

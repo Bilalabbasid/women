@@ -5,7 +5,7 @@
  * Styles: "tracker app" section of src/app/ds-components.css.
  * Live examples: /dev/design-system/ (tracker section).
  */
-import { useId } from 'react';
+import { useEffect, useId, useRef } from 'react';
 
 /* ------------------------------------------------------------- layout */
 
@@ -177,12 +177,23 @@ export function Stepper({
   increaseLabel: string;
 }) {
   const id = useId();
+  // Quick repeated taps (counting hot flashes as they happen) must each count,
+  // even before React re-renders with the new value.
+  const latest = useRef(value);
+  useEffect(() => {
+    latest.current = value;
+  }, [value]);
+  const bump = (delta: number) => {
+    const next = Math.min(max, Math.max(min, +(latest.current + delta).toFixed(2)));
+    latest.current = next;
+    onChange(next);
+  };
   return (
     <div className="stepper" role="group" aria-labelledby={id}>
       <span id={id} className="visually-hidden">
         {label}
       </span>
-      <button type="button" aria-label={decreaseLabel} disabled={value <= min} onClick={() => onChange(Math.max(min, +(value - step).toFixed(2)))}>
+      <button type="button" aria-label={decreaseLabel} disabled={value <= min} onClick={() => bump(-step)}>
         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" aria-hidden="true">
           <path d="M6 12h12" />
         </svg>
@@ -191,7 +202,7 @@ export function Stepper({
         {value}
         {unit && <small>{unit}</small>}
       </output>
-      <button type="button" className="is-plus" aria-label={increaseLabel} disabled={value >= max} onClick={() => onChange(Math.min(max, +(value + step).toFixed(2)))}>
+      <button type="button" className="is-plus" aria-label={increaseLabel} disabled={value >= max} onClick={() => bump(step)}>
         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" aria-hidden="true">
           <path d="M12 6v12M6 12h12" />
         </svg>

@@ -12,7 +12,7 @@ export function MedicalDisclaimerBanner() {
     <>
       <aside
         aria-label="Medical notice"
-        className="app-notice border-b border-[var(--color-rule)] bg-[var(--color-paper)] py-1 pr-1 pl-4 text-[var(--color-ink-muted)]"
+        className="app-notice no-print border-b border-[var(--color-rule)] bg-[var(--color-paper)] py-1 pr-1 pl-4 text-[var(--color-ink-muted)]"
       >
         <div className="mx-auto flex max-w-2xl items-start gap-2">
           <p className="flex-1 py-1.5 text-xs" data-honesty="short">
@@ -36,7 +36,7 @@ export function MedicalDisclaimerBanner() {
 
 export function AppFooterNotice() {
   return (
-    <footer className="mx-auto w-full max-w-2xl px-4 pb-24 pt-6 text-xs leading-relaxed text-[var(--color-ink-muted)] md:pb-8">
+    <footer className="mx-auto w-full max-w-[42rem] px-4 pt-2 pb-28 text-[1rem] leading-relaxed text-[var(--ink-muted)] md:pb-10">
       <p data-honesty="footer">{HONESTY_FOOTER}</p>
     </footer>
   );

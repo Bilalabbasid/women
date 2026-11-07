@@ -3,10 +3,9 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Check, ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
 import { AppHeader } from '@/components/app/app-header';
+import { AppPage, Icon, LevelPicker } from '@/components/app/kit';
+import { IlloEmpty } from '@/components/ui/illustrations';
 import { LocalDataService } from '@/lib/db/service';
 import { getMissedDays } from '@/lib/tracker/catch-up';
 import { describeStorageError } from '@/lib/storage/errors';
@@ -68,81 +67,84 @@ export default function CatchUpPage() {
     }
   };
 
+  const loggedCount = missedDays ? missedDays.filter((d) => logged[d]).length : 0;
+
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex min-h-screen flex-col">
       <AppHeader title="Catch up" subtitle="Add the days you missed" showBack backHref="/app/today/" showSettings={false} />
 
-      <div className="flex-1 max-w-2xl mx-auto w-full px-4 py-5 space-y-4">
-        <Card className="p-4 bg-white space-y-1.5">
-          <p className="text-sm text-[#231F1D]">
-            There's no notification server behind this app yet, so nothing reminded you while it was closed. Add what
-            you remember below for each day — or skip any of them. Nothing here is filled in for you, and a day you
-            leave blank just stays unlogged.
+      <AppPage>
+        <div className="grid gap-2">
+          <h2 className="font-serif text-[length:var(--fs-h3)] font-semibold">Fill in what you remember</h2>
+          <p className="text-[var(--ink-muted)]">
+            Tap how each day felt, or skip it. Nothing is filled in for you, and a day you leave blank just stays
+            unlogged.
           </p>
-        </Card>
+        </div>
 
         {saveError && (
-          <p role="alert" className="rounded-2xl bg-[var(--color-urgent-soft)] p-3 text-sm font-semibold text-[var(--color-urgent)]">
-            {saveError}
+          <p role="alert" className="error-state">
+            <strong>We couldn’t save that day.</strong>
+            <span>{saveError}</span>
           </p>
         )}
 
-        {missedDays === null ? null : missedDays.length === 0 ? (
-          <Card variant="muted" className="p-5 text-center text-sm text-[#68615C]">
-            No missed days to catch up on.
-          </Card>
-        ) : (
-          <div className="space-y-2.5">
-            {missedDays.map((date) => {
-              const savedFeeling = logged[date];
-              return (
-                <Card key={date} className="p-4 bg-white space-y-2.5">
-                  <div className="flex items-center justify-between">
-                    <p className="text-sm font-semibold text-[#231F1D]">{formatDay(date)}</p>
-                    {savedFeeling ? (
-                      <span className="text-xs font-medium text-[#2C6E49] flex items-center gap-1">
-                        <Check className="w-3.5 h-3.5" /> Logged
-                      </span>
-                    ) : null}
-                  </div>
-
-                  <div className="grid grid-cols-5 gap-2">
-                    {FEELINGS.map((f) => {
-                      const isSelected = savedFeeling === f.value;
-                      return (
-                        <button
-                          key={f.value}
-                          type="button"
-                          onClick={() => handleLog(date, f.value)}
-                          className={`min-h-[44px] py-2 rounded-xl border text-xs font-semibold transition active:scale-95 ${
-                            isSelected
-                              ? 'bg-[#1F5A4C] border-[#1F5A4C] text-white'
-                              : 'bg-[#F7F6F2] border-[#E5DED5] text-[#554E48] hover:border-[#D0C7BC]'
-                          }`}
-                        >
-                          {f.label}
-                        </button>
-                      );
-                    })}
-                  </div>
-
-                  <Link
-                    href={`/app/check-in/?date=${date}`}
-                    className="inline-flex items-center gap-1 text-xs text-[#1F5A4C] font-medium hover:underline"
-                  >
-                    Add symptoms, sleep, or notes for this day
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </Card>
-              );
-            })}
+        {missedDays === null ? (
+          <div className="grid gap-3" aria-busy="true" aria-label="Loading the days you missed">
+            <span className="skeleton h-40 w-full" />
+            <span className="skeleton h-40 w-full" />
           </div>
+        ) : missedDays.length === 0 ? (
+          <div className="empty-state">
+            <IlloEmpty />
+            <strong>You’re all caught up</strong>
+            <span>There are no missed days to add.</span>
+            <Link href="/app/today/" className="btn btn-primary btn-sm">
+              Back to Today
+            </Link>
+          </div>
+        ) : (
+          <>
+            <p className="eyebrow" aria-live="polite">
+              {loggedCount} of {missedDays.length} {missedDays.length === 1 ? 'day' : 'days'} added
+            </p>
+            <ul className="grid gap-3">
+              {missedDays.map((date) => {
+                const savedFeeling = logged[date] ?? null;
+                return (
+                  <li key={date} className="panel">
+                    <div className="panel-head">
+                      <h3 className="panel-title">{formatDay(date)}</h3>
+                      {savedFeeling ? (
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--g-strong-soft)] px-3 py-1 text-[0.95rem] font-bold text-[var(--g-strong-ink)]">
+                          <Icon.Check width={16} height={16} /> Added
+                        </span>
+                      ) : (
+                        <span className="text-[0.95rem] text-[var(--ink-muted)]">Not logged</span>
+                      )}
+                    </div>
+
+                    <LevelPicker
+                      label={`How ${formatDay(date)} felt`}
+                      levels={FEELINGS}
+                      value={savedFeeling}
+                      onChange={(v) => void handleLog(date, v)}
+                    />
+
+                    <Link href={`/app/check-in/?date=${date}`} className="link link-arrow justify-self-start inline-flex min-h-[44px] items-center gap-1.5">
+                      Add symptoms, sleep or notes for this day
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </>
         )}
 
-        <Button variant="primary" fullWidth size="lg" onClick={() => router.push('/app/today/')} className="mt-2">
+        <button type="button" onClick={() => router.push('/app/today/')} className="btn btn-primary btn-lg btn-block">
           Done
-        </Button>
-      </div>
+        </button>
+      </AppPage>
     </div>
   );
 }

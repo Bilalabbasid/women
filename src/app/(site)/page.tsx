@@ -227,7 +227,7 @@ export default function HomePage() {
 
             {/* Lead search */}
             <form action="/search/" method="get">
-              <div className="flex max-w-xl items-center gap-2 rounded-2xl bg-white p-2 shadow-xl shadow-black/20">
+              <div className="flex max-w-xl items-center gap-2 rounded-2xl bg-[var(--paper-raised)] p-2 shadow-xl shadow-black/20">
                 <Search aria-hidden="true" className="ml-2 h-5 w-5 shrink-0 text-[var(--color-ink-muted)]" />
                 <input
                   type="search"
@@ -275,7 +275,7 @@ export default function HomePage() {
                     <div className="hero-float" style={{ '--float-delay': `${-i * 1.6}s` } as CSSProperties}>
                       <Link
                         href={v.href}
-                        className="hero-scan tap block rounded-2xl bg-white p-4 text-[var(--color-ink)] no-underline shadow-xl shadow-black/25 transition-transform hover:scale-[1.02] focus-visible:outline-white sm:p-5"
+                        className="hero-scan tap block rounded-2xl bg-[var(--paper-raised)] p-4 text-[var(--color-ink)] no-underline shadow-xl shadow-black/25 transition-transform hover:scale-[1.02] focus-visible:outline-white sm:p-5"
                         style={{ '--scan-delay': `${i * 2.5}s` } as CSSProperties}
                       >
                         <span className="flex w-full flex-wrap items-center justify-between gap-x-3 gap-y-2">
@@ -297,7 +297,7 @@ export default function HomePage() {
                   <BookOpenCheck aria-hidden="true" className="h-4 w-4 text-[#9fd4c3]" /> {sourceCount} sources linked
                 </span>
                 <span
-                  className="hero-float inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1.5 text-sm font-semibold text-[var(--color-accent)] shadow-lg"
+                  className="hero-float inline-flex items-center gap-2 rounded-full bg-[var(--paper-raised)] px-3.5 py-1.5 text-sm font-semibold text-[var(--color-accent)] shadow-lg"
                   style={{ '--float-delay': '-4s' } as CSSProperties}
                 >
                   <Scale aria-hidden="true" className="h-4 w-4" /> {verdictCount} remedies graded
@@ -545,7 +545,7 @@ export default function HomePage() {
             </Link>
             <Link
               href="/tools/treatment-questions/"
-              className="tap rounded-xl border-2 border-[var(--color-accent)] px-6 py-3 font-semibold text-[var(--color-accent)] no-underline hover:bg-white"
+              className="tap rounded-xl border-2 border-[var(--color-accent)] px-6 py-3 font-semibold text-[var(--color-accent)] no-underline hover:bg-[var(--paper-raised)]"
             >
               Build doctor questions
             </Link>

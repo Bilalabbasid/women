@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, useSyncExternalStore } from 'react';
+import { useEffect, useState, useSyncExternalStore } from 'react';
 import { Download, Share2, PlusSquare, X } from 'lucide-react';
 import { Button } from '../ui/button';
 import { hasUsedTool } from '@/lib/pwa/install-gate';
@@ -105,36 +105,43 @@ export function PWAInstallBanner({ variant = 'banner' }: { variant?: 'banner' | 
       role="dialog"
       aria-modal="true"
       aria-labelledby="ios-install-title"
-      className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 p-3 sm:items-center"
+      className="fixed inset-0 z-50 flex items-end justify-center bg-[var(--scrim)] sm:items-center sm:p-4"
     >
-      <div className="w-full max-w-sm space-y-5 rounded-3xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-6 shadow-2xl">
-        <div className="flex items-start justify-between">
-          <h3 id="ios-install-title" className="font-serif text-lg font-semibold text-[var(--color-ink)]">
+      <div className="w-full max-w-md space-y-4 rounded-t-[var(--radius-lg)] border border-[var(--rule)] bg-[var(--paper-raised)] p-5 pb-[calc(1.25rem+env(safe-area-inset-bottom,0px))] shadow-[var(--shadow-lift)] sm:rounded-[var(--radius-lg)] sm:pb-5">
+        <div className="flex items-start justify-between gap-3">
+          <h3 id="ios-install-title" className="font-serif text-[1.35rem] font-semibold text-[var(--ink)]">
             Install on iPhone or iPad
           </h3>
           <button
             type="button"
             onClick={() => setShowIOSModal(false)}
             aria-label="Close install instructions"
-            className="min-h-[44px] min-w-[44px] p-2 text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]"
+            className="icon-btn -mr-2 -mt-1 text-[var(--ink-muted)]"
           >
             <X className="h-5 w-5" aria-hidden="true" />
           </button>
         </div>
-        <ol className="list-decimal space-y-3 pl-5 text-[var(--color-ink-muted)]">
+        <ol className="step-list">
           <li>
-            In Safari, tap <strong>Share</strong> <Share2 className="mx-0.5 inline h-4 w-4" aria-hidden="true" />.
+            <span className="step-title">
+              In Safari, tap <strong>Share</strong>{' '}
+              <Share2 className="mx-0.5 inline h-4 w-4 align-[-2px] text-[var(--accent)]" aria-hidden="true" />
+            </span>
           </li>
           <li>
-            Tap <strong>Add to Home Screen</strong>{' '}
-            <PlusSquare className="mx-0.5 inline h-4 w-4" aria-hidden="true" />.
+            <span className="step-title">
+              Tap <strong>Add to Home Screen</strong>{' '}
+              <PlusSquare className="mx-0.5 inline h-4 w-4 align-[-2px] text-[var(--accent)]" aria-hidden="true" />
+            </span>
           </li>
           <li>
-            Tap <strong>Add</strong>.
+            <span className="step-title">
+              Tap <strong>Add</strong>
+            </span>
           </li>
         </ol>
-        <p className="text-[var(--color-ink-muted)]">No App Store account needed. Your journal stays on this device.</p>
-        <Button variant="outline" fullWidth onClick={() => setShowIOSModal(false)}>
+        <p className="text-[var(--ink-muted)]">No App Store account needed. Your journal stays on this device.</p>
+        <Button variant="secondary" fullWidth onClick={() => setShowIOSModal(false)}>
           Got it
         </Button>
       </div>
@@ -145,14 +152,19 @@ export function PWAInstallBanner({ variant = 'banner' }: { variant?: 'banner' | 
     return (
       <div className="space-y-2">
         {isStandalone || installed ? (
-          <p className="text-[var(--color-ink-muted)]">The app is already installed on this device.</p>
+          <p className="flex items-center gap-2 font-bold text-[var(--g-strong-ink)]">
+            <span aria-hidden="true" className="grid h-6 w-6 place-items-center rounded-full bg-[var(--g-strong-soft)]">
+              ✓
+            </span>
+            The app is already installed on this device.
+          </p>
         ) : canInstall ? (
-          <Button variant="outline" onClick={handleInstallClick} className="gap-2">
-            <Download className="h-4 w-4" aria-hidden="true" />
-            Install on this device
+          <Button variant="primary" onClick={handleInstallClick}>
+            <Download className="h-5 w-5" aria-hidden="true" />
+            Install now
           </Button>
         ) : (
-          <p className="text-[var(--color-ink-muted)]">
+          <p className="text-[var(--ink-muted)]">
             Your browser doesn&apos;t offer installation here. In Chrome or Edge, use the browser menu
             and choose &ldquo;Install app&rdquo;. On iPhone, use Safari&apos;s Share menu.
           </p>
@@ -166,27 +178,23 @@ export function PWAInstallBanner({ variant = 'banner' }: { variant?: 'banner' | 
 
   return (
     <>
-      <div role="region" aria-label="Install the app" className="border-b border-[var(--color-accent)]/30 bg-[var(--color-accent-soft)] px-4 py-2.5">
-        <div className="mx-auto flex max-w-2xl items-center justify-between gap-3">
-          <p className="text-[var(--color-ink)]">
+      <div role="region" aria-label="Install the app" className="no-print border-b border-[var(--rule)] bg-[var(--accent-soft)]">
+        <div className="mx-auto flex max-w-[42rem] items-center gap-3 py-2 pr-1 pl-4">
+          <span aria-hidden="true" className="hidden h-10 w-10 shrink-0 place-items-center rounded-[var(--radius)] bg-[var(--paper-raised)] text-[var(--accent)] min-[420px]:grid">
+            <Download className="h-5 w-5" />
+          </span>
+          <p className="min-w-0 flex-1 text-[1rem] leading-snug text-[var(--ink)]">
             <strong>Install MenoVerdict</strong> — works offline, your data stays on this phone.{' '}
-            <a href={APP_ROUTES.install} className="font-semibold text-[var(--color-link)] underline">
+            <a href={APP_ROUTES.install} className="link">
               How it works
             </a>
           </p>
-          <div className="flex items-center gap-2">
-            <Button size="sm" variant="primary" onClick={handleInstallClick}>
-              Install
-            </Button>
-            <button
-              type="button"
-              onClick={dismiss}
-              aria-label="Dismiss install banner"
-              className="min-h-[44px] min-w-[44px] p-2 text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]"
-            >
-              <X className="h-4 w-4" aria-hidden="true" />
-            </button>
-          </div>
+          <Button size="sm" variant="primary" onClick={handleInstallClick} className="shrink-0">
+            Install
+          </Button>
+          <button type="button" onClick={dismiss} aria-label="Dismiss install banner" className="icon-btn shrink-0 text-[var(--ink-muted)]">
+            <X className="h-5 w-5" aria-hidden="true" />
+          </button>
         </div>
       </div>
       {iosModal}

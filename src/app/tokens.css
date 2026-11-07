@@ -22,12 +22,8 @@
  */
 
 /* ---------------------------------------------------------------- light */
-/* .app-shell (/app/* tracker) is pinned light until those screens are redesigned:
-   they still hard-code light colours in hundreds of places. */
 :root,
-[data-theme='light'],
-:root[data-theme] .app-shell,
-.app-shell {
+[data-theme='light'] {
   color-scheme: light;
   --paper: #f5f1e8;
   --paper-raised: #fcfaf5;
@@ -189,8 +185,7 @@
 
 /* ------------------------------------------------ aliases, re-resolved per scope */
 :root,
-[data-theme],
-.app-shell {
+[data-theme] {
   --color-paper: var(--paper);
   --color-paper-raised: var(--paper-raised);
   --color-paper-sunk: var(--paper-sunk);

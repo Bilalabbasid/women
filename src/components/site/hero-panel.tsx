@@ -44,6 +44,6 @@ export const heroEyebrow = 'text-sm font-semibold uppercase tracking-[0.14em] te
 export const heroTitle = 'font-serif text-3xl font-semibold leading-tight text-white sm:text-4xl';
 export const heroLead = 'max-w-xl text-lg text-[#e4eeea]';
 export const heroPrimaryBtn =
-  'tap gap-2 rounded-xl bg-white px-6 py-3 font-semibold text-[var(--color-accent)] no-underline shadow-lg shadow-black/15 hover:bg-[var(--color-accent-soft)] focus-visible:outline-white';
+  'tap gap-2 rounded-xl bg-[var(--paper-raised)] px-6 py-3 font-semibold text-[var(--color-accent)] no-underline shadow-lg shadow-black/15 hover:bg-[var(--color-accent-soft)] focus-visible:outline-white';
 export const heroGhostBtn =
   'tap gap-2 rounded-xl border border-white/40 px-5 py-3 font-semibold text-white no-underline hover:bg-white/10 focus-visible:outline-white';

@@ -23,8 +23,16 @@ import {
 } from '@/lib/storage/manager';
 import { downloadBackup, parseBackup, readFileText, restoreBackup, type ParsedBackup, type RestoreMode } from '@/lib/storage/backup';
 import { describeStorageError } from '@/lib/storage/errors';
-import { btnDanger, btnDangerSolid, btnPrimary, btnSecondary, field, formatIsoDate } from '@/components/storage/styles';
+import { formatIsoDate } from '@/components/storage/styles';
 import { useLocalToday } from '@/components/storage/use-tool-state';
+import { AppPage } from '@/components/app/kit';
+
+// Design-system button styles (src/app/ds-components.css).
+const btnPrimary = 'btn btn-primary';
+const btnSecondary = 'btn btn-secondary';
+const btnDanger = 'btn btn-quiet btn-sm text-[var(--urgent)]';
+const btnDangerSolid = 'btn btn-danger';
+const field = 'input';
 
 const LABEL = new Map(CATEGORIES.map((c) => [c.id, c.label]));
 const DATED = CATEGORIES.filter((c) => c.dated).map((c) => c.id);
@@ -46,12 +54,15 @@ function span(s: { oldest?: string; newest?: string }): string {
   return s.oldest === s.newest ? formatIsoDate(s.oldest) : `${formatIsoDate(s.oldest)} – ${formatIsoDate(s.newest!)}`;
 }
 
-function Card({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
+function Card({ id, title, hint, children, tone }: { id: string; title: string; hint?: string; children: React.ReactNode; tone?: 'feature' | 'quiet' }) {
   return (
-    <section aria-labelledby={id} className="space-y-3 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4 sm:p-5">
-      <h2 id={id} className="text-xl sm:text-2xl">
-        {title}
-      </h2>
+    <section aria-labelledby={id} className={`panel scroll-mt-20${tone ? ` panel-${tone}` : ''}`}>
+      <div>
+        <h2 id={id} className="panel-title">
+          {title}
+        </h2>
+        {hint && <p className="panel-hint">{hint}</p>}
+      </div>
       {children}
     </section>
   );
@@ -204,8 +215,18 @@ export default function ManageStoragePage() {
     <div className="flex min-h-screen flex-col">
       <AppHeader title="Manage storage" subtitle="Back up, restore and delete" showBack backHref="/app/settings/" showPrivacyBadge showSettings={false} />
 
-      <div className="mx-auto w-full max-w-2xl flex-1 space-y-5 px-4 py-5">
-        <p role="status" aria-live="polite" className={msg?.text ? (msg.kind === 'error' ? 'rounded-xl bg-[var(--color-urgent-soft)] p-3 font-semibold text-[var(--color-urgent)]' : 'rounded-xl bg-[var(--color-accent-soft)] p-3') : 'sr-only'}>
+      <AppPage>
+        <p
+          role="status"
+          aria-live="polite"
+          className={
+            msg?.text
+              ? msg.kind === 'error'
+                ? 'error-state font-bold text-[var(--urgent)]'
+                : 'saved-note'
+              : 'sr-only'
+          }
+        >
           {msg?.text ?? ''}
         </p>
 
@@ -216,7 +237,11 @@ export default function ManageStoragePage() {
             role="alertdialog"
             aria-labelledby="confirm-title"
             aria-describedby="confirm-body"
-            className="space-y-3 rounded-2xl border-2 border-[var(--color-urgent)] bg-[var(--color-urgent-soft)] p-4 sm:p-5"
+            className={`grid gap-3 rounded-[var(--radius-lg)] border-2 p-4 sm:p-5 ${
+              pending.kind === 'restore' && pending.mode === 'merge'
+                ? 'border-[var(--accent)] bg-[var(--accent-soft)]'
+                : 'border-[var(--urgent-rule)] bg-[var(--urgent-soft)]'
+            }`}
           >
             {pending.kind === 'range' && (
               <>
@@ -278,13 +303,12 @@ export default function ManageStoragePage() {
                     <strong>{pending.parsed.total}</strong> record{pending.parsed.total === 1 ? '' : 's'}
                     {pending.parsed.skipped > 0 && ` (${pending.parsed.skipped} damaged record${pending.parsed.skipped === 1 ? '' : 's'} will be skipped)`}.
                   </p>
-                  <fieldset className="space-y-2">
-                    <legend className="font-semibold">How should it be restored?</legend>
-                    <label className="tap flex cursor-pointer items-start gap-3">
+                  <fieldset className="min-w-0 border-0 p-0">
+                    <legend className="label mb-1">How should it be restored?</legend>
+                    <label className="check">
                       <input
                         type="radio"
                         name="restore-mode"
-                        className="mt-1 h-5 w-5 accent-[var(--color-accent)]"
                         checked={pending.mode === 'merge'}
                         onChange={() => setPending({ ...pending, mode: 'merge' })}
                       />
@@ -293,11 +317,10 @@ export default function ManageStoragePage() {
                         (or a check-in for the same day), the backup&apos;s copy is used.
                       </span>
                     </label>
-                    <label className="tap flex cursor-pointer items-start gap-3">
+                    <label className="check">
                       <input
                         type="radio"
                         name="restore-mode"
-                        className="mt-1 h-5 w-5 accent-[var(--color-accent)]"
                         checked={pending.mode === 'replace'}
                         onChange={() => setPending({ ...pending, mode: 'replace' })}
                       />
@@ -321,7 +344,7 @@ export default function ManageStoragePage() {
           </div>
         )}
 
-        <Card id="backup-heading" title="Back up your data">
+        <Card id="backup-heading" title="Back up your data" tone="feature">
           <p>
             A backup is one file containing everything from the tracker and the tools. Anyone who opens it can read it, so
             keep it somewhere private. To move your data to another device or browser, download a backup here and restore it
@@ -348,8 +371,8 @@ export default function ManageStoragePage() {
           </div>
         </Card>
 
-        <Card id="where-heading" title="Where your data lives">
-          <ul className="list-disc space-y-1.5 pl-6">
+        <Card id="where-heading" title="Where your data lives" tone="quiet">
+          <ul className="list-disc space-y-1.5 pl-6 marker:text-[var(--accent)]">
             <li>Everything you enter in the tracker and the tools is saved only in this browser on this device. No account is needed and nothing is uploaded.</li>
             <li>It is not synced. Another browser, another device, or a private/incognito window will not see it.</li>
             <li>
@@ -363,7 +386,7 @@ export default function ManageStoragePage() {
 
         <Card id="space-heading" title="Storage on this device">
           {estimate === null ? (
-            <p className="text-[var(--color-ink-muted)]">Checking…</p>
+            <span className="skeleton h-6 w-2/3" aria-label="Checking storage" />
           ) : !estimate.supported ? (
             <p>This browser doesn&apos;t report how much space is available. Saving still works.</p>
           ) : (
@@ -374,25 +397,25 @@ export default function ManageStoragePage() {
               </p>
               {usagePct !== null && (
                 <div
-                  className="h-3 overflow-hidden rounded-full bg-[var(--color-accent-soft)]"
+                  className="progress"
                   role="meter"
                   aria-label="Storage used"
                   aria-valuemin={0}
                   aria-valuemax={100}
                   aria-valuenow={Math.round(usagePct)}
                 >
-                  <div className="h-3 bg-[var(--color-accent)]" style={{ width: `${Math.max(1, usagePct)}%` }} />
+                  <span style={{ width: `${Math.max(1, usagePct)}%` }} />
                 </div>
               )}
               {isStorageLow(estimate) && (
-                <p className="rounded-lg bg-[var(--color-urgent-soft)] p-3 font-semibold text-[var(--color-urgent)]">
+                <p className="error-state font-bold text-[var(--urgent)]">
                   Storage is running low. New entries may fail to save. Download a backup, then delete older data below.
                 </p>
               )}
             </div>
           )}
           {estimate && estimate.persisted !== null && (
-            <div className="space-y-2 rounded-lg bg-[var(--color-paper)] p-3">
+            <div className="grid gap-3 rounded-[var(--radius)] bg-[var(--paper-sunk)] p-4">
               <p>
                 {estimate.persisted
                   ? 'This browser has agreed to keep this site’s data and not clear it to free up space.'
@@ -401,7 +424,7 @@ export default function ManageStoragePage() {
               {!estimate.persisted && (
                 <button
                   type="button"
-                  className={btnSecondary}
+                  className={`${btnSecondary} justify-self-start`}
                   disabled={busy}
                   onClick={() =>
                     void act(async () =>
@@ -420,16 +443,19 @@ export default function ManageStoragePage() {
 
         <Card id="stored-heading" title="What’s stored">
           {summaries === null ? (
-            <p className="text-[var(--color-ink-muted)]">Counting your records…</p>
+            <div className="grid gap-2" aria-busy="true" aria-label="Counting your records">
+              <span className="skeleton h-12 w-full" />
+              <span className="skeleton h-12 w-full" />
+            </div>
           ) : withData.length === 0 ? (
-            <p>Nothing is stored in this browser yet.</p>
+            <p className="text-[var(--ink-muted)]">Nothing is stored in this browser yet.</p>
           ) : (
-            <ul className="divide-y divide-[var(--color-rule)]">
+            <ul className="row-list">
               {withData.map((s) => (
-                <li key={s.id} className="flex flex-wrap items-center justify-between gap-2 py-3">
-                  <div>
-                    <p className="font-semibold">{LABEL.get(s.id)}</p>
-                    <p className="text-sm text-[var(--color-ink-muted)]">
+                <li key={s.id} className="row flex-wrap justify-between">
+                  <div className="row-main">
+                    <p className="row-title">{LABEL.get(s.id)}</p>
+                    <p className="row-meta">
                       {s.records} record{s.records === 1 ? '' : 's'}
                       {s.detail ? `, ${s.detail}` : ''}
                       {s.oldest ? ` · ${span(s)}` : ''}
@@ -446,19 +472,19 @@ export default function ManageStoragePage() {
 
         {datedWithData.length > 0 && (
           <Card id="trim-heading" title="Delete older data">
-            <fieldset className="space-y-1">
-              <legend className="font-semibold">Which data?</legend>
+            <fieldset className="min-w-0 border-0 p-0">
+              <legend className="label mb-1">Which data?</legend>
               {datedWithData.map((id) => (
-                <label key={id} className="tap flex cursor-pointer items-center gap-3">
-                  <input type="checkbox" className="h-5 w-5 accent-[var(--color-accent)]" checked={selected.includes(id)} onChange={() => toggleChosen(id)} />
+                <label key={id} className="check">
+                  <input type="checkbox" checked={selected.includes(id)} onChange={() => toggleChosen(id)} />
                   <span>{LABEL.get(id)}</span>
                 </label>
               ))}
             </fieldset>
 
-            <div className="space-y-2">
-              <p className="font-semibold">Quick options</p>
-              <p className="text-sm text-[var(--color-ink-muted)]">
+            <div className="space-y-2 border-t border-[var(--rule)] pt-4">
+              <p className="label">Quick options</p>
+              <p className="hint">
                 Counts the days you actually logged something. If you logged 30 days, deleting the oldest 10 keeps the
                 newest 20. You&apos;ll see exactly what will go before anything is deleted.
               </p>
@@ -473,25 +499,25 @@ export default function ManageStoragePage() {
             </div>
 
             <form
-              className="space-y-2"
+              className="space-y-2 border-t border-[var(--rule)] pt-4"
               onSubmit={(e) => {
                 e.preventDefault();
                 void proposeRange();
               }}
             >
-              <p className="font-semibold">Custom date range</p>
+              <p className="label">Custom date range</p>
               <div className="grid gap-3 sm:grid-cols-[1fr_1fr_auto] sm:items-end">
-                <div>
-                  <label htmlFor="range-from" className="block text-sm font-semibold">
+                <div className="field">
+                  <label htmlFor="range-from" className="label">
                     From
                   </label>
-                  <input id="range-from" type="date" required value={from} max={to || today || undefined} onChange={(e) => setFrom(e.target.value)} className={`mt-1 ${field}`} />
+                  <input id="range-from" type="date" required value={from} max={to || today || undefined} onChange={(e) => setFrom(e.target.value)} className={field} />
                 </div>
-                <div>
-                  <label htmlFor="range-to" className="block text-sm font-semibold">
+                <div className="field">
+                  <label htmlFor="range-to" className="label">
                     To
                   </label>
-                  <input id="range-to" type="date" required value={to} min={from || undefined} onChange={(e) => setTo(e.target.value)} className={`mt-1 ${field}`} />
+                  <input id="range-to" type="date" required value={to} min={from || undefined} onChange={(e) => setTo(e.target.value)} className={field} />
                 </div>
                 <button type="submit" disabled={busy || !from || !to} className={btnSecondary}>
                   Review what will be deleted
@@ -504,22 +530,21 @@ export default function ManageStoragePage() {
         {withData.length > 0 && (
           <Card id="clear-heading" title="Clear all data">
             <p>Deletes every record, every tool&apos;s current answers, and your preferences from this browser.</p>
-            <button type="button" disabled={busy} className={btnDangerSolid} onClick={() => setPending({ kind: 'all', total })}>
+            <button type="button" disabled={busy} className={`${btnDangerSolid} justify-self-start`} onClick={() => setPending({ kind: 'all', total })}>
               Clear all data…
             </button>
           </Card>
         )}
 
-        <p className="text-sm text-[var(--color-ink-muted)]">
-          <Link href="/app/privacy/" className="font-semibold text-[var(--color-link)] underline">
+        <p className="flex flex-wrap gap-x-5">
+          <Link href="/app/privacy/" className="link inline-flex min-h-11 items-center">
             Privacy center
-          </Link>{' '}
-          ·{' '}
-          <Link href="/app/settings/" className="font-semibold text-[var(--color-link)] underline">
+          </Link>
+          <Link href="/app/settings/" className="link inline-flex min-h-11 items-center">
             Settings
           </Link>
         </p>
-      </div>
+      </AppPage>
     </div>
   );
 }

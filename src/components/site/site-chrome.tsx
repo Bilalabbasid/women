@@ -175,7 +175,7 @@ export function SiteFooter({
             </p>
             <Link
               href="/urgent-help/"
-              className="tap gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-[var(--color-urgent)] no-underline shadow-sm hover:bg-[var(--color-urgent-soft)] focus-visible:outline-white"
+              className="tap gap-2 rounded-full bg-[var(--paper-raised)] px-4 py-2 text-sm font-bold text-[var(--color-urgent)] no-underline shadow-sm hover:bg-[var(--color-urgent-soft)] focus-visible:outline-white"
             >
               <span aria-hidden="true" className="h-2 w-2 rounded-full bg-[var(--color-urgent)]" />
               Crisis and Urgent Help

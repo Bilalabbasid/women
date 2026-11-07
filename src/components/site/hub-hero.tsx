@@ -48,7 +48,7 @@ export function HubHero({
         {sections.length > 0 && (
           <nav
             aria-label="On this page"
-            className="rounded-2xl bg-white p-5 text-[var(--color-ink)] shadow-xl shadow-black/20 sm:p-6"
+            className="rounded-2xl bg-[var(--paper-raised)] p-5 text-[var(--color-ink)] shadow-xl shadow-black/20 sm:p-6"
           >
             <p className="font-serif text-lg font-semibold">On this page</p>
             <ol className="mt-3 space-y-1">

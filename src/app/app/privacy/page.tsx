@@ -1,24 +1,49 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import {
-  HardDrive,
-  Cloud,
-  Download,
-  Trash2,
-  AlertTriangle,
-  CheckCircle2,
-  EyeOff,
-  Cpu,
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { AppHeader } from '@/components/app/app-header';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { HardDrive, Cloud, Download, Trash2, AlertTriangle, EyeOff, Cpu } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { AppHeader } from '@/components/app/app-header';
+import { AppPage, Panel, Icon } from '@/components/app/kit';
 import { clearEverything } from '@/lib/storage/manager';
 import { ExportService } from '@/lib/export/export-data';
 import { db } from '@/lib/db/db';
+
+function StatusRow({
+  icon,
+  title,
+  body,
+  status,
+  good,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  body: string;
+  status: string;
+  good?: boolean;
+}) {
+  return (
+    <li className="row items-start">
+      <span className="row-icon" aria-hidden="true">
+        {icon}
+      </span>
+      <span className="row-main">
+        <span className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
+          <span className="row-title">{title}</span>
+          <span
+            className={`rounded-full px-2.5 py-0.5 text-[0.9rem] font-bold whitespace-nowrap ${
+              good ? 'bg-[var(--g-strong-soft)] text-[var(--g-strong-ink)]' : 'bg-[var(--paper-sunk)] text-[var(--ink-muted)]'
+            }`}
+          >
+            {status}
+          </span>
+        </span>
+        <span className="row-meta mt-1 block">{body}</span>
+      </span>
+    </li>
+  );
+}
 
 export default function PrivacyCenterPage() {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
@@ -49,6 +74,14 @@ export default function PrivacyCenterPage() {
     };
   }, [reloadTrigger]);
 
+  // Esc closes the confirmation.
+  useEffect(() => {
+    if (!showDeleteModal) return;
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setShowDeleteModal(false);
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [showDeleteModal]);
+
   const handleExportData = async () => {
     setIsExporting(true);
     try {
@@ -67,198 +100,141 @@ export default function PrivacyCenterPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <AppHeader
-        title="Privacy Center"
-        subtitle="Your data sovereignty dashboard"
-        showPrivacyBadge={false}
-        showSettings={true}
-      />
+    <div className="flex min-h-screen flex-col">
+      <AppHeader title="Privacy center" subtitle="Where your data is, and who can see it" showPrivacyBadge={false} showSettings={true} />
 
-      <div className="flex-1 max-w-2xl mx-auto w-full px-4 py-5 space-y-6">
+      <AppPage>
         {deletedSuccess && (
-          <div className="bg-[#EFF7F2] border border-[#CDE0D4] rounded-2xl p-4 text-xs text-[#2C6E49] flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 shrink-0" />
-            <span>Local journal cache cleared. 0 records remaining in IndexedDB.</span>
-          </div>
-        )}
-
-        {/* Central Card: WHERE IS MY DATA? */}
-        <section aria-labelledby="data-location-heading">
-          <Card className="bg-[#FAF6F0] border-2 border-[#E5DCD0] p-5 sm:p-6 space-y-4">
-            <div className="flex items-center justify-between">
-              <Badge variant="primary" className="text-xs">
-                Live Audit
-              </Badge>
-              <span className="text-xs text-[#68615C]">Status: Device Only (Zero Cloud)</span>
-            </div>
-
-            <h2
-              id="data-location-heading"
-              className="text-xl sm:text-2xl font-serif font-semibold text-[#231F1D]"
-            >
-              Where is my data right now?
-            </h2>
-
-            <div className="space-y-3 pt-2 text-xs sm:text-sm">
-              <div className="flex items-start justify-between py-2 border-b border-[#E8DFD3]">
-                <div className="flex items-start gap-2">
-                  <HardDrive className="w-4 h-4 text-[#2C6E49] mt-0.5 shrink-0" />
-                  <div>
-                    <p className="font-semibold text-[#231F1D]">Health Journal & Symptoms</p>
-                    <p className="text-xs text-[#68615C]">
-                      Stored on this device ({counts.checkins} check-ins, {counts.symptoms} symptom ratings, {counts.treatments} regimens in IndexedDB)
-                    </p>
-                  </div>
-                </div>
-                <Badge variant="success">This Device</Badge>
-              </div>
-
-              <div className="flex items-start justify-between py-2 border-b border-[#E8DFD3]">
-                <div className="flex items-start gap-2">
-                  <Cloud className="w-4 h-4 text-[#68615C] mt-0.5 shrink-0" />
-                  <div>
-                    <p className="font-semibold text-[#231F1D]">Cloud Backup</p>
-                    <p className="text-xs text-[#68615C]">Zero cloud persistence active</p>
-                  </div>
-                </div>
-                <Badge variant="neutral">Off</Badge>
-              </div>
-
-              <div className="flex items-start justify-between py-2 border-b border-[#E8DFD3]">
-                <div className="flex items-start gap-2">
-                  <Cpu className="w-4 h-4 text-[#68615C] mt-0.5 shrink-0" />
-                  <div>
-                    <p className="font-semibold text-[#231F1D]">AI Health Processing</p>
-                    <p className="text-xs text-[#68615C]">All current calculations performed deterministically on device</p>
-                  </div>
-                </div>
-                <Badge variant="outline">On-Device Math</Badge>
-              </div>
-
-              <div className="flex items-start justify-between py-2">
-                <div className="flex items-start gap-2">
-                  <EyeOff className="w-4 h-4 text-[#2C6E49] mt-0.5 shrink-0" />
-                  <div>
-                    <p className="font-semibold text-[#231F1D]">Health Advertising Profiling</p>
-                    <p className="text-xs text-[#68615C]">Strict architectural prohibition</p>
-                  </div>
-                </div>
-                <Badge variant="success">Never</Badge>
-              </div>
-            </div>
-          </Card>
-        </section>
-
-        {/* Data Actions: Export & Delete */}
-        <section className="space-y-3">
-          <h3 className="font-serif font-semibold text-base text-[#231F1D]">
-            Data Management & Sovereignty
-          </h3>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {/* Export */}
-            <Card className="p-4 bg-white space-y-3">
-              <div className="w-8 h-8 rounded-lg bg-[#EDF3EF] text-[#2C6E49] flex items-center justify-center">
-                <Download className="w-4 h-4" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-sm text-[#231F1D]">Export All My Data</h4>
-                <p className="text-xs text-[#68615C] mt-0.5">
-                  Download a structured, client-side JSON archive of all check-ins, symptoms, and treatments.
-                </p>
-              </div>
-              <Button
-                variant="outline"
-                size="sm"
-                fullWidth
-                disabled={isExporting}
-                onClick={handleExportData}
-                className="text-xs"
-              >
-                {isExporting ? 'Preparing Archive...' : 'Download Export (JSON)'}
-              </Button>
-            </Card>
-
-            {/* Delete Local Journal */}
-            <Card className="p-4 bg-white space-y-3">
-              <div className="w-8 h-8 rounded-lg bg-[#FDF1F0] text-[#A33A33] flex items-center justify-center">
-                <Trash2 className="w-4 h-4" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-sm text-[#231F1D]">Delete Local Journal</h4>
-                <p className="text-xs text-[#68615C] mt-0.5">
-                  Permanently wipe all locally stored check-ins, symptoms, and regimens from this browser.
-                </p>
-              </div>
-              <Button
-                variant="danger"
-                size="sm"
-                fullWidth
-                onClick={() => setShowDeleteModal(true)}
-                className="text-xs"
-              >
-                Delete Local Data
-              </Button>
-            </Card>
-          </div>
-        </section>
-
-        <Link
-          href="/app/storage/"
-          className="block rounded-2xl border border-[#1F5A4C] bg-[#FDF9F7] p-4 text-sm hover:bg-[#E6EFEB]"
-        >
-          <span className="block font-semibold text-[#231F1D]">Manage storage</span>
-          <span className="block text-xs text-[#554E48]">
-            Restore a backup, see how much space is used, or delete only older entries or one tool&apos;s data.
-          </span>
-        </Link>
-
-        {/* Philosophy Statement */}
-        <Card variant="muted" className="p-4 text-xs text-[#554E48] leading-relaxed">
-          <p className="font-semibold text-[#231F1D] mb-1">
-            &quot;Your body isn&apos;t our business model.&quot;
+          <p role="status" className="saved-note">
+            <Icon.Check width={20} height={20} />
+            Everything you logged has been deleted from this browser.
           </p>
-          We do not sell health data, use health records for behavioral advertising, or quietly ship your logs to third-party brokers. What happens on your device stays on your device.
-        </Card>
+        )}
 
-        {/* Delete Confirmation Modal */}
-        {showDeleteModal && (
-          <div
-            role="dialog"
-            aria-modal="true"
-            className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4 animate-in fade-in"
-          >
-            <div className="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl border border-[#E5DED5] space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#FDF1F0] text-[#A33A33] flex items-center justify-center mx-auto">
-                <AlertTriangle className="w-6 h-6" />
-              </div>
+        <Panel title="Where is my data right now?" tone="feature" hint="A live check of this browser, not a promise on a page.">
+          <ul className="row-list">
+            <StatusRow
+              icon={<HardDrive className="h-5 w-5" />}
+              title="Your journal and symptoms"
+              body={`Kept in this browser on this device: ${counts.checkins} check-ins, ${counts.symptoms} symptom ratings, ${counts.treatments} treatments.`}
+              status="This device"
+              good
+            />
+            <StatusRow
+              icon={<Cloud className="h-5 w-5" />}
+              title="Online backup"
+              body="There isn’t one. Nothing you log is sent to us or anyone else."
+              status="Off"
+            />
+            <StatusRow
+              icon={<Cpu className="h-5 w-5" />}
+              title="Charts and summaries"
+              body="Worked out on your device with simple counts and averages. No AI reads your entries."
+              status="On device"
+              good
+            />
+            <StatusRow
+              icon={<EyeOff className="h-5 w-5" />}
+              title="Advertising based on your health"
+              body="Never. The site has no ads and no trackers."
+              status="Never"
+              good
+            />
+          </ul>
+        </Panel>
 
-              <div className="text-center">
-                <h3 className="font-serif font-bold text-lg text-[#231F1D]">
-                  Permanently delete all local data?
-                </h3>
-                <p className="text-xs text-[#68615C] mt-1 leading-relaxed">
-                  This will completely clear your IndexedDB storage ({counts.checkins} check-ins). This action cannot be reversed.
+        <section aria-labelledby="your-data-heading" className="grid gap-3">
+          <h2 id="your-data-heading" className="section-title px-0.5">
+            Take it with you, or delete it
+          </h2>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div className="panel content-start">
+              <span className="row-icon" aria-hidden="true">
+                <Download className="h-5 w-5" />
+              </span>
+              <div>
+                <h3 className="font-sans text-[1.125rem] font-bold">Export all my data</h3>
+                <p className="mt-1 text-[var(--ink-muted)]">
+                  Download a file with all your check-ins, symptoms and treatments, to keep or move to another device.
                 </p>
               </div>
+              <Button variant="secondary" fullWidth loading={isExporting} disabled={isExporting} onClick={handleExportData}>
+                Download my data
+              </Button>
+            </div>
 
-              <div className="flex flex-col gap-2 pt-2">
-                <Button variant="danger" fullWidth onClick={handleClearLocal}>
-                  Yes, Permanently Delete All Data
-                </Button>
-                <Button
-                  variant="outline"
-                  fullWidth
-                  onClick={() => setShowDeleteModal(false)}
-                >
-                  Cancel
-                </Button>
+            <div className="panel content-start">
+              <span className="row-icon bg-[var(--urgent-soft)] text-[var(--urgent)]" aria-hidden="true">
+                <Trash2 className="h-5 w-5" />
+              </span>
+              <div>
+                <h3 className="font-sans text-[1.125rem] font-bold">Delete everything</h3>
+                <p className="mt-1 text-[var(--ink-muted)]">
+                  Permanently remove all check-ins, symptoms and treatments from this browser. You&apos;ll be asked to confirm.
+                </p>
               </div>
+              <Button variant="danger" fullWidth onClick={() => setShowDeleteModal(true)}>
+                Delete all my data…
+              </Button>
             </div>
           </div>
-        )}
-      </div>
+        </section>
+
+        <div className="row-list">
+          <Link href="/app/storage/" className="row">
+            <span className="row-main">
+              <span className="row-title block">Manage storage</span>
+              <span className="row-meta block">
+                Restore a backup, see how much space is used, or delete only older entries or one tool&apos;s data.
+              </span>
+            </span>
+            <Icon.Chevron width={20} height={20} className="shrink-0 text-[var(--ink-muted)]" />
+          </Link>
+        </div>
+
+        <blockquote className="border-l-[3px] border-[var(--accent)] py-1 pl-5">
+          <p className="font-serif text-[1.25rem] leading-snug font-medium">&ldquo;Your body isn&apos;t our business model.&rdquo;</p>
+          <p className="mt-2 text-[var(--ink-muted)]">
+            We don&apos;t sell health data, use it for advertising, or pass your logs to anyone. What happens on your device
+            stays on your device.
+          </p>
+        </blockquote>
+      </AppPage>
+
+      {/* Delete confirmation */}
+      {showDeleteModal && (
+        <div
+          role="alertdialog"
+          aria-modal="true"
+          aria-labelledby="delete-title"
+          aria-describedby="delete-body"
+          className="fixed inset-0 z-50 flex items-end justify-center bg-[var(--scrim)] sm:items-center sm:p-4"
+          onClick={(e) => e.target === e.currentTarget && setShowDeleteModal(false)}
+        >
+          <div className="w-full max-w-sm space-y-4 rounded-t-[var(--radius-lg)] border border-[var(--rule)] bg-[var(--paper-raised)] p-6 pb-[calc(1.5rem+env(safe-area-inset-bottom,0px))] shadow-[var(--shadow-lift)] sm:rounded-[var(--radius-lg)] sm:pb-6">
+            <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-[var(--urgent-soft)] text-[var(--urgent)]">
+              <AlertTriangle className="h-6 w-6" aria-hidden="true" />
+            </div>
+            <div className="text-center">
+              <h3 id="delete-title" className="font-serif text-[1.35rem] font-semibold">
+                Delete all your data from this browser?
+              </h3>
+              <p id="delete-body" className="mt-2 text-[var(--ink-muted)]">
+                This removes all {counts.checkins} check-ins and everything else you logged here. It can&apos;t be undone. If you
+                might want it later, download your data first.
+              </p>
+            </div>
+            <div className="grid gap-2 pt-1">
+              <Button variant="danger" fullWidth onClick={handleClearLocal}>
+                Yes, delete everything
+              </Button>
+              <Button variant="secondary" fullWidth onClick={() => setShowDeleteModal(false)} autoFocus>
+                Cancel
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

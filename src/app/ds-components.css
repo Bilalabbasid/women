@@ -1387,7 +1387,8 @@
     width: 100%;
     max-width: 42rem;
     margin-inline: auto;
-    padding: 1.25rem 1rem calc(6.5rem + env(safe-area-inset-bottom, 0px));
+    /* The layout footer below carries the space for the bottom tab bar. */
+    padding: 1.25rem 1rem 2rem;
     display: grid;
     gap: 1.25rem;
     align-content: start;
@@ -1766,8 +1767,16 @@
   /* Stat tiles. */
   .stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
-    gap: 0.6rem;
+    grid-template-columns: repeat(auto-fit, minmax(6.25rem, 1fr));
+    gap: 0.5rem;
+  }
+  @media (max-width: 400px) {
+    .stat {
+      padding: 0.7rem 0.75rem;
+    }
+    .stat-value {
+      font-size: 1.6rem;
+    }
   }
   .stat {
     display: grid;

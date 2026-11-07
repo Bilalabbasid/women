@@ -17,7 +17,7 @@ import {
   TransitionTimeline,
 } from '@/components/ui/illustrations';
 import { TocRail, TocSheet } from '@/components/ui/interactive';
-import { ChipsDemo, LoadingDemo, SheetDemo, SwitchDemo, TabsDemo, ToastDemo } from './demos';
+import { ChipsDemo, LoadingDemo, SheetDemo, SwitchDemo, TabsDemo, ToastDemo, TrackerDemo } from './demos';
 
 export const metadata: Metadata = {
   title: 'Design system',
@@ -36,6 +36,7 @@ const SECTIONS = [
   { id: 'disclosure', label: 'Accordion, tabs, steps' },
   { id: 'feedback', label: 'Progress, toast, sheet' },
   { id: 'states', label: 'Empty, loading, error' },
+  { id: 'tracker', label: 'Tracker' },
   { id: 'illustration', label: 'Illustration' },
 ];
 
@@ -514,6 +515,15 @@ export default function DesignSystemPage() {
                   </button>
                 </div>
               </div>
+            </Section>
+
+            {/* ------------------------------------------------ tracker */}
+            <Section
+              id="tracker"
+              title="Tracker"
+              intro="The app’s building blocks (components/app/kit.tsx): log today in under 30 seconds with large, single-tap controls."
+            >
+              <TrackerDemo />
             </Section>
 
             {/* ------------------------------------------------ illustration */}

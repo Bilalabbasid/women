@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Icon } from './kit';
+import { AppTopTabs } from './app-navigation';
 
 export interface AppHeaderProps {
   title: string;
@@ -64,6 +65,7 @@ export function AppHeader({
           </Link>
         )}
       </div>
+      <AppTopTabs />
     </header>
   );
 }

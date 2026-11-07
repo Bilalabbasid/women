@@ -59,7 +59,7 @@ export function SearchBox({ suggestions }: { suggestions: Array<{ href: string; 
             <label htmlFor="q" className="sr-only">
               Search the site
             </label>
-            <div className="flex items-center gap-2 rounded-2xl bg-white p-2 shadow-lg shadow-black/15">
+            <div className="flex items-center gap-2 rounded-2xl bg-[var(--paper-raised)] p-2 shadow-lg shadow-black/15">
               <Search aria-hidden="true" className="ml-2 h-5 w-5 shrink-0 text-[var(--color-ink-muted)]" />
               <input
                 id="q"

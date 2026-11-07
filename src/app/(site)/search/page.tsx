@@ -33,7 +33,7 @@ export default function SearchPage() {
                 id="q-static"
                 name="q"
                 type="search"
-                className="min-h-[56px] w-full rounded-2xl bg-white px-4 text-lg text-[var(--color-ink)] shadow-lg shadow-black/15"
+                className="min-h-[56px] w-full rounded-2xl bg-[var(--paper-raised)] px-4 text-lg text-[var(--color-ink)] shadow-lg shadow-black/15"
                 placeholder="For example: night sweats, HRT patch"
               />
             </form>

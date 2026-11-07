@@ -128,7 +128,7 @@ export function ToolHero({
           )}
         </div>
 
-        <div className="rounded-2xl bg-white p-5 text-[var(--color-ink)] shadow-xl shadow-black/20 sm:p-6">
+        <div className="rounded-2xl bg-[var(--paper-raised)] p-5 text-[var(--color-ink)] shadow-xl shadow-black/20 sm:p-6">
           <div className="flex items-center gap-3">
             <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-accent)] text-white">
               <Icon aria-hidden="true" className="h-6 w-6" />

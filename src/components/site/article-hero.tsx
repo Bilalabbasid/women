@@ -62,7 +62,7 @@ export function ArticleHero({
         </div>
 
         {facts && (
-          <div className="rounded-2xl bg-white p-5 text-[var(--color-ink)] shadow-xl shadow-black/20 sm:p-6">
+          <div className="rounded-2xl bg-[var(--paper-raised)] p-5 text-[var(--color-ink)] shadow-xl shadow-black/20 sm:p-6">
           <dl className="space-y-4">
             {grade && (
               <div className="space-y-1.5">

@@ -174,7 +174,7 @@ export default function ToolsHub() {
                   <li key={p.url}>
                     <Link
                       href={p.url}
-                      className="tap group flex h-full w-full flex-col items-start gap-2 rounded-2xl bg-white p-3.5 text-[var(--color-ink)] no-underline shadow-lg shadow-black/15 transition-transform hover:-translate-y-0.5 focus-visible:outline-white"
+                      className="tap group flex h-full w-full flex-col items-start gap-2 rounded-2xl bg-[var(--paper-raised)] p-3.5 text-[var(--color-ink)] no-underline shadow-lg shadow-black/15 transition-transform hover:-translate-y-0.5 focus-visible:outline-white"
                     >
                       <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-accent)] text-white">
                         <Icon aria-hidden="true" className="h-5 w-5" />

@@ -44,9 +44,9 @@ If hot flashes, disrupted sleep, or brain fog are affecting how you function at 
 
 A 2026 US survey of **1,011 women aged 40-65** who were employed (or had recently stopped working) and experiencing vasomotor symptoms — averaging **7.5 hot flashes or night sweats per day** — measured the real workplace impact [@kapoor-vms-workplace-survey-2026]:
 
-- **36%** reported some degree of activity impairment at work
-- **32%** reported presenteeism (being at work but functioning below capacity)
-- **6%** reported absenteeism (missing work entirely)
+- **36%** reported some degree of activity impairment at work [@kapoor-vms-workplace-survey-2026]
+- **32%** reported presenteeism (being at work but functioning below capacity) [@kapoor-vms-workplace-survey-2026]
+- **6%** reported absenteeism (missing work entirely) [@kapoor-vms-workplace-survey-2026]
 - All three increased alongside symptom severity [@kapoor-vms-workplace-survey-2026]
 
 Despite this, **81.3% had never received any treatment** for their symptoms, and **almost 80% had never discussed their symptoms with their employer** at all. Only **18.1%** felt their employer was actually supportive around this [@kapoor-vms-workplace-survey-2026].
@@ -57,14 +57,14 @@ A note on this source: the survey was funded by Astellas Pharma, which makes a p
 
 The most common coping strategies reported were:
 
-- **Controlling the temperature** around them (71.0%)
-- **Wearing layered, breathable clothing** (46.0%)
+- **Controlling the temperature** around them (71.0%) [@kapoor-vms-workplace-survey-2026]
+- **Wearing layered, breathable clothing** (46.0%) [@kapoor-vms-workplace-survey-2026]
 
 When asked what workplace accommodations would help most, the top answers were:
 
-- **Changes to benefit packages** (27.9%) — such as insurance coverage for menopause-related care
-- **More general workplace awareness** (25.7%) — so symptoms aren't misread or stigmatized
-- **More flexible working arrangements** (23.2%) — such as remote options on difficult days or flexible start times after a disrupted night
+- **Changes to benefit packages** (27.9%) — such as insurance coverage for menopause-related care [@kapoor-vms-workplace-survey-2026]
+- **More general workplace awareness** (25.7%) — so symptoms aren't misread or stigmatized [@kapoor-vms-workplace-survey-2026]
+- **More flexible working arrangements** (23.2%) — such as remote options on difficult days or flexible start times after a disrupted night [@kapoor-vms-workplace-survey-2026]
 
 ## Practical steps if you're considering raising this
 

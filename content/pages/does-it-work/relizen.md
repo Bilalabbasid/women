@@ -61,7 +61,7 @@ That distinction matters a lot. A survey of people who were already loyal, payin
 
 - **No proven benefit over placebo** once controlled trials are isolated, per the most recent independent meta-analysis
 - **No significant safety concerns** were identified — this isn't a safety warning, just an efficacy one
-- Because our grade is **Not supported**, we don't place affiliate links for Relizen on this page — see [how we grade evidence](/evidence/how-we-grade/) and [products we won't recommend](/evidence/products-we-wont-recommend/)
+- Because our grade is :grade{id="relizen-vms"}, we don't place affiliate links for Relizen on this page — see [how we grade evidence](/evidence/how-we-grade/) and [products we won't recommend](/evidence/products-we-wont-recommend/)
 
 If you're looking for hot flash options with stronger controlled-trial evidence, see our [does it work? evidence checker](/tools/does-it-work-checker/) or [non-hormonal prescription and behavioral treatments](/treatments/nonhormonal/).
 

@@ -69,10 +69,10 @@ Only a clinician can tell which situation applies to you, so a new or worsening 
 
 | Option | Evidence grade | What guidelines say |
 | --- | --- | --- |
-| **[Hormone therapy (HRT)](/treatments/hormone-therapy/)** | **Moderate** | NICE NG23 says HRT may be considered for depressive symptoms (not full depression) with onset alongside other menopause symptoms [@nice-ng23-recommendations] |
-| **Cognitive behavioral therapy (CBT)** | **Strong** | Level I evidence from The Menopause Society (2023); also a NICE-recommended option, alone or alongside other treatments [@nams-2023-nonhormone-therapy; @nice-ng23-recommendations] |
-| **Standard depression care** (if diagnosed) | **Strong** | NICE recommends following its depression-in-adults guideline together with menopause-specific care [@nice-ng23-recommendations] |
-| **Over-the-counter herbal remedies, cannabinoids** | **Not supported** | Not recommended by The Menopause Society (2023), Levels I–II [@nams-2023-nonhormone-therapy] |
+| **[Hormone therapy (HRT)](/treatments/hormone-therapy/)** | :grade{id="mht-depressive-symptoms"} | NICE NG23 says HRT may be considered for depressive symptoms (not full depression) with onset alongside other menopause symptoms [@nice-ng23-recommendations] |
+| **Cognitive behavioral therapy (CBT)** | :grade{id="cbt-mood"} | Level I evidence from The Menopause Society (2023); also a NICE-recommended option, alone or alongside other treatments [@nams-2023-nonhormone-therapy; @nice-ng23-recommendations] |
+| **Standard depression care** (if diagnosed) | :grade{id="depression-care"} | NICE recommends following its depression-in-adults guideline together with menopause-specific care [@nice-ng23-recommendations] |
+| **Over-the-counter herbal remedies, cannabinoids** | :grade{id="otc-mood-supplements"} | Not recommended by The Menopause Society (2023), Levels I–II [@nams-2023-nonhormone-therapy] |
 
 See our [Does It Work? evidence directory](/does-it-work/) before trying any supplement marketed for mood or "hormone balance."
 

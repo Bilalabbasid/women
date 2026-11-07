@@ -50,11 +50,11 @@ Trouble falling asleep or waking repeatedly at 2 or 3 a.m. is one of the most di
 
 | Option | Evidence grade | What clinical guidelines say |
 | --- | --- | --- |
-| **Cognitive behavioral therapy (CBT)** | **Strong** | Level I recommendation from The Menopause Society (2023) for reducing hot flash bother and sleep disruption [@nams-2023-nonhormone-therapy] |
-| **[Menopausal hormone therapy (HRT)](/treatments/hormone-therapy/)** | **Strong** | Most effective treatment when nocturnal vasomotor symptoms wake you up [@nams-2022-hormone-therapy] |
-| **[Non-hormonal Rx](/treatments/nonhormonal/)** (gabapentin, SSRIs/SNRIs, NK3 antagonists) | **Strong** | Level I non-hormonal options when night sweats drive awakenings [@nams-2023-nonhormone-therapy] |
-| **Breathable [sleepwear](/care/sleepwear-for-night-sweats/) & [cooling products](/does-it-work/cooling-products/)** | **Limited** | Practical comfort aid for night sweats; not a medical treatment that stops vasomotor surges [@nams-2023-nonhormone-therapy] |
-| **Over-the-counter [magnesium](/does-it-work/magnesium/) & herbal sleep supplements** | **Not supported** | Not recommended by The Menopause Society (2023) for vasomotor symptoms (Levels I–II) [@nams-2023-nonhormone-therapy] |
+| **Cognitive behavioral therapy (CBT)** | :grade{id="cbt-sleep-vms"} | Level I recommendation from The Menopause Society (2023) for reducing hot flash bother and sleep disruption [@nams-2023-nonhormone-therapy] |
+| **[Menopausal hormone therapy (HRT)](/treatments/hormone-therapy/)** | :grade{id="mht-sleep-vms"} | Most effective treatment when nocturnal vasomotor symptoms wake you up [@nams-2022-hormone-therapy] |
+| **[Non-hormonal Rx](/treatments/nonhormonal/)** (gabapentin, SSRIs/SNRIs, NK3 antagonists) | :grade{id="nonhormonal-rx-sleep-vms"} | Level I non-hormonal options when night sweats drive awakenings [@nams-2023-nonhormone-therapy] |
+| **Breathable [sleepwear](/care/sleepwear-for-night-sweats/) & [cooling products](/does-it-work/cooling-products/)** | :grade{id="cooling-comfort"} | Practical comfort aid for night sweats; not a medical treatment that stops vasomotor surges [@nams-2023-nonhormone-therapy] |
+| **Over-the-counter [magnesium](/does-it-work/magnesium/) & herbal sleep supplements** | :grade{id="otc-sleep-supplements-vms"} | Not recommended by The Menopause Society (2023) for vasomotor symptoms (Levels I–II) [@nams-2023-nonhormone-therapy] |
 
 ::product-slot{id="sleep-cooling-pad"}
 

@@ -10,6 +10,7 @@ import { ToolHistory } from '@/components/storage/tool-history';
 import { btnDanger, btnPrimary } from '@/components/storage/styles';
 import type { EvidenceGrade } from '@/lib/content/schema';
 import { GradeBadge, GRADE_LABELS, GradeAiNote } from '@/components/site/evidence';
+import { requireGrade } from '@/lib/grades/registry';
 
 /** Catalog grades use the site-wide scale (`EvidenceGrade`) so a verdict reads the
  * same way here as it does on an article page — same words, same colors. */
@@ -18,6 +19,8 @@ export interface EvidenceEntry {
   name: string;
   category: 'Hormonal' | 'Non-hormonal Rx' | 'Behavioral & Physical' | 'Topical & Devices' | 'Supplements & Cooling';
   symptoms: string[];
+  /** Grade registry id (content/_grades/grades.json). The grade itself is read from there. */
+  gradeId: string;
   grade: Exclude<EvidenceGrade, 'per_option'>;
   /** Extra nuance beyond the plain grade word, e.g. "(with liver monitoring warning)". */
   gradeNote?: string;
@@ -26,13 +29,13 @@ export interface EvidenceEntry {
   articleUrl?: string;
 }
 
-export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
+const CATALOG_SOURCE: ReadonlyArray<Omit<EvidenceEntry, 'grade'>> = [
   {
     id: 'systemic-hrt',
     name: 'Systemic hormone therapy (estrogen + progestogen, or estrogen alone after hysterectomy)',
     category: 'Hormonal',
     symptoms: ['Hot flashes & night sweats', 'Bone loss prevention', 'Genitourinary symptoms'],
-    grade: 'strong',
+    gradeId: 'mht-vms',
     verdictSummary:
       'The Menopause Society (2022) states systemic hormone therapy is the most effective treatment for vasomotor symptoms and prevents bone loss. Benefit-risk ratio is most favorable under age 60 or within 10 years of menopause onset without contraindications.',
     guidelineSource: 'The Menopause Society 2022 Position Statement; FDA 2025–2026 labeling updates',
@@ -43,7 +46,7 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     name: 'Low-dose vaginal estrogen (creams, tablets, or rings)',
     category: 'Hormonal',
     symptoms: ['Vaginal dryness & painful sex'],
-    grade: 'strong',
+    gradeId: 'vaginal-estrogen-gsm',
     verdictSummary:
       'Highly effective for moderate-to-severe genitourinary syndrome of menopause (vaginal dryness and painful sex) when non-hormonal moisturisers are not enough, with minimal systemic absorption.',
     guidelineSource: 'NAMS 2020 GSM Position Statement; Cochrane 2021',
@@ -54,7 +57,7 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     name: 'Fezolinetant (Veozah) — NK3 receptor antagonist',
     category: 'Non-hormonal Rx',
     symptoms: ['Hot flashes & night sweats'],
-    grade: 'strong',
+    gradeId: 'fezolinetant-vms',
     gradeNote: 'with liver monitoring warning',
     verdictSummary:
       'FDA-approved non-hormonal prescription option with Level I evidence for moderate-to-severe hot flashes. Carries an FDA boxed warning for liver injury (hepatotoxicity), requiring baseline and scheduled blood liver tests.',
@@ -66,7 +69,7 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     name: 'Elinzanetant (Lynkuet) — dual NK1/NK3 receptor antagonist',
     category: 'Non-hormonal Rx',
     symptoms: ['Hot flashes & night sweats'],
-    grade: 'strong',
+    gradeId: 'elinzanetant-vms',
     verdictSummary:
       'FDA-approved in October 2025 for moderate-to-severe vasomotor symptoms. Efficacy came from two 12-week phase 3 trials (OASIS 1 and 2) in 796 women; safety data covered 1,420 women across OASIS 1–3, including 627 followed for up to a year.',
     guidelineSource: 'Manufacturer (Bayer) approval announcement, 2025, reporting the OASIS 1–3 trials; brand-funded source',
@@ -74,22 +77,34 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
   },
   {
     id: 'ssri-snri-gabapentin',
-    name: 'Certain SSRIs, SNRIs, gabapentin, and oxybutynin',
+    name: 'Certain SSRIs, SNRIs and gabapentin',
     category: 'Non-hormonal Rx',
     symptoms: ['Hot flashes & night sweats'],
-    grade: 'strong',
-    gradeNote: 'strong to moderate depending on option, Level I–II',
+    gradeId: 'ssri-snri-gabapentin-vms',
+    gradeNote: 'Level I',
     verdictSummary:
       'Recommended by The Menopause Society (2023) as non-hormonal prescription options that reduce hot flash frequency and severity when hormone therapy is contraindicated or not chosen.',
     guidelineSource: 'The Menopause Society 2023 Nonhormone Therapy Position Statement',
     articleUrl: '/symptoms/hot-flashes/',
   },
   {
+    id: 'oxybutynin',
+    name: 'Oxybutynin',
+    category: 'Non-hormonal Rx',
+    symptoms: ['Hot flashes & night sweats'],
+    gradeId: 'oxybutynin-vms',
+    gradeNote: 'Levels I–II',
+    verdictSummary:
+      'Recommended by The Menopause Society (2023) at Levels I–II for hot flashes, with a caution about cognitive decline in older adults.',
+    guidelineSource: 'The Menopause Society 2023 Nonhormone Therapy Position Statement',
+    articleUrl: '/treatments/nonhormonal/oxybutynin/',
+  },
+  {
     id: 'cbt-hypnosis',
     name: 'Cognitive behavioral therapy (CBT) and clinical hypnosis',
     category: 'Behavioral & Physical',
     symptoms: ['Hot flashes & night sweats', 'Sleep & mood'],
-    grade: 'strong',
+    gradeId: 'cbt-hypnosis-vms',
     gradeNote: 'Level I',
     verdictSummary:
       'The Menopause Society (2023) recommends CBT and clinical hypnosis (Level I) for reducing how much hot flashes bother daily life and sleep.',
@@ -101,7 +116,7 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     name: 'Supervised pelvic floor muscle training (PFMT)',
     category: 'Behavioral & Physical',
     symptoms: ['Bladder leaks & urgency'],
-    grade: 'strong',
+    gradeId: 'pfmt-incontinence',
     verdictSummary:
       'First-line treatment in NICE NG123 and Cochrane systematic reviews (at least 3 months of structured contractions); participants in PFMT trials were 8 times more likely to report complete resolution of urinary leakage than inactive controls.',
     guidelineSource: 'NICE NG123 (2019); Cochrane Review CD005654 (2018)',
@@ -112,7 +127,7 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     name: 'High-intensity resistance and impact training (HiRIT)',
     category: 'Behavioral & Physical',
     symptoms: ['Bone loss prevention'],
-    grade: 'strong',
+    gradeId: 'strength-training-bone',
     gradeNote: 'for bone density & strength',
     verdictSummary:
       'In the LIFTMOR randomized trial, twice-weekly supervised high-intensity resistance and impact training improved lumbar spine and femoral neck bone mineral density and functional strength in postmenopausal women with low bone mass. (Not recommended by NAMS 2023 as a treatment for hot flashes.)',
@@ -124,7 +139,7 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     name: 'Non-hormonal vaginal moisturisers and personal lubricants',
     category: 'Topical & Devices',
     symptoms: ['Vaginal dryness & painful sex'],
-    grade: 'moderate',
+    gradeId: 'vaginal-moisturizers-gsm',
     gradeNote: 'first-line non-hormonal option',
     verdictSummary:
       'Recommended by NAMS (2020) and ACOG (2021) as first-line non-hormonal care: vaginal moisturisers used several times a week hydrate tissue continuously, while lubricants reduce friction during sex.',
@@ -136,7 +151,7 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     name: 'Cooling pillows, breathable bedding, and moisture-wicking sleepwear',
     category: 'Supplements & Cooling',
     symptoms: ['Hot flashes & night sweats', 'Sleep & mood'],
-    grade: 'limited',
+    gradeId: 'cooling-comfort',
     gradeNote: 'comfort aid only, not a treatment',
     verdictSummary:
       'The Menopause Society (2023) notes that cooling techniques are not recommended as a clinical treatment that stops vasomotor flashes (Level II), though many women use breathable layers and cooling pillows for practical comfort when night sweats wake them.',
@@ -148,7 +163,7 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     name: 'Over-the-counter herbal supplements (black cohosh, evening primrose, soy extracts, cannabinoids)',
     category: 'Supplements & Cooling',
     symptoms: ['Hot flashes & night sweats', 'Sleep & mood'],
-    grade: 'not_supported',
+    gradeId: 'otc-supplements-vms',
     gradeNote: 'Level I–II trials',
     verdictSummary:
       'The Menopause Society (2023) does not recommend over-the-counter supplements, herbal remedies, soy extracts, or cannabinoids for vasomotor symptoms because randomized trial results are inconsistent or no better than placebo.',
@@ -160,7 +175,7 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     name: 'Paced respiration, acupuncture, and relaxation alone for hot flashes',
     category: 'Behavioral & Physical',
     symptoms: ['Hot flashes & night sweats'],
-    grade: 'not_supported',
+    gradeId: 'paced-respiration-acupuncture-vms',
     gradeNote: 'Level I–II trials',
     verdictSummary:
       'Controlled trials found paced respiration (Level I) and acupuncture or relaxation (Level II) did not consistently outperform sham or control groups for reducing hot flashes.',
@@ -168,6 +183,9 @@ export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = [
     articleUrl: '/symptoms/hot-flashes/',
   },
 ];
+
+/** Every checker grade is read from the one grade registry, so it matches the articles. */
+export const EVIDENCE_CATALOG: readonly EvidenceEntry[] = CATALOG_SOURCE.map((e) => ({ ...e, grade: requireGrade(e.gradeId).grade }));
 
 const SYMPTOM_FILTERS = [
   'All symptoms',
@@ -195,7 +213,7 @@ const DEFAULT_STATE: CheckerState = {
 };
 
 const ENTRY_IDS = new Set(EVIDENCE_CATALOG.map((e) => e.id));
-const GRADES: ReadonlyArray<CheckerState['selectedGrade']> = ['all', 'strong', 'moderate', 'limited', 'not_supported'];
+const GRADES: ReadonlyArray<CheckerState['selectedGrade']> = ['all', 'strong', 'moderate', 'limited', 'comfort_only', 'not_supported'];
 
 function normalize(raw: unknown): CheckerState {
   const p = (raw ?? {}) as Partial<CheckerState>;

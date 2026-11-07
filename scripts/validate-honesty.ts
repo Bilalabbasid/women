@@ -15,6 +15,7 @@ import { Report } from './lib/report';
 import { getContent } from '../src/lib/content/loader';
 import { isPublishable, isMedicallyReviewed } from '../src/lib/content/gate';
 import { NAV_HUBS } from '../src/lib/content/site-data';
+import { getGrade } from '../src/lib/grades/registry';
 import { HONESTY_ANCHOR, HONESTY_FOOTER, HONESTY_SHORT } from '../src/lib/site/honesty';
 
 const r = new Report('validate:honesty');
@@ -58,6 +59,7 @@ const store = getContent();
 const byUrl = new Map(store.pages.map((p) => [p.url, p]));
 let checked = 0;
 let full = 0;
+let gradeBadges = 0;
 
 for (const f of files) {
   const url = urlOf(f);
@@ -87,6 +89,14 @@ for (const f of files) {
     r.error(url, 'contains the retired "based on what you searched for" wording');
   }
 
+  // Every registry badge on the page shows exactly the registry's grade.
+  for (const m of visible.matchAll(/class="grade grade-([a-z_]+)" data-grade-id="([a-z0-9-]+)"/g)) {
+    const entry = getGrade(m[2]);
+    if (!entry) r.error(url, `grade badge for unknown registry id "${m[2]}"`);
+    else if (entry.grade !== m[1]) r.error(url, `"${m[2]}" shows "${m[1]}" but the registry says "${entry.grade}"`);
+    gradeBadges++;
+  }
+
   const page = byUrl.get(url);
   if (!page || !isPublishable(page, store)) continue;
 
@@ -102,5 +112,5 @@ for (const f of files) {
   }
 }
 
-r.note(`checked ${checked} built pages; ${full} article, tool and comparison pages carry the full notice`);
+r.note(`checked ${checked} built pages; ${full} article, tool and comparison pages carry the full notice; ${gradeBadges} registry grade badges match the registry`);
 r.finish();

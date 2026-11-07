@@ -26,7 +26,7 @@ claims:
     text: "Night sweats are severe vasomotor episodes that occur during sleep, triggered by erratic estrogen declines that disrupt hypothalamic thermoregulation."
     sources: [nams-2022-hormone-therapy]
   - id: mht-vasomotor-reduction
-    text: "Systemic hormone therapy produces a 75% to 90% reduction in vasomotor frequency and severity in randomized clinical trials."
+    text: "Compared with placebo, systemic estrogen therapy reduced weekly hot flash frequency by about 75% and significantly reduced severity."
     sources: [nams-2022-hormone-therapy]
   - id: nk3-receptor-efficacy
     text: "Neurokinin 3 receptor antagonists significantly reduce moderate to severe vasomotor symptoms in clinical trials without containing hormones."
@@ -98,10 +98,10 @@ While cooling gear improves sleep comfort, clinical trials show that medical tre
 
 | Option | Evidence Grade | Clinical Trial Finding |
 |---|---|---|
-| **Systemic Hormone Therapy (MHT)** | **Strong** | Reduces night sweats and daytime hot flashes by 75% to 90% in randomized trials [@nams-2022-hormone-therapy]. Transdermal patches or gels deliver continuous hormone levels overnight. |
-| **NK3 Receptor Antagonists** | **Strong** | Non-hormonal prescription tablets that target KNDy neurons in the hypothalamus, significantly reducing vasomotor episodes [@veozah-prescribing-information, @nams-2023-nonhormone-therapy]. |
-| **Cognitive Behavioral Therapy for Insomnia (CBT-I)** | **Moderate** | Helps restructure sleep patterns and reduces the distress and arousal that follow nighttime awakenings [@nams-2023-nonhormone-therapy]. |
-| **Cooling sleepwear and bed ventilation** | **Comfort only** | Wicks perspiration and prevents trapped body heat; does not prevent the internal hormonal surge [@nams-2023-nonhormone-therapy]. |
+| **Systemic Hormone Therapy (MHT)** | :grade{id="mht-vms"} | Reduces how often hot flashes and night sweats happen by about 75% compared with placebo in randomized trials [@nams-2022-hormone-therapy]. Transdermal patches or gels deliver continuous hormone levels overnight. |
+| **NK3 Receptor Antagonists** | :grade{id="nk3-vms"} | Non-hormonal prescription tablets that target KNDy neurons in the hypothalamus, significantly reducing vasomotor episodes [@veozah-prescribing-information, @nams-2023-nonhormone-therapy]. |
+| **Cognitive Behavioral Therapy for Insomnia (CBT-I)** | :grade{id="cbt-sleep-vms"} | Helps restructure sleep patterns and reduces the distress and arousal that follow nighttime awakenings [@nams-2023-nonhormone-therapy]. |
+| **Cooling sleepwear and bed ventilation** | :grade{id="cooling-comfort"} | Wicks perspiration and prevents trapped body heat; does not prevent the internal hormonal surge [@nams-2023-nonhormone-therapy]. |
 
 ## When to see a doctor and what to ask
 

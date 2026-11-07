@@ -46,8 +46,8 @@ Probiotics aren't usually the first thing that comes to mind for menopause, but 
 
 A 2024 systematic review and meta-analysis pooled **12 randomized controlled trials covering 1,183 postmenopausal women** to assess probiotic supplementation's effect on bone mineral density (BMD) and bone turnover markers [@wang-probiotics-bone-health-metaanalysis-2024]. Compared with controls, probiotic supplementation was associated with:
 
-- A **statistically significant increase in lumbar spine BMD** (standardized mean difference 0.60, 95% CI 0.14–1.05)
-- A **statistically significant increase in hip BMD** (standardized mean difference 0.74, 95% CI 0.15–1.33)
+- A **statistically significant increase in lumbar spine BMD** (standardized mean difference 0.60, 95% CI 0.14–1.05) [@wang-probiotics-bone-health-metaanalysis-2024]
+- A **statistically significant increase in hip BMD** (standardized mean difference 0.74, 95% CI 0.15–1.33) [@wang-probiotics-bone-health-metaanalysis-2024]
 - **Reduced levels of two bone-breakdown markers** (CTX and BALP), suggesting less active bone loss
 
 A subgroup analysis found the increase in BMD was **more pronounced in women with osteopenia** (an earlier stage of bone density loss) than in women who already had full osteoporosis [@wang-probiotics-bone-health-metaanalysis-2024]. The authors describe the results as robust across sensitivity analyses, while still calling for further trials to confirm and refine exactly which strains and doses work best [@wang-probiotics-bone-health-metaanalysis-2024].

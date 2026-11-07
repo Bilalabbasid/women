@@ -82,4 +82,4 @@ You can look up any treatment or supplement by symptom and evidence grade in our
 
 ## Commercial integrity notice
 
-Our evidence grades are established strictly from clinical trial literature before any commercial links are considered. If a product is graded **Not supported** or **Harm concern**, that grade will never be altered by commercial partnerships.
+Our evidence grades are established strictly from clinical trial literature before any commercial links are considered. If a product is graded "Not supported" or "Harm concern", that grade will never be altered by commercial partnerships.

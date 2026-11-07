@@ -21,6 +21,8 @@ import { STATIC_PUBLIC_PATHS } from '../src/lib/content/site-data';
 import { loadToolLogic, toolApprovalProblems } from '../src/lib/tools/logic';
 import { URGENT_TRIGGERS } from '../src/lib/safety/urgent-triggers';
 import { Report } from './lib/report';
+import { GRADE_REGISTRY } from '../src/lib/grades/registry';
+import { EVIDENCE_GRADES } from '../src/lib/content/schema';
 
 const today = process.env.VALIDATE_TODAY ?? new Date().toISOString().slice(0, 10);
 const r = new Report('validate:content');
@@ -155,6 +157,42 @@ for (const t of tools) {
   } else {
     r.note(`tool "${t.logic.id}" logic is ${t.logic.status}: hidden in production until a clinician approves it`);
   }
+}
+
+// The one grade registry (content/_grades/grades.json).
+{
+  const REG = 'content/_grades/grades.json';
+  const seen = new Set<string>();
+  const pagesByUrl = new Map(store.pages.map((p) => [p.url, p]));
+  for (const g of GRADE_REGISTRY) {
+    if (seen.has(g.id)) r.error(REG, `duplicate grade id "${g.id}"`);
+    seen.add(g.id);
+    // JSON isn't type-checked, so check the value really is on the scale (and isn't "per_option").
+    if (!(EVIDENCE_GRADES as readonly string[]).includes(g.grade) || (g.grade as string) === 'per_option') {
+      r.error(REG, `${g.id}: "${g.grade}" is not a grade on our scale`);
+    }
+    if (!g.treatment || !g.use) r.error(REG, `${g.id}: a grade needs a treatment and a use`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(g.last_checked)) r.error(REG, `${g.id}: last_checked must be YYYY-MM-DD`);
+    for (const id of g.sources) if (!store.sources.has(id)) r.error(REG, `${g.id}: source "${id}" is not in the source registry`);
+    for (const url of g.pages ?? []) {
+      const p = pagesByUrl.get(url);
+      if (!p) r.error(REG, `${g.id}: page ${url} does not exist`);
+      else if (p.fm.evidence_grade !== g.grade) {
+        r.error(p.file, `evidence_grade is "${p.fm.evidence_grade}" but the grade registry says "${g.grade}" (${g.id})`);
+      }
+    }
+  }
+}
+
+// Grades are written as :grade{id="..."} so they come from the registry, never typed by hand.
+const TYPED_GRADE = /\|\s*\*\*(Strong|Moderate|Limited|Not supported|Harm concern|Comfort only)[^*]*\*\*\s*\||\*\*(Strong|Moderate|Limited) evidence\*\*|\*\*(Not supported|Harm concern|Comfort only)\*\*/;
+for (const page of store.pages) {
+  if (['evidence', 'legal', 'about'].includes(page.fm.page_type)) continue; // the grading method defines the words
+  page.body.split(/\r?\n/).forEach((line, i) => {
+    if (TYPED_GRADE.test(line)) {
+      r.error(page.file, `line ${i + 1}: a grade is typed by hand; use :grade{id="..."} from content/_grades/grades.json`);
+    }
+  });
 }
 
 // Summary.

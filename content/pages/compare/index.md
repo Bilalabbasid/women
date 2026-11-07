@@ -88,7 +88,7 @@ For a direct side-by-side on the three most-compared providers: [Midi vs. Alloy]
 ## Detailed look at each service model
 
 ### 1. Insurance-covered synchronous video clinics (Midi Health, Allara Health)
-- **Evidence grade for clinical model:** **Strong evidence** (aligns with standard specialist consultation and NAMS/NICE prescribing pathways [@nams-2022-hormone-therapy; @nice-ng23-recommendations]).
+- **Evidence grade for clinical model:** :grade{id="clinician-led-care"} (aligns with standard specialist consultation and NAMS/NICE prescribing pathways [@nams-2022-hormone-therapy; @nice-ng23-recommendations]).
 - **Why this model ranks highest:** A live video conversation allows a clinician to review your personal and family medical history, blood pressure, [FDA boxed warning considerations](/treatments/hormone-therapy/boxed-warning/), and differential diagnoses (such as thyroid dysfunction or iron deficiency). Because prescriptions can be sent to your neighbourhood pharmacy, you pay your standard insurance copay for generic estradiol patches or micronized progesterone rather than a bundled direct-to-consumer markup.
 - **Limitations:** Wait times for an initial video slot can range from a few days to a few weeks depending on your state, and you must verify that your specific insurance plan is in-network before booking.
 

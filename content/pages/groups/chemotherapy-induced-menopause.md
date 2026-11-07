@@ -45,8 +45,8 @@ Being told that your cancer treatment might also end your fertility and trigger 
 
 It depends heavily on **which drugs** you're receiving and **your age**. A systematic review of 45 studies covering 5,607 female survivors of childhood and young adult cancer found that amenorrhoea (absent periods) rates after chemotherapy ranged from **0% to 83%**, depending on the specific treatment regimen [@overbeek-chemotherapy-ovarian-function-2017]. Some figures from that review:
 
-- Patients on **MVPP protocols** (used for some lymphomas): **39–79%** developed amenorrhoea
-- **Breast cancer survivors on cyclophosphamide-containing regimens**: **40–80%** developed amenorrhoea
+- Patients on **MVPP protocols** (used for some lymphomas): **39–79%** developed amenorrhoea [@overbeek-chemotherapy-ovarian-function-2017]
+- **Breast cancer survivors on cyclophosphamide-containing regimens**: **40–80%** developed amenorrhoea [@overbeek-chemotherapy-ovarian-function-2017]
 - The strongest risk factors identified were **alkylating agents** (specifically procarbazine and busulfan) and **older age at the time of treatment** [@overbeek-chemotherapy-ovarian-function-2017]
 
 The review's own authors are candid that all the studies they reviewed had methodological limitations, and call for better long-term tracking of cancer survivors [@overbeek-chemotherapy-ovarian-function-2017]. That's worth knowing: the exact numbers for your specific regimen may be better discussed directly with your oncologist, who can factor in your specific drugs, doses, and age.

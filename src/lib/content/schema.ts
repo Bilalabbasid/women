@@ -51,7 +51,8 @@ export const ALL_STATUSES = [...new Set([...MEDICAL_STATUSES, ...NON_MEDICAL_STA
  * options are graded individually in a table (for example a symptom page's
  * "What can help").
  */
-export const EVIDENCE_GRADES = ['strong', 'moderate', 'limited', 'not_supported', 'harm_concern', 'per_option'] as const;
+/** comfort_only: may make you more comfortable, but is not a treatment for the use (e.g. cooling bedding). */
+export const EVIDENCE_GRADES = ['strong', 'moderate', 'limited', 'comfort_only', 'not_supported', 'harm_concern', 'per_option'] as const;
 export type EvidenceGrade = (typeof EVIDENCE_GRADES)[number];
 
 export const SAFETY_FLAGS = [

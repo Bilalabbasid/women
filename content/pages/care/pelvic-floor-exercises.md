@@ -26,7 +26,7 @@ claims:
     text: "Supervised pelvic floor muscle training improves or cures stress urinary incontinence in the majority of women by enhancing muscular support under the bladder neck and urethra."
     sources: [nice-ng123-urinary-incontinence, cochrane-pfmt-incontinence]
   - id: pfmt-bearing-down-mistake
-    text: "Clinical studies demonstrate that without biofeedback or tactile confirmation, up to 50% of women inadvertently push down instead of lifting upward and inward."
+    text: "NICE advises a routine digital assessment to confirm a correct pelvic floor muscle contraction before starting supervised pelvic floor muscle training."
     sources: [cochrane-pfmt-incontinence, nice-ng123-urinary-incontinence]
 safety_flags: []
 cta_profile: urinary

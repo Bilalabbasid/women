@@ -61,11 +61,11 @@ Get urgent medical care for a severe headache that comes on suddenly ("thundercl
 
 This is one of the few places where the *route* of hormone therapy, not just the decision to use it, directly affects safety:
 
-| Factor | What the evidence shows | Evidence grade |
+| Factor | What the evidence shows | Bottom line |
 | --- | --- | --- |
 | **Oral estrogen** | May worsen migraine and raise vascular risk, especially with higher doses and in women who get aura [@korn-bernstein-migraine-menopause-2026] | **Caution** |
 | **Low-dose transdermal estrogen** (patch/gel) | Appears safer and better tolerated for migraine, and is the option The North American Menopause Society recommends for women with migraine per this review [@korn-bernstein-migraine-menopause-2026] | **Preferred when HRT is used** |
-| **Continuous vs. cyclic progestogen** | Continuous regimens may reduce withdrawal-related migraine attacks compared with cyclic regimens [@korn-bernstein-migraine-menopause-2026] | **Moderate** |
+| **Continuous vs. cyclic progestogen** | Continuous regimens may reduce withdrawal-related migraine attacks compared with cyclic regimens [@korn-bernstein-migraine-menopause-2026] | :grade{id="continuous-progestogen-migraine"} |
 | **Baseline stroke risk, women under 60** | Very low; unlikely to rise with transdermal combined HRT, but rises with oral estrogen-containing HRT, increasing with dose and duration [@nice-ng23-recommendations] | **Context, not a verdict for any individual** |
 
 None of this is a substitute for an individual risk assessment — your personal and family history of stroke, blood clots, and cardiovascular disease all factor in alongside your migraine type. See our [HRT overview](/treatments/hormone-therapy/) and the [FDA boxed warning explainer](/treatments/hormone-therapy/boxed-warning/) for the broader safety picture.

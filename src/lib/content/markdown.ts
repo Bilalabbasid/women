@@ -9,6 +9,8 @@ import { visit, SKIP } from 'unist-util-visit';
 import { toString as hastToString } from 'hast-util-to-string';
 import type { Root as MdRoot, Text as MdText, PhrasingContent } from 'mdast';
 import type { Root as HRoot, Element } from 'hast';
+import { requireGrade } from '../grades/registry';
+import { GRADE_LABELS } from '../grades/labels';
 
 /**
  * Markdown → HTML on the server. No raw HTML is allowed in content
@@ -154,8 +156,22 @@ function remarkDirectivesToHtml() {
   return (tree: MdRoot) => {
     visit(tree, (node, index, parent) => {
       if (node.type === 'textDirective' && parent && index !== undefined) {
+        const d = node as unknown as { name: string; attributes?: Record<string, string>; children?: Array<{ value?: string }> };
+        // :grade{id="..."} renders the grade from the one grade registry (content/_grades/grades.json),
+        // so a treatment can't be typed as "Strong" on one page and "Moderate" on another.
+        if (d.name === 'grade') {
+          const entry = requireGrade(d.attributes?.id ?? '');
+          (parent.children as unknown[]).splice(index, 1, {
+            type: 'emphasis',
+            data: {
+              hName: 'span',
+              hProperties: { className: ['grade', `grade-${entry.grade}`], dataGradeId: entry.id },
+            },
+            children: [{ type: 'text', value: GRADE_LABELS[entry.grade] }],
+          });
+          return;
+        }
         // Prose like "ratio 1:example" is parsed as a text directive; put the original text back.
-        const d = node as unknown as { name: string; children?: Array<{ value?: string }> };
         const inner = (d.children ?? []).map((c) => c.value ?? '').join('');
         (parent.children as unknown[]).splice(index, 1, { type: 'text', value: `:${d.name}${inner ? `[${inner}]` : ''}` });
         return;

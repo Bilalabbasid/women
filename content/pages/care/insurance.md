@@ -44,8 +44,8 @@ Whether your insurance actually covers menopause care — visits, hormone therap
 
 A 2026 cross-sectional study used NHANES (a nationally representative US health survey) data from 2013–2020 to compare menopausal hormone therapy (MHT) use between women with Medicaid and women with private insurance, among those aged 45–64 eligible for MHT [@chesnokova-insurance-mht-disparity-2026]. The results:
 
-- Women with **Medicaid** reported a history of MHT use at **10.7%**, compared with **20.7%** for women with **private insurance** — less than half the rate
-- After adjusting for other factors, Medicaid-insured women had significantly **lower odds of MHT use** than privately insured women (OR 0.50, 95% CI 0.28–0.87)
+- Women with **Medicaid** reported a history of MHT use at **10.7%**, compared with **20.7%** for women with **private insurance** — less than half the rate [@chesnokova-insurance-mht-disparity-2026]
+- After adjusting for other factors, Medicaid-insured women had significantly **lower odds of MHT use** than privately insured women (OR 0.50, 95% CI 0.28–0.87) [@chesnokova-insurance-mht-disparity-2026]
 - The study also found **Black women had lower odds of MHT use than White women**, and this gap was **partly, but not fully, explained** once insurance status was factored in [@chesnokova-insurance-mht-disparity-2026]
 
 The researchers frame this plainly: insurance type appears to be a real barrier to menopause care access, and addressing it is part of what equitable menopause care would require [@chesnokova-insurance-mht-disparity-2026].

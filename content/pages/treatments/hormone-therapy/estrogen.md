@@ -44,7 +44,7 @@ faq:
     a: "Several forms exist, including pills, patches, gels, and sprays, and the choice of route affects more than convenience — it changes blood clot and stroke risk. See our patch vs. pill comparison for the specifics."
 ---
 
-**Estrogen** is the hormone whose decline during [perimenopause](/perimenopause/) and [menopause](/menopause/) drives most of the classic symptoms — [hot flashes](/symptoms/hot-flashes/), [night sweats](/symptoms/night-sweats/), and [vaginal dryness](/symptoms/vaginal-dryness/) among them. Replacing it is the core of [hormone therapy (HRT)](/treatments/hormone-therapy/), and it's graded **Strong evidence** by The Menopause Society as the most effective treatment for vasomotor symptoms and genitourinary syndrome of menopause, while also preventing bone loss [@nams-2022-hormone-therapy].
+**Estrogen** is the hormone whose decline during [perimenopause](/perimenopause/) and [menopause](/menopause/) drives most of the classic symptoms — [hot flashes](/symptoms/hot-flashes/), [night sweats](/symptoms/night-sweats/), and [vaginal dryness](/symptoms/vaginal-dryness/) among them. Replacing it is the core of [hormone therapy (HRT)](/treatments/hormone-therapy/), and it's graded :grade{id="mht-vms"} on our scale. The Menopause Society calls it the most effective treatment for vasomotor symptoms and genitourinary syndrome of menopause, and it also prevents bone loss [@nams-2022-hormone-therapy].
 
 ## Estrogen alone, or estrogen with a progestogen?
 

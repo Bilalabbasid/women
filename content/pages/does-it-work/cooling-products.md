@@ -20,7 +20,8 @@ reviewer: null
 updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Initial publication comparing passive bedding, fans, and active convective bed climate systems", material: true }
-evidence_grade: moderate
+  - { date: "2026-11-07", summary: "Grade corrected from Moderate to Comfort only: The Menopause Society (2023) does not recommend cooling as a treatment for hot flashes; it can still make nights more comfortable", material: true }
+evidence_grade: comfort_only
 claims:
   - id: cooling-environmental-only
     text: "Environmental cooling products relieve surface thermal sensation and dissipate trapped heat, but clinical guidelines note they do not treat or prevent underlying hypothalamic vasomotor surges."

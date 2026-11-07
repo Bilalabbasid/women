@@ -65,7 +65,7 @@ Treatment depends heavily on identifying which type of incontinence you are expe
 
 Cochrane systematic reviews confirm that women who undertake structured pelvic floor exercises are eight times more likely to report complete resolution of leaking compared to women receiving no treatment [@cochrane-pfmt-incontinence]. 
 
-For muscle training to work, exercises must be performed correctly: lifting upward and inward rather than pushing outward or bearing down. Research shows that up to 50% of women bear down incorrectly when attempting unassisted exercises. 
+For muscle training to work, exercises must be performed correctly: lifting upward and inward rather than pushing outward or bearing down. NICE advises a routine internal (digital) check to confirm a correct pelvic floor contraction before starting supervised training [@nice-ng123-urinary-incontinence]. 
 
 App-connected biofeedback devices help ensure you contract the correct muscles and track your strength progression at home.
 

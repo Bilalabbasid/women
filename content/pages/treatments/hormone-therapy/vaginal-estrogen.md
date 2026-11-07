@@ -45,7 +45,7 @@ faq:
     a: For decades, low-dose vaginal estrogen carried the same boxed warnings as high-dose systemic hormone pills. Both The Menopause Society and the International Menopause Society supported the FDA's 2025–2026 decision to remove those boxed warnings from low-dose vaginal estrogen products.
 ---
 
-**Low-dose vaginal estrogen** (available as vaginal creams, inserts/tablets, and flexible rings) is graded **Strong evidence** for treating moderate-to-severe genitourinary syndrome of menopause (GSM) — including [vaginal dryness](/symptoms/vaginal-dryness/), [painful sex](/symptoms/painful-sex/), and [recurrent urinary tract infections](/symptoms/recurrent-utis/) — when non-hormonal moisturisers are not sufficient [@nams-2020-gsm; @cochrane-vaginal-moisturizers].
+**Low-dose vaginal estrogen** (available as vaginal creams, inserts/tablets, and flexible rings) is graded :grade{id="vaginal-estrogen-gsm"} on our scale for treating moderate-to-severe genitourinary syndrome of menopause (GSM) — including [vaginal dryness](/symptoms/vaginal-dryness/), [painful sex](/symptoms/painful-sex/), and [recurrent urinary tract infections](/symptoms/recurrent-utis/) — when non-hormonal moisturisers are not sufficient [@nams-2020-gsm; @cochrane-vaginal-moisturizers].
 
 ## How it compares with non-hormonal moisturisers and lubricants
 

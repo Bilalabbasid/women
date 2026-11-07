@@ -46,7 +46,7 @@ faq:
     a: According to The Menopause Society (2022), starting systemic hormone therapy under age 60 or within 10 years of menopause onset carries a favorable benefit-risk ratio in healthy women, whereas starting more than 10 years after menopause or after age 60 carries higher absolute risks of cardiovascular events and dementia.
 ---
 
-**Menopausal hormone therapy (MHT)** — commonly called **hormone replacement therapy (HRT)** — is graded **Strong evidence** by The Menopause Society as the most effective treatment for [hot flashes](/symptoms/hot-flashes/) and [night sweats](/symptoms/night-sweats/), and is proven to prevent postmenopausal [bone loss](/postmenopause/bone-health/) and fracture [@nams-2022-hormone-therapy]. For the bigger picture of what matters after menopause, see our [long-term health checklist](/postmenopause/health-checklist/) and [life after menopause](/postmenopause/life-after-menopause/) guide.
+**Menopausal hormone therapy (MHT)** — commonly called **hormone replacement therapy (HRT)** — is graded :grade{id="mht-vms"} on our scale. The Menopause Society calls it the most effective treatment for [hot flashes](/symptoms/hot-flashes/) and [night sweats](/symptoms/night-sweats/), and is proven to prevent postmenopausal [bone loss](/postmenopause/bone-health/) and fracture [@nams-2022-hormone-therapy]. For the bigger picture of what matters after menopause, see our [long-term health checklist](/postmenopause/health-checklist/) and [life after menopause](/postmenopause/life-after-menopause/) guide.
 
 ## Guides in this section
 

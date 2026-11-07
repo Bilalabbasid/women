@@ -4,14 +4,8 @@ import type { ContentPage } from '@/lib/content/loader';
 import { SITE } from '@/lib/site/config';
 import { AI_GRADE_NOTE } from '@/lib/site/honesty';
 
-export const GRADE_LABELS: Record<EvidenceGrade, string> = {
-  strong: 'Strong evidence',
-  moderate: 'Moderate evidence',
-  limited: 'Limited evidence',
-  not_supported: 'Not supported',
-  harm_concern: 'Harm concern',
-  per_option: 'Graded per option below',
-};
+export { GRADE_LABELS } from '@/lib/grades/labels';
+import { GRADE_LABELS } from '@/lib/grades/labels';
 
 /** A heading's label for a contents list, without a leading "1. " (the list numbers it already). */
 export const headingLabel = (text: string) => text.replace(/^\d+[.)]\s+/, '');

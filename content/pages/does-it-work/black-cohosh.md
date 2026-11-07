@@ -49,7 +49,7 @@ Black cohosh (*Actaea racemosa* / *Cimicifuga racemosa*) is one of the most heav
 
 In menopause clinical trials, placebo groups routinely experience a noticeable reduction in hot flash frequency simply from tracking symptoms and participating in a study [@nams-2023-nonhormone-therapy; @gunter-menopause-manifesto]. When black cohosh is tested head-to-head against a matching placebo pill in large, independent double-blind trials, it does not reliably outperform placebo [@nams-2023-nonhormone-therapy]. Furthermore, over-the-counter botanical extracts vary widely in purity and standardization [@gunter-menopause-manifesto].
 
-Because our evidence grade for black cohosh is **Not supported**, MenoVerdict never places affiliate links for black cohosh supplements on this page. See [how we grade evidence](/evidence/how-we-grade/) and [does it work? directory](/does-it-work/).
+Because our evidence grade for black cohosh is :grade{id="black-cohosh-vms"}, MenoVerdict never places affiliate links for black cohosh supplements on this page. See [how we grade evidence](/evidence/how-we-grade/) and [does it work? directory](/does-it-work/).
 
 ## What has proven evidence instead
 

@@ -61,11 +61,11 @@ Before assuming every early-morning waking is hormonal, it's worth ruling out:
 
 | Option | Evidence grade | What guidelines say |
 | --- | --- | --- |
-| **Cognitive behavioral therapy (CBT)**, including menopause-specific CBT | **Strong** | NICE recommends it specifically for night-time awakening linked to vasomotor symptoms; The Menopause Society rates it Level I [@nice-ng23-recommendations; @nams-2023-nonhormone-therapy] |
-| **[Hormone therapy](/treatments/hormone-therapy/)** | **Strong** | The most effective treatment when nocturnal vasomotor surges are the trigger [@nams-2022-hormone-therapy] |
-| **[Non-hormonal prescription options](/treatments/nonhormonal/)** (gabapentin, SSRIs/SNRIs) | **Strong** | Level I evidence for sleep disruption linked to vasomotor symptoms [@nams-2023-nonhormone-therapy] |
-| **Breathable [sleepwear](/care/sleepwear-for-night-sweats/)** | **Limited** | A practical comfort measure, not a treatment that stops the underlying vasomotor surge |
-| **Over-the-counter [magnesium](/does-it-work/magnesium/) and herbal sleep supplements** | **Not supported** | Not recommended by The Menopause Society (2023) for vasomotor-linked sleep disruption (Levels I–II) [@nams-2023-nonhormone-therapy] |
+| **Cognitive behavioral therapy (CBT)**, including menopause-specific CBT | :grade{id="cbt-sleep-vms"} | NICE recommends it specifically for night-time awakening linked to vasomotor symptoms; The Menopause Society rates it Level I [@nice-ng23-recommendations; @nams-2023-nonhormone-therapy] |
+| **[Hormone therapy](/treatments/hormone-therapy/)** | :grade{id="mht-sleep-vms"} | The most effective treatment when nocturnal vasomotor surges are the trigger [@nams-2022-hormone-therapy] |
+| **[Non-hormonal prescription options](/treatments/nonhormonal/)** (gabapentin, SSRIs/SNRIs) | :grade{id="nonhormonal-rx-sleep-vms"} | Level I evidence for sleep disruption linked to vasomotor symptoms [@nams-2023-nonhormone-therapy] |
+| **Breathable [sleepwear](/care/sleepwear-for-night-sweats/)** | :grade{id="cooling-comfort"} | A practical comfort measure, not a treatment that stops the underlying vasomotor surge |
+| **Over-the-counter [magnesium](/does-it-work/magnesium/) and herbal sleep supplements** | :grade{id="otc-sleep-supplements-vms"} | Not recommended by The Menopause Society (2023) for vasomotor-linked sleep disruption (Levels I–II) [@nams-2023-nonhormone-therapy] |
 
 ## Track your wake times
 

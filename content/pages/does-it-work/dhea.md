@@ -60,8 +60,8 @@ In plain terms: the broad "DHEA for menopausal wellbeing" claim that supplement 
 
 This is a different story. A 2026 systematic review and meta-analysis pooled **5 unique randomized controlled trials (1,611 women)** testing **intravaginal DHEA**, a nightly vaginal insert, specifically for vulvovaginal atrophy (vaginal dryness and painful sex after menopause) [@lemos-intravaginal-dhea-meta-analysis-2026]. Compared with placebo, it produced:
 
-- A **significant improvement in vaginal dryness** (mean difference -0.23, 95% CI -0.35 to -0.11)
-- A **significant improvement in dyspareunia** (painful sex) (mean difference -0.40, 95% CI -0.66 to -0.15)
+- A **significant improvement in vaginal dryness** (mean difference -0.23, 95% CI -0.35 to -0.11) [@lemos-intravaginal-dhea-meta-analysis-2026]
+- A **significant improvement in dyspareunia** (painful sex) (mean difference -0.40, 95% CI -0.66 to -0.15) [@lemos-intravaginal-dhea-meta-analysis-2026]
 - **No major safety concerns**, with only mild and infrequent adverse effects [@lemos-intravaginal-dhea-meta-analysis-2026]
 
 This product is FDA-approved under the brand name **Intrarosa**, available by prescription, and works locally in vaginal tissue rather than as a general hormone supplement. It's a genuinely different evidence picture from the oral capsule sold in supplement aisles.

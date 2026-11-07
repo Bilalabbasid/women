@@ -66,9 +66,9 @@ Irritability in midlife is rarely explained by hormones alone. Before assuming i
 
 | Option | Evidence grade | What guidelines say |
 | --- | --- | --- |
-| **Cognitive behavioral therapy (CBT)** | **Strong** | Level I evidence from The Menopause Society (2023); NICE also recommends menopause-specific CBT for mood symptoms linked to vasomotor symptoms [@nams-2023-nonhormone-therapy; @nice-ng23-recommendations] |
-| **Treating night sweats and sleep loss** | **Moderate** | A 2026 systematic review found mood symptoms were linked with vasomotor burden, partly through sleep disruption; see [hormone therapy](/treatments/hormone-therapy/) and [non-hormonal options](/treatments/nonhormonal/) [@neda-stepan-vms-mood-systematic-review-2026] |
-| **Over-the-counter herbal "calming" or "hormone balance" supplements** | **Not supported** | Not recommended by The Menopause Society (2023), Levels I–II [@nams-2023-nonhormone-therapy] |
+| **Cognitive behavioral therapy (CBT)** | :grade{id="cbt-mood"} | Level I evidence from The Menopause Society (2023); NICE also recommends menopause-specific CBT for mood symptoms linked to vasomotor symptoms [@nams-2023-nonhormone-therapy; @nice-ng23-recommendations] |
+| **Treating night sweats and sleep loss** | :grade{id="treat-vms-for-mood"} | A 2026 systematic review found mood symptoms were linked with vasomotor burden, partly through sleep disruption; see [hormone therapy](/treatments/hormone-therapy/) and [non-hormonal options](/treatments/nonhormonal/) [@neda-stepan-vms-mood-systematic-review-2026] |
+| **Over-the-counter herbal "calming" or "hormone balance" supplements** | :grade{id="otc-mood-supplements"} | Not recommended by The Menopause Society (2023), Levels I–II [@nams-2023-nonhormone-therapy] |
 
 Our [Does It Work? evidence directory](/does-it-work/) grades specific supplements marketed for mood if you want to check a particular product before buying it.
 

@@ -50,7 +50,7 @@ Sore, tender, or heavy-feeling breasts are a common and often under-discussed sy
 
 Telling these apart helps clarify what's actually going on [@hubbard-breast-pain-assessment-2020]:
 
-- **Cyclical pain** (about two-thirds of true mastalgia): tied to hormonal changes over the cycle, typically worsening in the week before your period and easing once it starts. Perimenopause's erratic hormone swings can make this pattern feel more intense or unpredictable than before.
+- **Cyclical pain** (about two-thirds of true mastalgia): tied to hormonal changes over the cycle, typically worsening in the week before your period and easing once it starts. Perimenopause's erratic hormone swings can make this pattern feel more intense or unpredictable than before. [@hubbard-breast-pain-assessment-2020]
 - **Non-cyclical pain** (about one-third): doesn't follow a menstrual pattern. Causes include breast cysts, pregnancy, trauma, or previous breast surgery.
 - **Extra-mammary (chest wall) pain**: now the **most common** type referred to breast clinics — often costochondritis (inflammation where rib meets breastbone), felt specifically over the chest wall rather than the breast tissue itself, and treated with NSAIDs.
 
@@ -66,10 +66,10 @@ If you have a personal history of breast cancer, raise any new breast symptom wi
 
 | Option | Evidence grade | What the research shows |
 | --- | --- | --- |
-| **A well-fitting bra** | **Moderate** | Can fully alleviate symptoms for some women, confirmed across multiple studies [@hubbard-breast-pain-assessment-2020] |
-| **Topical NSAIDs** (diclofenac, piroxicam) | **Moderate** | A first-line treatment option, particularly effective for chest wall pain [@hubbard-breast-pain-assessment-2020] |
-| **Evening primrose oil** | **Not supported** | No proven efficacy compared with placebo; not recommended routinely by NICE [@hubbard-breast-pain-assessment-2020] |
-| **Vitamin E, pyridoxine (B6), diuretics, changing oral contraceptives** | **Not supported** | Lack proven efficacy [@hubbard-breast-pain-assessment-2020] |
+| **A well-fitting bra** | :grade{id="bra-mastalgia"} | Can fully alleviate symptoms for some women, confirmed across multiple studies [@hubbard-breast-pain-assessment-2020] |
+| **Topical NSAIDs** (diclofenac, piroxicam) | :grade{id="topical-nsaids-mastalgia"} | A first-line treatment option, particularly effective for chest wall pain [@hubbard-breast-pain-assessment-2020] |
+| **Evening primrose oil** | :grade{id="epo-mastalgia"} | No proven efficacy compared with placebo; not recommended routinely by NICE [@hubbard-breast-pain-assessment-2020] |
+| **Vitamin E, pyridoxine (B6), diuretics, changing oral contraceptives** | :grade{id="vitamins-mastalgia"} | Lack proven efficacy [@hubbard-breast-pain-assessment-2020] |
 
 Routine referral is usually considered only if cyclical pain affects your quality of life or sleep and hasn't responded to first-line care after about 3 months — not because of cancer risk, but to discuss further options [@hubbard-breast-pain-assessment-2020].
 

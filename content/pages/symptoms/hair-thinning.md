@@ -66,9 +66,9 @@ Unless hair loss is **severe or sudden in onset**, blood tests usually aren't re
 
 | Option | Evidence grade | What the research shows |
 | --- | --- | --- |
-| **Topical minoxidil** (2% solution 1–2x/day, or 5% foam once daily) | **Moderate to strong** | First-line treatment option for FPHL; can cause scalp irritation [@kamp-menopause-hair-disorders-2022] |
-| **Hormone therapy (HRT)** | **Not supported** | Insufficient evidence to support a role specifically for female pattern hair loss [@kamp-menopause-hair-disorders-2022] |
-| **"Hair growth" or collagen supplements** | **Not supported** | Not addressed by this evidence base as an effective treatment; check any specific product in our [Does It Work? evidence directory](/does-it-work/) |
+| **Topical minoxidil** (2% solution 1–2x/day, or 5% foam once daily) | :grade{id="minoxidil-fphl"} | First-line treatment option for FPHL; can cause scalp irritation [@kamp-menopause-hair-disorders-2022] |
+| **Hormone therapy (HRT)** | :grade{id="mht-hair"} | Insufficient evidence to support a role specifically for female pattern hair loss [@kamp-menopause-hair-disorders-2022] |
+| **"Hair growth" or collagen supplements** | :grade{id="hair-supplements"} | Not addressed by this evidence base as an effective treatment; check any specific product in our [Does It Work? evidence directory](/does-it-work/) |
 
 Hair-care habits — flat irons, frequent coloring, tight styles — can also make existing thinning more visible by weakening the hair shaft itself, independent of the underlying hormonal pattern.
 

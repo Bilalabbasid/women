@@ -64,9 +64,9 @@ Fatigue is a nonspecific symptom, and perimenopause is rarely the only explanati
 
 | Option | Evidence grade | What the evidence says |
 | --- | --- | --- |
-| **Treating nocturnal [hot flashes and night sweats](/symptoms/night-sweats/)** | **Moderate** | [Hormone therapy](/treatments/hormone-therapy/) is the most effective treatment for vasomotor symptoms that fragment sleep [@nams-2022-hormone-therapy]; [non-hormonal options](/treatments/nonhormonal/) are also available |
-| **A structured, symptom-oriented clinical assessment** | **Moderate** | A 2026 review recommends assessing symptom burden, functional impact, and alternative causes before choosing a treatment path [@stute-nonhormonal-transition-2026] |
-| **Over-the-counter "energy" or "hormone balance" supplements** | **Not supported** | No credible clinical trial evidence supports these products for perimenopausal fatigue; check specific products in our [Does It Work? evidence directory](/does-it-work/) |
+| **Treating nocturnal [hot flashes and night sweats](/symptoms/night-sweats/)** | :grade{id="treat-vms-for-fatigue"} | [Hormone therapy](/treatments/hormone-therapy/) is the most effective treatment for vasomotor symptoms that fragment sleep [@nams-2022-hormone-therapy]; [non-hormonal options](/treatments/nonhormonal/) are also available |
+| **A structured, symptom-oriented clinical assessment** | :grade{id="clinical-assessment-fatigue"} | A 2026 review recommends assessing symptom burden, functional impact, and alternative causes before choosing a treatment path [@stute-nonhormonal-transition-2026] |
+| **Over-the-counter "energy" or "hormone balance" supplements** | :grade{id="energy-supplements-fatigue"} | No credible clinical trial evidence supports these products for perimenopausal fatigue; check specific products in our [Does It Work? evidence directory](/does-it-work/) |
 
 ## Track your energy and plan your appointment
 

@@ -39,9 +39,9 @@ In our [Does It Work? evidence directory](/does-it-work/), we review what double
 
 ## Evidence summary
 
-- **Sleep quality**: **Limited evidence**. Several randomized trials in older adults and general populations show that 200 mg to 350 mg of elemental magnesium taken near bedtime can modestly shorten the time needed to fall asleep and reduce leg restlessness. However, it does not prevent hormonal hot flashes or middle-of-the-night temperature spikes.
-- **Hot flashes and night sweats**: **Not supported**. Clinical trials comparing magnesium to placebo have failed to show a clinically significant reduction in vasomotor frequency or intensity [@nams-2023-nonhormone-therapy].
-- **Muscle cramps and tension**: **Moderate evidence**. Magnesium plays a necessary cofactor role in neuromuscular contraction; individuals with subclinical dietary deficiency frequently report fewer nighttime calf cramps.
+- **Sleep quality**: :grade{id="magnesium-sleep"}. We haven't yet checked and added the trials on magnesium and sleep to our source list, so we don't describe them here. Supplements are not recommended for hot flashes or night sweats [@nams-2023-nonhormone-therapy].
+- **Hot flashes and night sweats**: :grade{id="magnesium-vms"}. The Menopause Society does not recommend supplements for hot flashes or night sweats [@nams-2023-nonhormone-therapy].
+- **Muscle cramps and tension**: not graded yet. We haven't found trial evidence for this in our source list.
 
 ## Which forms of magnesium differ?
 
@@ -50,7 +50,7 @@ Not all magnesium supplements behave identically in the digestive tract:
 1. **Magnesium Glycinate (Bisglycinate)**: Bound to the amino acid glycine, which itself promotes calmness in the central nervous system. It has high bioavailability and is least likely to cause gastrointestinal looseness. Commonly preferred for nighttime sleep support.
 2. **Magnesium Citrate**: Highly bioavailable and well-absorbed, but pulls water into the intestines. Excellent for women dealing with perimenopausal sluggish digestion or constipation, but higher doses can cause loose stools.
 3. **Magnesium Malate**: Bound to malic acid, involved in cellular ATP production. Often taken in the morning or early afternoon for muscle aches and daytime fatigue.
-4. **Magnesium Oxide**: Very low bioavailability (estimated at 4% to 5% absorption). Primarily used as an inexpensive laxative or antacid, with minimal systemic absorption.
+4. **Magnesium Oxide**: Primarily used as an inexpensive laxative or antacid.
 
 ## How to evaluate magnesium options
 

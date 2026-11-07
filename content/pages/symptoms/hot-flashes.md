@@ -68,11 +68,11 @@ Clinical research grades hot flash therapies by how effectively they reduce dail
 
 | Treatment Option | Evidence Grade | Clinical Trial Summary |
 |---|---|---|
-| **Systemic Hormone Therapy (MHT)** | **Strong** | Gold-standard efficacy; decreases hot flash frequency by up to 90% in randomized trials [@nams-2022-hormone-therapy]. |
-| **NK3 Receptor Antagonists** | **Strong** | Daily non-hormonal prescription tablet targeting hypothalamic thermoregulation directly [@veozah-prescribing-information]. |
-| **Cognitive Behavioral Therapy (CBT)** | **Moderate** | Significantly reduces hot flash distress and perceived burden in clinical trials [@nams-2023-nonhormone-therapy]. |
-| **SSRI / SNRI Antidepressants** | **Moderate** | Low-dose prescription agents (e.g. venlafaxine, paroxetine) provide modest relief for women who cannot take hormones. |
-| **Moisture-wicking layered clothing** | **Comfort only** | Natural fibers and breathable performance fabrics allow rapid temperature adjustment during unpredictable daytime surges. |
+| **Systemic Hormone Therapy (MHT)** | :grade{id="mht-vms"} | The most effective treatment; reduces how often hot flashes happen by about 75% compared with placebo in randomized trials [@nams-2022-hormone-therapy]. |
+| **NK3 Receptor Antagonists** | :grade{id="nk3-vms"} | Daily non-hormonal prescription tablet targeting hypothalamic thermoregulation directly [@veozah-prescribing-information]. |
+| **Cognitive Behavioral Therapy (CBT)** | :grade{id="cbt-hypnosis-vms"} | Significantly reduces hot flash distress and perceived burden in clinical trials [@nams-2023-nonhormone-therapy]. |
+| **SSRI / SNRI Antidepressants** | :grade{id="ssri-snri-vms"} | Low-dose prescription options (e.g. venlafaxine, paroxetine), recommended by The Menopause Society for women who can't or don't want to take hormones [@nams-2023-nonhormone-therapy]. |
+| **Moisture-wicking layered clothing** | :grade{id="cooling-comfort"} | Natural fibers and breathable performance fabrics allow rapid temperature adjustment during unpredictable daytime surges. |
 
 When choosing clothing for temperature comfort, look for breathable weaves and quick-drying fabrics. Our [guide to sleepwear for night sweats](/care/sleepwear-for-night-sweats/) compares the main fabric types.
 

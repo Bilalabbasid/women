@@ -28,7 +28,7 @@ claims:
 safety_flags: []
 cta_profile: diw_pending
 hub: /does-it-work/
-sources: [aso-s-equol-hot-flash-trial-2012]
+sources: [aso-s-equol-hot-flash-trial-2012, nams-2023-nonhormone-therapy]
 related: [/does-it-work/, /does-it-work/soy-isoflavones/, /symptoms/hot-flashes/, /tools/does-it-work-checker/]
 affiliate_disclosure: false
 faq:
@@ -44,13 +44,13 @@ Equelle's ingredient, S-equol, is one of the more scientifically interesting ent
 
 ## The biology behind it
 
-About 20–30% of people (and a smaller share of non-Asian populations) have gut bacteria that convert daidzein, a compound in soy, into **S-equol**, which has estrogen-like activity. People who don't produce it naturally are called "equol non-producers." Equelle's premise is to supply S-equol directly, bypassing the need for that gut conversion — which is why the key trial specifically recruited women who don't make it naturally.
+Only about 35% of North American women have gut bacteria that can convert daidzein, a compound in soy, into **S-equol**, which has estrogen-like activity [@nams-2023-nonhormone-therapy]. People who don't produce it naturally are called "equol non-producers." Equelle's premise is to supply S-equol directly, bypassing the need for that gut conversion — which is why the key trial specifically recruited women who don't make it naturally.
 
 ## What the trial actually found
 
 A multicenter, double-blind, placebo-controlled trial recruited **160 postmenopausal Japanese women** who were confirmed equol non-producers and who experienced at least one hot flush per day. They took either **10 mg/day of natural S-equol** or a placebo for 12 weeks [@aso-s-equol-hot-flash-trial-2012]. Results:
 
-- Hot flush frequency dropped **58.7%** in the S-equol group versus **34.5%** with placebo — a statistically significant difference (p=0.009)
+- Hot flush frequency dropped **58.7%** in the S-equol group versus **34.5%** with placebo — a statistically significant difference (p=0.009) [@aso-s-equol-hot-flash-trial-2012]
 - **Hot flush severity** and **neck or shoulder muscle stiffness** also decreased significantly more than placebo
 - **No serious adverse effects** were reported [@aso-s-equol-hot-flash-trial-2012]
 

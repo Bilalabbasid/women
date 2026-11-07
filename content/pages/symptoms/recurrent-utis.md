@@ -49,7 +49,7 @@ In premenopausal years, estrogen supplies glycogen to the vaginal lining, feedin
 
 ## Evidence-graded prevention and care
 
-1. **Low-dose local [vaginal estrogen](/treatments/hormone-therapy/vaginal-estrogen/):** Graded **Strong evidence** in GSM guidelines for restoring vaginal mucosal maturation, lowering pH, and supporting healthy urogenital tissue [@nams-2020-gsm; @cochrane-vaginal-moisturizers].
+1. **Low-dose local [vaginal estrogen](/treatments/hormone-therapy/vaginal-estrogen/):** Graded :grade{id="vaginal-estrogen-recurrent-uti"} on our scale, based on GSM guidelines, for restoring vaginal mucosal maturation, lowering pH, and supporting healthy urogenital tissue [@nams-2020-gsm; @cochrane-vaginal-moisturizers].
 2. **First-line non-hormonal tissue care:** Regular non-hormonal [vaginal moisturisers and lubricants](/care/moisturizers-and-lubricants/) reduce mechanical irritation and friction during sex that can trigger post-coital urinary symptoms [@nams-2020-gsm; @acog-clinical-consensus-gsm]. See also [vaginal dryness](/symptoms/vaginal-dryness/) and [incontinence in menopause](/symptoms/incontinence/).
 3. **Targeted medical workup:** Always complete a urine culture for suspected infections, and use our [treatment conversation builder](/tools/treatment-questions/) and [Does It Work? directory](/does-it-work/) to prepare for your appointment.
 

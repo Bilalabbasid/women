@@ -65,8 +65,8 @@ Seek prompt medical care if urinary urgency or frequency comes with fever, chill
 
 | Option | Evidence grade | What guidelines say |
 | --- | --- | --- |
-| **Low-dose local [vaginal estrogen](/treatments/hormone-therapy/vaginal-estrogen/)** | **Strong** | Restores vaginal and urethral tissue health in GSM; NICE cross-references its use alongside overactive bladder care [@nams-2020-gsm; @nice-ng23-recommendations] |
-| **Supervised pelvic floor muscle training** | **Strong** | NICE's incontinence guideline recommends a supervised programme of at least 3 months, with at least 8 contractions 3 times a day, as first-line care for stress or mixed incontinence [@nice-ng123-urinary-incontinence] |
+| **Low-dose local [vaginal estrogen](/treatments/hormone-therapy/vaginal-estrogen/)** | :grade{id="vaginal-estrogen-gsm"} | Restores vaginal and urethral tissue health in GSM; NICE cross-references its use alongside overactive bladder care [@nams-2020-gsm; @nice-ng23-recommendations] |
+| **Supervised pelvic floor muscle training** | :grade{id="pfmt-incontinence"} | NICE's incontinence guideline recommends a supervised programme of at least 3 months, with at least 8 contractions 3 times a day, as first-line care for stress or mixed incontinence [@nice-ng123-urinary-incontinence] |
 | **Ruling out infection first** | **Essential** | Urgency and burning can occur with GSM alone, with no infection present, so a urine culture helps clarify what you're actually treating [@nams-2020-gsm] |
 
 See our [pelvic floor exercises guide](/care/pelvic-floor-exercises/) for how to do the training correctly — technique matters more than most people expect.

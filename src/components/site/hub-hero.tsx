@@ -81,7 +81,7 @@ export function HubHero({
   );
 }
 
-const GRADE_ORDER: EvidenceGrade[] = ['strong', 'moderate', 'limited', 'not_supported', 'harm_concern'];
+const GRADE_ORDER: EvidenceGrade[] = ['strong', 'moderate', 'limited', 'comfort_only', 'not_supported', 'harm_concern'];
 
 function GuideCard({ page, showGrade }: { page: ContentPage; showGrade: boolean }) {
   const grade = page.fm.evidence_grade;

@@ -59,9 +59,9 @@ Low libido in menopause is rarely one thing. Common, overlapping contributors in
 
 | Option | Evidence grade | What guidelines say |
 | --- | --- | --- |
-| **Testosterone supplementation**, if HRT alone isn't enough | **Moderate** | NICE NG23 recommends considering it for low sexual desire associated with menopause; currently an off-label use in the UK, guided by a specialist [@nice-ng23-recommendations] |
-| **Treating vaginal dryness and painful sex directly** | **Strong** | Addressing the physical cause of painful sex, via [moisturizers, lubricants, or vaginal estrogen](/care/moisturizers-and-lubricants/), often restores some desire on its own [@nams-2022-hormone-therapy] |
-| **"Libido" supplements marketed for menopause** | **Not supported** | No credible clinical trial evidence; check any specific product in our [Does It Work? evidence directory](/does-it-work/) before buying it |
+| **Testosterone supplementation**, if HRT alone isn't enough | :grade{id="testosterone-libido"} | NICE NG23 recommends considering it for low sexual desire associated with menopause; currently an off-label use in the UK, guided by a specialist [@nice-ng23-recommendations] |
+| **Treating vaginal dryness and painful sex directly** | :grade{id="treat-gsm-for-libido"} | Addressing the physical cause of painful sex, via [moisturizers, lubricants, or vaginal estrogen](/care/moisturizers-and-lubricants/), often restores some desire on its own [@nams-2022-hormone-therapy] |
+| **"Libido" supplements marketed for menopause** | :grade{id="libido-supplements"} | No credible clinical trial evidence; check any specific product in our [Does It Work? evidence directory](/does-it-work/) before buying it |
 
 See our [hormone therapy overview](/treatments/hormone-therapy/) for more on how testosterone and HRT are used together, and talk to a clinician before starting it — monitoring and dosing matter.
 

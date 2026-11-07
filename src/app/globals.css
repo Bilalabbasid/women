@@ -643,6 +643,7 @@
 .grade-strong { color: #1e5e3a; background: #e8f3ec; }
 .grade-moderate { color: #24577a; background: #e8f0f6; }
 .grade-limited { color: #6e5000; background: #fbf3dc; }
+.grade-comfort_only { color: #3f4a5c; background: #eceff5; }
 .grade-not_supported { color: #5c3a3a; background: #f4ecec; }
 .grade-harm_concern { color: #8a1f1f; background: #fdeceb; }
 .grade-per_option { color: var(--color-ink-muted); background: var(--color-paper-raised); }

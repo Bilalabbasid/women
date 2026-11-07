@@ -56,7 +56,7 @@ This trial specifically tested dong quai by itself, not combined with other herb
 
 - **No proven benefit** for hot flashes based on this trial
 - **Possible blood-thinning effect**: dong quai is generally understood to have anticoagulant-like properties, which matters if you take blood thinners or have an upcoming procedure
-- Because this grade is **Not supported**, we don't place affiliate links for dong quai products on this page — see [how we grade evidence](/evidence/how-we-grade/)
+- Because this grade is :grade{id="dong-quai-vms"}, we don't place affiliate links for dong quai products on this page — see [how we grade evidence](/evidence/how-we-grade/)
 
 If you're looking for hot flash options with real evidence behind them, see our [does it work? evidence checker](/tools/does-it-work-checker/) or [non-hormonal prescription and behavioral treatments](/treatments/nonhormonal/).
 

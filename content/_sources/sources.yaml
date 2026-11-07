@@ -1298,3 +1298,48 @@
   key_finding: "Women had higher odds of a high depressive-symptom score during postmenopause than when premenopausal (OR 1.49, 95% CI 1.09-2.04); not significantly different for perimenopause vs. premenopause. Three pre-FMP depressive-symptom trajectories were identified: consistently low (47.7% of women), moderate (39.9%), and consistently high (12.4%). Compared with the consistently-low group, both the moderate (OR 2.62, 95% CI 1.89-3.66) and high (OR 6.88, 95% CI 4.72-10.02) trajectory groups had significantly higher postmenopausal depressive symptoms. Other pre-FMP factors associated with high postmenopausal depressive symptoms: childhood trauma/maltreatment, poor physical role functioning, high anxiety, sleep problems, high vasomotor symptoms, younger age, and lower social support."
   funding_conflict: "All authors report NIH grant funding for this study (NIA; NCI and NIMH for some). One co-author (Joffe) additionally discloses grants from Merck and Pfizer and consulting fees from NeRRe/KaNDy, Eisai, Jazz, and Bayer - unrelated to this specific analysis but disclosed for transparency. Two co-authors (Colvin, Chen) declared no conflicts of any kind."
   verified: true
+
+- id: midi-health-pricing-2026
+  title: "Pricing & Insurance for Women's Health Care (Midi Health)"
+  authors: []
+  publisher: Midi Health
+  year: 2026
+  type: other
+  url: https://www.joinmidi.com/pricing-insurance
+  doi: null
+  accessed: "2026-11-08"
+  population: Prospective Midi Health patients (US)
+  key_finding: "Midi's pricing page: first visit (30 minutes) $250 self-pay or covered by insurance; returning visit (15 minutes) $150 self-pay or covered. In-network with most PPO plans; HSA/FSA accepted; Medicare out of network (self-pay only, no claims); Medicaid and Medi-Cal not accepted."
+  funding_conflict: "Self-reported by the company being reviewed."
+  verified: true
+  notes: "Company pricing page, linked as a plain source for the prices quoted."
+
+- id: evernow-pricing-2026
+  title: "How Evernow Works: Pay-per-visit and Membership (Evernow)"
+  authors: []
+  publisher: Evernow
+  year: 2026
+  type: other
+  url: https://www.evernow.com/how-it-works
+  doi: null
+  accessed: "2026-11-08"
+  population: Prospective Evernow patients (US)
+  key_finding: "Evernow's own page: Pay-per-visit (insurance-eligible, no membership, 90 days of access to prescriptions and the care platform) or Membership starting at $35/month with 24/7 messaging and optional insurance-covered video visits. Insurance, FSA/HSA and self-pay accepted."
+  funding_conflict: "Self-reported by the company being reviewed."
+  verified: true
+  notes: "Company pricing page, linked as a plain source for the prices quoted."
+
+- id: alloy-insurance-2026
+  title: "Does Alloy accept insurance? (Alloy help center)"
+  authors: []
+  publisher: Alloy
+  year: 2025
+  type: other
+  url: https://myalloy.zendesk.com/hc/en-us/articles/23575535778963-Does-Alloy-accept-insurance
+  doi: null
+  accessed: "2026-11-08"
+  population: Prospective Alloy customers (US)
+  key_finding: "Alloy does not bill or accept insurance directly for any services or prescriptions; some patients get reimbursed by PPO insurance after purchase, and HSA or FSA funds can be used for eligible prescriptions and services."
+  funding_conflict: "Self-reported by the company being reviewed."
+  verified: true
+  notes: "Company help-center page on how Alloy is paid for, linked as a plain source."

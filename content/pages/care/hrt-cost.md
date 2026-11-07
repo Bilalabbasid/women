@@ -31,7 +31,7 @@ claims:
 safety_flags: []
 cta_profile: care_access
 hub: /care/
-sources: [goodrx-estradiol-pricing-2026, midi-health-own-site-2026, evernow-own-site-2026, alloy-own-site-2026]
+sources: [goodrx-estradiol-pricing-2026, midi-health-own-site-2026, evernow-own-site-2026, alloy-own-site-2026, midi-health-pricing-2026, evernow-pricing-2026]
 related: [/care/, /care/insurance/, /compare/, /treatments/hormone-therapy/types/, /tools/treatment-questions/]
 faq:
   - q: What does hormone therapy actually cost without insurance?
@@ -55,8 +55,8 @@ The wide gel range is a genuinely useful thing to know before you fill a prescri
 
 If you're considering a menopause-focused telehealth provider instead of (or alongside) your regular doctor, self-pay pricing as of **November 2026**:
 
-- **[Midi Health](/compare/midi-review/)**: $250 for a first visit, $150 for follow-ups, not including labs or medications, no membership required; insured patients reportedly average lower out-of-pocket costs when in-network
-- **[Evernow](/compare/evernow-review/)**: a membership starting at **$35/month** (includes ongoing messaging and optional insurance-eligible video visits), or a one-time insurance-eligible visit with no membership
+- **[Midi Health](/compare/midi-review/)**: $250 for a first visit, $150 for follow-ups, not including labs or medications, no membership required; insured patients reportedly average lower out-of-pocket costs when in-network [@midi-health-pricing-2026]
+- **[Evernow](/compare/evernow-review/)**: a membership starting at **$35/month** (includes ongoing messaging and optional insurance-eligible video visits), or a one-time insurance-eligible visit with no membership [@evernow-pricing-2026]
 - **[Alloy](/compare/alloy-review/)**: explicitly cash-pay, FSA/HSA accepted; we could not confirm a specific current consult price on Alloy's public pages
 
 See our full [telehealth comparisons](/compare/) for how these models differ beyond price.

@@ -28,7 +28,7 @@ claims:
 safety_flags: []
 cta_profile: care_comparison
 hub: /compare/
-sources: [alloy-own-site-2026, evernow-own-site-2026]
+sources: [alloy-own-site-2026, evernow-own-site-2026, evernow-pricing-2026, alloy-insurance-2026]
 related: [/compare/, /compare/alloy-review/, /compare/evernow-review/, /treatments/hormone-therapy/, /tools/treatment-questions/]
 faq:
   - q: Does Alloy or Evernow take insurance?
@@ -41,17 +41,17 @@ faq:
 
 ## Cash-pay vs. insurance-eligible
 
-- **Alloy:** Explicitly cash-pay — no insurance billing, positioned as avoiding pre-authorization delays. FSA/HSA cards accepted [@alloy-own-site-2026]. See our full [Alloy review](/compare/alloy-review/).
-- **Evernow:** States it now accepts insurance for video visits, with two paths — a one-time insurance-eligible visit (no membership) or a membership starting at **$35/month** with optional insurance-eligible video visits [@evernow-own-site-2026]. See our full [Evernow review](/compare/evernow-review/).
+- **Alloy:** Explicitly cash-pay — no insurance billing, positioned as avoiding pre-authorization delays. FSA/HSA cards accepted [@alloy-own-site-2026; @alloy-insurance-2026]. See our full [Alloy review](/compare/alloy-review/).
+- **Evernow:** States it now accepts insurance for video visits, with two paths — a one-time insurance-eligible visit (no membership) or a membership starting at **$35/month** with optional insurance-eligible video visits [@evernow-own-site-2026; @evernow-pricing-2026]. See our full [Evernow review](/compare/evernow-review/).
 
 ## Visit format
 
 - **Alloy:** Asynchronous intake (5–10 minutes per Alloy), reviewed by a physician, treatment plan typically within ~12 hours, 24/7 messaging afterward [@alloy-own-site-2026].
-- **Evernow:** A scheduled virtual visit (one-time or within the membership), with ongoing messaging access included in the membership tier [@evernow-own-site-2026].
+- **Evernow:** A scheduled virtual visit (one-time or within the membership), with ongoing messaging access included in the membership tier [@evernow-own-site-2026; @evernow-pricing-2026].
 
 ## What each covers
 
-Alloy's catalog extends well beyond menopause hormone care into skincare, sexual health, GLP-1 weight care, hair/lash/brow, and gut-health products [@alloy-own-site-2026]. Evernow covers hormone therapy alongside sexual health, body aches, mental health, weight, hair/skin, and sleep categories, plus complementary supplements [@evernow-own-site-2026].
+Alloy's catalog extends well beyond menopause hormone care into skincare, sexual health, GLP-1 weight care, hair/lash/brow, and gut-health products [@alloy-own-site-2026]. Evernow covers hormone therapy alongside sexual health, body aches, mental health, weight, hair/skin, and sleep categories, plus complementary supplements [@evernow-own-site-2026; @evernow-pricing-2026].
 
 ## Who each suits
 

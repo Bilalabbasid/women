@@ -32,7 +32,7 @@ claims:
 safety_flags: []
 cta_profile: care_comparison
 hub: /compare/
-sources: [evernow-own-site-2026]
+sources: [evernow-own-site-2026, evernow-pricing-2026]
 related: [/compare/, /treatments/hormone-therapy/, /treatments/nonhormonal/, /tools/treatment-questions/]
 noindex: true
 faq:
@@ -46,11 +46,11 @@ faq:
 
 ## What Evernow actually offers
 
-Based on Evernow's own site, care is delivered by a team the company describes as specially certified to treat women in menopause and postmenopause, covering hormone therapy alongside symptom categories like sexual health, body aches, mental health, weight, hair and skin changes, and sleep issues [@evernow-own-site-2026]. Evernow also sells supplements marketed to complement hormone therapy (for sleep, mood, energy, skin, and metabolism) [@evernow-own-site-2026].
+Based on Evernow's own site, care is delivered by a team the company describes as specially certified to treat women in menopause and postmenopause, covering hormone therapy alongside symptom categories like sexual health, body aches, mental health, weight, hair and skin changes, and sleep issues [@evernow-own-site-2026; @evernow-pricing-2026]. Evernow also sells supplements marketed to complement hormone therapy (for sleep, mood, energy, skin, and metabolism) [@evernow-own-site-2026; @evernow-pricing-2026].
 
 ## Cost and insurance, as of November 2026
 
-Evernow offers two paths [@evernow-own-site-2026]:
+Evernow offers two paths [@evernow-own-site-2026; @evernow-pricing-2026]:
 
 - **Pay per visit:** A one-time virtual visit with a menopause provider, described as insurance-eligible, with no membership required.
 - **Membership:** Ongoing messaging access to a clinician, optional insurance-eligible virtual visits, ongoing prescriptions, and care plans, starting at **$35/month**.

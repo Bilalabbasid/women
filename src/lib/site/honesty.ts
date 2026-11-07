@@ -48,6 +48,13 @@ export const HONESTY_FULL = {
 /** Next to a grade badge on verdicts, the evidence checker and comparison tables. */
 export const AI_GRADE_NOTE = 'AI-assisted grade';
 
+/**
+ * Byline, under the short notice on every medical page. "Checked by" appears only
+ * when a verified clinician approved this exact version (isMedicallyReviewed).
+ */
+export const BYLINE_AUTHOR = 'Compiled by the MenoVerdict editorial team';
+export const BYLINE_NOT_REVIEWED = 'Not reviewed by a doctor';
+
 /** Comparison and review pages. */
 export const PRICES_CHECKED = (date: string) =>
   `Prices and features checked on ${date} from each company's own site; confirm before you buy.`;

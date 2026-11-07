@@ -33,7 +33,7 @@ claims:
 safety_flags: []
 cta_profile: care_comparison
 hub: /compare/
-sources: [midi-health-own-site-2026]
+sources: [midi-health-own-site-2026, midi-health-pricing-2026]
 related: [/compare/, /treatments/hormone-therapy/, /care/find-a-menopause-specialist/, /tools/treatment-questions/]
 noindex: true
 faq:
@@ -47,13 +47,13 @@ faq:
 
 ## What Midi actually offers
 
-Based on Midi's own site, a first visit produces a "Care Plan" that can include hormone therapy, non-hormonal prescriptions, lab testing, and lifestyle guidance, depending on your symptoms and history. Midi states it is available in all 50 US states [@midi-health-own-site-2026].
+Based on Midi's own site, a first visit produces a "Care Plan" that can include hormone therapy, non-hormonal prescriptions, lab testing, and lifestyle guidance, depending on your symptoms and history. Midi states it is available in all 50 US states [@midi-health-own-site-2026; @midi-health-pricing-2026].
 
 ## Cost and insurance, as of November 2026
 
-- **With insurance:** Midi says it's in-network with most major PPO plans, though coverage, deductibles, copays, and coinsurance vary by plan. Midi states most patients pay around **$50 out-of-pocket per visit** on average with insurance, with a possible deductible of up to **$250** for a new-patient visit or **$150** for a follow-up [@midi-health-own-site-2026].
-- **Self-pay:** The listed cash price was **$250 for a first visit** and **$150 for follow-up visits**, not including labs or prescription costs [@midi-health-own-site-2026].
-- **Not currently accepted:** Medicaid and Medi-Cal (not accepted even as self-pay). Medicare beneficiaries can be seen as self-pay only, and cannot submit Midi charges as Medicare claims [@midi-health-own-site-2026].
+- **With insurance:** Midi says it's in-network with most major PPO plans, though coverage, deductibles, copays, and coinsurance vary by plan. Midi states most patients pay around **$50 out-of-pocket per visit** on average with insurance, with a possible deductible of up to **$250** for a new-patient visit or **$150** for a follow-up [@midi-health-own-site-2026; @midi-health-pricing-2026].
+- **Self-pay:** The listed cash price was **$250 for a first visit** and **$150 for follow-up visits**, not including labs or prescription costs [@midi-health-own-site-2026; @midi-health-pricing-2026].
+- **Not currently accepted:** Medicaid and Medi-Cal (not accepted even as self-pay). Medicare beneficiaries can be seen as self-pay only, and cannot submit Midi charges as Medicare claims [@midi-health-own-site-2026; @midi-health-pricing-2026].
 
 These figures came directly from Midi's own pricing and insurance help pages — confirm current numbers on their site before booking, since healthcare pricing changes.
 

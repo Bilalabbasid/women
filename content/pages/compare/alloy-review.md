@@ -33,7 +33,7 @@ claims:
 safety_flags: []
 cta_profile: care_comparison
 hub: /compare/
-sources: [alloy-own-site-2026]
+sources: [alloy-own-site-2026, alloy-insurance-2026]
 related: [/compare/, /treatments/hormone-therapy/, /treatments/hormone-therapy/patch-vs-pill/, /tools/treatment-questions/]
 noindex: true
 faq:
@@ -51,7 +51,7 @@ Based on Alloy's own site, you complete a medical intake (the company states 5�
 
 ## Cost and insurance, as of November 2026
 
-Alloy explicitly markets itself as a **cash-pay model**, positioning this as a way to avoid insurance pre-authorization delays and "hidden fees" — it does not bill insurance directly [@alloy-own-site-2026]. FSA and HSA cards are accepted for payment. We were not able to independently confirm a specific, current price for a medical consultation on Alloy's public pages at the time of this review; check Alloy's site directly at checkout for the exact current cost of a consultation and any ongoing product subscription, since these can change and may vary by promotion.
+Alloy explicitly markets itself as a **cash-pay model**, positioning this as a way to avoid insurance pre-authorization delays and "hidden fees" — it does not bill insurance directly [@alloy-own-site-2026; @alloy-insurance-2026]. FSA and HSA cards are accepted for payment. We were not able to independently confirm a specific, current price for a medical consultation on Alloy's public pages at the time of this review; check Alloy's site directly at checkout for the exact current cost of a consultation and any ongoing product subscription, since these can change and may vary by promotion.
 
 ## Who this may suit
 

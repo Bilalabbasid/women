@@ -28,7 +28,7 @@ claims:
 safety_flags: []
 cta_profile: care_comparison
 hub: /compare/
-sources: [midi-health-own-site-2026, evernow-own-site-2026]
+sources: [midi-health-own-site-2026, evernow-own-site-2026, midi-health-pricing-2026, evernow-pricing-2026]
 related: [/compare/, /compare/midi-review/, /compare/evernow-review/, /treatments/hormone-therapy/, /tools/treatment-questions/]
 faq:
   - q: Does Midi or Evernow work better with insurance?
@@ -41,8 +41,8 @@ faq:
 
 ## Pricing models compared
 
-- **Midi Health:** In-network with most major PPO plans; self-pay pricing of **$250 (first visit) / $150 (follow-up)**, not including labs or medications. Insured patients reportedly average around $50 out-of-pocket per visit [@midi-health-own-site-2026]. No membership fee. See our full [Midi Health review](/compare/midi-review/).
-- **Evernow:** Offers **two paths**: a one-time, insurance-eligible visit with no membership required, or a **membership starting at $35/month** that includes ongoing messaging access to a clinician and optional insurance-eligible video visits [@evernow-own-site-2026]. See our full [Evernow review](/compare/evernow-review/).
+- **Midi Health:** In-network with most major PPO plans; self-pay pricing of **$250 (first visit) / $150 (follow-up)**, not including labs or medications. Insured patients reportedly average around $50 out-of-pocket per visit [@midi-health-own-site-2026; @midi-health-pricing-2026]. No membership fee. See our full [Midi Health review](/compare/midi-review/).
+- **Evernow:** Offers **two paths**: a one-time, insurance-eligible visit with no membership required, or a **membership starting at $35/month** that includes ongoing messaging access to a clinician and optional insurance-eligible video visits [@evernow-own-site-2026; @evernow-pricing-2026]. See our full [Evernow review](/compare/evernow-review/).
 
 The key practical difference: Evernow's membership bundles ongoing messaging access for a flat monthly fee, while Midi's model is purely per-visit.
 

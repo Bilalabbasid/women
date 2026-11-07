@@ -109,7 +109,7 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
   const bodyNotice = fullNotice ? (
     <div className="space-y-1.5 border-b border-[var(--color-rule)] pb-4">
       <HonestyNotice variant="short" />
-      {(fm.page_type === 'comparison' || fm.page_type === 'review') && (
+      {(fm.page_type === 'comparison' || fm.page_type === 'review' || /\$\d/.test(page.body)) && (
         <p className="pl-6 text-sm text-[var(--color-ink-muted)]">{PRICES_CHECKED(formatCheckedDate(checkedIso))}</p>
       )}
     </div>

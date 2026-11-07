@@ -28,7 +28,7 @@ claims:
 safety_flags: []
 cta_profile: care_comparison
 hub: /compare/
-sources: [midi-health-own-site-2026, alloy-own-site-2026]
+sources: [midi-health-own-site-2026, alloy-own-site-2026, midi-health-pricing-2026, alloy-insurance-2026]
 related: [/compare/, /compare/midi-review/, /compare/alloy-review/, /treatments/hormone-therapy/, /tools/treatment-questions/]
 faq:
   - q: Which is cheaper, Midi or Alloy?
@@ -43,8 +43,8 @@ faq:
 
 This is the single biggest decision point between these two services, based on what each states on their own site:
 
-- **Midi Health:** States it is in-network with most, though not all, major PPO plans. Self-pay pricing was listed at **$250 for a first visit, $150 for follow-ups** (not including labs or medications), with insured patients reportedly paying around $50 out-of-pocket per visit on average [@midi-health-own-site-2026]. See our full [Midi Health review](/compare/midi-review/).
-- **Alloy:** Explicitly markets itself as **cash-pay**, positioned as avoiding insurance billing and pre-authorization delays entirely. FSA/HSA cards are accepted [@alloy-own-site-2026]. See our full [Alloy review](/compare/alloy-review/).
+- **Midi Health:** States it is in-network with most, though not all, major PPO plans. Self-pay pricing was listed at **$250 for a first visit, $150 for follow-ups** (not including labs or medications), with insured patients reportedly paying around $50 out-of-pocket per visit on average [@midi-health-own-site-2026; @midi-health-pricing-2026]. See our full [Midi Health review](/compare/midi-review/).
+- **Alloy:** Explicitly markets itself as **cash-pay**, positioned as avoiding insurance billing and pre-authorization delays entirely. FSA/HSA cards are accepted [@alloy-own-site-2026; @alloy-insurance-2026]. See our full [Alloy review](/compare/alloy-review/).
 
 If your insurance plan is in-network with Midi, that will typically beat paying cash anywhere. If you're uninsured, have a high-deductible plan, or simply prefer not to deal with insurance, Alloy's cash-pay model removes that friction — but confirm the current price at checkout, since we could not verify a specific consult price on Alloy's public pages.
 

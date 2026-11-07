@@ -49,12 +49,12 @@ To explore medical treatments that stop the hormonal trigger at its source, read
 
 ## Comparison: sheets vs fans vs active bed systems
 
-| Solution | Price tier | Noise level | Setup required | Who it suits best |
+| Solution | Relative cost | Noise level | Setup required | Who it suits best |
 | --- | --- | --- | --- | --- |
-| **Breathable sheets (bamboo/linen)** | Low ($50–$150) | Completely silent | Standard bed making | Mild temperature spikes; women wanting natural, non-electric solutions |
-| **Quiet bedside fan** | Low to moderate ($30–$90) | Low hum (30–45 dB) | Plug in on nightstand | Moderate night sweats; sleepers who benefit from gentle white noise |
-| **Active bed air systems** | High ($400–$600) | Low to medium (whisper quiet to low fan) | Hose attaches under sheet at mattress foot | Severe, frequent night sweats; women waking drenched multiple times per night |
-| **Water-circulating mattress pads** | Very high ($800–$2,000+) | Low pump hum | Water reservoir maintenance and mattress pad fitting | Sleepers with severe chronic heat retention needing continuous conductive cooling |
+| **Breathable sheets (bamboo/linen)** | Low | Completely silent | Standard bed making | Mild temperature spikes; women wanting natural, non-electric solutions |
+| **Quiet bedside fan** | Low | Low hum | Plug in on nightstand | Moderate night sweats; sleepers who benefit from gentle white noise |
+| **Active bed air systems** | High | Low to medium (whisper quiet to low fan) | Hose attaches under sheet at mattress foot | Severe, frequent night sweats; women waking drenched multiple times per night |
+| **Water-circulating mattress pads** | Very high | Low pump hum | Water reservoir maintenance and mattress pad fitting | Sleepers with severe chronic heat retention needing continuous conductive cooling |
 
 ## When is an active bed cooling system worth the price?
 

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/lib/site/config';
 import { HONESTY_FOOTER } from '@/lib/site/honesty';
+import { StorageChoicesButton } from './cookie-banner';
 import { APP_ROUTES } from '@/lib/routes';
 import { isToolLive } from '@/lib/tools/logic';
 import type { Crumb } from '@/lib/seo/jsonld';
@@ -171,7 +172,10 @@ export function SiteFooter({
           <nav aria-label="Footer" className="grid gap-8 sm:grid-cols-3">
             <FooterColumn title="Explore" links={explore} />
             <FooterColumn title="Trust & method" links={[...TRUST_LINKS, ...extraLinks]} />
-            <FooterColumn title="Legal & contact" links={LEGAL_LINKS} />
+            <div>
+              <FooterColumn title="Legal & contact" links={LEGAL_LINKS} />
+              <StorageChoicesButton className={`${footerLink} cursor-pointer bg-transparent p-0 text-left`} />
+            </div>
           </nav>
         </div>
 

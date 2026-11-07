@@ -28,7 +28,6 @@ export default function OnboardingPage() {
 
   const handleFinish = () => {
     try {
-      localStorage.setItem('menowell_onboarding_completed', 'true');
       // Add to any symptoms she already pinned (e.g. from the symptoms checklist); never replace them.
       const existing: unknown = JSON.parse(localStorage.getItem('menowell_pinned_symptoms') ?? '[]');
       const kept = Array.isArray(existing) ? existing.filter((x): x is string => typeof x === 'string') : [];

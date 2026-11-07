@@ -25,6 +25,7 @@ import { NotificationService } from '@/lib/notifications/treatment-reminders';
 import { describeStorageError } from '@/lib/storage/errors';
 import { useLocalToday } from '@/components/storage/use-tool-state';
 import { getMissedDays } from '@/lib/tracker/catch-up';
+import { canStorePreferences } from '@/lib/storage/consent';
 
 const CATCH_UP_DISMISSED_KEY = 'catch_up_dismissed_on';
 
@@ -129,7 +130,8 @@ export default function DashboardPage() {
     setCatchUpDismissed(true);
     if (!todayStr) return;
     try {
-      await LocalDataService.setSetting(CATCH_UP_DISMISSED_KEY, todayStr);
+      // Remembering a closed message is a preference: only with the visitor's OK.
+      if (canStorePreferences()) await LocalDataService.setSetting(CATCH_UP_DISMISSED_KEY, todayStr);
     } catch {
       // Not critical: worst case the banner reappears next visit today.
     }

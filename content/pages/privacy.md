@@ -47,6 +47,8 @@ We don't collect your symptoms, tracker entries, quiz or tool answers, treatment
 
 That also means we can't see, recover or delete them for you. You can export them or delete them at any time from the app's settings. Clearing your browser data, using a private window or switching device removes them.
 
+The first time you visit, we ask whether we may also remember a few preferences on your device, such as messages you've closed. You can choose "Essential only" and change your answer at any time; see our [cookie page](/cookies/).
+
 ## Forms: the one thing you can send us
 
 If you fill in one of our forms (for example, to hear about new tools, to join a waitlist, or to contact us):

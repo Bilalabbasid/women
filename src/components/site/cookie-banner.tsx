@@ -1,62 +1,60 @@
 'use client';
 
-import React, { useState, useSyncExternalStore } from 'react';
+import React, { useSyncExternalStore } from 'react';
 import Link from 'next/link';
+import { getConsent, resetConsent, setConsent, subscribeConsent } from '@/lib/storage/consent';
+
+const NO_CHOICE = 'none';
+const snapshot = () => getConsent() ?? NO_CHOICE;
+// Server HTML renders nothing; the banner appears after hydration if no choice exists.
+const serverSnapshot = () => 'all';
 
 /**
- * A plain notice, not a consent tool: the site sets no cookies and runs no
- * tracking, so there is nothing to accept or reject. The only thing stored is
- * that the visitor dismissed this notice (a choice made in the interface).
+ * Storage choice. Both options are equally easy, and "Essential only" really
+ * does store less (see src/lib/storage/consent.ts).
  */
-const DISMISSED_KEY = 'menoverdict_notice_dismissed';
-/** Left by the old consent banner; removed so nothing consent-like stays behind. */
-const LEGACY_KEYS = ['menoverdict_cookie_consent', 'menowell_cookie_consent'];
-
-const subscribe = () => () => {};
-const getSnapshot = () => {
-  try {
-    return localStorage.getItem(DISMISSED_KEY) === '1';
-  } catch {
-    return true;
-  }
-};
-const getServerSnapshot = () => true;
-
 export function CookieBanner() {
-  const storedDismissed = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
-  const [dismissed, setDismissed] = useState(false);
-  if (storedDismissed || dismissed) return null;
-
-  const dismiss = () => {
-    try {
-      localStorage.setItem(DISMISSED_KEY, '1');
-      for (const k of LEGACY_KEYS) localStorage.removeItem(k);
-    } catch {
-      // Storage unavailable: hide for this page view only.
-    }
-    setDismissed(true);
-  };
+  const choice = useSyncExternalStore(subscribeConsent, snapshot, serverSnapshot);
+  if (choice !== NO_CHOICE) return null;
 
   return (
     <aside
-      aria-label="Privacy notice"
-      className="no-print fixed inset-x-3 bottom-3 z-50 mx-auto max-w-2xl rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] px-4 py-3 shadow-lg sm:inset-x-6"
+      aria-label="Storage choices"
+      className="no-print fixed inset-x-3 bottom-3 z-50 mx-auto max-w-2xl rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] px-4 py-4 shadow-lg sm:inset-x-6"
     >
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm leading-relaxed text-[var(--color-ink)]">
-          MenoVerdict sets no cookies and runs no tracking or analytics. Anything you log stays on this device.{' '}
-          <Link href="/cookies/" className="font-semibold text-[var(--color-link)] underline">
-            Cookie page
-          </Link>
-        </p>
+      <p className="font-semibold text-[var(--color-ink)]">Your choice about this device</p>
+      <p className="mt-1 text-sm leading-relaxed text-[var(--color-ink-muted)]">
+        We use no cookies, analytics or tracking. The tools save what you log or save on this device so they work.
+        With your OK we also remember a few preferences, like messages you&apos;ve closed.{' '}
+        <Link href="/cookies/" className="font-semibold text-[var(--color-link)] underline">
+          Details
+        </Link>
+      </p>
+      <div className="mt-3 flex flex-wrap gap-2">
         <button
           type="button"
-          onClick={dismiss}
-          className="tap shrink-0 justify-center rounded-xl bg-[var(--color-accent)] px-5 py-2 text-sm font-semibold text-white hover:opacity-90"
+          onClick={() => setConsent('all')}
+          className="tap justify-center rounded-xl bg-[var(--color-accent)] px-5 py-2 text-sm font-semibold text-white hover:opacity-90"
         >
-          OK
+          Allow preferences
+        </button>
+        <button
+          type="button"
+          onClick={() => setConsent('essential')}
+          className="tap justify-center rounded-xl bg-[var(--color-accent)] px-5 py-2 text-sm font-semibold text-white hover:opacity-90"
+        >
+          Essential only
         </button>
       </div>
     </aside>
+  );
+}
+
+/** Footer link that brings the choice back, so it can be changed or withdrawn at any time. */
+export function StorageChoicesButton({ className }: { className?: string }) {
+  return (
+    <button type="button" onClick={resetConsent} className={className}>
+      Storage choices
+    </button>
   );
 }

@@ -5,6 +5,7 @@ import { OfflineIndicator } from '@/components/app/service-worker-registrar';
 import { AppNavigation } from '@/components/app/app-navigation';
 import { ReminderScheduler } from '@/components/app/reminder-scheduler';
 import { notFound } from 'next/navigation';
+import { CookieBanner } from '@/components/site/cookie-banner';
 import { isToolLive } from '@/lib/tools/logic';
 
 /**
@@ -31,6 +32,7 @@ export default function TrackerLayout({ children }: { children: React.ReactNode 
         {children}
       </main>
       <AppFooterNotice />
+      <CookieBanner />
     </div>
   );
 }

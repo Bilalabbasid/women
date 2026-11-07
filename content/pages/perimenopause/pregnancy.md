@@ -20,6 +20,7 @@ reviewer: null
 updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Published guide on pregnancy and contraception in perimenopause", material: true }
+  - { date: "2026-11-07", summary: "Description no longer promises advice the page doesn't give", material: false }
 evidence_grade: strong
 claims:
   - id: nice-contraception-info

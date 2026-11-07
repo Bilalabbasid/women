@@ -20,6 +20,7 @@ reviewer: null
 updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-07", summary: "Published evidence verdict on probiotics for postmenopausal bone health", material: true }
+  - { date: "2026-11-07", summary: "Added inline citations to figures already sourced in the same paragraph", material: false }
 evidence_grade: moderate
 claims:
   - id: wang-probiotics-bmd-metaanalysis

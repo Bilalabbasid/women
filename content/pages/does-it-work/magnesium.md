@@ -17,9 +17,10 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "First evidence review of magnesium supplementation in menopause", material: true }
+  - { date: "2026-11-07", summary: "Removed claims and figures we couldn't match to a source (sleep trials, muscle cramps, magnesium oxide absorption); grades now from the grade registry", material: true }
 evidence_grade: limited
 claims:
   - id: magnesium-sleep-evidence

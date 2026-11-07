@@ -13,6 +13,8 @@ import {
 } from '@/lib/content/site-data';
 import { HubHero, HubDirectory } from '@/components/site/hub-hero';
 import { ArticleHero } from '@/components/site/article-hero';
+import { ogImagePath, pinImagePath } from '@/lib/seo/social-image-route';
+import { socialImageAlt } from '@/lib/seo/social-image';
 import { isPublishable, isMedicallyReviewed, indexablePages } from '@/lib/content/gate';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { contentPageLd, breadcrumbLd, faqLd, webApplicationLd } from '@/lib/seo/jsonld';
@@ -54,6 +56,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     // Drafts (dev/staging only) are always noindex.
     noindex: page.fm.noindex || !isPublishable(page, store),
     type: 'article',
+    image: {
+      path: ogImagePath(page.url),
+      alt: socialImageAlt(page.fm.title, CLUSTER_LABELS[page.fm.cluster] ?? page.fm.cluster, page.fm.evidence_grade),
+    },
+    pinImagePath: pinImagePath(page.url),
   });
 }
 

@@ -17,9 +17,10 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Initial evidence-based article on hot flashes", material: true }
+  - { date: "2026-11-07", summary: "Grades now come from our grade registry: CBT and SSRIs/SNRIs corrected from Moderate to Strong (Menopause Society 2023, Level I); the hormone therapy figure corrected to about 75% fewer hot flashes, as its source states", material: true }
 evidence_grade: per_option
 claims:
   - id: vasomotor-thermoregulatory-mechanism

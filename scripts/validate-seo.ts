@@ -14,6 +14,9 @@
 import { builtPages } from './lib/built-pages';
 import { getSiteEnv } from '../src/lib/site/config';
 import { Report } from './lib/report';
+import fs from 'node:fs';
+import path from 'node:path';
+import { getContent } from '../src/lib/content/loader';
 
 const r = new Report('validate:seo');
 const pages = builtPages();
@@ -25,6 +28,10 @@ if (pages.length === 0) {
 
 // Same rule as the site itself (src/lib/site/config.ts), so the two can never disagree.
 const prod = getSiteEnv() === 'production';
+// Pages whose frontmatter sets noindex: true. They stay live and linked but out of search and the sitemap.
+const intentionallyNoindex = new Set(getContent().pages.filter((pg) => pg.fm.noindex).map((pg) => pg.url));
+const sitemapFile = path.join(process.cwd(), '.next', 'server', 'app', 'sitemap.xml.body');
+const sitemapXml = fs.existsSync(sitemapFile) ? fs.readFileSync(sitemapFile, 'utf8') : '';
 const decode = (s: string) => s.replace(/&amp;/g, '&').replace(/&#x27;|&#39;/g, "'").replace(/&quot;/g, '"');
 const attr = (html: string, re: RegExp) => {
   const m = re.exec(html);
@@ -54,7 +61,10 @@ for (const { path: p, html, file } of pages) {
     continue;
   }
 
-  if (prod && noindex) r.error(p, 'public page is noindex in a production build');
+  // A page may opt out of search on purpose (frontmatter noindex: true), e.g. single-brand
+  // reviews without first-hand evidence. Anything else noindexed in production is a mistake.
+  if (prod && noindex && !intentionallyNoindex.has(p)) r.error(p, 'public page is noindex in a production build');
+  if (intentionallyNoindex.has(p) && sitemapXml.includes(p)) r.error(p, 'noindex page is listed in the sitemap');
   if (!prod && !noindex) r.error(p, 'non-production build must be noindex');
 
   const h1s = (html.match(/<h1[\s>]/g) ?? []).length;

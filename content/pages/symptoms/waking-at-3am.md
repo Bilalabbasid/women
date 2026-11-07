@@ -17,9 +17,10 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Published evidence guide on waking at a consistent time in perimenopause", material: true }
+  - { date: "2026-11-07", summary: "Breathable sleepwear regraded from Limited to Comfort only: it can help comfort but is not a treatment (Menopause Society 2023)", material: true }
 evidence_grade: per_option
 claims:
   - id: nice-cbt-sleep-waking

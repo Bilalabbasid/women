@@ -1,6 +1,6 @@
 ---
-title: "Does it work? Menopause treatment evidence checker"
-seo_title: "Which menopause treatments work? Evidence checker"
+title: "Evidence checker: filter menopause treatments by symptom"
+seo_title: "Menopause treatment evidence checker tool"
 meta_description: "Search HRT, Veozah, Lynkuet, CBT, vaginal moisturisers and popular supplements by symptom, and see each one's evidence grade and guideline source."
 cluster: tools
 primary_keyword: menopause treatment evidence
@@ -21,6 +21,7 @@ updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Published interactive treatment and supplement evidence checker", material: true }
   - { date: "2026-11-06", summary: "Added how to use the checker, why older advice is out of date, more detailed verdicts to read next, a saved shortlist and new FAQs", material: true }
+  - { date: "2026-11-07", summary: "Retitled to separate the checker tool from the directory of verdicts; oxybutynin listed separately from SSRIs, SNRIs and gabapentin", material: false }
 evidence_grade: null
 claims:
   - id: hrt-most-effective
@@ -57,7 +58,7 @@ faq:
     a: "No. Grades come from published guidelines and trials and are set before we check whether any affiliate programme exists. We never place buy links on items graded not recommended."
 ---
 
-Pick a symptom or search for a treatment to see what current clinical guidelines say about it: an evidence grade, a short verdict and the guideline behind it. The checker covers hormone therapy, the newer non-hormonal prescriptions fezolinetant (Veozah) and elinzanetant (Lynkuet), CBT, pelvic floor training, vaginal moisturisers and popular supplements. Save the options you want to ask about and print a shortlist for your appointment. Every entry summarizes published evidence, never a personal recommendation or dose.
+This tool filters treatments side by side. For a full write-up of a single supplement or remedy, see our [verdicts directory](/does-it-work/). Pick a symptom or search for a treatment to see what current clinical guidelines say about it: an evidence grade, a short verdict and the guideline behind it. The checker covers hormone therapy, the newer non-hormonal prescriptions fezolinetant (Veozah) and elinzanetant (Lynkuet), CBT, pelvic floor training, vaginal moisturisers and popular supplements. Save the options you want to ask about and print a shortlist for your appointment. Every entry summarizes published evidence, never a personal recommendation or dose.
 
 ::tool{id="does-it-work-checker"}
 

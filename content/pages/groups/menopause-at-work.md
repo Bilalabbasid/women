@@ -20,6 +20,7 @@ reviewer: null
 updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-07", summary: "Published guide on menopause symptoms and workplace impact, with 2026 US survey data", material: true }
+  - { date: "2026-11-07", summary: "Added inline citations to survey figures already sourced on the page", material: false }
 evidence_grade: strong
 claims:
   - id: kapoor-vms-workplace-survey

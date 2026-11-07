@@ -20,6 +20,7 @@ reviewer: null
 updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-07", summary: "Published guide on insurance and menopause care access, with 2026 NHANES-based study", material: true }
+  - { date: "2026-11-07", summary: "Added inline citations to figures already sourced in the same paragraph", material: false }
 evidence_grade: strong
 claims:
   - id: chesnokova-medicaid-mht-disparity

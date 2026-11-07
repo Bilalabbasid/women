@@ -17,9 +17,10 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Upgraded with practical sleep cooling steps, sleepwear, and bed climate options", material: true }
+  - { date: "2026-11-07", summary: "CBT for sleep corrected from Moderate to Strong; the hormone therapy figure corrected to about 75%, as its source states; raw citation text fixed", material: true }
 evidence_grade: per_option
 claims:
   - id: nocturnal-vasomotor-mechanism

@@ -20,6 +20,7 @@ reviewer: null
 updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-07", summary: "Published evidence verdict on Equelle's S-equol ingredient for hot flashes", material: true }
+  - { date: "2026-11-07", summary: "Equol-producer figure corrected to the Menopause Society's (about 35% of North American women)", material: true }
 evidence_grade: limited
 claims:
   - id: aso-s-equol-hot-flash-trial

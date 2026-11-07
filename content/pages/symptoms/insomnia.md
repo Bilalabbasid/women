@@ -17,9 +17,10 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Published evidence guide on menopause insomnia", material: true }
+  - { date: "2026-11-07", summary: "Cooling products and breathable sleepwear regraded from Limited to Comfort only: they can help comfort but are not a treatment (Menopause Society 2023)", material: true }
 evidence_grade: per_option
 claims:
   - id: nams-cbt-vasomotor-sleep

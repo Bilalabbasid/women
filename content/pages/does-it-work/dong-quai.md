@@ -20,6 +20,7 @@ reviewer: null
 updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-07", summary: "Published evidence verdict on dong quai for menopause symptoms", material: true }
+  - { date: "2026-11-07", summary: "The grade now comes from the grade registry", material: false }
 evidence_grade: not_supported
 claims:
   - id: hirata-dong-quai-no-benefit

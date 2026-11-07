@@ -24,6 +24,7 @@ change_log:
   - { date: "2026-11-06", summary: "Published objective menopause telehealth comparison ranked by clinician credentials, insurance acceptance, and prescribing standards", material: true }
   - { date: "2026-11-06", summary: "Added links to 5 new standalone provider reviews", material: true }
   - { date: "2026-11-07", summary: "Added links to 3 new head-to-head comparison pages", material: true }
+  - { date: "2026-11-07", summary: "The evidence grade now comes from the grade registry", material: false }
 evidence_grade: per_option
 claims:
   - id: mht-most-effective-vms-gsm

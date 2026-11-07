@@ -17,9 +17,10 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Initial publication of pelvic floor training and biofeedback guide", material: true }
+  - { date: "2026-11-07", summary: "Removed an unsourced 'up to 50%' figure; replaced with NICE guidance on checking technique", material: true }
 evidence_grade: strong
 claims:
   - id: pfmt-efficacy-incontinence

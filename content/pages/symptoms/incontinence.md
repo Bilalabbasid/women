@@ -17,9 +17,10 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Initial publication covering stress vs urge incontinence and pelvic floor rehabilitation", material: true }
+  - { date: "2026-11-07", summary: "Removed an unsourced 'up to 50%' figure; replaced with NICE guidance on checking technique", material: true }
 evidence_grade: per_option
 claims:
   - id: incontinence-pfmt-firstline

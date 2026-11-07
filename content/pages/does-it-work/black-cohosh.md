@@ -20,6 +20,7 @@ reviewer: null
 updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Published evidence verdict on black cohosh for hot flashes", material: true }
+  - { date: "2026-11-07", summary: "Description no longer promises a safety section the page doesn't have yet", material: false }
 evidence_grade: not_supported
 claims:
   - id: nams-black-cohosh-not-recommended

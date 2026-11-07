@@ -21,6 +21,7 @@ reviewer: null
 updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Published independent review of Winona, based on their own site as of November 2026", material: true }
+  - { date: "2026-11-07", summary: "Kept out of search results (noindex) until we have first-hand evidence about this service", material: false }
 evidence_grade: per_option
 claims:
   - id: winona-self-reported-compounded
@@ -41,6 +42,7 @@ hub: /compare/
 sources: [winona-own-site-2026, acog-compounded-bioidentical-2023]
 related: [/compare/, /treatments/hormone-therapy/bioidentical-vs-compounded/, /treatments/hormone-therapy/types/, /evidence/products-we-wont-recommend/, /tools/treatment-questions/]
 affiliate_disclosure: false
+noindex: true
 faq:
   - q: Is Winona's HRT FDA-approved?
     a: "Based on Winona's own treatments page, most of its formats — body cream, vaginal cream, and pills — are specifically labeled 'Compounded,' which means they are not FDA-approved products. Only the patch format on that same page is labeled without the compounded tag. Compounded products don't go through the same standardized testing for dosing accuracy as FDA-approved medications, which is the specific concern ACOG's 2023 clinical consensus raises about this category."

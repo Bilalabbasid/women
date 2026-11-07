@@ -20,6 +20,7 @@ reviewer: null
 updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Published evidence guide on migraines and menopause, including HRT and aura", material: true }
+  - { date: "2026-11-07", summary: "Column renamed 'Bottom line'; the progestogen grade now comes from the grade registry", material: false }
 evidence_grade: per_option
 claims:
   - id: migraine-perimenopause-worsening

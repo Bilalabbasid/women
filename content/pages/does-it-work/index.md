@@ -1,7 +1,7 @@
 ---
-title: "Does it work? Menopause treatments tested against evidence"
-seo_title: "Does It Work? Menopause Treatments Graded"
-meta_description: "Independent evaluations of popular menopause supplements, botanical remedies, and non-hormonal therapies graded by clinical trial evidence."
+title: "Do menopause supplements and remedies work? Our verdicts"
+seo_title: "Do menopause supplements work? Our verdicts"
+meta_description: "One full verdict per supplement or remedy: black cohosh, soy, magnesium, ashwagandha and more, each graded with the trials behind it."
 cluster: does-it-work
 primary_keyword: do menopause supplements work
 slug: does-it-work
@@ -23,6 +23,7 @@ change_log:
   - { date: "2026-11-06", summary: "Added links to 5 new verdict pages (paced breathing, diet, acupuncture, yoga, cannabis/CBD)", material: true }
   - { date: "2026-11-06", summary: "Added links to 5 more verdict pages (red clover, evening primrose oil, vitamin D, calcium, omega-3)", material: true }
   - { date: "2026-11-07", summary: "Added links to 9 more verdict pages (ashwagandha, maca, dong quai, DHEA, collagen, probiotics, Relizen, Amberen, Equelle)", material: true }
+  - { date: "2026-11-07", summary: "Retitled to separate this directory of verdicts from the evidence checker tool", material: false }
 evidence_grade: null
 claims:
   - id: nonhormone-guideline-consensus
@@ -40,7 +41,7 @@ affiliate_disclosure: false
 
 Many women turn to non-prescription supplements and alternative remedies seeking natural relief, but clinical trial results frequently contradict marketing promises [@nams-2023-nonhormone-therapy]. 
 
-In this directory, every option is graded based on peer-reviewed randomized controlled trials (RCTs), systematic reviews, and consensus guidelines from major medical societies.
+This is our directory of full verdicts: one page per supplement or remedy, each graded from randomized controlled trials (RCTs), systematic reviews and medical society guidelines, with the evidence behind the grade. To compare treatments side by side, filtered by symptom and grade, use the [evidence checker tool](/tools/does-it-work-checker/) instead.
 
 ## How we evaluate options
 

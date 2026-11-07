@@ -21,6 +21,7 @@ reviewer: null
 updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Published independent review of Alloy, based on their own site as of November 2026", material: true }
+  - { date: "2026-11-07", summary: "Kept out of search results (noindex) until we have first-hand evidence about this service", material: false }
 evidence_grade: per_option
 claims:
   - id: alloy-self-reported-model
@@ -35,6 +36,7 @@ hub: /compare/
 sources: [alloy-own-site-2026]
 related: [/compare/, /treatments/hormone-therapy/, /treatments/hormone-therapy/patch-vs-pill/, /tools/treatment-questions/]
 affiliate_disclosure: false
+noindex: true
 faq:
   - q: Does Alloy accept insurance?
     a: "No. Alloy markets itself specifically as a cash-pay model, explicitly positioning this as avoiding insurance billing and pre-authorization delays. FSA and HSA cards are accepted, which can offset some of the cost through pre-tax funds if your plan allows it."

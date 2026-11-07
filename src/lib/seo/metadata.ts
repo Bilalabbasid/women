@@ -9,6 +9,10 @@ export interface PageMetaInput {
   path: string;
   noindex?: boolean;
   type?: 'website' | 'article';
+  /** Per-page social image (site path) with descriptive alt text. Defaults to the site image. */
+  image?: { path: string; alt: string };
+  /** Vertical 1000x1500 image for Pinterest (site path), added as a second og:image. */
+  pinImagePath?: string;
 }
 
 /**
@@ -22,7 +26,8 @@ export function buildMetadata(input: PageMetaInput, config: SiteConfig = SITE): 
   const fullTitle = input.title.includes(config.name)
     ? input.title
     : `${input.title} | ${config.name}`;
-  const ogImage = absoluteUrl('/og-default.png', config);
+  const ogImage = absoluteUrl(input.image?.path ?? '/og-default.png', config);
+  const ogAlt = input.image?.alt ?? `${config.name} — ${config.tagline}`;
 
   return {
     title: { absolute: fullTitle },
@@ -36,15 +41,18 @@ export function buildMetadata(input: PageMetaInput, config: SiteConfig = SITE): 
       url: canonical,
       siteName: config.name,
       locale: 'en_US',
-      images: [{ url: ogImage, width: 1200, height: 630, alt: `${config.name} — ${config.tagline}` }],
-      // No article:modified_time (owner decision, 2026-11-06, see DECISIONS.md):
-      // same reasoning as jsonld.ts omitting dateModified/datePublished.
+      images: [
+        { url: ogImage, width: 1200, height: 630, alt: ogAlt },
+        ...(input.pinImagePath
+          ? [{ url: absoluteUrl(input.pinImagePath, config), width: 1000, height: 1500, alt: ogAlt }]
+          : []),
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: fullTitle,
       description: input.description,
-      images: [ogImage],
+      images: [{ url: ogImage, alt: ogAlt }],
     },
   };
 }

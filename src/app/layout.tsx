@@ -37,6 +37,8 @@ export const metadata: Metadata = {
     },
   },
   formatDetection: { telephone: false },
+  // Search Console is the only measurement tool. Set GSC_VERIFICATION to the code from the HTML-tag method.
+  ...(SITE.gscVerification ? { verification: { google: SITE.gscVerification } } : {}),
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

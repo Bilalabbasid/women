@@ -20,6 +20,7 @@ reviewer: null
 updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Published clinical guide on recurrent UTIs after menopause", material: true }
+  - { date: "2026-11-07", summary: "The evidence grade now comes from the grade registry", material: false }
 evidence_grade: strong
 claims:
   - id: gsm-urogenital-mechanism

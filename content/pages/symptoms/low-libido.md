@@ -20,6 +20,7 @@ reviewer: null
 updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Published evidence guide on low libido in perimenopause and menopause", material: true }
+  - { date: "2026-11-07", summary: "Grades now come from the grade registry", material: false }
 evidence_grade: per_option
 claims:
   - id: nice-sexual-difficulties

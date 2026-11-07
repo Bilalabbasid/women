@@ -33,6 +33,8 @@ export interface SiteConfig {
   contactEmail: string | null;
   legalEntity: string | null;
   emailProvider: string | null;
+  /** Google Search Console HTML-tag verification code (GSC_VERIFICATION). */
+  gscVerification: string | null;
   defaultLocale: 'en-US';
   env: SiteEnv;
 }
@@ -47,6 +49,7 @@ export function readSiteConfig(env: NodeJS.ProcessEnv = process.env): SiteConfig
     contactEmail: clean(env.CONTACT_EMAIL),
     legalEntity: clean(env.LEGAL_ENTITY),
     emailProvider: clean(env.EMAIL_PROVIDER),
+    gscVerification: clean(env.GSC_VERIFICATION),
     defaultLocale: 'en-US',
     env: siteEnv,
   };

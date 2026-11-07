@@ -22,6 +22,7 @@ change_log:
   - { date: "2026-11-06", summary: "Published hormone therapy (HRT) sub-hub", material: true }
   - { date: "2026-11-06", summary: "Added links to 7 new child guides (types, risks, side effects, bioidentical)", material: true }
   - { date: "2026-11-06", summary: "Added links to 6 more child guides (estrogen, progesterone, testosterone, starting/stopping, timing, pellets)", material: true }
+  - { date: "2026-11-07", summary: "Clarified that the evidence grade is ours; The Menopause Society's own wording is quoted", material: false }
 evidence_grade: strong
 claims:
   - id: nams-hrt-efficacy-timing

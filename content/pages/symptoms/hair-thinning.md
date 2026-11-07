@@ -17,9 +17,10 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Published evidence guide on menopause hair thinning", material: true }
+  - { date: "2026-11-07", summary: "Minoxidil grade shown as Moderate (was 'Moderate to strong', which isn't on our scale)", material: true }
 evidence_grade: per_option
 claims:
   - id: kamp-anagen-reduction

@@ -20,6 +20,7 @@ reviewer: null
 updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Published explainer on estrogen in hormone therapy", material: true }
+  - { date: "2026-11-07", summary: "Clarified that the evidence grade is ours; The Menopause Society's own wording is quoted", material: false }
 evidence_grade: strong
 claims:
   - id: nice-estrogen-only-who

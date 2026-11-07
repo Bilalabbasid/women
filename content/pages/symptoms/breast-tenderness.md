@@ -20,6 +20,7 @@ reviewer: null
 updated_at: "2026-11-06"
 change_log:
   - { date: "2026-11-06", summary: "Published evidence guide on breast tenderness (mastalgia) in perimenopause", material: true }
+  - { date: "2026-11-07", summary: "Added an inline citation and moved grades to the grade registry", material: false }
 evidence_grade: per_option
 claims:
   - id: hubbard-mastalgia-prevalence-types

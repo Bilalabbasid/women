@@ -10,12 +10,9 @@ import type { Person } from '../content/schema';
  *    author and BreadcrumbList.
  *  - reviewedBy and lastReviewed ONLY when the page passes the publish gate
  *    with a verified clinical reviewer (never fake review).
- *  - No dateModified/datePublished (owner decision, 2026-11-06, see
- *    DECISIONS.md): a freshness date on ~90+ pages launching in the same
- *    short window would read identically across the whole site in search
- *    results, which can look like batch-produced content. Omitted for
- *    everyone, not hidden from crawlers only (that would be cloaking) and
- *    not faked with invented dates (that would be fabrication, rule 1).
+ *  - datePublished / dateModified come from each page's own change log (first
+ *    entry; latest material change), never invented. (Owner decision, 2026-11-07,
+ *    replacing the earlier choice to omit them.)
  *  - FAQPage only for FAQs rendered visibly on the page.
  *  - WebApplication on tools where accurate.
  *  - Never Review, AggregateRating or Product ratings. assertNoRatings() enforces this.
@@ -49,11 +46,7 @@ export function websiteLd(c: SiteConfig = SITE): Json {
     url: `${c.url}/`,
     inLanguage: c.defaultLocale,
     publisher: { '@id': orgId(c) },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: { '@type': 'EntryPoint', urlTemplate: `${c.url}/search/?q={search_term_string}` },
-      'query-input': 'required name=search_term_string',
-    },
+    // No SearchAction: Google retired the sitelinks search box, and /search/ is disallowed in robots.txt.
   };
 }
 
@@ -106,6 +99,10 @@ export function contentPageLd(page: ContentPage, store: Pick<ContentStore, 'sour
     isPartOf: { '@id': siteId(c) },
     publisher: { '@id': orgId(c) },
     author: personOrOrg(store.people.get(fm.author), c),
+    // Real dates from the page's own change log: first entry, and latest material change.
+    datePublished: fm.change_log.map((e) => e.date).sort()[0] ?? fm.updated_at,
+    dateModified: fm.change_log.filter((e) => e.material).map((e) => e.date).sort().at(-1) ?? fm.updated_at,
+    image: absoluteUrl(`/og${page.url}`, c),
   };
   if (reviewIsReal) {
     ld.lastReviewed = fm.reviewed_at;

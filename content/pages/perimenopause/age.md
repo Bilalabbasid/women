@@ -36,7 +36,6 @@ cta_profile: learn_stage
 hub: /perimenopause/
 sources: [appiah-menopause-age-trends-2021, straw-10-2012, nice-ng23-recommendations]
 related: [/perimenopause/, /perimenopause/vs-menopause/, /perimenopause/in-your-30s/, /perimenopause/stages/, /tools/stage-guide/, /groups/early-menopause/]
-affiliate_disclosure: false
 faq:
   - q: What is the average age perimenopause starts?
     a: "There's no single fixed age, because perimenopause is defined by changes in your menstrual cycle, not a birthday. Most women notice the first signs in their mid-to-late 40s. A US national survey found the average age at natural menopause (the point perimenopause ends) was 49.9 years as of 2015-2018, up from 48.4 years in 1959-1962, so perimenopause for most women spans part of their 40s."

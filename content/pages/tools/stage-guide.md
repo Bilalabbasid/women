@@ -42,7 +42,6 @@ cta_profile: tool
 hub: /tools/
 sources: [straw-10-2012, nice-ng23-recommendations, nice-ng23, nhs-postmenopausal-bleeding, nhs-heart-palpitations, lifeline-988, samaritans-contact]
 related: [/perimenopause/stages/, /tools/symptoms-checklist/, /tools/12-month-counter/, /perimenopause/vs-menopause/]
-affiliate_disclosure: false
 faq:
   - q: "Can a perimenopause quiz tell me for sure whether I'm in perimenopause?"
     a: "No. Online tools can't examine you or rule out other causes of cycle change, such as pregnancy, thyroid conditions or iron deficiency. This guide shows how the published STRAW+10 and NICE NG23 criteria describe your pattern, so you can discuss it with a clinician."

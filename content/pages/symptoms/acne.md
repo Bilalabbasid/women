@@ -36,7 +36,6 @@ cta_profile: skin_hair
 hub: /symptoms/
 sources: [khunger-mehrotra-menopausal-acne-2019]
 related: [/symptoms/, /symptoms/facial-hair/, /symptoms/dry-itchy-skin/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Why am I breaking out around menopause when I never had acne before?
     a: "Menopausal acne is a recognized pattern, and a 2019 dermatology review describes its cause as multifactorial, with a relative rise in androgen (male hormone) influence — as estrogen declines faster — as the major driver. Other endocrine factors like thyroid changes, and lifestyle triggers like stress, diet, and poor sleep, can also play a role."

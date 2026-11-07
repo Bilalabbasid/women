@@ -17,9 +17,10 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Initial publication of moisturiser vs lubricant comparison guide", material: true }
+  - { date: "2026-11-07", summary: "Now a how-to-choose guide, with no products to buy", material: true }
 evidence_grade: per_option
 claims:
   - id: moisturisers-hydrate-regularly
@@ -33,7 +34,6 @@ cta_profile: genitourinary_vaginal
 hub: /care/
 sources: [nams-2020-gsm, acog-clinical-consensus-gsm, cochrane-vaginal-moisturizers, nhs-postmenopausal-bleeding]
 related: [/symptoms/vaginal-dryness/, /symptoms/painful-sex/, /care/, /tools/symptoms-checklist/]
-affiliate_disclosure: true
 ---
 
 The main difference between a vaginal moisturiser and a lubricant is timing and purpose: a moisturiser is used regularly to keep dry tissues comfortable throughout the day, while a lubricant is used specifically during sexual activity to reduce friction, as outlined in our [menopause care directory](/care/) [@nams-2020-gsm]. Many women with menopause dryness need both [@acog-clinical-consensus-gsm].
@@ -63,15 +63,7 @@ When selecting a moisturiser, look for:
 - Osmolality under 380 mOsm/kg to prevent drawing fluid out of already dry cells.
 - Absence of parabens, fragrances, and warming additives that can trigger contact dermatitis.
 
-### Recommended non-hormonal moisturisers
-
-For long-lasting polycarbophil-based hydration delivered via a reusable applicator:
-
-<Product id="replens-moisturiser" />
-
-For an applicator-free suppository formulated with moisture-binding hyaluronic acid:
-
-<Product id="revaree-ha" />
+Moisturisers come as gels used with an applicator and as small inserts (suppositories). Polycarbophil and hyaluronic acid products work in the same way, by holding water against the tissue [@cochrane-vaginal-moisturizers], so choose the form you find easiest to use on a regular schedule.
 
 ## When to choose a personal lubricant
 
@@ -81,11 +73,7 @@ Thinning postmenopausal tissue cannot withstand friction without adequate slip [
 - **Silicone-based lubricants**: Hypoallergenic, extremely slick, and long-lasting because silicone does not evaporate or absorb into tissue. Ideal for sensitive postmenopausal mucosa, though not compatible with silicone toys.
 - **Water-based lubricants**: Easy to rinse and safe with all devices, but may dry out faster and require reapplication. Always verify that water-based options are iso-osmotic and free of glycerine.
 
-### Recommended lubricant
-
-For pure, medical-grade silicone lubrication that maintains slip without absorbing into sensitive skin:
-
-<Product id="uberlube" />
+When choosing a lubricant, check the ingredient list for fragrance, warming or tingling agents, and flavourings, which can irritate thinning tissue, and check that it is condom-compatible if you use condoms.
 
 ## Can you use both together?
 

@@ -44,7 +44,6 @@ cta_profile: tool
 hub: /tools/
 sources: [nams-2022-hormone-therapy, nams-2023-nonhormone-therapy, veozah-prescribing-information, lynkuet-approval-bayer-2025, nams-2020-gsm, acog-clinical-consensus-gsm, cochrane-vaginal-moisturizers, nice-ng123-urinary-incontinence, cochrane-pfmt-incontinence, liftmor-trial-bone-density, nhs-postmenopausal-bleeding, nhs-heart-palpitations, lifeline-988]
 related: [/evidence/how-we-grade/, /does-it-work/, /treatments/nonhormonal/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: "Which non-hormonal treatments have the best evidence for hot flashes?"
     a: "In its 2023 position statement, The Menopause Society recommends cognitive behavioral therapy, clinical hypnosis, certain SSRIs and SNRIs, gabapentin and fezolinetant (Level I), and oxybutynin (Levels I to II). Elinzanetant was approved by the FDA in October 2025, after that statement."
@@ -55,7 +54,7 @@ faq:
   - q: "Does Strong evidence mean a treatment is right for me?"
     a: "No. Evidence grades describe how well a treatment worked across clinical trial populations. Only a clinician who knows your health history, medications and contraindications can advise what is safe for you."
   - q: "Does anyone pay to be listed or graded higher?"
-    a: "No. Grades come from published guidelines and trials and are set before we check whether any affiliate programme exists. We never place buy links on items graded not recommended."
+    a: "No. Nobody pays to be listed or graded. Grades come from published guidelines and trials alone, and the site has no ads and no sponsors."
 ---
 
 This tool filters treatments side by side. For a full write-up of a single supplement or remedy, see our [verdicts directory](/does-it-work/). Pick a symptom or search for a treatment to see what current clinical guidelines say about it: an evidence grade, a short verdict and the guideline behind it. The checker covers hormone therapy, the newer non-hormonal prescriptions fezolinetant (Veozah) and elinzanetant (Lynkuet), CBT, pelvic floor training, vaginal moisturisers and popular supplements. Save the options you want to ask about and print a shortlist for your appointment. Every entry summarizes published evidence, never a personal recommendation or dose.

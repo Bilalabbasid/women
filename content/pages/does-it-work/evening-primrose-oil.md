@@ -33,7 +33,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [kazemi-evening-primrose-oil-2021]
 related: [/does-it-work/, /symptoms/night-sweats/, /care/sleepwear-for-night-sweats/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: Does evening primrose oil help hot flashes?
     a: "Based on the best available trial, no — a 2021 randomized controlled trial found no statistically significant difference in hot flash duration, frequency, or severity between evening primrose oil and placebo after 8 weeks."

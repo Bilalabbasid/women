@@ -30,7 +30,6 @@ cta_profile: general_symptom
 hub: /symptoms/
 sources: [orendorz-fraczkowska-hearing-balance-menopause-2020]
 related: [/symptoms/, /symptoms/dizziness/, /symptoms/headaches/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Does menopause cause tinnitus?
     a: "The honest answer is that the research is genuinely mixed. A 2020 review of hearing and balance in peri- and postmenopausal women found the worldwide evidence on hearing-related symptoms, including tinnitus, to be inconsistent, and reports on how sex hormones affect the ear to be controversial. Tinnitus is common at midlife for many reasons — noise exposure over a lifetime, age-related hearing changes, and some medications — and menopause may be one contributing factor among several, rather than an established direct cause."

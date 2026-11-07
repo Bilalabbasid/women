@@ -34,7 +34,6 @@ cta_profile: learn_stage
 hub: null
 sources: [straw-10-2012, nice-ng23-recommendations]
 related: [/perimenopause/early-signs/, /perimenopause/questions-for-your-doctor/, /perimenopause/contraception/, /perimenopause/year-by-year/, /care/menopause-books/, /does-it-work/magnesium/]
-affiliate_disclosure: false
 ---
 
 Perimenopause is the biological transition phase preceding menopause, typically beginning between ages 40 and 45 and lasting four to eight years on average [@straw-10-2012]. During this interval, ovarian follicle depletion causes erratic surges and drops in estrogen and progesterone, rather than a steady decline.

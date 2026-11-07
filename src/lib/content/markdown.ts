@@ -21,8 +21,7 @@ import { GRADE_LABELS } from '../grades/labels';
  *    renders nothing inline (owner decision, 2026-11-06) — it only adds that
  *    source to the References list at the end of the page, in first-use
  *    order. `[@id-1; @id-2]` in one bracket adds both.
- *  - Urgent sections: `:::urgent` … `:::` → <aside data-urgent>. Commercial
- *    content is banned inside (validate:cta).
+ *  - Urgent sections: `:::urgent` … `:::` → <aside data-urgent>.
  *  - Doctor questions: `:::questions` … `:::` → a list with copy and print controls.
  *  - Tools: `::tool{id="symptoms-checklist"}` → an interactive island rendered in place.
  *  - Sources list: `::sources-list` → a live, read-only listing of every source
@@ -30,7 +29,8 @@ import { GRADE_LABELS } from '../grades/labels';
  *    hand-copied into a page, so it can't drift from the real registry).
  *  - Internal links to pages that aren't in this build (drafts) render as
  *    plain text, so published pages never link to drafts.
- *  - /go/ links get rel="sponsored nofollow". Other external links are followed.
+ *  - External links get rel="noopener" and are followed. The site carries no
+ *    affiliate, sponsored or tracked links (scripts/validate-free.ts).
  */
 
 export interface RenderOptions {
@@ -46,7 +46,6 @@ export interface LinkRecord {
   href: string;
   text: string;
   internal: boolean;
-  sponsored: boolean;
   inUrgent: boolean;
   /** Internal link dropped because the target isn't in this build. */
   dropped: boolean;
@@ -77,20 +76,16 @@ export const TOOL_ISLAND_IDS = [
 export type ContentIslandPart =
   | { type: 'html'; html: string }
   | { type: 'tool'; tool: string }
-  | { type: 'product-slot'; slot: string }
-  | { type: 'product'; product: string }
   | { type: 'sources-list' };
 
-/** Splits rendered HTML around tool, product slot, and sources-list placeholders. */
+/** Splits rendered HTML around tool and sources-list placeholders. */
 export function splitContentIslands(html: string): ContentIslandPart[] {
   const parts: ContentIslandPart[] = [];
   let last = 0;
-  const re = /<div data-(tool|product-slot|product)="([a-z0-9-]+)"><\/div>|<div data-sources-list="true"><\/div>/g;
+  const re = /<div data-(tool)="([a-z0-9-]+)"><\/div>|<div data-sources-list="true"><\/div>/g;
   for (const m of html.matchAll(re)) {
     if (m.index! > last) parts.push({ type: 'html', html: html.slice(last, m.index) });
     if (m[1] === 'tool') parts.push({ type: 'tool', tool: m[2] });
-    else if (m[1] === 'product-slot') parts.push({ type: 'product-slot', slot: m[2] });
-    else if (m[1] === 'product') parts.push({ type: 'product', product: m[2] });
     else parts.push({ type: 'sources-list' });
     last = m.index! + m[0].length;
   }
@@ -186,27 +181,13 @@ function remarkDirectivesToHtml() {
           data.hProperties = { 'data-tool': id };
           return;
         }
-        if (d.name === 'product-slot') {
-          const id = d.attributes?.id ?? '';
-          const data = (d.data ??= {});
-          data.hName = 'div';
-          data.hProperties = { 'data-product-slot': id };
-          return;
-        }
-        if (d.name === 'product' || d.name === 'product-block') {
-          const id = d.attributes?.id ?? '';
-          const data = (d.data ??= {});
-          data.hName = 'div';
-          data.hProperties = { 'data-product': id };
-          return;
-        }
         if (d.name === 'sources-list') {
           const data = (d.data ??= {});
           data.hName = 'div';
           data.hProperties = { 'data-sources-list': 'true' };
           return;
         }
-        throw new Error(`Unknown content directive "::${d.name}" (allowed: ::tool, ::product-slot, ::product, ::sources-list)`);
+        throw new Error(`Unknown content directive "::${d.name}" (allowed: ::tool, ::sources-list)`);
       }
       if (node.type !== 'containerDirective') return;
       const d = node as unknown as { name: string; data?: Record<string, unknown> };
@@ -243,18 +224,12 @@ function rehypeLinksAndCollect(opts: RenderOptions, result: Omit<RenderResult, '
 
       const inUrgent = hasUrgentAncestor(tree, node);
       const text = hastToString(node);
-      const sponsored = href.startsWith('/go/');
-      const internal = href.startsWith('/') && !sponsored;
+      const internal = href.startsWith('/');
 
-      if (sponsored) {
-        node.properties.rel = ['sponsored', 'nofollow'];
-        result.links.push({ href, text, internal: false, sponsored: true, inUrgent, dropped: false });
-        return;
-      }
       if (internal) {
         const pathOnly = href.split('#')[0].split('?')[0];
         const exists = opts.knownPaths.has(pathOnly) || opts.staticPaths?.has(pathOnly) || opts.isAlwaysValid?.(pathOnly);
-        result.links.push({ href, text, internal: true, sponsored: false, inUrgent, dropped: !exists });
+        result.links.push({ href, text, internal: true, inUrgent, dropped: !exists });
         if (!exists && parent && index !== undefined) {
           // Rule: never link a published page to a draft or missing page. Keep the words.
           parent.children.splice(index, 1, ...node.children);
@@ -262,7 +237,8 @@ function rehypeLinksAndCollect(opts: RenderOptions, result: Omit<RenderResult, '
         }
         return;
       }
-      result.links.push({ href, text, internal: false, sponsored: false, inUrgent, dropped: false });
+      node.properties.rel = ['noopener'];
+      result.links.push({ href, text, internal: false, inUrgent, dropped: false });
     });
   };
 }
@@ -292,11 +268,8 @@ export function renderMarkdown(markdown: string, opts: RenderOptions): RenderRes
     'html' | 'text' | 'citations'
   >;
 
-  // Prompt 2 & 3: Support <ProductSlot id="..." />, <Product id="..." />, <ProductBlock id="..." /> and strip comments
-  const preprocessed = markdown
-    .replace(/<(?:Product|ProductBlock)\s+id=["']([a-z0-9-]+)["']\s*(?:\/>|><\/(?:Product|ProductBlock)>)/gi, '\n\n::product{id="$1"}\n\n')
-    .replace(/<ProductSlot\s+id=["']([a-z0-9-]+)["']\s*(?:\/>|><\/ProductSlot>)/gi, '\n\n::product-slot{id="$1"}\n\n')
-    .replace(/<!--[\s\S]*?-->/g, '');
+  // Strip HTML comments.
+  const preprocessed = markdown.replace(/<!--[\s\S]*?-->/g, '');
 
   const processor = unified()
     .use(remarkParse)

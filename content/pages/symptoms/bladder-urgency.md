@@ -37,7 +37,6 @@ cta_profile: urinary
 hub: /symptoms/
 sources: [nice-ng23-recommendations, nams-2020-gsm, nice-ng123-urinary-incontinence]
 related: [/symptoms/, /symptoms/recurrent-utis/, /symptoms/incontinence/, /care/pelvic-floor-exercises/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Why do I suddenly need to pee so often or so urgently after menopause?
     a: "This is commonly part of genitourinary syndrome of menopause (GSM), in which falling estrogen thins and changes the tissue of the urethra and bladder. NICE guidance specifically addresses the use of vaginal estrogen for genitourinary symptoms that occur together with an overactive bladder."

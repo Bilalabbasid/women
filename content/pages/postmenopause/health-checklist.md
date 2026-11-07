@@ -40,7 +40,6 @@ cta_profile: learn_stage
 hub: /postmenopause/
 sources: [uspstf-breast-cancer-screening-2024, uspstf-osteoporosis-screening-2025, uspstf-colorectal-cancer-screening-2021, uspstf-cervical-cancer-screening-2018]
 related: [/postmenopause/, /postmenopause/bone-health/, /postmenopause/heart-health/, /postmenopause/bleeding/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Can I stop getting Pap smears after menopause?
     a: "Possibly, depending on your history. USPSTF recommends against continuing cervical cancer screening in women over 65 who have had adequate prior screening and aren't otherwise high-risk, and against screening if you've had a hysterectomy with the cervix removed and no history of a high-grade precancerous lesion or cervical cancer. This is a 'stop screening' recommendation for specific groups, not a blanket rule for everyone — confirm your own history and prior screening record with your doctor before assuming it applies to you. Note: this specific USPSTF topic was listed as having an update in progress as of when we checked, so confirm you're seeing the current guidance."

@@ -31,7 +31,6 @@ cta_profile: hrt_evaluating
 hub: /treatments/hormone-therapy/
 sources: [nice-ng23-recommendations]
 related: [/treatments/hormone-therapy/, /symptoms/low-libido/, /treatments/hormone-therapy/pellets/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Is testosterone approved for women?
     a: "Not specifically for this use. NICE guidance recommends considering testosterone for low sexual desire associated with menopause when HRT alone isn't effective, but notes this is currently an off-label use of testosterone in the UK. It should be prescribed and monitored by a clinician experienced with using it in women, not self-sourced."

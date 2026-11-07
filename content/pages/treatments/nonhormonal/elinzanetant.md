@@ -33,7 +33,6 @@ cta_profile: nonhormonal_evaluating
 hub: /treatments/nonhormonal/
 sources: [lynkuet-approval-bayer-2025, nams-2023-nonhormone-therapy, veozah-prescribing-information]
 related: [/treatments/nonhormonal/, /treatments/nonhormonal/fezolinetant/, /symptoms/hot-flashes/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: How is Lynkuet (elinzanetant) different from Veozah (fezolinetant)?
     a: While Veozah blocks the neurokinin 3 (NK3) receptor alone, Lynkuet (elinzanetant) is a dual antagonist that blocks both NK1 and NK3 receptors on thermoregulatory neurons in the hypothalamus.

@@ -28,7 +28,6 @@ cta_profile: vasomotor
 hub: /symptoms/
 sources: [fixture-guideline]
 related: []
-affiliate_disclosure: false
 approved_hash: HASH_PLACEHOLDER
 ---
 

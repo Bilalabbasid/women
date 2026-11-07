@@ -34,7 +34,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [nams-2023-nonhormone-therapy, nams-2022-hormone-therapy]
 related: [/does-it-work/, /treatments/nonhormonal/cbt-and-hypnosis/, /symptoms/insomnia/, /symptoms/anxiety/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: Does CBD or cannabis help with hot flashes?
     a: "According to The Menopause Society's 2023 review, no — cannabinoids are classified as not recommended for vasomotor symptoms (Level II), meaning the trial evidence doesn't support them as an effective hot-flash treatment."

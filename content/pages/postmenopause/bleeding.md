@@ -36,7 +36,6 @@ cta_profile: bleeding
 hub: /postmenopause/
 sources: [nhs-postmenopausal-bleeding, nice-ng23, nams-2020-gsm]
 related: [/postmenopause/, /tools/12-month-counter/, /tools/symptom-tracker/, /symptoms/vaginal-dryness/]
-affiliate_disclosure: false
 faq:
   - q: Should I see a doctor if I only noticed pink or brown discharge once after menopause?
     a: Yes. NHS guidance explicitly states that any postmenopausal bleeding — even a small amount, a single episode, or light pink or brown discharge — should be checked by a doctor.

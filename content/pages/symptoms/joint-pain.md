@@ -36,7 +36,6 @@ cta_profile: musculoskeletal
 hub: /symptoms/
 sources: [nice-ng23-recommendations, liftmor-trial-bone-density, nams-2022-hormone-therapy]
 related: [/symptoms/, /does-it-work/exercise/, /postmenopause/bone-health/, /tools/symptoms-checklist/]
-affiliate_disclosure: false
 faq:
   - q: Can menopause really cause aching joints and stiffness?
     a: Yes. UK NICE guideline NG23 explicitly lists musculoskeletal symptoms (joint and muscle pain) as a recognized symptom of perimenopause and menopause.

@@ -33,7 +33,6 @@ cta_profile: skin_hair
 hub: /symptoms/
 sources: [kamp-menopause-hair-disorders-2022]
 related: [/symptoms/, /symptoms/hair-thinning/, /symptoms/acne/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Is new facial hair normal after menopause?
     a: "Yes, it's common. A 2022 dermatology review found facial hirsutism in about 50% of postmenopausal women, usually with normal androgen (testosterone) levels — meaning it's typically explained by the falling estrogen-to-androgen ratio after menopause, not an excess of male hormones."

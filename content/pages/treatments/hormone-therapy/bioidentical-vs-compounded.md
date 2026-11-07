@@ -39,7 +39,6 @@ cta_profile: hrt_evaluating
 hub: /treatments/hormone-therapy/
 sources: [acog-compounded-bioidentical-2023, nice-ng23-recommendations]
 related: [/treatments/hormone-therapy/, /treatments/hormone-therapy/types/, /treatments/hormone-therapy/pellets/, /does-it-work/]
-affiliate_disclosure: false
 faq:
   - q: Are bioidentical hormones safer than regular HRT?
     a: "The term 'bioidentical' just means the hormone has the same chemical structure as what the body naturally produces — several FDA-approved HRT products are already bioidentical (such as estradiol patches and micronised progesterone). The safety concern is specifically with custom-compounded bioidentical products, which aren't tested or regulated the way FDA-approved medications are."

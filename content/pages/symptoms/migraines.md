@@ -40,7 +40,6 @@ cta_profile: general_symptom
 hub: /symptoms/
 sources: [korn-bernstein-migraine-menopause-2026, nice-ng23-recommendations]
 related: [/symptoms/, /symptoms/headaches/, /treatments/hormone-therapy/, /treatments/hormone-therapy/boxed-warning/, /tools/treatment-questions/, /does-it-work/]
-affiliate_disclosure: false
 faq:
   - q: Do migraines get worse in perimenopause?
     a: "Often, yes, at least during the perimenopause transition itself. A 2026 clinical review found that unstable estrogen and progesterone levels can worsen migraine frequency and make attacks less predictable. The same review found migraine without aura often improves after menopause, while migraine with aura tends to persist."

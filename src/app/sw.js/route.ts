@@ -17,7 +17,7 @@ export const dynamic = 'force-static';
  *  - Other same-origin GETs: stale-while-revalidate, 200s only.
  *  - /app/* (the tracker): precached with its scripts at install; network-first,
  *    falling back to the cached screen offline.
- *  - /api/, /go/, /og/, /pin/: never touched (form submissions are POSTs and are never cached).
+ *  - /api/, /og/, /pin/: never touched (form submissions are POSTs and are never cached).
  *  - The service worker never reads or stores tracker data (that lives in IndexedDB).
  */
 const VERSION = process.env.BUILD_VERSION ?? new Date().toISOString().replace(/[^0-9]/g, '');
@@ -168,8 +168,8 @@ self.addEventListener('fetch', (event) => {
   if (request.method !== 'GET') return;
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
-  // Never touched: form submissions and other API calls, redirects, the worker itself, social images.
-  if (/^\\/(api|go|og|pin)\\//.test(url.pathname) || url.pathname === '/sw.js') return;
+  // Never touched: form submissions and other API calls, the worker itself, social images.
+  if (/^\\/(api|og|pin)\\//.test(url.pathname) || url.pathname === '/sw.js') return;
 
   if (request.mode === 'navigate' && url.pathname.startsWith('/app/')) {
     event.respondWith(networkFirstApp(request));

@@ -30,7 +30,6 @@ cta_profile: care_access
 hub: /perimenopause/
 sources: [nice-ng23-recommendations, nams-2022-hormone-therapy]
 related: [/perimenopause/, /perimenopause/early-signs/, /tools/symptoms-checklist/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 ---
 
 Most medical appointments last between 10 and 15 minutes. In that short window, trying to describe months of erratic sleep, mood swings, cycle changes, and temperature spikes without a structured plan often leads to rushed conversations and generic advice [@nice-ng23-recommendations]. Understanding where you stand in the broader [perimenopause transition](/perimenopause/) helps focus this conversation.

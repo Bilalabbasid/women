@@ -41,7 +41,6 @@ cta_profile: care_comparison
 hub: null
 sources: [nams-2022-hormone-therapy, nams-2023-nonhormone-therapy, nice-ng23-recommendations, nhs-postmenopausal-bleeding, nhs-heart-palpitations, jmir-online-menopause-information-2025]
 related: [/care/, /treatments/, /perimenopause/questions-for-your-doctor/, /tools/symptom-tracker/, /compare/midi-review/, /compare/alloy-review/, /compare/evernow-review/, /compare/winona-review/, /compare/hers-review/, /compare/midi-vs-alloy/, /compare/midi-vs-evernow/, /compare/alloy-vs-evernow/]
-affiliate_disclosure: false
 faq:
   - q: Do online menopause clinics require hormone blood tests before prescribing?
     a: "A quality clinic usually should not require expensive hormone panels if you are 45 or older with typical symptoms. Clinical guidelines from NICE and The Menopause Society state that perimenopause at 45+ is diagnosed by symptoms and cycle history, though a clinician may order targeted blood work (such as thyroid, iron, or liver function tests) to rule out other conditions."
@@ -51,7 +50,7 @@ faq:
 
 **Quick answer:** If you want a live video visit covered by major health insurance with a clinician trained in menopause care, **Midi Health** and **Allara Health** lead for insurance-backed, synchronous care. If you prefer transparent, one-off cash-pay appointments with an independent doctor without a recurring membership, **Sesame Care** lets you book single visits upfront. If you want asynchronous prescription fulfilment for standard FDA-approved estradiol or vaginal estrogen without insurance, **Alloy** offers direct cash-pay prescribing, while **Hers** provides asynchronous subscription care.
 
-Many women turn to online menopause clinics because finding a local specialist who is up to date on current [menopause treatment guidelines](/treatments/) can take months [@jmir-online-menopause-information-2025]. Below is how we compare the main telehealth options strictly by **clinician credentials**, **insurance and cost structure**, and **adherence to clinical guidelines**—never by affiliate commission.
+Many women turn to online menopause clinics because finding a local specialist who is up to date on current [menopause treatment guidelines](/treatments/) can take months [@jmir-online-menopause-information-2025]. Below is how we compare the main telehealth options strictly by **clinician credentials**, **insurance and cost structure**, and **adherence to clinical guidelines**. Nobody pays to be listed.
 
 ## How we evaluate online menopause clinics (our 4 criteria)
 
@@ -73,8 +72,6 @@ We never rank a telehealth provider based on whether they pay a referral fee. In
 | **Sesame Care** | Marketplace of independent board-certified OB/GYNs, family physicians, and NPs offering live video visits | Direct cash-pay per visit with upfront pricing shown before booking (no monthly subscription); HSA/FSA eligible | Clinicians send standard prescriptions directly to your chosen local pharmacy | Women without insurance coverage (or with high deductibles) who want a single affordable video visit without a subscription |
 | **Alloy** | Asynchronous online medical intake reviewed by a menopause-trained physician (optional video follow-ups available) | Cash-pay direct-to-consumer model (no insurance billing); HSA/FSA eligible | Ships FDA-approved estradiol patches/gels, oral micronized progesterone, and vaginal estradiol directly from their partner pharmacy | Healthy women with straightforward vasomotor or vaginal symptoms who prefer cash-pay home delivery without scheduling live appointments |
 | **Hers** | Primarily asynchronous online assessment reviewed by licensed clinicians | Cash-pay subscription model bundled with medication delivery (no insurance billing) | Offers select non-hormonal and hormonal options shipped by mail; narrower customization for complex histories | Readers seeking a simple asynchronous cash-pay subscription who do not need insurance billing or local pharmacy pickups |
-
-::product-slot{id="telehealth-consultation"}
 
 ## Full individual reviews
 

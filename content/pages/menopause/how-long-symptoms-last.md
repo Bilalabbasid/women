@@ -43,7 +43,6 @@ cta_profile: learn_stage
 hub: /menopause/
 sources: [nice-ng23-recommendations, straw-10-2012, nams-2020-gsm, acog-clinical-consensus-gsm, nams-2022-hormone-therapy, swan-vms-duration-avis-2015]
 related: [/menopause/, /symptoms/hot-flashes/, /symptoms/vaginal-dryness/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Do hot flashes stop as soon as I reach 12 months without a period?
     a: Not usually. Reaching 12 months without a period marks the calendar definition of menopause, but vasomotor symptoms (hot flashes and night sweats) often continue into early postmenopause before gradually easing over time.

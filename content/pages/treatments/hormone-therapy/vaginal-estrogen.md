@@ -38,7 +38,6 @@ cta_profile: genitourinary_vaginal
 hub: /treatments/hormone-therapy/
 sources: [nams-2020-gsm, acog-clinical-consensus-gsm, cochrane-vaginal-moisturizers, fda-mht-labeling-changes-2026, menopause-society-fda-comment-2025, ims-statement-boxed-warning-2025, nhs-postmenopausal-bleeding]
 related: [/treatments/hormone-therapy/, /symptoms/vaginal-dryness/, /symptoms/painful-sex/, /care/moisturizers-and-lubricants/]
-affiliate_disclosure: false
 faq:
   - q: Is low-dose vaginal estrogen the same as systemic HRT?
     a: No. Low-dose vaginal estrogen (applied as a cream, vaginal tablet, or soft ring) acts locally on vaginal and lower urinary tract tissues with minimal absorption into the bloodstream. It does not treat hot flashes or night sweats.

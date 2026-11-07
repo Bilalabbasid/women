@@ -31,7 +31,6 @@ cta_profile: care_comparison
 hub: /compare/
 sources: [hims-hers-health-public-company-2026]
 related: [/compare/, /compare/midi-review/, /compare/alloy-review/, /treatments/hormone-therapy/, /tools/treatment-questions/]
-affiliate_disclosure: false
 noindex: true
 faq:
   - q: Is Hers a specialized menopause clinic?

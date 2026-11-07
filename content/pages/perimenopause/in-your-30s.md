@@ -37,7 +37,6 @@ cta_profile: learn_stage
 hub: /perimenopause/
 sources: [nice-ng23, nice-ng23-recommendations, straw-10-2012]
 related: [/perimenopause/, /perimenopause/age/, /perimenopause/blood-tests/, /groups/premature-ovarian-insufficiency/, /groups/early-menopause/, /tools/stage-guide/]
-affiliate_disclosure: false
 faq:
   - q: Can you really be in perimenopause at 35?
     a: "It's uncommon but possible, and it's exactly the age range where a clinician should test rather than assume. NICE guidance uses age-specific rules: at 45 and over, perimenopause can usually be identified from symptoms alone; between 40 and 45, or under 40, hormone blood testing (FSH) is used to confirm what's happening, and under 40 specifically rules in or out premature ovarian insufficiency."

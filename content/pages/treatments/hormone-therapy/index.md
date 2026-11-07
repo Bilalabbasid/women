@@ -39,7 +39,6 @@ cta_profile: hrt_evaluating
 hub: /treatments/
 sources: [nams-2022-hormone-therapy, fda-mht-labeling-request-2025, fda-mht-labeling-changes-2026, menopause-society-fda-comment-2025, ims-statement-boxed-warning-2025]
 related: [/treatments/, /treatments/hormone-therapy/boxed-warning/, /treatments/hormone-therapy/vaginal-estrogen/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: What is the difference between systemic HRT and low-dose vaginal estrogen?
     a: Systemic hormone therapy (patches, gels, sprays, or tablets) circulates throughout the body to treat hot flashes, night sweats, and bone loss. Low-dose vaginal estrogen treats local vaginal and urinary symptoms with minimal systemic absorption.

@@ -36,7 +36,6 @@ cta_profile: care_access
 hub: /perimenopause/
 sources: [nice-ng23-recommendations, nhs-heavy-periods, nhs-postmenopausal-bleeding]
 related: [/perimenopause/, /perimenopause/irregular-periods/, /perimenopause/heavy-periods/, /perimenopause/questions-for-your-doctor/, /tools/symptoms-checklist/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Do I need to see a doctor just because I have perimenopause symptoms?
     a: "Not necessarily right away, if your symptoms are mild and you're mainly looking for information. But it's worth booking an appointment if symptoms are affecting your daily life, you want to discuss treatment options, or any of the specific bleeding or urgent symptoms below apply."

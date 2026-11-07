@@ -78,9 +78,8 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       { source: '/:path*', headers: securityHeaders },
-      // Private tracker and affiliate redirects are never indexed, even if linked.
+      // The private tracker is never indexed, even if linked.
       { source: '/app/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] },
-      { source: '/go/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] },
       { source: '/search/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, follow' }] },
       {
         source: '/sw.js',

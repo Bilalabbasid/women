@@ -1,7 +1,7 @@
 ---
-title: "Products we won't recommend"
-seo_title: "Products we won't recommend, and why"
-meta_description: "The categories of menopause products MenoVerdict rejects outright — regardless of commission — and the standard we hold every recommendation to."
+title: "Products the evidence doesn't support"
+seo_title: "Menopause products the evidence doesn't support"
+meta_description: "The categories of menopause products the evidence doesn't support as they're commonly marketed, and the standard we hold every health claim to."
 cluster: evidence
 primary_keyword: menopause products to avoid
 slug: products-we-wont-recommend
@@ -17,9 +17,10 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Published products-we-won't-recommend policy page", material: true }
+  - { date: "2026-11-07", summary: "Retitled as an evidence page", material: true }
 evidence_grade: null
 claims:
   - id: ftc-substantiation-standard
@@ -37,21 +38,20 @@ banned_phrase_overrides:
   - { phrase: "hormone balance", reason: "Naming the specific rejected marketing category on our own policy page listing categories we reject, not making the claim ourselves." }
   - phrase: detox
     reason: "This page's purpose is to name the product categories we reject outright, including \"detox\" products marketed for menopausal weight gain — we're rejecting the category, not using the word to market anything."
-affiliate_disclosure: false
 faq:
-  - q: Why would an evidence-based site refuse to recommend a product even if it could earn a commission?
-    a: "Because our editorial policy sets the evidence grade before checking whether an affiliate programme exists. If a category of product fails that standard, no commission changes the verdict — we say so, and reject it, in public."
+  - q: Why does an evidence site list products it doesn't support?
+    a: "Because a clear no is as useful as a yes. If a category of product fails the evidence standard below, we say so in public, so you can skip it or ask your doctor about it."
   - q: Does this mean every supplement on this list is useless for everyone?
     a: "No — it means the category, as commonly marketed for menopause, lacks the kind of evidence (competent and reliable scientific evidence, per FTC standards) needed to recommend it as a treatment. Individual products within a graded category are assessed on our Does It Work? pages, where the evidence allows for more nuance."
 ---
 
-Every recommendation on this site is set by the evidence first, and the commercial relationship — if any — second. Our [editorial policy](/evidence/editorial-policy/) and [evidence grading method](/evidence/how-we-grade/) explain the process; this page lists the specific categories we reject outright, and why.
+Every grade on this site is set by the evidence alone. Our [editorial policy](/evidence/editorial-policy/) and [evidence grading method](/evidence/how-we-grade/) explain the process; this page lists the categories of menopause product the evidence doesn't support as they're commonly marketed, and why.
 
 ## The standard we hold every claim to
 
-The Federal Trade Commission's staff guidance on health product advertising requires that health and safety claims be **truthful, not misleading, and backed by competent and reliable scientific evidence** before an ad ever runs, and holds advertisers responsible for substantiating every claim they make, directly or by implication [@ftc-health-products-compliance-guidance-2022]. We hold ourselves to that same bar before recommending anything, whether or not it would earn us a commission.
+The Federal Trade Commission's staff guidance on health product advertising requires that health and safety claims be **truthful, not misleading, and backed by competent and reliable scientific evidence** before an ad ever runs, and holds advertisers responsible for substantiating every claim they make, directly or by implication [@ftc-health-products-compliance-guidance-2022]. We hold ourselves to that same bar before recommending anything.
 
-## Categories we reject
+## Categories the evidence doesn't support
 
 - **Custom-compounded "bioidentical" hormone products marketed as safer or more natural than FDA-approved hormone therapy.** ACOG's 2023 clinical consensus recommends against routinely prescribing these when FDA-approved options exist, given the lack of standardized testing and a marketing framing that isn't backed by evidence [@acog-compounded-bioidentical-2023]. See our full explainer: [bioidentical vs. compounded hormones](/treatments/hormone-therapy/bioidentical-vs-compounded/).
 - **At-home hormone testing kits marketed to self-diagnose menopause stage or guide treatment decisions.** Clinical guidelines do not support using these tests to identify perimenopause or menopause in the way they're commonly marketed.

@@ -33,7 +33,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [nams-2023-nonhormone-therapy]
 related: [/does-it-work/, /does-it-work/soy-isoflavones/, /symptoms/weight-gain/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: Does a plant-based or soy-rich diet reduce hot flashes?
     a: "The Menopause Society's 2023 review did not find enough evidence to recommend general dietary modification as a hot flash treatment (Level III, a lower-confidence tier). Soy foods and extracts specifically were assessed separately and also classified as not recommended, at Level II."

@@ -41,7 +41,6 @@ cta_profile: learn_stage
 hub: null
 sources: [straw-10-2012, nice-ng23-recommendations, nhs-postmenopausal-bleeding, liftmor-trial-bone-density, nams-2020-gsm, acog-clinical-consensus-gsm]
 related: [/postmenopause/bleeding/, /postmenopause/bone-health/, /postmenopause/heart-health/, /postmenopause/sexual-health/, /postmenopause/health-checklist/, /postmenopause/life-after-menopause/, /menopause/, /symptoms/vaginal-dryness/]
-affiliate_disclosure: false
 faq:
   - q: When does postmenopause start and end?
     a: Postmenopause begins once 12 consecutive months have passed since your final menstrual period and continues for the rest of your life.

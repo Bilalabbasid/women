@@ -21,6 +21,7 @@ updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Upgraded with practical sleep cooling steps, sleepwear, and bed climate options", material: true }
   - { date: "2026-11-07", summary: "CBT for sleep corrected from Moderate to Strong; the hormone therapy figure corrected to about 75%, as its source states; raw citation text fixed", material: true }
+  - { date: "2026-11-07", summary: "Removed product recommendations; the guidance is unchanged", material: true }
 evidence_grade: per_option
 claims:
   - id: nocturnal-vasomotor-mechanism
@@ -37,7 +38,6 @@ cta_profile: vasomotor
 hub: /symptoms/
 sources: [nams-2022-hormone-therapy, veozah-prescribing-information, nams-2023-nonhormone-therapy, nice-ng23-recommendations]
 related: [/symptoms/hot-flashes/, /care/sleepwear-for-night-sweats/, /does-it-work/cooling-products/, /tools/symptom-tracker/]
-affiliate_disclosure: true
 ---
 
 Waking up at 3 a.m. drenched in sweat with a racing heart is one of the most disruptive symptoms of perimenopause. As outlined in our [menopause symptoms directory](/symptoms/), nocturnal hot flashes (night sweats) occur when fluctuating estrogen destabilizes the temperature-control center in your brain, causing your body to trigger sudden heat-release mechanisms while you sleep [@nams-2022-hormone-therapy]. 
@@ -62,18 +62,12 @@ Set your bedroom thermostat between 65°F and 68°F (18°C to 20°C). Cooler amb
 ### 2. Choose moisture-wicking sleepwear
 Traditional cotton pajamas absorb sweat and hold it against your skin, causing you to wake soaked and rapidly chilled. Synthetic moisture-wicking fabrics draw perspiration away from your skin to the outer fabric surface where it evaporates quickly.
 
-<Product id="cooljams-pyjamas" />
+For a full guide on selecting fabrics and cuts, read [how to choose sleepwear for night sweats](/care/sleepwear-for-night-sweats/).
 
-For a full guide on selecting fabrics and cuts, read our breakdown of the [best sleepwear for night sweats](/care/sleepwear-for-night-sweats/).
-
-### 3. Layer your bedding and consider active bed cooling
+### 3. Layer your bedding and keep the air moving
 Use multiple light, natural-fiber blankets (such as linen or percale cotton) rather than a heavy down duvet. That way, you can kick off a single layer during a heat spike without waking up freezing twenty minutes later.
 
-For women experiencing severe, frequent nighttime sweats who find ambient room fans insufficient, active bed cooling systems deliver direct convective air beneath the top sheet.
-
-<Product id="bedjet" />
-
-To compare fans, cooling sheets, and active climate units, explore our review of [cooling products and bed climate systems](/does-it-work/cooling-products/).
+If a bedside fan isn't enough on your worst nights, our guide to [cooling products and bed climate systems](/does-it-work/cooling-products/) compares fans, cooling sheets and systems that blow air under the top sheet, and what each can and can't do.
 
 ### 4. Watch evening triggers
 - **Avoid alcohol after dinner**: Wine and spirits dilate peripheral blood vessels and disrupt sleep architecture, reliably triggering nighttime sweats.

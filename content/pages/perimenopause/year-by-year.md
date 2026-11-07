@@ -33,7 +33,6 @@ cta_profile: learn_stage
 hub: /perimenopause/
 sources: [greendale-swan-body-composition-2019, kravitz-swan-postmenopause-depression-2022]
 related: [/perimenopause/, /perimenopause/stages/, /perimenopause/how-long/, /symptoms/weight-gain/, /symptoms/depression/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Does weight gain actually speed up during perimenopause?
     a: "Not in the way most people assume, according to long-term SWAN study data. Overall body weight climbed at a steady rate through premenopause with no acceleration at the start of the transition, and leveled off afterward — there was no discernible speed-up in weight gain itself at perimenopause. What does change substantially is body composition: the rate of fat gain doubled and lean (muscle) mass began declining at the start of the transition, continuing until about 2 years after the final period. So the scale may not move faster, but what's actually happening to your body is still shifting in a meaningful way."

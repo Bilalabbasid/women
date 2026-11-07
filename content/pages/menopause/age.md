@@ -36,7 +36,6 @@ cta_profile: learn_stage
 hub: /menopause/
 sources: [appiah-menopause-age-trends-2021]
 related: [/menopause/, /perimenopause/age/, /groups/early-menopause/, /groups/premature-ovarian-insufficiency/, /tools/stage-guide/]
-affiliate_disclosure: false
 faq:
   - q: What is the average age of menopause in the US?
     a: "A US national survey found the average (mean) age at natural menopause was 49.9 years in the most recent data (2015-2018), up slightly from 48.4 years in 1959-1962. 'Average' describes a population, though — individual timing varies widely."

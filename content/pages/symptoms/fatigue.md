@@ -39,7 +39,6 @@ banned_phrase_overrides:
 hub: /symptoms/
 sources: [stute-nonhormonal-transition-2026, neda-stepan-vms-mood-systematic-review-2026, nams-2022-hormone-therapy, nice-ng23-recommendations]
 related: [/symptoms/, /symptoms/insomnia/, /symptoms/night-sweats/, /tools/symptom-tracker/, /does-it-work/]
-affiliate_disclosure: false
 faq:
   - q: Why am I exhausted all the time in perimenopause, even when I get to bed early?
     a: "A 2026 clinical review describes perimenopause symptoms as occurring in overlapping clusters, with fatigue frequently appearing alongside sleep disturbance and mood changes, all linked to fluctuating hormone levels. Night sweats fragmenting your sleep, even without full waking, is a common and often overlooked contributor."

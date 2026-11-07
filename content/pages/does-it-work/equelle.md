@@ -31,7 +31,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [aso-s-equol-hot-flash-trial-2012, nams-2023-nonhormone-therapy]
 related: [/does-it-work/, /does-it-work/soy-isoflavones/, /symptoms/hot-flashes/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: Does Equelle actually reduce hot flashes?
     a: "The one real placebo-controlled trial of its active ingredient, S-equol, is genuinely positive: 160 postmenopausal women who don't naturally produce S-equol from soy took either 10mg/day of S-equol or a placebo for 12 weeks. The S-equol group had significantly fewer hot flashes (-58.7% vs. -34.5% reduction, a statistically significant difference, p=0.009) and less severity, with no serious side effects. That's a real result, not a marketing exaggeration."

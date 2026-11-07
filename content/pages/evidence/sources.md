@@ -27,7 +27,6 @@ cta_profile: site_none
 hub: /evidence/
 sources: []
 related: [/evidence/how-we-grade/, /evidence/editorial-policy/, /evidence/updates/, /evidence/products-we-wont-recommend/]
-affiliate_disclosure: false
 ---
 
 Every medical claim on this site links to a numbered reference at the bottom of its page. This page collects all of those references in one place — every source currently in our registry, generated directly from the file we use to build the site, not copied by hand.

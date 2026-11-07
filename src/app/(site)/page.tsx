@@ -41,9 +41,6 @@ export const metadata: Metadata = {
       'Find clear answers about perimenopause, menopause symptoms, evidence-graded treatments, and doctor questions. Fast, private, and independent.',
     path: '/',
   }),
-  other: {
-    'awin-verification': 'Awin',
-  },
 };
 
 const TOP_SYMPTOMS = [
@@ -214,7 +211,7 @@ export default function HomePage() {
             </h1>
             <p className="max-w-xl text-lg text-[#e4eeea] sm:text-xl">
               Clear answers to real perimenopause and menopause questions — every claim graded against the evidence,
-              every source linked. No login to read, no sponsored verdicts, and no health data leaves your device.
+              every source linked. Free to read, no login, no ads, and no health data leaves your device.
             </p>
             <p>
               <Link
@@ -308,7 +305,7 @@ export default function HomePage() {
               </div>
 
               <p className="mt-4 text-sm text-[#cfe2da]">
-                Grades are AI-assisted and can be wrong. Commissions never change a grade.{' '}
+                Grades are AI-assisted and can be wrong.{' '}
                 <Link href="/evidence/how-we-grade/" className="font-semibold text-white underline focus-visible:outline-white">
                   How we grade
                 </Link>
@@ -461,7 +458,7 @@ export default function HomePage() {
           <div className="flex flex-wrap items-end justify-between gap-2">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-accent)]">
-                Evidence before commission
+                Independent · Evidence-graded · Free
               </p>
               <h2 id="verdicts-heading" className="mt-1 font-serif text-2xl font-semibold text-[var(--color-ink)] sm:text-3xl">
                 We say it plainly when something doesn&rsquo;t work
@@ -487,8 +484,8 @@ export default function HomePage() {
             ))}
           </ul>
           <p className="text-sm text-[var(--color-ink-muted)]">
-            Grades are AI-assisted, so they can be wrong. Each grade covers the specific use, links its sources, and is set before we ever look at whether an
-            affiliate programme exists.{' '}
+            Grades are AI-assisted, so they can be wrong. Each grade covers the specific use and links its
+            sources. Nobody pays to be mentioned or graded.{' '}
             <Link href="/evidence/how-we-grade/" className="font-semibold text-[var(--color-link)] underline">
               Read the grading method
             </Link>
@@ -570,7 +567,7 @@ export default function HomePage() {
               ['Every claim graded', 'against clinical trials and clinical consensus.'],
               ['No login for reading', 'all content and tools work without an account.'],
               ['Health data stays private', 'stored on your device only, never on our servers.'],
-              ['Clear disclosures', 'commercial links are labelled and never alter a grade.'],
+              ['Free and independent', 'no ads, no affiliate links and no sponsors.'],
             ].map(([bold, rest]) => (
               <li key={bold} className="flex items-start gap-2.5">
                 <ClipboardCheck aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0 text-[var(--color-accent)]" />

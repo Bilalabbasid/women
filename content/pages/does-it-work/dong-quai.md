@@ -31,7 +31,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [hirata-dong-quai-trial-1997]
 related: [/does-it-work/, /does-it-work/black-cohosh/, /does-it-work/soy-isoflavones/, /symptoms/hot-flashes/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: Does dong quai help with hot flashes?
     a: "A 24-week, double-blind, placebo-controlled trial of 71 postmenopausal women with hot flashes found dong quai, taken alone, was no more effective than placebo — no significant difference in the number of hot flashes or in overall symptom scores. The same trial found no estrogen-like effect on vaginal tissue or the uterine lining either. This is one of the more rigorous trials in the herbal-menopause-remedy space, and it's a clear negative result."
@@ -57,7 +56,7 @@ This trial specifically tested dong quai by itself, not combined with other herb
 
 - **No proven benefit** for hot flashes based on this trial
 - **Possible blood-thinning effect**: dong quai is generally understood to have anticoagulant-like properties, which matters if you take blood thinners or have an upcoming procedure
-- Because this grade is :grade{id="dong-quai-vms"}, we don't place affiliate links for dong quai products on this page — see [how we grade evidence](/evidence/how-we-grade/)
+- Our grade is :grade{id="dong-quai-vms"} — see [how we grade evidence](/evidence/how-we-grade/) for what that means
 
 If you're looking for hot flash options with real evidence behind them, see our [does it work? evidence checker](/tools/does-it-work-checker/) or [non-hormonal prescription and behavioral treatments](/treatments/nonhormonal/).
 

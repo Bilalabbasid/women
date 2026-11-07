@@ -34,7 +34,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [scheffers-dhea-cochrane-2015, lemos-intravaginal-dhea-meta-analysis-2026]
 related: [/does-it-work/, /symptoms/vaginal-dryness/, /symptoms/painful-sex/, /symptoms/low-libido/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: Does the DHEA supplement sold for energy and anti-aging actually work for menopause?
     a: "For general wellbeing, a Cochrane review of 28 trials found no evidence that oral DHEA improves overall quality of life compared with placebo, and found it unclear whether it affects general menopausal symptoms because trial results were inconsistent. It was also associated with androgenic side effects, mainly acne. That's a notably weaker picture than the FDA-approved vaginal form described below."

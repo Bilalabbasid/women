@@ -37,7 +37,6 @@ cta_profile: nonhormonal_evaluating
 hub: /treatments/
 sources: [nams-2023-nonhormone-therapy, veozah-prescribing-information, lynkuet-approval-bayer-2025]
 related: [/treatments/, /treatments/nonhormonal/fezolinetant/, /treatments/nonhormonal/elinzanetant/, /treatments/nonhormonal/ssris-snris/, /treatments/nonhormonal/gabapentin/, /treatments/nonhormonal/oxybutynin/, /treatments/nonhormonal/cbt-and-hypnosis/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: What are the most effective non-hormonal treatments for hot flashes?
     a: In its 2023 Nonhormone Therapy Position Statement, The Menopause Society gives Level I recommendations to cognitive behavioral therapy (CBT), clinical hypnosis, SSRIs/SNRIs, gabapentin, and NK3 receptor antagonists such as fezolinetant (joined in October 2025 by FDA-approved elinzanetant), plus Level I–II support for oxybutynin.

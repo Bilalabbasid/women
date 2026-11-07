@@ -28,7 +28,6 @@ cta_profile: site_none
 hub: null
 sources: [fda-mht-labeling-changes-2026, fda-mht-labeling-request-2025]
 related: [/evidence/how-we-grade/, /treatments/hormone-therapy/boxed-warning/, /about/how-we-make-money/]
-affiliate_disclosure: false
 ---
 
 This page lists the regulatory actions, guideline changes and corrections that changed what this site says. Each entry names its source and the pages it affected. The newest is first.

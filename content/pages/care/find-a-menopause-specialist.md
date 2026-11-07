@@ -36,7 +36,6 @@ cta_profile: care_access
 hub: /care/
 sources: [menopause-society-choosing-practitioner, nice-ng23-recommendations]
 related: [/care/, /care/when-your-doctor-dismisses-you/, /treatments/hormone-therapy/is-it-right-for-me/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: What does "MSCP" actually mean?
     a: "MSCP stands for Menopause Society Certified Practitioner. It's awarded to licensed healthcare professionals who pass a competency exam demonstrating expertise in midlife women's health, and it has to be renewed every 3 years through re-examination or continuing education — it isn't a one-time label."

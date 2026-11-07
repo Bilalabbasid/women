@@ -36,7 +36,6 @@ cta_profile: bleeding
 hub: /perimenopause/
 sources: [straw-10-2012, nice-ng23-recommendations, nhs-heavy-periods]
 related: [/perimenopause/, /perimenopause/stages/, /perimenopause/heavy-periods/, /perimenopause/blood-tests/, /tools/stage-guide/, /tools/12-month-counter/]
-affiliate_disclosure: false
 faq:
   - q: Is it normal to skip periods in perimenopause?
     a: "Yes, skipped and irregular periods are a defining feature of perimenopause. The STRAW+10 clinical framework describes the early transition as cycles that persistently vary by 7 or more days, and the later transition as going 60 or more days without a period at all."

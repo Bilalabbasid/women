@@ -30,7 +30,6 @@ cta_profile: care_comparison
 hub: /compare/
 sources: [midi-health-own-site-2026, alloy-own-site-2026]
 related: [/compare/, /compare/midi-review/, /compare/alloy-review/, /treatments/hormone-therapy/, /tools/treatment-questions/]
-affiliate_disclosure: true
 faq:
   - q: Which is cheaper, Midi or Alloy?
     a: "It depends entirely on your insurance. If you have a PPO plan Midi is in-network with, Midi's insurance billing (Midi states an average of about $50 out-of-pocket per visit) will usually beat Alloy's cash-pay price. If you're uninsured, underinsured, or your plan isn't in-network, compare Midi's self-pay rate ($250 first visit / $150 follow-up, per Midi's own site) directly against Alloy's current checkout price before deciding."

@@ -30,7 +30,6 @@ cta_profile: general_symptom
 hub: /symptoms/
 sources: [gagliano-dry-eye-hormones-2014]
 related: [/symptoms/, /symptoms/burning-mouth/, /symptoms/vaginal-dryness/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 faq:
   - q: Does menopause actually cause dry eyes?
     a: "There's a studied hormonal link. A case-control study of 44 postmenopausal women found that those with severe evaporative dry eye syndrome had significantly lower serum levels of oestradiol, oestrone, and testosterone than women without dry eye, and that lower levels of all three hormones correlated with higher tear film osmolarity — a marker of tear film instability. This supports a real biological connection, though dry eye also has non-hormonal causes worth ruling out."

@@ -34,7 +34,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [lethaby-cochrane-phytoestrogens-2013]
 related: [/does-it-work/, /does-it-work/soy-isoflavones/, /does-it-work/black-cohosh/, /groups/breast-cancer-survivors/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: Does red clover help hot flashes?
     a: "Not reliably, according to the best available evidence. A 2013 Cochrane systematic review pooled 5 trials of Promensil (a red clover extract) and found no significant difference in hot flush frequency compared with placebo. The review's broader conclusion across all 43 phytoestrogen trials it examined was the same: no conclusive evidence of effectiveness."

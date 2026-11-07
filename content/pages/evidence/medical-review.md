@@ -27,7 +27,6 @@ cta_profile: site_none
 hub: /evidence/
 sources: []
 related: [/evidence/, /evidence/how-we-grade/, /evidence/editorial-policy/]
-affiliate_disclosure: false
 ---
 
 **No doctor has checked the pages on this site yet.** This page explains how we check our sources today, and what will change on a page if a clinician checks it.
@@ -54,4 +53,4 @@ We'd like a Menopause Society Certified Practitioner to check our pages, startin
 
 ## How the tools are checked
 
-Each of our [free tools](/tools/) follows a written description of what it asks, what it calculates, what it shows and which answers should send you to urgent care. The tools record and organize what you tell them; they never diagnose you or recommend a treatment. Our [editorial policy](/evidence/editorial-policy/) and [affiliate disclosure](/about/how-we-make-money/) explain how commercial links are kept apart from evidence and from tool results.
+Each of our [free tools](/tools/) follows a written description of what it asks, what it calculates, what it shows and which answers should send you to urgent care. The tools record and organize what you tell them; they never diagnose you or recommend a treatment. Our [editorial policy](/evidence/editorial-policy/) explains how, and the site carries no ads or sponsors (see [how MenoVerdict is funded](/about/how-we-make-money/)).

@@ -33,7 +33,6 @@ cta_profile: hrt_evaluating
 hub: /treatments/hormone-therapy/
 sources: [acog-compounded-bioidentical-2023, nice-ng23-recommendations]
 related: [/treatments/hormone-therapy/, /treatments/hormone-therapy/bioidentical-vs-compounded/, /treatments/hormone-therapy/testosterone/, /evidence/products-we-wont-recommend/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Are hormone pellets safe?
     a: "Hormone pellets are typically compounded products, meaning they aren't FDA-approved and don't go through the same standardized testing for dosing accuracy as approved HRT formulations. ACOG recommends against routinely prescribing compounded hormone products when FDA-approved alternatives exist, specifically because of this gap."
@@ -55,7 +54,7 @@ Beyond the compounding issue, pellets have a practical drawback that patches, ge
 
 ## What to ask about instead
 
-[FDA-approved patches, gels, and pills](/treatments/hormone-therapy/types/) offer the same hormones with standardized testing and the ability to adjust or stop quickly if needed. If low libido is specifically what you're hoping a testosterone pellet would address, see our dedicated [testosterone](/treatments/hormone-therapy/testosterone/) page for the FDA-unapproved-but-monitored alternative your clinician can offer instead. See also our policy page on [products we won't recommend](/evidence/products-we-wont-recommend/) for the broader category this falls into, and our [Does It Work? evidence directory](/does-it-work/) for graded non-hormonal alternatives.
+[FDA-approved patches, gels, and pills](/treatments/hormone-therapy/types/) offer the same hormones with standardized testing and the ability to adjust or stop quickly if needed. If low libido is specifically what you're hoping a testosterone pellet would address, see our dedicated [testosterone](/treatments/hormone-therapy/testosterone/) page for the FDA-unapproved-but-monitored alternative your clinician can offer instead. See also our page on [products the evidence doesn't support](/evidence/products-we-wont-recommend/) for the broader category this falls into, and our [Does It Work? evidence directory](/does-it-work/) for graded non-hormonal alternatives.
 
 Use our [treatment conversation builder](/tools/treatment-questions/) to raise this directly with your clinician:
 

@@ -30,7 +30,6 @@ cta_profile: care_comparison
 hub: /compare/
 sources: [midi-health-own-site-2026, evernow-own-site-2026]
 related: [/compare/, /compare/midi-review/, /compare/evernow-review/, /treatments/hormone-therapy/, /tools/treatment-questions/]
-affiliate_disclosure: true
 faq:
   - q: Does Midi or Evernow work better with insurance?
     a: "Both state they work with insurance, but the model differs. Midi bills insurance for a live video visit directly, in-network with most major PPO plans. Evernow offers an insurance-eligible one-time visit or an insurance-eligible video visit within its membership — in both cases, confirm your specific plan's coverage directly with each company before booking."

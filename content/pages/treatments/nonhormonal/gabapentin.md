@@ -30,7 +30,6 @@ cta_profile: nonhormonal_evaluating
 hub: /treatments/nonhormonal/
 sources: [nams-2023-nonhormone-therapy]
 related: [/treatments/nonhormonal/, /treatments/nonhormonal/ssris-snris/, /symptoms/night-sweats/, /symptoms/insomnia/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Is gabapentin a hormone?
     a: "No. Gabapentin is an anti-seizure and nerve-pain medication that has a separate, well-studied effect on reducing hot flashes and night sweats. The Menopause Society rates it a Level I non-hormonal option for vasomotor symptoms."

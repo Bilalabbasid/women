@@ -30,7 +30,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [radzinsky-amberen-pooled-trials-2019]
 related: [/does-it-work/, /does-it-work/relizen/, /symptoms/hot-flashes/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: Does Amberen actually work for menopause symptoms?
     a: "There's real randomized, double-blind, placebo-controlled trial data here, which is more than most menopause supplements have. A pooled analysis of two identical 90-day trials (227 women total) found significant improvement in 16 of 21 menopausal symptoms, reduced anxiety, and reduced weight measurements compared with placebo. That's a genuinely stronger result than many competitors. The important caveat: of the study's four authors, one discloses being a paid consultant for Amberen's manufacturer, and the other three were investigators on the company-associated trials — so this isn't independent, third-party research."

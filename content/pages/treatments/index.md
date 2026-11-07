@@ -33,7 +33,6 @@ cta_profile: treatment_overview
 hub: null
 sources: [nams-2022-hormone-therapy, nams-2023-nonhormone-therapy]
 related: [/treatments/hormone-therapy/boxed-warning/, /care/menopause-books/, /does-it-work/, /tools/symptom-tracker/]
-affiliate_disclosure: false
 ---
 
 Treatments for perimenopause and menopause fall into three primary categories: hormonal therapies, non-hormonal prescription medications, and behavioral or lifestyle strategies [@nams-2022-hormone-therapy, @nams-2023-nonhormone-therapy]. 

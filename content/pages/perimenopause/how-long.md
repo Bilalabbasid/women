@@ -33,7 +33,6 @@ cta_profile: learn_stage
 hub: /perimenopause/
 sources: [straw-10-2012, swan-vms-duration-avis-2015]
 related: [/perimenopause/, /perimenopause/stages/, /perimenopause/vs-menopause/, /menopause/how-long-symptoms-last/, /tools/stage-guide/, /tools/12-month-counter/]
-affiliate_disclosure: false
 faq:
   - q: How long does perimenopause usually last?
     a: "It varies widely by individual, but the late stage of the transition (when periods are 60 or more days apart) lasts 1 to 3 years on average in the STRAW+10 framework, and perimenopause overall is confirmed to have ended 12 months after your final period. Many women experience several years of early-stage changes before that late stage even begins."

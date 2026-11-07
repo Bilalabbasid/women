@@ -28,7 +28,6 @@ cta_profile: site_none
 hub: null
 sources: []
 related: [/privacy/, /medical-disclaimer/]
-affiliate_disclosure: false
 ---
 
 > **Notice:** This is a working terms draft, subject to review by a qualified lawyer before it is treated as final.

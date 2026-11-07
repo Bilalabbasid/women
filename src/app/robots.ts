@@ -4,7 +4,7 @@ import { SITE, absoluteUrl, isIndexable } from '@/lib/site/config';
 export const dynamic = 'force-static';
 
 /**
- * Production: crawl content, keep out the private tracker, affiliate redirects,
+ * Production: crawl content, keep out the private tracker,
  * account routes, internal search and APIs. Every other environment: disallow everything.
  */
 export default function robots(): MetadataRoute.Robots {
@@ -15,7 +15,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/app/', '/account/', '/go/', '/search/', '/api/', '/search-index.json'],
+      disallow: ['/app/', '/account/', '/search/', '/api/', '/search-index.json'],
     },
     sitemap: absoluteUrl('/sitemap.xml'),
   };

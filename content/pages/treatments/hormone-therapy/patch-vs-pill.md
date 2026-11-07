@@ -36,7 +36,6 @@ cta_profile: hrt_evaluating
 hub: /treatments/hormone-therapy/
 sources: [nice-ng23-recommendations]
 related: [/treatments/hormone-therapy/, /treatments/hormone-therapy/blood-clot-risk/, /treatments/hormone-therapy/types/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Is a patch safer than a pill?
     a: "For blood clot and stroke risk specifically, NICE guidance indicates transdermal estrogen (patch or gel) is associated with lower risk than oral estrogen (pills). That doesn't automatically make a patch the right choice for everyone — your personal risk factors, preferences, and how well a given route controls your symptoms all matter too."

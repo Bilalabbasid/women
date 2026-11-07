@@ -38,7 +38,6 @@ cta_profile: specialist_group
 hub: null
 sources: [jmir-online-menopause-information-2025, nice-ng23, nams-2023-nonhormone-therapy]
 related: [/groups/premature-ovarian-insufficiency/, /groups/surgical-menopause/, /groups/breast-cancer-survivors/, /groups/early-menopause/, /groups/chemotherapy-induced-menopause/, /groups/hysterectomy-ovaries-retained/, /groups/endometriosis/, /groups/menopause-at-work/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Why do standard menopause rules not always apply to early, surgical, or medical menopause?
     a: Most general menopause advice assumes natural menopause around age 50. When menopause happens before 40 (POI), suddenly after ovary removal (surgical menopause), or during cancer treatment, hormone and non-hormonal decisions follow different specialist guidance.

@@ -33,7 +33,6 @@ cta_profile: diw_pending
 hub: /does-it-work/
 sources: [cohen-omega3-vms-rct-2014]
 related: [/does-it-work/, /symptoms/hot-flashes/, /symptoms/insomnia/, /tools/does-it-work-checker/]
-affiliate_disclosure: false
 faq:
   - q: Does fish oil (omega-3) help hot flashes?
     a: "According to a well-powered, double-blind randomized trial from the MsFLASH research network, no — 1.8g per day of omega-3 for 12 weeks did not significantly reduce hot flash frequency or bother compared with placebo."

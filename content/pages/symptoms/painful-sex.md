@@ -17,9 +17,10 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-07"
 change_log:
   - { date: "2026-11-06", summary: "Initial publication on dyspareunia, tissue changes, comfort steps, and clinical options", material: true }
+  - { date: "2026-11-07", summary: "Removed product recommendations; the guidance is unchanged", material: true }
 evidence_grade: per_option
 claims:
   - id: dyspareunia-estrogen-drop
@@ -33,7 +34,6 @@ cta_profile: genitourinary_vaginal
 hub: /symptoms/
 sources: [nams-2020-gsm, acog-clinical-consensus-gsm, cochrane-vaginal-moisturizers, nhs-postmenopausal-bleeding]
 related: [/symptoms/vaginal-dryness/, /care/moisturizers-and-lubricants/, /symptoms/, /tools/symptoms-checklist/]
-affiliate_disclosure: true
 ---
 
 As explored in our [menopause symptoms directory](/symptoms/), pain during intercourse (dyspareunia) is one of the most common and distressing symptoms of perimenopause and menopause, affecting up to 50% of women [@nams-2020-gsm]. Sex hurts primarily because declining estrogen causes the vaginal walls to thin, lose elasticity, and produce less natural lubrication [@acog-clinical-consensus-gsm]. While common, pain is not an inevitable reality you have to accept: dedicated lubricants, regular moisturisers, and prescription local therapies can make intimacy comfortable again [@nams-2020-gsm].
@@ -54,17 +54,13 @@ Clinical consensus guidelines recommend a stepwise approach to managing intercou
 
 ### Step 1: Use a high-glide personal lubricant
 
-Using a generous amount of dedicated lubricant is essential [@acog-clinical-consensus-gsm]. Thinning vaginal tissues absorb water-based fluids rapidly, which can cause them to become sticky midway through intercourse. High-grade silicone lubricants do not absorb into skin, providing lasting glide and reducing friction without irritation.
-
-<Product id="uberlube" />
+Using a generous amount of dedicated lubricant is essential [@acog-clinical-consensus-gsm]. Thinning vaginal tissues absorb water-based fluids rapidly, which can cause them to become sticky midway through intercourse. High-grade silicone lubricants do not absorb into skin, providing lasting glide and reducing friction without irritation. Choose one without fragrance or warming additives.
 
 ### Step 2: Restore day-to-day tissue hydration
 
 Lubricant helps during intercourse, but if your vaginal tissues are dry and tight day to day, friction easily causes micro-tears [@nams-2020-gsm]. Applying a polycarbophil-based vaginal moisturiser two to three times a week keeps mucosal tissues softer and more pliable between intimate moments.
 
-<Product id="replens-moisturiser" />
-
-For a full breakdown of how to coordinate these two products, see our comparison guide on [vaginal moisturisers vs lubricants](/care/moisturizers-and-lubricants/).
+For a full breakdown of how to use the two together, see our comparison guide on [vaginal moisturisers vs lubricants](/care/moisturizers-and-lubricants/).
 
 ### Step 3: Explore prescription medical options
 

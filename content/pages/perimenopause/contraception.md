@@ -33,7 +33,6 @@ cta_profile: learn_stage
 hub: /perimenopause/
 sources: [cagnacci-contraception-over-40-consensus-2025, nice-ng23-recommendations]
 related: [/perimenopause/, /perimenopause/pregnancy/, /perimenopause/irregular-periods/, /perimenopause/heavy-periods/, /tools/treatment-questions/]
-affiliate_disclosure: false
 faq:
   - q: Is hormonal birth control safe to use during perimenopause?
     a: "According to a 2025 multidisciplinary expert consensus, no method of hormonal contraception is automatically ruled out by age alone — but cardiovascular safety becomes the primary factor guiding the choice after 40. The consensus found progestogen-only methods are considered safe for cardiovascular risk, and that combined hormonal contraceptives using natural estrogens or lower-dose ethinylestradiol with non-androgenic progestins carry a more favorable cardiovascular profile than other combined options. This is a decision to make with a clinician who knows your personal risk factors (blood pressure, smoking, clotting history, migraines), not a blanket rule."

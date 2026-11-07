@@ -44,7 +44,7 @@ describe('content loader', () => {
   it('fails when a required field is missing', () => {
     const store = makeStore((root) => {
       const f = path.join(root, 'pages', 'symptoms', 'night-sweats.md');
-      fs.writeFileSync(f, fs.readFileSync(f, 'utf8').replace(/^audience_limits: \[\]\n/m, ''));
+      fs.writeFileSync(f, fs.readFileSync(f, 'utf8').replace(/^audience_limits: \[\]\r?\n/m, ''));
     });
     expect(store.errors.some((e) => /missing required frontmatter: audience_limits/.test(e.message))).toBe(true);
   });

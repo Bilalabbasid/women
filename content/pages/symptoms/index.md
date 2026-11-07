@@ -33,7 +33,6 @@ cta_profile: learn_stage
 hub: null
 sources: [nice-ng23-recommendations]
 related: [/symptoms/vaginal-dryness/, /symptoms/incontinence/, /care/menopause-books/, /tools/symptoms-checklist/]
-affiliate_disclosure: false
 ---
 
 Perimenopause symptoms arise from changing ovarian hormone output, but their timing and intensity differ for every woman [@nice-ng23-recommendations]. Hot flashes and night sweats are the most widely recognized, yet sleep disruption, cycle changes, joint aches, and mood shifts frequently emerge first.

@@ -1,0 +1,6 @@
+# Full-page "before" captures kept locally only (repo size). Committed: every first-screen
+# (_fold) shot at all widths/themes, plus full-page 375 px light. Dark full pages were
+# identical to light before the redesign (no dark mode existed).
+before/*_dark.jpg
+before/*_768_light.jpg
+before/*_1280_light.jpg

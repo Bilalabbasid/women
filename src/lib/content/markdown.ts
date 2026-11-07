@@ -243,6 +243,89 @@ function rehypeLinksAndCollect(opts: RenderOptions, result: Omit<RenderResult, '
   };
 }
 
+const isElement = (n: unknown, tag?: string): n is Element =>
+  !!n && (n as Element).type === 'element' && (!tag || (n as Element).tagName === tag);
+const isBlankText = (n: unknown) => (n as { type?: string }).type === 'text' && !((n as { value: string }).value ?? '').trim();
+const addClass = (el: Element, name: string) => {
+  const current = el.properties.className;
+  const list = Array.isArray(current) ? current.map(String) : current ? String(current).split(/\s+/) : [];
+  if (!list.includes(name)) list.push(name);
+  el.properties.className = list;
+};
+
+/** Placeholders the page splits the HTML at (splitContentIslands): a wrapper must never span one. */
+function containsIsland(nodes: HRoot['children']): boolean {
+  let found = false;
+  for (const n of nodes) {
+    if (!isElement(n)) continue;
+    visit(n, 'element', (el: Element) => {
+      const p = el.properties ?? {};
+      if (p.dataTool !== undefined || p['data-tool'] !== undefined || p.dataSourcesList !== undefined || p['data-sources-list'] !== undefined) found = true;
+    });
+  }
+  return found;
+}
+
+/**
+ * Structure for styling the article body (src/app/article.css), without changing any words:
+ *  - each H2 and what follows it, up to the next H2, is wrapped in <section class="prose-section">
+ *    (unless it holds a tool or the references placeholder);
+ *  - a bullet list whose every item starts with a bold label ("**Efficacy**: ...") gets
+ *    ul.kv-list / li.kv, and the colon after the label is dropped (the label is set apart instead);
+ *  - table body cells get data-label with their column heading, so tables can stack on phones.
+ */
+function rehypeArticleStructure() {
+  return () => (tree: HRoot) => {
+    visit(tree, 'element', (ul: Element) => {
+      if (ul.tagName !== 'ul') return;
+      const items = ul.children.filter((c): c is Element => isElement(c, 'li'));
+      if (items.length === 0) return;
+      const labelOf = (li: Element) => li.children.find((c) => !isBlankText(c));
+      if (!items.every((li) => isElement(labelOf(li), 'strong'))) return;
+      addClass(ul, 'kv-list');
+      for (const li of items) {
+        addClass(li, 'kv');
+        const at = li.children.indexOf(labelOf(li) as Element);
+        const next = li.children[at + 1] as { type?: string; value?: string } | undefined;
+        if (next?.type === 'text' && typeof next.value === 'string') next.value = next.value.replace(/^\s*:\s*/, ' ');
+      }
+    });
+
+    visit(tree, 'element', (table: Element) => {
+      if (table.tagName !== 'table') return;
+      const thead = table.children.find((c): c is Element => isElement(c, 'thead'));
+      const headRow = thead?.children.find((c): c is Element => isElement(c, 'tr'));
+      const labels = headRow ? headRow.children.filter((c): c is Element => isElement(c, 'th')).map((th) => hastToString(th).trim()) : [];
+      const tbody = table.children.find((c): c is Element => isElement(c, 'tbody'));
+      if (!tbody || labels.length === 0) return;
+      for (const tr of tbody.children) {
+        if (!isElement(tr, 'tr')) continue;
+        tr.children.filter((c): c is Element => isElement(c, 'td')).forEach((td, i) => {
+          if (labels[i]) td.properties.dataLabel = labels[i];
+        });
+      }
+    });
+
+    const out: HRoot['children'] = [];
+    let group: HRoot['children'] | null = null;
+    const flush = () => {
+      if (!group) return;
+      if (containsIsland(group)) out.push(...group);
+      else out.push({ type: 'element', tagName: 'section', properties: { className: ['prose-section'] }, children: group as Element['children'] });
+      group = null;
+    };
+    for (const node of tree.children) {
+      if (isElement(node, 'h2')) {
+        flush();
+        group = [node];
+      } else if (group) group.push(node);
+      else out.push(node);
+    }
+    flush();
+    tree.children = out;
+  };
+}
+
 /** hast may keep data attributes as `data-x` or camelCase `dataX`, depending on the source. */
 function isFlag(node: Element, name: 'urgent' | 'questions'): boolean {
   const props = node.properties ?? {};
@@ -280,6 +363,7 @@ export function renderMarkdown(markdown: string, opts: RenderOptions): RenderRes
     .use(remarkRehype)
     .use(rehypeSlug)
     .use(rehypeLinksAndCollect(opts, partial))
+    .use(rehypeArticleStructure())
     .use(rehypeStringify);
 
   // Tables scroll sideways inside a focusable region, so they stay usable by keyboard on phones.

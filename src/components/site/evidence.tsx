@@ -155,15 +155,26 @@ export function DraftBanner({ problems }: { problems: string[] }) {
   );
 }
 
-export function Toc({ headings }: { headings: Array<{ depth: 2 | 3; id: string; text: string }> }) {
+export function Toc({
+  headings,
+  compact = false,
+}: {
+  headings: Array<{ depth: 2 | 3; id: string; text: string }>;
+  /** Single column, for the sticky sidebar. */
+  compact?: boolean;
+}) {
   const h2s = headings.filter((h) => h.depth === 2 && h.id !== 'references');
   if (h2s.length < 3) return null;
+  const titleId = compact ? 'toc-title-side' : 'toc-title';
   return (
-    <nav aria-labelledby="toc-title" className="rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4 sm:p-5">
-      <p id="toc-title" className="font-serif text-lg font-semibold">
-        On this page
+    <nav
+      aria-labelledby={titleId}
+      className="rounded-2xl border border-[var(--color-rule)] bg-[var(--color-paper-raised)] p-4 shadow-xs sm:p-5"
+    >
+      <p id={titleId} className="font-serif text-lg font-semibold">
+        {compact ? 'Contents' : 'On this page'}
       </p>
-      <ol className="mt-2 grid gap-x-6 sm:grid-cols-2">
+      <ol className={`mt-2 grid gap-x-6 ${compact ? 'text-base' : 'sm:grid-cols-2'}`}>
         {h2s.map((h, i) => (
           <li key={h.id}>
             <a

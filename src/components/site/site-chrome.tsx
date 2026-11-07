@@ -12,7 +12,8 @@ export function JsonLd({ data }: { data: Record<string, unknown> | Array<Record<
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeLd(data) }} />;
 }
 
-export function BrandLogo({ size = 28 }: { size?: number }) {
+export function BrandLogo({ size = 28, tone = 'dark' }: { size?: number; tone?: 'dark' | 'light' }) {
+  const light = tone === 'light';
   return (
     <span className="inline-flex items-center gap-2.5">
       <svg
@@ -23,7 +24,7 @@ export function BrandLogo({ size = 28 }: { size?: number }) {
         aria-hidden="true"
         className="shrink-0"
       >
-        <rect width="64" height="64" rx="14" fill="#1F5A4C" />
+        <rect width="64" height="64" rx="14" fill={light ? '#2C7A66' : '#1F5A4C'} />
         <path
           d="M13 46V18H19.5L27.5 34.5L35.5 18H42V46H36.5V27.5L29.2 42.5H25.8L18.5 27.5V46H13Z"
           fill="#F7F6F2"
@@ -36,8 +37,8 @@ export function BrandLogo({ size = 28 }: { size?: number }) {
           strokeLinejoin="round"
         />
       </svg>
-      <span className="font-serif text-xl font-bold tracking-tight text-[var(--color-ink)]">
-        Meno<span className="text-[var(--color-accent)]">Verdict</span>
+      <span className={`font-serif text-xl font-bold tracking-tight ${light ? 'text-white' : 'text-[var(--color-ink)]'}`}>
+        Meno<span className={light ? 'text-[#9fd4c3]' : 'text-[var(--color-accent)]'}>Verdict</span>
       </span>
     </span>
   );
@@ -91,75 +92,107 @@ export function SiteHeader({ hubs }: { hubs: Array<{ href: string; label: string
   );
 }
 
-const REQUIRED_FOOTER_LINKS: Array<{ href: string; label: string }> = [
+const TRUST_LINKS: Array<{ href: string; label: string }> = [
   { href: '/about/', label: 'About' },
   { href: '/evidence/editorial-policy/', label: 'Editorial Policy' },
   { href: '/evidence/how-we-grade/', label: 'Evidence Grading Method' },
   { href: '/about/how-we-make-money/', label: 'Affiliate Disclosure' },
+  { href: '/evidence/updates/', label: 'Corrections' },
+];
+
+const LEGAL_LINKS: Array<{ href: string; label: string }> = [
   { href: '/medical-disclaimer/', label: 'Medical Disclaimer' },
   { href: '/privacy/', label: 'Privacy' },
   { href: '/cookies/', label: 'Cookies' },
   { href: '/terms/', label: 'Terms' },
-  { href: '/evidence/updates/', label: 'Corrections' },
   { href: '/contact/', label: 'Contact' },
 ];
 
-export function SiteFooter({ links }: { links?: Array<{ href: string; label: string }> }) {
-  const seen = new Set<string>(['/urgent-help/', ...REQUIRED_FOOTER_LINKS.map((l) => l.href)]);
+const footerLink =
+  'tap text-sm text-[#cfe2da] underline-offset-4 hover:text-white hover:underline focus-visible:outline-white';
+
+function FooterColumn({ title, links }: { title: string; links: Array<{ href: string; label: string }> }) {
+  if (links.length === 0) return null;
+  return (
+    <div>
+      <p className="font-serif text-base font-semibold text-white">{title}</p>
+      <ul className="mt-2">
+        {links.map((l) => (
+          <li key={l.href}>
+            <Link href={l.href} className={footerLink}>
+              {l.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export function SiteFooter({
+  links,
+  hubs = [],
+}: {
+  links?: Array<{ href: string; label: string }>;
+  hubs?: Array<{ href: string; label: string }>;
+}) {
+  const seen = new Set<string>(['/urgent-help/', ...TRUST_LINKS.map((l) => l.href), ...LEGAL_LINKS.map((l) => l.href)]);
   const extraLinks = (links ?? []).filter((l) => !seen.has(l.href));
+  const explore = [...hubs, { href: '/tools/', label: 'Tools' }, { href: '/search/', label: 'Search' }];
+  if (isToolLive('symptom-tracker')) explore.push({ href: APP_ROUTES.today, label: 'Your private tracker' });
 
   return (
-    <footer role="contentinfo" className="mt-16 border-t border-[var(--color-rule)] bg-[var(--color-paper-raised)]">
-      <div className="mx-auto max-w-6xl px-4 pt-10 pb-8">
-        {/* Standard Notice */}
-        <div className="mb-8 rounded-xl border border-[var(--color-rule)] bg-[var(--color-paper)] p-4 text-xs leading-relaxed text-[var(--color-ink-muted)]">
+    <footer role="contentinfo" className="relative mt-20 overflow-hidden bg-[#14382f] text-[#e4eeea]">
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        className="pointer-events-none absolute -left-32 -bottom-48 h-[30rem] w-[30rem] opacity-[0.07]"
+        viewBox="0 0 400 400"
+        fill="none"
+      >
+        {[70, 110, 150, 190].map((r) => (
+          <circle key={r} cx="200" cy="200" r={r} stroke="#fff" strokeWidth="1.5" />
+        ))}
+      </svg>
+
+      <div className="relative mx-auto max-w-6xl px-4 pt-14 pb-8">
+        <div className="grid gap-10 lg:grid-cols-[1.3fr_2fr]">
+          <div className="space-y-4">
+            <Link href="/" className="tap no-underline focus-visible:outline-white">
+              <BrandLogo size={34} tone="light" />
+            </Link>
+            <p className="font-serif text-xl font-medium text-white">{SITE.tagline}</p>
+            <p className="max-w-sm text-sm leading-relaxed text-[#cfe2da]">
+              Independent, evidence-graded information on perimenopause and menopause. Every claim graded, every
+              source linked, every commission disclosed.
+            </p>
+            <Link
+              href="/urgent-help/"
+              className="tap gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-[var(--color-urgent)] no-underline shadow-sm hover:bg-[var(--color-urgent-soft)] focus-visible:outline-white"
+            >
+              <span aria-hidden="true" className="h-2 w-2 rounded-full bg-[var(--color-urgent)]" />
+              Crisis and Urgent Help
+            </Link>
+          </div>
+
+          <nav aria-label="Footer" className="grid gap-8 sm:grid-cols-3">
+            <FooterColumn title="Explore" links={explore} />
+            <FooterColumn title="Trust & method" links={[...TRUST_LINKS, ...extraLinks]} />
+            <FooterColumn title="Legal & contact" links={LEGAL_LINKS} />
+          </nav>
+        </div>
+
+        {/* Standard notice */}
+        <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm leading-relaxed text-[#cfe2da]">
           <p>{STANDARD_NOTICE}</p>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2">
-          <div className="space-y-3">
-            <Link href="/" className="tap no-underline">
-              <BrandLogo size={28} />
-            </Link>
-            <p className="font-serif text-base font-medium text-[var(--color-ink)]">{SITE.tagline}</p>
-            <p className="text-sm text-[var(--color-ink-muted)]">
-              Independent, evidence-graded information on perimenopause and menopause. Fast, crawlable, and reader-first.
-            </p>
-            <p className="text-xs text-[var(--color-ink-muted)]">
-              As an Amazon Associate we earn from qualifying purchases.
-            </p>
-            {SITE.legalEntity && <p className="text-xs text-[var(--color-ink-muted)]">Operated by {SITE.legalEntity}.</p>}
-          </div>
-          <nav aria-label="Footer">
-            <ul className="grid grid-cols-1 gap-y-1 sm:grid-cols-2 sm:gap-x-6">
-              <li className="sm:col-span-2">
-                <Link href="/urgent-help/" className="tap font-semibold text-[var(--color-urgent)] underline">
-                  Crisis and Urgent Help
-                </Link>
-              </li>
-              {REQUIRED_FOOTER_LINKS.map((l) => (
-                <li key={l.href}>
-                  <Link href={l.href} className="tap text-sm underline">
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-              {extraLinks.map((l) => (
-                <li key={l.href}>
-                  <Link href={l.href} className="tap text-sm underline">
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-              {isToolLive('symptom-tracker') && (
-                <li className="sm:col-span-2">
-                  <Link href={APP_ROUTES.today} className="tap text-sm underline">
-                    Your private symptom tracker
-                  </Link>
-                </li>
-              )}
-            </ul>
-          </nav>
+        <div className="mt-8 flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-[#a9c7bc] sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            © {new Date().getFullYear()} {SITE.name}
+            {SITE.legalEntity ? ` · Operated by ${SITE.legalEntity}` : ''}
+          </p>
+          <p>As an Amazon Associate we earn from qualifying purchases.</p>
         </div>
       </div>
     </footer>

@@ -22,7 +22,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       <main id="main" className="mx-auto w-full max-w-6xl px-4 py-8">
         {children}
       </main>
-      <SiteFooter links={footerLinks} />
+      <SiteFooter links={footerLinks} hubs={navHubs()} />
       <CookieBanner />
     </>
   );

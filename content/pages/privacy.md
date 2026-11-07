@@ -1,7 +1,7 @@
 ---
-title: "Privacy notice and health data retention policy"
-seo_title: Privacy policy and health data retention notice
-meta_description: "Our privacy commitments: on-device health data by default, UK GDPR special-category consent, and strict data retention schedules."
+title: "Privacy policy: your health data stays on your device"
+seo_title: "Privacy policy: data stays on your device"
+meta_description: "How MenoVerdict handles your information: tracker entries stay in your browser, there are no accounts or health-data servers, and no tracking."
 cluster: site
 primary_keyword: privacy policy
 slug: privacy

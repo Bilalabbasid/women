@@ -12,6 +12,7 @@ import {
   CLUSTER_LABELS,
 } from '@/lib/content/site-data';
 import { HubHero, HubDirectory } from '@/components/site/hub-hero';
+import { ArticleHero } from '@/components/site/article-hero';
 import { isPublishable, isMedicallyReviewed, indexablePages } from '@/lib/content/gate';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { contentPageLd, breadcrumbLd, faqLd, webApplicationLd } from '@/lib/seo/jsonld';
@@ -79,6 +80,11 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
   const firstToolIndex = parts.findIndex((p) => p.type === 'tool' && isToolLive(p.tool));
   const hasTool = firstToolIndex >= 0;
   const toolHero = fm.page_type === 'tool' ? TOOL_HEROES[page.url] : undefined;
+  const isArticle = !toolHero && !isNavHub;
+  const sectionHeadings = rendered.headings.filter((h) => h.depth === 2 && h.id !== 'references');
+  // The contents list moves to a sticky sidebar on wide screens, when there's enough to list.
+  const showSidebar = isArticle && sectionHeadings.length >= 3;
+  const readMinutes = Math.max(1, Math.ceil(rendered.text.split(/\s+/).length / 220));
   const toolHeroHref = toolHero?.appHref
     ? isToolLive('symptom-tracker') ? toolHero.appHref : null
     : hasTool ? '#tool' : null;
@@ -93,38 +99,9 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
       : []),
   ];
 
-  return (
+  const body = (
     <>
-      {!approved && <DraftBanner problems={problems} />}
-      <JsonLd data={ld} />
-      <article className="space-y-6">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <Breadcrumbs crumbs={crumbs} />
-          <BookmarkButton url={page.url} title={fm.title} />
-        </div>
-        {toolHero && (
-          <ToolHero
-            config={toolHero}
-            title={fm.title}
-            description={fm.meta_description}
-            primaryHref={toolHeroHref}
-            guideHref={(() => {
-              const h = rendered.headings.find((x) => x.depth === 2);
-              return h ? `#${h.id}` : undefined;
-            })()}
-          />
-        )}
-        {isNavHub && (
-          <HubHero
-            eyebrow={`${CLUSTER_LABELS[fm.cluster] ?? fm.cluster} · Evidence-graded guides`}
-            title={fm.title}
-            description={fm.meta_description}
-            guideCount={children.length}
-            sections={rendered.headings.filter((h) => h.depth === 2 && h.id !== 'references')}
-          />
-        )}
         <header className="space-y-3">
-          {!toolHero && !isNavHub && <h1 className="text-3xl sm:text-4xl">{fm.title}</h1>}
           {hasTool && !toolHero && (
             <p className="no-print">
               <a href="#tool" className="tap font-semibold text-[var(--color-link)] underline">
@@ -134,7 +111,7 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
           )}
           <ReviewLine page={page} author={author} reviewer={reviewer} reviewed={reviewed} />
           {page.isMedical && <StandardNotice />}
-          {fm.evidence_grade && (
+          {fm.evidence_grade && !isArticle && (
             <p className="flex flex-wrap items-center gap-2">
               <span className="text-[var(--color-ink-muted)]">Evidence:</span>
               <GradeBadge grade={fm.evidence_grade} methodHref={methodHref} />
@@ -154,7 +131,11 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
 
         <SavedCopyNotice reviewedAt={approved ? fm.reviewed_at : null} isMedical={page.isMedical} />
         {/* On tool pages the table of contents moves below the tool, so the tool itself is reached first. */}
-        {!hasTool && !isNavHub && <Toc headings={rendered.headings} />}
+        {!hasTool && !isNavHub && (
+          <div className={showSidebar ? 'lg:hidden' : undefined}>
+            <Toc headings={rendered.headings} />
+          </div>
+        )}
         {isNavHub && children.length > 0 && <HubDirectory pages={children} heading="Guides in this section" />}
 
         {/* Out of the header so it isn't the very first thing under the H1, but still ahead of every
@@ -185,7 +166,7 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
           // Give it a distinct card so it reads as the answer at a glance,
           // without changing or duplicating any wording.
           const isLead = i === 0;
-          const prose = toolHero || isNavHub ? 'prose steps' : 'prose';
+          const prose = 'prose steps';
           return (
             <div
               key={`html-${i}`}
@@ -264,6 +245,63 @@ export default async function ContentPageRoute({ params }: { params: Promise<{ s
 
         <References ids={citationIds} sources={store.sources} />
         <ChangeLog entries={fm.change_log} />
+    </>
+  );
+
+  return (
+    <>
+      {!approved && <DraftBanner problems={problems} />}
+      <JsonLd data={ld} />
+      <article className="space-y-6">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <Breadcrumbs crumbs={crumbs} />
+          <BookmarkButton url={page.url} title={fm.title} />
+        </div>
+        {toolHero && (
+          <ToolHero
+            config={toolHero}
+            title={fm.title}
+            description={fm.meta_description}
+            primaryHref={toolHeroHref}
+            guideHref={(() => {
+              const h = rendered.headings.find((x) => x.depth === 2);
+              return h ? `#${h.id}` : undefined;
+            })()}
+          />
+        )}
+        {isNavHub && (
+          <HubHero
+            eyebrow={`${CLUSTER_LABELS[fm.cluster] ?? fm.cluster} · Evidence-graded guides`}
+            title={fm.title}
+            description={fm.meta_description}
+            guideCount={children.length}
+            sections={sectionHeadings}
+          />
+        )}
+        {isArticle && (
+          <ArticleHero
+            section={CLUSTER_LABELS[fm.cluster] ?? fm.cluster}
+            pageType={fm.page_type}
+            title={fm.title}
+            description={fm.meta_description}
+            grade={fm.evidence_grade ?? null}
+            methodHref={methodHref}
+            sourceCount={citationIds.length}
+            readMinutes={readMinutes}
+          />
+        )}
+        {showSidebar ? (
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_17rem]">
+            <div className="min-w-0 space-y-6">{body}</div>
+            <aside className="no-print hidden lg:block">
+              <div className="sticky top-6">
+                <Toc headings={rendered.headings} compact />
+              </div>
+            </aside>
+          </div>
+        ) : (
+          body
+        )}
       </article>
     </>
   );

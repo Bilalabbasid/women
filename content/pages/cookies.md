@@ -1,7 +1,7 @@
 ---
 title: "Cookie policy"
 seo_title: Cookie policy and local storage disclosure
-meta_description: "How we use essential cookies and browser storage. No invasive cross-site tracking, third-party advertising cookies, or health profiling."
+meta_description: "We set no cookies and run no tracking. Here is what the site stores in your own browser, why, and how to clear it."
 cluster: site
 primary_keyword: cookie policy
 slug: cookies

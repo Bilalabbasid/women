@@ -61,7 +61,7 @@ export default function NotFound() {
           </li>
         </ul>
       </main>
-      <SiteFooter links={[]} />
+      <SiteFooter links={[]} hubs={hubs} />
     </>
   );
 }

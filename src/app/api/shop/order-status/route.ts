@@ -42,3 +42,4 @@ export async function GET(req: Request) {
     { headers: { 'X-Robots-Tag': 'noindex, nofollow' } }
   );
 }
+

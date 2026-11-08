@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo/metadata';
 export const metadata: Metadata = buildMetadata({
   title: 'Refund Policy for Digital Products',
   description:
-    '14-day full refund policy for the MenoVerdict Symptom Journal & Doctor Visit Toolkit digital workbook.',
+    'Refund and replacement policy for the MenoVerdict Symptom Journal & Doctor Visit Toolkit digital workbook.',
   path: '/refund-policy/',
 });
 
@@ -40,44 +40,40 @@ export default function RefundPolicyPage() {
       </header>
 
       <div className="p-6 rounded-2xl bg-[var(--paper-raised)] border border-[var(--rule)] space-y-4">
-        <h2 className="text-xl font-serif font-bold text-[var(--ink)]">Our 14-Day Guarantee</h2>
+        <h2 className="text-xl font-serif font-bold text-[var(--ink)]">Digital Products Policy</h2>
         <p className="text-base text-[var(--ink)] leading-relaxed">
-          If the file doesn&apos;t download or open, or you&apos;re unhappy with it, email us within 14 days for a full refund.
+          Due to the immediate electronic delivery and downloadable nature of digital goods, all sales of the MenoVerdict Symptom Journal &amp; Doctor Visit Toolkit are final and non-refundable once the file has been purchased and delivered.
         </p>
       </div>
 
       <div className="prose space-y-6 text-[var(--ink)]">
         <section className="space-y-3">
-          <h2 className="text-xl font-serif font-bold text-[var(--ink)]">How to request a refund</h2>
+          <h2 className="text-xl font-serif font-bold text-[var(--ink)]">Replacement and technical support</h2>
           <p className="text-sm text-[var(--ink-muted)] leading-relaxed">
-            To request a refund, simply send an email to <a href="mailto:orders@menoverdict.com" className="underline font-medium text-[var(--ink)]">orders@menoverdict.com</a> (or use our <Link href="/about/" className="underline font-medium text-[var(--ink)]">contact form</Link>) within 14 days of your purchase date.
-          </p>
-          <p className="text-sm text-[var(--ink-muted)] leading-relaxed">
-            Please include:
+            While all digital sales are final, we stand behind the quality and usability of our workbook. If you encounter any technical issues with your purchase, we will make sure you receive a fully working file:
           </p>
           <ul className="list-disc pl-5 text-sm text-[var(--ink-muted)] space-y-1">
-            <li>The email address you used at checkout.</li>
-            <li>Your order reference number (optional, but helps us locate your purchase faster).</li>
+            <li>If your download link expires or is lost, you can generate a fresh link anytime using our <Link href="/shop/resend/" className="underline font-medium text-[var(--ink)]">link recovery page</Link>.</li>
+            <li>If the file is damaged, fails to download, or will not open on your device, contact us at <a href="mailto:orders@menoverdict.com" className="underline font-medium text-[var(--ink)]">orders@menoverdict.com</a> and we will immediately provide a direct replacement.</li>
+            <li>If you need assistance using the PDF with tablet apps (e.g., GoodNotes, Notability) or printing at home, our support team will help guide you through the setup.</li>
           </ul>
         </section>
 
         <section className="space-y-3">
-          <h2 className="text-xl font-serif font-bold text-[var(--ink)]">Processing your refund</h2>
+          <h2 className="text-xl font-serif font-bold text-[var(--ink)]">Duplicate or accidental charges</h2>
           <p className="text-sm text-[var(--ink-muted)] leading-relaxed">
-            Once requested, we process your refund within 1 to 2 business days. The refund will be credited back to your original payment method via our payment provider (Whop). Depending on your bank or card issuer, funds typically appear on your statement in 3 to 7 business days.
-          </p>
-          <p className="text-sm text-[var(--ink-muted)] leading-relaxed">
-            Upon refund confirmation, any active download links associated with the order will be permanently disabled.
+            If you were accidentally billed more than once for the same order due to a technical glitch or network interruption during checkout, contact <a href="mailto:orders@menoverdict.com" className="underline font-medium text-[var(--ink)]">orders@menoverdict.com</a> with your transaction details. Any duplicate charge will be promptly reversed.
           </p>
         </section>
 
         <section className="space-y-3">
-          <h2 className="text-xl font-serif font-bold text-[var(--ink)]">Need help opening your PDF?</h2>
+          <h2 className="text-xl font-serif font-bold text-[var(--ink)]">Contact us</h2>
           <p className="text-sm text-[var(--ink-muted)] leading-relaxed">
-            If you are having trouble opening, downloading, or printing the PDF on your tablet, phone, or computer, we are glad to help troubleshoot. You can also generate a fresh download link at any time on our <Link href="/shop/resend/" className="underline font-medium text-[var(--ink)]">link recovery page</Link>.
+            For any order questions, receipt requests, or technical assistance, email <a href="mailto:orders@menoverdict.com" className="underline font-medium text-[var(--ink)]">orders@menoverdict.com</a> or use our <Link href="/about/" className="underline font-medium text-[var(--ink)]">contact page</Link>. We respond to order queries within 24 hours.
           </p>
         </section>
       </div>
     </article>
   );
 }
+

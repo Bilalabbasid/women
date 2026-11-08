@@ -1,6 +1,6 @@
 # Link suggestions
 
-Generated 2026-11-07 by scripts/link-audit.ts. Suggestions only: a person decides whether a link helps the reader.
+Generated 2026-11-08 by scripts/link-audit.ts. Suggestions only: a person decides whether a link helps the reader.
 
 ## Does Amberen work for menopause symptoms? (/does-it-work/amberen/)
 

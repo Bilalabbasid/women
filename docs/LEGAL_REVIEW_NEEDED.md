@@ -28,3 +28,4 @@ The following legal and commercial terms were added in November 2026 for the sal
 
 ### 4. Sales Tax & Digital VAT
 - **Action for Site Owner:** Confirm whether automatic tax collection is enabled in the Whop dashboard (Whop as Merchant of Record vs. platform provider) for US sales tax, UK VAT, and EU digital services VAT.
+

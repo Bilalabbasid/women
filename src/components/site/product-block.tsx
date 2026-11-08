@@ -33,3 +33,4 @@ export function SymptomJournalCallout({ className = '' }: { className?: string }
     </aside>
   );
 }
+

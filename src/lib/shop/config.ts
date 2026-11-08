@@ -21,12 +21,13 @@ export const SHOP_CONFIG = {
   
   // Whop credentials & endpoints
   whop: {
-    apiKey: process.env.WHOP_API_KEY || 'apik_dCXPEJDO0XUPy_C8029953_C_425b5ffed231c14d02d9c8861d97802063c737eb92e4fb64c49cd551cae9d4',
+    apiKey: process.env.WHOP_API_KEY || '',
     webhookSecret: process.env.WHOP_WEBHOOK_SECRET || '',
     checkoutUrl: process.env.WHOP_CHECKOUT_URL || '',
     apiBase: process.env.WHOP_API_BASE || 'https://api.whop.com',
   },
   
   // Secret used to sign HMAC tokens for tamper-proof download validation
-  shopSecret: process.env.SHOP_SECRET_KEY || 'menoverdict_secure_shop_secret_2026_key_38472948',
+  shopSecret: process.env.SHOP_SECRET_KEY || 'menoverdict_hmac_shop_secret_key_default',
 };
+

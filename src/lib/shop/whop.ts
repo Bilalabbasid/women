@@ -20,8 +20,9 @@ export async function createWhopCheckout(params: CreateCheckoutParams): Promise<
   const redirectUrl = `${params.origin}/shop/thank-you?session_id=${sessionId}`;
 
   // If a direct Whop checkout link is set in environment (e.g. created from Whop dashboard)
-  if (SHOP_CONFIG.whop.checkoutUrl) {
-    const url = new URL(SHOP_CONFIG.whop.checkoutUrl);
+  const checkoutBase = SHOP_CONFIG.whop.checkoutUrl || process.env.WHOP_CHECKOUT_URL || '';
+  if (checkoutBase) {
+    const url = new URL(checkoutBase);
     if (params.email) url.searchParams.set('email', params.email);
     url.searchParams.set('redirect_url', redirectUrl);
     url.searchParams.set('metadata[session_id]', sessionId);
@@ -65,9 +66,10 @@ export async function createWhopCheckout(params: CreateCheckoutParams): Promise<
     }
   }
 
-  // Fallback: Hosted Whop checkout or simulated sandbox flow for test verification
-  const fallbackUrl = `https://whop.com/checkout/?price=${SHOP_CONFIG.productPriceCents}&currency=${SHOP_CONFIG.currency}&redirect_url=${encodeURIComponent(redirectUrl)}`;
-  return { checkoutUrl: fallbackUrl, sessionId };
+  // Fallback: Hosted Whop checkout
+  const fallbackUrl = new URL(checkoutBase || 'https://whop.com');
+  fallbackUrl.searchParams.set('redirect_url', redirectUrl);
+  return { checkoutUrl: fallbackUrl.toString(), sessionId };
 }
 
 /**
@@ -116,3 +118,4 @@ export function verifyWhopWebhookSignature(
     return false;
   }
 }
+

@@ -52,7 +52,7 @@ When you purchase the MenoVerdict Symptom Journal & Doctor Visit Toolkit or any 
 - **Personal-use licence:** You receive a non-exclusive, non-transferable licence for your own personal, individual use. You may print copies for yourself and use them on your personal devices.
 - **No resale or sharing:** You may not resell, redistribute, publicly post, upload to file-sharing networks, or share the digital file with others.
 - **Delivery by download:** Products are delivered immediately by electronic download links. Links remain active for 7 days and allow up to 10 downloads. You may request a replacement link anytime via our [download link recovery page](/shop/resend/).
-- **Refund policy:** All purchases are eligible for our 14-day refund policy as described in our [refund policy](/refund-policy/). If the file fails to open, or if you are not satisfied, email orders@menoverdict.com within 14 days of purchase for a full refund.
+- **Digital sales final:** Because digital products are delivered electronically and available immediately upon payment, all sales are final and non-refundable once delivered, as described in our [refund policy](/refund-policy/). If the file fails to open, or if you experience any technical difficulties, email orders@menoverdict.com and our team will promptly provide a replacement link or assist you.
 
 ## 5. Disclaimers and limitation of liability
 

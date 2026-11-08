@@ -125,10 +125,10 @@ export default function SymptomJournalShopPage() {
             </form>
 
             <p className="text-xs text-[var(--ink-muted)] leading-normal pt-1">
-              Instant PDF download. 38 pages, US Letter. General information only, not medical advice. We aren&apos;t doctors.
+              Instant PDF download. 38 pages, US Letter. General information only, not medical advice.
             </p>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-[var(--ink-muted)] border-t border-[var(--rule)] pt-3">
-              <span>✓ 14-day full refund guarantee</span>
+              <span>✓ Instant download · All sales final</span>
               <Link href="/refund-policy/" className="underline hover:text-[var(--ink)]">Refund policy</Link>
               <Link href="/medical-disclaimer/" className="underline hover:text-[var(--ink)]">Medical disclaimer</Link>
             </div>
@@ -351,11 +351,21 @@ export default function SymptomJournalShopPage() {
 
           <details className="p-5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)] group">
             <summary className="font-serif font-semibold text-lg text-[var(--ink)] cursor-pointer list-none flex justify-between items-center">
-              <span>What if I&apos;m outside the US?</span>
+              <span>What if I'm outside the US?</span>
               <span className="text-[var(--accent)] transition-transform group-open:rotate-180">▾</span>
             </summary>
             <p className="mt-3 text-sm text-[var(--ink-muted)] leading-relaxed">
               It works anywhere. The emergency page lists US numbers (911 and 988), so use your local emergency and crisis numbers instead.
+            </p>
+          </details>
+
+          <details className="p-5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)] group">
+            <summary className="font-serif font-semibold text-lg text-[var(--ink)] cursor-pointer list-none flex justify-between items-center">
+              <span>Can I get a refund?</span>
+              <span className="text-[var(--accent)] transition-transform group-open:rotate-180">▾</span>
+            </summary>
+            <p className="mt-3 text-sm text-[var(--ink-muted)] leading-relaxed">
+              Because this is an instant digital download delivered immediately upon payment, all sales are final. If you have any trouble downloading, opening, or printing the file, contact us at <a href="mailto:orders@menoverdict.com" className="underline font-medium text-[var(--ink)]">orders@menoverdict.com</a> and we will promptly send a replacement link or assist you. See our <Link href="/refund-policy/" className="underline hover:text-[var(--ink)]">refund policy</Link>.
             </p>
           </details>
         </div>
@@ -389,7 +399,7 @@ export default function SymptomJournalShopPage() {
           General information only, not medical advice. We aren&apos;t doctors. Talk to your clinician before making any changes to your care.
         </p>
         <div className="flex justify-center items-center gap-4 text-xs text-[var(--ink-muted)] pt-2">
-          <Link href="/refund-policy/" className="underline hover:text-[var(--ink)]">14-Day Full Refund Policy</Link>
+          <Link href="/refund-policy/" className="underline hover:text-[var(--ink)]">Refund Policy</Link>
           <span>·</span>
           <Link href="/privacy/" className="underline hover:text-[var(--ink)]">Privacy Policy</Link>
           <span>·</span>

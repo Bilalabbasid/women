@@ -87,3 +87,4 @@ export function verifyDownloadToken(token: string): TokenVerificationResult {
     return { valid: false, error: 'corrupt' };
   }
 }
+

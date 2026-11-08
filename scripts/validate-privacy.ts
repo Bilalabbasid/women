@@ -37,6 +37,12 @@ const ALLOWED: Record<string, string> = {
     'POST /api/subscribe: the email address the visitor typed, the form type, the consent value, the contact message (contact form only), the empty honeypot field and the time since the form appeared; nothing else',
   'src/app/api/subscribe/route.ts':
     'POST to Resend: one notification email to the site owner with the submitted email, form type, consent, timestamp and contact message; the IP is only hashed in memory for the rate limit and never sent',
+  'src/app/(site)/shop/thank-you/page.tsx':
+    'GET /api/shop/order-status: same-origin polling for payment confirmation status; holds no health data',
+  'src/lib/shop/email.ts':
+    'POST to Resend: delivery of order receipt and download link to customer email; holds no health data',
+  'src/lib/shop/whop.ts':
+    'POST to Whop API: creation of secure checkout session for the $8.99 digital product; holds no health data',
 };
 const sourceFiles = walk(path.join(root, 'src'), /\.(tsx?|jsx?)$/);
 for (const f of sourceFiles) {

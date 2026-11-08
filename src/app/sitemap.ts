@@ -19,7 +19,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return { url: absoluteUrl(p.url), lastModified: material.at(-1) ?? p.fm.updated_at };
   });
   const latestContentDate = contentEntries.map((e) => e.lastModified).sort().at(-1) ?? '2026-11-06';
-  const staticEntries = ['/', '/tools/', '/urgent-help/'].map((path) => ({
+  const staticEntries = [
+    '/',
+    '/tools/',
+    '/urgent-help/',
+    '/shop/menopause-symptom-journal/',
+    '/refund-policy/',
+  ].map((path) => ({
     url: absoluteUrl(path),
     lastModified: latestContentDate,
   }));

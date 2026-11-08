@@ -105,6 +105,8 @@ Download it as a PDF or print it. The PDF is made on your device, and nothing is
 
 Why keep weeks of records? Hot flashes and night sweats often last for years: in a large US study, frequent symptoms lasted a median of 7.4 years in total [@swan-vms-duration-avis-2015]. A few weeks of notes makes it easier to see whether a treatment seems to be helping, or whether something new has started. Pair the report with a list from the [HRT and treatment question builder](/tools/treatment-questions/) so you cover both what's happening and what you want to ask.
 
+> **Sold by MenoVerdict.** Prefer paper? Our 38-page [Symptom Journal & Doctor Visit Toolkit](/shop/menopause-symptom-journal/) helps you track for eight weeks and walk into your appointment with a one-page summary. $8.99, instant download.
+
 ## Works offline once installed
 
 When you [install the tracker](/app/install/) from your browser, these work without a connection:

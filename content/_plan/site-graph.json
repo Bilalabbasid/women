@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T22:44:17.754Z",
+  "generated_at": "2026-11-07T23:55:50.581Z",
   "total_pages": 160,
   "nodes": {
     "/about/how-we-make-money/": {
@@ -191,6 +191,11 @@
         {
           "url": "/tools/treatment-questions/",
           "anchor": "treatment conversation builder",
+          "contextual": true
+        },
+        {
+          "url": "/shop/menopause-symptom-journal/",
+          "anchor": "Symptom Journal & Doctor Visit Toolkit",
           "contextual": true
         },
         {
@@ -986,6 +991,11 @@
         {
           "url": "/perimenopause/questions-for-your-doctor/",
           "anchor": "what to ask your doctor about perimenopause",
+          "contextual": true
+        },
+        {
+          "url": "/shop/menopause-symptom-journal/",
+          "anchor": "Symptom Journal & Doctor Visit Toolkit",
           "contextual": true
         },
         {
@@ -7881,6 +7891,11 @@
           "contextual": true
         },
         {
+          "url": "/shop/menopause-symptom-journal/",
+          "anchor": "Symptom Journal & Doctor Visit Toolkit",
+          "contextual": true
+        },
+        {
           "url": "/care/menopause-books/",
           "anchor": "The Menopause Manifesto by Dr Jen Gunter",
           "contextual": true
@@ -8424,6 +8439,11 @@
           "contextual": true
         },
         {
+          "url": "/shop/menopause-symptom-journal/",
+          "anchor": "Symptom Journal & Doctor Visit Toolkit",
+          "contextual": true
+        },
+        {
           "url": "/perimenopause/",
           "anchor": "breadcrumb",
           "contextual": true
@@ -8777,6 +8797,11 @@
         {
           "url": "/perimenopause/questions-for-your-doctor/",
           "anchor": "what to ask your doctor about perimenopause",
+          "contextual": true
+        },
+        {
+          "url": "/shop/menopause-symptom-journal/",
+          "anchor": "Symptom Journal & Doctor Visit Toolkit",
           "contextual": true
         },
         {
@@ -14265,6 +14290,16 @@
           "url": "/privacy/",
           "anchor": "privacy policy",
           "contextual": true
+        },
+        {
+          "url": "/shop/resend/",
+          "anchor": "download link recovery page",
+          "contextual": true
+        },
+        {
+          "url": "/refund-policy/",
+          "anchor": "refund policy",
+          "contextual": true
         }
       ],
       "incoming_links": [
@@ -14814,6 +14849,11 @@
         {
           "url": "/tools/treatment-questions/",
           "anchor": "HRT and treatment question builder",
+          "contextual": true
+        },
+        {
+          "url": "/shop/menopause-symptom-journal/",
+          "anchor": "Symptom Journal & Doctor Visit Toolkit",
           "contextual": true
         },
         {

@@ -72,3 +72,5 @@ Walking in with a clear, written pattern changes the conversation. Log your symp
 - Can we go through my specific symptoms and cycle changes against the criteria for perimenopause or menopause?
 - What specifically about my health history would make a treatment option unsuitable for me, and would a specialist referral be reasonable given that?
 :::
+
+> **Sold by MenoVerdict.** Prefer paper? Our 38-page [Symptom Journal & Doctor Visit Toolkit](/shop/menopause-symptom-journal/) helps you track for eight weeks and walk into your appointment with a one-page summary. $8.99, instant download.

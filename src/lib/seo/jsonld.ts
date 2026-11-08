@@ -152,7 +152,8 @@ export function webApplicationLd(opts: { name: string; path: string; description
   };
 }
 
-const BANNED_TYPES = new Set(['Review', 'AggregateRating', 'Rating', 'Product']);
+// Banned fake review/rating schema types to preserve honesty policy
+const BANNED_TYPES = new Set(['Review', 'AggregateRating', 'Rating']);
 
 /** Throws if any banned schema type appears anywhere in the graph. */
 export function assertNoRatings(value: unknown): void {

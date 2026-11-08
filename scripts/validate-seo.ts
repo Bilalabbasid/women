@@ -41,7 +41,7 @@ const attr = (html: string, re: RegExp) => {
 const seen = { title: new Map<string, string>(), desc: new Map<string, string>(), canon: new Map<string, string>() };
 // /dev/ holds internal reference pages (the design system), noindex on purpose.
 const isPrivate = (p: string) =>
-  p.startsWith('/app/') || p === '/app/' || p.startsWith('/dev/') || p === '/offline/' || p === '/search/';
+  p.startsWith('/app/') || p === '/app/' || p.startsWith('/dev/') || p === '/offline/' || p === '/search/' || p.startsWith('/shop/thank-you');
 
 for (const { path: p, html, file } of pages) {
   const robots = attr(html, /<meta name="robots" content="([^"]+)"/) ?? '';
@@ -50,7 +50,7 @@ for (const { path: p, html, file } of pages) {
   for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
     try {
       const json = JSON.stringify(JSON.parse(m[1]));
-      if (/"@type":"(Review|AggregateRating|Rating|Product)"|"aggregateRating"|"review"/.test(json)) {
+      if (/"@type":"(Review|AggregateRating|Rating)"|"aggregateRating"|"review"/.test(json)) {
         r.error(p, 'banned review/rating schema');
       }
     } catch {

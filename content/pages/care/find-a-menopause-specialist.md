@@ -75,3 +75,5 @@ Whether you see a generalist or a specialist, bring a clear list. Use our [treat
 - Given my health history, do I need someone with specific menopause expertise, or would my current doctor be well-equipped to help?
 - If I'm referred to a specialist, what should I bring to make that first appointment as useful as possible?
 :::
+
+> **Sold by MenoVerdict.** Prefer paper? Our 38-page [Symptom Journal & Doctor Visit Toolkit](/shop/menopause-symptom-journal/) helps you track for eight weeks and walk into your appointment with a one-page summary. $8.99, instant download.

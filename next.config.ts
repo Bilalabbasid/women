@@ -31,7 +31,7 @@ const csp = [
   "worker-src 'self'",
   "frame-ancestors 'none'",
   "base-uri 'self'",
-  "form-action 'self'",
+  "form-action 'self' https://whop.com https://*.whop.com",
   "object-src 'none'",
 ].join('; ');
 
@@ -48,6 +48,10 @@ const nextConfig: NextConfig = {
   // D-004: one canonical form, /path/ with a trailing slash. Next.js issues 308s.
   trailingSlash: true,
   poweredByHeader: false,
+
+  outputFileTracingIncludes: {
+    '/api/shop/download': ['./storage/products/**/*'],
+  },
 
   async redirects() {
     return [
@@ -81,6 +85,9 @@ const nextConfig: NextConfig = {
       // The private tracker is never indexed, even if linked.
       { source: '/app/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] },
       { source: '/search/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, follow' }] },
+      { source: '/shop/thank-you/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] },
+      { source: '/api/shop/download/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] },
+      { source: '/shop/resend/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, follow' }] },
       {
         source: '/sw.js',
         headers: [

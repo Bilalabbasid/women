@@ -70,3 +70,5 @@ If your provider dismisses your symptoms:
 - **Your printed symptom summary**: generated directly from our on-device tools without sending data over the internet.
 - **Your complete medication and supplement list**: including daily dosages of any over-the-counter products.
 - **Key dates**: the first day of your last three menstrual periods.
+
+> **Sold by MenoVerdict.** Prefer paper? Our 38-page [Symptom Journal & Doctor Visit Toolkit](/shop/menopause-symptom-journal/) helps you track for eight weeks and walk into your appointment with a one-page summary. $8.99, instant download.

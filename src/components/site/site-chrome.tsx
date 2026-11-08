@@ -140,6 +140,15 @@ export function SiteHeader(_props: { hubs: Array<{ href: string; label: string }
                 Tools
               </Link>
             </li>
+            <li>
+              <Link
+                href="/shop/menopause-symptom-journal/"
+                className="site-nav-link site-nav-journal ml-1.5 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wide border border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-[var(--on-accent)] transition-colors"
+              >
+                <span>Symptom Journal</span>
+                <span className="opacity-80">$8.99</span>
+              </Link>
+            </li>
           </ul>
         </nav>
 
@@ -196,6 +205,7 @@ const LEGAL_LINKS: Array<{ href: string; label: string }> = [
   { href: '/privacy/', label: 'Privacy' },
   { href: '/cookies/', label: 'Cookies' },
   { href: '/terms/', label: 'Terms' },
+  { href: '/refund-policy/', label: 'Refund Policy' },
   { href: '/contact/', label: 'Contact' },
 ];
 
@@ -226,7 +236,12 @@ export function SiteFooter({
 }) {
   const seen = new Set<string>(['/urgent-help/', ...TRUST_LINKS.map((l) => l.href), ...LEGAL_LINKS.map((l) => l.href)]);
   const extraLinks = (links ?? []).filter((l) => !seen.has(l.href));
-  const explore = [...hubs, { href: '/tools/', label: 'Tools' }, { href: '/search/', label: 'Search' }];
+  const explore = [
+    ...hubs,
+    { href: '/tools/', label: 'Tools' },
+    { href: '/shop/menopause-symptom-journal/', label: 'Symptom Journal (PDF)' },
+    { href: '/search/', label: 'Search' },
+  ];
   if (isToolLive('symptom-tracker')) {
     explore.push(
       { href: APP_ROUTES.today, label: 'Your private tracker' },

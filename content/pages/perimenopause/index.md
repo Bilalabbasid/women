@@ -76,6 +76,8 @@ When consulting your healthcare professional, bring concrete documentation rathe
 - Track two weeks of sleep, bleeding, and vasomotor episodes with the [daily and weekly symptom log](/tools/symptom-tracker/).
 - Check clinical trial evidence on popular supplements in [Does magnesium help menopause symptoms?](/does-it-work/magnesium/).
 
+> **Sold by MenoVerdict.** Prefer paper? Our 38-page [Symptom Journal & Doctor Visit Toolkit](/shop/menopause-symptom-journal/) helps you track for eight weeks and walk into your appointment with a one-page summary. $8.99, instant download.
+
 ## Further reading
 
 For an evidence-based, myth-busting breakdown of the biology, symptoms, and medical options of the menopause transition, read our review of [*The Menopause Manifesto* by Dr Jen Gunter](/care/menopause-books/).

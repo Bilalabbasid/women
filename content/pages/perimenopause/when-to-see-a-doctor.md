@@ -72,3 +72,5 @@ A focused appointment gets you further than a vague one. Before you go:
 - Which of my current symptoms are typical for perimenopause, and which deserve further investigation?
 - Based on my health history, am I a candidate for hormone therapy, or should we discuss non-hormonal options first?
 :::
+
+> **Sold by MenoVerdict.** Prefer paper? Our 38-page [Symptom Journal & Doctor Visit Toolkit](/shop/menopause-symptom-journal/) helps you track for eight weeks and walk into your appointment with a one-page summary. $8.99, instant download.

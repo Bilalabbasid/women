@@ -59,6 +59,15 @@ If you fill in one of our forms (for example, to hear about new tools, to join a
 - **What we use it for:** only what you asked for, such as telling you about a new tool. We don't send newsletters or sales sequences.
 - **Deleting it:** reply to any email from us, or write to `contact@menoverdict.com`, and we'll delete it.
 
+## Purchases: digital products in our shop
+
+When you purchase a digital product (such as the Symptom Journal & Doctor Visit Toolkit):
+- **What is collected:** your email address, purchase date, order reference number, product name, amount paid, and download counts.
+- **Why:** to fulfill your order, deliver your secure download link, send your email receipt, and verify refund requests.
+- **Payment processing:** payments are processed securely by our payment provider, Whop. We never see, receive, or store your credit card numbers, CVVs, or full billing addresses. Whop handles payment processing in compliance with PCI-DSS standards under its own privacy policy.
+- **How long order records are kept:** we retain basic order and transaction records for accounting, legal, and tax compliance purposes for up to 7 years.
+- **Requesting deletion:** you may request deletion of your order records by emailing `orders@menoverdict.com` or `contact@menoverdict.com`. Note that statutory tax retention obligations may require us to preserve financial transaction logs.
+
 ## We don't sell or share your personal information
 
 We don't sell or share personal information, as those terms are used in California's CCPA/CPRA, and we don't use it for targeted advertising. So there's nothing to opt out of. If your browser sends a Global Privacy Control signal, it's respected automatically, because we never sell or share in the first place. The site is built so that health information never leaves your device, with US state health-privacy laws such as Washington's My Health My Data Act in mind.

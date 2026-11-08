@@ -7,7 +7,17 @@ import type { Crumb } from '../seo/jsonld';
  * Public routes defined in code (not content). Content pages must not use
  * these URLs (validate:content checks for collisions).
  */
-export const STATIC_PUBLIC_PATHS = ['/', '/tools/', '/urgent-help/', '/search/', '/sources.json'] as const;
+export const STATIC_PUBLIC_PATHS = [
+  '/',
+  '/tools/',
+  '/urgent-help/',
+  '/search/',
+  '/sources.json',
+  '/shop/menopause-symptom-journal/',
+  '/shop/thank-you/',
+  '/shop/resend/',
+  '/refund-policy/',
+] as const;
 
 /** Link targets that are always valid from content: code routes and the private tracker. */
 export function isStaticTarget(path: string): boolean {

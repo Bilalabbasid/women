@@ -46,7 +46,15 @@ The symptom tracker, checklists, and related tools store what you enter only ins
 
 You may view, print, and download individual pages, checklists, and question guides for your own personal, non-commercial use, such as taking a summary to a clinical appointment. You may not republish, scrape, or systematically redistribute our content without prior written authorization.
 
-## 4. Disclaimers and limitation of liability
+## 4. Digital products and purchases
+
+When you purchase the MenoVerdict Symptom Journal & Doctor Visit Toolkit or any digital product on this site:
+- **Personal-use licence:** You receive a non-exclusive, non-transferable licence for your own personal, individual use. You may print copies for yourself and use them on your personal devices.
+- **No resale or sharing:** You may not resell, redistribute, publicly post, upload to file-sharing networks, or share the digital file with others.
+- **Delivery by download:** Products are delivered immediately by electronic download links. Links remain active for 7 days and allow up to 10 downloads. You may request a replacement link anytime via our [download link recovery page](/shop/resend/).
+- **Refund policy:** All purchases are eligible for our 14-day refund policy as described in our [refund policy](/refund-policy/). If the file fails to open, or if you are not satisfied, email orders@menoverdict.com within 14 days of purchase for a full refund.
+
+## 5. Disclaimers and limitation of liability
 
 While we strive to ensure that all information accurately reflects peer-reviewed clinical literature and official regulatory guidance, we make no warranties, express or implied, regarding completeness, reliability, or suitability for any particular purpose. To the maximum extent permitted by applicable law, we disclaim liability for any direct, indirect, incidental, or consequential damages arising from your use of this site.
 

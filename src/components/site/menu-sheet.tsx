@@ -79,6 +79,23 @@ export function MenuSheet({ groups, extra }: { groups: NavGroup[]; extra?: Array
         </>
       }
     >
+      <div className="mb-4">
+        <Link
+          href="/shop/menopause-symptom-journal/"
+          className="flex items-center justify-between p-3.5 rounded-xl border border-[var(--accent)] bg-[var(--paper-raised)] text-[var(--ink)] font-semibold text-sm hover:bg-[var(--accent-soft)] transition shadow-sm"
+        >
+          <div className="flex items-center gap-2.5">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="text-[var(--accent)]">
+              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z" />
+              <path d="M6 6h10M6 10h10" />
+            </svg>
+            <span>Symptom Journal (PDF)</span>
+          </div>
+          <span className="text-xs bg-[var(--accent)] text-[var(--on-accent)] px-2.5 py-0.5 rounded-full font-bold">
+            $8.99
+          </span>
+        </Link>
+      </div>
       <NavGroups groups={groups} extra={extra} />
       <ReadingControls />
       <UrgentLink />

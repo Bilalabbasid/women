@@ -110,7 +110,7 @@ export default function SymptomJournalShopPage() {
               <span className="text-sm text-[var(--ink-muted)] font-medium">USD · One-time purchase</span>
             </div>
 
-            <form action="/api/shop/checkout" method="POST">
+            <form action="/api/shop/checkout/" method="POST">
               <button
                 type="submit"
                 className="btn btn-primary w-full py-3.5 text-base font-semibold flex items-center justify-center gap-2 shadow-md hover:brightness-105 active:scale-[0.99] transition"
@@ -381,7 +381,7 @@ export default function SymptomJournalShopPage() {
         </p>
         <div className="text-3xl font-serif font-bold text-[var(--ink)]">$8.99 <span className="text-sm font-sans font-normal text-[var(--ink-muted)]">USD</span></div>
 
-        <form action="/api/shop/checkout" method="POST" className="max-w-md mx-auto">
+        <form action="/api/shop/checkout/" method="POST" className="max-w-md mx-auto">
           <button
             type="submit"
             className="btn btn-primary w-full py-3.5 text-base font-semibold flex items-center justify-center gap-2 shadow-md hover:brightness-105 active:scale-[0.99] transition"

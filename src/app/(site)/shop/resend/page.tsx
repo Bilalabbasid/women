@@ -43,7 +43,7 @@ export default async function ResendPage(props: {
           </div>
         )}
 
-        <form action="/api/shop/resend" method="POST" className="space-y-4">
+        <form action="/api/shop/resend/" method="POST" className="space-y-4">
           <div>
             <label htmlFor="email" className="block text-sm font-semibold text-[var(--ink)] mb-1.5">
               Email address used at checkout

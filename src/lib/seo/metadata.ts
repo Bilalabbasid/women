@@ -15,6 +15,8 @@ export interface PageMetaInput {
   pinImagePath?: string;
 }
 
+export const MAX_TITLE_LENGTH = 60;
+
 /**
  * One builder for every public page: unique title and description, absolute
  * canonical, Open Graph and Twitter tags. Non-production builds are always
@@ -23,9 +25,11 @@ export interface PageMetaInput {
 export function buildMetadata(input: PageMetaInput, config: SiteConfig = SITE): Metadata {
   const canonical = absoluteUrl(input.path, config);
   const noindex = input.noindex || !isIndexable(config.env);
-  const fullTitle = input.title.includes(config.name)
-    ? input.title
-    : `${input.title} | ${config.name}`;
+  // The site name is appended only when the whole title still fits in search results
+  // (~60 characters); a longer, specific title is shown in full rather than cut off.
+  const withName = `${input.title} | ${config.name}`;
+  const fullTitle =
+    input.title.includes(config.name) || withName.length > MAX_TITLE_LENGTH ? input.title : withName;
   const ogImage = absoluteUrl(input.image?.path ?? '/og-default.png', config);
   const ogAlt = input.image?.alt ?? `${config.name} — ${config.tagline}`;
 

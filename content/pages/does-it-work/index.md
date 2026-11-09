@@ -1,12 +1,12 @@
 ---
 title: "Do menopause supplements and remedies work? Our verdicts"
-seo_title: "Do menopause supplements work? Our verdicts"
-meta_description: "One full verdict per supplement or remedy: black cohosh, soy, magnesium, ashwagandha and more, each graded with the trials behind it."
+seo_title: "Do menopause supplements work? What the evidence shows"
+meta_description: "Mostly not for hot flashes: no over-the-counter supplement is recommended by The Menopause Society. See which remedies have some evidence, which don't, and why."
 cluster: does-it-work
 primary_keyword: do menopause supplements work
 slug: does-it-work
 page_type: hub
-secondary_keywords: [do menopause supplements work, natural remedies for menopause evidence]
+secondary_keywords: [do menopause supplements work, natural remedies for menopause evidence, which menopause supplements actually work]
 search_intent: informational
 funnel_stage: sceptical
 symptom_tags: [hot-flashes, night-sweats, insomnia, joint-pain]
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-08"
+updated_at: "2026-11-09"
 change_log:
+  - { date: "2026-11-09", summary: "Search pass: direct short answer, verdicts grouped from strongest to weakest evidence with registry grades, and new sections on safety, regulation, placebo effects and what works better", material: true }
   - { date: "2026-11-08", summary: "Sweep: plainer opening answer, cited guideline levels, removed uncited trial counts from link descriptions", material: false }
   - { date: "2026-11-06", summary: "Initial publication of the Does It Work directory", material: true }
   - { date: "2026-11-06", summary: "Added links to 5 new verdict pages (paced breathing, diet, acupuncture, yoga, cannabis/CBD)", material: true }
@@ -30,56 +31,99 @@ claims:
   - id: nonhormone-guideline-consensus
     text: "The Menopause Society (2023) does not recommend over-the-counter supplements and herbal remedies for menopause hot flashes and night sweats (Levels I-II)."
     sources: [nams-2023-nonhormone-therapy]
+  - id: fda-supplements-not-approved
+    text: "By law, the FDA does not approve dietary supplements or their labeling before they are marketed; manufacturers are responsible for safety and for substantiating claims."
+    sources: [fda-dietary-supplements-qa-2026]
+  - id: placebo-response-phytoestrogens
+    text: "Across phytoestrogen supplement trials, hot flashes fell by 1% to 59% in placebo groups."
+    sources: [lethaby-cochrane-phytoestrogens-2013]
 safety_flags: [medication_interactions]
 cta_profile: diw_pending
 banned_phrase_overrides:
   - { phrase: "hormone balance", reason: "Quoted in scare-quotes to debunk the marketing claim, linking to our evidence verdict that rejects it." }
 hub: null
-sources: [nams-2023-nonhormone-therapy]
+sources: [nams-2023-nonhormone-therapy, nams-2022-hormone-therapy, liftmor-trial-bone-density, wang-probiotics-bone-health-metaanalysis-2024, radzinsky-amberen-pooled-trials-2019, aso-s-equol-hot-flash-trial-2012, gopal-ashwagandha-perimenopause-2021, lee-maca-menopause-systematic-review-2011, pu-collagen-skin-aging-metaanalysis-2023, lethaby-cochrane-phytoestrogens-2013, hirata-dong-quai-trial-1997, cohen-omega3-vms-rct-2014, acquarulo-pollen-extract-vms-metaanalysis-2024, thevi-epo-hot-flashes-metaanalysis-2024, uspstf-vitamin-d-calcium-fractures-2018, leblanc-whi-calcium-vitamin-d-menopause-symptoms-2015, fda-dietary-supplements-qa-2026, nih-ods-black-cohosh-2020, mskcc-evening-primrose-oil-2022, nccih-evening-primrose-oil-2024]
 related: [/does-it-work/magnesium/, /does-it-work/cooling-products/, /does-it-work/exercise/, /does-it-work/paced-breathing/, /does-it-work/diet/, /does-it-work/acupuncture/, /does-it-work/yoga/, /does-it-work/cannabis-cbd/, /does-it-work/red-clover/, /does-it-work/evening-primrose-oil/, /does-it-work/vitamin-d/, /does-it-work/calcium/, /does-it-work/omega-3/, /does-it-work/ashwagandha/, /does-it-work/maca/, /does-it-work/dong-quai/, /does-it-work/dhea/, /does-it-work/collagen/, /does-it-work/probiotics/, /does-it-work/relizen/, /does-it-work/amberen/, /does-it-work/equelle/, /tools/symptoms-checklist/]
+faq:
+  - q: Do menopause supplements work for hot flashes?
+    a: "Mostly not. The Menopause Society, which writes the main US guidance on non-hormone treatments, does not recommend any over-the-counter supplement or herbal remedy for hot flashes and night sweats. A few, such as S-equol, have one positive trial, but that isn't enough to call them proven."
+  - q: Are menopause supplements approved by the FDA?
+    a: "No. By law, the FDA does not approve dietary supplements or their labels before they go on sale. The company selling a supplement is responsible for its safety and for backing up what the label says."
+  - q: Can menopause supplements interact with my medicines?
+    a: "Yes, some can. Evening primrose oil, for example, may raise bleeding risk with blood thinners. Tell your doctor or pharmacist about every supplement you take, especially if you take prescription medicines."
+  - q: What works better than supplements for hot flashes?
+    a: "Hormone therapy is the most effective treatment for hot flashes. For people who can't or don't want to take hormones, The Menopause Society recommends CBT, clinical hypnosis, certain antidepressants, gabapentin and fezolinetant."
 ---
 
-For hot flashes and night sweats, The Menopause Society does not recommend any over-the-counter supplement or herbal remedy (Levels I–II) [@nams-2023-nonhormone-therapy]. A few supplements have better evidence for narrower uses, and each verdict below says exactly what was tested.
+Mostly not, at least for hot flashes. The Menopause Society does not recommend any over-the-counter supplement or herbal remedy for hot flashes and night sweats (Levels I–II) [@nams-2023-nonhormone-therapy]. A few have some evidence for narrower uses, such as probiotics for bone density, and hormone therapy remains the most effective treatment for hot flashes [@wang-probiotics-bone-health-metaanalysis-2024; @nams-2022-hormone-therapy].
 
-This is our directory of full verdicts: one page per supplement or remedy, each graded from randomized controlled trials (RCTs), systematic reviews and medical society guidelines, with the evidence behind the grade. To compare treatments side by side, filtered by symptom and grade, use the [evidence checker tool](/tools/does-it-work-checker/) instead.
+This is our directory of full verdicts: one page per supplement or remedy, each graded from randomized controlled trials (RCTs), systematic reviews and medical society guidelines. To compare treatments side by side, filtered by symptom and grade, use the [evidence checker tool](/tools/does-it-work-checker/) instead.
+
+## Which menopause supplements actually work?
+
+Very few, and none of them for hot flashes with strong evidence. Below, our verdicts are grouped from the strongest evidence to the weakest. Each grade applies only to the use named, so a remedy that fails for hot flashes may still be graded separately for something else.
+
+### Where the evidence is strongest
+
+- **[Strength training](/does-it-work/exercise/)**: :grade{id="strength-training-bone"} for bone density. Not a supplement, but in a trial, supervised high-intensity strength and impact training improved bone density and strength [@liftmor-trial-bone-density].
+- **[Probiotics](/does-it-work/probiotics/)**: :grade{id="probiotics-bone"} for bone density only. A 2024 review of trials found they raised bone density in postmenopausal women [@wang-probiotics-bone-health-metaanalysis-2024].
+
+### Some early evidence, not yet proven
+
+- **[Equelle (S-equol)](/does-it-work/equelle/)**: :grade{id="equelle-vms"} for hot flashes. One placebo-controlled trial found fewer hot flashes [@aso-s-equol-hot-flash-trial-2012].
+- **[Amberen](/does-it-work/amberen/)**: :grade{id="amberen"}. Two 90-day placebo-controlled trials found broad symptom relief, but the maker paid for them [@radzinsky-amberen-pooled-trials-2019].
+- **[Ashwagandha](/does-it-work/ashwagandha/)**: :grade{id="ashwagandha"}. A placebo-controlled trial found lower menopause symptom scores [@gopal-ashwagandha-perimenopause-2021].
+- **[Maca](/does-it-work/maca/)**: :grade{id="maca"}. A few small trials leaned positive, but reviewers say that's not enough to conclude it works [@lee-maca-menopause-systematic-review-2011].
+- **[Collagen](/does-it-work/collagen/)**: :grade{id="collagen"} for skin. Trials found better skin moisture and stretch, with no menopause-specific joint or bone evidence we can verify [@pu-collagen-skin-aging-metaanalysis-2023].
+- **[Magnesium](/does-it-work/magnesium/)**: :grade{id="magnesium-sleep"} for general sleep, and :grade{id="magnesium-vms"} for hot flashes.
+
+### What trials haven't supported
+
+- **[Black cohosh](/does-it-work/black-cohosh/)**: :grade{id="black-cohosh-vms"} for hot flashes. High-quality trials found no difference from placebo [@nih-ods-black-cohosh-2020].
+- **[Soy and isoflavones](/does-it-work/soy-isoflavones/)**: :grade{id="soy-vms"} for hot flashes (Level II) [@nams-2023-nonhormone-therapy].
+- **[Red clover](/does-it-work/red-clover/)**: :grade{id="red-clover"}. A large Cochrane review found it worked no better than placebo for hot flashes [@lethaby-cochrane-phytoestrogens-2013].
+- **[Evening primrose oil](/does-it-work/evening-primrose-oil/)**: :grade{id="evening-primrose-vms"} for hot flashes. Reviews found no drop in how often they happen, though one small trial found fewer night sweats [@thevi-epo-hot-flashes-metaanalysis-2024].
+- **[Dong quai](/does-it-work/dong-quai/)**: :grade{id="dong-quai-vms"}. A placebo-controlled trial found no benefit for hot flashes [@hirata-dong-quai-trial-1997].
+- **[Omega-3](/does-it-work/omega-3/)**: :grade{id="omega-3-vms"}. A double-blind trial found no benefit over placebo for hot flashes [@cohen-omega3-vms-rct-2014].
+- **[Relizen](/does-it-work/relizen/)**: :grade{id="relizen-vms"}. Its pollen extract looked helpful only in uncontrolled studies [@acquarulo-pollen-extract-vms-metaanalysis-2024].
+- **["Hormone balance" supplements](/does-it-work/hormone-balance-supplements/)**: :grade{id="hormone-balance-supplements"}. Multi-ingredient gummies and capsules are among the herbal remedies The Menopause Society doesn't recommend for hot flashes [@nams-2023-nonhormone-therapy].
+- **[Cannabis and CBD](/does-it-work/cannabis-cbd/)**: :grade{id="cannabis-cbd"} (Level II) [@nams-2023-nonhormone-therapy].
+- **[Vitamin D](/does-it-work/vitamin-d/)** and **[calcium](/does-it-work/calcium/)**: :grade{id="vitamin-d-fractures"} and :grade{id="calcium-fractures"} at low doses for preventing fractures [@uspstf-vitamin-d-calcium-fractures-2018]. In a large trial they didn't ease hot flashes either [@leblanc-whi-calcium-vitamin-d-menopause-symptoms-2015].
+
+[DHEA](/does-it-work/dhea/) is graded separately for its two forms: an oral supplement and a prescription vaginal insert have very different evidence.
+
+### Other remedies people ask about
+
+- **[Cooling products](/does-it-work/cooling-products/)**: :grade{id="cooling-comfort"} for comfort at night, and :grade{id="cooling-vms"} as a treatment for hot flashes.
+- **[Paced breathing](/does-it-work/paced-breathing/)**: :grade{id="paced-breathing-vms"} for hot flashes (Level I) [@nams-2023-nonhormone-therapy].
+- **[Diet changes](/does-it-work/diet/)**, **[acupuncture](/does-it-work/acupuncture/)** and **[yoga](/does-it-work/yoga/)**: :grade{id="diet-vms"}, :grade{id="acupuncture-vms"} and :grade{id="yoga-vms"} respectively for hot flashes [@nams-2023-nonhormone-therapy].
+
+## Are menopause supplements safe?
+
+"Natural" doesn't mean checked. By law, the FDA does not approve dietary supplements or their labels before they're sold; the company is responsible for safety and for backing up its claims [@fda-dietary-supplements-qa-2026]. Some examples from our verdicts:
+
+- **Liver concerns**: At least 83 cases of liver damage have been reported worldwide in people taking black cohosh, though a direct cause hasn't been proven [@nih-ods-black-cohosh-2020].
+- **Drug interactions**: Evening primrose oil may add to bleeding risk with blood thinners [@mskcc-evening-primrose-oil-2022].
+- **Short trials**: Most black cohosh studies lasted 6 months or less, so its long-term safety hasn't been studied, and the same gap applies to many supplements [@nih-ods-black-cohosh-2020].
+
+Talk to a doctor or pharmacist before starting a supplement if you take any medicine, because some herbs and medicines interact in harmful ways [@nccih-evening-primrose-oil-2024].
+
+## Why do supplements seem to work for some people?
+
+Hot flashes often ease with a placebo, too. In trials of plant estrogen (phytoestrogen) supplements, hot flashes dropped by 1% to 59% in the placebo groups [@lethaby-cochrane-phytoestrogens-2013]. That's why we grade from placebo-controlled trials, not from reviews or personal stories. Our [private symptom tracker](/tools/symptom-tracker/) can help you log symptoms before and after any change.
+
+## What works better than supplements for hot flashes?
+
+Hormone therapy is the most effective treatment for hot flashes and night sweats [@nams-2022-hormone-therapy]. For people who can't or don't want to take hormones, The Menopause Society recommends CBT, clinical hypnosis, certain antidepressants (SSRIs and SNRIs), gabapentin and fezolinetant (Level I) [@nams-2023-nonhormone-therapy]. See [hormone therapy](/treatments/hormone-therapy/) and [non-hormonal treatments](/treatments/nonhormonal/), or record your symptoms with our [printable symptoms checklist](/tools/symptoms-checklist/) to take to an appointment.
 
 ## How we evaluate options
 
-We examine each product and ingredient using four criteria:
+We look at each product and ingredient using four questions:
 
-1. **Human clinical trial data**: Did double-blind, placebo-controlled trials demonstrate measurable symptom reduction?
-2. **Safety profile**: Are there known risks of hepatotoxicity, drug interactions, or bleeding complications?
-3. **Consistency of effect**: Have positive findings been replicated in independent studies, or only in brand-funded trials?
-4. **Regulatory status**: Is the substance subject to manufacturing standardization and purity testing?
-
-## Common remedies and strategies evaluated
-
-- **[Does magnesium help menopause symptoms?](/does-it-work/magnesium/)**: What we have and haven't verified about sleep, and why it isn't recommended for hot flashes.
-- **[Do cooling products help night sweats and hot flashes?](/does-it-work/cooling-products/)**: How cooling sheets, bedside fans, and convective bed climate systems perform against vasomotor episodes.
-- **[Does strength training help menopause?](/does-it-work/exercise/)**: What the LIFTMOR trial found about high-intensity resistance and impact training and bone density.
-- **[Does black cohosh work for hot flashes?](/does-it-work/black-cohosh/)**: Why The Menopause Society (2023) does not recommend herbal remedies like black cohosh (Levels I–II) [@nams-2023-nonhormone-therapy], and how placebo responses affect unblinded studies.
-- **[Do soy and isoflavones help hot flashes?](/does-it-work/soy-isoflavones/)**: Why soy foods, soy extracts and equol are not recommended for hot flashes (Level II) [@nams-2023-nonhormone-therapy].
-- **[Do "hormone balance" supplements work?](/does-it-work/hormone-balance-supplements/)**: Why multi-ingredient botanical gummies and capsules cannot "balance" perimenopausal hormone fluctuations.
-- **[Does paced breathing help hot flashes?](/does-it-work/paced-breathing/)**: Why this widely suggested technique is not recommended for hot flashes (Level I) [@nams-2023-nonhormone-therapy].
-- **[Do diets help hot flashes?](/does-it-work/diet/)**: What dietary modification does and doesn't change about hot flash frequency.
-- **[Does acupuncture help hot flashes?](/does-it-work/acupuncture/)**: Why real vs. sham acupuncture trials haven't shown a meaningful difference.
-- **[Does yoga help menopause symptoms?](/does-it-work/yoga/)**: Why it's not recommended specifically for hot flashes, even though it may still have other benefits.
-- **[Do cannabis and CBD help menopause symptoms?](/does-it-work/cannabis-cbd/)**: The evidence gap, plus the product-quality problem worth knowing about.
-- **[Does red clover help menopause symptoms?](/does-it-work/red-clover/)**: What a large Cochrane review of phytoestrogen trials found.
-- **[Does evening primrose oil help hot flashes?](/does-it-work/evening-primrose-oil/)**: Why hot flashes and night sweats didn't show the same result.
-- **[Vitamin D in menopause](/does-it-work/vitamin-d/)** and **[calcium after menopause](/does-it-work/calcium/)**: What the USPSTF actually concludes about supplementing for fracture prevention.
-- **[Does omega-3 help menopause symptoms?](/does-it-work/omega-3/)**: What a double-blind MsFLASH trial found.
-- **[Does ashwagandha help menopause symptoms?](/does-it-work/ashwagandha/)**: One genuinely positive trial, and why that's not the same as proven.
-- **[Does maca work for menopause symptoms?](/does-it-work/maca/)**: What a systematic review of a few small trials actually concluded.
-- **[Does dong quai work for hot flashes?](/does-it-work/dong-quai/)**: Why a rigorous placebo-controlled trial found no benefit.
-- **[Does DHEA work for menopause symptoms?](/does-it-work/dhea/)**: Oral supplement vs. prescription vaginal insert — two very different evidence pictures.
-- **[Does collagen help menopause skin and joints?](/does-it-work/collagen/)**: Decent general skin evidence, no menopause-specific joint or bone claim we can verify.
-- **[Do probiotics help bone health after menopause?](/does-it-work/probiotics/)**: A meta-analysis on bone density with better results than most supplements here.
-- **[Does Relizen work for hot flashes?](/does-it-work/relizen/)**: What happened when a review isolated only the controlled studies.
-- **[Does Amberen work for menopause symptoms?](/does-it-work/amberen/)**: Real trial data, with a disclosed industry tie worth knowing about.
-- **[Does Equelle work for hot flashes?](/does-it-work/equelle/)**: A genuinely positive single trial on its S-equol ingredient.
-
-You can look up any treatment or supplement by symptom and evidence grade in our interactive [Does it work? evidence checker](/tools/does-it-work-checker/), or record your active symptoms with our [printable symptoms checklist](/tools/symptoms-checklist/).
+1. **Human trials**: Did double-blind, placebo-controlled trials show a measurable drop in symptoms?
+2. **Safety**: Are there known risks of liver damage, drug interactions or bleeding?
+3. **Consistency**: Have positive findings been repeated by independent teams, or only in trials the brand paid for?
+4. **Quality control**: Is the product made to a set standard and tested for purity?
 
 ## How grades are set
 

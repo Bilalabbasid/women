@@ -1,7 +1,7 @@
 ---
 title: "Starting and stopping HRT"
-seo_title: "Starting & stopping HRT: what to expect"
-meta_description: "What to expect when you start HRT, the two ways to stop it, and why symptoms may or may not return either way."
+seo_title: "How to start and stop HRT, and whether to taper"
+meta_description: "How to start HRT, what the first 3 months bring, how long to stay on it, whether to taper or stop at once, and what happens after you stop HRT."
 cluster: treatments
 primary_keyword: stopping hrt
 slug: starting-and-stopping
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-09"
 change_log:
+  - { date: "2026-11-09", summary: "Rebuilt around common questions: how to start, blood tests, the first 3 months, how long to stay on HRT, tapering vs stopping suddenly, what happens after stopping, restarting; added a safety section and FAQs", material: true }
   - { date: "2026-11-06", summary: "Published guide on starting and stopping HRT", material: true }
 evidence_grade: strong
 claims:
@@ -37,42 +38,109 @@ claims:
   - id: nice-review-schedule-start
     text: "NICE NG23 recommends reviewing each treatment for menopause-associated symptoms at 3 months to assess efficacy and tolerability, and annually thereafter, unless there's a clinical reason for an earlier review."
     sources: [nice-ng23-recommendations]
+  - id: nams-vms-recur-after-stopping
+    text: "The Menopause Society (2022) states hot flashes return in about 50% of women when hormone therapy is stopped, that data directly comparing abrupt stopping with tapering are lacking, and that experts generally advise gradually lowering the dose."
+    sources: [nams-2022-hormone-therapy]
+  - id: nams-no-arbitrary-stop
+    text: "The Menopause Society (2022) states an arbitrary age-based stopping rule is not clinically appropriate and hormone therapy does not need to be routinely stopped in women over 60 or 65, with periodic reevaluation for longer use."
+    sources: [nams-2022-hormone-therapy]
 safety_flags: [bleeding, cancer_history]
 cta_profile: hrt_evaluating
 hub: /treatments/hormone-therapy/
-sources: [nice-ng23-recommendations]
+sources: [nice-ng23-recommendations, nams-2022-hormone-therapy, fda-mht-labeling-request-2025, nhs-postmenopausal-bleeding, cdc-stroke-signs, cdc-vte-about]
 related: [/treatments/hormone-therapy/, /treatments/hormone-therapy/side-effects/, /treatments/hormone-therapy/timing/, /postmenopause/bleeding/, /tools/treatment-questions/]
 faq:
-  - q: What should I expect in the first few months of starting HRT?
-    a: "NICE guidance recommends starting at the lowest effective dose, with a formal review at 3 months to check how well it's working and how you're tolerating it. Some bleeding is common during the first 6 months, or within 3 months of any dose change, as your body adjusts."
-  - q: Should I stop HRT gradually or all at once?
-    a: "Either is a reasonable choice. NICE guidance says gradually reducing may limit how quickly symptoms come back in the short term, but gradual versus immediate stopping makes no difference to your symptoms in the longer term. It's your preference, not a medical requirement either way."
+  - q: Can you stop HRT suddenly?
+    a: "Yes. Stopping all at once is one of the two options UK guidelines recommend offering. It may bring symptoms back sooner in the short term than tapering, but in the longer term there's no difference in symptoms either way."
+  - q: How long does HRT take to work?
+    a: "Lower doses may take 6 to 8 weeks to give enough relief, so it can take a while to judge. That's one reason guidelines suggest a check-in at 3 months before deciding whether to adjust the dose or type."
+  - q: Do I have to stop HRT at 65?
+    a: "No. The Menopause Society says there's no general rule to stop at 65 and no data to support routinely stopping then. Staying on it longer is an individual choice, with regular reviews of your benefits and risks."
+  - q: Will my hot flashes come back when I stop HRT?
+    a: "They might. Hot flashes return in about half of women who stop hormone therapy. If they come back and bother you, you can talk to your clinician about restarting or about non-hormonal options."
 ---
 
-Both ends of the [HRT](/treatments/hormone-therapy/) experience — starting it and eventually stopping it — have a structured, guideline-based approach, rather than being left to guesswork.
+To start HRT, you need a prescriber who weighs your symptoms and health history; guidelines then suggest the lowest dose that works and a check-in at 3 months [@nice-ng23-recommendations]. To stop, you can taper down or stop at once. Tapering may slow symptoms coming back at first, but makes no difference in the longer term [@nice-ng23-recommendations].
 
-## Starting: lowest dose, then a 3-month check-in
+## How do you start HRT?
 
-NICE recommends starting at the **lowest effective dose** [@nice-ng23-recommendations], with a formal review of how well it's working and how you're tolerating it at the **3-month mark**, and annually after that unless something specific comes up sooner [@nice-ng23-recommendations]. See our [HRT side effects](/treatments/hormone-therapy/side-effects/) page for what's commonly reported during this adjustment period, including the specific bleeding patterns that are expected versus those that need checking.
+You start [HRT](/treatments/hormone-therapy/) by talking with a health care professional who can prescribe it, who should go over the benefits and risks of each option with you before you decide [@nice-ng23-recommendations]. UK guidance (NICE) says that conversation should cover [@nice-ng23-recommendations]:
 
-## Stopping: your choice, with one exception
+- **The type**: Combined HRT (estrogen plus a progestogen) if you have a uterus, or estrogen alone if you've had a total hysterectomy [@nice-ng23-recommendations]. The progestogen protects the uterine lining [@nams-2022-hormone-therapy].
+- **The form**: Skin forms (patch, gel, spray) or pills, which have different benefits and risks [@nice-ng23-recommendations]. See [HRT patch vs pill](/treatments/hormone-therapy/patch-vs-pill/).
+- **The dose**: If you choose HRT, the lowest dose that works [@nice-ng23-recommendations]. In the US, labels no longer carry the older advice to use it "for the shortest amount of time" [@fda-mht-labeling-request-2025].
+- **How long**: NICE recommends discussing how long you might take it at the start, and again at every review [@nice-ng23-recommendations].
 
-When you're ready to stop, NICE recommends offering a choice [@nice-ng23-recommendations]:
+If you're not sure where to go, our guide to [finding a menopause specialist](/care/find-a-menopause-specialist/) explains your options.
 
-- **Gradually reducing** the dose, which may limit how quickly symptoms return in the short term
-- **Stopping immediately**
+### Do you need a blood test to start HRT?
 
-Here's the genuinely reassuring part: **in the longer term, gradual versus immediate stopping makes no difference to your symptoms** [@nice-ng23-recommendations]. This is a personal preference, not a decision with a "correct" medical answer.
+Usually not if you're 45 or older. NICE says that in otherwise healthy people 45 and over, perimenopause and menopause can be identified from symptoms and periods alone, without lab tests [@nice-ng23-recommendations]. The Menopause Society says saliva and urine hormone tests are unreliable for setting doses, and blood hormone testing is rarely needed [@nams-2022-hormone-therapy]. More on this in [perimenopause blood tests](/perimenopause/blood-tests/).
 
-The one situation where stopping isn't a choice: NICE recommends **stopping systemic HRT immediately** if you're diagnosed with breast cancer, following the dedicated breast cancer treatment guideline [@nice-ng23-recommendations].
+## What to expect in the first 3 months of HRT
 
-## Will my symptoms come back after stopping?
+The first few months are an adjustment period, and a review at 3 months is built into the plan:
 
-This varies by person, and it's worth discussing directly with your clinician before you decide on a stopping approach, especially if you're stopping because of age or duration of use rather than because symptoms have resolved. See our [HRT timing window](/treatments/hormone-therapy/timing/) page for how starting age and duration factor into the broader risk-benefit picture, and our [Does It Work? evidence directory](/does-it-work/) for non-hormonal options if symptoms return.
+- **Time to work**: Lower doses may take 6 to 8 weeks to give enough relief from symptoms [@nams-2022-hormone-therapy].
+- **Common side effects**: These include nausea, bloating, weight gain, fluid retention, breakthrough bleeding, headaches, breast tenderness, and mood swings (linked to the progestogen) [@nams-2022-hormone-therapy]. See [HRT side effects](/treatments/hormone-therapy/side-effects/) for more.
+- **Bleeding**: If you have a uterus, some bleeding is common during the first 6 months of whole-body HRT, or within 3 months of changing the dose or type. Get checked promptly for unscheduled bleeding beyond those times [@nice-ng23-recommendations].
+- **Your 3-month review**: NICE recommends checking how well it's working and how you're tolerating it at 3 months, then once a year, or sooner if there's a problem [@nice-ng23-recommendations].
+- **If it isn't helping**: NICE recommends referral to someone with menopause expertise if treatment doesn't improve symptoms or side effects don't settle [@nice-ng23-recommendations].
 
-Log your symptoms in our [private symptom tracker](/tools/symptom-tracker/) during any transition:
+## How long can you stay on HRT?
+
+There's no set time limit. The Menopause Society says an arbitrary age-based stopping rule isn't appropriate, and HRT doesn't need to be routinely stopped at 60 or 65 [@nams-2022-hormone-therapy]. Longer use should come with regular reviews of your benefits and risks, and using the lowest effective dose matters more as you get older [@nams-2022-hormone-therapy].
+
+That matters because frequent hot flashes last 7.4 years on average, and more than 10 years for many women [@nams-2022-hormone-therapy]. NICE recommends rediscussing the benefits and risks of continuing at every review [@nice-ng23-recommendations]. For how age affects the picture, see [when to start HRT](/treatments/hormone-therapy/timing/).
+
+## How do you stop HRT: taper or stop suddenly?
+
+You can do either. NICE recommends offering a choice between gradually reducing the dose and stopping straight away [@nice-ng23-recommendations]:
+
+- **Tapering (gradually reducing)**: May limit how quickly symptoms come back in the short term [@nice-ng23-recommendations].
+- **Stopping all at once**: A valid option; in the longer term, it makes no difference to your symptoms compared with tapering [@nice-ng23-recommendations].
+
+There is no single proven tapering schedule. The Menopause Society notes that few studies have looked at the best way to stop and that data comparing the two approaches are lacking, though experts generally advise lowering the dose gradually [@nams-2022-hormone-therapy]. Your prescriber can plan the steps with you.
+
+The one situation where stopping isn't a choice: NICE recommends stopping whole-body HRT if you're diagnosed with breast cancer [@nice-ng23-recommendations].
+
+## What happens when you stop HRT?
+
+Some effects of HRT fade once you stop:
+
+- **Hot flashes may return**: They come back in about half of women who stop [@nams-2022-hormone-therapy]. NICE says to explain this up front and to discuss restarting if needed [@nice-ng23-recommendations].
+- **Bone protection fades**: Bone density falls back to pre-treatment levels within 1 to 2 years of stopping, although the large WHI trials found no extra fractures after women stopped [@nams-2022-hormone-therapy]. See [bone health after menopause](/postmenopause/bone-health/).
+- **Vaginal dryness can get worse**: Vaginal and urinary symptoms tend to worsen over time without estrogen, so The Menopause Society says women stopping whole-body HRT should be offered treatment options [@nams-2022-hormone-therapy]. Low-dose [vaginal estrogen](/treatments/hormone-therapy/vaginal-estrogen/) is one.
+- **Breast cancer risk falls**: With combined HRT, the extra risk goes down after stopping but lasts at least 10 years [@nice-ng23-recommendations].
+
+## Can you restart HRT after stopping?
+
+Yes. NICE recommends discussing the option of restarting if symptoms come back [@nice-ng23-recommendations]. If you're over 60 or more than 10 years past menopause, restarting is a more careful decision because the risks are higher, though some well-informed women in that group do choose it [@nams-2022-hormone-therapy]. Our [Does It Work? directory](/does-it-work/) covers non-hormonal options if you'd rather not.
+
+## When to see a doctor
+
+See your doctor promptly about bleeding that doesn't fit the expected pattern: unscheduled bleeding after the first 6 months of HRT, or more than 3 months after a dose change [@nice-ng23-recommendations]. If you're not on HRT, any vaginal bleeding after menopause should be checked, even a small amount [@nhs-postmenopausal-bleeding]. More in [bleeding after menopause](/postmenopause/bleeding/).
+
+:::urgent
+**Call 911 right away** for signs of a stroke [@cdc-stroke-signs]:
+
+- Sudden numbness or weakness in the face, arm, or leg, especially on one side of the body
+- Sudden confusion, trouble speaking, or trouble understanding speech
+- Sudden trouble seeing, or sudden trouble walking, dizziness, or loss of balance
+- A sudden severe headache with no known cause
+
+**Seek medical help immediately** for possible signs of a blood clot in the lungs: trouble breathing, a fast or irregular heartbeat, chest pain that gets worse when you breathe in deeply or cough, coughing up blood, or feeling lightheaded or fainting [@cdc-vte-about].
+
+**See a doctor as soon as possible** for swelling, pain, warmth, or redness in a leg or arm, which can be signs of a clot [@cdc-vte-about].
+
+If you're in the UK: call 999 in an emergency, or NHS 111 for urgent advice.
+:::
+
+Log your symptoms in our [private symptom tracker](/tools/symptom-tracker/) during any change, and bring the summary to your review.
 
 :::questions
-- At my 3-month review, what specifically are we checking to decide whether to continue, adjust, or stop?
-- When I eventually stop, would gradual or immediate stopping suit my situation better?
+- At my 3-month review, what are we checking to decide whether to continue, adjust, or stop?
+- How long do you expect I might stay on HRT, and when should we revisit that?
+- When I stop, would tapering or stopping at once suit me better, and what would the steps be?
+- If my hot flashes or vaginal dryness come back, what are my options?
 :::

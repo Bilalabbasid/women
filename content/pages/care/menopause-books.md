@@ -1,7 +1,7 @@
 ---
-title: "Menopause Books Worth Reading, Chosen by Evidence"
-seo_title: "Evidence-Based Menopause Books"
-meta_description: "Which menopause books can you trust? Honest, evidence-focused reviews of The Menopause Manifesto, The New Menopause, and Next Level: who each suits and limits."
+title: "Menopause books worth reading, chosen by evidence"
+seo_title: "Best menopause books: 3 compared by author and focus"
+meta_description: "Three menopause books by credentialed authors: what each one covers, who wrote it, when it came out, and which newer HRT and treatment guidance it predates."
 cluster: care
 primary_keyword: best menopause books
 slug: menopause-books
@@ -17,61 +17,90 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-07"
+updated_at: "2026-11-09"
 change_log:
-  - { date: "2026-11-06", summary: "Initial publication of evidence-evaluated menopause books guide", material: true }
+  - { date: "2026-11-09", summary: "Factual rewrite: honest answer to which books are best, author credentials as published, what each book covers and which newer guidance it predates; removed unsourced opinions and broken publisher links; sentence case", material: true }
   - { date: "2026-11-07", summary: "Replaced retailer links with publisher links", material: true }
+  - { date: "2026-11-06", summary: "Initial publication of evidence-evaluated menopause books guide", material: true }
 evidence_grade: per_option
-claims: []
+claims:
+  - id: haver-credentials
+    text: "Mary Claire Haver, MD, is described by her publisher as a board-certified OB/GYN and Certified Menopause Provider; The New Menopause was published by Rodale Books on April 30, 2024."
+    sources: [prh-new-menopause-haver-2024]
+  - id: sims-credentials
+    text: "Next Level (Rodale Books, May 17, 2022) is by exercise and nutrition scientist Stacy T. Sims, PhD, with Selene Yeager, a certified personal trainer."
+    sources: [prh-next-level-sims-2022]
 safety_flags: []
 cta_profile: books
 hub: /care/
-sources: [gunter-menopause-manifesto, haver-new-menopause, sims-next-level, nams-2022-hormone-therapy]
+sources: [gunter-menopause-manifesto, haver-new-menopause, prh-new-menopause-haver-2024, sims-next-level, prh-next-level-sims-2022, nams-2022-hormone-therapy, nams-2023-nonhormone-therapy, lynkuet-approval-bayer-2025, fda-mht-labeling-request-2025]
 related: [/care/, /perimenopause/, /treatments/, /does-it-work/exercise/, /tools/symptom-tracker/]
+faq:
+  - q: What is the best book about menopause?
+    a: There isn't one best book for everyone. The Menopause Manifesto suits readers who want the science and myth-busting, The New Menopause suits readers who want a symptom-by-symptom guide and help preparing for appointments, and Next Level suits active readers who want an exercise and nutrition plan.
+  - q: Which menopause book is best for perimenopause symptoms?
+    a: Of these three, The New Menopause has the most detail on symptoms, with an extensive catalog of perimenopausal symptoms and guidance for medical appointments. Check anything about medicines against current guidance, because it was published in April 2024.
+  - q: Do these books include the 2025 FDA changes to HRT warnings?
+    a: No. All three were published before November 2025, when the FDA asked for cardiovascular, breast cancer and dementia statements to be removed from the boxed warning on hormone therapy. Our hormone therapy guides cover those changes.
+  - q: Is there a menopause book about exercise?
+    a: Yes. Next Level, by exercise and nutrition scientist Stacy Sims with trainer Selene Yeager, focuses on heavy strength training, high-intensity intervals and protein to help protect muscle and bone. It doesn't cover medical treatments in depth.
 ---
 
-The menopause book market is filled with conflicting advice, ranging from predatory anti-aging promises to outdated medical warnings. As part of our [menopause care guides](/care/), we reviewed the three most prominent doctor- and scientist-authored books available today to help you find guides grounded in clinical science [@gunter-menopause-manifesto, @haver-new-menopause, @sims-next-level].
+There isn't one best book about menopause, but these three are written by credentialed experts and cover different ground: *The Menopause Manifesto* by gynecologist Jen Gunter (medical facts and myths), *The New Menopause* by OB/GYN Mary Claire Haver (symptoms and hormone therapy), and *Next Level* by exercise scientist Stacy Sims (strength training and nutrition) [@gunter-menopause-manifesto; @prh-new-menopause-haver-2024; @prh-next-level-sims-2022].
 
-## Summary: which book suits your needs?
+We don't rank books by sales and we don't sell them. Below is what each one covers, who wrote it, and which newer guidance came out after it was published, so you know what to double-check.
 
-| Book | Author | Core focus | Best for | Key limitation |
-| --- | --- | --- | --- | --- |
-| **The Menopause Manifesto** | Dr. Jen Gunter (OB/GYN) | Biological science, feminism, debunking scams, rigorous trial data | Women wanting an uncompromising, evidence-based breakdown of biology and medical treatments [@gunter-menopause-manifesto] | Dense reading; takes a strict stance against all alternative wellness products |
-| **The New Menopause** | Dr. Mary Claire Haver (OB/GYN) | Symptom catalog, doctor advocacy scripts, hormone therapy options | Women preparing for clinical visits who want clear talking points and symptom checklists [@haver-new-menopause] | Strong advocacy for hormone therapy requires personalized discussion with your physician |
-| **Next Level** | Dr. Stacy Sims (PhD Exercise Physiologist) | Heavy lifting, interval training, protein intake, athletic physiology | Active women wanting practical strength training and nutrition adaptations for shifting hormones [@sims-next-level] | Focused on exercise and nutrition; does not cover prescription medical therapies in depth |
+## Which menopause book should I read?
 
-## 1. The Menopause Manifesto by Dr. Jen Gunter
+Pick by what you want to learn. Each book has a different focus:
 
-Dr. Jen Gunter is a board-certified obstetrician and gynaecologist known for her fierce advocacy for evidence-based medicine [@gunter-menopause-manifesto]. *The Menopause Manifesto* takes a deeply scientific, feminist approach to dismantling shame, secrecy, and exploitative marketing surrounding reproductive aging.
+| Book | Author, as described by publisher | Published | Main focus |
+| --- | --- | --- | --- |
+| *The Menopause Manifesto* | Jen Gunter, board-certified gynecologist [@gunter-menopause-manifesto] | Citadel Press, 2021 [@gunter-menopause-manifesto] | The biology of menopause, the evidence for hormone and non-hormonal treatments, and unproven wellness products [@gunter-menopause-manifesto] |
+| *The New Menopause* | Mary Claire Haver, MD, board-certified OB/GYN and Certified Menopause Provider [@prh-new-menopause-haver-2024] | Rodale Books, April 2024 [@prh-new-menopause-haver-2024] | A symptom-by-symptom toolkit, preparing for medical visits, and research on hormone therapy [@haver-new-menopause; @prh-new-menopause-haver-2024] |
+| *Next Level* | Stacy T. Sims, PhD, exercise and nutrition scientist, with trainer Selene Yeager [@prh-next-level-sims-2022] | Rodale Books, May 2022 [@prh-next-level-sims-2022] | Strength training, high-intensity intervals and protein to protect muscle and bone [@sims-next-level] |
 
-- **What it does well**: She explains the evolutionary biology of menopause, breaks down the Women's Health Initiative trial errors with clinical precision, and systematically deconstructs predatory &ldquo;hormone balancing&rdquo; supplements.
-- **Who it suits best**: Readers who value hard data, peer-reviewed study citations, and a no-nonsense medical perspective.
-- **Limitations**: The tone can be clinical and blunt, and readers looking for gentle lifestyle approaches may find her dismissal of alternative remedies unyielding.
+## The Menopause Manifesto by Jen Gunter
 
-*The Menopause Manifesto*, Jen Gunter. [Citadel Press, 2021](https://www.citadelpress.com/books/the-menopause-manifesto/).
+Jen Gunter is a board-certified gynecologist, and her book's subtitle is *Own Your Health with Facts and Feminism* [@gunter-menopause-manifesto].
 
-## 2. The New Menopause by Dr. Mary Claire Haver
+- **What it covers**: How reproductive aging works in the body, what the clinical evidence shows for hormone therapy and non-hormonal options, and why many wellness supplements sold for menopause are unproven [@gunter-menopause-manifesto].
+- **Who it may suit**: Readers who want the science explained and myths taken apart.
+- **What to double-check**: It came out in 2021 [@gunter-menopause-manifesto], before The Menopause Society's 2023 statement on non-hormonal treatments [@nams-2023-nonhormone-therapy] and the 2025 FDA approval of elinzanetant (Lynkuet) [@lynkuet-approval-bayer-2025].
 
-Dr. Mary Claire Haver is an experienced OB/GYN who developed an extensive following by addressing the wide range of under-recognized perimenopausal symptoms that many standard practices overlook [@haver-new-menopause].
+*The Menopause Manifesto*, Jen Gunter. Citadel Press, 2021.
 
-- **What it does well**: The book is organized around an accessible symptom toolkit. It provides practical scripts for talking with dismissive doctors, clear explanations of estrogen's systemic roles, and sensible dietary recommendations for metabolic health.
-- **Who it suits best**: Women preparing for an upcoming healthcare appointment who need help articulating complex, fluctuating symptoms and evaluating hormone therapy options.
-- **Limitations**: Her enthusiastic endorsement of hormone therapy for broad prevention should be viewed as one clinical perspective; every woman needs an individualized assessment of her personal cardiovascular and oncologic risk profile [@nams-2022-hormone-therapy].
+## The New Menopause by Mary Claire Haver
 
-*The New Menopause*, Mary Claire Haver. [Rodale Books, 2024](https://www.rodalebooks.com/new-menopause).
+Mary Claire Haver, MD, is described by her publisher as a board-certified OB/GYN and a Certified Menopause Provider who founded a medical practice for women in midlife [@prh-new-menopause-haver-2024].
 
-## 3. Next Level by Dr. Stacy Sims
+- **What it covers**: An extensive catalog of perimenopause and menopause symptoms, ways to talk with your clinician, ways to lower risks such as osteoporosis and heart disease, and research on hormone therapy [@haver-new-menopause; @prh-new-menopause-haver-2024].
+- **Who it may suit**: Readers who want to put names to their symptoms and prepare for an appointment.
+- **What to double-check**: It was published in April 2024 [@prh-new-menopause-haver-2024], before the FDA approved elinzanetant in October 2025 [@lynkuet-approval-bayer-2025] and asked for changes to the hormone therapy boxed warning in November 2025 [@fda-mht-labeling-request-2025]. Whether hormone therapy suits you depends on your age, time since menopause and health history [@nams-2022-hormone-therapy], so treat any book's view as a starting point for that conversation.
 
-Exercise physiologist and nutrition scientist Dr. Stacy Sims coined the phrase &ldquo;women are not small men&rdquo; [@sims-next-level]. *Next Level* addresses the specific physiological shifts of perimenopause and postmenopause: sarcopenia (muscle loss), visceral fat redistribution, and bone density loss.
+*The New Menopause*, Mary Claire Haver. Rodale Books, 2024.
 
-- **What it does well**: She delivers concrete athletic protocols: why postmenopausal women benefit more from heavy resistance training and sprint intervals than long steady-state cardio, and how to time protein intake to preserve lean mass.
-- **Who it suits best**: Women who want an actionable training and nutrition roadmap to maintain power, muscle, joint stability, and bone density through midlife and beyond.
-- **Limitations**: It is an athletic and nutritional performance book, not a medical treatise. It does not address medical management of vasomotor symptoms, genitourinary changes, or hormone replacement protocols in depth.
+## Next Level by Stacy Sims
 
-*Next Level*, Stacy Sims. [Rodale Books, 2022](https://www.rodalebooks.com/next-level).
+Stacy T. Sims, PhD, is described by her publisher as an exercise and nutrition scientist. She wrote the book with Selene Yeager, a certified personal trainer and triathlete [@prh-next-level-sims-2022].
+
+- **What it covers**: Exercise and nutrition for active women through menopause, with an emphasis on progressive heavy strength training, high-intensity intervals and spreading protein through the day to help protect muscle and bone [@sims-next-level; @prh-next-level-sims-2022].
+- **Who it may suit**: Active readers who want a training and nutrition plan for midlife.
+- **What to double-check**: It is an exercise and nutrition book, not a guide to medical treatment [@sims-next-level], and it was published in 2022 [@prh-next-level-sims-2022]. For what the trials show, see our page on [exercise for menopause symptoms](/does-it-work/exercise/).
+
+*Next Level*, Stacy T. Sims with Selene Yeager. Rodale Books, 2022.
+
+## How can I tell if a menopause book is trustworthy?
+
+Look at who wrote it, when, and what it's selling. A few quick checks:
+
+1. **Author**: Check the author's training in the subject the book covers, such as gynecology for treatment or exercise science for training.
+2. **Date**: Note the publication year, and check newer guidance on any medicine it discusses. Our [hormone therapy guides](/treatments/hormone-therapy/) and [non-hormonal treatment guides](/treatments/nonhormonal/) are updated when guidance changes.
+3. **Sources**: Look for references to published studies and guidelines, not just stories.
+4. **Sales**: Be wary if the book steers you to the author's own supplements, tests or programs.
 
 ## How to use these books with your care team
 
-Reading evidence-based books helps you become an informed advocate for your own health. All three are widely stocked by public libraries, often as e-books and audiobooks too. As you read, make notes on questions that resonate with your situation, and bring them to your doctor. 
+Check your public library's catalog before buying, including for e-book and audiobook editions. As you read, note the questions that apply to you and bring them to your appointment.
 
-To help structure your medical discussions, explore our guide on [questions to ask your doctor about perimenopause](/perimenopause/questions-for-your-doctor/) or start tracking your daily patterns with our [symptom tracker](/tools/symptom-tracker/).
+To prepare, use our list of [questions to ask your doctor about perimenopause](/perimenopause/questions-for-your-doctor/), or track your daily patterns with the [symptom tracker](/tools/symptom-tracker/).

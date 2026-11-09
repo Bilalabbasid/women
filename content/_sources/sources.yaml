@@ -3326,3 +3326,991 @@
     FDA safety communication itself (July 30, 2018, updated November 20, 2018)
     could not be fetched (fda.gov returned 404 to the fetcher); replace with the
     FDA page if it can be opened.
+
+- id: nhs-types-of-hrt
+  title: Types of hormone replacement therapy (HRT)
+  authors: []
+  publisher: NHS (UK)
+  year: 2023
+  type: patient_information
+  url: https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/types-of-hormone-replacement-therapy-hrt/
+  doi: null
+  accessed: 2026-11-09
+  population: General public (UK) considering HRT
+  key_finding: HRT comes as tablets, patches, gel, spray, or vaginal rings, pessaries or cream. Oestrogen-only HRT is recommended after a hysterectomy and is taken every day. Sequential (cyclical) combined HRT means oestrogen every day plus a progestogen for the last 10 to 14 days of the cycle; it is used if you are still having regular periods, and a bleed is expected at the end of each progestogen course. Continuous combined HRT (oestrogen and progestogen every day) is usually recommended post-menopause, after 1 year without a period. Vaginal oestrogen does not carry the usual risks of HRT and does not help hot flushes, mood swings or sleep problems.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 9 March 2023 (next review was due 9 March 2026). UK patient guidance; pair with NAMS 2022 or NICE NG23 for US readers.
+
+- id: goodrx-estradiol-prices-2026-11-08
+  title: Estradiol 2026 prices, coupons & savings tips (re-check, all forms)
+  authors: []
+  publisher: GoodRx
+  year: 2026
+  type: other
+  url: https://www.goodrx.com/estradiol
+  doi: null
+  accessed: 2026-11-09
+  population: N/A — US retail drug pricing data
+  key_finding: "Page states coupon prices last updated 11/08/26. Average US retail (non-insurance) prices by form: generic estradiol tablets, 90 tablets (most commonly filled quantity): 0.5 mg $19.94, 1 mg $47.05, 2 mg $36.65. Once-weekly patches, 4-patch carton: $37.13-$68.95 depending on dose. Gel packets: 30 packets $37.69-$189.49; 90 packets up to $569.81 (1 mg). Vaginal insert 10 mcg, 8 inserts: $75.18. Vaginal cream 0.01%, 42.5 g tube: $310.35. Retail prices are average costs users pay and do not reflect pharmacy pricing in a specific location. Says estradiol is available in multiple generic and brand versions and is 'covered by some Medicare and insurance plans'. Savings tips: a 90-day supply may lower total cost (needs a new prescription written for 90 days); ask the prescriber about less expensive generic options."
+  funding_conflict: GoodRx sells discount coupons and a paid membership; only the listed average retail prices and general tips are used here.
+  verified: true
+  notes: Re-check of the same page as goodrx-estradiol-pricing-2026 (read via a page scrape on 2026-11-09, cached 2026-11-08). Adds tablet, insert and cream prices that entry did not check; the lead may merge it into that entry instead.
+
+- id: goodrx-progesterone-pricing-2026
+  title: Progesterone 2026 prices, coupons & savings tips
+  authors: []
+  publisher: GoodRx
+  year: 2026
+  type: other
+  url: https://www.goodrx.com/progesterone
+  doi: null
+  accessed: 2026-11-09
+  population: N/A — US retail drug pricing data
+  key_finding: "Coupon prices last updated 11/08/26. Average US retail (non-insurance) price for generic progesterone capsules: 100 mg, 30 capsules $22.31; 200 mg, 90 capsules $139.95. Says progesterone (Prometrium) is available in generic and brand versions and 'Generic progesterone is covered by most Medicare and insurance plans'."
+  funding_conflict: GoodRx sells discount coupons and a paid membership; only the listed average retail prices and coverage statement are used here.
+  verified: true
+  notes: Read via a page scrape on 2026-11-09 (cached 2026-11-08).
+
+- id: elite-hrt-own-site-2026
+  title: Elite HRT homepage ("Elite Peptide Protocols")
+  authors: []
+  publisher: Elite HRT
+  year: 2026
+  type: other
+  url: https://www.elitehrt.com/
+  doi: null
+  accessed: 2026-11-09
+  population: Prospective Elite HRT customers (US)
+  key_finding: "Homepage title 'Elite Peptide Protocols - Elite HRT'. The page describes peptide therapy (menu: Peptide Catalog, Stacks, The Science, About). It does not mention menopause, estrogen, estradiol, progesterone or hormone replacement therapy, and lists no prices for menopause hormone therapy or consultations (the only price shown is for an NAD+ product)."
+  funding_conflict: Self-reported by the company.
+  verified: true
+  notes: Used only to say the company's own site does not publish a menopause HRT price. Older press releases (2021) described Elite HRT as a hormone telemedicine firm; the current homepage does not.
+
+- id: healthcare-gov-essential-health-benefits
+  title: What Marketplace health insurance plans cover
+  authors: []
+  publisher: HealthCare.gov (US Centers for Medicare & Medicaid Services)
+  year: 2026
+  type: patient_information
+  url: https://www.healthcare.gov/coverage/what-marketplace-plans-cover/
+  doi: null
+  accessed: 2026-11-09
+  population: US Marketplace health plan enrollees
+  key_finding: All Marketplace plans cover 10 essential health benefits, including ambulatory patient services (outpatient care without being admitted to a hospital), prescription drugs, laboratory services, and preventive and wellness services and chronic disease management.
+  funding_conflict: null
+  verified: true
+
+- id: healthcare-gov-prescription-medications
+  title: Getting prescription medications
+  authors: []
+  publisher: HealthCare.gov (US Centers for Medicare & Medicaid Services)
+  year: 2026
+  type: patient_information
+  url: https://www.healthcare.gov/using-marketplace-coverage/prescription-medications/
+  doi: null
+  accessed: 2026-11-09
+  population: US Marketplace health plan enrollees
+  key_finding: Drugs on a plan's formulary (drug list) usually cost less; other drugs may be available at a higher cost. Check coverage on the insurer's website, the Summary of Benefits and Coverage, or by calling the insurer. If a drug isn't covered, you have the right to use the insurer's drug exceptions process; your doctor tells the plan (orally or in writing) that the drug is appropriate, for example because covered drugs would be less effective or cause harmful side effects. Each plan's process differs. If an exception is denied, you can appeal and an independent third party reviews it.
+  funding_conflict: null
+  verified: true
+
+- id: medicare-how-drug-plans-work
+  title: How do drug plans work?
+  authors: []
+  publisher: Medicare.gov (US Centers for Medicare & Medicaid Services)
+  year: 2026
+  type: patient_information
+  url: https://www.medicare.gov/health-drug-plans/part-d/what-drug-plans-cover/how-drug-plans-work
+  doi: null
+  accessed: 2026-11-09
+  population: US Medicare drug plan enrollees
+  key_finding: A plan's list of covered drugs is its formulary, and plans can change it during the year. Drugs are grouped in tiers; a lower tier generally costs less. Tier 1 (lowest copayment) is most generic prescription drugs; tier 2 preferred brand-name; tier 3 non-preferred brand-name; specialty tier highest. You or your prescriber can request a formulary exception (cover a drug not on the list) or tiering exception (lower cost for a higher-tier drug); the prescriber must give a supporting statement explaining the medical reason.
+  funding_conflict: null
+  verified: true
+
+- id: medicaid-gov-prescription-drugs
+  title: Prescription Drugs (Medicaid)
+  authors: []
+  publisher: Medicaid.gov (US Centers for Medicare & Medicaid Services)
+  year: 2026
+  type: patient_information
+  url: https://www.medicaid.gov/medicaid/prescription-drugs
+  doi: null
+  accessed: 2026-11-09
+  population: US Medicaid enrollees
+  key_finding: Although pharmacy coverage is an optional benefit under federal Medicaid law, all states currently provide coverage for outpatient prescription drugs to all categorically eligible individuals and most other enrollees.
+  funding_conflict: null
+  verified: true
+
+- id: healthcare-gov-referral-glossary
+  title: Referral (HealthCare.gov glossary)
+  authors: []
+  publisher: HealthCare.gov (US Centers for Medicare & Medicaid Services)
+  year: 2026
+  type: patient_information
+  url: https://www.healthcare.gov/glossary/referral/
+  doi: null
+  accessed: 2026-11-09
+  population: US health plan enrollees
+  key_finding: A referral is a written order from your primary care doctor for you to see a specialist or get certain services. In many HMOs you need a referral before getting care from anyone except your primary care doctor; without one, the plan may not pay.
+  funding_conflict: null
+  verified: true
+
+- id: healthcare-gov-plan-types
+  title: "Health insurance plan & network types: HMOs, PPOs, and more"
+  authors: []
+  publisher: HealthCare.gov (US Centers for Medicare & Medicaid Services)
+  year: 2026
+  type: patient_information
+  url: https://www.healthcare.gov/choose-a-plan/plan-types/
+  doi: null
+  accessed: 2026-11-09
+  population: US health plan enrollees
+  key_finding: HMOs usually limit coverage to doctors who work for or contract with the HMO and generally won't cover out-of-network care except in an emergency. POS plans require a referral from your primary care doctor to see a specialist. PPOs let you use providers outside the network without a referral, for an additional cost. EPOs cover services only in the plan's network.
+  funding_conflict: null
+  verified: true
+
+- id: menopause-society-practitioner-directory
+  title: Find a Menopause Practitioner (directory)
+  authors: []
+  publisher: The Menopause Society
+  year: 2026
+  type: other
+  url: https://portal.menopause.org/NAMS/NAMS/Directory/Menopause-Practitioner.aspx
+  doi: null
+  accessed: 2026-11-09
+  population: People looking for a menopause clinician
+  key_finding: Lists Society members and MSCPs who have asked to be included; those not accepting new patients are not listed. Search by country, by zip code (US only), or by telehealth (US state). The Society does not endorse or recommend the practitioners in the directory.
+  funding_conflict: null
+  verified: true
+
+- id: alloy-solutions-pricing-2026
+  title: Find the menopause relief that's right for you (Alloy solutions and prices)
+  authors: []
+  publisher: Alloy
+  year: 2026
+  type: other
+  url: https://www.myalloy.com/solutions
+  doi: null
+  accessed: 2026-11-09
+  population: Prospective Alloy customers (US)
+  key_finding: "Alloy's own product page with listed prices (checked 9 Nov 2026). Hormone therapy: estradiol pill starting at $39.99/month; Evamist estradiol spray $69.99/month; estradiol gel $69.99/month; estradiol patch $100/month; low-dose birth control pill $39.99/month ('for those in perimenopause'); paroxetine $34.99/month ('non-hormonal relief from hot flashes and night sweats'); progesterone starting at $23/month ('protecting your uterine lining when paired with estradiol'). Estradiol vaginal cream $119.97 per 3-month supply. Hair: low-dose oral minoxidil $99 and oral spironolactone $99, each per 3-month supply. Skincare: M4 Face Cream Rx (estriol) $150, M4 Eye Cream Rx $90, Tretinoin Face Cream Rx $90 (described as compounded), Hyperpigmentation Treatment Rx $119, each per 3-month supply. Also lists GLP-1 weight care (plus $99/month program fee) and a non-prescription synbiotic ($74.97 per 3 months). States its physicians follow guidelines from ACOG and The Menopause Society. No consultation fee amount is shown on the page."
+  funding_conflict: Self-reported by the company being reviewed.
+  verified: true
+  notes: Prices change and promotions run (a site banner offered 20% off a first order, 'Consult excluded'). Quote only with 'as listed on Alloy's site, November 2026'. Outcome percentages shown for weight medicines were not used.
+
+- id: alloy-cost-help-2026
+  title: How much does Alloy and it's products cost? (Alloy help center)
+  authors: []
+  publisher: Alloy
+  year: 2026
+  type: other
+  url: https://myalloy.zendesk.com/hc/en-us/articles/23575769302163-How-much-does-Alloy-and-it-s-products-cost
+  doi: null
+  accessed: 2026-11-09
+  population: Prospective Alloy customers (US)
+  key_finding: Pricing varies by treatment; medication cost depends on what the Alloy doctor prescribes. Alloy is a subscription service that usually bills every 3 months, with a few exceptions. Current prices for all products are listed at myalloy.com/solutions; final cost is personalized to the treatment plan.
+  funding_conflict: Self-reported by the company being reviewed.
+  verified: true
+  notes: Does not state a consultation fee amount.
+
+- id: alloy-after-signup-2026
+  title: What to expect after sign up? (Alloy help center)
+  authors: []
+  publisher: Alloy
+  year: 2026
+  type: other
+  url: https://myalloy.zendesk.com/hc/en-us/articles/24367408146067-What-to-expect-after-sign-up
+  doi: null
+  accessed: 2026-11-09
+  population: Prospective Alloy customers (US)
+  key_finding: If treatment needs a doctor consultation (for example hormone treatment), the consultation goes into the assigned Alloy doctor's queue and you can usually expect to hear from the doctor within 1-2 business days; you can message the doctor from your dashboard meanwhile. HRT prescriptions do not ship until you review, approve and authorize payment. Skincare, sexual health, hair and gut-health products can be requested at checkout without purchasing a doctor consultation, and are charged once prescribed.
+  funding_conflict: Self-reported by the company being reviewed.
+  verified: true
+  notes: The homepage (alloy-own-site-2026) says a treatment plan typically comes within about 12 hours; this help article says 1-2 business days. Report both as Alloy's own statements.
+
+- id: alloy-pharmacy-transfer-2026
+  title: Can I transfer my prescription to my local pharmacy? (Alloy help center)
+  authors: []
+  publisher: Alloy
+  year: 2026
+  type: other
+  url: https://myalloy.zendesk.com/hc/en-us/articles/25034351627923-Can-I-transfer-my-prescription-to-my-local-pharmacy
+  doi: null
+  accessed: 2026-11-09
+  population: Prospective Alloy customers (US)
+  key_finding: Alloy cannot write a new prescription to be sent directly to a local pharmacy; prescriptions are written to its partner pharmacy (Curexa for non-weight products), and future refills can then be transferred out. For non-weight products you need an active subscription with at least one order of that product before transferring, you must cancel the Alloy subscription, and you lose Alloy member benefits including unlimited doctor messaging.
+  funding_conflict: Self-reported by the company being reviewed.
+  verified: true
+  notes: "Company help-center page, linked as a plain source for how prescriptions are filled."
+
+- id: alloy-bioidentical-2026
+  title: Are your products bioidentical? (Alloy help center)
+  authors: []
+  publisher: Alloy
+  year: 2026
+  type: other
+  url: https://myalloy.zendesk.com/hc/en-us/articles/25740406062227-Are-your-products-bioidentical
+  doi: null
+  accessed: 2026-11-09
+  population: Prospective Alloy customers (US)
+  key_finding: Alloy states it offers FDA-approved, plant-based, bioidentical HRT, and that the estradiol in all of its products is molecularly identical to the hormones the body makes.
+  funding_conflict: Self-reported by the company being reviewed.
+  verified: true
+  notes: Refers to its estradiol hormone products, not its skincare (one skincare product is described as compounded on alloy-solutions-pricing-2026).
+
+- id: alloy-symptom-anxiety-2026
+  title: Anxiety Symptoms During Perimenopause & Menopause (Alloy)
+  authors: []
+  publisher: Alloy
+  year: 2026
+  type: other
+  url: https://www.myalloy.com/symptoms/anxiety
+  doi: null
+  accessed: 2026-11-09
+  population: Prospective Alloy customers (US)
+  key_finding: Alloy's anxiety page offers no anxiety-specific treatment. It says to speak to a doctor if anxiety interferes with daily life more days than not over 6 months, suggests healthy diet, exercise, sleep, less caffeine and alcohol, time with friends and family, and finding a therapist, says 'Stay tuned for more offerings to help with mood, coming soon from Alloy', and points readers to its hormone products.
+  funding_conflict: Self-reported by the company being reviewed.
+  verified: true
+  notes: The page's prevalence figure (52%) is unsourced on the page and was not used.
+
+- id: alloy-symptom-mood-swings-2026
+  title: "Menopause Mood Swings: Why They Happen & How to Find Calm (Alloy)"
+  authors: []
+  publisher: Alloy
+  year: 2026
+  type: other
+  url: https://www.myalloy.com/symptoms/mood-swings
+  doi: null
+  accessed: 2026-11-09
+  population: Prospective Alloy customers (US)
+  key_finding: Alloy's mood swings page suggests eating well, exercise, sleep, mindfulness and stress management, and therapy, presents menopausal hormone therapy as another option and links to its hormone products, where a physician reviews choices. It says more mood offerings are 'coming soon'; no mood-specific product is listed.
+  funding_conflict: Self-reported by the company being reviewed.
+  verified: true
+  notes: The page's 75% prevalence figure is unsourced on the page and was not used.
+
+- id: alloy-symptom-hair-loss-2026
+  title: Hair Loss & Thinning During Perimenopause & Menopause (Alloy)
+  authors: []
+  publisher: Alloy
+  year: 2026
+  type: other
+  url: https://www.myalloy.com/symptoms/hair-loss
+  doi: null
+  accessed: 2026-11-09
+  population: Prospective Alloy customers (US)
+  key_finding: Alloy's hair loss page names minoxidil as a common treatment, says a doctor may suggest biotin, collagen or anti-androgens such as spironolactone if minoxidil doesn't work, and presents hormone therapy as a further option. Its products page lists low-dose oral minoxidil and oral spironolactone.
+  funding_conflict: Self-reported by the company being reviewed.
+  verified: true
+  notes: Prevalence figures on the page were not used.
+
+- id: alloy-symptom-joint-pain-2026
+  title: Joint Pain During Perimenopause & Menopause (Alloy)
+  authors: []
+  publisher: Alloy
+  year: 2026
+  type: other
+  url: https://www.myalloy.com/symptoms/painful-joints
+  doi: null
+  accessed: 2026-11-09
+  population: Prospective Alloy customers (US)
+  key_finding: Alloy's joint pain page lists no joint-specific product. It suggests staying active, switching to low-impact exercise (biking, swimming, yoga), drinking water and eating fruits, vegetables and legumes, says women who take estrogen after menopause report less joint pain, and links to its hormone products for a physician to review.
+  funding_conflict: Self-reported by the company being reviewed.
+  verified: true
+  notes: The page's 77% figure has no source on the page and was not used.
+
+- id: alloy-skincare-2026
+  title: M4 Skincare Products (Alloy)
+  authors: []
+  publisher: Alloy
+  year: 2026
+  type: other
+  url: https://www.myalloy.com/skincare
+  doi: null
+  accessed: 2026-11-09
+  population: Prospective Alloy customers (US)
+  key_finding: Alloy sells prescription skincare built around estriol (a form of estrogen) in its M4 face cream, eye cream, face serum and body treatment, plus tretinoin, hyperpigmentation and rosacea creams, 'starting at $30 per month'. Its results claims rest on its own 12-week studies, disclosed as one randomized, double-blind, placebo-controlled study (n=86, 2024) and two further 12-week studies (n=34, 2025; n=38, 2026) using instrument measurements, expert grading and self-assessment.
+  funding_conflict: Self-reported by the company being reviewed; the skin studies are the company's own and we did not find or review them as published papers.
+  verified: true
+  notes: Do not repeat the page's outcome percentages or its 'proven' wording as fact.
+
+- id: brisdelle-prescribing-information
+  title: BRISDELLE (paroxetine) capsules 7.5 mg, prescribing information
+  authors: []
+  publisher: Legacy Pharma Inc. (FDA-approved label, via DailyMed, U.S. National Library of Medicine)
+  year: 2025
+  type: regulator_label
+  url: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=502311b3-b617-4cbd-a3ab-a60f2c62880a
+  doi: null
+  accessed: 2026-11-09
+  population: Women with moderate to severe vasomotor symptoms associated with menopause
+  key_finding: "Indicated for the treatment of moderate to severe vasomotor symptoms (VMS) associated with menopause. Limitation of use: not indicated for the treatment of any psychiatric condition. Dose: 7.5 mg once daily at bedtime. Boxed warning: suicidal thoughts and behaviors (SSRIs increased the risk in pediatric and young adult patients)."
+  funding_conflict: Manufacturer-issued label (FDA-approved text)
+  verified: true
+  notes: "Label text reads 'Revised: 4/2025'. 'Initial U.S. Approval: 1992' on the label refers to paroxetine generally, not the 7.5 mg hot-flash product, so it is not used as an approval date. Doses are for reference only."
+
+- id: premarin-prescribing-information
+  title: PREMARIN (conjugated estrogens tablets), prescribing information
+  authors: []
+  publisher: Wyeth Pharmaceuticals LLC, a subsidiary of Pfizer (FDA-approved label, via DailyMed, U.S. National Library of Medicine)
+  year: 2025
+  type: regulator_label
+  url: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=258e1602-a3cf-4ccc-ca80-73dbbfb812ff
+  doi: null
+  accessed: 2026-11-09
+  population: Women with menopausal symptoms and other estrogen-related indications
+  key_finding: "Indications: 1.1 treatment of moderate to severe vasomotor symptoms due to menopause; 1.2 treatment of moderate to severe symptoms of vulvar and vaginal atrophy due to menopause; 1.3 hypoestrogenism due to hypogonadism, castration or primary ovarian failure; 1.4 and 1.5 palliation of certain breast and prostate cancers; 1.6 prevention of postmenopausal osteoporosis. Boxed warning (version read): endometrial cancer, cardiovascular disorders, breast cancer and probable dementia."
+  funding_conflict: Manufacturer-issued label (FDA-approved text)
+  verified: true
+  notes: "DailyMed version read shows 'Revised: 4/2025' and the older boxed warning; FDA approved boxed-warning changes to some hormone therapy labels in 2026 (fda-mht-labeling-changes-2026), so cite this only for the indications, not the boxed warning wording."
+
+- id: owh-menopause-treatment-2026
+  title: Menopause treatment
+  authors: []
+  publisher: Office on Women's Health, U.S. Department of Health and Human Services
+  year: 2026
+  type: patient_information
+  url: https://womenshealth.gov/menopause/menopause-treatment
+  doi: null
+  accessed: 2026-11-09
+  population: U.S. women in perimenopause and menopause
+  key_finding: "The FDA has approved hormone therapies for moderate to severe hot flashes, preventing bone loss and osteoporosis, and vaginal dryness. With a uterus, a progestogen is needed with estrogen. The FDA has approved three nonhormone medicines for moderate to severe hot flashes: low-dose paroxetine, fezolinetant and elinzanetant; fezolinetant has an FDA warning about rare, serious liver injury. SSRIs, SNRIs and gabapentin may be suggested but are not FDA-approved for this use. CBT and clinical hypnosis are options that do not use medicine and can reduce how much hot flashes bother you."
+  funding_conflict: null
+  verified: true
+  notes: Page last updated October 19, 2026.
+
+- id: owh-early-premature-menopause-2026
+  title: Early or premature menopause
+  authors:
+    - Office on Women's Health
+  publisher: U.S. Department of Health and Human Services, Office on Women's Health
+  year: 2026
+  type: patient_information
+  url: https://womenshealth.gov/menopause/early-or-premature-menopause
+  doi: null
+  accessed: 2026-11-09
+  population: General public (US)
+  key_finding: Menopause between ages 40 and 44 is early menopause; menopause before age 40 is premature menopause, also called primary ovarian insufficiency (POI). Both can happen on their own or after medical treatment such as surgery to remove both ovaries. Known causes include family history of early menopause, smoking, chemotherapy or pelvic radiation, surgery removing both ovaries, autoimmune conditions such as thyroid disease, and genetic conditions such as Turner syndrome; sometimes there is no clear cause. Tell your provider if periods stop or become irregular before age 45; blood tests are most useful before age 40. Years without estrogen raise the risk of bone loss, heart disease and diabetes. Hormone therapy may help relieve symptoms and protect bones; talk with your provider about whether you also need birth control. Counseling and support groups can help.
+  funding_conflict: null
+  verified: true
+  notes: Page last updated October 19, 2026.
+
+- id: acog-perimenopausal-bleeding-faq
+  title: Perimenopausal Bleeding and Bleeding After Menopause (FAQ162)
+  authors:
+    - American College of Obstetricians and Gynecologists
+  publisher: American College of Obstetricians and Gynecologists
+  year: 2020
+  type: patient_information
+  url: https://www.acog.org/womens-health/faqs/perimenopausal-bleeding-and-bleeding-after-menopause
+  doi: null
+  accessed: 2026-11-09
+  population: General public (US)
+  key_finding: Perimenopause usually begins in the mid-40s and may last from ages 45 to 55, though timing varies; the average age of the last period in the US is 51. A typical cycle is 24 to 38 days and a period generally lasts up to 8 days. In perimenopause some months the ovaries release an egg and some months they do not; periods may be shorter or longer, the days between may increase or decrease, bleeding may be heavier or lighter, and periods may be skipped. It is not normal to have bleeding or spotting between periods or after sex, heavy bleeding during a period, bleeding that is heavier or lasts more days than usual, or bleeding after menopause. Talk with an ob-gyn about bleeding changes. Causes of abnormal bleeding include polyps, endometrial atrophy, endometrial hyperplasia and endometrial cancer; diagnosis may involve history, exam, endometrial biopsy, pelvic ultrasound, sonohysterography, hysteroscopy or D&C.
+  funding_conflict: null
+  verified: true
+  notes: Last updated October 2020, last reviewed February 2024.
+
+- id: mayo-perimenopause-symptoms-causes-2026
+  title: "Perimenopause: Symptoms and causes"
+  authors:
+    - Mayo Clinic Staff
+  publisher: Mayo Clinic
+  year: 2026
+  type: patient_information
+  url: https://www.mayoclinic.org/diseases-conditions/perimenopause/symptoms-causes/syc-20354666
+  doi: null
+  accessed: 2026-11-09
+  population: General public (US)
+  key_finding: "Women start perimenopause at different ages; signs such as irregular periods often appear sometime in the 40s, but some notice changes as early as their 30s or as late as their 50s. Cycle length consistently different by 7 days or more suggests early perimenopause; 60 days or more between periods suggests late perimenopause. If periods are happening, pregnancy is still possible; use birth control until 12 months without a period. If any symptoms bother you, see your healthcare professional. Factors linked with earlier onset: smoking (menopause 1 to 2 years earlier), family history of early menopause, chemotherapy and pelvic radiation, hysterectomy, and some conditions such as thyroid disease, rheumatoid arthritis or other autoimmune diseases. Irregular periods are common and usually nothing to be concerned about; see a professional if bleeding is very heavy, lasts longer than seven days, happens between periods, or periods are usually less than 21 days apart; tell a professional about any bleeding after 12 months without a period."
+  funding_conflict: null
+  verified: true
+  notes: Page dated Aug. 22, 2026.
+
+- id: medlineplus-fatigue
+  title: "Fatigue: MedlinePlus Medical Encyclopedia"
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2025
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/003088.htm
+  doi: null
+  accessed: 2026-11-08
+  population: General public (US)
+  key_finding: Causes of fatigue include an underactive or overactive thyroid; anemia, including iron deficiency anemia (iron deficiency can cause fatigue without anemia); sleep disorders such as insomnia, obstructive sleep apnea and narcolepsy; depression or grief; medicines such as sedatives, antidepressants, antihistamines, blood pressure medicines, sleeping pills, steroids and diuretics; alcohol or drug use; and conditions such as persistent pain, diabetes, heart failure, liver or kidney disease, infections and autoimmune disease. Home care includes enough sleep, a balanced diet with plenty of water, regular exercise, relaxation methods, a reasonable schedule and avoiding alcohol, nicotine and drugs; caffeine and other stimulants are not effective treatments for fatigue and sedatives tend to make it worse. Contact a provider right away for fatigue with confusion or dizziness, blurred vision, little or no urine, recent swelling and weight gain, or thoughts of self-harm or suicide.
+  funding_conflict: null
+  verified: true
+  notes: Review date 5/19/2025. Page does not mention menopause or vitamin deficiencies.
+
+- id: medlineplus-headache
+  title: "Headache: MedlinePlus Medical Encyclopedia"
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2025
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/003024.htm
+  doi: null
+  accessed: 2026-11-08
+  population: General public (US)
+  key_finding: "Tension headache is the most common type, usually on both sides of the head, dull or squeezing, often with tight or sore shoulders, neck or jaw. Migraine pain is throbbing, pounding or pulsating, on one side of the head, often with vision changes, sensitivity to sound or light, or nausea, may follow an aura (warning symptoms before the headache), and gets worse with movement. Lack of sleep, caffeine withdrawal and alcohol can trigger migraine; sleep apnea is a rare cause of headache. Keep a headache diary (timing, food and drink, sleep, activity, duration). At the start of a migraine: drink water, rest in a quiet dark room, use a cool cloth and relaxation techniques. For tension headaches, acetaminophen, aspirin or ibuprofen may help. Check with a provider if taking pain medicine 3 or more days a week; frequent use can cause rebound (medicine overuse) headaches. Call 911 or go to the ER for a sudden, explosive or violent headache; seek care for the worst headache ever; a headache with slurred speech, vision changes, weakness or trouble moving limbs, loss of balance or confusion; a headache that worsens over 24 hours or comes with fever, stiff neck or vomiting; a headache after a head injury or with severe eye pain and redness; new headaches after age 50."
+  funding_conflict: null
+  verified: true
+  notes: Review date 10/27/2025. Page does not mention menopause.
+
+- id: medlineplus-itching
+  title: "Itching: MedlinePlus Medical Encyclopedia"
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2024
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/003217.htm
+  doi: null
+  accessed: 2026-11-08
+  population: General public (US)
+  key_finding: Dry skin is a common cause of itching; aging skin is another. Generalized itching can come from liver disease with jaundice or kidney disease. Home care - do not scratch or rub; take lukewarm baths with little soap and rinse well; use moisturizer, especially in dry winter months; apply cold compresses; wear cool, light, loose bedclothes and avoid rough fabrics such as wool; avoid prolonged heat and humidity. Contact a provider for itching that is severe, does not go away, cannot be easily explained, keeps returning without a clear cause, or is all over the body, or comes with other unexplained symptoms.
+  funding_conflict: null
+  verified: true
+  notes: Review date 8/5/2024. Page does not mention menopause or thyroid.
+
+- id: medlineplus-dry-skin
+  title: "Dry skin: MedlinePlus Medical Encyclopedia"
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2024
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/000835.htm
+  doi: null
+  accessed: 2026-11-08
+  population: General public (US)
+  key_finding: Causes include cold, dry winter air or hot, dry climates; dry indoor air from heating or cooling; bathing too often or too long; some soaps and detergents; skin conditions such as eczema or psoriasis; diseases such as diabetes and underactive thyroid; certain medicines; and aging, as skin gets thinner and makes less natural oil. Care includes moisturizers (creams or lotions with urea and lactic acid), limiting water exposure, lukewarm bath water, patting skin dry, and gentle cleansers free of dyes and perfumes.
+  funding_conflict: null
+  verified: true
+  notes: Review date 10/13/2024. Page does not mention menopause.
+
+- id: aad-skin-care-menopause
+  title: Caring for your skin in menopause
+  authors: []
+  publisher: American Academy of Dermatology
+  year: 2025
+  type: patient_information
+  url: https://www.aad.org/public/everyday-care/skin-care-secrets/anti-aging/skin-care-during-menopause
+  doi: null
+  accessed: 2026-11-08
+  population: Women in menopause (US)
+  key_finding: In menopause skin loses some ability to hold water and can get quite dry, especially in dry air. Wash with a mild cleanser instead of soap (skip deodorant bars); apply moisturizer after bathing and whenever skin feels dry (hyaluronic acid or glycerin can help); see a dermatologist if skin still feels dry. Around 50 the skin's pH changes, making skin more sensitive and rashes and irritation more likely; existing eczema or rosacea may worsen. Use a fragrance-free moisturizer and see a board-certified dermatologist if a rash lasts or a skin condition worsens.
+  funding_conflict: null
+  verified: true
+  notes: Page last updated 11/24/2025.
+
+- id: ripa-migraine-menopausal-women-review-2015
+  title: "Migraine in menopausal women: a systematic review"
+  authors:
+    - Ripa P
+    - Ornello R
+    - Degan D
+    - Tiseo C
+    - Stewart J
+    - Pistoia F
+    - Carolei A
+    - Sacco S
+  publisher: International Journal of Women's Health
+  year: 2015
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/26316824/
+  doi: 10.2147/IJWH.S70073
+  accessed: 2026-11-08
+  population: Studies of migraine in perimenopausal and postmenopausal women (population-based and headache-center studies)
+  key_finding: Population-based studies show migraine improving after menopause, with a possible increase in perimenopause; headache-center studies show no improvement or even worsening. Improvement is more likely after spontaneous than after surgical menopause. Postmenopausal hormone therapy was associated with migraine worsening in observational population-based studies; studies of specific regimens were inconclusive. No specific preventive measures are recommended for menopausal women with migraine.
+  funding_conflict: null
+  verified: true
+  notes: Abstract read via NCBI E-utilities (PMID 26316824, PMC4548761).
+
+- id: maki-perimenopausal-depression-guidelines-2018
+  title: "Guidelines for the evaluation and treatment of perimenopausal depression: summary and recommendations"
+  authors:
+    - Maki PM
+    - Kornstein SG
+    - Joffe H
+    - Bromberger JT
+    - Freeman EW
+    - Athappilly G
+    - Bobo WV
+    - Rubin LH
+    - Koleva HK
+    - Cohen LS
+    - Soares CN
+  publisher: Menopause (The North American Menopause Society and the National Network of Depression Centers Women and Mood Disorders Task Force)
+  year: 2018
+  type: guideline
+  url: https://pubmed.ncbi.nlm.nih.gov/30179986/
+  doi: 10.1097/GME.0000000000001174
+  accessed: 2026-11-09
+  population: Perimenopausal women with depressive symptoms or major depressive episodes (expert panel review of the literature)
+  key_finding: The perimenopause is a window of vulnerability for both depressive symptoms and major depressive episodes. Most midlife women who have a major depressive episode during perimenopause have had a previous episode. Menopause symptoms often overlap with depressive symptoms, which complicates diagnosis; evaluation should consider menopausal stage, co-occurring menopause symptoms, midlife psychosocial factors, other possible causes, and validated screening tools. Antidepressants and psychotherapy (and other established treatments for depression) are first-line treatments. Estrogen is not approved for perimenopausal depression, but there is evidence that it has antidepressant effects in perimenopausal women, particularly those with vasomotor symptoms; evidence for estrogen plus progestin is limited and inconclusive.
+  funding_conflict: Authors' individual disclosures are listed in the full article; not reviewed here.
+  verified: true
+  notes: Abstract read via NCBI E-utilities efetch (PMID 30179986). Endorsed by NAMS (now The Menopause Society) Board of Trustees.
+
+- id: nhs-frozen-shoulder
+  title: Frozen shoulder
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2024
+  type: patient_information
+  url: https://www.nhs.uk/conditions/frozen-shoulder/
+  doi: null
+  accessed: 2026-11-09
+  population: General public (UK)
+  key_finding: "Main symptoms are pain, which can be worse at night and disturb sleep, and stiffness that makes movement difficult. Frozen shoulder can take months or years to get better, but the pain and stiffness usually go away eventually. Possible causes include diabetes (it's unclear why) and a past injury or surgery that stops normal arm movement. Treatment: painkillers (paracetamol first, then an NSAID such as ibuprofen; stronger painkillers only briefly), gentle shoulder exercises at home (avoid strenuous self-devised exercise), heat packs for up to 20 minutes at a time, steroid injections into the shoulder, and physiotherapy (usually at least 6 weeks). See a GP if shoulder pain and stiffness does not go away, or pain is so bad it makes it hard to move your arm and shoulder."
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 24 June 2024. Does not mention menopause, hormones, hydrodilatation or surgery.
+
+- id: aaos-orthoinfo-frozen-shoulder
+  title: Frozen Shoulder
+  authors:
+    - Ho J
+    - Aibinder WR
+  publisher: American Academy of Orthopaedic Surgeons (OrthoInfo)
+  year: 2026
+  type: patient_information
+  url: https://www.orthoinfo.org/en/diseases--conditions/frozen-shoulder/
+  doi: null
+  accessed: 2026-11-09
+  population: General public (US)
+  key_finding: "Frozen shoulder most commonly affects people between 40 and 60 and occurs in women more often than men. It is much more common in people with diabetes (reason unknown), and is associated with hypothyroidism, hyperthyroidism, Parkinson's disease and cardiac disease; it can follow immobilization after surgery, fracture or injury. Stages: freezing (pain worsens, motion lost; about 6 weeks to 9 months), frozen (pain may improve, stiffness remains; 4 to 6 months), thawing (motion slowly improves; about 6 months to 2 years). It generally gets better over time without surgery, although it may take up to 3 years. Physical therapy focused on shoulder flexibility is the primary treatment recommendation; also NSAIDs, cortisone injections, hydrodilatation if other nonsurgical methods fail, and surgery (manipulation under anesthesia, arthroscopic capsular release) if conservative treatment does not help. Improving diabetes control can help recovery."
+  funding_conflict: null
+  verified: true
+  notes: Peer-reviewed by Thomas Ward Throckmorton, MD; no last-reviewed date shown (copyright 1995-2026). The page does not mention menopause or hormones.
+
+- id: navarro-ledesma-frozen-shoulder-estrogen-review-2025
+  title: "Frozen Shoulder as a Systemic Immunometabolic Disorder: The Roles of Estrogen, Thyroid Dysfunction, Endothelial Health, Lifestyle, and Clinical Implications"
+  authors:
+    - Navarro-Ledesma S
+  publisher: Journal of Clinical Medicine
+  year: 2025
+  type: other
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12564958/
+  doi: 10.3390/jcm14207315
+  accessed: 2026-11-09
+  population: Narrative-scoping review of literature on frozen shoulder mechanisms
+  key_finding: Narrative-scoping review (explicitly not a systematic review; no formal risk-of-bias scoring) proposing that estrogen deficiency or reduced estrogen signaling may weaken anti-inflammatory and antifibrotic defenses and predispose peri- and postmenopausal women to more severe frozen shoulder. Treats female predominance as documented but places the estrogen mechanism among emerging hypotheses still under study, notes that not all postmenopausal women develop frozen shoulder and premenopausal cases occur, and calls for future research.
+  funding_conflict: Not read (statement is past the portion of the full text reviewed).
+  verified: true
+  notes: PMID 41156183. J Clin Med 2025;14(20):7315. Hypothesis-generating; cite only for "a proposed, unproven mechanism".
+
+- id: nhs-bloating
+  title: Bloating
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/conditions/bloating/
+  doi: null
+  accessed: 2026-11-09
+  population: General public (UK)
+  key_finding: "The most common reason for bloating is a lot of gas in the gut, from certain foods and drinks or swallowing air; digestive problems such as constipation, food intolerance, coeliac disease and IBS can also cause it, some people feel bloated around their period, and persistent bloating can occasionally be a sign of something more serious such as ovarian cancer. Do: exercise regularly, chew with your mouth closed, drink plenty of water, eat soluble-fiber foods such as oats or linseed if constipated, eat smaller more frequent meals, gently massage the stomach. Don't: have lots of fizzy drinks, alcohol or caffeine; eat large amounts of gas-producing foods such as cabbage, beans or lentils; eat big meals late at night or slouch while eating; eat lots of processed, sugary, spicy or fatty foods; eat foods you're intolerant to. See a GP if you feel bloated regularly, keep feeling bloated after changing your diet, or have bloating with unintentional weight loss or blood in your poo. Urgent: bloating with vomiting, diarrhea or constipation, stomach ache, fever, a swelling or lump in the tummy, being unable to pee, poo or fart. Emergency (999/A&E): swollen stomach with sudden severe stomach ache, vomiting blood, or severe breathing difficulty."
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 21 January 2026.
+
+- id: niddk-gas-symptoms-causes
+  title: Symptoms & Causes of Gas in the Digestive Tract
+  authors: []
+  publisher: National Institute of Diabetes and Digestive and Kidney Diseases (NIH)
+  year: 2021
+  type: patient_information
+  url: https://www.niddk.nih.gov/health-information/digestive-diseases/gas-digestive-tract/symptoms-causes
+  doi: null
+  accessed: 2026-11-09
+  population: General public (US)
+  key_finding: Bloating is a feeling of fullness or swelling in the belly; only about half of people with bloating also have a visibly larger belly (distention). Gas comes from swallowed air (more with chewing gum, fizzy drinks, eating fast, smoking, loose dentures) and from gut bacteria breaking down undigested carbohydrates. Conditions that can cause gas or bloating include constipation, IBS, lactose and fructose intolerance, small intestinal bacterial overgrowth, celiac disease, GERD, gastroparesis, and blockages from conditions such as colorectal, ovarian or stomach cancer. Talk with a doctor if gas symptoms bother you, change suddenly, or come with abdominal pain, constipation, diarrhea or weight loss.
+  funding_conflict: null
+  verified: true
+  notes: Last reviewed June 2021.
+
+- id: niddk-gas-treatment
+  title: Treatment for Gas in the Digestive Tract
+  authors: []
+  publisher: National Institute of Diabetes and Digestive and Kidney Diseases (NIH)
+  year: 2021
+  type: patient_information
+  url: https://www.niddk.nih.gov/health-information/digestive-diseases/gas-digestive-tract/treatment
+  doi: null
+  accessed: 2026-11-09
+  population: General public (US)
+  key_finding: "To swallow less air: avoid chewing gum and hard candy, fizzy drinks and drinking through a straw; eat more slowly, sit down to eat, quit smoking. Diet: smaller, more frequent meals and less of the foods and drinks that increase gas, such as cruciferous vegetables (broccoli, kale), legumes (beans, peas, lentils), foods high in fiber, fructose or lactose, and sugar-free products with sweeteners ending in '-ol'. Diet changes may also help celiac disease, IBS and lactose intolerance. Talk with your doctor before using supplements, probiotics, or complementary or alternative medicines."
+  funding_conflict: null
+  verified: true
+  notes: Last reviewed June 2021. Names no specific products.
+
+- id: cdc-ovarian-cancer-symptoms
+  title: Symptoms of Ovarian Cancer
+  authors: []
+  publisher: Centers for Disease Control and Prevention
+  year: 2025
+  type: patient_information
+  url: https://www.cdc.gov/ovarian-cancer/symptoms/index.html
+  doi: null
+  accessed: 2026-11-09
+  population: General public (US)
+  key_finding: "Signs and symptoms: vaginal bleeding (particularly after menopause) or unusual discharge; pain or pressure in the pelvic area; abdominal or back pain; bloating; feeling full too quickly or difficulty eating; a change in bathroom habits such as more frequent or urgent need to urinate and/or constipation. If you have unusual vaginal bleeding, see a doctor right away. If you have any of the other signs for 2 weeks or longer and they are not normal for you, see a doctor."
+  funding_conflict: null
+  verified: true
+  notes: Page dated Feb. 26, 2025.
+
+- id: thevi-epo-hot-flashes-metaanalysis-2024
+  title: "Evening Primrose Oil for Menopause Hot Flashes: Systematic Review and Meta-Analysis"
+  authors:
+    - Thevi T
+    - De S
+    - Soe HHK
+  publisher: Journal of Menopausal Medicine
+  year: 2024
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/39829189/
+  doi: 10.6118/jmm.23038
+  accessed: 2026-11-09
+  population: Menopausal women in randomized and controlled clinical trials of evening primrose oil vs. placebo or other treatments
+  key_finding: "Hot flash severity was lower with evening primrose oil given for less than 6 months than with placebo, but there was no significant difference in hot flash frequency or duration. People taking evening primrose oil reported mild nausea and headache. Compared with black cohosh, no difference in severity at 4 weeks, but hot flashes were more severe with evening primrose oil at 8 weeks. Authors: current evidence is insufficient to draw firm conclusions."
+  funding_conflict: No potential conflict of interest reported.
+  verified: true
+  notes: Read via the PubMed abstract (NCBI E-utilities efetch).
+
+- id: larki-epo-menopause-metaanalysis-2025
+  title: "The Effect of Evening Primrose Oil on Menopausal Symptoms Management: A Systematic Review and Meta-Analysis"
+  authors:
+    - Larki M
+    - Mohammadi S
+    - Makvandi S
+  publisher: Journal of Caring Sciences
+  year: 2025
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/41883983/
+  doi: 10.34172/jcs.025.33570
+  accessed: 2026-11-09
+  population: 6 randomized controlled trials, 450 menopausal women
+  key_finding: Women taking evening primrose oil had 2.13 fewer hot flashes a day than controls, but this was not statistically significant; hot flash intensity fell by 0.19, also not significant. Hot flash duration was significantly shorter with evening primrose oil. Certainty of evidence was moderate to low; authors call for more rigorous research.
+  funding_conflict: Authors report no conflicts of interest.
+  verified: true
+  notes: Read via the PubMed abstract. The authors' conclusion ("EPO reduces menopausal symptoms") is stronger than their pooled results; cite the numbers, not the conclusion.
+
+- id: farzaneh-epo-hot-flashes-rct-2013
+  title: "The effect of oral evening primrose oil on menopausal hot flashes: a randomized clinical trial"
+  authors:
+    - Farzaneh F
+    - Fatehi S
+    - Sohrabi MR
+    - Alizadeh K
+  publisher: Archives of Gynecology and Obstetrics
+  year: 2013
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/23625331/
+  doi: 10.1007/s00404-013-2852-6
+  accessed: 2026-11-09
+  population: 56 menopausal women aged 45-59, Tehran, Iran; two 500 mg evening primrose oil capsules a day or placebo for 6 weeks
+  key_finding: Hot flash frequency, severity and duration improved 39%, 42% and 19% with evening primrose oil vs. 32%, 32% and 18% with placebo; only severity was significantly better than placebo (P<0.05).
+  funding_conflict: null
+  verified: true
+  notes: Read via the PubMed abstract.
+
+- id: nccih-evening-primrose-oil-2024
+  title: Evening Primrose Oil
+  authors: []
+  publisher: National Center for Complementary and Integrative Health (NIH)
+  year: 2024
+  type: patient_information
+  url: https://www.nccih.nih.gov/health/evening-primrose-oil
+  doi: null
+  accessed: 2026-11-09
+  population: General public (US)
+  key_finding: The seed oil contains omega-6 fatty acids, including gamma-linolenic acid (GLA). Insufficient evidence to show whether it helps menopause symptoms and other conditions it is promoted for. Probably safe for most adults taken by mouth; most common side effects are stomach-related (abdominal pain, nausea, diarrhea). May be safe in pregnancy and breastfeeding but evidence is not conclusive. Talk with a health care provider before use if you take any medicine, because some herbs and medicines interact in harmful ways.
+  funding_conflict: null
+  verified: true
+  notes: Page last updated November 2024. Does not list specific drug interactions.
+
+- id: mskcc-evening-primrose-oil-2022
+  title: Evening Primrose Oil (About Herbs)
+  authors: []
+  publisher: Memorial Sloan Kettering Cancer Center
+  year: 2022
+  type: patient_information
+  url: https://www.mskcc.org/cancer-care/integrative-medicine/herbs/evening-primrose-oil
+  doi: null
+  accessed: 2026-11-09
+  population: Patients and health professionals
+  key_finding: "Side effects: abdominal pain, indigestion, nausea, softening of stools, headaches. Interactions: with anticoagulants/antiplatelets (e.g. warfarin) may add to bleeding risk; may raise blood pressure (a population study; no interactions with blood pressure drugs reported); significantly raises levels of antiretroviral drugs (lopinavir). Pregnant women should not take it because of pregnancy complications; people with hormone-sensitive cancers should use it with caution."
+  funding_conflict: null
+  verified: true
+  notes: Page last updated February 16, 2022. Patient and health-professional sections read.
+
+- id: leblanc-whi-calcium-vitamin-d-menopause-symptoms-2015
+  title: "Calcium and vitamin D supplementation do not influence menopause-related symptoms: Results of the Women's Health Initiative Trial"
+  authors:
+    - LeBlanc ES
+    - Hedlin H
+    - Qin F
+    - Desai M
+    - Wactawski-Wende J
+    - Perrin N
+    - Manson JE
+    - Johnson KC
+    - Masaki K
+    - Tylavsky FA
+    - Stefanick ML
+  publisher: Maturitas
+  year: 2015
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/26044075/
+  doi: 10.1016/j.maturitas.2015.04.007
+  accessed: 2026-11-09
+  population: Postmenopausal women in the WHI Calcium/Vitamin D trial (17,101 calcium + vitamin D vs. 17,056 placebo; average age 64), mean follow-up 5.7 years
+  key_finding: Daily 1,000 mg calcium carbonate plus 400 IU vitamin D did not change the number of menopause-related symptoms vs. placebo (p=0.702), nor sleep disturbance, emotional well-being or energy/fatigue. No significant difference for any individual symptom, including hot flashes (p=0.491) and night sweats (p=0.892) (full text, Table 3).
+  funding_conflict: WHI is funded by the National Heart, Lung, and Blood Institute, NIH; the funder had no role in analysis or reporting.
+  verified: true
+  notes: Abstract via E-utilities; individual-symptom p-values from the PMC full text (PMC4469550).
+
+- id: manson-whi-trials-clinical-practice-2024
+  title: "The Women's Health Initiative Randomized Trials and Clinical Practice: A Review"
+  authors:
+    - Manson JE
+    - Crandall CJ
+    - Rossouw JE
+    - Chlebowski RT
+    - Anderson GL
+    - Stefanick ML
+    - Aragaki AK
+  publisher: JAMA
+  year: 2024
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/38691368/
+  doi: 10.1001/jama.2024.6542
+  accessed: 2026-11-09
+  population: Postmenopausal US women aged 50-79 in the WHI clinical trials (68,132), followed up to 20 years
+  key_finding: The WHI results do not support routinely recommending calcium plus vitamin D supplementation for fracture prevention in all postmenopausal women; calcium and vitamin D are appropriate for women who do not meet national guidelines for recommended intakes through diet.
+  funding_conflict: null
+  verified: true
+  notes: Narrative review by WHI investigators (19 authors; first 7 listed). Read via the PubMed abstract.
+
+- id: medlineplus-vitamin-d
+  title: Vitamin D
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2025
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/002405.htm
+  doi: null
+  accessed: 2026-11-09
+  population: General public (US)
+  key_finding: "RDA: 600 IU (15 mcg) a day for ages 19-70 and 800 IU (20 mcg) a day for adults over 70. Upper limit 4,000 IU (100 mcg) a day for ages 9 and older. Too much vitamin D raises blood calcium, which can cause calcium deposits in soft tissues such as the heart and lungs, confusion, kidney damage, kidney stones, nausea, vomiting, constipation, poor appetite, weakness and weight loss; toxicity almost always comes from too many supplements. Sources: fatty fish, fortified milk and cereals, UV-exposed mushrooms; skin makes it in sunlight. A provider may recommend higher doses for people with osteoporosis risk factors."
+  funding_conflict: null
+  verified: true
+  notes: Review date 1/21/2025, updated 08/12/2025. Used in place of the NIH ODS vitamin D fact sheet, which blocked automated fetching (Cloudflare 403); the RDA and UL figures are the same National Academies DRIs.
+
+- id: uspstf-vitamin-d-deficiency-screening-2021
+  title: "Vitamin D Deficiency in Adults: Screening"
+  authors: []
+  publisher: US Preventive Services Task Force
+  year: 2021
+  type: guideline
+  url: https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/vitamin-d-deficiency-screening
+  doi: null
+  accessed: 2026-11-09
+  population: Asymptomatic, community-dwelling, nonpregnant adults (US)
+  key_finding: "I statement (April 2021): evidence is insufficient to assess the balance of benefits and harms of screening for vitamin D deficiency in asymptomatic adults. Does not apply to people with signs or symptoms such as bone pain or muscle weakness, people with conditions for which vitamin D treatment is recommended, or people who are hospitalized or in nursing homes. No one blood-level cutpoint defines deficiency. Factors linked to lower levels: low dietary intake, little sun (winter, high latitude, sun avoidance), older age, obesity, and being non-Hispanic Black."
+  funding_conflict: null
+  verified: true
+  notes: Updates the 2014 statement, which was also an I statement.
+
+- id: demay-endocrine-society-vitamin-d-2024
+  title: "Vitamin D for the Prevention of Disease: An Endocrine Society Clinical Practice Guideline"
+  authors:
+    - Demay MB
+    - Pittas AG
+    - Bikle DD
+    - Diab DL
+    - Kiely ME
+    - Lazaretti-Castro M
+    - Lips P
+    - Mitchell DM
+    - Murad MH
+    - Powers S
+    - Rao SD
+    - Scragg R
+  publisher: Journal of Clinical Endocrinology & Metabolism (Endocrine Society)
+  year: 2024
+  type: guideline
+  url: https://pubmed.ncbi.nlm.nih.gov/38828931/
+  doi: 10.1210/clinem/dgae290
+  accessed: 2026-11-09
+  population: People without established indications for vitamin D treatment or 25(OH)D testing
+  key_finding: Suggests against vitamin D above the current Dietary Reference Intakes to lower disease risk in healthy adults under 75; suggests empiric supplementation for adults 75 and older (and children, pregnancy, high-risk prediabetes). Suggests against routine 25(OH)D blood testing in all populations considered, as no trial evidence supports routine screening and no optimal level for disease prevention is defined. For nonpregnant people over 50 for whom vitamin D is indicated, suggests daily dosing rather than intermittent high doses. Does not apply to people with established reasons for treatment or testing.
+  funding_conflict: null
+  verified: true
+  notes: Read via the PubMed abstract. Panel disclosures not reviewed.
+
+- id: ftc-amberen-complaint-2015
+  title: FTC Charges Marketers with Misleading Claims That Their Supplement Causes Weight Loss, Fat Loss, and Increased Metabolism in Women Over Forty
+  authors: []
+  publisher: Federal Trade Commission
+  year: 2015
+  type: regulator_statement
+  url: https://www.ftc.gov/news-events/press-releases/2015/05/ftc-charges-marketers-misleading-claims-their-supplement-causes
+  doi: null
+  accessed: 2026-11-09
+  population: Marketing of Amberen by Lunada Biomedical, Inc. (US)
+  key_finding: "May 12, 2015: the FTC charged Lunada Biomedical and three officers with unsupported claims that Amberen causes significant weight loss, belly-fat loss and increased metabolism in women over 40, and with a false 93 percent satisfaction/success claim. The complaint says a later study found no statistically significant weight-loss difference between test and control groups. These are allegations; the court decides the case."
+  funding_conflict: null
+  verified: true
+  notes: Press release read in full.
+
+- id: ftc-amberen-settlement-2016
+  title: Marketers of Dietary Supplement Amberen Settle FTC Charges Regarding Misleading Weight-Loss and Menopause Relief Claims
+  authors: []
+  publisher: Federal Trade Commission
+  year: 2016
+  type: regulator_statement
+  url: https://www.ftc.gov/node/44912
+  doi: null
+  accessed: 2026-11-09
+  population: Marketing of Amberen by Lunada Biomedical, Inc. (US)
+  key_finding: "May 20, 2016: settlement of FTC charges that the marketers lacked support for claims that Amberen causes substantial weight loss and relieves nearly every common menopause symptom (hot flashes, night sweats, sleep problems, fatigue, irritability), and falsely claimed these benefits were proven in clinical studies; also alleged undisclosed endorser relationships, a 93 percent satisfaction claim and 'risk-free' trials. The order bars weight-loss or menopause-relief claims for any supplement, food or drug without qualifying human clinical testing. $40 million judgment, all but $250,000 suspended for inability to pay."
+  funding_conflict: null
+  verified: true
+  notes: Read at the ftc.gov node URL (the press-release slug URL returned 404 to the fetcher).
+
+- id: fda-dietary-supplements-qa-2026
+  title: Questions and Answers on Dietary Supplements
+  authors: []
+  publisher: US Food and Drug Administration
+  year: 2026
+  type: regulator_statement
+  url: https://www.fda.gov/food/information-consumers-using-dietary-supplements/questions-and-answers-dietary-supplements
+  doi: null
+  accessed: 2026-11-09
+  population: US consumers and industry
+  key_finding: By law, FDA does not approve dietary supplements or their labeling before they are marketed; manufacturers and distributors are responsible for safety and must have substantiation that label claims are truthful and not misleading. A product marketed to treat a specific disease is regulated as a drug; only a drug can legally make such a claim.
+  funding_conflict: null
+  verified: true
+  notes: Content current as of 08/27/2026.
+
+- id: amberen-own-site-2026
+  title: Amberen product pages (own site), including Complete Menopause Relief Capsules
+  authors: []
+  publisher: Amberen (manufacturer's website)
+  year: 2026
+  type: other
+  url: https://amberen.com/menopause-capsules/
+  doi: null
+  accessed: 2026-11-09
+  population: Product marketing (US)
+  key_finding: Site sells Complete Menopause Relief Capsules and Gummies, Perimenopause Relief Capsules, Keep Cool, Libido Spark, Find Focus and Keep Agile. The capsule page describes the formula only as a 'proprietary mineral complex of adaptogenic succinates, amino acids, and antioxidant vitamin E', 'free from drugs, hormones, sugar, and soy'; no supplement facts panel with amounts, no directions and no specific warnings on the page. A footnote cites 'a 90-day placebo-controlled study, 125 women with mild to moderate menopause symptoms' without naming the publication or sponsor.
+  funding_conflict: Manufacturer's own marketing.
+  verified: true
+  notes: Read amberen.com home page and /menopause-capsules/ on 2026-11-09. Use only for what the company says about its own products.
+
+- id: medlineplus-menopause-2026
+  title: Menopause
+  authors: []
+  publisher: MedlinePlus (U.S. National Library of Medicine)
+  year: 2026
+  type: patient_information
+  url: https://medlineplus.gov/menopause.html
+  doi: null
+  accessed: 2026-11-09
+  population: General public (US)
+  key_finding: Menopause is the time in your life when you stop having your period and can no longer get pregnant; you have reached menopause when you have not had a period for 12 months. The most common age for reaching menopause is between 45 and 55. The transition before it (perimenopause) usually begins in your 40s, sometimes earlier, and can last several years. Symptoms include changes in periods, hot flashes, night sweats, trouble sleeping, vaginal dryness, mood changes and bladder problems; lower estrogen can also lower bone density. Surgery to remove both ovaries can cause menopause; removing only the uterus stops periods but does not cause menopause unless the ovaries are also removed. Chemotherapy or hormone treatment for breast cancer can bring on menopause earlier. You may not need treatment for menopause symptoms.
+  funding_conflict: null
+  verified: true
+  notes: Page last updated August 3, 2026. Read via WebFetch on 2026-11-09.
+
+- id: acs-mht-after-breast-cancer-2025
+  title: Menopausal Hormone Therapy After Breast Cancer
+  authors: []
+  publisher: American Cancer Society (medical review by ASCO)
+  year: 2025
+  type: patient_information
+  url: https://www.cancer.org/cancer/types/breast-cancer/living-as-a-breast-cancer-survivor/menopausal-hormone-therapy-after-breast-cancer.html
+  doi: null
+  accessed: 2026-11-09
+  population: Breast cancer survivors (US)
+  key_finding: Doctors generally do not recommend menopausal hormone therapy after breast cancer, but there might be exceptions. In the HABITS randomized trial, survivors taking hormone therapy were much more likely to have a new breast cancer or a recurrence. Risk is clearly increased after hormone receptor-positive (ER+ or PR+) cancer, so it is typically not recommended; after ER- and PR- cancer the risk is less clear and some doctors might consider it if non-hormonal treatments are not helping. Chemotherapy, tamoxifen, aromatase inhibitors and other hormone medicines for breast cancer can cause menopause symptoms. Non-hormonal medicines that may help hot flashes include fezolinetant (Veozah) or elinzanetant (Lynkuet), certain antidepressants (some can interact with tamoxifen), gabapentin, clonidine and oxybutynin. Eating soy foods seems to be safe for survivors; it is not clear that phytoestrogen supplements (soy, red clover, black cohosh) are safe after hormone receptor-positive cancer. For vaginal dryness, vaginal moisturizers, lubricants and gels come first; if not helpful, low-dose vaginal hormone products might help, after discussing risks and benefits with the care team.
+  funding_conflict: null
+  verified: true
+  notes: Last revised October 27, 2025. Developed by the ACS medical and editorial content team with medical review by ASCO. Read in full on 2026-11-09.
+
+- id: prh-new-menopause-haver-2024
+  title: The New Menopause, by Mary Claire Haver, MD (publisher listing)
+  authors: []
+  publisher: Penguin Random House (Rodale Books)
+  year: 2024
+  type: other
+  url: https://www.penguinrandomhouse.com/books/738539/the-new-menopause-by-mary-claire-haver-md/
+  doi: null
+  accessed: 2026-11-09
+  population: Readers in perimenopause and menopause
+  key_finding: Rodale Books, April 30, 2024, 320 pages. Author bio describes Mary Claire Haver, MD, as a board-certified OB/GYN, Certified Culinary Medicine Specialist and Certified Menopause Provider who founded The 'Pause Wellness, a midlife-focused medical practice. The description promises an A-to-Z symptom toolkit, strategies to lower risks such as osteoporosis and cardiovascular disease, guidance for midlife wellness visits and the latest research on hormone therapy.
+  funding_conflict: Publisher's own listing (promotional description).
+  verified: true
+  notes: The registry entry haver-new-menopause points to rodalebooks.com/new-menopause, which now redirects to the generic Rodale imprint page (checked 2026-11-09).
+
+- id: prh-next-level-sims-2022
+  title: Next Level, by Stacy T. Sims, PhD, with Selene Yeager (publisher listing)
+  authors: []
+  publisher: Penguin Random House (Rodale Books)
+  year: 2022
+  type: other
+  url: https://www.penguinrandomhouse.com/books/667685/next-level-by-stacy-t-sims-phd-with-selene-yeager/
+  doi: null
+  accessed: 2026-11-09
+  population: Active women in perimenopause and postmenopause
+  key_finding: Rodale Books, May 17, 2022. Describes the book as a physiology-based guide to peak performance for active women through menopause, by exercise and nutrition scientist Stacy T. Sims, PhD, with Selene Yeager, a certified personal trainer, triathlete and professional mountain bike racer who has written or contributed to more than two dozen books.
+  funding_conflict: Publisher's own listing (promotional description).
+  verified: true
+  notes: The registry entry sims-next-level points to rodalebooks.com/next-level, which now redirects to the generic Rodale imprint page (checked 2026-11-09).
+
+- id: nasem-compounded-bht-2020
+  title: Prescribers Should Restrict the Use of Non-FDA-Approved Compounded Bioidentical Hormones, Except for Specific Medical Circumstances
+  authors: []
+  publisher: National Academies of Sciences, Engineering, and Medicine
+  year: 2020
+  type: guideline
+  url: https://www.nationalacademies.org/news/2020/07/prescribers-should-restrict-the-use-of-non-fda-approved-compounded-bioidentical-hormones-except-for-specific-medical-circumstances
+  doi: null
+  accessed: 2026-11-09
+  population: People using or considering compounded bioidentical hormone therapy (cBHT)
+  key_finding: Report requested by the FDA (which does not review or approve compounded preparations). The committee found insufficient evidence to support the clinical utility of cBHT; claims of clinical utility are not substantiated by well-designed studies. cBHTs have not been subjected to regulatory oversight or rigorous safety, efficacy and quality control testing, and the lack of standardization can increase the possibility of overdosing, underdosing or contamination. Recommends limiting cBHT to patients allergic to an ingredient in an FDA-approved product or who need a dosage form not available in an FDA-approved product. Says millions of men and women use cBHTs. Recommends cBHT pellets be considered for the FDA Difficult to Compound List because of safety concerns with the delivery mechanism.
+  funding_conflict: Study sponsored by the U.S. Food and Drug Administration.
+  verified: true
+  notes: 'News release for the 2020 consensus report "The Clinical Utility of Compounded Bioidentical Hormone Therapy: A Review of Safety, Effectiveness, and Use" (doi 10.17226/25791; report page https://www.nationalacademies.org/publications/25791 confirms the FDA request). Classed as guideline because it is a consensus study report.'
+
+- id: fda-hrt-consumer-update-2026
+  title: Hormone Replacement Therapies Can Help Women with Bothersome Menopausal Symptoms
+  authors: []
+  publisher: U.S. Food and Drug Administration
+  year: 2026
+  type: patient_information
+  url: https://www.fda.gov/consumers/consumer-updates/hormone-replacement-therapies-can-help-women-bothersome-menopausal-symptoms
+  doi: null
+  accessed: 2026-11-09
+  population: U.S. consumers considering menopausal hormone therapy
+  key_finding: The FDA requested that sponsors remove language about the risk of cardiovascular disease, breast cancer and probable dementia from the boxed warning; the request covers all HRT products that contain estrogen or progestogen, in all dose forms. The FDA is not requesting removal of the boxed warning for endometrial cancer for systemic estrogen-alone products, and did not ask companies to remove cardiovascular disease and breast cancer risks from the Warnings and Precautions section. A health care provider can help decide the best treatment based on symptoms, history and preferences.
+  funding_conflict: null
+  verified: true
+  notes: Content current as of 02/13/2026.
+
+- id: fda-estradiol-patch-availability-2026
+  title: FDA Update on Estradiol Transdermal Patch Availability
+  authors: []
+  publisher: U.S. Food and Drug Administration
+  year: 2026
+  type: regulator_statement
+  url: https://www.fda.gov/drugs/drug-alerts-and-statements/fda-update-estradiol-transdermal-patch-availability
+  doi: null
+  accessed: 2026-11-09
+  population: U.S. patients using estradiol transdermal patches
+  key_finding: On 9/3/2026 the FDA said it was aware of reports of patients having difficulty readily accessing their usual estradiol transdermal patches because of increased demand after the November 2025 FDA action on boxed warnings; supply of FDA-approved estradiol patches has nearly doubled over the past year and the FDA is working with all six manufacturers to increase supply.
+  funding_conflict: null
+  verified: true
+  notes: Content current as of 09/03/2026.

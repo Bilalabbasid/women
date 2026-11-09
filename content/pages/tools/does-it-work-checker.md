@@ -1,7 +1,7 @@
 ---
 title: "Evidence checker: filter menopause treatments by symptom"
-seo_title: "Menopause treatment evidence checker tool"
-meta_description: "Search HRT, Veozah, Lynkuet, CBT, vaginal moisturisers and popular supplements by symptom, and see each one's evidence grade and guideline source."
+seo_title: "Menopause treatment evidence checker by symptom"
+meta_description: "See what the evidence says about HRT, Veozah, Lynkuet, CBT, vaginal moisturizers and supplements, by symptom. Each shows a grade and its guideline source."
 cluster: tools
 primary_keyword: menopause treatment evidence
 slug: does-it-work-checker
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-09"
 change_log:
+  - { date: "2026-11-09", summary: "Plain opening on what the checker does; new sections on the most effective treatments for hot flashes, vaginal dryness and bladder leaks; US spelling", material: true }
   - { date: "2026-11-06", summary: "Published interactive treatment and supplement evidence checker", material: true }
   - { date: "2026-11-06", summary: "Added how to use the checker, why older advice is out of date, more detailed verdicts to read next, a saved shortlist and new FAQs", material: true }
   - { date: "2026-11-07", summary: "Retitled to separate the checker tool from the directory of verdicts; oxybutynin listed separately from SSRIs, SNRIs and gabapentin", material: false }
@@ -34,7 +35,7 @@ claims:
     text: "The FDA approved elinzanetant (Lynkuet), a dual NK1 and NK3 receptor antagonist, on October 24, 2025."
     sources: [lynkuet-approval-bayer-2025]
   - id: gsm-first-line
-    text: "Regular non-hormonal vaginal moisturisers and personal lubricants during sex are recommended as first-line non-hormonal management for vaginal dryness, while low-dose vaginal estrogen is highly effective for persistent moderate-to-severe symptoms."
+    text: "Regular non-hormonal vaginal moisturizers and personal lubricants during sex are recommended as first-line non-hormonal management for vaginal dryness, while low-dose vaginal estrogen is highly effective for persistent moderate-to-severe symptoms."
     sources: [nams-2020-gsm, acog-clinical-consensus-gsm]
   - id: pfmt-first-line
     text: "NICE NG123 and Cochrane reviews support at least 3 months of supervised pelvic floor muscle training as first-line treatment for stress and mixed urinary incontinence."
@@ -57,11 +58,11 @@ faq:
     a: "No. Nobody pays to be listed or graded. Grades come from published guidelines and trials alone, and the site has no ads and no sponsors."
 ---
 
-This tool filters treatments side by side. For a full write-up of a single supplement or remedy, see our [verdicts directory](/does-it-work/). Pick a symptom or search for a treatment to see what current clinical guidelines say about it: an evidence grade, a short verdict and the guideline behind it. The checker covers hormone therapy, the newer non-hormonal prescriptions fezolinetant (Veozah) and elinzanetant (Lynkuet), CBT, pelvic floor training, vaginal moisturisers and popular supplements. Save the options you want to ask about and print a shortlist for your appointment. Every entry summarizes published evidence, never a personal recommendation or dose.
+This free checker shows what the evidence says about menopause treatments, side by side. Pick a symptom or type a name, such as HRT, Veozah or black cohosh, and each option shows an evidence grade, a short verdict and the guideline behind it. Save the ones you want to ask about and print a list. It never recommends a treatment or a dose.
 
 ::tool{id="does-it-work-checker"}
 
-## How to use the evidence checker
+## How do I use the evidence checker?
 
 1. **Do the safety check first.** If anything there applies, the advice to get help appears before the results.
 2. **Filter by symptom or goal**, such as hot flashes, vaginal dryness, bladder leaks, bone loss or sleep and mood, or by evidence grade.
@@ -70,16 +71,27 @@ This tool filters treatments side by side. For a full write-up of a single suppl
 
 **Example.** Choose *Hot flashes & night sweats* and the grade *Not recommended by guidelines*. You'll see over-the-counter herbal supplements and paced breathing, both of which The Menopause Society does not recommend for hot flashes [@nams-2023-nonhormone-therapy]. Switch the grade to *Strong evidence* to see the options it does recommend, then save two or three to discuss.
 
-## What the evidence grades mean
+## What do the evidence grades mean?
 
 - **Strong evidence:** Supported by medical society position statements (such as The Menopause Society 2022 hormone therapy statement [@nams-2022-hormone-therapy] and 2023 nonhormone therapy statement [@nams-2023-nonhormone-therapy]), NICE guidelines [@nice-ng123-urinary-incontinence], or Cochrane systematic reviews [@cochrane-pfmt-incontinence].
-- **Moderate evidence:** Recommended as first-line non-hormonal care or supported by smaller randomized trials (for example, non-hormonal vaginal moisturisers for genitourinary symptoms [@nams-2020-gsm]).
+- **Moderate evidence:** Recommended as first-line non-hormonal care or supported by smaller randomized trials (for example, non-hormonal vaginal moisturizers for vaginal symptoms [@nams-2020-gsm]).
 - **Limited / comfort aid:** Practical comfort measures (such as cooling pillows and breathable sleepwear) that are not recommended by clinical guidelines as a medical treatment that stops hot flashes [@nams-2023-nonhormone-therapy], but are used for everyday comfort.
 - **Not recommended by guidelines:** Over-the-counter supplements, herbs and techniques where controlled trials did not show consistent benefit over placebo for vasomotor symptoms [@nams-2023-nonhormone-therapy].
 
 A grade describes the evidence for one use, such as *black cohosh for hot flashes*, not the product in general. Our page on [how we grade evidence](/evidence/how-we-grade/) explains the full method.
 
-## Why a lot of hot flash advice online is out of date
+## What is the most effective treatment for menopause symptoms?
+
+For hot flashes and night sweats, hormone therapy is the most effective treatment, and it also prevents bone loss. The Menopause Society says its benefits outweigh its risks for healthy women under 60 or within 10 years of menopause [@nams-2022-hormone-therapy]. The best option for you also depends on your symptom and health history:
+
+- **Hot flashes without hormones**: The Menopause Society's best-supported (Level I) options are CBT, clinical hypnosis, certain SSRIs and SNRIs, gabapentin and fezolinetant, with oxybutynin also recommended [@nams-2023-nonhormone-therapy]. Elinzanetant was approved by the FDA in October 2025, after that statement [@lynkuet-approval-bayer-2025].
+- **Vaginal dryness and painful sex**: Regular vaginal moisturizers plus a lubricant during sex come first. Low-dose vaginal estrogen works well for symptoms that persist [@nams-2020-gsm; @acog-clinical-consensus-gsm].
+- **Bladder leaks**: At least 3 months of supervised pelvic floor muscle training is the first treatment for stress and mixed leaks [@nice-ng123-urinary-incontinence; @cochrane-pfmt-incontinence].
+- **Supplements and herbs**: The Menopause Society does not recommend over-the-counter supplements or herbal remedies for hot flashes, because trials haven't shown consistent benefit [@nams-2023-nonhormone-therapy].
+
+The checker shows the same information for each option, so you can compare them before an appointment. Read [is hormone therapy right for me?](/treatments/hormone-therapy/is-it-right-for-me/) for the questions that decide it.
+
+## Why is a lot of hot flash advice online out of date?
 
 Many articles about "what works" for hot flashes predate the current guidance. The Menopause Society's 2023 nonhormone statement includes fezolinetant among its Level I recommendations [@nams-2023-nonhormone-therapy], and the FDA approved elinzanetant in October 2025 [@lynkuet-approval-bayer-2025]. Older advice may not mention either. The checker is updated when guidelines or approvals change, and each verdict names its source so you can check how current it is.
 
@@ -88,7 +100,7 @@ Many articles about "what works" for hot flashes predate the current guidance. T
 - [Non-hormonal treatments for hot flashes](/treatments/nonhormonal/), including [fezolinetant (Veozah)](/treatments/nonhormonal/fezolinetant/) and [elinzanetant (Lynkuet)](/treatments/nonhormonal/elinzanetant/)
 - [Does black cohosh work?](/does-it-work/black-cohosh/) and [soy and isoflavones for hot flashes](/does-it-work/soy-isoflavones/)
 - [Hot flashes: hormonal and non-hormonal evidence](/symptoms/hot-flashes/)
-- [Vaginal moisturisers vs lubricants for dryness](/care/moisturizers-and-lubricants/)
+- [Vaginal moisturizers vs lubricants for dryness](/care/moisturizers-and-lubricants/)
 - [Is hormone therapy right for me?](/treatments/hormone-therapy/is-it-right-for-me/)
 - Every supplement and remedy we've rated, in the [Does it work? directory of verdicts](/does-it-work/)
 

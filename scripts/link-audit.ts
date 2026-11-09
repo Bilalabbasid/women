@@ -50,7 +50,8 @@ const edges: Edge[] = [];
 const add = (from: string, to: string, anchor: string, kind: Edge['kind']) => edges.push({ from, to, anchor, kind });
 
 // Site chrome: every page links to the nav hubs that exist, Tools and Urgent help.
-const navTargets = [...NAV_HUBS.filter((h) => byUrl.has(h)), '/tools/', '/urgent-help/'];
+// The header menu (src/components/site/site-chrome.tsx) also lists the menopause and postmenopause hubs.
+const navTargets = [...[...NAV_HUBS, '/menopause/', '/postmenopause/'].filter((h) => byUrl.has(h)), '/tools/', '/urgent-help/'];
 for (const t of navTargets) add('/', t, `nav:${t}`, 'nav');
 // Home lists the six most recently updated pages.
 [...pages]

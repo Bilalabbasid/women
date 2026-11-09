@@ -1,7 +1,7 @@
 ---
 title: "Am I in perimenopause? Stage guide"
-seo_title: "Am I in perimenopause? Free stage quiz (STRAW+10)"
-meta_description: "Answer 5 questions about your age, periods and hot flashes to see which STRAW+10 stage your pattern resembles. No score, no email. It can't diagnose."
+seo_title: "Am I in perimenopause? Free, private quiz"
+meta_description: "A free, private perimenopause quiz: answer a few questions about your age, periods and hot flashes to see which STRAW+10 stage you resemble. No email, no score."
 cluster: tools
 primary_keyword: am i in perimenopause quiz
 slug: stage-guide
@@ -19,8 +19,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-09"
 change_log:
+  - { date: "2026-11-09", summary: "Opening says plainly it is a free, private quiz; question count corrected to match the tool (four to seven questions); new sections on how to tell if you are in perimenopause and when it starts", material: true }
   - { date: "2026-11-06", summary: "Published interactive STRAW+10 stage guide and clinical reference", material: true }
   - { date: "2026-11-06", summary: "Retitled around the question readers ask, added how the guide maps answers to stages, a worked example, saved answers and new FAQs", material: true }
 evidence_grade: null
@@ -32,7 +33,7 @@ claims:
     text: "In otherwise healthy people aged 45 or over, NICE advises identifying perimenopause without laboratory tests if vasomotor symptoms have recently started along with any change in periods, and menopause after 12 months without a period when not using hormonal contraception."
     sources: [nice-ng23-recommendations]
   - id: nice-no-routine-tests
-    text: "At age 45 or over, NICE advises against using AMH, inhibin A or B, oestradiol, antral follicle count, or ovarian volume to identify perimenopause or menopause."
+    text: "At age 45 or over, NICE advises against using AMH, inhibin A or B, estradiol, antral follicle count, or ovarian volume to identify perimenopause or menopause."
     sources: [nice-ng23-recommendations]
   - id: postmenopausal-bleeding
     text: "Any vaginal bleeding after menopause should be checked by a doctor, even a small amount or a single episode."
@@ -40,7 +41,7 @@ claims:
 safety_flags: [urgent_symptoms, bleeding, crisis]
 cta_profile: tool
 hub: /tools/
-sources: [straw-10-2012, nice-ng23-recommendations, nice-ng23, nhs-postmenopausal-bleeding, nhs-heart-palpitations, lifeline-988, samaritans-contact]
+sources: [straw-10-2012, nice-ng23-recommendations, nice-ng23, medlineplus-menopause-2026, nhs-postmenopausal-bleeding, nhs-heart-palpitations, lifeline-988, samaritans-contact]
 related: [/perimenopause/stages/, /tools/symptoms-checklist/, /tools/12-month-counter/, /perimenopause/vs-menopause/]
 faq:
   - q: "Can a perimenopause quiz tell me for sure whether I'm in perimenopause?"
@@ -55,13 +56,13 @@ faq:
     a: "Yes. Your answers are kept in this browser on this device, and you can save a dated copy each time, then reopen or delete past answers. Saving one every few months shows how your period pattern has shifted, which is useful to bring to an appointment."
 ---
 
-Answer five short questions about your age, your periods and hot flashes, and the guide shows which stage of the **STRAW+10 staging criteria** your pattern resembles [@straw-10-2012], plus how **UK NICE guideline NG23** uses the same information [@nice-ng23-recommendations]. Unlike most perimenopause quizzes, it doesn't give you a score or ask for your email, and it can't diagnose you: cycle changes can have other causes that a clinician needs to check.
+This free, private perimenopause stage quiz asks a few short questions about your age, periods and hot flashes, then shows which **STRAW+10** stage your pattern resembles and how **UK NICE guidance** reads it [@straw-10-2012; @nice-ng23-recommendations]. There's no score, email or account, and your answers stay on your device. It can't diagnose you, because cycle changes can have other causes.
 
 ::tool{id="stage-guide"}
 
-## How the stage guide reads your answers
+## How does the stage quiz work?
 
-There's no scoring. Each answer selects the part of the published criteria that applies to it:
+You answer one question per screen, four to seven in all depending on your answers, ending with a safety check. There's no scoring: each answer selects the part of the published criteria that applies to it:
 
 | Your periods over the past year | What STRAW+10 calls that pattern |
 |---|---|
@@ -81,7 +82,13 @@ Say you're 46, you don't use hormonal contraception, your last two cycles were 2
 - **Hormonal contraception, a hormonal IUD or a hysterectomy:** bleeding no longer reflects your natural cycle, so the period-based stages don't apply.
 - **Under 40:** the criteria weren't designed to identify menopause at this age, and NICE advises a specific assessment for [premature ovarian insufficiency](/groups/premature-ovarian-insufficiency/).
 
-## How the STRAW+10 staging criteria work
+## How do I know if I'm in perimenopause?
+
+The clearest sign is a change in your periods: under STRAW+10, perimenopause begins when the length of your cycles starts to differ by 7 days or more, again and again [@straw-10-2012]. At 45 and over, NICE says new hot flashes or sweats together with changing periods are usually enough for a clinician to identify it [@nice-ng23-recommendations].
+
+Perimenopause usually starts in your 40s, sometimes earlier, and can last several years [@medlineplus-menopause-2026]. It ends 12 months after your final period [@straw-10-2012]. Read about the [early signs of perimenopause](/perimenopause/early-signs/) and [what age perimenopause starts](/perimenopause/age/).
+
+## What are the stages of perimenopause?
 
 The Stages of Reproductive Aging Workshop + 10 (STRAW+10) is the international consensus framework used in research and clinics to describe reproductive aging [@straw-10-2012]:
 
@@ -91,9 +98,9 @@ The Stages of Reproductive Aging Workshop + 10 (STRAW+10) is the international c
 
 For more on each stage, read our guide to [the stages of perimenopause](/perimenopause/stages/), how [perimenopause differs from menopause](/perimenopause/vs-menopause/), and what [irregular periods in perimenopause](/perimenopause/irregular-periods/) can look like.
 
-## Why blood tests are rarely used at 45 and over
+## Can a blood test tell if I'm in perimenopause?
 
-In the UK, NICE guideline NG23 advises that for otherwise healthy people aged 45 or over, perimenopause can be identified from recently started vasomotor symptoms (hot flashes and sweats) together with a change in menstrual cycles, **without laboratory tests** [@nice-ng23-recommendations]. At 45 and over, NICE specifically advises against using anti-Müllerian hormone (AMH), inhibin A or B, oestradiol, antral follicle count or ovarian volume to identify perimenopause [@nice-ng23-recommendations]. See [questions to ask your doctor about perimenopause](/perimenopause/questions-for-your-doctor/) for when blood tests *are* considered, such as under 45.
+At 45 and over, usually not. UK NICE guideline NG23 advises that for otherwise healthy people aged 45 or over, perimenopause can be identified from recently started vasomotor symptoms (hot flashes and sweats) together with a change in menstrual cycles, **without laboratory tests** [@nice-ng23-recommendations]. At 45 and over, NICE specifically advises against using anti-Müllerian hormone (AMH), inhibin A or B, estradiol, antral follicle count or ovarian volume to identify perimenopause [@nice-ng23-recommendations]. See [questions to ask your doctor about perimenopause](/perimenopause/questions-for-your-doctor/) for when blood tests *are* considered, such as under 45.
 
 ## When to get help now
 

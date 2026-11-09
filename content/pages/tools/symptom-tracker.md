@@ -1,7 +1,7 @@
 ---
 title: Menopause symptom tracker and doctor report
-seo_title: "Free menopause symptom tracker & doctor report"
-meta_description: "Log hot flashes, sleep, mood, bleeding and symptoms daily or weekly, then print a one-page report for your doctor. Free, no account, stays on your device."
+seo_title: "Free menopause tracker: private, works offline"
+meta_description: "A free menopause symptom tracker that keeps entries only on your device and works offline. Log symptoms daily or weekly, then print a one-page doctor report."
 cluster: tools
 primary_keyword: menopause symptom tracker
 slug: symptom-tracker
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-08"
+updated_at: "2026-11-09"
 change_log:
+  - { date: "2026-11-09", summary: "Opening now says plainly it is a free, private tracker that stores entries only on your device and works offline once installed; question-style headings", material: true }
   - { date: "2026-11-08", summary: "Plain quick answer, accurate reminders and offline sections matching the app, doctor report PDF details, UK crisis line, new FAQs", material: true }
   - { date: "2026-11-06", summary: "First draft of the tracker guide", material: true }
   - { date: "2026-11-06", summary: "Added how-to steps, an example report, editing and backing up entries, and new FAQs", material: true }
@@ -44,21 +45,19 @@ faq:
     a: "Only in this browser on this device. There's no account, and nothing is sent to us, to analytics or to advertisers. You can download a backup file, and delete single entries, a date range, or everything, from Manage storage in the tracker's settings."
   - q: "What happens to my entries if I clear my browser or change phone?"
     a: "Clearing your browser's data can delete them, and a new phone won't have them, because they only exist in this browser. Download a backup file now and then, and restore it on the same or a new device."
-  - q: "Can I log once a week instead of every day?"
-    a: "Yes. Choose The past 7 days when you log. Weekly entries record your average sleep per night and your total hot flashes for the week, and the report shows how many daily and weekly entries it covers."
   - q: "Will it remind me to log?"
     a: "Yes, inside the tracker. Turn on a daily or weekly reminder in settings and it appears on the Today screen when you open the tracker. It doesn't send push notifications. For a reminder while the tracker is closed, you can add a weekly event to your own calendar."
   - q: "Does it work offline?"
     a: "Yes, once you install it from your browser. Logging, your timeline, treatments, insights and the doctor report all work without a connection."
 ---
 
-This free tracker lets you log menopause symptoms daily or weekly, then print or download a one-page report for your doctor. It needs no account, and your entries stay on your device. Symptoms can range from mild to severe and come and go over months or years [@nice-ng23-recommendations], so a few weeks of notes gives your clinician a clearer picture.
+This is a free, private menopause symptom tracker: log symptoms, sleep, hot flashes and bleeding daily or weekly, then print a one-page report for your doctor. There's no account, your entries are stored only on your device, and once installed it works offline. Symptoms can be mild or severe and come and go over months or years [@nice-ng23-recommendations], so a few weeks of notes helps.
 
 [Open the tracker and log today](/app/today/)
 
 To open it from your home screen and use it without a connection, [install it as an app](/app/install/). Nothing comes from an app store, and your entries still stay on your device.
 
-## How it works
+## How does the menopause tracker work?
 
 1. **Log a day or a week.** Pick how you feel overall, tap the symptoms you've had and rate each from 1 (mild) to 5 (severe), then add sleep, hot flashes and any bleeding.
 2. **Look back.** Your timeline lists every entry, and insights show how often each symptom appears and its average rating. To change a past day, choose its date when you log; to remove it, delete it from your timeline.
@@ -66,7 +65,10 @@ To open it from your home screen and use it without a connection, [install it as
 
 Not sure where to start? Tick what you've noticed on the [symptoms checklist you can print](/tools/symptoms-checklist/), then add those symptoms to your tracker.
 
-## What you can record
+## What should I track for menopause?
+
+Track whatever is bothering you. You can record any of these, and skip what doesn't apply:
+
 
 - **Overall feeling**: how you feel today, on your own 1 to 5 scale.
 - **Symptoms**: choose from a list or add your own, each rated 1 (mild) to 5 (severe).
@@ -76,22 +78,22 @@ Not sure where to start? Tick what you've noticed on the [symptoms checklist you
 - **Treatments**: what you've been prescribed, as you want to record it, and when you take, skip or change it.
 - **Notes**: anything else, in your own words.
 
-## Daily or weekly
+## Should I log daily or weekly?
 
 Choose **This day** to log a single day, or **The past 7 days** for a weekly summary. Weekly entries are quicker but less precise: you enter your average sleep per night and your total hot flashes for the week. The report shows how many of each kind it includes.
 
 Missed a few days? The Today screen offers a quick catch-up, where you can tap how you felt on each day you missed.
 
-## Reminders inside the tracker
+## Will it remind me to log?
 
-The tracker has no server that could send you messages, so its reminders appear inside the tracker when you open it, not as push notifications.
+Yes, inside the tracker. Its reminders appear when you open it, not as push notifications, because the tracker has no server that could send you messages.
 
 - **Reminder to log**: choose daily or weekly and a time in settings. When a check-in is due, a card on the Today screen says so.
 - **Your own calendar**: download a weekly reminder file for your calendar app, which then does the reminding. The file holds only a title and a link, no health details.
 - **Appointment mode**: save the date of your next appointment. From 3 days before, the Today screen reminds you to prepare your report and questions.
 - **Backup reminder**: if you haven't downloaded a backup for 30 days, the Today screen suggests one.
 
-## Your doctor report
+## What's in the doctor report?
 
 The report covers the last 14, 30, 60 or 90 days. It shows:
 
@@ -107,9 +109,9 @@ Why keep weeks of records? Hot flashes and night sweats often last for years: in
 
 > **Sold by MenoVerdict.** Prefer paper? Our 38-page [Symptom Journal & Doctor Visit Toolkit](/shop/menopause-symptom-journal/) helps you track for eight weeks and walk into your appointment with a one-page summary. $8.99, instant download.
 
-## Works offline once installed
+## Does it work offline?
 
-When you [install the tracker](/app/install/) from your browser, these work without a connection:
+Yes, once you [install the tracker](/app/install/) from your browser. These then work without a connection:
 
 - **The tracker**: logging, your timeline, treatments, insights and your doctor report.
 - **Saved pages**: guides you pressed "Save for later" on.
@@ -117,7 +119,7 @@ When you [install the tracker](/app/install/) from your browser, these work with
 
 Installing doesn't move your data anywhere. Uninstalling the app or clearing your browser's data can delete your entries, so keep a backup.
 
-## Edit, delete or back up your entries
+## How do I edit, delete or back up entries?
 
 - **Edit an entry**: choose that date when you log, and your saved entry opens for changes.
 - **Delete an entry**: remove it from your timeline, for example if you logged the wrong day.
@@ -147,6 +149,6 @@ If you're in the UK: call 999 or go to A&E for those palpitation symptoms, or, i
 More options are on our [urgent help page](/urgent-help/).
 :::
 
-## Your privacy
+## Is my menopause data private?
 
 Entries are stored in your browser's own storage on this device (IndexedDB). There's no account and no upload, and nothing is shared with advertisers. Because the data lives only in this browser, clearing your browser data, using a private window or switching to another device means it won't be there, so download a backup now and then. Browse [menopause symptoms by name](/symptoms/) to read about anything you're logging.

@@ -1,0 +1,139 @@
+/* Tools hub (src/app/(site)/tools/page.tsx). Theme tokens only. */
+
+.tool-card {
+  border-width: 1px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+.tool-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-lift);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .tool-card:hover {
+    transform: translateY(-2px);
+  }
+}
+.tool-gives {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  color: var(--ink);
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+.tool-start {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+.tool-card:hover .tool-start {
+  background: var(--accent-hover);
+}
+
+/* "Which tool do I need?" */
+.tool-chooser {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 768px) {
+  .tool-chooser {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.tool-chooser a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem 1rem;
+  min-height: 56px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--paper-raised);
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+.tool-chooser a:hover {
+  background: var(--accent-soft);
+}
+.tool-chooser-go {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--link);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Journal cross-sell */
+.tool-paper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  background: var(--brass-soft);
+}
+.tool-paper > div {
+  max-width: 40rem;
+}
+
+/* FAQ */
+.tool-faq {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 48rem;
+}
+.tool-faq details {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--paper-raised);
+  padding: 0 1.25rem;
+}
+.tool-faq summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  min-height: 56px;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+}
+.tool-faq summary::-webkit-details-marker {
+  display: none;
+}
+.tool-faq summary::after {
+  content: "+";
+  flex: none;
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+.tool-faq details[open] summary::after {
+  content: "−";
+}
+.tool-faq p {
+  padding-bottom: 1.1rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}

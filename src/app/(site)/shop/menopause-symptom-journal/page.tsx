@@ -3,409 +3,423 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { JsonLd } from '@/components/site/site-chrome';
 import { SHOP_CONFIG } from '@/lib/shop/config';
+import '@/app/styles/shop.css';
+
+const URL = 'https://menoverdict.com/shop/menopause-symptom-journal/';
+const HERO_IMAGE = 'https://menoverdict.com/images/shop/menopause-symptom-journal-hero.jpg';
+const PRICE = SHOP_CONFIG.productPriceFormatted;
+const TITLE = 'Printable menopause symptom tracker & journal (PDF)';
+const DESCRIPTION =
+  'Track perimenopause and menopause symptoms for 8 weeks, then take a one-page summary and the right questions to your appointment. 38-page printable PDF, $8.99.';
 
 export const metadata: Metadata = {
-  title: 'Menopause Symptom Tracker & Doctor Visit Workbook (Printable PDF) | MenoVerdict',
-  description:
-    'Track perimenopause and menopause symptoms for 8 weeks and prepare for your appointment with a one-page summary and question list. 38-page printable PDF, sourced from NIH, FDA and NHS guidance.',
-  alternates: {
-    canonical: 'https://menoverdict.com/shop/menopause-symptom-journal/',
-  },
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
+  alternates: { canonical: URL },
   openGraph: {
-    title: 'Menopause Symptom Tracker & Doctor Visit Workbook (Printable PDF) | MenoVerdict',
-    description:
-      'Track perimenopause and menopause symptoms for 8 weeks and prepare for your appointment with a one-page summary and question list. 38-page printable PDF, sourced from NIH, FDA and NHS guidance.',
-    url: 'https://menoverdict.com/shop/menopause-symptom-journal/',
+    title: TITLE,
+    description: DESCRIPTION,
+    url: URL,
     siteName: 'MenoVerdict',
-    images: [
-      {
-        url: 'https://menoverdict.com/images/shop/menopause-symptom-journal-hero.jpg',
-        width: 1024,
-        height: 768,
-        alt: 'MenoVerdict Symptom Journal & Doctor Visit Toolkit preview',
-      },
-    ],
+    images: [{ url: HERO_IMAGE, width: 1024, height: 768, alt: 'Pages from the MenoVerdict Symptom Journal & Doctor Visit Toolkit' }],
     type: 'website',
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Menopause Symptom Tracker & Doctor Visit Workbook (Printable PDF) | MenoVerdict',
-    description:
-      'Track perimenopause and menopause symptoms for 8 weeks and prepare for your appointment with a one-page summary and question list. 38-page printable PDF, sourced from NIH, FDA and NHS guidance.',
-    images: ['https://menoverdict.com/images/shop/menopause-symptom-journal-hero.jpg'],
-  },
+  twitter: { card: 'summary_large_image', title: TITLE, description: DESCRIPTION, images: [HERO_IMAGE] },
 };
 
-const productJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: SHOP_CONFIG.productTitle,
-  description:
-    'A 38-page printable workbook to track your perimenopause or menopause symptoms for 8 weeks, understand the stages, and walk into your appointment with a one-page summary and the right questions.',
-  image: 'https://menoverdict.com/images/shop/menopause-symptom-journal-hero.jpg',
-  brand: {
-    '@type': 'Brand',
-    name: 'MenoVerdict',
+/** Visible on the page and mirrored in FAQPage structured data. Keep the two identical. */
+const FAQS: Array<{ q: string; a: string }> = [
+  {
+    q: 'What do I get when I buy?',
+    a: 'One 38-page PDF (US Letter) that you can download right after paying: learning pages on the stages and symptoms, a symptom checklist, a 12-month period calendar, eight weekly trackers, a hot flash log, monthly reviews, an appointment planner, a one-page summary for your clinician, questions to ask and a script for short appointments.',
   },
-  offers: {
-    '@type': 'Offer',
-    price: '8.99',
-    priceCurrency: 'USD',
-    availability: 'https://schema.org/InStock',
-    url: 'https://menoverdict.com/shop/menopause-symptom-journal/',
-    priceValidUntil: '2027-12-31',
+  {
+    q: 'Is there a printable menopause symptom tracker in it?',
+    a: 'Yes. It has eight weekly symptom trackers with a simple 0 to 3 scale, a hot flash log and a trigger page. You can print extra weekly trackers as often as you like for your own use.',
   },
-};
+  {
+    q: 'Can I fill it in on an iPad or tablet?',
+    a: 'Yes. Open the PDF in any app that lets you write on PDFs, such as Goodnotes, Notability or Apple Books, or print it at home. It is designed light on ink.',
+  },
+  {
+    q: 'Is this medical advice? Will it tell me if I am in menopause?',
+    a: "No. It's general information from published medical sources plus tools to track and explain your symptoms. It explains the stages, but only a clinician who knows your history can confirm your stage, and many of these symptoms have other possible causes.",
+  },
+  {
+    q: 'How is it different from your free symptom tracker?',
+    a: 'The free online tracker works on your phone and keeps your entries on your device. The journal is for people who prefer paper, and it adds learning pages, a period calendar, an appointment script and a one-page summary you fill in by hand.',
+  },
+  {
+    q: 'How do I get the download, and what if I lose the link?',
+    a: 'After checkout you return to a page with your download button. The link works for 7 days and up to 10 downloads. If you lose it, request a fresh link on the link recovery page.',
+  },
+  {
+    q: 'Can I get a refund?',
+    a: "Because it is an instant digital download, all sales are final. If the file won't download, open or print, email orders@menoverdict.com and we will fix it or send a working copy.",
+  },
+  {
+    q: 'I live outside the US. Will it work for me?',
+    a: 'Yes, the PDF works anywhere. The emergency page lists US numbers (911 and 988), so use your local emergency and crisis numbers instead.',
+  },
+];
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: SHOP_CONFIG.productTitle,
+    sku: SHOP_CONFIG.productId,
+    description:
+      'A 38-page printable workbook to track perimenopause or menopause symptoms for 8 weeks, understand the stages, and prepare for your appointment with a one-page summary and question list.',
+    image: [HERO_IMAGE],
+    brand: { '@type': 'Brand', name: 'MenoVerdict' },
+    offers: {
+      '@type': 'Offer',
+      price: (SHOP_CONFIG.productPriceCents / 100).toFixed(2),
+      priceCurrency: SHOP_CONFIG.currency,
+      availability: 'https://schema.org/InStock',
+      url: URL,
+      priceValidUntil: '2027-12-31',
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+        merchantReturnLink: 'https://menoverdict.com/refund-policy/',
+      },
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://menoverdict.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Symptom Journal', item: URL },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQS.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  },
+];
+
+function BuyButton({ label = `Buy and download, ${PRICE}`, className = '' }: { label?: string; className?: string }) {
+  return (
+    <form action="/api/shop/checkout/" method="POST" className={className}>
+      <button type="submit" className="btn btn-primary shop-buy">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
+        {label}
+      </button>
+    </form>
+  );
+}
+
+function Check() {
+  return (
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="shop-check">
+      <path d="M5 12.5l4.5 4.5L19 7.5" />
+    </svg>
+  );
+}
+
+const INSIDE = [
+  {
+    step: '1',
+    title: 'Understand what is happening',
+    items: [
+      'The three stages, with typical ages',
+      'Symptoms commonly reported at each stage',
+      'Other conditions with the same symptoms, and why a doctor may test for them',
+      'Home remedies people try, and what the evidence says',
+      'Treatment options in plain English, from current guidance',
+    ],
+  },
+  {
+    step: '2',
+    title: 'Track it for 8 weeks',
+    items: [
+      'Health snapshot, medicines list and care-team contacts',
+      'Symptom checklist with an easy 0 to 3 scale',
+      '12-month period and bleeding calendar',
+      'Eight weekly trackers, a hot flash log and a trigger page',
+      'Monthly reviews and a "what I\'ve tried" log',
+    ],
+  },
+  {
+    step: '3',
+    title: 'Walk in prepared',
+    items: [
+      'Appointment planner and "bring with you" checklist',
+      'A one-page symptom summary to hand to your clinician',
+      'Questions to ask, grouped by topic',
+      'A fill-in script for short appointments, including what to say if you feel brushed off',
+      'Appointment notes and a 12-week follow-up page',
+    ],
+  },
+];
+
+const PREVIEWS = [
+  { src: '/images/shop/preview-cover.webp', w: 360, h: 480, alt: 'Workbook cover and the 0 to 3 symptom scale', label: 'Cover and 0-3 scale' },
+  { src: '/images/shop/preview-stages.webp', w: 360, h: 480, alt: 'Stages at a glance page', label: 'Stages at a glance' },
+  { src: '/images/shop/preview-tracker.webp', w: 280, h: 420, alt: 'Weekly symptom tracker grid', label: '8-week tracker' },
+  { src: '/images/shop/preview-summary.webp', w: 280, h: 420, alt: 'One-page appointment summary sheet', label: 'One-page doctor summary' },
+];
 
 export default function SymptomJournalShopPage() {
   return (
-    <article className="container py-8 md:py-12 max-w-5xl">
-      <JsonLd data={productJsonLd} />
+    <article className="shop container max-w-5xl py-8 md:py-12">
+      <JsonLd data={jsonLd} />
 
-      {/* Top Breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-6 text-sm text-[var(--ink-muted)]">
         <ol className="flex items-center gap-2">
           <li>
-            <Link href="/" className="hover:underline">Home</Link>
+            <Link href="/" className="hover:underline">
+              Home
+            </Link>
           </li>
           <li aria-hidden="true">/</li>
-          <li>
-            <span className="text-[var(--ink)] font-medium">Symptom Journal</span>
-          </li>
+          <li className="font-medium text-[var(--ink)]">Symptom Journal</li>
         </ol>
       </nav>
 
-      {/* Section 1: Hero — Title, Description & Hero Image */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
-        {/* Mobile-first Image (shown above on mobile, beside on desktop) */}
-        <div className="lg:col-span-5 lg:order-2">
-          <div className="rounded-2xl overflow-hidden border border-[var(--rule)] bg-[var(--paper-raised)] shadow-md p-2">
-            <Image
-              src="/images/shop/menopause-symptom-journal-hero.jpg"
-              alt="MenoVerdict Symptom Journal & Doctor Visit Toolkit preview pages"
-              width={1024}
-              height={768}
-              priority
-              className="w-full h-auto rounded-xl object-cover"
-            />
-          </div>
-        </div>
-
-        {/* Title, Short Description, Price & Buy Button */}
-        <div className="lg:col-span-7 lg:order-1 space-y-5">
-          <p className="kicker text-[var(--accent)] font-semibold tracking-wide text-sm uppercase">
-            Printable Digital Toolkit
-          </p>
-          <h1 className="text-3xl md:text-4xl font-serif font-bold text-[var(--ink)] leading-tight">
+      {/* Hero */}
+      <section className="shop-hero" aria-labelledby="shop-title">
+        <div className="shop-hero-copy">
+          <p className="shop-kicker">Printable PDF journal · 38 pages</p>
+          <h1 id="shop-title" className="shop-title">
             Menopause Symptom Journal &amp; Doctor Visit Toolkit
           </h1>
-          <p className="text-lg text-[var(--ink-muted)] leading-relaxed">
-            A 38-page printable workbook to track your perimenopause or menopause symptoms for 8 weeks, understand the stages, and walk into your appointment with a one-page summary and the right questions.
+          <p className="shop-lede">
+            Turn &ldquo;I just don&rsquo;t feel like myself&rdquo; into a clear, written pattern, and walk into your
+            appointment with a one-page summary and the right questions.
           </p>
 
-          {/* Pricing & Checkout Action (Works without JavaScript) */}
-          <div className="p-6 rounded-2xl bg-[var(--paper-raised)] border border-[var(--rule)] shadow-sm space-y-4">
-            <div className="flex items-baseline gap-3">
-              <span className="text-3xl font-serif font-bold text-[var(--ink)]">$8.99</span>
-              <span className="text-sm text-[var(--ink-muted)] font-medium">USD · One-time purchase</span>
+          <div className="shop-price-card">
+            <div className="shop-price-row">
+              <span className="shop-price">{PRICE}</span>
+              <span className="shop-price-note">USD · one-time purchase · no subscription</span>
             </div>
-
-            <form action="/api/shop/checkout/" method="POST">
-              <button
-                type="submit"
-                className="btn btn-primary w-full py-3.5 text-base font-semibold flex items-center justify-center gap-2 shadow-md hover:brightness-105 active:scale-[0.99] transition"
-              >
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                  <polyline points="7 10 12 15 17 10" />
-                  <line x1="12" y1="15" x2="12" y2="3" />
-                </svg>
-                Buy and download, $8.99
-              </button>
-            </form>
-
-            <p className="text-xs text-[var(--ink-muted)] leading-normal pt-1">
-              Instant PDF download. 38 pages, US Letter. General information only, not medical advice.
-            </p>
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-[var(--ink-muted)] border-t border-[var(--rule)] pt-3">
-              <span>✓ Instant download · All sales final</span>
-              <Link href="/refund-policy/" className="underline hover:text-[var(--ink)]">Refund policy</Link>
-              <Link href="/medical-disclaimer/" className="underline hover:text-[var(--ink)]">Medical disclaimer</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Section 4: What's Inside */}
-      <section className="mb-14 space-y-6">
-        <div className="section-header-teal">
-          <h2 className="text-2xl font-serif font-bold text-[#FCFAF5]">What&apos;s inside the toolkit</h2>
-        </div>
-
-        <blockquote className="p-5 rounded-xl border-l-4 border-[var(--accent)] bg-[var(--paper-raised)] text-base font-serif italic text-[var(--ink)]">
-          &ldquo;I just don&apos;t feel like myself&rdquo; is hard to explain in a 10-minute appointment. This workbook turns it into a clear pattern your clinician can act on.
-        </blockquote>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Learn Column */}
-          <div className="p-6 rounded-2xl bg-[var(--paper-raised)] border border-[var(--rule)] space-y-3">
-            <div className="flex items-center gap-2.5 text-[var(--accent)] font-bold text-lg">
-              <span className="w-7 h-7 rounded-full bg-[var(--accent-soft)] flex items-center justify-center text-sm font-sans">1</span>
-              <h3>Learn</h3>
-            </div>
-            <ul className="space-y-2 text-sm text-[var(--ink)] list-disc pl-5">
-              <li>The three stages, perimenopause, menopause and postmenopause, with typical ages</li>
-              <li>Symptoms women commonly report at each stage</li>
-              <li>Other conditions that can cause the same symptoms, and why a doctor may test for them</li>
-              <li>Home remedies people try, and what the evidence actually says about each</li>
-              <li>Treatment options in plain English, from current medical guidance</li>
+            <BuyButton />
+            <ul className="shop-trust" aria-label="Purchase details">
+              <li>Instant download</li>
+              <li>Secure checkout by Whop</li>
+              <li>Print or use on a tablet</li>
             </ul>
           </div>
+          <ul className="shop-benefits">
+            <li>
+              <Check />
+              <span>
+                <strong>8 weeks of tracking</strong> on simple pages you can fill in in a few minutes
+              </span>
+            </li>
+            <li>
+              <Check />
+              <span>
+                <strong>A one-page summary</strong> to hand to your doctor, nurse or midwife
+              </span>
+            </li>
+            <li>
+              <Check />
+              <span>
+                <strong>Questions and a script</strong> for short appointments, including if you feel brushed off
+              </span>
+            </li>
+            <li>
+              <Check />
+              <span>
+                <strong>Every medical statement sourced</strong> from the NIH, FDA, NHS, The Menopause Society and other
+                medical bodies, with all 18 sources listed
+              </span>
+            </li>
+          </ul>
 
-          {/* Track Column */}
-          <div className="p-6 rounded-2xl bg-[var(--paper-raised)] border border-[var(--rule)] space-y-3">
-            <div className="flex items-center gap-2.5 text-[var(--accent)] font-bold text-lg">
-              <span className="w-7 h-7 rounded-full bg-[var(--accent-soft)] flex items-center justify-center text-sm font-sans">2</span>
-              <h3>Track</h3>
-            </div>
-            <ul className="space-y-2 text-sm text-[var(--ink)] list-disc pl-5">
-              <li>Health snapshot, medicines list and care-team contacts</li>
-              <li>Symptom checklist with an easy 0 to 3 heat scale</li>
-              <li>12-month period and bleeding calendar</li>
-              <li>Eight weekly trackers, a hot flash log and a trigger detective page</li>
-              <li>Monthly reviews and a &ldquo;what I&apos;ve tried&rdquo; log</li>
-            </ul>
-          </div>
-
-          {/* Prepare Column */}
-          <div className="p-6 rounded-2xl bg-[var(--paper-raised)] border border-[var(--rule)] space-y-3">
-            <div className="flex items-center gap-2.5 text-[var(--accent)] font-bold text-lg">
-              <span className="w-7 h-7 rounded-full bg-[var(--accent-soft)] flex items-center justify-center text-sm font-sans">3</span>
-              <h3>Prepare</h3>
-            </div>
-            <ul className="space-y-2 text-sm text-[var(--ink)] list-disc pl-5">
-              <li>Appointment planner and a &ldquo;bring with you&rdquo; checklist</li>
-              <li>A one-page symptom summary to hand to your clinician</li>
-              <li>Questions to ask, grouped by topic</li>
-              <li>A fill-in-the-blanks script for short appointments, including what to say if you feel brushed off</li>
-              <li>Appointment notes and a 12-week follow-up page</li>
-            </ul>
-          </div>
         </div>
 
-        <p className="text-sm text-[var(--ink-muted)] bg-[var(--paper)] p-4 rounded-xl border border-[var(--rule)]">
-          <strong>100% Evidence-Sourced:</strong> Every medical statement is sourced. Information comes from the NIH, FDA, NHS, The Menopause Society, Mayo Clinic and Cleveland Clinic, with all 18 sources listed in the workbook.
-        </p>
+        <div className="shop-hero-media">
+          <Image
+            src="/images/shop/menopause-symptom-journal-hero.jpg"
+            alt="Pages from the Symptom Journal & Doctor Visit Toolkit"
+            width={1024}
+            height={768}
+            priority
+            sizes="(min-width: 1024px) 420px, 100vw"
+            className="shop-hero-img"
+          />
+        </div>
       </section>
 
-      {/* Section 5: Page Previews */}
-      <section className="mb-14 space-y-6">
-        <div className="section-header-teal">
-          <h2 className="text-2xl font-serif font-bold text-[#FCFAF5]">Look inside the workbook</h2>
+      {/* How it works */}
+      <section aria-labelledby="how-heading" className="shop-section">
+        <h2 id="how-heading" className="shop-h2">
+          How it works
+        </h2>
+        <ol className="shop-steps">
+          <li>
+            <strong>Buy</strong>
+            <span>Pay securely through Whop, our checkout provider.</span>
+          </li>
+          <li>
+            <strong>Download</strong>
+            <span>Your PDF is ready straight away. Lost the link? Get a new one any time.</span>
+          </li>
+          <li>
+            <strong>Track and take it with you</strong>
+            <span>Fill it in for 8 weeks, then bring the one-page summary to your appointment.</span>
+          </li>
+        </ol>
+      </section>
+
+      {/* What's inside */}
+      <section aria-labelledby="inside-heading" className="shop-section">
+        <h2 id="inside-heading" className="shop-h2">
+          What&rsquo;s inside the journal
+        </h2>
+        <div className="shop-inside">
+          {INSIDE.map((col) => (
+            <div key={col.step} className="shop-inside-col">
+              <h3>
+                <span aria-hidden="true">{col.step}</span>
+                {col.title}
+              </h3>
+              <ul>
+                {col.items.map((it) => (
+                  <li key={it}>{it}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
-        <p className="text-sm text-[var(--ink-muted)]">
-          Four preview excerpts from the 38-page journal (designed light on ink for printing at home or filling out on a tablet).
-        </p>
+      </section>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="space-y-2 text-center">
-            <div className="rounded-xl border border-[var(--rule)] overflow-hidden bg-white shadow-sm p-1">
-              <Image
-                src="/images/shop/preview-cover.webp"
-                alt="Workbook cover with 0-3 severity heat scale"
-                width={360}
-                height={480}
-                className="w-full h-auto object-cover rounded"
-              />
-            </div>
-            <span className="text-xs font-medium text-[var(--ink)]">Cover &amp; 0-3 Heat Scale</span>
+      {/* Previews */}
+      <section aria-labelledby="preview-heading" className="shop-section">
+        <h2 id="preview-heading" className="shop-h2">
+          Look inside
+        </h2>
+        <p className="shop-muted">Four of the 38 pages. Light on ink for home printing, and easy to write on with a tablet.</p>
+        <div className="shop-previews">
+          {PREVIEWS.map((p) => (
+            <figure key={p.src}>
+              <Image src={p.src} alt={p.alt} width={p.w} height={p.h} sizes="(min-width: 768px) 220px, 45vw" />
+              <figcaption>{p.label}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      {/* Paper or app */}
+      <section aria-labelledby="choose-heading" className="shop-section">
+        <h2 id="choose-heading" className="shop-h2">
+          Paper journal or free app?
+        </h2>
+        <p className="shop-muted">Both help you notice patterns. Pick the one you&rsquo;ll actually use.</p>
+        <div className="shop-compare">
+          <div className="shop-compare-col shop-compare-pick">
+            <h3>Symptom Journal (PDF)</h3>
+            <ul>
+              <li>Paper or tablet, no phone needed</li>
+              <li>Learning pages on stages, symptoms and treatments</li>
+              <li>Period calendar, hot flash log and trigger page</li>
+              <li>Appointment script and one-page summary</li>
+              <li>{PRICE}, one time</li>
+            </ul>
+            <BuyButton label={`Get the journal, ${PRICE}`} />
           </div>
-
-          <div className="space-y-2 text-center">
-            <div className="rounded-xl border border-[var(--rule)] overflow-hidden bg-white shadow-sm p-1">
-              <Image
-                src="/images/shop/preview-stages.webp"
-                alt="Stages at a glance overview page"
-                width={360}
-                height={480}
-                className="w-full h-auto object-cover rounded"
-              />
-            </div>
-            <span className="text-xs font-medium text-[var(--ink)]">Stages at a Glance</span>
-          </div>
-
-          <div className="space-y-2 text-center">
-            <div className="rounded-xl border border-[var(--rule)] overflow-hidden bg-white shadow-sm p-1">
-              <Image
-                src="/images/shop/preview-tracker.webp"
-                alt="Weekly tracker log grid"
-                width={280}
-                height={420}
-                className="w-full h-auto object-cover rounded"
-              />
-            </div>
-            <span className="text-xs font-medium text-[var(--ink)]">8-Week Tracking Grid</span>
-          </div>
-
-          <div className="space-y-2 text-center">
-            <div className="rounded-xl border border-[var(--rule)] overflow-hidden bg-white shadow-sm p-1">
-              <Image
-                src="/images/shop/preview-summary.webp"
-                alt="One-page doctor visit appointment summary sheet"
-                width={280}
-                height={420}
-                className="w-full h-auto object-cover rounded"
-              />
-            </div>
-            <span className="text-xs font-medium text-[var(--ink)]">1-Page Doctor Summary</span>
+          <div className="shop-compare-col">
+            <h3>Free online tracker</h3>
+            <ul>
+              <li>On your phone or computer</li>
+              <li>Quick daily or weekly logging</li>
+              <li>Charts and a printable doctor report</li>
+              <li>Entries stay on your device</li>
+              <li>Free</li>
+            </ul>
+            <Link href="/tools/symptom-tracker/" className="btn btn-secondary">
+              Use the free tracker
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Section 6: Details & Who It's For */}
-      <section className="mb-14 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="p-6 rounded-2xl bg-[var(--paper-raised)] border border-[var(--rule)] space-y-4">
-          <h2 className="text-xl font-serif font-bold text-[var(--ink)]">Product Details</h2>
-          <ul className="space-y-2.5 text-sm text-[var(--ink)]">
-            <li className="flex items-start gap-2">
-              <span className="text-[var(--accent)] font-bold">✓</span>
-              <span><strong>Instant download:</strong> 1 PDF, 38 pages, US Letter (8.5 &times; 11 in)</span>
+      {/* Who it's for */}
+      <section aria-labelledby="who-heading" className="shop-section shop-who">
+        <div>
+          <h2 id="who-heading" className="shop-h2">
+            Who it&rsquo;s for
+          </h2>
+          <ul className="shop-benefits">
+            <li>
+              <Check />
+              <span>You&rsquo;re in your 40s or 50s and wondering if this is perimenopause</span>
             </li>
-            <li className="flex items-start gap-2">
-              <span className="text-[var(--accent)] font-bold">✓</span>
-              <span><strong>Device friendly:</strong> Print at home, or fill it in on an iPad or tablet with any PDF note app</span>
+            <li>
+              <Check />
+              <span>You have an appointment coming up and want to make the most of it</span>
             </li>
-            <li className="flex items-start gap-2">
-              <span className="text-[var(--accent)] font-bold">✓</span>
-              <span><strong>Reusable:</strong> Print extra weekly trackers as often as you need</span>
+            <li>
+              <Check />
+              <span>You&rsquo;ve started a treatment and want to see whether it&rsquo;s working</span>
             </li>
-            <li className="flex items-start gap-2">
-              <span className="text-[var(--accent)] font-bold">✓</span>
-              <span><strong>Light on ink:</strong> Designed with clean white backgrounds for home printing</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-[var(--accent)] font-bold">✓</span>
-              <span><strong>Licence:</strong> For personal, individual use</span>
+            <li>
+              <Check />
+              <span>You prefer writing things down to using an app</span>
             </li>
           </ul>
         </div>
-
-        <div className="p-6 rounded-2xl bg-[var(--paper-raised)] border border-[var(--rule)] space-y-4">
-          <h2 className="text-xl font-serif font-bold text-[var(--ink)]">Who It&apos;s For</h2>
-          <p className="text-sm text-[var(--ink)] leading-relaxed">
-            Women in their 40s and 50s who think they may be in perimenopause or menopause, women already in treatment who want to track how it&apos;s working, and anyone preparing for a menopause appointment.
+        <div className="shop-note">
+          <h3>What it isn&rsquo;t</h3>
+          <p>
+            It isn&rsquo;t a diagnosis or medical advice, and we aren&rsquo;t doctors. If you have severe or sudden
+            symptoms, don&rsquo;t wait to track them: see <Link href="/urgent-help/">urgent help</Link>.
           </p>
-          <div className="pt-2 border-t border-[var(--rule)] text-xs text-[var(--ink-muted)] space-y-2">
-            <p><strong>Lost your download link?</strong> You can have a fresh link emailed to you anytime at our <Link href="/shop/resend/" className="underline hover:text-[var(--ink)]">link recovery page</Link>.</p>
-            <p><strong>Need support?</strong> Contact us at <Link href="/about/" className="underline hover:text-[var(--ink)]">our contact page</Link>.</p>
-          </div>
         </div>
       </section>
 
-      {/* Section 6: Frequently Asked Questions */}
-      <section className="mb-14 space-y-6">
-        <div className="section-header-teal">
-          <h2 className="text-2xl font-serif font-bold text-[#FCFAF5]">Frequently asked questions</h2>
-        </div>
-
-        <div className="space-y-4">
-          <details className="p-5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)] group">
-            <summary className="font-serif font-semibold text-lg text-[var(--ink)] cursor-pointer list-none flex justify-between items-center">
-              <span>Is this medical advice?</span>
-              <span className="text-[var(--accent)] transition-transform group-open:rotate-180">▾</span>
-            </summary>
-            <p className="mt-3 text-sm text-[var(--ink-muted)] leading-relaxed">
-              No. It&apos;s general information gathered from published medical sources, plus tools to track and explain your symptoms. We aren&apos;t doctors. Always talk to a qualified clinician about your own symptoms and treatment.
-            </p>
-          </details>
-
-          <details className="p-5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)] group">
-            <summary className="font-serif font-semibold text-lg text-[var(--ink)] cursor-pointer list-none flex justify-between items-center">
-              <span>Will it tell me whether I&apos;m in menopause?</span>
-              <span className="text-[var(--accent)] transition-transform group-open:rotate-180">▾</span>
-            </summary>
-            <p className="mt-3 text-sm text-[var(--ink-muted)] leading-relaxed">
-              It explains the stages and gives a rough guide, but only your clinician can confirm your stage. Many menopause symptoms have other possible causes.
-            </p>
-          </details>
-
-          <details className="p-5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)] group">
-            <summary className="font-serif font-semibold text-lg text-[var(--ink)] cursor-pointer list-none flex justify-between items-center">
-              <span>Do you recommend the home remedies listed?</span>
-              <span className="text-[var(--accent)] transition-transform group-open:rotate-180">▾</span>
-            </summary>
-            <p className="mt-3 text-sm text-[var(--ink-muted)] leading-relaxed">
-              No. We describe what people commonly try and what the evidence says. Please talk to your doctor or pharmacist before trying any remedy or supplement.
-            </p>
-          </details>
-
-          <details className="p-5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)] group">
-            <summary className="font-serif font-semibold text-lg text-[var(--ink)] cursor-pointer list-none flex justify-between items-center">
-              <span>Can I use it on an iPad?</span>
-              <span className="text-[var(--accent)] transition-transform group-open:rotate-180">▾</span>
-            </summary>
-            <p className="mt-3 text-sm text-[var(--ink-muted)] leading-relaxed">
-              Yes. Open the PDF in any note app that lets you write on PDFs (e.g. Goodnotes, Notability, Apple Books).
-            </p>
-          </details>
-
-          <details className="p-5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)] group">
-            <summary className="font-serif font-semibold text-lg text-[var(--ink)] cursor-pointer list-none flex justify-between items-center">
-              <span>What if I'm outside the US?</span>
-              <span className="text-[var(--accent)] transition-transform group-open:rotate-180">▾</span>
-            </summary>
-            <p className="mt-3 text-sm text-[var(--ink-muted)] leading-relaxed">
-              It works anywhere. The emergency page lists US numbers (911 and 988), so use your local emergency and crisis numbers instead.
-            </p>
-          </details>
-
-          <details className="p-5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)] group">
-            <summary className="font-serif font-semibold text-lg text-[var(--ink)] cursor-pointer list-none flex justify-between items-center">
-              <span>Can I get a refund?</span>
-              <span className="text-[var(--accent)] transition-transform group-open:rotate-180">▾</span>
-            </summary>
-            <p className="mt-3 text-sm text-[var(--ink-muted)] leading-relaxed">
-              Because this is an instant digital download delivered immediately upon payment, all sales are final. If you have any trouble downloading, opening, or printing the file, contact us at <a href="mailto:orders@menoverdict.com" className="underline font-medium text-[var(--ink)]">orders@menoverdict.com</a> and we will promptly send a replacement link or assist you. See our <Link href="/refund-policy/" className="underline hover:text-[var(--ink)]">refund policy</Link>.
-            </p>
-          </details>
-        </div>
-      </section>
-
-      {/* Section 7: Second Buy Button at End */}
-      <section className="p-8 rounded-2xl bg-[var(--paper-raised)] border border-[var(--rule)] shadow-sm text-center max-w-2xl mx-auto space-y-4">
-        <h2 className="text-2xl font-serif font-bold text-[var(--ink)]">
-          Get the Symptom Journal &amp; Doctor Visit Toolkit
+      {/* FAQ */}
+      <section aria-labelledby="faq-heading" className="shop-section">
+        <h2 id="faq-heading" className="shop-h2">
+          Questions about the journal
         </h2>
-        <p className="text-sm text-[var(--ink-muted)]">
-          38-page printable PDF workbook · 8 weeks of symptom tracking · 1-page appointment summary
-        </p>
-        <div className="text-3xl font-serif font-bold text-[var(--ink)]">$8.99 <span className="text-sm font-sans font-normal text-[var(--ink-muted)]">USD</span></div>
-
-        <form action="/api/shop/checkout/" method="POST" className="max-w-md mx-auto">
-          <button
-            type="submit"
-            className="btn btn-primary w-full py-3.5 text-base font-semibold flex items-center justify-center gap-2 shadow-md hover:brightness-105 active:scale-[0.99] transition"
-          >
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
-            Buy and download, $8.99
-          </button>
-        </form>
-
-        <p className="text-xs text-[var(--ink-muted)]">
-          General information only, not medical advice. We aren&apos;t doctors. Talk to your clinician before making any changes to your care.
-        </p>
-        <div className="flex justify-center items-center gap-4 text-xs text-[var(--ink-muted)] pt-2">
-          <Link href="/refund-policy/" className="underline hover:text-[var(--ink)]">Refund Policy</Link>
-          <span>·</span>
-          <Link href="/privacy/" className="underline hover:text-[var(--ink)]">Privacy Policy</Link>
-          <span>·</span>
-          <Link href="/terms/" className="underline hover:text-[var(--ink)]">Terms</Link>
+        <div className="shop-faq">
+          {FAQS.map((f) => (
+            <details key={f.q}>
+              <summary>{f.q}</summary>
+              <p>{f.a}</p>
+            </details>
+          ))}
         </div>
+        <p className="shop-muted mt-4">
+          Lost your link? Use the <Link href="/shop/resend/">link recovery page</Link>. Other questions:{' '}
+          <Link href="/contact/">contact us</Link>.
+        </p>
       </section>
+
+      {/* Final CTA */}
+      <section aria-labelledby="final-heading" className="shop-final">
+        <h2 id="final-heading">Get the Symptom Journal &amp; Doctor Visit Toolkit</h2>
+        <p>38-page printable PDF · 8 weeks of tracking · one-page appointment summary</p>
+        <p className="shop-price">
+          {PRICE} <span className="shop-price-note">USD</span>
+        </p>
+        <BuyButton className="mx-auto max-w-md" />
+        <p className="shop-fine">
+          Instant digital download; all sales final, and we&rsquo;ll fix any file problem.{' '}
+          <Link href="/refund-policy/">Refund policy</Link> · <Link href="/terms/">Terms</Link> ·{' '}
+          <Link href="/privacy/">Privacy</Link>. General information only, not medical advice.
+        </p>
+      </section>
+
+      {/* Phones: the buy button stays in reach while reading. */}
+      <div className="shop-sticky" aria-hidden="false">
+        <span>
+          <strong>Symptom Journal</strong> · {PRICE}
+        </span>
+        <BuyButton label="Buy now" />
+      </div>
     </article>
   );
 }

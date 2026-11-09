@@ -1,0 +1,465 @@
+/* Symptom Journal sales page (src/app/(site)/shop/menopause-symptom-journal/page.tsx).
+   Theme tokens only, so light and dark mode both work. */
+
+.shop {
+  padding-bottom: 6rem; /* room for the phone buy bar */
+}
+@media (min-width: 900px) {
+  .shop {
+    padding-bottom: 3rem;
+  }
+}
+
+/* ---------- hero ---------- */
+.shop-hero {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 3.5rem;
+}
+@media (min-width: 1024px) {
+  .shop-hero {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: 3rem;
+  }
+}
+.shop-hero-media {
+  order: -1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  background: var(--paper-raised);
+  box-shadow: var(--shadow-lift);
+}
+@media (min-width: 1024px) {
+  .shop-hero-media {
+    order: 0;
+    position: sticky;
+    top: 6rem;
+    transform: rotate(1.2deg);
+  }
+}
+.shop-hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.shop-kicker {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-pill);
+  background: var(--brass-soft);
+  color: var(--ink);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.shop-title {
+  font-family: var(--font-serif, serif);
+  font-size: clamp(2rem, 4.5vw, 2.9rem);
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--ink);
+}
+.shop-lede {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  max-width: 38rem;
+}
+
+.shop-benefits {
+  display: grid;
+  gap: 0.7rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.shop-benefits li {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.shop-check {
+  flex: none;
+  margin-top: 0.15rem;
+  padding: 2px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.shop-price-card {
+  margin-top: 1.75rem;
+  padding: 1.4rem;
+  border: 2px solid var(--accent);
+  border-radius: var(--radius-lg);
+  background: var(--paper-raised);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 0.9rem;
+  max-width: 30rem;
+}
+.shop-price-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.75rem;
+}
+.shop-price {
+  font-family: var(--font-serif, serif);
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--ink);
+}
+.shop-price-note {
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-muted);
+}
+.shop-buy {
+  width: 100%;
+  min-height: 56px;
+  justify-content: center;
+  gap: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+}
+.shop-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}
+.shop-trust li::before {
+  content: "✓ ";
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ---------- sections ---------- */
+.shop-section {
+  margin-bottom: 3.5rem;
+}
+.shop-h2 {
+  font-family: var(--font-serif, serif);
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 1.25rem;
+}
+.shop-muted {
+  color: var(--ink-muted);
+  margin-top: -0.5rem;
+  margin-bottom: 1.25rem;
+}
+.shop-muted a,
+.shop-note a,
+.shop-fine a {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.shop-steps {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+@media (min-width: 768px) {
+  .shop-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.shop-steps li {
+  counter-increment: step;
+  position: relative;
+  padding: 1.25rem 1.25rem 1.25rem 4rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  background: var(--paper-raised);
+  display: grid;
+  gap: 0.25rem;
+}
+.shop-steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 1.1rem;
+  top: 1.15rem;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 800;
+}
+.shop-steps strong {
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+.shop-steps span {
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
+.shop-inside {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .shop-inside {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.shop-inside-col {
+  padding: 1.4rem;
+  border: 1px solid var(--rule);
+  border-top: 4px solid var(--accent);
+  border-radius: var(--radius-lg);
+  background: var(--paper-raised);
+}
+.shop-inside-col h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.8rem;
+}
+.shop-inside-col h3 span {
+  flex: none;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+.shop-inside-col ul {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding-left: 1.1rem;
+  list-style: disc;
+  color: var(--ink);
+  line-height: 1.5;
+}
+.shop-inside-col li::marker {
+  color: var(--accent);
+}
+
+.shop-previews {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .shop-previews {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.shop-previews figure {
+  margin: 0;
+  text-align: center;
+}
+.shop-previews img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .shop-previews figure:hover img {
+    transform: translateY(-4px);
+  }
+}
+.shop-previews figcaption {
+  margin-top: 0.55rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.shop-compare {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .shop-compare {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.shop-compare-col {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+  padding: 1.4rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  background: var(--paper-raised);
+}
+.shop-compare-pick {
+  border: 2px solid var(--accent);
+  box-shadow: var(--shadow);
+}
+.shop-compare-col h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.shop-compare-col ul {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--ink);
+}
+.shop-compare-col li::before {
+  content: "✓ ";
+  color: var(--accent);
+  font-weight: 700;
+}
+.shop-compare-col .btn {
+  justify-content: center;
+}
+
+.shop-who {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 900px) {
+  .shop-who {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    align-items: start;
+  }
+}
+.shop-note {
+  padding: 1.25rem;
+  border-radius: var(--radius-lg);
+  background: var(--paper-sunk);
+  border: 1px solid var(--rule);
+  color: var(--ink);
+}
+.shop-note h3 {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.shop-faq {
+  display: grid;
+  gap: 0.75rem;
+}
+.shop-faq details {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--paper-raised);
+  padding: 0 1.25rem;
+}
+.shop-faq summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  min-height: 56px;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+}
+.shop-faq summary::-webkit-details-marker {
+  display: none;
+}
+.shop-faq summary::after {
+  content: "+";
+  flex: none;
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+.shop-faq details[open] summary::after {
+  content: "−";
+}
+.shop-faq p {
+  padding-bottom: 1.1rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+
+.shop-final {
+  display: grid;
+  gap: 0.75rem;
+  text-align: center;
+  padding: 2.25rem 1.5rem;
+  border-radius: var(--radius-lg);
+  background: var(--accent-soft);
+  border: 1px solid var(--rule);
+}
+.shop-final h2 {
+  font-family: var(--font-serif, serif);
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+  font-weight: 700;
+  color: var(--ink);
+}
+.shop-final > p {
+  color: var(--ink-muted);
+}
+.shop-fine {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+}
+
+/* ---------- phone buy bar ---------- */
+.shop-sticky {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem calc(0.6rem + env(safe-area-inset-bottom));
+  background: var(--paper-raised);
+  border-top: 1px solid var(--rule);
+  box-shadow: 0 -6px 20px -12px color-mix(in srgb, var(--ink) 40%, transparent);
+  color: var(--ink);
+}
+.shop-sticky .shop-buy {
+  width: auto;
+  min-height: 48px;
+  padding: 0 1.2rem;
+  font-size: 1rem;
+}
+@media (min-width: 900px) {
+  .shop-sticky {
+    display: none;
+  }
+}
+@media print {
+  .shop-sticky,
+  .shop-price-card,
+  .shop-final form {
+    display: none;
+  }
+}

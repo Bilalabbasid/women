@@ -9,6 +9,7 @@ import { isToolLive } from '@/lib/tools/logic';
 import { ArrowDown, ArrowRight, Lock, Wrench } from 'lucide-react';
 import { TOOL_HEROES } from '@/components/site/tool-hero';
 import { HonestyNotice } from '@/components/site/honesty-notice';
+import '@/app/styles/tools.css';
 
 /** Short names for the hero's icon grid. */
 const SHORT_NAMES: Record<string, string> = {
@@ -21,14 +22,14 @@ const SHORT_NAMES: Record<string, string> = {
 };
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Menopause tools: tracker, checklist & stage quiz',
+  title: 'Free menopause tools: symptom tracker, quiz & checklist',
   description:
-    'Free, private menopause tools: symptom tracker, printable checklist, perimenopause stage quiz, evidence checker, HRT question builder and 12-month counter.',
+    'Free, private menopause tools: a symptom tracker with a doctor report, an "am I in perimenopause?" quiz, a printable checklist, HRT questions and more.',
   path: '/tools/',
 });
 
 /** Groups tools by the question a reader arrives with. Unlisted tool pages fall into "More tools". */
-const GROUPS: Array<{ id: string; heading: string; intro: string; tools: Array<{ url: string; useWhen: string }> }> = [
+const GROUPS: Array<{ id: string; heading: string; intro: string; tools: Array<{ url: string; useWhen: string; gives: string }> }> = [
   {
     id: 'is-it-perimenopause',
     heading: 'Wondering whether it could be perimenopause',
@@ -37,14 +38,17 @@ const GROUPS: Array<{ id: string; heading: string; intro: string; tools: Array<{
       {
         url: '/tools/symptoms-checklist/',
         useWhen: 'Tick the symptoms you have noticed and print a list for your appointment. No score, no sign-up.',
+        gives: 'A printed or PDF list of your symptoms',
       },
       {
         url: '/tools/stage-guide/',
-        useWhen: 'Answer five questions to see which STRAW+10 stage your period pattern resembles, and why.',
+        useWhen: 'Answer 4 to 7 quick questions to see which stage your period pattern resembles, and why.',
+        gives: 'Your likely stage, explained, plus a PDF summary',
       },
       {
         url: '/tools/12-month-counter/',
         useWhen: 'Your periods have stopped: count the days to the 12-month mark and see when bleeding needs checking.',
+        gives: 'The date you reach 12 months without a period',
       },
     ],
   },
@@ -56,6 +60,7 @@ const GROUPS: Array<{ id: string; heading: string; intro: string; tools: Array<{
       {
         url: '/tools/symptom-tracker/',
         useWhen: 'Log symptoms, sleep, hot flashes and bleeding daily or weekly, then print a one-page doctor report.',
+        gives: 'Charts of your patterns and a one-page doctor report',
       },
     ],
   },
@@ -67,12 +72,44 @@ const GROUPS: Array<{ id: string; heading: string; intro: string; tools: Array<{
       {
         url: '/tools/does-it-work-checker/',
         useWhen: 'Look up HRT, newer non-hormonal drugs, CBT and supplements, with an evidence grade and source for each.',
+        gives: 'What works for your symptom, graded by evidence',
       },
       {
         url: '/tools/treatment-questions/',
         useWhen: 'Choose your priorities and print a list of questions to ask about HRT and other options.',
+        gives: 'A printable question sheet and a 10-minute appointment kit',
       },
     ],
+  },
+];
+
+/** "Which tool do I need?": the questions people arrive with, mapped to one tool each. */
+const CHOOSER: Array<{ q: string; url: string }> = [
+  { q: 'Am I in perimenopause?', url: '/tools/stage-guide/' },
+  { q: 'I want to track my symptoms', url: '/tools/symptom-tracker/' },
+  { q: 'Which symptoms should I mention to my doctor?', url: '/tools/symptoms-checklist/' },
+  { q: 'What should I ask about HRT?', url: '/tools/treatment-questions/' },
+  { q: 'Does a treatment or supplement actually work?', url: '/tools/does-it-work-checker/' },
+  { q: 'Have I reached menopause yet?', url: '/tools/12-month-counter/' },
+];
+
+/** Shown on the page and mirrored in FAQPage structured data. */
+const FAQS: Array<{ q: string; a: string }> = [
+  {
+    q: 'Is there a free menopause symptom tracker?',
+    a: 'Yes. The symptom tracker is free, needs no account and keeps your entries in your own browser. You can log daily or weekly and print a one-page report for your appointment.',
+  },
+  {
+    q: 'Is there a free "am I in perimenopause?" quiz?',
+    a: 'Yes. The stage guide asks a few questions about your age and periods and shows which stage your answers resemble, using the STRAW+10 criteria. It gives no score and is not a diagnosis.',
+  },
+  {
+    q: 'Are these tools private?',
+    a: 'What you enter stays in your browser on your device. Nothing is sent to us, to analytics or to advertisers. Export a backup file now and then, because clearing your browser data deletes it.',
+  },
+  {
+    q: 'Can these tools diagnose menopause?',
+    a: 'No. They help you notice patterns, understand the stages and prepare for an appointment. Only a clinician who knows your health history can diagnose you or advise on treatment.',
   },
 ];
 
@@ -105,14 +142,14 @@ export default function ToolsHub() {
       ...g,
       items: g.tools.flatMap((t) => {
         const page = byUrl.get(t.url);
-        return page ? [{ url: page.url, title: page.fm.title, text: t.useWhen }] : [];
+        return page ? [{ url: page.url, title: page.fm.title, text: t.useWhen, gives: t.gives }] : [];
       }),
     })),
     {
       id: 'more-tools',
       heading: 'More tools',
       intro: '',
-      items: ungrouped.map((p) => ({ url: p.url, title: p.fm.title, text: p.fm.meta_description })),
+      items: ungrouped.map((p) => ({ url: p.url, title: p.fm.title, text: p.fm.meta_description, gives: '' })),
     },
   ].filter((s) => s.items.length > 0);
 
@@ -121,6 +158,22 @@ export default function ToolsHub() {
       <JsonLd
         data={[
           breadcrumbLd(crumbs),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'Free menopause tools',
+            itemListElement: toolGuides.map((p, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              url: `https://menoverdict.com${p.url}`,
+              name: p.fm.title,
+            })),
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: FAQS.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+          },
           ...toolGuides.map((p) =>
             webApplicationLd({
               name: p.fm.title,
@@ -176,6 +229,25 @@ export default function ToolsHub() {
 
       <HonestyNotice variant="short" href="/medical-disclaimer/" />
 
+      <section aria-labelledby="chooser" className="space-y-4">
+        <h2 id="chooser" className="text-[length:var(--fs-h2)]">
+          Which tool do I need?
+        </h2>
+        <ul className="tool-chooser" role="list">
+          {CHOOSER.filter((c) => byUrl.has(c.url)).map((c) => (
+            <li key={c.url}>
+              <Link href={c.url}>
+                <span>{c.q}</span>
+                <span className="tool-chooser-go">
+                  {SHORT_NAMES[c.url] ?? byUrl.get(c.url)?.fm.title}
+                  <ArrowRight aria-hidden="true" className="h-4 w-4" />
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       {sections.map((s) => (
         <section key={s.id} aria-labelledby={s.id} className="scroll-mt-20 space-y-4 border-t border-[var(--rule)] pt-8">
           <div className="space-y-1">
@@ -189,14 +261,22 @@ export default function ToolsHub() {
               const Icon = TOOL_HEROES[item.url]?.Icon ?? Wrench;
               return (
                 <li key={item.url}>
-                  <Link href={item.url} className="card flex h-full items-start gap-4 p-5">
+                  <Link href={item.url} className="card tool-card flex h-full items-start gap-4 p-5">
                     <span className="row-icon h-12 w-12" aria-hidden="true">
                       <Icon className="h-6 w-6" />
                     </span>
-                    <span className="min-w-0">
+                    <span className="flex min-w-0 flex-1 flex-col gap-2">
                       <span className="card-title block">{item.title}</span>
-                      <span className="mt-1.5 block text-[1.0625rem] leading-relaxed text-[var(--ink-muted)]">{item.text}</span>
-                      <span className="link link-arrow mt-2 inline-block">Open tool</span>
+                      <span className="block text-[1.0625rem] leading-relaxed text-[var(--ink-muted)]">{item.text}</span>
+                      {item.gives && (
+                        <span className="tool-gives">
+                          <strong>You get:</strong> {item.gives}
+                        </span>
+                      )}
+                      <span className="tool-start">
+                        Start, it&apos;s free
+                        <ArrowRight aria-hidden="true" className="h-4 w-4" />
+                      </span>
                     </span>
                   </Link>
                 </li>
@@ -221,6 +301,37 @@ export default function ToolsHub() {
             clearing your browser data, using a private window or switching device means it won&apos;t be there, so
             export a backup now and then.
           </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="paper" className="tool-paper">
+        <div>
+          <p className="kicker">Prefer paper?</p>
+          <h2 id="paper" className="text-[length:var(--fs-h3)]">
+            Symptom Journal &amp; Doctor Visit Toolkit
+          </h2>
+          <p className="mt-1 text-[var(--ink-muted)]">
+            A 38-page printable PDF with 8 weeks of trackers, a period calendar and a one-page summary for your
+            appointment. Sold by MenoVerdict.
+          </p>
+        </div>
+        <Link href="/shop/menopause-symptom-journal/" className="btn btn-primary shrink-0">
+          See the journal, $8.99
+          <ArrowRight aria-hidden="true" className="h-5 w-5" />
+        </Link>
+      </section>
+
+      <section aria-labelledby="tools-faq" className="space-y-4">
+        <h2 id="tools-faq" className="text-[length:var(--fs-h2)]">
+          Questions about the tools
+        </h2>
+        <div className="tool-faq">
+          {FAQS.map((f) => (
+            <details key={f.q}>
+              <summary>{f.q}</summary>
+              <p>{f.a}</p>
+            </details>
+          ))}
         </div>
       </section>
 

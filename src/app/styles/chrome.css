@@ -445,3 +445,74 @@
     line-height: 1.6;
   }
 }
+
+/* Symptom Journal call to action in the header: a filled button that stands out from the nav links. */
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 44px;
+  padding: 0 1rem;
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 0.98rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: var(--shadow);
+  transition: background-color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+}
+.nav-cta:hover {
+  background: var(--accent-hover);
+  color: var(--on-accent);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .nav-cta:hover {
+    transform: translateY(-1px);
+  }
+}
+.nav-cta-price {
+  padding: 0.1rem 0.5rem;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--on-accent) 22%, transparent);
+  font-size: 0.85rem;
+}
+/* Compact version for phones and tablets, next to search and the menu. */
+.nav-cta-compact {
+  min-height: 40px;
+  padding: 0 0.8rem;
+  margin-right: 0.25rem;
+  font-size: 0.9rem;
+}
+@media (min-width: 900px) {
+  .nav-cta-compact {
+    display: none;
+  }
+}
+/* Keep nav labels on one line; the price chip only shows when there's room. */
+.site-nav-link {
+  white-space: nowrap;
+}
+@media (max-width: 1279px) {
+  .nav-cta-price {
+    display: none;
+  }
+}
+/* Small phones: keep the journal, search and menu buttons on screen. Install and the
+   dark-mode switch are also in the menu, so they leave the header here. */
+@media (max-width: 519px) {
+  .site-install,
+  .site-theme {
+    display: none;
+  }
+}
+@media (max-width: 419px) {
+  .nav-cta-compact {
+    padding: 0 0.7rem;
+    margin-right: 0;
+  }
+  .nav-cta-compact svg {
+    display: none;
+  }
+}

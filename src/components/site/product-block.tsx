@@ -20,7 +20,7 @@ export function SymptomJournalCallout({ className = '' }: { className?: string }
             Prefer paper? Our 38-page Symptom Journal &amp; Doctor Visit Toolkit helps you track for eight weeks and walk into your appointment with a one-page summary.
           </p>
           <p className="text-xs text-[var(--ink-muted)]">
-            $8.99, instant download · Printable PDF workbook · 14-day refund guarantee
+            $8.99 · Instant download · Print it or fill it in on a tablet
           </p>
         </div>
         <Link

@@ -109,6 +109,15 @@ function pwaLinks() {
 
 // `hubs` is kept for existing callers; the header builds its groups from this build's pages.
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
+function JournalIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z" />
+      <path d="M8 7h8M8 11h8" />
+    </svg>
+  );
+}
+
 export function SiteHeader(_props: { hubs: Array<{ href: string; label: string }> }) {
   const groups = navGroups();
   const primaryHrefs = new Set(PRIMARY.map((p) => p.href));
@@ -141,18 +150,21 @@ export function SiteHeader(_props: { hubs: Array<{ href: string; label: string }
               </Link>
             </li>
             <li>
-              <Link
-                href="/shop/menopause-symptom-journal/"
-                className="site-nav-link site-nav-journal ml-1.5 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wide border border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-[var(--on-accent)] transition-colors"
-              >
+              <Link href="/shop/menopause-symptom-journal/" className="nav-cta ml-1.5">
+                <JournalIcon />
                 <span>Symptom Journal</span>
-                <span className="opacity-80">$8.99</span>
+                <span className="nav-cta-price">$8.99</span>
               </Link>
             </li>
           </ul>
         </nav>
 
         <div className="site-header-actions">
+          {/* Phones and tablets: the desktop nav is hidden, so the journal gets its own compact button. */}
+          <Link href="/shop/menopause-symptom-journal/" className="nav-cta nav-cta-compact" aria-label="Symptom Journal, $8.99">
+            <JournalIcon />
+            <span>Journal</span>
+          </Link>
           <Link
             href="/app/install/"
             className="site-nav-link site-install flex items-center gap-1.5 text-sm"
@@ -164,9 +176,9 @@ export function SiteHeader(_props: { hubs: Array<{ href: string; label: string }
               <polyline points="7 10 12 15 17 10" />
               <line x1="12" y1="15" x2="12" y2="3" />
             </svg>
-            <span className="hidden md:inline">Download App</span>
+            <span className="hidden xl:inline">Download App</span>
           </Link>
-          <ThemeToggle className="site-nav-link flex items-center gap-1.5 text-sm" />
+          <ThemeToggle className="site-nav-link site-theme flex items-center gap-1.5 text-sm" />
           <SearchLauncher label className="site-nav-link site-search" />
           <button type="button" className="site-nav-link site-more" popoverTarget="site-more" aria-haspopup="true">
             More

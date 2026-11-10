@@ -1,6 +1,6 @@
 ---
 title: "How much does HRT cost?"
-seo_title: "HRT cost without insurance: real 2026 prices"
+seo_title: "How much does HRT cost? 2026 prices without insurance"
 meta_description: "Estradiol patches cost about $37 to $69 for 4 weeks without insurance (GoodRx, Nov 2026). See pill, gel and progesterone prices, visit fees, ways to pay less."
 cluster: care
 primary_keyword: how much does hrt cost
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Added 'How much is Inner Balance HRT?' (its own pages publish no price; what they do say about the product and billing); clinic-quote checklist now covers it; title leads with the main question", material: true }
   - { date: "2026-11-09", summary: "Re-checked GoodRx prices and added a price table for pills, patches, gel, vaginal estrogen and progesterone; added question headings on cost without insurance, price swings, paying less and comparing clinics (including Elite HRT); new FAQs on coverage, 90-day fills and HSA/FSA", material: true }
   - { date: "2026-11-08", summary: "Plain short answer; every telehealth price now cites the company pricing pages; softened unsourced savings claims", material: false }
   - { date: "2026-11-07", summary: "Published HRT cost guide with dated retail price ranges and telehealth self-pay figures", material: true }
@@ -33,10 +34,13 @@ claims:
   - id: elite-hrt-no-published-price
     text: "As of November 2026, Elite HRT's own homepage described peptide therapy and listed no prices for menopause hormone therapy or visits."
     sources: [elite-hrt-own-site-2026]
+  - id: inner-balance-no-published-price
+    text: "As of November 2026, Inner Balance's own HRT product page and FAQ listed no dollar price; they describe a daily estradiol and micronized progesterone cream compounded in a licensed pharmacy, billed as a monthly subscription, with HSA and FSA payments accepted, and the FAQ does not say insurance covers it."
+    sources: [inner-balance-bioidentical-hrt-2026, inner-balance-faq-2026]
 safety_flags: []
 cta_profile: care_access
 hub: /care/
-sources: [goodrx-estradiol-pricing-2026, goodrx-estradiol-prices-2026-11-08, goodrx-progesterone-pricing-2026, midi-health-own-site-2026, evernow-own-site-2026, alloy-own-site-2026, midi-health-pricing-2026, evernow-pricing-2026, alloy-insurance-2026, elite-hrt-own-site-2026, healthcare-gov-essential-health-benefits]
+sources: [goodrx-estradiol-pricing-2026, goodrx-estradiol-prices-2026-11-08, goodrx-progesterone-pricing-2026, midi-health-own-site-2026, evernow-own-site-2026, alloy-own-site-2026, midi-health-pricing-2026, evernow-pricing-2026, alloy-insurance-2026, elite-hrt-own-site-2026, healthcare-gov-essential-health-benefits, inner-balance-bioidentical-hrt-2026, inner-balance-faq-2026, nasem-compounded-bht-2020]
 related: [/care/, /care/insurance/, /compare/, /treatments/hormone-therapy/types/, /treatments/hormone-therapy/progesterone/, /tools/treatment-questions/]
 faq:
   - q: Is HRT covered by insurance?
@@ -49,7 +53,7 @@ faq:
     a: "It depends on your plan. As of November 2026, Midi's self-pay price was $250 for a first visit and $150 for follow-ups, not including medication, while Midi says in-network insured patients pay about $50 per visit on average. Compare your own in-network cost with each service's current self-pay price."
 ---
 
-What HRT costs depends mostly on the form, the dose and your insurance. As of November 2026, GoodRx listed generic estradiol patches at about $37 to $69 for four weekly patches, and 90 estradiol tablets at about $20 to $47, without insurance [@goodrx-estradiol-pricing-2026; @goodrx-estradiol-prices-2026-11-08]. Check the price of your exact prescription before you fill it.
+How much hormone replacement therapy (HRT) costs depends mostly on the form, the dose and your insurance. As of November 2026, GoodRx listed generic estradiol patches at about $37 to $69 for four weekly patches, and 90 estradiol tablets at about $20 to $47, without insurance [@goodrx-estradiol-pricing-2026; @goodrx-estradiol-prices-2026-11-08]. Check the price of your exact prescription before you fill it.
 
 ## How much does HRT cost without insurance?
 
@@ -89,9 +93,19 @@ Self-pay prices for menopause-focused telehealth ranged from a $35/month members
 
 Midi's visit prices don't include medicine, so ask any service whether medicine is included. See our [menopause telehealth comparisons](/compare/) for how these services differ beyond price.
 
+## How much is Inner Balance HRT?
+
+Inner Balance doesn't publish a price on its public pages. When we checked its website in November 2026, its HRT product page and FAQ listed no dollar amounts; the product page leads to a health quiz and checkout instead [@inner-balance-bioidentical-hrt-2026; @inner-balance-faq-2026]. We don't review Inner Balance, and we don't repeat prices from third-party sites. What its own pages say:
+
+- **What it sells**: a daily cream combining estradiol and progesterone, made by a compounding pharmacy [@inner-balance-bioidentical-hrt-2026]. Compounded hormones are not FDA approved [@nasem-compounded-bht-2020]; see [bioidentical vs. compounded hormones](/treatments/hormone-therapy/bioidentical-vs-compounded/)
+- **How it bills**: a monthly subscription that it says includes clinician messaging and check-ins [@inner-balance-faq-2026]
+- **Insurance and HSA/FSA**: its FAQ doesn't say insurance covers the cream; it says HSA and FSA payments are accepted [@inner-balance-faq-2026]
+
+Before you pay, ask for the monthly price in writing and how long you're committed, using the checklist below.
+
 ## How do I compare a clinic's price, like Elite HRT?
 
-We don't review Elite HRT, and we couldn't find a published price for menopause hormone therapy from it. When we checked its own website in November 2026, the homepage described peptide therapy and listed no prices for menopause HRT or visits [@elite-hrt-own-site-2026]. For Elite HRT or any clinic, ask for a written, itemized quote that covers:
+We don't review Elite HRT, and we couldn't find a published price for menopause hormone therapy from it. When we checked its own website in November 2026, the homepage described peptide therapy and listed no prices for menopause HRT or visits [@elite-hrt-own-site-2026]. For Elite HRT, Inner Balance or any clinic, ask for a written, itemized quote that covers:
 
 - **Visits**: the first visit and each follow-up
 - **Lab tests**: whether they are required, and what they cost

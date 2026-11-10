@@ -1,7 +1,7 @@
 ---
 title: "When to see a doctor about perimenopause"
-seo_title: "When to see a doctor for perimenopause symptoms"
-meta_description: "See a doctor when perimenopause symptoms affect daily life or your bleeding changes. Which signs are urgent, when to ask for a referral, and what to bring."
+seo_title: "When to see a doctor in perimenopause: periods and red flags"
+meta_description: "See a doctor if symptoms bother you, or periods come under 21 days apart, last over 7 days or are very heavy. Plus urgent signs, referrals and what to bring."
 cluster: perimenopause
 primary_keyword: when to see a doctor for perimenopause
 slug: when-to-see-a-doctor
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Search snippet: seo_title and meta description now give the period changes that need a doctor and mention urgent signs", material: false }
   - { date: "2026-11-09", summary: "Rebuilt around the questions people ask: reasons to book, irregular periods, urgent signs with US numbers, which doctor, when to ask for a specialist referral, what to bring; corrected heavy-bleeding citations", material: true }
   - { date: "2026-11-06", summary: "Published guide on when to see a doctor about perimenopause symptoms", material: true }
 evidence_grade: strong

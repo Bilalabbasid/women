@@ -1,7 +1,7 @@
 ---
 title: "Midi Health vs Alloy: insurance, visits, prices and what each treats"
 seo_title: "Midi Health vs Alloy: insurance, visits and prices"
-meta_description: "Midi bills most PPO plans or charges $250 self-pay for a first visit; Alloy is cash-pay, with estradiol from $39.99 a month. Visit type and treatments compared."
+meta_description: "Midi bills most PPO plans or charges $250 self-pay for a first visit; Alloy is cash-pay, with a $49 consult and estradiol from $39.99 a month. Visits compared."
 cluster: compare
 primary_keyword: midi vs alloy
 slug: midi-vs-alloy
@@ -17,22 +17,23 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Added Alloy's one-time $49 consult fee, now stated on its product pages, to the table, cost section and description", material: true }
   - { date: "2026-11-09", summary: "Added a quick comparison table, Alloy's listed medicine prices, pharmacy and billing details, what Midi Health is, common questions, and removed 'choose X' recommendations", material: true }
   - { date: "2026-11-07", summary: "Published Midi vs. Alloy comparison", material: true }
 evidence_grade: per_option
 claims:
   - id: midi-alloy-core-difference
-    text: "Midi's own site states it is in-network with most, though not all, major PPO plans, with self-pay pricing of $250 (first visit, 30 minutes) / $150 (returning visit, 15 minutes) as of November 2026. Alloy's own site states it does not bill insurance, accepts FSA/HSA, and lists the estradiol pill from $39.99/month; Alloy's pages checked did not state its consultation fee."
-    sources: [midi-health-own-site-2026, midi-health-pricing-2026, alloy-insurance-2026, alloy-solutions-pricing-2026, alloy-after-signup-2026]
+    text: "Midi's own site states it is in-network with most, though not all, major PPO plans, with self-pay pricing of $250 (first visit, 30 minutes) / $150 (returning visit, 15 minutes) as of November 2026. Alloy's own site states it does not bill insurance, accepts FSA/HSA, and lists the estradiol pill from $39.99/month; its estradiol pill page states a one-time $49 consult fee."
+    sources: [midi-health-own-site-2026, midi-health-pricing-2026, alloy-insurance-2026, alloy-solutions-pricing-2026, alloy-estradiol-pill-2026]
   - id: midi-alloy-visit-format
     text: "Midi offers virtual visits with clinicians (MDs and NPs) that produce a care plan; Alloy uses a medical intake form reviewed by a physician, with a plan typically within about 12 hours per its homepage, or a reply usually within 1-2 business days per its help center."
     sources: [midi-health-own-site-2026, midi-health-pricing-2026, alloy-own-site-2026, alloy-after-signup-2026]
 safety_flags: []
 cta_profile: care_comparison
 hub: /compare/
-sources: [midi-health-own-site-2026, alloy-own-site-2026, midi-health-pricing-2026, alloy-insurance-2026, alloy-solutions-pricing-2026, alloy-after-signup-2026, alloy-cost-help-2026, alloy-pharmacy-transfer-2026, alloy-bioidentical-2026, nams-2022-hormone-therapy]
+sources: [midi-health-own-site-2026, alloy-own-site-2026, midi-health-pricing-2026, alloy-insurance-2026, alloy-solutions-pricing-2026, alloy-after-signup-2026, alloy-cost-help-2026, alloy-pharmacy-transfer-2026, alloy-bioidentical-2026, alloy-estradiol-pill-2026, nams-2022-hormone-therapy]
 related: [/compare/, /compare/midi-review/, /compare/alloy-review/, /compare/midi-vs-evernow/, /care/hrt-cost/, /tools/treatment-questions/]
 faq:
   - q: Is Midi Health or Alloy faster?
@@ -55,7 +56,7 @@ All details below come from each company's own site, checked in November 2026. N
 |---|---|---|
 | **Insurance** | In-network with most, not all, major PPO plans; HSA/FSA accepted [@midi-health-pricing-2026] | Doesn't bill insurance; HSA/FSA accepted [@alloy-insurance-2026] |
 | **How you're seen** | Virtual visits with clinicians, including doctors and nurse practitioners [@midi-health-own-site-2026] | Online medical form reviewed by a doctor, plus messaging [@alloy-own-site-2026] |
-| **Visit price** | $250 first visit (30 min), $150 follow-up (15 min) self-pay; labs and medicines extra [@midi-health-pricing-2026; @midi-health-own-site-2026] | Consultation fee not stated on the pages we checked [@alloy-after-signup-2026] |
+| **Visit price** | $250 first visit (30 min), $150 follow-up (15 min) self-pay; labs and medicines extra [@midi-health-pricing-2026; @midi-health-own-site-2026] | One-time $49 consult fee [@alloy-estradiol-pill-2026] |
 | **Medicine price** | Not included in visit fees [@midi-health-own-site-2026] | Estradiol pill from $39.99 a month, patch $100 a month [@alloy-solutions-pricing-2026] |
 | **Pharmacy** | Not stated on the pricing page [@midi-health-pricing-2026] | New prescriptions go to Alloy's partner pharmacy [@alloy-pharmacy-transfer-2026] |
 | **What it treats** | Care plans with hormone, non-hormone and lifestyle options [@midi-health-own-site-2026] | Hormone therapy, plus skincare, sexual health, weight, hair and gut products [@alloy-own-site-2026] |
@@ -77,7 +78,7 @@ Alloy lists each medicine's price and usually bills every 3 months [@alloy-solut
 - **Estradiol patch**: $100 a month [@alloy-solutions-pricing-2026]
 - **Progesterone**: from $23 a month [@alloy-solutions-pricing-2026]
 
-Alloy also charges for a consultation before hormone treatment, but the pages we checked don't state the amount [@alloy-after-signup-2026]. To compare, add up a year of visits and medicine for each. Our [HRT cost guide](/care/hrt-cost/) shows what the same medicines can cost at a regular pharmacy.
+Alloy also charges a one-time $49 consult fee before hormone treatment, according to its estradiol pill page [@alloy-estradiol-pill-2026]. To compare, add up a year of visits and medicine for each. Our [HRT cost guide](/care/hrt-cost/) shows what the same medicines can cost at a regular pharmacy.
 
 ## What's a Midi visit like, and what's an Alloy visit like?
 

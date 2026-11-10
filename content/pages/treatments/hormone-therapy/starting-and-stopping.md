@@ -1,7 +1,7 @@
 ---
 title: "Starting and stopping HRT"
-seo_title: "How to start and stop HRT, and whether to taper"
-meta_description: "How to start HRT, what the first 3 months bring, how long to stay on it, whether to taper or stop at once, and what happens after you stop HRT."
+seo_title: "When to stop HRT, how to start, and whether to taper"
+meta_description: "There's no set age to stop HRT: it depends on your benefits, risks and wishes. Plus how to start, the first 3 months, tapering vs stopping and what comes next."
 cluster: treatments
 primary_keyword: stopping hrt
 slug: starting-and-stopping
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Added a 'When should you stop HRT?' section with a direct answer and the main reasons to review stopping; added NHS guidance on tapering over 3 to 6 months; sharper title and description", material: true }
   - { date: "2026-11-09", summary: "Rebuilt around common questions: how to start, blood tests, the first 3 months, how long to stay on HRT, tapering vs stopping suddenly, what happens after stopping, restarting; added a safety section and FAQs", material: true }
   - { date: "2026-11-06", summary: "Published guide on starting and stopping HRT", material: true }
 evidence_grade: strong
@@ -44,10 +45,16 @@ claims:
   - id: nams-no-arbitrary-stop
     text: "The Menopause Society (2022) states an arbitrary age-based stopping rule is not clinically appropriate and hormone therapy does not need to be routinely stopped in women over 60 or 65, with periodic reevaluation for longer use."
     sources: [nams-2022-hormone-therapy]
+  - id: nams-individual-stop-decision
+    text: "The Menopause Society (2022) states the decision about duration of treatment and when to stop hormone therapy must be considered in the context of the individualized risk-benefit profile and the woman's personal preferences."
+    sources: [nams-2022-hormone-therapy]
+  - id: nhs-no-fixed-limit-taper
+    text: "NHS guidance states there's no fixed limit on how long you can take HRT, that it's best taken only as long as the benefits outweigh the risks, and that while you can stop suddenly, reducing the dose gradually over 3 to 6 months is usually recommended."
+    sources: [nhs-when-to-take-hrt]
 safety_flags: [bleeding, cancer_history]
 cta_profile: hrt_evaluating
 hub: /treatments/hormone-therapy/
-sources: [nice-ng23-recommendations, nams-2022-hormone-therapy, fda-mht-labeling-request-2025, nhs-postmenopausal-bleeding, cdc-stroke-signs, cdc-vte-about]
+sources: [nice-ng23-recommendations, nams-2022-hormone-therapy, fda-mht-labeling-request-2025, nhs-postmenopausal-bleeding, cdc-stroke-signs, cdc-vte-about, nhs-when-to-take-hrt]
 related: [/treatments/hormone-therapy/, /treatments/hormone-therapy/side-effects/, /treatments/hormone-therapy/timing/, /postmenopause/bleeding/, /tools/treatment-questions/]
 faq:
   - q: Can you stop HRT suddenly?
@@ -93,6 +100,20 @@ There's no set time limit. The Menopause Society says an arbitrary age-based sto
 
 That matters because frequent hot flashes last 7.4 years on average, and more than 10 years for many women [@nams-2022-hormone-therapy]. NICE recommends rediscussing the benefits and risks of continuing at every review [@nice-ng23-recommendations]. For how age affects the picture, see [when to start HRT](/treatments/hormone-therapy/timing/).
 
+## When should you stop HRT?
+
+There's no set age or date to stop HRT. The Menopause Society says when to stop should depend on your own balance of benefits and risks and on your preferences [@nams-2022-hormone-therapy]. NHS guidance puts it simply: take HRT for as long as the benefits outweigh the risks, and talk to your doctor before you stop [@nhs-when-to-take-hrt].
+
+Good times to review whether to stop:
+
+- **At each review**: NICE recommends rediscussing the benefits and risks of continuing at every check-in, usually once a year [@nice-ng23-recommendations]
+- **If your health changes**: your risks for heart disease, stroke, blood clots, breast cancer and bone loss all factor into the decision [@nams-2022-hormone-therapy]
+- **If you're diagnosed with breast cancer**: NICE recommends stopping whole-body HRT [@nice-ng23-recommendations]
+- **If it isn't helping or side effects don't settle**: NICE recommends seeing someone with menopause expertise [@nice-ng23-recommendations]
+- **If you'd simply like to stop**: in the absence of medical reasons against HRT, The Menopause Society says the woman should decide her preferred dose and how long to use it, with her clinician [@nams-2022-hormone-therapy]
+
+Turning 60 or 65 isn't by itself a reason to stop [@nams-2022-hormone-therapy].
+
 ## How do you stop HRT: taper or stop suddenly?
 
 You can do either. NICE recommends offering a choice between gradually reducing the dose and stopping straight away [@nice-ng23-recommendations]:
@@ -100,7 +121,7 @@ You can do either. NICE recommends offering a choice between gradually reducing 
 - **Tapering (gradually reducing)**: May limit how quickly symptoms come back in the short term [@nice-ng23-recommendations].
 - **Stopping all at once**: A valid option; in the longer term, it makes no difference to your symptoms compared with tapering [@nice-ng23-recommendations].
 
-There is no single proven tapering schedule. The Menopause Society notes that few studies have looked at the best way to stop and that data comparing the two approaches are lacking, though experts generally advise lowering the dose gradually [@nams-2022-hormone-therapy]. Your prescriber can plan the steps with you.
+There is no single proven tapering schedule. The Menopause Society notes that few studies have looked at the best way to stop and that data comparing the two approaches are lacking, though experts generally advise lowering the dose gradually [@nams-2022-hormone-therapy]. NHS guidance says reducing the dose gradually over 3 to 6 months is usually recommended [@nhs-when-to-take-hrt]. Your prescriber can plan the steps with you.
 
 The one situation where stopping isn't a choice: NICE recommends stopping whole-body HRT if you're diagnosed with breast cancer [@nice-ng23-recommendations].
 

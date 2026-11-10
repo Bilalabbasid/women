@@ -1,12 +1,12 @@
 ---
 title: Lynkuet (elinzanetant)
-seo_title: "Lynkuet FDA approval and side effects: what the label says"
-meta_description: "The FDA approved Lynkuet (elinzanetant) in October 2025 for moderate to severe menopause hot flashes. See its side effects, warnings and other approved drugs."
+seo_title: "Lynkuet (elinzanetant): dosing, side effects and FDA label"
+meta_description: "Lynkuet (elinzanetant) is two 60 mg capsules once a day at bedtime, FDA-approved in 2025 for menopause hot flashes. Missed doses, side effects and interactions."
 cluster: treatments
 primary_keyword: lynkuet
 slug: elinzanetant
 page_type: treatment
-secondary_keywords: [elinzanetant, veozah vs lynkuet, lynkuet side effects, lynkuet fda]
+secondary_keywords: [elinzanetant, lynkuet dosing, veozah vs lynkuet, lynkuet side effects, lynkuet fda]
 search_intent: informational
 funnel_stage: evaluating
 symptom_tags: [hot-flashes, night-sweats]
@@ -18,8 +18,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Search pass 2: dosing section reworked as 'How is Lynkuet taken? Dose and timing' from the FDA label (bedtime dose, missed doses, tests before starting, when the 60 mg dose applies), a missed-dose FAQ, and a sharper title and description", material: true }
   - { date: "2026-11-09", summary: "Led with the FDA approval and indication; added a Lynkuet side effects section (common with label percentages, serious warnings), a cited table of FDA-approved hot flash medicines and their indications, and FAQs on onset, weight, driving and age", material: true }
   - { date: "2026-11-08", summary: "Rebuilt from the FDA label: trial results, labeled dose and interactions, warnings (drowsiness, liver, pregnancy, seizure), side effects, Veozah comparison, when-to-get-help section, plain-language short answer", material: true }
   - { date: "2026-11-06", summary: "Published clinical guide on Lynkuet (elinzanetant)", material: true }
@@ -51,6 +52,8 @@ related: [/treatments/nonhormonal/, /treatments/nonhormonal/fezolinetant/, /trea
 faq:
   - q: How is Lynkuet (elinzanetant) different from Veozah (fezolinetant)?
     a: Both work on brain cells that help control body temperature. Veozah blocks one chemical messenger, neurokinin B, while Lynkuet blocks two, neurokinin B and substance P. Veozah has a boxed warning for liver injury with liver tests through month 9; Lynkuet calls for liver tests before starting and at 3 months, and warns about drowsiness, pregnancy loss and seizure.
+  - q: What should I do if I miss a dose of Lynkuet?
+    a: The label says to skip the missed bedtime dose and take the next one as scheduled the following day. Don't take two doses, or more than two capsules, on the same day to make up for it.
   - q: How long does Lynkuet take to work?
     a: In the trials, women taking Lynkuet had clearly fewer and milder hot flashes than women on placebo by week 4, the first point the label reports, and the benefit held at week 12. Earlier trials reviewed by The Menopause Society found it worked better than placebo within 2 weeks.
   - q: Can Lynkuet make you sleepy, and can you drive on it?
@@ -114,9 +117,18 @@ Lynkuet does not carry a boxed warning, but its label lists four warnings [@lynk
 
 The label also says Lynkuet is not recommended for people with kidney failure or moderate to severe liver disease [@lynkuet-prescribing-information].
 
-## How it is taken, and drug interactions
+## How is Lynkuet taken? Dose and timing
 
-The labeled dose is 120 mg (two 60 mg capsules) by mouth once a day at bedtime, with or without food. Capsules are swallowed whole with water [@lynkuet-prescribing-information]. Lynkuet is broken down by a liver enzyme (CYP3A4), so medicines and foods that affect this enzyme can change the dose [@lynkuet-prescribing-information]:
+The labeled dose of Lynkuet is 120 mg, taken as two 60 mg capsules by mouth once a day at bedtime, at about the same time each night, with or without food [@lynkuet-prescribing-information]. The capsules are swallowed whole with water and should not be cut, crushed or chewed [@lynkuet-prescribing-information]. What else the label says about taking it [@lynkuet-prescribing-information]:
+
+- **Before the first dose**: Pregnancy is ruled out in anyone who could become pregnant, and liver blood tests are done. Lynkuet is not started if liver enzymes or bilirubin are already twice the top of the normal range or higher.
+- **If you miss a dose**: Skip it and take the next dose at bedtime the following day as usual. Don't take two doses in one day to make up for it.
+- **The lower dose**: The label lowers the dose to one 60 mg capsule a day only while someone takes a medicine that moderately slows the CYP3A4 liver enzyme (see below). The usual 120 mg dose resumes after that medicine is stopped.
+- **The capsules**: Each is a red, oblong, soft gelatin capsule printed "EZN60". If the dose is lowered to one capsule, the label says to peel back the foil over just one capsule and keep the other in the blister card for the next dose.
+
+### Drug interactions that change the dose
+
+Lynkuet is broken down by a liver enzyme (CYP3A4), so medicines and foods that affect this enzyme can change the dose [@lynkuet-prescribing-information]:
 
 - **Medicines that strongly slow the enzyme, and grapefruit**: Avoid using them with Lynkuet. This includes eating grapefruit or drinking grapefruit juice during treatment.
 - **Medicines that moderately slow the enzyme**: The label lowers the dose to 60 mg (one capsule) once daily while these are used.

@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Opening now answers 'bioidentical hormones versus compounded hormones' directly; added an answer on whether estradiol cypionate is bioidentical, from its FDA-approved label", material: true }
   - { date: "2026-11-09", summary: "Rewrote the opening as a direct answer; added a comparison table and answers on safety, which FDA-approved products are bioidentical, saliva testing, pellets, and when compounding is reasonable; added Menopause Society and National Academies findings and sourced the definitions", material: true }
   - { date: "2026-11-06", summary: "Published evidence guide on bioidentical vs compounded hormone therapy", material: true }
 evidence_grade: not_supported
@@ -41,10 +42,13 @@ claims:
   - id: nasem-restrict-compounded
     text: "A 2020 National Academies report requested by the FDA found insufficient evidence to support the clinical utility of compounded bioidentical hormone therapy and recommended limiting it to patients allergic to an ingredient in an FDA-approved product or needing a dosage form not available in one."
     sources: [nasem-compounded-bht-2020]
+  - id: estradiol-cypionate-label
+    text: "The FDA-approved Depo-Estradiol label describes estradiol cypionate as an oil-soluble ester of estradiol 17β for intramuscular injection, absorbed over several weeks, indicated for moderate to severe vasomotor symptoms of menopause, with a usual dosage range of 1 to 5 mg every 3 to 4 weeks; the label carries a boxed warning."
+    sources: [dailymed-depo-estradiol-label]
 safety_flags: []
 cta_profile: hrt_evaluating
 hub: /treatments/hormone-therapy/
-sources: [acog-compounded-bioidentical-2023, nice-ng23-recommendations, nams-2022-hormone-therapy, nasem-compounded-bht-2020]
+sources: [acog-compounded-bioidentical-2023, nice-ng23-recommendations, nams-2022-hormone-therapy, nasem-compounded-bht-2020, dailymed-depo-estradiol-label]
 related: [/treatments/hormone-therapy/, /treatments/hormone-therapy/types/, /treatments/hormone-therapy/pellets/, /does-it-work/]
 faq:
   - q: Are bioidentical hormones FDA approved?
@@ -57,7 +61,7 @@ faq:
     a: "No. The Menopause Society says saliva and urine hormone tests are unreliable for setting hormone doses, because hormone levels vary through the day and from person to person. Blood hormone testing is rarely needed."
 ---
 
-"Bioidentical" means a hormone has the same structure as the one your body makes, and several FDA-approved HRT products already are [@nams-2022-hormone-therapy]. "Compounded" means custom-mixed by a pharmacy without FDA approval or standard testing [@nams-2022-hormone-therapy; @nasem-compounded-bht-2020]. Compounded products haven't been shown to be safer, so FDA-approved hormones are recommended first [@acog-compounded-bioidentical-2023].
+Bioidentical hormones versus compounded hormones compares two different things. "Bioidentical" means a hormone has the same structure as the one your body makes, and several FDA-approved HRT products already are [@nams-2022-hormone-therapy]. "Compounded" means custom-mixed by a pharmacy without FDA approval [@nams-2022-hormone-therapy; @nasem-compounded-bht-2020]; these haven't been shown to be safer, so FDA-approved hormones come first [@acog-compounded-bioidentical-2023].
 
 ## What's the difference between bioidentical and compounded hormones?
 
@@ -105,6 +109,18 @@ No. Some compounded hormone plans set doses from saliva, urine, or blood tests, 
 ## Are hormone pellets bioidentical?
 
 They can be, but that doesn't make them tested or approved. The Menopause Society lists pellets under the skin as one of the nonstandard, untested ways compounded bioidentical hormones are given [@nams-2022-hormone-therapy]. The National Academies recommended that compounded pellets be considered for the FDA's list of drugs that are difficult to compound safely, because of safety concerns with how they release hormones [@nasem-compounded-bht-2020]. Our [hormone pellets](/treatments/hormone-therapy/pellets/) page has more.
+
+## Is estradiol cypionate bioidentical?
+
+Not exactly: it's a modified form of estradiol, not the identical molecule. Its FDA-approved label (Depo-Estradiol) describes estradiol cypionate as an oil-based ester of estradiol, given as a shot into a muscle and absorbed over several weeks [@dailymed-depo-estradiol-label]. The label doesn't use the word "bioidentical" [@dailymed-depo-estradiol-label].
+
+What matters more for safety is that the brand product is FDA approved, not compounded:
+
+- **What it's approved for**: moderate to severe hot flashes and night sweats from menopause, and low estrogen caused by hypogonadism (when the ovaries make too little) [@dailymed-depo-estradiol-label]
+- **How it's given**: the label's usual range for hot flashes is one injection every 3 to 4 weeks [@dailymed-depo-estradiol-label]
+- **Safety information**: it comes with a full label of risks, including a boxed warning [@dailymed-depo-estradiol-label]
+
+If you're offered an estradiol injection, ask whether it's the FDA-approved product or a compounded one. Other FDA-approved estradiol forms include patches, gels and pills [@nams-2022-hormone-therapy]; see [types of HRT](/treatments/hormone-therapy/types/).
 
 ## What this means for you
 

@@ -1,12 +1,12 @@
 ---
 title: "Does Amberen work for menopause symptoms?"
-seo_title: "Does Amberen work? Trials, side effects and reviews"
-meta_description: "Amberen beat a placebo in two 90-day trials its maker paid for, with no side effects reported. What's in it, what's still unknown, and what the FTC said."
+seo_title: "What is Amberen? Ingredients, trials and side effects"
+meta_description: "Amberen is a non-hormonal supplement of succinate salts, amino acids, minerals and vitamin E. Its ingredients, what maker-funded trials found and the FTC case."
 cluster: does-it-work
 primary_keyword: does amberen work
 slug: amberen
 page_type: does_it_work
-secondary_keywords: [amberen reviews, amberen side effects, amberen menopause clinical trial]
+secondary_keywords: [what is amberen, amberen ingredients, amberen reviews, amberen side effects, amberen menopause clinical trial]
 search_intent: commercial
 funnel_stage: sceptical
 symptom_tags: [hot-flashes, weight-gain, anxiety]
@@ -18,8 +18,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Search pass 2: short answer now says what Amberen is; new 'What is Amberen?' section; ingredient list corrected from the trial paper (the second capsule weighs 200 mg in total); sharper title and description", material: true }
   - { date: "2026-11-09", summary: "Search pass: verdict-first short answer; added what's in the studied formula, who paid for the trials, side effects and safety, weight loss, the FTC case, and what online reviews can and can't show", material: true }
   - { date: "2026-11-07", summary: "Published evidence verdict on Amberen's original succinate-based formula", material: true }
 evidence_grade: limited
@@ -49,14 +50,18 @@ faq:
     a: "Customer reviews can't tell you whether Amberen works better than a placebo, because menopause symptoms often ease on a placebo too. In 2016 its marketers settled FTC charges that included hidden ties to endorsers and a false 93 percent satisfaction claim."
 ---
 
-**Our verdict:** :grade{id="amberen"}. Two 90-day trials paid for by the maker found Amberen eased more menopause symptoms than a placebo, but no independent trial has checked the results [@radzinsky-amberen-pooled-trials-2019]. Hormone therapy is the most effective treatment for hot flashes [@nams-2022-hormone-therapy].
+**Our verdict:** :grade{id="amberen"}. Amberen is a non-hormonal menopause supplement made mainly of succinate salts, with amino acids, minerals and vitamin E [@radzinsky-amberen-pooled-trials-2019; @amberen-own-site-2026]. Two 90-day trials paid for by the maker found it eased more symptoms than a placebo, but no independent trial has checked the results [@radzinsky-amberen-pooled-trials-2019]. Hormone therapy is the most effective treatment for hot flashes [@nams-2022-hormone-therapy].
+
+## What is Amberen?
+
+Amberen is an over-the-counter dietary supplement sold for menopause symptoms; the company says its capsules target 12 of them and contain no drugs or hormones [@amberen-own-site-2026]. Its main ingredient is a succinate, a salt of succinic acid; the trial authors suggest, without having proven it, that this may help cells make energy when estrogen is low [@radzinsky-amberen-pooled-trials-2019]. Like other dietary supplements, it did not need FDA approval before going on sale [@fda-dietary-supplements-qa-2026].
 
 ## What's in Amberen?
 
-The formula tested in the published trials was two capsules taken once a day with a meal [@radzinsky-amberen-pooled-trials-2019]. They contained:
+Amberen's ingredients, as tested in the published trials, were split across two capsules taken together once a day with a meal, usually at or after breakfast [@radzinsky-amberen-pooled-trials-2019]:
 
-- **Capsule one**: 200 mg of ammonium succinate, a salt of succinic acid [@radzinsky-amberen-pooled-trials-2019].
-- **Capsule two**: 200 mg of calcium disuccinate, plus monosodium L-glutamate, glycine, magnesium disuccinate, zinc difumarate and vitamin E (tocopherol acetate) [@radzinsky-amberen-pooled-trials-2019].
+- **Capsule one (white)**: 200 mg of ammonium succinate, a salt of succinic acid [@radzinsky-amberen-pooled-trials-2019].
+- **Capsule two (orange, 200 mg)**: Calcium disuccinate, monosodium L-glutamate, glycine (an amino acid), magnesium disuccinate, zinc difumarate and vitamin E (tocopherol acetate) [@radzinsky-amberen-pooled-trials-2019].
 
 Today the company sells several products under the Amberen name, including menopause capsules and gummies, a perimenopause formula, and products for hot flashes, libido, focus and joints [@amberen-own-site-2026]. Its menopause capsule page describes the formula as a "proprietary mineral complex" of succinates, amino acids and vitamin E, but doesn't list amounts [@amberen-own-site-2026]. We can't confirm that any current product matches the one tested, so check the label against the list above.
 

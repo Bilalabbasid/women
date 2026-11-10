@@ -1,7 +1,7 @@
 ---
 title: Non-hormonal treatments for hot flashes in menopause
-seo_title: "Non-hormonal menopause treatments: what works, what doesn't"
-meta_description: "Three non-hormonal medicines are FDA-approved for menopause hot flashes. See which other prescriptions, CBT and hypnosis work, and which supplements don't."
+seo_title: "Non-hormonal treatments for hot flashes: what works (2026)"
+meta_description: "Three non-hormonal medicines are FDA-approved for hot flashes: Brisdelle, Veozah and Lynkuet. Compare with antidepressants, gabapentin, CBT and supplements."
 cluster: treatments
 primary_keyword: non hormonal treatment for hot flashes
 slug: nonhormonal
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Search snippet: seo_title matches the main search; meta description names the three FDA-approved non-hormonal medicines", material: false }
   - { date: "2026-11-09", summary: "Plain short answer; added which-medicines-are-FDA-approved section (linking to the full label table), what-works list, options after breast cancer, a table with guideline verdict and FDA status per option, and FAQs on onset, HRT comparison and lifestyle", material: true }
   - { date: "2026-11-06", summary: "Published non-hormonal treatments sub-hub", material: true }
   - { date: "2026-11-06", summary: "Added links to 4 new child guides (SSRIs/SNRIs, gabapentin, oxybutynin, CBT/hypnosis)", material: true }

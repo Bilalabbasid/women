@@ -1,12 +1,12 @@
 ---
 title: "Irregular periods in perimenopause"
-seo_title: "Perimenopause irregular periods: when to worry"
-meta_description: "Shorter, longer or skipped periods are common in perimenopause. See what's typical, which bleeding changes need a doctor's check, and what else can cause them."
+seo_title: "Irregular periods in perimenopause: when to see a doctor"
+meta_description: "Periods every 21 days, late or skipped can all be part of perimenopause. See what's typical, which changes need a doctor, and what else can cause them."
 cluster: perimenopause
 primary_keyword: irregular periods perimenopause
 slug: irregular-periods
 page_type: guide
-secondary_keywords: [periods closer together perimenopause, skipped periods perimenopause, shorter cycles perimenopause]
+secondary_keywords: [periods closer together perimenopause, skipped periods perimenopause, shorter cycles perimenopause, period every 21 days perimenopause]
 search_intent: informational
 funnel_stage: worried
 symptom_tags: [irregular-periods, bleeding]
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Added a sourced answer on periods every 21 days (short cycles in early perimenopause, when to get checked) and more on seeing a doctor about irregular periods; sharper title and description", material: true }
   - { date: "2026-11-09", summary: "Added a sourced typical-vs-check table, answers on periods every two weeks, skipped months, other causes, pregnancy, how long it lasts and tests a doctor may do; one urgent box for real red flags", material: true }
   - { date: "2026-11-06", summary: "Published guide on irregular periods in perimenopause", material: true }
 evidence_grade: strong
@@ -38,10 +39,16 @@ claims:
   - id: mayo-irregular-check
     text: "Irregular periods are common in perimenopause and usually not a concern; see a healthcare professional if bleeding is very heavy, lasts longer than seven days, happens between periods, or periods are usually less than 21 days apart."
     sources: [mayo-perimenopause-symptoms-causes-2026]
+  - id: short-cycles-early-perimenopause
+    text: "Short menstrual cycles of less than 21 days were common in early perimenopause in the SWAN Daily Hormone Study, and both short and long cycles were more likely to be anovulatory."
+    sources: [harlow-menstruation-menopause-transition-2011]
+  - id: cleveland-see-provider-bleeding
+    text: "See a provider if periods become very heavy, you change pads or tampons every one to two hours, periods last several days longer than usual, you bleed between periods or after sex, or periods occur less than 21 days apart."
+    sources: [cleveland-clinic-perimenopause]
 safety_flags: [bleeding]
 cta_profile: bleeding
 hub: /perimenopause/
-sources: [straw-10-2012, nice-ng23-recommendations, nhs-heavy-periods, acog-perimenopausal-bleeding-faq, mayo-perimenopause-symptoms-causes-2026, nhs-postmenopausal-bleeding, cdc-heavy-menstrual-bleeding, medlineplus-vaginal-uterine-bleeding]
+sources: [straw-10-2012, nice-ng23-recommendations, nhs-heavy-periods, acog-perimenopausal-bleeding-faq, mayo-perimenopause-symptoms-causes-2026, nhs-postmenopausal-bleeding, cdc-heavy-menstrual-bleeding, medlineplus-vaginal-uterine-bleeding, harlow-menstruation-menopause-transition-2011, cleveland-clinic-perimenopause, nhs-menopause-symptoms, medlineplus-iron-deficiency-anemia]
 related: [/perimenopause/, /perimenopause/stages/, /perimenopause/heavy-periods/, /perimenopause/blood-tests/, /tools/stage-guide/, /tools/12-month-counter/]
 faq:
   - q: Is it normal to skip periods in perimenopause?
@@ -75,13 +82,23 @@ Clinicians use two markers to describe the stages. In the early stage, your cycl
 
 ## When should I see a doctor about irregular periods?
 
-See a doctor if your bleeding is very heavy, lasts more than seven days, happens between periods or after sex, or your periods usually come less than 21 days apart [@mayo-perimenopause-symptoms-causes-2026; @acog-perimenopausal-bleeding-faq]. Irregular timing on its own is usually nothing to worry about and is fine to track [@mayo-perimenopause-symptoms-causes-2026].
+See a doctor if your bleeding is very heavy, lasts more than seven days, happens between periods or after sex, or your periods usually come less than 21 days apart [@mayo-perimenopause-symptoms-causes-2026; @acog-perimenopausal-bleeding-faq]. Irregular timing on its own is usually nothing to worry about and is fine to track [@mayo-perimenopause-symptoms-causes-2026]. US guidance also lists changing pads or tampons every one to two hours, or periods lasting several days longer than usual, as reasons to see a provider [@cleveland-clinic-perimenopause].
+
+A healthcare professional can look into bleeding changes [@mayo-perimenopause-symptoms-causes-2026], and ACOG suggests talking with an ob-gyn (gynecologist) [@acog-perimenopausal-bleeding-faq]. Bring a few months of period dates, how many days you bled and any spotting in between, since cycle-to-cycle changes are how perimenopause stages are judged [@straw-10-2012].
 
 These are routine appointments, not emergencies, but don't put them off: abnormal bleeding can sometimes be a sign of a health problem that needs treating [@acog-perimenopausal-bleeding-faq]. UK guidance gives similar reasons to see a GP, including heavy periods that affect your life and periods with pain when peeing, pooing or having sex [@nhs-heavy-periods]. For more on booking and what to bring, see [when to see a doctor about perimenopause](/perimenopause/when-to-see-a-doctor/).
 
 :::urgent
 Contact a clinician right away if you soak through one or more pads or tampons every hour for several hours in a row [@cdc-heavy-menstrual-bleeding], or bleeding makes you feel weak or lightheaded [@medlineplus-vaginal-uterine-bleeding]. Any bleeding after you've gone 12 months without a period also needs checking, even a small amount or a single episode [@nhs-postmenopausal-bleeding]. See [bleeding after menopause](/postmenopause/bleeding/).
 :::
+
+## Is it normal to have a period every 21 days in perimenopause?
+
+It can be. Shorter cycles are common early in perimenopause: in a large US study, cycles of less than 21 days were common in the early stage [@harlow-menstruation-menopause-transition-2011]. UK and US guidance both say periods may come more often [@nhs-menopause-symptoms; @cleveland-clinic-perimenopause]. If your periods usually come less than 21 days apart, though, get them checked [@mayo-perimenopause-symptoms-causes-2026; @cleveland-clinic-perimenopause].
+
+Before perimenopause, a typical cycle is 24 to 38 days [@acog-perimenopausal-bleeding-faq]. Early on, short cycles (and long ones) are more likely to be cycles where no egg was released [@harlow-menstruation-menopause-transition-2011]. A cycle that is 21 days one month and 30 the next fits the early-stage pattern of cycle lengths changing by 7 days or more [@straw-10-2012].
+
+Get checked sooner if short cycles come with bleeding that lasts more than 7 days, is very heavy, or happens between periods [@mayo-perimenopause-symptoms-causes-2026]. Frequent periods can also add up to enough blood loss to cause low iron, which can leave you tired or weak [@medlineplus-iron-deficiency-anemia].
 
 ## Is it normal to have a period every two weeks in perimenopause?
 

@@ -4314,3 +4314,705 @@
   funding_conflict: null
   verified: true
   notes: Content current as of 09/03/2026.
+
+- id: nidcd-tinnitus
+  title: Tinnitus
+  authors: []
+  publisher: National Institute on Deafness and Other Communication Disorders (NIDCD), NIH
+  year: 2023
+  type: patient_information
+  url: https://www.nidcd.nih.gov/health/tinnitus
+  doi: null
+  accessed: 2026-11-11
+  population: General public (US)
+  key_finding: Tinnitus is sound with no outside source; surveys estimate 10 to 25% of adults have it. It may improve or go away over time but sometimes worsens; lasting 3 months or longer counts as chronic. Most people with tinnitus have some hearing loss. It is only rarely linked to a serious medical problem, but can affect mood, sleep and concentration, and in severe cases lead to anxiety or depression. Linked causes - noise exposure, hearing loss (aging, noise), medicines (NSAIDs such as ibuprofen, naproxen and aspirin; certain antibiotics; anti-cancer drugs; anti-malaria drugs; antidepressants), earwax or ear infection, head or neck injury; less common - Meniere's disease (with balance problems and hearing loss), jaw joint problems, tumors such as acoustic neuroma, blood vessel problems including high blood pressure, and chronic conditions such as diabetes, migraines, thyroid disorders and anemia. Rarely the sound pulses in time with the heartbeat (often an identifiable, treatable cause); an ENT may order imaging especially if tinnitus pulsates. First see a primary care doctor (checks earwax, infection, medicines), who may refer to an ENT and an audiologist. Treating an underlying cause such as earwax or jaw problems can eliminate or greatly reduce it. Treatments - sound therapy (tabletop or smartphone sound generators, a fan; hearing aids are a main option for people with hearing loss; wearable sound generators), counseling and education, cognitive behavioral therapy (studies show it can improve well-being), tinnitus retraining therapy. No FDA-approved medicine for tinnitus; antidepressants or anti-anxiety medicines may be prescribed for mood or sleep; vitamins, herbal extracts and supplements advertised for tinnitus have not been proven effective.
+  funding_conflict: null
+  verified: true
+  notes: Opened 2026-11-11. Last updated May 1, 2023. Page does not mention menopause. Page says there is no cure; site copy rules ban that word, so paraphrase.
+
+- id: nidcd-sudden-deafness
+  title: Sudden Deafness
+  authors: []
+  publisher: National Institute on Deafness and Other Communication Disorders (NIDCD), NIH
+  year: 2018
+  type: patient_information
+  url: https://www.nidcd.nih.gov/health/sudden-deafness
+  doi: null
+  accessed: 2026-11-11
+  population: General public (US)
+  key_finding: Sudden sensorineural hearing loss is an unexplained, rapid loss of hearing all at once or over a few days, frequently in one ear; it may come with ear fullness, dizziness or ringing in the ears. Consider it a medical emergency and see a doctor immediately; delaying diagnosis and treatment can decrease treatment effectiveness. It most often affects adults in their late 40s and early 50s. Steroid treatment works best given as soon as possible; treatment delayed more than 2 to 4 weeks is less likely to help.
+  funding_conflict: null
+  verified: true
+  notes: Opened 2026-11-11. Last updated September 14, 2018.
+
+- id: nhs-tinnitus
+  title: Tinnitus
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2024
+  type: patient_information
+  url: https://www.nhs.uk/conditions/tinnitus/
+  doi: null
+  accessed: 2026-11-11
+  population: General public (UK)
+  key_finding: Tinnitus is hearing noises that do not come from an outside source; not usually a sign of anything serious and may get better by itself. Often linked to hearing loss, Meniere's disease, diabetes, thyroid disorders, multiple sclerosis, anxiety or depression, and some medicines (some chemotherapy medicines, antibiotics, NSAIDs, aspirin). See a GP if tinnitus is regular or constant, getting worse, or bothering you (sleep, concentration, anxiety). Ask for an urgent GP appointment if it beats in time with your pulse. Go to A&E or call 999 for tinnitus after a head injury, or with sudden hearing loss, weakness in the face muscles or vertigo. The GP checks the ears (infection, earwax) and hearing and may refer to a specialist. Self-help - relax (deep breathing, yoga), improve sleep (bedtime routine, less caffeine), avoid stress and loud background noise, avoid total silence (soft music or sounds), don't focus on it, support groups. Treatments - CBT (digital CBT usually offered first), tinnitus counselling, tinnitus retraining therapy (may be on the NHS for severe or persistent tinnitus; unclear if it works for everyone); hearing aids if there is hearing loss.
+  funding_conflict: null
+  verified: true
+  notes: Opened 2026-11-11. Page last reviewed 12 January 2024. UK guidance; use only in a labeled UK line. Page does not mention menopause.
+
+- id: chen-hrt-tinnitus-taiwan-2018
+  title: "Hormone replacement therapy decreases the risk of tinnitus in menopausal women: a nationwide study"
+  authors:
+    - Chen HC
+    - Chung CH
+    - Chen VCF
+    - Wang YC
+    - Chien WC
+  publisher: Oncotarget
+  year: 2018
+  type: cohort
+  url: https://pubmed.ncbi.nlm.nih.gov/29731984/
+  doi: 10.18632/oncotarget.24452
+  accessed: 2026-11-11
+  population: Menopausal women aged 45-79 in Taiwan's National Health Insurance Research Database, 2000-2010 (13,920 HRT users, 41,760 matched nonusers)
+  key_finding: A significantly lower share of HRT users developed tinnitus than nonusers (0.43% vs 0.59%); after adjustment HRT users had about half the risk (adjusted hazard ratio 0.505, 95% CI 0.342-0.756). Authors speculate HRT may help prevent tinnitus.
+  funding_conflict: Authors declared no competing interests.
+  verified: true
+  notes: Abstract read via PubMed E-utilities 2026-11-11. Observational insurance-records study; shows an association, not cause.
+
+- id: lee-hrt-tinnitus-korea-2017
+  title: "Association of perceived tinnitus with duration of hormone replacement therapy in Korean postmenopausal women: a cross-sectional study"
+  authors:
+    - Lee SS
+    - Han KD
+    - Joo YH
+  publisher: BMJ Open
+  year: 2017
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/28698314/
+  doi: 10.1136/bmjopen-2016-013736
+  accessed: 2026-11-11
+  population: 2,736 postmenopausal women aged 19-65 in the Korea National Health and Nutrition Examination Surveys 2010-2012
+  key_finding: Tinnitus prevalence was 22.2% among postmenopausal women. Tinnitus severity was higher in women using HRT, and a longer duration of HRT was associated with more tinnitus (OR 1.323, 95% CI 1.007-1.737). Authors say further research is needed to clarify whether the link is causal.
+  funding_conflict: Competing interests - none declared.
+  verified: true
+  notes: Abstract read via PubMed E-utilities 2026-11-11. Cross-sectional survey; association only. Opposite direction to Chen 2018.
+
+- id: medlineplus-hirsutism
+  title: "Excessive or unwanted hair in women: MedlinePlus Medical Encyclopedia"
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2025
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/007622.htm
+  doi: null
+  accessed: 2026-11-11
+  population: General public (US)
+  key_finding: Hirsutism is coarse, dark hair in areas where women usually have fine hair (upper lip, chin, chest, abdomen, back). Most of the time it does not cause health problems, though many women find it bothersome. Causes - excess androgens; often runs in families; PCOS is a common cause; less common - thyroid disorders, adrenal or ovarian tumors, Cushing syndrome, congenital adrenal hyperplasia, hyperthecosis; medicines including testosterone, danazol, anabolic steroids, DHEA, glucocorticoids, cyclosporine, minoxidil and phenytoin; rarely hormone levels are normal and no cause is found. Treatment - birth control pills and anti-androgen medicines such as spironolactone for some women; it can take many months of medicine before you notice less hair growth (follicles grow about 6 months before falling out); weight loss for women who are overweight; electrolysis (electric current permanently damages individual hair follicles; expensive, needs multiple treatments); laser (works best on dark hair, not blond or red hair); temporary methods - shaving (does not cause more hair to grow but may make it look thicker), chemicals, plucking, waxing. Contact a provider if hair grows rapidly, if you have male features such as acne, deepening voice, increased muscle mass, male-pattern hair thinning, enlarging clitoris or decreased breast size, or if you think a medicine is increasing hair growth.
+  funding_conflict: null
+  verified: true
+  notes: Opened 2026-11-11. Review date 10/1/2025. Page does not mention menopause or eflornithine.
+
+- id: dailymed-vaniqa-eflornithine
+  title: VANIQA (eflornithine hydrochloride) cream 13.9%, prescribing information
+  authors: []
+  publisher: DailyMed, US National Library of Medicine (FDA-approved labeling)
+  year: 2012
+  type: regulator_label
+  url: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a2c3d206-b893-4f65-a2f6-c11fa9a0e486
+  doi: null
+  accessed: 2026-11-11
+  population: Women with unwanted facial hair
+  key_finding: Indicated for the reduction of unwanted facial hair in women. Does not permanently remove hair; continue any hair removal technique already in use. Improvement may be seen as early as 4 to 8 weeks of treatment. The condition may return to pretreatment levels 8 weeks after stopping. May cause temporary redness, stinging, burning, tingling or rash where applied.
+  funding_conflict: null
+  verified: true
+  notes: Opened 2026-11-11. Label version published Sep 20, 2012 (Physicians Total Care repackager listing).
+
+- id: reynolds-aad-acne-guideline-2024
+  title: Guidelines of care for the management of acne vulgaris
+  authors:
+    - Reynolds RV
+    - Yeung H
+    - Cheng CE
+    - Barbieri JS
+  publisher: Journal of the American Academy of Dermatology
+  year: 2024
+  type: guideline
+  url: https://pubmed.ncbi.nlm.nih.gov/38300170/
+  doi: 10.1016/j.jaad.2023.12.017
+  accessed: 2026-11-11
+  population: People with acne aged 9 and older (systematic review, GRADE)
+  key_finding: 18 evidence-based recommendations and 5 good practice statements. Strong recommendations for benzoyl peroxide, topical retinoids, topical antibiotics and oral doxycycline. Oral isotretinoin strongly recommended for acne that is severe, causing psychosocial burden or scarring, or failing standard oral or topical therapy. Conditional recommendations for topical clascoterone, salicylic acid and azelaic acid, and for oral minocycline, sarecycline, combined oral contraceptive pills and spironolactone. Good practice - combine topical therapies with different mechanisms, limit systemic antibiotic use, combine systemic antibiotics with topical therapy, and add steroid injections for larger lesions.
+  funding_conflict: Several authors report industry advisory, consulting, speaking or research relationships (listed in the article).
+  verified: true
+  notes: Abstract read via PubMed E-utilities 2026-11-11 (16 authors; first three and last listed). Not specific to menopause. Erratum published July 2026.
+
+- id: aad-adult-acne
+  title: Adult acne
+  authors: []
+  publisher: American Academy of Dermatology
+  year: 2026
+  type: patient_information
+  url: https://www.aad.org/public/diseases/acne/really-acne/adult-acne
+  doi: null
+  accessed: 2026-11-11
+  population: Adults with acne (US)
+  key_finding: Causes of adult acne include hormone fluctuations (around periods, pregnancy, perimenopause and menopause, and starting or stopping birth control pills), stress (the body makes more androgens), family history, hair and skin care products (look for non-comedogenic or oil-free), medicine side effects, and undiagnosed medical conditions. A dermatologist often uses two or more treatments. If nothing clears your acne, see a dermatologist.
+  funding_conflict: null
+  verified: true
+  notes: Opened 2026-11-11. No update date shown on the page (copyright 2026).
+
+- id: nice-ng23-hrt-discussion-aid-2024
+  title: "HRT and the likelihood of some medical conditions: a discussion aid for healthcare professionals and patients (NICE guideline NG23)"
+  authors: []
+  publisher: National Institute for Health and Care Excellence (UK)
+  year: 2024
+  type: guideline
+  url: https://www.nice.org.uk/guidance/ng23/resources/incidence-of-medical-conditions-with-and-without-hrt-a-discussion-aid-pdf-13553199901
+  doi: null
+  accessed: 2026-11-11
+  population: Women experiencing menopause aged 45 or over (estimates calculated from age 50), and early menopause aged 40 to 44 (UK)
+  key_finding: "Absolute risks per 1,000 women. Breast cancer, ages 50 to 69 (20 years): 59 in 1,000 who never take HRT; 79 with 5 years of combined HRT from age 50 (20 more); 92 with 10 years of combined HRT (33 more); 69 with 5 years of estrogen-only HRT (10 more); 71 with 10 years of estrogen-only HRT (12 more). Combined graphs cover continuous and sequential combined HRT together. Stroke, ages 50 to 54: 3 in 1,000 without HRT; similar numbers with combined HRT (transdermal or oral) and transdermal estrogen-only HRT; 4 in 1,000 with oral estrogen-only HRT (1 more). Numbers are population-level estimates, within licensed doses, mostly from observational studies."
+  funding_conflict: null
+  verified: true
+  notes: PDF dated 07/11/2024, 39 pages, read in full on 2026-11-11. The estrogen-only 10-year panel prints '71 women ... develop breast cancer, 931 do not' (the 931 looks like a typo for 929); only the 71 and '12 more' figures are used.
+
+- id: collaborative-group-mht-breast-cancer-2019
+  title: "Type and timing of menopausal hormone therapy and breast cancer risk: individual participant meta-analysis of the worldwide epidemiological evidence"
+  authors:
+    - Collaborative Group on Hormonal Factors in Breast Cancer
+  publisher: The Lancet
+  year: 2019
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/31474332/
+  doi: 10.1016/S0140-6736(19)31709-X
+  accessed: 2026-11-11
+  population: 108,647 postmenopausal women who developed breast cancer in prospective studies worldwide (individual participant data)
+  key_finding: Every hormone therapy type except vaginal estrogens was associated with excess breast cancer risk, which rose with duration of use and was greater for estrogen-progestagen than estrogen-only preparations. Risk was greater with daily than less frequent progestagen use. After stopping, some excess risk persisted for more than 10 years, with little excess after less than 1 year of use. If largely causal, 5 years of use from age 50 would increase breast cancer incidence at ages 50 to 69 by about 1 in 50 users of estrogen plus daily progestagen, 1 in 70 users of estrogen plus intermittent progestagen, and 1 in 200 users of estrogen-only preparations; 10 years of use would roughly double these excesses.
+  funding_conflict: Funded by Cancer Research UK and the Medical Research Council.
+  verified: true
+  notes: Observational data; read via the PubMed abstract (NCBI efetch) on 2026-11-11.
+
+- id: chlebowski-whi-breast-cancer-2020
+  title: Association of Menopausal Hormone Therapy With Breast Cancer Incidence and Mortality During Long-term Follow-up of the Women's Health Initiative Randomized Clinical Trials
+  authors:
+    - Chlebowski RT
+    - Anderson GL
+    - Aragaki AK
+    - Manson JE
+    - Stefanick ML
+    - Pan K
+    - Prentice RL
+  publisher: JAMA
+  year: 2020
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/32721007/
+  doi: 10.1001/jama.2020.9482
+  accessed: 2026-11-11
+  population: 27,347 postmenopausal US women aged 50 to 79 in the two WHI hormone therapy trials, followed for more than 20 years (median)
+  key_finding: In women with a prior hysterectomy, conjugated equine estrogen (CEE) alone vs placebo was associated with significantly lower breast cancer incidence (HR 0.78) and lower breast cancer mortality (HR 0.60). In women with a uterus, CEE plus medroxyprogesterone acetate (MPA) vs placebo was associated with significantly higher breast cancer incidence (HR 1.28) and no significant difference in breast cancer mortality.
+  funding_conflict: Several authors report personal fees from pharmaceutical companies (listed in the abstract's conflict statement); WHI is NIH-funded.
+  verified: true
+  notes: 17 authors; first 5, 6th and last listed. Read via the PubMed abstract (NCBI efetch) on 2026-11-11. Tested one oral estrogen (CEE) and one progestin (MPA) only.
+
+- id: vinogradova-hrt-vte-2019
+  title: "Use of hormone replacement therapy and risk of venous thromboembolism: nested case-control studies using the QResearch and CPRD databases"
+  authors:
+    - Vinogradova Y
+    - Coupland C
+    - Hippisley-Cox J
+  publisher: BMJ
+  year: 2019
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/30626577/
+  doi: 10.1136/bmj.k4810
+  accessed: 2026-11-11
+  population: 80,396 UK women aged 40 to 79 with venous thromboembolism (1998 to 2017) and 391,494 matched controls
+  key_finding: Oral HRT was associated with increased VTE risk vs no exposure (adjusted OR 1.58), for estrogen-only (1.40) and combined (1.73) preparations. Estradiol had a lower risk than conjugated equine estrogen. Conjugated equine estrogen with medroxyprogesterone acetate had the highest risk (2.10); estradiol with dydrogesterone the lowest (1.18, 95% CI 0.98 to 1.42). Transdermal preparations were not associated with VTE risk (0.93, 0.87 to 1.01). Authors concluded transdermal treatment was the safest type for VTE risk.
+  funding_conflict: No external support for the work; one author is unpaid director of QResearch and paid director of ClinRisk.
+  verified: true
+  notes: Observational (case-control); read via the PubMed abstract (NCBI efetch) on 2026-11-11.
+
+- id: nhs-hrt-side-effects-2023
+  title: Side effects of hormone replacement therapy (HRT)
+  authors: []
+  publisher: NHS (UK)
+  year: 2023
+  type: patient_information
+  url: https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/side-effects-of-hormone-replacement-therapy-hrt/
+  doi: null
+  accessed: 2026-11-11
+  population: General public (UK) taking HRT
+  key_finding: Estrogen side effects include headaches, breast pain or tenderness, unexpected vaginal bleeding or spotting, nausea, mood changes, leg cramps, mild rash or itching, diarrhea and hair loss. Progestogen side effects include changes in periods or spotting, headaches, breast pain or tenderness, nausea, diarrhea, feeling tired or dizzy, mood changes, mild rash and acne. Side effects usually improve over time and often go away after a few weeks; carry on for at least 3 months if possible; speak to a GP if side effects are severe or last longer than 3 months. A GP might suggest changing the dose, the type of HRT or how it is taken (for example tablets to patches). Bleeding usually settles within 6 months; speak to a GP about irregular bleeding for more than 6 months, heavier bleeding, or bleeding after periods had stopped for a while. There is little evidence that most types of HRT cause weight gain.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 3 January 2023. UK patient guidance. Read via WebFetch on 2026-11-11.
+
+- id: nhs-hrt-benefits-risks-2023
+  title: Benefits and risks of hormone replacement therapy (HRT)
+  authors: []
+  publisher: NHS (UK)
+  year: 2023
+  type: patient_information
+  url: https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/benefits-and-risks-of-hormone-replacement-therapy-hrt/
+  doi: null
+  accessed: 2026-11-11
+  population: General public (UK) considering HRT
+  key_finding: HRT tablets can increase the risk of blood clots, but the risk is still very low; HRT patches, sprays and gels do not increase the risk of blood clots; people at risk of clots are usually advised to use patches, spray or gel rather than tablets. HRT tablets (not patches, gel or spray) slightly increase stroke risk, still very low under 60. Combined HRT slightly increases breast cancer risk, rising with length of use, and the risk falls after stopping; there is little or no increase from estrogen-only HRT; attend all breast screening appointments while taking HRT.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 8 February 2023. The page also gives 'around 5 extra cases of breast cancer in every 1,000 women who take combined HRT for 5 years' without stating the follow-up window; not used, to avoid confusion with NICE's 20-year figures.
+
+- id: nhs-dvt-2026
+  title: Deep vein thrombosis (DVT)
+  authors: []
+  publisher: NHS (UK)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/conditions/deep-vein-thrombosis-dvt/
+  doi: null
+  accessed: 2026-11-11
+  population: General public (UK)
+  key_finding: "DVT symptoms in the leg: throbbing pain in 1 leg (rarely both), usually in the calf or thigh; swelling in 1 leg; red, blue or darkened skin around the painful area; swollen veins. Ask for an urgent GP appointment or get help from NHS 111 if you think you have DVT. Call 999 or go to A&E if you have DVT symptoms such as pain and swelling and feel short of breath or have chest pain."
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 30 April 2026. Use only for the UK line.
+
+- id: prometrium-prescribing-information
+  title: PROMETRIUM (progesterone, USP) capsules, prescribing information
+  authors: []
+  publisher: Acertis Pharmaceuticals, LLC (FDA-approved label, via DailyMed, U.S. National Library of Medicine)
+  year: 2026
+  type: regulator_label
+  url: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1cf237ff-c4f8-4faa-a7aa-77599c856889
+  doi: null
+  accessed: 2026-11-11
+  population: Postmenopausal women with a uterus taking estrogen; women with secondary amenorrhea
+  key_finding: "Capsules contain micronized progesterone (100 mg or 200 mg) in peanut oil. Indicated for prevention of endometrial hyperplasia in nonhysterectomized postmenopausal women receiving conjugated estrogens tablets, and for secondary amenorrhea. Dosing for endometrial protection: 200 mg as a single daily dose at bedtime for 12 days per 28-day cycle. Contraindicated in peanut allergy, abnormal genital bleeding of unknown cause, known or suspected breast cancer, active or past DVT or pulmonary embolism, and active arterial thromboembolic disease, among others. May cause transient dizziness and drowsiness; use caution when driving or operating machinery. In a 3-year placebo-controlled trial (with conjugated estrogens), reported adverse reactions included headache, breast tenderness, joint pain, depression, dizziness, abdominal bloating and vaginal discharge."
+  funding_conflict: Manufacturer-issued label (FDA-approved text)
+  verified: true
+  notes: SPL effective date 2026-07-23; read via the DailyMed SPL XML service on 2026-11-11. The trial table compares progesterone plus conjugated estrogens with placebo (not with estrogen alone), so its percentages are not used as progesterone-only side-effect rates.
+
+- id: owh-menopause-and-your-health-2026
+  title: Menopause and your health
+  authors: []
+  publisher: Office on Women's Health, U.S. Department of Health and Human Services
+  year: 2026
+  type: patient_information
+  url: https://womenshealth.gov/menopause/menopause-and-your-health
+  doi: null
+  accessed: 2026-11-11
+  population: U.S. women after menopause
+  key_finding: Lower estrogen after menopause can affect bones, heart and bladder. You lose bone faster after menopause, raising the risk of osteoporosis and broken bones; the risk of heart disease rises after menopause; low estrogen can cause urinary urgency and other bladder symptoms as part of genitourinary syndrome of menopause (GSM), and makes repeat UTIs more likely. Hormone therapy helps prevent bone loss but is not recommended to prevent heart disease or stroke. Being active, not smoking and getting enough calcium from food help; many women gain weight around menopause, and regular exercise can help reduce weight and waist size.
+  funding_conflict: null
+  verified: true
+  notes: Page last updated October 19, 2026. Read in full via Firecrawl on 2026-11-11.
+
+- id: cleveland-clinic-postmenopause-2024
+  title: "Postmenopause: signs, symptoms and what to expect"
+  authors: []
+  publisher: Cleveland Clinic
+  year: 2024
+  type: patient_information
+  url: https://my.clevelandclinic.org/health/diseases/21837-postmenopause
+  doi: null
+  accessed: 2026-11-11
+  population: People in postmenopause
+  key_finding: Postmenopause is the time after you have been without a menstrual period for 12 months, and it lasts for the rest of your life. Hot flashes and similar symptoms may become milder or go away completely, though some people still have them for years. You can't get pregnant because the ovaries stop releasing eggs; the page advises continuing birth control until a provider confirms you are no longer ovulating. Lower estrogen makes vaginal tissue thinner and drier.
+  funding_conflict: Cleveland Clinic is a nonprofit health system; the page carries advertising.
+  verified: true
+  notes: Last updated 08/08/2024 per the page. Read via web search excerpt and WebFetch on 2026-11-11.
+
+- id: da-silva-gsm-management-2021
+  title: Modern management of genitourinary syndrome of menopause
+  authors:
+    - Da Silva AS
+    - Baines G
+    - Araklitis G
+    - Robinson D
+    - Cardozo L
+  publisher: Faculty Reviews
+  year: 2021
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/33718942/
+  doi: 10.12703/r/10-25
+  accessed: 2026-11-11
+  population: Postmenopausal women with genitourinary syndrome of menopause (narrative review)
+  key_finding: Women now spend about 40% of their lives postmenopausal, and 50-70% of postmenopausal women report symptomatic GSM. Unlike hot flashes and night sweats, which tend to become milder over time, GSM symptoms are progressive, tend to get worse if left untreated and rarely resolve on their own. First-line treatment for vaginal dryness and painful sex is a non-hormonal lubricant during sex and regular use of a long-acting vaginal moisturizer, alone or with estrogen.
+  funding_conflict: Authors declared no competing interests.
+  verified: true
+  notes: Narrative review from King's College Hospital urogynecology, not a systematic review. PMC7946389; full text read via Europe PMC on 2026-11-11.
+
+- id: dailymed-depo-estradiol-label
+  title: DEPO-ESTRADIOL (estradiol cypionate) injection, prescribing information
+  authors: []
+  publisher: Pharmacia & Upjohn Company LLC (Pfizer) (FDA-approved label, via DailyMed, U.S. National Library of Medicine)
+  year: 2024
+  type: other
+  url: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9a4229fd-fecd-4ac1-9c4f-6d442533457f
+  doi: null
+  accessed: 2026-11-11
+  population: Adults prescribed estradiol cypionate injection (US)
+  key_finding: "Description: 'DEPO-Estradiol contains an oil soluble ester of estradiol 17β'; chemical name estradiol 17-cyclopentanepropionate; 5 mg per mL in cottonseed oil, for intramuscular use. Clinical pharmacology: estradiol is the principal intracellular human estrogen; a single intramuscular injection of estradiol cypionate is absorbed over several weeks. Indications: moderate to severe vasomotor symptoms associated with the menopause; hypoestrogenism due to hypogonadism. Usual dose for vasomotor symptoms 1 to 5 mg injected every 3 to 4 weeks. Carries a boxed warning (endometrial cancer; cardiovascular and other risks)."
+  funding_conflict: Manufacturer's label.
+  verified: true
+  notes: Label revised February 2024 (DailyMed updated February 28, 2024). The label does not use the word 'bioidentical' and does not itself describe the ester being converted to estradiol, so cite it only for what it states. Boxed warning wording predates the 2026 FDA labeling changes; don't quote it.
+
+- id: nhs-when-to-take-hrt
+  title: When to take hormone replacement therapy (HRT)
+  authors: []
+  publisher: NHS (UK)
+  year: 2023
+  type: patient_information
+  url: https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/when-to-take-hormone-replacement-therapy-hrt/
+  doi: null
+  accessed: 2026-11-11
+  population: General public (UK) taking or considering HRT
+  key_finding: There's no fixed limit on how long you can take HRT; you'll usually have a review every year; it's best to take HRT only for as long as the benefits outweigh the risks. Talk to a GP if thinking about stopping. You can stop suddenly, but it's usually recommended to reduce the dose gradually over 3 to 6 months; symptoms may come back for a short time, which is less likely with gradual reduction; if symptoms come back and don't go away after 3 months, speak to a GP.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 4 January 2023. UK patient guidance; pair with NAMS 2022 or NICE NG23 for US readers.
+
+- id: inner-balance-bioidentical-hrt-2026
+  title: Bioidentical HRT, managed by a physician (Inner Balance, Oestra product page)
+  authors: []
+  publisher: Inner Balance
+  year: 2026
+  type: other
+  url: https://www.innerbalance.com/treatment/bioidentical-hrt
+  doi: null
+  accessed: 2026-11-11
+  population: Prospective Inner Balance customers (US)
+  key_finding: "Self-reported by Inner Balance: Oestra is a daily cream combining estradiol and micronized progesterone, compounded in a licensed US pharmacy and given by vaginal delivery; HSA/FSA eligible; 6-month money-back guarantee; 'No insurance forms'; doctor visits and messaging included. The public page lists no dollar price; you see the cost only after the health quiz and checkout."
+  funding_conflict: Self-reported by the company.
+  verified: true
+  notes: "Used only to say the company's own public pages publish no price and to describe the product as compounded. Also checked the homepage (https://www.innerbalance.com/) on 2026-11-11: no prices. Third-party review sites quote varying monthly prices; not used."
+
+- id: inner-balance-faq-2026
+  title: FAQs (Inner Balance)
+  authors: []
+  publisher: Inner Balance
+  year: 2026
+  type: other
+  url: https://www.innerbalance.com/p/faq
+  doi: null
+  accessed: 2026-11-11
+  population: Prospective Inner Balance customers (US)
+  key_finding: "Self-reported by Inner Balance: HSA and FSA payments accepted; billed monthly as a subscription that includes clinician messaging, check-ins and refill coordination. Its answer to 'Is Oestra covered by insurance?' doesn't say it is covered; it says Oestra is more cost-effective than most HRT plans. No dollar price is listed."
+  funding_conflict: Self-reported by the company.
+  verified: true
+  notes: Used only for billing model, HSA/FSA and the absence of a published price.
+
+- id: menopause-society-name-change-2023
+  title: The North American Menopause Society Is Now The Menopause Society (press release)
+  authors: []
+  publisher: The Menopause Society
+  year: 2023
+  type: other
+  url: https://menopause.org/wp-content/uploads/press-release/name-change-announcement.pdf
+  doi: null
+  accessed: 2026-11-11
+  population: Healthcare professionals and the public
+  key_finding: "July 11, 2023: the North American Menopause Society adopted the name The Menopause Society. It continues to offer competency exams; those who earn the credential are now a Menopause Society Certified Practitioner (MSCP), formerly a NAMS Certified Menopause Practitioner (NCMP). The public can search a database of credentialed menopause professionals in their area or licensed in their state on the Society's website."
+  funding_conflict: null
+  verified: true
+  notes: Opened the PDF and extracted the text on 2026-11-11.
+
+- id: harlow-menstruation-menopause-transition-2011
+  title: Menstruation and the menopause transition
+  authors:
+    - Harlow SD
+    - Paramsothy P
+  publisher: Obstetrics and Gynecology Clinics of North America
+  year: 2011
+  type: other
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3232023/
+  doi: 10.1016/j.ogc.2011.05.010
+  accessed: 2026-11-11
+  population: Midlife women in cohort studies of the menopause transition (SWAN, Massachusetts Women's Health Study, Melbourne Women's Midlife Health Project)
+  key_finding: Narrative review of bleeding changes in perimenopause. The SWAN Daily Hormone Study observed that short menstrual cycles of less than 21 days were common in early perimenopause, with both short and long cycles more likely to be anovulatory (no egg released). The Massachusetts Women's Health Study found short cycles and short bleeding or spotting episodes occurred more often in early perimenopause, while cycles of 90 days or longer occurred later in the transition.
+  funding_conflict: null
+  verified: true
+  notes: NIH author manuscript; Obstet Gynecol Clin North Am 2011 Sep;38(3):595. PMID 21961722. Opened the PMC full text on 2026-11-11.
+
+- id: cleveland-clinic-perimenopause
+  title: "Perimenopause: age, stages, signs, symptoms and treatment"
+  authors: []
+  publisher: Cleveland Clinic
+  year: 2024
+  type: patient_information
+  url: https://my.clevelandclinic.org/health/diseases/21608-perimenopause
+  doi: null
+  accessed: 2026-11-11
+  population: General public (US)
+  key_finding: In perimenopause the menstrual cycle can become longer or shorter than usual, and cycles can become unpredictable, with spotting or missed periods. See a provider to rule out other causes if periods become very heavy or contain large clots, you change pads or tampons every one to two hours, periods last several days longer than usual, you spot or bleed between periods or after sex, or periods occur less than 21 days apart.
+  funding_conflict: null
+  verified: true
+  notes: Page last updated 07/29/2024.
+
+- id: mayo-chronic-daily-headaches-2019
+  title: "Chronic daily headaches: symptoms and causes"
+  authors: []
+  publisher: Mayo Clinic
+  year: 2019
+  type: patient_information
+  url: https://www.mayoclinic.org/diseases-conditions/chronic-daily-headaches/symptoms-causes/syc-20370891
+  doi: null
+  accessed: 2026-11-11
+  population: General public (US)
+  key_finding: "Chronic daily headaches are headaches on 15 days or more a month for longer than three months; they are a group of headache types (chronic migraine, chronic tension-type headache, new daily persistent headache, hemicrania continua), not one type. Medication overuse headache usually develops in people with migraine or tension-type headache who take too much pain medicine; taking pain medicines, even over-the-counter ones, more than two days a week (or nine days a month) puts you at risk of rebound headaches. See a doctor if you usually have two or more headaches a week, take a pain reliever most days, need more than the recommended over-the-counter dose, your headache pattern changes or headaches worsen, or headaches are disabling. Seek prompt care for a sudden severe headache, one with fever, stiff neck, confusion, seizure, double vision, weakness, numbness or trouble speaking, one after a head injury, or one that gets worse despite rest and pain medicine. Prevention: keep a headache diary, avoid medication overuse (ask a doctor how to cut back, since stopping improperly can cause serious side effects), regular sleep, regular meals, regular exercise, stress reduction, and less caffeine. Risk factors for frequent headaches include female sex, anxiety, depression, sleep disturbances, obesity, snoring, and overuse of caffeine or headache medicine."
+  funding_conflict: null
+  verified: true
+  notes: Page dated April 09, 2019. Page does not mention menopause.
+
+- id: harlow-aub-fatigue-swan-2025
+  title: Abnormal uterine bleeding is associated with fatigue during the menopause transition
+  authors:
+    - Harlow SD
+    - Gold EB
+    - Hood MM
+    - Mukwege AA
+    - Randolph JF
+    - Greendale GA
+  publisher: Menopause (The Menopause Society)
+  year: 2025
+  type: cohort
+  url: https://pubmed.ncbi.nlm.nih.gov/40067756/
+  doi: 10.1097/GME.0000000000002525
+  accessed: 2026-11-11
+  population: 2,329 midlife women in the Study of Women's Health Across the Nation (SWAN) with daily menstrual calendar data
+  key_finding: After adjusting for age, body mass index, hormone therapy, depressive and anxiety symptoms, stress, sleep problems, smoking and other factors, three or more episodes of heavy menstrual bleeding in the prior 6 months were linked with feeling tired (OR 1.62, 95% CI 1.11 to 2.38), and three or more episodes of prolonged bleeding with being less likely to feel full of pep (OR 0.68, 95% CI 0.49 to 0.95). Authors call for more clinical attention to bleeding changes and associated fatigue and lack of energy during the menopause transition.
+  funding_conflict: One author reports a past financial relationship with CVS; others report none.
+  verified: true
+  notes: "Menopause 2025 Mar 11, online ahead of print. PMID 40067756. Abstract read via NCBI E-utilities efetch on 2026-11-11; The Menopause Society press release (March 2025) also opened. Observational: shows an association, not cause."
+
+- id: muniz-hypnosis-cbt-scoping-review-2024
+  title: "Clinical hypnosis and cognitive behavioral therapy for hot flashes: a scoping review (press release: Clinical Hypnosis vs. Cognitive Behavioral Therapy: What's Better for Managing Hot Flashes?)"
+  authors:
+    - Muniz V
+  publisher: The Menopause Society (press release on an abstract presented at its 2024 Annual Meeting)
+  year: 2024
+  type: other
+  url: https://menopause.org/press-releases/clinical-hypnosis-vs-cognitive-behavioral-therapy-whats-better-for-managing-hot-flashes
+  doi: null
+  accessed: 2026-11-11
+  population: 23 studies published 1996-2022 (8 on clinical hypnosis, 15 on CBT) for hot flashes
+  key_finding: Clinical hypnosis interventions consistently showed clinically significant reductions in hot flash frequency (a reduction of more than 60%). CBT interventions showed mixed findings with minimal impact on hot flash frequency, but helped reduce the daily interference and stress associated with hot flashes.
+  funding_conflict: null
+  verified: true
+  notes: Read the press release page (dated September 2024; lead author Vanessa Muniz, Baylor University). It is a conference abstract summarized in a press release, not a full peer-reviewed paper; no DOI given. Cite it as weaker than the trials in the 2023 position statement.
+
+- id: alloy-perimenopause-2026
+  title: Perimenopause treatment (Alloy)
+  authors: []
+  publisher: Alloy
+  year: 2026
+  type: other
+  url: https://www.myalloy.com/perimenopause
+  doi: null
+  accessed: 2026-11-11
+  population: Prospective Alloy customers (US)
+  key_finding: Alloy's perimenopause landing page opens with 'Can't sleep? Irregular periods? Feeling off?', says perimenopause can cause a variety of symptoms, describes care from a board-certified physician who builds a customized plan, says it offers a wide range of FDA-approved options, and lists estradiol pill, Evamist spray, estradiol gel and estradiol patch. No prices shown; says HSA/FSA eligible and free delivery.
+  funding_conflict: Self-reported by the company being described.
+  verified: true
+  notes: Company marketing page; use only as Alloy's own description.
+
+- id: alloy-birth-control-pill-2026
+  title: Low-dose birth control pill (Alloy)
+  authors: []
+  publisher: Alloy
+  year: 2026
+  type: other
+  url: https://www.myalloy.com/solutions/low-dose-birth-control-pill
+  doi: null
+  accessed: 2026-11-11
+  population: Prospective Alloy customers (US)
+  key_finding: Prescription low-dose birth control pill (1 mg/20 mcg; page says generic oral contraceptives contain estrogen and progesterone, without naming the compounds), tagged FDA-approved, $39.99. Described as relief from perimenopausal symptoms like hot flashes, night sweats and irregular periods, plus contraception; recommended for women with menopausal symptoms while still having periods. Not recommended for women with a history of breast cancer, heart attack or stroke, or blood clots in the legs or lungs, or who smoke or have uncontrolled high blood pressure. States 'A one-time $49 consult fee applies.' Says the consult and medication are HSA/FSA eligible.
+  funding_conflict: Self-reported by the company being described.
+  verified: true
+  notes: The page labels the product a 1-month supply in its header and a 3-month supply in its details, so quote the price without a supply length or use the solutions page ($39.99/month). Its cancer-risk-reduction claims were not used.
+
+- id: alloy-estradiol-pill-2026
+  title: Estradiol pill (Alloy)
+  authors: []
+  publisher: Alloy
+  year: 2026
+  type: other
+  url: https://www.myalloy.com/solutions/estradiol-pill
+  doi: null
+  accessed: 2026-11-11
+  population: Prospective Alloy customers (US)
+  key_finding: Estradiol pill, price starting at $39.99. States 'A one-time $49 consult fee applies.' and that the consult is a telehealth visit that is generally HSA/FSA reimbursable.
+  funding_conflict: Self-reported by the company being described.
+  verified: true
+  notes: Page shows both '1-month supply' and '3-month supply' labels.
+
+- id: alloy-zepbound-2026
+  title: Zepbound (Alloy weight care)
+  authors: []
+  publisher: Alloy
+  year: 2026
+  type: other
+  url: https://www.myalloy.com/solutions/zepbound
+  doi: null
+  accessed: 2026-11-11
+  population: Prospective Alloy weight-care customers (US)
+  key_finding: Zepbound (tirzepatide), described as a once-weekly, FDA-approved GLP-1 medication, prescription required, starting at $299 for a 1-month supply, plus a $99 Alloy Weight Care monthly fee. For pre-, peri- and post-menopausal women who qualify for weight loss treatments; a physician decides. Alloy says it cannot serve weight care patients in Louisiana or Mississippi.
+  funding_conflict: Self-reported by the company being described.
+  verified: true
+  notes: No consult fee listed on this page.
+
+- id: alloy-compounded-semaglutide-2026
+  title: Compounded semaglutide (Alloy weight care)
+  authors: []
+  publisher: Alloy
+  year: 2026
+  type: other
+  url: https://www.myalloy.com/solutions/compounded-semaglutide
+  doi: null
+  accessed: 2026-11-11
+  population: Prospective Alloy weight-care customers (US)
+  key_finding: Compounded semaglutide starting at $70 for a 1-month supply, plus a $99 monthly Alloy Weight Care fee that includes unlimited messaging with a menopause-specialized doctor, check-ins, side-effect management, dose adjustments and monthly nutrition and exercise support. Says compounded medications are not FDA-approved and are not reviewed by the FDA for safety, effectiveness or quality; not available in AL, AR, CA, NV, LA, MS and DC. Says not all individuals will qualify and eligibility is decided by licensed providers.
+  funding_conflict: Self-reported by the company being described.
+  verified: true
+  notes: The page's FAQ also lists Washington among states limited to FDA-approved medicines, unlike the product listing. A first-month discount code shown on the page was not used.
+
+- id: fda-unapproved-glp1-2026
+  title: FDA's concerns with unapproved GLP-1 drugs used for weight loss
+  authors: []
+  publisher: U.S. Food and Drug Administration
+  year: 2026
+  type: regulator_statement
+  url: https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss
+  doi: null
+  accessed: 2026-11-11
+  population: US patients and prescribers
+  key_finding: Compounded drugs are not FDA approved, so the agency does not review them for safety, effectiveness or quality before marketing. As of May 31, 2026, FDA had received 990 adverse event reports associated with compounded semaglutide and more than 730 with compounded tirzepatide. Compounded drugs should only be used in patients whose medical needs cannot be met by an FDA-approved drug; patients should get a prescription and fill it at a state-licensed pharmacy.
+  funding_conflict: null
+  verified: true
+  notes: Content current as of 10/01/2026.
+
+- id: fda-zepbound-approval-2023
+  title: FDA approves new medication for chronic weight management
+  authors: []
+  publisher: U.S. Food and Drug Administration
+  year: 2023
+  type: regulator_statement
+  url: https://www.fda.gov/news-events/press-announcements/fda-approves-new-medication-chronic-weight-management
+  doi: null
+  accessed: 2026-11-11
+  population: Adults with obesity or overweight with a weight-related condition
+  key_finding: On November 8, 2023, FDA approved Zepbound (tirzepatide) injection for chronic weight management, in addition to a reduced-calorie diet and increased physical activity, in adults with obesity (BMI 30 or greater) or overweight (BMI 27 or greater) with at least one weight-related condition.
+  funding_conflict: null
+  verified: true
+  notes: Press release. Trial weight-loss percentages were not used.
+
+- id: nci-pdq-hot-flashes-hp
+  title: "Hot Flashes and Night Sweats (PDQ): Health Professional Version"
+  authors:
+    - PDQ Supportive and Palliative Care Editorial Board
+  publisher: National Cancer Institute (NIH)
+  year: 2025
+  type: other
+  url: https://www.cancer.gov/about-cancer/treatment/side-effects/hot-flashes-hp-pdq
+  doi: null
+  accessed: 2026-11-11
+  population: People with cancer and cancer survivors with hot flashes and night sweats (US)
+  key_finding: Randomized clinical trials with sertraline have not provided convincing evidence of its efficacy in hot flash management. Tamoxifen is metabolized by CYP2D6, many SSRIs can inhibit the enzymes involved in its metabolism, and paroxetine coadministration resulted in decreased concentrations of endoxifen. Side effects of antidepressants at the doses used for hot flashes are described as minimal (short-term effects include nausea, sedation, dry mouth and appetite changes).
+  funding_conflict: null
+  verified: true
+  notes: Latest update listed 01/15/2025. Summary written for clinicians; it does not rank citalopram, escitalopram or venlafaxine as safer with tamoxifen (it says the interaction with newer antidepressants merits further study).
+
+- id: aafp-ssri-snri-vms-2022
+  title: SSRIs vs. SNRIs for Vasomotor Symptoms of Menopause
+  authors:
+    - Newhouser LM
+    - Maneval M
+    - Rayalam K
+    - Sabeeh G
+    - Varela L
+  publisher: American Family Physician (American Academy of Family Physicians)
+  year: 2022
+  type: other
+  url: https://www.aafp.org/pubs/afp/issues/2022/0400/p430.html
+  doi: null
+  accessed: 2026-11-11
+  population: Perimenopausal and postmenopausal women with vasomotor symptoms
+  key_finding: "Clinical inquiry summary: both SSRIs and SNRIs relieve vasomotor symptoms (SOR A, systematic reviews); there are no head-to-head trials. For sertraline, two small trials (n = 46 and n = 99) found no reduction in hot flash frequency or composite scores versus placebo, while a third (n = 97) found a moderate reduction of about five fewer hot flashes per week. Paroxetine showed the largest reduction in the review. SNRIs caused more adverse effects (venlafaxine: nausea, dry mouth, constipation)."
+  funding_conflict: null
+  verified: true
+  notes: Evidence summary from a family medicine residency group (FPIN Help Desk Answers format), not a guideline.
+
+- id: nhs-sertraline
+  title: "Sertraline: an antidepressant medicine"
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2025
+  type: patient_information
+  url: https://www.nhs.uk/medicines/sertraline/
+  doi: null
+  accessed: 2026-11-11
+  population: General public (UK) taking sertraline
+  key_finding: Sertraline is used for depression, OCD, panic disorder, PTSD and social anxiety disorder. Common side effects include headaches, nausea and vomiting, dizziness or drowsiness, dry mouth, diarrhoea, sleep problems, sexual problems and weight gain. Do not suddenly stop taking it because it may cause withdrawal symptoms; a doctor will reduce the dose gradually over several weeks or months.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 8 September 2025. UK patient guidance.
+
+- id: nhs-menopause-things-you-can-do
+  title: "Menopause: things you can do"
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/conditions/menopause/things-you-can-do/
+  doi: null
+  accessed: 2026-11-11
+  population: General public (UK)
+  key_finding: "To help with hot flushes and night sweats: wear lightweight clothing, keep your bedroom cool at night, take a cool shower, use a fan or have a cold drink, reduce stress, avoid or reduce triggers such as spicy food, caffeine, hot drinks, smoking and alcohol, exercise regularly and keep to a healthy weight. CBT can also help manage hot flushes."
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 19 May 2026. UK patient guidance.
+
+- id: li-sleepwear-bedding-fibre-review-2024
+  title: "How do sleepwear and bedding fibre types affect sleep quality: A systematic review"
+  authors:
+    - Li X
+    - Halaki M
+    - Chow CM
+  publisher: Journal of Sleep Research
+  year: 2024
+  type: systematic_review
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11596996/
+  doi: 10.1111/jsr.14217
+  accessed: 2026-11-11
+  population: Nine small experimental studies in infants, children, young adults and older adults; none in menopausal women or people with night sweats
+  key_finding: Wool sleepwear showed benefits for sleep onset in adults in cool conditions and in older adults in warm conditions; polyester did not differ overall from cotton in older adults; one blended synthetic, quick-drying sleepwear increased deep sleep in adolescent girls; linen bedsheets improved sleep in warm conditions in young adults (one study, bed pad may have mattered); goose-down duvets beat cotton-filled in cool conditions; wool and polyester quilts did not differ. Silk was not studied; bamboo was tested only in a blend for infants. Cotton and wool conduct heat much more once they absorb moisture. Studies were small and varied, and the authors say it is hard to draw an overall conclusion.
+  funding_conflict: Chow received research funding from Australian Wool Innovation Ltd, and Li a research scholarship from it (wool industry body).
+  verified: true
+  notes: Use to say how thin the fabric evidence is; flag the wool-industry funding wherever wool results are mentioned.
+
+- id: kling-resident-menopause-knowledge-2019
+  title: "Menopause Management Knowledge in Postgraduate Family Medicine, Internal Medicine, and Obstetrics and Gynecology Residents: A Cross-Sectional Survey"
+  authors:
+    - Kling JM
+    - MacLaughlin KL
+    - Schnatz PF
+    - Crandall CJ
+    - Skinner LJ
+    - Stuenkel CA
+    - Kaunitz AM
+    - Bitner DL
+    - Mara K
+    - Fohmader Hilsaca KS
+    - Faubion SS
+  publisher: Mayo Clinic Proceedings
+  year: 2019
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/30711122/
+  doi: 10.1016/j.mayocp.2018.08.033
+  accessed: 2026-11-11
+  population: 183 US residents in family medicine, internal medicine and OB/GYN at 20 programs (26.0% response rate), surveyed in 2017
+  key_finding: 34.4% said they would not offer hormone therapy to a symptomatic, newly menopausal woman without contraindications; 20.3% reported receiving no menopause lectures during residency; only 6.8% felt adequately prepared to manage women experiencing menopause.
+  funding_conflict: null
+  verified: true
+  notes: Cross-sectional survey with a low response rate; 2017 data. Use as evidence of a training gap, not a current national figure.

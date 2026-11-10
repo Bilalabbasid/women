@@ -1,7 +1,7 @@
 ---
-title: "Alloy review: what it offers, what it costs and alternatives"
-seo_title: "Alloy review: prices, what it treats and alternatives"
-meta_description: "Alloy is cash-pay, with estradiol from $39.99 a month on its site (Nov 2026). What it offers for HRT, mood, skin, hair and joints, our grades, and alternatives."
+title: "Alloy menopause care, from its public pages: prices, what it treats and alternatives"
+seo_title: "Alloy menopause care: prices, what it treats, alternatives"
+meta_description: "Alloy is cash-pay: a $49 consult, estradiol from $39.99 a month. What it offers for HRT, perimenopause, GLP-1s, mood, hair and joints, from its own pages."
 cluster: compare
 primary_keyword: alloy review
 slug: alloy-review
@@ -18,8 +18,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Said plainly that this page describes Alloy from its public pages and published evidence (we haven't used the service); added Alloy's $49 consult fee, its perimenopause birth control pill and GLP-1 weight care, with how the underlying treatments are graded", material: true }
   - { date: "2026-11-09", summary: "Added Alloy's listed prices, what Alloy offers for HRT, mood and anxiety, skin, hair loss and joint pain with our evidence grades, how its pharmacy and billing work, an alternatives section, and red flags", material: true }
   - { date: "2026-11-06", summary: "Published independent review of Alloy, based on their own site as of November 2026", material: true }
   - { date: "2026-11-07", summary: "Kept out of search results (noindex) until we have first-hand evidence about this service", material: false }
@@ -29,8 +30,11 @@ claims:
     text: "Alloy's own site states it connects users with board-certified, menopause-specialized physicians via a medical intake, producing a treatment plan typically within about 12 hours, with free delivery and 24/7 messaging access to the care team; its help center says you can usually expect to hear from the doctor within 1-2 business days. Beyond hormone therapy, Alloy also sells skincare, sexual health, GLP-1 weight care, hair/lash/brow, and gut-health products."
     sources: [alloy-own-site-2026, alloy-after-signup-2026]
   - id: alloy-self-reported-pricing
-    text: "Alloy's own site describes a cash-pay model that does not bill insurance, with FSA/HSA accepted and refills billed every 3 months; as listed in November 2026, the estradiol pill starts at $39.99/month, the spray and gel are $69.99/month, the patch is $100/month and progesterone starts at $23/month."
-    sources: [alloy-own-site-2026, alloy-insurance-2026, alloy-solutions-pricing-2026, alloy-cost-help-2026]
+    text: "Alloy's own site describes a cash-pay model that does not bill insurance, with FSA/HSA accepted and refills billed every 3 months; as listed in November 2026, the estradiol pill starts at $39.99/month, the spray and gel are $69.99/month, the patch is $100/month and progesterone starts at $23/month. Its estradiol pill and birth control pill pages state a one-time $49 consult fee."
+    sources: [alloy-own-site-2026, alloy-insurance-2026, alloy-solutions-pricing-2026, alloy-cost-help-2026, alloy-estradiol-pill-2026, alloy-birth-control-pill-2026]
+  - id: alloy-glp1-weight-care
+    text: "Alloy lists brand-name and compounded GLP-1 weight medicines, each plus a $99 monthly Alloy Weight Care fee, with Zepbound from $299 a month and compounded semaglutide from $70 a month; Alloy says its compounded medicines are not FDA-approved. The FDA says it does not review compounded drugs for safety, effectiveness or quality."
+    sources: [alloy-solutions-pricing-2026, alloy-zepbound-2026, alloy-compounded-semaglutide-2026, fda-unapproved-glp1-2026]
   - id: alloy-partner-pharmacy
     text: "Alloy cannot send a new prescription to a local pharmacy; prescriptions go to its partner pharmacy, and refills can be transferred out after at least one order."
     sources: [alloy-pharmacy-transfer-2026]
@@ -40,25 +44,25 @@ claims:
 safety_flags: [urgent_symptoms, bleeding]
 cta_profile: care_comparison
 hub: /compare/
-sources: [alloy-own-site-2026, alloy-insurance-2026, alloy-solutions-pricing-2026, alloy-cost-help-2026, alloy-after-signup-2026, alloy-pharmacy-transfer-2026, alloy-bioidentical-2026, alloy-symptom-anxiety-2026, alloy-symptom-mood-swings-2026, alloy-symptom-hair-loss-2026, alloy-symptom-joint-pain-2026, alloy-skincare-2026, nams-2022-hormone-therapy, viscomi-menopausal-skin-hrt-2025, kamp-menopause-hair-disorders-2022, chlebowski-whi-estrogen-joint-symptoms-2013, midi-health-own-site-2026, midi-health-pricing-2026, evernow-pricing-2026, winona-own-site-2026, hims-hers-health-public-company-2026, nhs-postmenopausal-bleeding, nhs-heart-palpitations, lifeline-988, samaritans-contact]
-related: [/compare/, /compare/midi-vs-alloy/, /compare/alloy-vs-evernow/, /treatments/hormone-therapy/, /care/find-a-menopause-specialist/, /tools/treatment-questions/]
+sources: [alloy-own-site-2026, alloy-insurance-2026, alloy-solutions-pricing-2026, alloy-cost-help-2026, alloy-after-signup-2026, alloy-pharmacy-transfer-2026, alloy-bioidentical-2026, alloy-symptom-anxiety-2026, alloy-symptom-mood-swings-2026, alloy-symptom-hair-loss-2026, alloy-symptom-joint-pain-2026, alloy-skincare-2026, alloy-estradiol-pill-2026, alloy-birth-control-pill-2026, alloy-perimenopause-2026, alloy-zepbound-2026, alloy-compounded-semaglutide-2026, fda-unapproved-glp1-2026, fda-zepbound-approval-2023, cagnacci-contraception-over-40-consensus-2025, mayo-perimenopause-symptoms-causes-2026, nams-2022-hormone-therapy, viscomi-menopausal-skin-hrt-2025, kamp-menopause-hair-disorders-2022, chlebowski-whi-estrogen-joint-symptoms-2013, midi-health-own-site-2026, midi-health-pricing-2026, evernow-pricing-2026, winona-own-site-2026, hims-hers-health-public-company-2026, nhs-postmenopausal-bleeding, nhs-heart-palpitations, lifeline-988, samaritans-contact]
+related: [/compare/, /compare/midi-vs-alloy/, /compare/alloy-vs-evernow/, /treatments/hormone-therapy/, /perimenopause/contraception/, /care/find-a-menopause-specialist/, /tools/treatment-questions/]
 noindex: true
 faq:
   - q: Does Alloy accept insurance?
     a: "No. Alloy says it does not bill or accept insurance for any service or prescription. You can pay with HSA or FSA funds, and Alloy says some patients get reimbursed by their PPO plan after paying."
   - q: How much is an Alloy consultation?
-    a: "Alloy's own pages say hormone treatment needs a doctor consultation that you buy at sign-up, but the pages we checked in November 2026 don't state the fee. It shows at checkout. Medicines are priced separately and usually billed every 3 months."
+    a: "Alloy's estradiol pill and birth control pill pages say a one-time $49 consult fee applies (checked November 2026). Medicines are priced separately and usually billed every 3 months. GLP-1 weight care adds a $99 monthly program fee."
   - q: Can I use my local pharmacy with Alloy?
     a: "Not at first. Alloy says it can only send a new prescription to its partner pharmacy. After at least one order, refills can be moved to another pharmacy, but you must cancel your Alloy subscription and you lose its doctor messaging."
   - q: Is Alloy legit?
-    a: "Alloy is a real US online clinic. It says its doctors are board-certified, follow Menopause Society and ACOG guidelines, and prescribe FDA-approved estradiol. We could check what it publishes about prices and products, but not the quality of its care."
+    a: "Alloy is a real US online clinic. It says its doctors are board-certified, follow Menopause Society and ACOG guidelines, and prescribe FDA-approved estradiol. We haven't used the service, so we could check what it publishes about prices and products, but not the quality of its care."
   - q: Is everything Alloy sells a prescription hormone treatment?
     a: "No. Alongside hormone therapy, Alloy sells prescription skincare, sexual health creams, GLP-1 weight care, hair and lash treatments, and a gut-health supplement that needs no prescription."
 ---
 
-Alloy is an online, cash-pay menopause service: you fill in a medical form, a doctor reviews it, and medicine is mailed to you. It doesn't bill insurance. Its main offer, FDA-approved estradiol (hormone therapy), is the treatment with the strongest evidence for hot flashes [@alloy-bioidentical-2026; @alloy-insurance-2026; @nams-2022-hormone-therapy].
+Alloy is an online, cash-pay menopause service: you fill in a medical form, a doctor reviews it, and medicine is mailed to you. Its main offer, FDA-approved estradiol (hormone therapy), is the treatment with the strongest evidence for hot flashes [@alloy-bioidentical-2026; @alloy-insurance-2026; @nams-2022-hormone-therapy]. We describe Alloy from its public pages and published research; we haven't used the service.
 
-We wrote this review from Alloy's own website and help center, checked in November 2026. Nobody pays to be reviewed here, and Alloy did not see this page.
+This page draws on Alloy's own website and help center, checked in November 2026, and on the research behind the treatments it sells. We haven't signed up, seen its doctors or taken its medicines, so we can't judge its care. Nobody pays to be listed here, and Alloy did not see this page.
 
 ## How does Alloy work?
 
@@ -72,19 +76,21 @@ Alloy works by online form, not a scheduled video call. Alloy says the medical i
 
 ## How much does Alloy cost?
 
-Alloy charges for each medicine, plus a consultation for hormone treatment, and does not bill insurance. Its products page listed these prices in November 2026. Alloy's pages that we checked don't state the consultation fee; it shows at checkout [@alloy-solutions-pricing-2026; @alloy-after-signup-2026].
+Alloy charges a one-time $49 consult fee, then a price for each medicine, and does not bill insurance [@alloy-estradiol-pill-2026; @alloy-insurance-2026]. Its product pages listed these prices in November 2026 [@alloy-solutions-pricing-2026].
 
 | Treatment | Alloy's listed price (Nov 2026) |
 |---|---|
+| Consult (estradiol and birth control pill pages) | One-time $49 [@alloy-estradiol-pill-2026; @alloy-birth-control-pill-2026] |
 | Estradiol pill | From $39.99 a month [@alloy-solutions-pricing-2026] |
 | Estradiol spray (Evamist) | $69.99 a month [@alloy-solutions-pricing-2026] |
 | Estradiol gel | $69.99 a month [@alloy-solutions-pricing-2026] |
 | Estradiol patch | $100 a month [@alloy-solutions-pricing-2026] |
 | Progesterone (to protect the uterine lining) | From $23 a month [@alloy-solutions-pricing-2026] |
+| Low-dose birth control pill (perimenopause) | $39.99 a month [@alloy-solutions-pricing-2026] |
 | Paroxetine (non-hormonal, for hot flashes) | $34.99 a month [@alloy-solutions-pricing-2026] |
 | Estradiol vaginal cream | $119.97 for 3 months [@alloy-solutions-pricing-2026] |
 
-You can pay with HSA or FSA funds, and Alloy says some patients get reimbursed by a PPO plan after they pay [@alloy-insurance-2026]. Prices and promotions change, so check the total at checkout. For what the same medicines can cost elsewhere, see [how much HRT costs](/care/hrt-cost/).
+You can pay with HSA or FSA funds, and Alloy says some patients get reimbursed by a PPO plan after they pay [@alloy-insurance-2026]. GLP-1 weight care is priced separately (see below). Prices and promotions change, so check the total at checkout. For what the same medicines can cost elsewhere, see [how much HRT costs](/care/hrt-cost/).
 
 ## What Alloy offers for each symptom, and how we grade it
 
@@ -97,6 +103,20 @@ For hormone therapy, Alloy offers estradiol as a pill, patch, gel or spray, prog
 - **Hormone therapy for hot flashes and night sweats**: :grade{id="mht-vms"}. The Menopause Society says the benefits outweigh the risks for most healthy women under 60 or within 10 years of menopause [@nams-2022-hormone-therapy]. See [hormone therapy](/treatments/hormone-therapy/).
 - **Vaginal estrogen for dryness and painful sex**: :grade{id="vaginal-estrogen-gsm"}. See [vaginal estrogen](/treatments/hormone-therapy/vaginal-estrogen/).
 - **Paroxetine and similar medicines for hot flashes**: :grade{id="ssri-snri-vms"}. See [SSRIs and SNRIs](/treatments/nonhormonal/ssris-snris/).
+
+### Alloy for perimenopause
+
+Alloy says it treats perimenopause, and its one product made for it is a low-dose birth control pill. Its perimenopause page mentions poor sleep and irregular periods, describes a doctor-built plan, and lists its estradiol products [@alloy-perimenopause-2026]. Alloy lists the pill at $39.99 a month and says it's for people still having periods [@alloy-solutions-pricing-2026].
+
+In Alloy's description, the pill (1 mg/20 mcg; the page doesn't name the two hormones) eases hot flashes, night sweats and irregular periods and also works as birth control [@alloy-birth-control-pill-2026]. Alloy says it isn't recommended if you smoke, have uncontrolled high blood pressure, or have had breast cancer, a heart attack, a stroke or a blood clot [@alloy-birth-control-pill-2026].
+
+How the evidence looks:
+
+- **Birth control pills in perimenopause**: we don't grade these. A 2025 expert consensus on birth control after 40 says heart and blood vessel safety should guide the choice, and rates combined pills with natural estrogens, or 20 mcg ethinylestradiol with non-androgenic progestins, as the better choice on that score [@cagnacci-contraception-over-40-consensus-2025].
+- **Hormone therapy for hot flashes and night sweats**: :grade{id="mht-vms"} [@nams-2022-hormone-therapy].
+- **Pregnancy is still possible**: while you're having periods, even irregular ones, Mayo Clinic advises using birth control until you've gone 12 months without a period [@mayo-perimenopause-symptoms-causes-2026].
+
+See [birth control in perimenopause](/perimenopause/contraception/) and [perimenopause](/perimenopause/).
 
 ### Alloy for mood and anxiety
 
@@ -131,6 +151,18 @@ Alloy doesn't sell a joint pain treatment. Its joint pain page suggests staying 
 
 The evidence for that is modest. In a later look at a large US trial, women taking estrogen alone reported joint pain a little less often after a year than women on placebo (76.3% vs 79.2%), while joint swelling was slightly more common (42.1% vs 39.7%) [@chlebowski-whi-estrogen-joint-symptoms-2013]. We don't have a grade for HRT for joint pain. See [joint and muscle pain in menopause](/symptoms/joint-pain/).
 
+### Alloy for weight loss and GLP-1s
+
+Alloy sells weight care with GLP-1 medicines, each plus a $99 monthly Alloy Weight Care fee. It lists brand-name Zepbound and Wegovy, and compounded semaglutide, tirzepatide and liraglutide [@alloy-solutions-pricing-2026]. Zepbound starts at $299 a month and compounded semaglutide at $70 a month [@alloy-zepbound-2026; @alloy-compounded-semaglutide-2026].
+
+- **What the fee covers, per Alloy**: doctor messaging, check-ins, dose changes, help with side effects, and nutrition and exercise support [@alloy-compounded-semaglutide-2026].
+- **Who qualifies**: Alloy says not everyone does, and its doctors decide [@alloy-compounded-semaglutide-2026].
+- **Where**: Alloy says it can't offer weight care in Louisiana or Mississippi, and its compounded versions aren't available in several other states [@alloy-zepbound-2026; @alloy-compounded-semaglutide-2026].
+
+How the evidence looks: we don't grade GLP-1 medicines. The FDA approved Zepbound (tirzepatide) in 2023 for long-term weight management, alongside a lower-calorie diet and more activity, in adults with obesity, or with overweight and at least one weight-related health problem [@fda-zepbound-approval-2023]. Alloy's own page says its compounded versions aren't FDA-approved, and the FDA says it doesn't review compounded drugs for safety, effectiveness or quality [@alloy-compounded-semaglutide-2026; @fda-unapproved-glp1-2026].
+
+See [weight gain in menopause](/symptoms/weight-gain/).
+
 ## Alternatives to Alloy
 
 Other online menopause services we've reviewed are Evernow, Hers, Midi Health and Winona, and you can also see a menopause specialist in person. They're listed alphabetically here, not ranked. The main differences are whether they bill insurance and how you're seen.
@@ -149,7 +181,7 @@ Alloy's model fits people who are paying cash anyway and are comfortable with an
 
 ## What we didn't check
 
-We couldn't check clinical outcomes, the consultation fee, or how Alloy's doctors handle complex histories. This review describes Alloy's own stated model, not the quality of its care. We also left out Alloy's marketed results figures, because we couldn't check how they were measured.
+We haven't used Alloy, so we couldn't check clinical outcomes, wait times in practice, or how its doctors handle complex histories. This page describes Alloy's own stated model, not the quality of its care. We also left out Alloy's marketed results figures, because we couldn't check how they were measured.
 
 ## When an online form isn't enough
 
@@ -166,7 +198,7 @@ If you're in the UK: call 999 in an emergency, or Samaritans on 116 123 [@samari
 Use our [treatment conversation builder](/tools/treatment-questions/) to prepare questions before any visit:
 
 :::questions
-- What will the consultation and my first 3 months of medicine cost in total?
+- What will the consult and my first 3 months of medicine cost in total?
 - Can my prescription go to my local pharmacy, and what happens if I cancel?
 - Does the online intake cover enough of my health history, or would a live visit suit me better?
 :::

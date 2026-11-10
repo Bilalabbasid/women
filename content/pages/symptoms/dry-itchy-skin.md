@@ -1,7 +1,7 @@
 ---
 title: "Dry and itchy skin in menopause"
-seo_title: "Menopause itching and dry skin: causes and relief"
-meta_description: "Menopause can leave skin drier and itchier as estrogen falls. Why it happens, steps that help, whether HRT helps, and when itching needs a doctor's check."
+seo_title: "Menopause dry skin and itching: causes and relief"
+meta_description: "Menopause dry skin happens as skin holds less water and makes less collagen. Steps dermatologists suggest, whether HRT helps, and when to see a doctor."
 cluster: symptoms
 primary_keyword: menopause itchy skin
 slug: dry-itchy-skin
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Added a direct answer on menopause dry skin (why it happens, first steps, when to see a dermatologist) and a sourced note on exfoliating; sharper title and description", material: true }
   - { date: "2026-11-09", summary: "Question-led sections (can menopause cause itching, crawling skin, does HRT help, collagen, what else causes it, does it go away, when to see a doctor); skin care steps now sourced in a steps box; unsourced dehydration and red-flag wording removed", material: true }
   - { date: "2026-11-06", summary: "Published evidence guide on dry and itchy skin in menopause", material: true }
 evidence_grade: per_option
@@ -51,11 +52,17 @@ faq:
 
 Menopause can cause dry, itchy skin: as estrogen falls, skin makes less collagen and holds less moisture, so it dries out [@viscomi-menopausal-skin-hrt-2025], and dry skin is a common cause of itching [@medlineplus-itching]. A mild cleanser and moisturizer put on right after bathing are the first steps dermatologists suggest [@aad-skin-care-menopause].
 
+## Does menopause cause dry skin?
+
+Yes. In menopause, skin loses some of its ability to hold water, so it can get quite dry, especially when the air is dry [@aad-skin-care-menopause]. Falling estrogen also means less collagen and elasticity [@viscomi-menopausal-skin-hrt-2025], and aging skin gets thinner and makes less natural oil [@medlineplus-dry-skin].
+
+Dermatologists suggest a mild cleanser instead of soap, which can be too drying for mature skin, and moisturizer after bathing and through the day (see the steps below) [@aad-skin-care-menopause]. If your skin still feels dry, a dermatologist can help [@aad-skin-care-menopause].
+
 ## Can menopause cause itching?
 
-Yes. Lower estrogen reduces collagen, elasticity and moisture in the skin, leading to dryness [@viscomi-menopausal-skin-hrt-2025], and dry skin is one of the most common reasons for itching [@medlineplus-itching]. In menopause, skin loses some of its ability to hold water, which is most noticeable in dry air [@aad-skin-care-menopause].
+Yes. Lower estrogen reduces collagen, elasticity and moisture in the skin, leading to dryness [@viscomi-menopausal-skin-hrt-2025], and dry skin is one of the most common reasons for itching [@medlineplus-itching].
 
-Skin also gets more sensitive. Around age 50 the skin's pH changes, so rashes and irritation become more likely, and existing eczema or rosacea may flare [@aad-skin-care-menopause]. Aging skin is thinner and makes less natural oil, which adds to dryness [@medlineplus-dry-skin].
+Skin also gets more sensitive. Around age 50 the skin's pH changes, so rashes and irritation become more likely, and existing eczema or rosacea may flare [@aad-skin-care-menopause].
 
 If the itching is around the vagina or vulva, see our [vaginal dryness](/symptoms/vaginal-dryness/) page.
 
@@ -65,7 +72,7 @@ A crawling or prickling feeling on the skin is called formication, and it has be
 
 That is one survey, so the evidence is thinner than for dryness. It's worth mentioning to a clinician with your other symptoms; our [tingling](/symptoms/tingling/) page covers it in more detail.
 
-## What helps menopause itching?
+## What helps menopause dry skin and itching?
 
 Simple daily skin care is the first step, and it's backed by US dermatology and health guidance:
 
@@ -79,6 +86,7 @@ Simple daily skin care is the first step, and it's backed by US dermatology and 
 - **Moisturizer ingredients**: creams with hyaluronic acid or glycerin [@aad-skin-care-menopause], or with urea and lactic acid [@medlineplus-dry-skin], can help dry skin.
 - **Over-the-counter relief**: hydrocortisone cream or an oral antihistamine may ease itching for a while; antihistamines can cause drowsiness [@medlineplus-itching].
 - **Dry air**: itching tends to be worse in cold, dry winter air and with indoor heating or cooling [@medlineplus-dry-skin].
+- **Exfoliating**: check with a dermatologist before trying exfoliation or microdermabrasion, because skin gets thinner at menopause and doing it at home may cause more harm than good [@aad-skin-care-menopause].
 
 ## Does HRT help itchy skin?
 

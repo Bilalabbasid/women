@@ -1,7 +1,7 @@
 ---
 title: "About us"
-seo_title: "About MenoVerdict: not doctors, and how we work"
-meta_description: "MenoVerdict is an independent editorial team, not doctors. How we gather published sources, use AI to summarize and grade, and keep your data on your device."
+seo_title: "About MenoVerdict: evidence-graded menopause guides"
+meta_description: "MenoVerdict is an independent site of plain-language menopause guides built from published guidelines and studies, with evidence grades. We are not doctors."
 cluster: site
 primary_keyword: about
 slug: about
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-07"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Search snippet and opening now say plainly what the site is, using only facts already on this page; no change to what the site promises or discloses", material: false }
   - { date: "2026-11-06", summary: "Initial about page publication", material: true }
   - { date: "2026-11-07", summary: "MenoVerdict is now free, with no ads or sponsors", material: true }
 evidence_grade: null
@@ -30,7 +31,7 @@ sources: []
 related: [/about/how-we-make-money/, /evidence/how-we-grade/, /privacy/]
 ---
 
-**We are not doctors.** MenoVerdict is an independent editorial team. We aren't a medical service, and no doctor writes our pages.
+MenoVerdict is an independent website that explains perimenopause and menopause in plain language, using published medical guidelines, research studies, government health pages and medicine labels, and grading the evidence behind treatments. **We are not doctors.** We're an editorial team, not a medical service, and no doctor writes our pages.
 
 ## How this site works
 

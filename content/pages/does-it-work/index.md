@@ -1,7 +1,7 @@
 ---
 title: "Do menopause supplements and remedies work? Our verdicts"
-seo_title: "Do menopause supplements work? What the evidence shows"
-meta_description: "Mostly not for hot flashes: no over-the-counter supplement is recommended by The Menopause Society. See which remedies have some evidence, which don't, and why."
+seo_title: "Do menopause supplements work? 25 remedies graded"
+meta_description: "Mostly not for hot flashes: no over-the-counter supplement is recommended by The Menopause Society. 25 remedies graded, from black cohosh to probiotics."
 cluster: does-it-work
 primary_keyword: do menopause supplements work
 slug: does-it-work
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Search snippet: seo_title names the 25 graded remedies; meta description leads with the direct answer", material: false }
   - { date: "2026-11-09", summary: "Search pass: direct short answer, verdicts grouped from strongest to weakest evidence with registry grades, and new sections on safety, regulation, placebo effects and what works better", material: true }
   - { date: "2026-11-08", summary: "Sweep: plainer opening answer, cited guideline levels, removed uncited trial counts from link descriptions", material: false }
   - { date: "2026-11-06", summary: "Initial publication of the Does It Work directory", material: true }

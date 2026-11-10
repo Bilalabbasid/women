@@ -1,7 +1,7 @@
 ---
 title: "Menopause books worth reading, chosen by evidence"
-seo_title: "Best menopause books: 3 compared by author and focus"
-meta_description: "Three menopause books by credentialed authors: what each one covers, who wrote it, when it came out, and which newer HRT and treatment guidance it predates."
+seo_title: "Best menopause books: Gunter, Haver and Sims compared"
+meta_description: "The Menopause Manifesto, The New Menopause or Next Level? Who wrote each book, what it covers, who it suits, and which 2025 HRT changes it predates."
 cluster: care
 primary_keyword: best menopause books
 slug: menopause-books
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Search snippet: seo_title names the three authors; meta description names the three books", material: false }
   - { date: "2026-11-09", summary: "Factual rewrite: honest answer to which books are best, author credentials as published, what each book covers and which newer guidance it predates; removed unsourced opinions and broken publisher links; sentence case", material: true }
   - { date: "2026-11-07", summary: "Replaced retailer links with publisher links", material: true }
   - { date: "2026-11-06", summary: "Initial publication of evidence-evaluated menopause books guide", material: true }

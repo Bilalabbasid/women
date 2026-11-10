@@ -1,12 +1,12 @@
 ---
 title: Menopause fatigue
-seo_title: "Hormonal fatigue in menopause: causes and what helps"
-meta_description: "Menopause fatigue is often hormonal, mostly through night sweats and broken sleep. Other causes to check, like thyroid, iron and sleep apnea, and what helps."
+seo_title: "Menopause fatigue: why you're so tired and what helps"
+meta_description: "Extreme tiredness in menopause often comes from night sweats and broken sleep. Other causes of low energy, like heavy periods or thyroid, and what helps."
 cluster: symptoms
 primary_keyword: menopause fatigue
 slug: fatigue
 page_type: symptom
-secondary_keywords: [perimenopause exhaustion, tired all the time menopause, hormonal fatigue]
+secondary_keywords: [perimenopause exhaustion, tired all the time menopause, hormonal fatigue, extreme fatigue in menopause, lack of energy menopause, menopause and tiredness]
 search_intent: informational
 funnel_stage: worried
 symptom_tags: [fatigue]
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Added sourced answers on extreme fatigue in menopause and on heavy periods and lack of energy (2025 SWAN study); sharper title and description", material: true }
   - { date: "2026-11-09", summary: "Answers 'is menopause fatigue hormonal', how long it lasts, whether HRT helps and when to see a doctor; sourced list of other causes (thyroid, iron, sleep apnea, depression, medicines); sleep steps box; uncited vitamin D/B12 claim removed", material: true }
   - { date: "2026-11-06", summary: "Published evidence guide on menopause and perimenopause fatigue", material: true }
   - { date: "2026-11-07", summary: "Grades now come from the grade registry", material: false }
@@ -42,12 +43,15 @@ claims:
   - id: apnea-after-menopause
     text: "Sleep-disordered breathing is more common after menopause than before it, after adjusting for age and body size."
     sources: [young-menopause-sleep-disordered-breathing-2003]
+  - id: heavy-bleeding-fatigue-swan
+    text: "In 2,329 SWAN participants, three or more episodes of heavy menstrual bleeding in the prior 6 months were associated with feeling tired, and three or more episodes of prolonged bleeding with being less likely to feel full of pep, after adjustment for sleep problems, mood, stress and other factors."
+    sources: [harlow-aub-fatigue-swan-2025]
 safety_flags: []
 cta_profile: fatigue
 banned_phrase_overrides:
   - { phrase: "hormone balance", reason: "Quoted in scare-quotes to debunk the marketing claim, directing readers to our evidence directory instead." }
 hub: /symptoms/
-sources: [stute-nonhormonal-transition-2026, neda-stepan-vms-mood-systematic-review-2026, nams-2022-hormone-therapy, nams-2023-nonhormone-therapy, nice-ng23-recommendations, baker-sleep-menopausal-transition-review-2018, nia-sleep-problems-menopause, swan-vms-duration-avis-2015, medlineplus-fatigue, medlineplus-hypothyroidism, medlineplus-iron-deficiency-anemia, nhlbi-sleep-apnea-symptoms, young-menopause-sleep-disordered-breathing-2003, nimh-depression-booklet]
+sources: [stute-nonhormonal-transition-2026, neda-stepan-vms-mood-systematic-review-2026, nams-2022-hormone-therapy, nams-2023-nonhormone-therapy, nice-ng23-recommendations, baker-sleep-menopausal-transition-review-2018, nia-sleep-problems-menopause, swan-vms-duration-avis-2015, medlineplus-fatigue, medlineplus-hypothyroidism, medlineplus-iron-deficiency-anemia, nhlbi-sleep-apnea-symptoms, young-menopause-sleep-disordered-breathing-2003, nimh-depression-booklet, harlow-aub-fatigue-swan-2025]
 related: [/symptoms/, /symptoms/insomnia/, /symptoms/night-sweats/, /tools/symptom-tracker/, /does-it-work/]
 faq:
   - q: Why am I exhausted in perimenopause even when I go to bed early?
@@ -69,6 +73,18 @@ Partly, yes, though usually through sleep rather than as a direct effect. In per
 Many hot flashes at night are linked with waking, and women often under-report them, because brief wake-ups are easy to forget [@baker-sleep-menopausal-transition-review-2018]. So [night sweats](/symptoms/night-sweats/) can leave you exhausted without an obvious cause.
 
 Tiredness may also connect hot flashes and mood. A 2026 review of 12 observational studies found that, in several of them, the link between hot flashes and low mood was partly explained by fatigue or poor sleep [@neda-stepan-vms-mood-systematic-review-2026].
+
+## Is extreme fatigue normal in menopause?
+
+Tiredness is common around menopause, but extreme fatigue that gets in the way of work or daily life is worth a doctor's visit rather than something to put up with. In perimenopause, fatigue often shows up together with poor sleep and mood changes [@stute-nonhormonal-transition-2026], yet it can also have other, treatable causes [@medlineplus-fatigue].
+
+A doctor can look at both at once. Mention how long you've felt this way, how you sleep, and whether your periods have become heavier or longer, since these all point to different causes [@stute-nonhormonal-transition-2026; @harlow-aub-fatigue-swan-2025].
+
+## Can heavy periods cause tiredness and lack of energy?
+
+They may. In a US study of 2,329 women going through the menopause transition, those with three or more episodes of heavy bleeding in six months were more likely to feel tired, and those with repeated long periods were less likely to feel full of energy, even after allowing for sleep problems, mood and stress [@harlow-aub-fatigue-swan-2025].
+
+That study shows a link, not proof of cause [@harlow-aub-fatigue-swan-2025]. One possible reason is blood loss: heavy, long or frequent periods are a common cause of low iron, and feeling weak or tired is an early sign [@medlineplus-iron-deficiency-anemia]. See [heavy periods in perimenopause](/perimenopause/heavy-periods/).
 
 ## What else could be making me so tired?
 

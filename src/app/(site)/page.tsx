@@ -17,9 +17,10 @@ import { isToolLive } from '@/lib/tools/logic';
 
 export const metadata: Metadata = {
   ...buildMetadata({
-    title: `${SITE.name}: ${SITE.tagline}`,
+    // Matches how people search ("evidence-based menopause guide"); the homepage ranks for it.
+    title: `${SITE.name}: evidence-based menopause guide`,
     description:
-      'Find clear answers about perimenopause, menopause symptoms, evidence-graded treatments, and doctor questions. Fast, private, and independent.',
+      'Plain answers on perimenopause and menopause symptoms, HRT and other treatments, each graded by the evidence and linked to its sources. Free private tools too.',
     path: '/',
   }),
 };

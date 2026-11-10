@@ -1,12 +1,12 @@
 ---
 title: Menopause headaches
-seo_title: "Menopause and headaches: why they change and what helps"
-meta_description: "Headaches often change in perimenopause as hormones rise and fall. How to tell them from migraine, what helps, HRT safety, and which headaches need urgent care."
+seo_title: "Menopause headaches: daily headaches, causes and relief"
+meta_description: "Headaches can get more frequent in perimenopause. When daily headaches need a doctor, how painkillers can cause rebound headaches, HRT safety and red flags."
 cluster: symptoms
 primary_keyword: menopause headaches
 slug: headaches
 page_type: symptom
-secondary_keywords: [perimenopause headaches, hormonal headaches, menopause and headaches]
+secondary_keywords: [perimenopause headaches, hormonal headaches, menopause and headaches, perimenopause headaches daily]
 search_intent: informational
 funnel_stage: worried
 symptom_tags: [headaches]
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Added sourced answers on daily headaches in perimenopause (chronic daily headache, when to see a doctor) and rebound headaches from frequent painkillers; sharper title and description", material: true }
   - { date: "2026-11-09", summary: "Question-led sections: can menopause cause headaches, do they stop after menopause, is HRT safe with headaches, sleep and headaches, what helps (steps box) and when to get urgent care; red flags and headache types now sourced", material: true }
   - { date: "2026-11-08", summary: "Opening rewritten as a plain short answer; hormone link now stated as migraine research, which is what the cited review covers", material: true }
   - { date: "2026-11-06", summary: "Published evidence guide on menopause headaches", material: true }
@@ -39,12 +40,18 @@ claims:
   - id: headache-red-flags
     text: "A sudden, explosive headache, the worst headache ever, or a headache with slurred speech, vision changes, weakness, confusion, fever, stiff neck, or after a head injury needs urgent care."
     sources: [medlineplus-headache, cdc-stroke-signs-2026]
+  - id: chronic-daily-headache-definition
+    text: "Chronic daily headaches occur on 15 days or more a month for longer than three months; see a doctor if you usually have two or more headaches a week or take a pain reliever most days."
+    sources: [mayo-chronic-daily-headaches-2019]
+  - id: medication-overuse-headache
+    text: "Taking pain medicine more than 3 days a week regularly can cause rebound (medication overuse) headaches; Mayo Clinic puts the risk at more than two days a week or nine days a month, even for over-the-counter medicines."
+    sources: [medlineplus-headache, mayo-chronic-daily-headaches-2019]
 safety_flags: [urgent_symptoms]
 cta_profile: general_symptom
 banned_phrase_overrides:
   - { phrase: "hormone balance", reason: "Quoted in scare-quotes to debunk the marketing claim, directing readers to our evidence directory instead." }
 hub: /symptoms/
-sources: [korn-bernstein-migraine-menopause-2026, ripa-migraine-menopausal-women-review-2015, stute-nonhormonal-transition-2026, medlineplus-headache, cdc-stroke-signs-2026, nhlbi-sleep-apnea-symptoms, nia-sleep-problems-menopause]
+sources: [korn-bernstein-migraine-menopause-2026, ripa-migraine-menopausal-women-review-2015, stute-nonhormonal-transition-2026, medlineplus-headache, cdc-stroke-signs-2026, nhlbi-sleep-apnea-symptoms, nia-sleep-problems-menopause, mayo-chronic-daily-headaches-2019, nhs-menopause-symptoms]
 related: [/symptoms/, /symptoms/migraines/, /symptoms/insomnia/, /tools/symptom-tracker/, /does-it-work/]
 faq:
   - q: Why do my headaches feel different or more frequent in perimenopause?
@@ -71,6 +78,20 @@ The two feel different, and the difference matters for treatment and for hormone
 - **[Migraine](/symptoms/migraines/)**: throbbing or pounding pain, usually on one side, that gets worse when you move. It often comes with nausea, vision changes, or sensitivity to light or sound, and some people get warning signs first, called an aura [@medlineplus-headache].
 
 If you're not sure which you have, that's a fair question to bring to a clinician.
+
+## Is it normal to get headaches every day in perimenopause?
+
+Headaches can get more frequent in perimenopause, but daily headaches are worth a doctor's visit rather than waiting them out. Headaches on 15 or more days a month for over three months are called chronic daily headaches, and Mayo Clinic advises seeing a doctor if you usually get two or more headaches a week or take a pain reliever most days [@mayo-chronic-daily-headaches-2019].
+
+UK guidance lists headaches and migraines that are worse than usual among perimenopause symptoms [@nhs-menopause-symptoms], and unstable hormone levels can make migraine attacks more frequent [@korn-bernstein-migraine-menopause-2026]. Chronic daily headache is a group of headache types, including chronic migraine and chronic tension-type headache, so working out which one you have guides treatment [@mayo-chronic-daily-headaches-2019].
+
+Other things linked with frequent headaches include anxiety, depression, poor sleep, snoring and a lot of caffeine [@mayo-chronic-daily-headaches-2019]. See a doctor too if your headache pattern changes or the headaches stop you doing everyday things [@mayo-chronic-daily-headaches-2019].
+
+### Can painkillers cause daily headaches?
+
+Yes. Taking pain medicine too often can cause rebound headaches (medication overuse headache). MedlinePlus says this can happen with pain medicine more than 3 days a week on a regular basis [@medlineplus-headache], and Mayo Clinic says even over-the-counter medicines more than two days a week, or nine days a month, raise the risk [@mayo-chronic-daily-headaches-2019].
+
+It usually affects people who already get migraine or tension-type headaches [@mayo-chronic-daily-headaches-2019]. Ask a doctor how to cut back, because coming off these medicines the wrong way can cause serious side effects [@mayo-chronic-daily-headaches-2019].
 
 ## Do headaches go away after menopause?
 

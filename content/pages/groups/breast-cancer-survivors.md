@@ -1,12 +1,12 @@
 ---
 title: Menopause after breast cancer
-seo_title: "Menopause after breast cancer: HRT and options"
-meta_description: "Doctors generally don't advise HRT after breast cancer. See which non-hormonal options help hot flashes and vaginal dryness, and what to ask your oncologist."
+seo_title: "Menopause after breast cancer: what to take instead of HRT"
+meta_description: "Doctors generally don't advise HRT after breast cancer. What to take instead: CBT, Veozah, Lynkuet, some antidepressants, gabapentin and vaginal moisturizers."
 cluster: groups
 primary_keyword: menopause after breast cancer
 slug: breast-cancer-survivors
 page_type: group
-secondary_keywords: [hot flashes after breast cancer, tamoxifen hot flashes]
+secondary_keywords: [hot flashes after breast cancer, tamoxifen hot flashes, what can i take instead of hrt after breast cancer]
 search_intent: informational
 funnel_stage: worried
 symptom_tags: [hot-flashes, night-sweats, vaginal-dryness, painful-sex]
@@ -18,8 +18,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Search pass 2: new 'What can I take instead of HRT after breast cancer?' section near the top with the sourced non-hormonal options for hot flashes and vaginal dryness first; hot flash options moved under it; sharper title and description", material: true }
   - { date: "2026-11-09", summary: "Answer-first opening on symptoms and HRT after breast cancer; new sourced sections on whether HRT is possible, what causes symptoms, soy and supplements, and vaginal estrogen; American Cancer Society guidance added", material: true }
   - { date: "2026-11-08", summary: "Plain short answer; cited the tamoxifen-SSRI interaction, the fezolinetant liver checks and NICE breast cancer advice; added when to see a doctor; US spelling", material: true }
   - { date: "2026-11-06", summary: "Published clinical guide on managing menopause symptoms after breast cancer", material: true }
@@ -72,13 +73,16 @@ How firm that advice is depends on your cancer [@acs-mht-after-breast-cancer-202
 
 UK NICE guidance also says to stop systemic HRT when breast cancer is diagnosed [@nice-ng23-recommendations]. Any hormone use after breast cancer is a decision to make with your oncology team [@nams-2022-hormone-therapy]. For background on risk in general, see [HRT and breast cancer risk](/treatments/hormone-therapy/breast-cancer-risk/).
 
-## What causes menopause symptoms after breast cancer?
+## What can I take instead of HRT after breast cancer?
 
-Chemotherapy can bring on menopause symptoms if you hadn't been through menopause yet, and tamoxifen, aromatase inhibitors and other hormone-blocking medicines can also cause them [@acs-mht-after-breast-cancer-2025; @medlineplus-cancer-hot-flashes-night-sweats]. If you were already past menopause, symptoms can return when you stop HRT at diagnosis [@acs-mht-after-breast-cancer-2025].
+Non-hormonal treatments come first. For hot flashes and night sweats, options include CBT or clinical hypnosis and prescription medicines such as fezolinetant (Veozah), elinzanetant (Lynkuet), certain antidepressants, gabapentin, oxybutynin and clonidine; for vaginal dryness, regular vaginal moisturizers and lubricants [@acs-mht-after-breast-cancer-2025; @nams-2023-nonhormone-therapy; @nams-2020-gsm]. Which one suits you depends on your cancer treatment, so choose with your oncology team.
 
-The most common ones are [hot flashes](/symptoms/hot-flashes/), [night sweats](/symptoms/night-sweats/) and [vaginal dryness](/symptoms/vaginal-dryness/). If chemotherapy stopped your periods, see [chemotherapy-induced menopause](/groups/chemotherapy-induced-menopause/).
+- **Hot flashes and night sweats**: Talking therapy and several prescription medicines, described below [@nams-2023-nonhormone-therapy; @acs-mht-after-breast-cancer-2025].
+- **Vaginal dryness and painful sex**: Vaginal moisturizers used several times a week, plus lubricant during sex [@nams-2020-gsm; @acog-clinical-consensus-gsm]. If they aren't enough, see the vaginal estrogen section below.
+- **If you take tamoxifen**: Some antidepressants can make tamoxifen less effective, so ask your care team to check every medicine you take [@acs-mht-after-breast-cancer-2025].
+- **Supplements**: Herbal and soy supplements aren't recommended for hot flashes, and some may not be safe after hormone receptor-positive cancer [@nams-2023-nonhormone-therapy; @acs-mht-after-breast-cancer-2025].
 
-## What helps hot flashes after breast cancer?
+### What helps hot flashes after breast cancer?
 
 Several non-hormonal treatments reduced how often hot flashes happened, or how much they bothered people, in randomized trials, according to The Menopause Society's 2023 statement [@nams-2023-nonhormone-therapy]. These are the options:
 
@@ -89,6 +93,12 @@ Several non-hormonal treatments reduced how often hot flashes happened, or how m
 ### Which antidepressants are safer with tamoxifen?
 
 Some SSRIs, especially paroxetine and fluoxetine, can block the enzyme (CYP2D6) your body uses to turn tamoxifen into its most active form. The Menopause Society names venlafaxine, desvenlafaxine, escitalopram or citalopram as safer choices with tamoxifen [@nams-2023-nonhormone-therapy], so your oncologist and prescriber should choose together. See [SSRIs and SNRIs for hot flashes](/treatments/nonhormonal/ssris-snris/).
+
+## What causes menopause symptoms after breast cancer?
+
+Chemotherapy can bring on menopause symptoms if you hadn't been through menopause yet, and tamoxifen, aromatase inhibitors and other hormone-blocking medicines can also cause them [@acs-mht-after-breast-cancer-2025; @medlineplus-cancer-hot-flashes-night-sweats]. If you were already past menopause, symptoms can return when you stop HRT at diagnosis [@acs-mht-after-breast-cancer-2025].
+
+The most common ones are [hot flashes](/symptoms/hot-flashes/), [night sweats](/symptoms/night-sweats/) and [vaginal dryness](/symptoms/vaginal-dryness/). If chemotherapy stopped your periods, see [chemotherapy-induced menopause](/groups/chemotherapy-induced-menopause/).
 
 ## Are soy and herbal supplements safe after breast cancer?
 

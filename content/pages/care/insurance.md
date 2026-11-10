@@ -1,7 +1,7 @@
 ---
 title: "Does insurance cover menopause care?"
 seo_title: "Does insurance cover menopause care and HRT?"
-meta_description: "US Marketplace plans must cover visits and prescriptions, but HRT costs depend on your plan's drug list. Generic vs brand, Medicare, Medicaid and how to check."
+meta_description: "US Marketplace plans must cover visits and prescriptions, but HRT costs depend on your drug list. Medicare, Medicaid, which telehealth clinics take insurance."
 cluster: care
 primary_keyword: does insurance cover menopause care
 slug: insurance
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Telehealth section now answers 'Do telehealth menopause clinics take my insurance?' directly, with Midi, Evernow and Alloy from their own pages; description mentions telehealth", material: true }
   - { date: "2026-11-09", summary: "Added sourced sections on what US plans cover, generic vs brand drug tiers, what to do if HRT isn't covered, and how to check your plan; new FAQs on Medicare, Medicaid and referrals; removed unsourced claims about why telehealth companies skip insurance", material: true }
   - { date: "2026-11-07", summary: "Published guide on insurance and menopause care access, with 2026 NHANES-based study", material: true }
   - { date: "2026-11-07", summary: "Added inline citations to figures already sourced in the same paragraph", material: false }
@@ -39,7 +40,7 @@ claims:
 safety_flags: []
 cta_profile: care_access
 hub: /care/
-sources: [chesnokova-insurance-mht-disparity-2026, healthcare-gov-essential-health-benefits, healthcare-gov-prescription-medications, medicare-how-drug-plans-work, medicaid-gov-prescription-drugs, goodrx-estradiol-prices-2026-11-08, goodrx-progesterone-pricing-2026, midi-health-pricing-2026, alloy-insurance-2026, healthcare-gov-referral-glossary, healthcare-gov-plan-types]
+sources: [chesnokova-insurance-mht-disparity-2026, healthcare-gov-essential-health-benefits, healthcare-gov-prescription-medications, medicare-how-drug-plans-work, medicaid-gov-prescription-drugs, goodrx-estradiol-prices-2026-11-08, goodrx-progesterone-pricing-2026, midi-health-pricing-2026, alloy-insurance-2026, healthcare-gov-referral-glossary, healthcare-gov-plan-types, evernow-pricing-2026, evernow-own-site-2026]
 related: [/care/, /care/hrt-cost/, /care/find-a-menopause-specialist/, /compare/, /tools/treatment-questions/]
 faq:
   - q: Does Medicare cover hormone therapy for menopause?
@@ -98,9 +99,15 @@ The quickest way is to look up your exact prescription on your plan's drug list,
 
 Use our [treatment conversation builder](/tools/treatment-questions/) to prepare these questions before you call.
 
-## Does insurance cover menopause telehealth?
+## Do telehealth menopause clinics take my insurance?
 
-Some menopause telehealth services bill insurance and some don't, so check each one. Midi says it is in-network with most PPO plans, sees Medicare patients as self-pay only, and doesn't accept Medicaid [@midi-health-pricing-2026]. Alloy doesn't bill insurance, though some patients get reimbursed by PPO plans afterward and HSA or FSA funds can be used [@alloy-insurance-2026].
+Some do and some don't, so check each one against your plan. Of the services we cover, Midi bills insurance and says it is in-network with most PPO plans, Evernow accepts insurance for its video visits, and Alloy doesn't bill insurance at all [@midi-health-pricing-2026; @evernow-pricing-2026; @alloy-insurance-2026]. Here's what each one says:
+
+- **[Midi Health](/compare/midi-review/)**: in-network with most PPO plans; Medicare patients are seen as self-pay only, and Medicaid isn't accepted [@midi-health-pricing-2026]
+- **[Evernow](/compare/evernow-review/)**: video visits are insurance-eligible, either as a one-time visit or within its membership, and it also takes HSA or FSA funds and self-pay [@evernow-pricing-2026; @evernow-own-site-2026]
+- **[Alloy](/compare/alloy-review/)**: doesn't bill insurance, though some patients get reimbursed by PPO plans afterward, and HSA or FSA funds can be used [@alloy-insurance-2026]
+
+Even when a service is in-network, what you pay depends on your own plan's copays, deductible and drug list.
 
 If a service is cash-pay only, ask whether it gives paperwork (often called a superbill) you could send to your insurer yourself. Then compare the total with what you'd pay at an in-network clinic. Our [telehealth comparisons](/compare/) cover how each service handles insurance.
 

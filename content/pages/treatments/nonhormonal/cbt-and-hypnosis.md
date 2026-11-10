@@ -1,7 +1,7 @@
 ---
 title: "CBT and clinical hypnosis for hot flashes"
-seo_title: "Does CBT or hypnosis help hot flashes? What trials show"
-meta_description: "Yes: CBT eases how much hot flashes bother you, and clinical hypnosis cut hot flashes by 74% in one trial. What each involves, sessions, and online options."
+seo_title: "CBT and hypnosis for menopause hot flashes: what trials show"
+meta_description: "Yes: menopause CBT eases how much hot flashes bother you; 5 clinical hypnosis sessions cut hot flashes 74% in a trial. What each involves, plus app options."
 cluster: treatments
 primary_keyword: cbt for menopause
 slug: cbt-and-hypnosis
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Search snippet: seo_title now includes menopause; added a 2024 conference review comparing hypnosis and CBT to the which-works-better section", material: true }
   - { date: "2026-11-09", summary: "Short answer now says directly whether CBT and hypnosis help hot flashes; added sourced sections on what the trials found for each, how they compare, sessions, online and app options, and use alongside medication or HRT; replaced uncited claims; meta description no longer promises an interactions section it lacked", material: true }
   - { date: "2026-11-06", summary: "Published evidence guide on CBT and clinical hypnosis for hot flashes", material: true }
 evidence_grade: strong
@@ -38,7 +39,7 @@ claims:
 safety_flags: []
 cta_profile: vasomotor
 hub: /treatments/nonhormonal/
-sources: [nams-2023-nonhormone-therapy, nice-ng23-recommendations, owh-menopause-treatment-2026]
+sources: [nams-2023-nonhormone-therapy, nice-ng23-recommendations, owh-menopause-treatment-2026, muniz-hypnosis-cbt-scoping-review-2024]
 related: [/treatments/nonhormonal/, /symptoms/hot-flashes/, /symptoms/insomnia/, /symptoms/anxiety/, /tools/treatment-questions/]
 faq:
   - q: Can CBT really reduce hot flashes, or does it just help me cope?
@@ -75,6 +76,8 @@ The results did not depend on whether women expected hypnosis to work [@nams-202
 ## CBT or hypnosis: which works better?
 
 No trial in The Menopause Society's 2023 review compared the two directly [@nams-2023-nonhormone-therapy]. They were tested for different goals: hypnosis trials showed fewer and milder hot flashes, while CBT trials mainly showed less bother and interference with daily life [@nams-2023-nonhormone-therapy]. Which suits you may depend on whether the number of hot flashes or how much they disrupt you matters more, and on what is available near you.
+
+A 2024 review of 23 studies (8 of hypnosis and 15 of CBT) points the same way [@muniz-hypnosis-cbt-scoping-review-2024]. Hypnosis consistently reduced how often hot flashes happened, while CBT had mixed effects on how often they happened but helped with the daily disruption and stress they cause [@muniz-hypnosis-cbt-scoping-review-2024]. It was presented at The Menopause Society's 2024 annual meeting as a conference abstract, not a full published paper, so it carries less weight than the trials above [@muniz-hypnosis-cbt-scoping-review-2024].
 
 ## What happens in CBT or hypnosis for hot flashes?
 

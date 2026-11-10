@@ -1,7 +1,7 @@
 ---
 title: Migraines and menopause
-seo_title: "Menopause migraines and HRT: what's safe with aura"
-meta_description: "Migraines often get worse in perimenopause and ease after menopause. How HRT affects migraine, why aura changes safety, and which treatments are used."
+seo_title: "Menopause migraines: why they worsen, and HRT with aura"
+meta_description: "Migraines often worsen in perimenopause and ease after menopause, but aura tends to persist. Whether HRT helps or hurts, why the route matters, and treatments."
 cluster: symptoms
 primary_keyword: menopause migraines
 slug: migraines
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Search snippet: seo_title leads with menopause migraines; meta description answers whether they worsen or ease and notes aura", material: false }
   - { date: "2026-11-09", summary: "Question-led sections on worsening in perimenopause, whether migraines stop after menopause, whether HRT makes migraine better or worse, HRT safety with aura, and treatments; added 2015 systematic review; urgent box now sourced", material: true }
   - { date: "2026-11-06", summary: "Published evidence guide on migraines and menopause, including HRT and aura", material: true }
   - { date: "2026-11-07", summary: "Column renamed 'Bottom line'; the progestogen grade now comes from the grade registry", material: false }

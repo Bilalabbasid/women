@@ -1,12 +1,12 @@
 ---
 title: "Does evening primrose oil help menopause hot flashes?"
 seo_title: "Evening primrose oil for menopause: what trials found"
-meta_description: "Evening primrose oil hasn't reliably cut hot flashes in trials, though one found fewer night sweats. What reviews found, doses, side effects and interactions."
+meta_description: "Evening primrose oil hasn't reliably eased hot flashes in trials, and none measured weight. What reviews found, doses studied, side effects and interactions."
 cluster: does-it-work
 primary_keyword: evening primrose oil menopause
 slug: evening-primrose-oil
 page_type: does_it_work
-secondary_keywords: [evening primrose oil hot flashes, evening primrose oil and the menopause]
+secondary_keywords: [evening primrose oil hot flashes, evening primrose oil and the menopause, evening primrose oil menopause weight gain]
 search_intent: informational
 funnel_stage: sceptical
 symptom_tags: [hot-flashes, night-sweats]
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-11"
 change_log:
+  - { date: "2026-11-11", summary: "Search pass 2: added a weight gain section (no trial or review measured weight), reworded an FAQ to 'Is evening primrose oil good for menopause?', sharper description", material: true }
   - { date: "2026-11-09", summary: "Search pass: verdict-first short answer, added two systematic reviews and a second trial, doses studied, side effects, drug interactions, breast pain, and common questions as headings and FAQs", material: true }
   - { date: "2026-11-06", summary: "Published evidence verdict on evening primrose oil for menopause symptoms", material: true }
 evidence_grade: not_supported
@@ -44,7 +45,7 @@ hub: /does-it-work/
 sources: [kazemi-evening-primrose-oil-2021, farzaneh-epo-hot-flashes-rct-2013, thevi-epo-hot-flashes-metaanalysis-2024, larki-epo-menopause-metaanalysis-2025, nccih-evening-primrose-oil-2024, mskcc-evening-primrose-oil-2022, hubbard-breast-pain-assessment-2020, nams-2023-nonhormone-therapy, nams-2022-hormone-therapy]
 related: [/does-it-work/, /symptoms/night-sweats/, /symptoms/breast-tenderness/, /treatments/nonhormonal/, /tools/does-it-work-checker/]
 faq:
-  - q: Does evening primrose oil help with menopause?
+  - q: Is evening primrose oil good for menopause?
     a: "Not reliably. In small trials it did not cut how often hot flashes happen compared with a placebo, though some results hint at milder flashes or fewer night sweats. Reviews of the trials say the evidence is too weak for firm conclusions."
   - q: Does evening primrose oil help night sweats?
     a: "One small 2021 trial found fewer and milder night sweats with evening primrose oil than with a placebo after 8 weeks. It was single-blind, meaning the researchers knew who got what, and it hasn't been repeated, so treat it as a lead, not proof."
@@ -80,6 +81,10 @@ There is one encouraging but weak result. The 2021 trial measured [night sweats]
 ## Does it help other menopause symptoms?
 
 There isn't enough evidence to say it helps menopause symptoms in general [@nccih-evening-primrose-oil-2024]. For breast pain, evening primrose oil is graded :grade{id="epo-mastalgia"}: it has not worked better than a placebo, and UK guidance doesn't recommend it routinely [@hubbard-breast-pain-assessment-2020]. See [breast tenderness](/symptoms/breast-tenderness/) for what does help.
+
+## Does evening primrose oil help with menopause weight gain?
+
+There's no evidence that it does. None of the menopause trials or reviews of evening primrose oil we found measured weight change: they looked at hot flashes, night sweats and other symptoms [@kazemi-evening-primrose-oil-2021; @farzaneh-epo-hot-flashes-rct-2013; @thevi-epo-hot-flashes-metaanalysis-2024; @larki-epo-menopause-metaanalysis-2025]. The NIH's National Center for Complementary and Integrative Health doesn't mention weight on its evening primrose oil page, and says there isn't enough evidence that it helps menopause symptoms [@nccih-evening-primrose-oil-2024]. For what is known about weight in midlife, see [menopause weight gain](/symptoms/weight-gain/).
 
 ## How much did studies use, and how long does it take to work?
 

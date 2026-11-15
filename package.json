@@ -26,7 +26,8 @@
     "plan:import": "tsx scripts/keyword-import.ts",
     "tool:approve": "tsx scripts/approve-tool.ts",
     "validate:honesty": "tsx scripts/validate-honesty.ts",
-    "validate:free": "tsx scripts/validate-free.ts"
+    "validate:free": "tsx scripts/validate-free.ts",
+    "indexnow": "tsx scripts/indexnow.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",

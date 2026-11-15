@@ -5628,3 +5628,1308 @@
   funding_conflict: null
   verified: true
   notes: Opened 2026-11-15.
+
+- id: dodin-cochrane-acupuncture-hot-flushes-2013
+  title: Acupuncture for menopausal hot flushes
+  authors:
+    - Dodin S
+    - Blanchet C
+    - Marc I
+    - Ernst E
+    - Wu T
+    - Vaillancourt C
+    - Paquette J
+    - Maunsell E
+  publisher: Cochrane Database of Systematic Reviews
+  year: 2013
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/23897589/
+  doi: 10.1002/14651858.CD007410.pub2
+  accessed: 2026-11-15
+  population: 16 randomized trials, 1,155 perimenopausal or postmenopausal women with hot flushes
+  key_finding: "Acupuncture vs. sham acupuncture (8 trials, 414 women): no significant difference in hot flush frequency (1.13 fewer flushes a day, 95% CI -2.55 to 0.29, low-quality evidence); flushes slightly less severe (very-low-quality evidence), but with breast cancer studies excluded there was no difference in frequency or severity. Acupuncture vs. hormone therapy (3 trials): about 3.18 more flushes a day with acupuncture. Acupuncture vs. waiting list or no treatment: moderate reductions in frequency and severity (low-quality evidence). Authors: insufficient evidence to determine whether acupuncture is effective; data on adverse effects were lacking."
+  funding_conflict: None declared.
+  verified: true
+  notes: Read via the PubMed abstract.
+
+- id: ee-acupuncture-hot-flashes-rct-2016
+  title: "Acupuncture for Menopausal Hot Flashes: A Randomized Trial"
+  authors:
+    - Ee C
+    - Xue C
+    - Chondros P
+    - Myers SP
+    - French SD
+    - Teede H
+    - Pirotta M
+  publisher: Annals of Internal Medicine
+  year: 2016
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/26784863/
+  doi: 10.7326/M15-1380
+  accessed: 2026-11-15
+  population: 327 women over 40 in late perimenopause or postmenopause in Australia with at least 7 moderate hot flashes a day
+  key_finding: "10 treatments over 8 weeks of Chinese medicine needle acupuncture vs. noninsertive sham acupuncture. Hot flash scores at the end of treatment were 15.36 vs. 15.04 (mean difference 0.33, 95% CI -1.87 to 2.52; P = 0.77): acupuncture was not better than sham. No serious adverse events."
+  funding_conflict: Funded by the National Health and Medical Research Council (Australia).
+  verified: true
+  notes: Read via the PubMed abstract. Participants were mostly white and did not have breast cancer or surgical menopause.
+
+- id: avis-acupuncture-aim-trial-2016
+  title: "Acupuncture in Menopause (AIM) study: a pragmatic, randomized controlled trial"
+  authors:
+    - Avis NE
+    - Coeytaux RR
+    - Isom S
+    - Prevette K
+    - Morgan T
+  publisher: Menopause
+  year: 2016
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/27023860/
+  doi: 10.1097/GME.0000000000000597
+  accessed: 2026-11-15
+  population: 209 perimenopausal and postmenopausal US women aged 45-60 with 4 or more hot flashes or night sweats a day
+  key_finding: Up to 20 acupuncture treatments in 6 months vs. a waitlist (no sham). Hot flash and night sweat frequency fell 36.7% at 6 months with acupuncture and rose 6.0% in the waitlist group; at 12 months the reduction was 29.4%. Improvement was seen after 3 treatments, with the largest effect after a median of 8.
+  funding_conflict: null
+  verified: true
+  notes: Read via the PubMed abstract. No sham control, so the result can't separate acupuncture's specific effect from expectation and attention.
+
+- id: nccih-acupuncture-effectiveness-safety-2022
+  title: "Acupuncture: Effectiveness and Safety"
+  authors: []
+  publisher: National Center for Complementary and Integrative Health (NIH)
+  year: 2022
+  type: patient_information
+  url: https://www.nccih.nih.gov/health/acupuncture-what-you-need-to-know
+  doi: null
+  accessed: 2026-11-15
+  population: General public
+  key_finding: Relatively few complications from acupuncture have been reported, but nonsterile needles and improper delivery can cause serious harm, including infections and punctured organs. The FDA regulates acupuncture needles as medical devices that must be sterile and labeled for single use. Most states license acupuncturists, with varying requirements. Don't use acupuncture to put off seeing a health care provider. A 2018 review found acupuncture reduced hot flashes and night sweats compared with no acupuncture, but it was not shown to be better than sham acupuncture.
+  funding_conflict: null
+  verified: true
+  notes: Page last updated October 2022.
+
+- id: medicare-acupuncture-coverage
+  title: Acupuncture coverage
+  authors: []
+  publisher: Medicare.gov (Centers for Medicare & Medicaid Services)
+  year: 2026
+  type: other
+  url: https://www.medicare.gov/coverage/acupuncture
+  doi: null
+  accessed: 2026-11-15
+  population: People with Medicare
+  key_finding: "Part B covers acupuncture only for chronic low back pain (12 weeks or longer, no known cause, not related to surgery or pregnancy): up to 12 treatments in 90 days, 8 more if improving, maximum 20 a year. Acupuncture for other conditions is not covered."
+  funding_conflict: null
+  verified: true
+  notes: "Official Medicare coverage page, cited only for what Medicare covers."
+
+- id: nccih-cannabis-cannabinoids-2019
+  title: "Cannabis (Marijuana) and Cannabinoids: What You Need To Know"
+  authors: []
+  publisher: National Center for Complementary and Integrative Health (NIH)
+  year: 2019
+  type: patient_information
+  url: https://www.nccih.nih.gov/health/cannabis-marijuana-and-cannabinoids-what-you-need-to-know
+  doi: null
+  accessed: 2026-11-15
+  population: General public
+  key_finding: Over-the-counter CBD products may contain more or less CBD than their labels say and may contain contaminants such as THC. CBD has been associated with liver injury, male reproductive harm and interactions with other drugs; side effects seen in studies include diarrhea, sleepiness, abnormal liver tests, decreased alertness and mood changes. Cannabis can cause dizziness on standing (raising the risk of falls) and is linked to a higher risk of car crashes; some users develop cannabis use disorder. The effects of cannabis on sleep in people without other illnesses are uncertain, and evidence on anxiety is limited.
+  funding_conflict: null
+  verified: true
+  notes: Page dated November 2019. It does not mention menopause.
+
+- id: fda-cannabis-cbd-regulation
+  title: FDA Regulation of Cannabis and Cannabis-Derived Products, Including Cannabidiol (CBD)
+  authors: []
+  publisher: U.S. Food and Drug Administration
+  year: 2026
+  type: regulator_statement
+  url: https://www.fda.gov/news-events/public-health-focus/fda-regulation-cannabis-and-cannabis-derived-products-including-cannabidiol-cbd
+  doi: null
+  accessed: 2026-11-15
+  population: General public
+  key_finding: FDA has not approved cannabis for any disease or condition. The only approved CBD drug is Epidiolex, for certain rare seizure disorders; dronabinol and nabilone (synthetic THC-like drugs) are approved for other uses. THC and CBD products are excluded from the dietary supplement definition. Unapproved products have not been evaluated for drug interactions or side effects. THC in pregnancy or breastfeeding carries potential harms.
+  funding_conflict: null
+  verified: true
+  notes: "FDA page on its regulation of cannabis and cannabis-derived products including CBD."
+
+- id: bonn-miller-cbd-labeling-2017
+  title: Labeling Accuracy of Cannabidiol Extracts Sold Online
+  authors:
+    - Bonn-Miller MO
+    - Loflin MJE
+    - Thomas BF
+    - Marcu JP
+    - Hyke T
+    - Vandrey R
+  publisher: JAMA
+  year: 2017
+  type: small_study
+  url: https://jamanetwork.com/journals/jama/fullarticle/2661569
+  doi: 10.1001/jama.2017.11909
+  accessed: 2026-11-15
+  population: 84 CBD extracts (oils, tinctures, vaping liquids) from 31 companies bought online
+  key_finding: Only 26 of 84 products (31%) contained CBD within 10% of the labeled amount; about 26% contained less CBD than labeled and about 43% contained more. THC was detected in 18 of 84 (21%).
+  funding_conflict: Some authors were unpaid board members of the Institute for Research on Cannabinoids; one reported fees from Zynerba Pharmaceuticals.
+  verified: true
+  notes: Read via the JAMA research letter. The letter's "under/over-labeled" labels are used in an unusual direction; the figures above follow the Discussion ("26% contained less CBD than labeled").
+
+- id: dahlgren-medical-cannabis-menopause-survey-2022
+  title: A survey of medical cannabis use during perimenopause and postmenopause
+  authors:
+    - Dahlgren MK
+    - El-Abboud C
+    - Lambros AM
+    - Sagar KA
+    - Smith RT
+    - Gruber SA
+  publisher: Menopause
+  year: 2022
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/35917529/
+  doi: 10.1097/GME.0000000000002018
+  accessed: 2026-11-15
+  population: 258 perimenopausal and postmenopausal survey respondents, most of whom already used cannabis
+  key_finding: 78.7% reported using medical cannabis for menopause-related symptoms, most often sleep problems (67.4%) and mood or anxiety (46.1%). A survey of use patterns, not a test of whether cannabis works.
+  funding_conflict: One author reported grants from cannabis-related companies (Foria/Praxis Ventures, Charlotte's Web) outside the submitted work.
+  verified: true
+  notes: Read via the PubMed abstract.
+
+- id: babyn-cannabis-menopause-survey-2023
+  title: "Cannabis use for menopause in women aged 35 and over: a cross-sectional survey on usage patterns and perceptions in Alberta, Canada"
+  authors:
+    - Babyn K
+    - Ross S
+    - Makowsky M
+    - Kiang T
+    - Yuksel N
+  publisher: BMJ Open
+  year: 2023
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/37344107/
+  doi: 10.1136/bmjopen-2022-069197
+  accessed: 2026-11-15
+  population: 1,485 women aged 35 and over in Alberta, Canada, recruited through social media
+  key_finding: 34% currently used cannabis; over 75% of them for medical reasons, most often sleep (65%), anxiety (45%) and muscle or joint aches (33%). Authors say research is needed on safety and effectiveness.
+  funding_conflict: One author has been on advisory boards or a speaker for Biosyent, Bayer, Amgen, Organon and Duchesnay.
+  verified: true
+  notes: Read via the PubMed abstract. Self-selected online sample.
+
+- id: carpenter-paced-respiration-rct-2013
+  title: "Paced respiration for vasomotor and other menopausal symptoms: a randomized, controlled trial"
+  authors:
+    - Carpenter JS
+    - Burns DS
+    - Wu J
+    - Otte JL
+    - Schneider B
+    - Ryker K
+    - Tallman E
+    - Yu M
+  publisher: Journal of General Internal Medicine
+  year: 2013
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/22936289/
+  doi: 10.1007/s11606-012-2202-6
+  accessed: 2026-11-15
+  population: 218 women (96 breast cancer survivors, 122 menopausal women without cancer) in the US Midwest
+  key_finding: "16-week trial of paced respiration (taught by CD and booklet, practiced daily and used at each hot flash) vs. fast shallow breathing vs. usual care. No significant differences in hot flash frequency, severity or bother at 8 or 16 weeks; most did not reach a 50% reduction despite doing the breathing correctly. Authors: unlikely to provide clinical benefit."
+  funding_conflict: null
+  verified: true
+  notes: Read via the PubMed abstract.
+
+- id: sood-paced-breathing-trial-2013
+  title: Paced breathing compared with usual breathing for hot flashes
+  authors:
+    - Sood R
+    - Sood A
+    - Wolf SL
+    - Linquist BM
+    - Liu H
+    - Sloan JA
+    - Satele DV
+    - Loprinzi CL
+    - Barton DL
+  publisher: Menopause
+  year: 2013
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/22990758/
+  doi: 10.1097/gme.0b013e31826934b6
+  accessed: 2026-11-15
+  population: 92 women with hot flashes (68 completed), Mayo Clinic phase II feasibility trial
+  key_finding: "9-week trial: paced breathing at 6 breaths a minute for 15 minutes once or twice a day vs. usual breathing at 14 breaths a minute for 10 minutes a day. Hot flashes fell in every group: 52% (paced twice daily), 42% (paced once daily) and 46% (usual breathing). Most found it easy to do. Authors: efficacy needs a larger placebo-controlled trial."
+  funding_conflict: null
+  verified: true
+  notes: Read via the PubMed abstract.
+
+- id: goldstein-mindfulness-relaxation-vms-2017
+  title: Use of mindfulness, meditation and relaxation to treat vasomotor symptoms
+  authors:
+    - Goldstein KM
+    - Shepherd-Banigan M
+    - Coeytaux RR
+    - McDuffie JR
+    - Adam S
+    - Befus D
+    - Goode AP
+    - Kosinski AS
+    - Masilamani V
+    - Williams JW Jr
+  publisher: Climacteric
+  year: 2017
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/28286985/
+  doi: 10.1080/13697137.2017.1283685
+  accessed: 2026-11-15
+  population: Perimenopausal and postmenopausal women; umbrella review of 5 systematic reviews plus 6 newer trials
+  key_finding: A new meta-analysis of paced respiration vs. control found no significant decrease in hot flash frequency (SMD 0.04, 95% CI -0.73 to 0.82) or severity (SMD 0.06, 95% CI -0.69 to 0.80). No effect on hot flashes or quality of life was found between various relaxation or mindfulness approaches.
+  funding_conflict: null
+  verified: true
+  notes: Read via the PubMed abstract.
+
+- id: nccih-relaxation-techniques-2021
+  title: "Relaxation Techniques: What You Need To Know"
+  authors: []
+  publisher: National Center for Complementary and Integrative Health (NIH)
+  year: 2021
+  type: patient_information
+  url: https://www.nccih.nih.gov/health/relaxation-techniques-what-you-need-to-know
+  doi: null
+  accessed: 2026-11-15
+  population: General public
+  key_finding: Breathing exercises (slow, deep, diaphragmatic breathing) are one kind of relaxation technique. A 2019 review of 3 studies (880 people) found preliminary evidence that diaphragmatic breathing may reduce stress; a 2019 review of 4 studies (398 people) reported paced breathing improved hot flashes. Relaxation techniques alone don't seem especially promising for sleep, though they can be part of CBT for insomnia. Generally safe for healthy people; occasionally people report more anxiety, intrusive thoughts or fear of losing control, and rarely symptoms may worsen in people with epilepsy, certain psychiatric conditions or a history of abuse or trauma.
+  funding_conflict: null
+  verified: true
+  notes: Page last updated June 2021.
+
+- id: newton-yoga-vms-rct-2014
+  title: "Efficacy of yoga for vasomotor symptoms: a randomized controlled trial"
+  authors:
+    - Newton KM
+    - Reed SD
+    - Guthrie KA
+    - Sherman KJ
+    - Booth-LaForce C
+    - Caan B
+    - Sternfeld B
+    - Carpenter JS
+    - Learman LA
+    - Freeman EW
+    - Cohen LS
+    - Joffe H
+    - Anderson GL
+    - Larson JC
+    - Hunt JR
+    - Ensrud KE
+    - LaCroix AZ
+  publisher: Menopause (MsFLASH network trial)
+  year: 2014
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/24045673/
+  doi: 10.1097/GME.0b013e31829e4baa
+  accessed: 2026-11-15
+  population: 249 healthy perimenopausal and postmenopausal women with hot flashes (yoga n=107 vs. usual activity n=142)
+  key_finding: 12 weekly 90-minute yoga classes plus daily home practice did not reduce hot flash frequency or bother vs. usual activity (difference -0.3 a day at 12 weeks, 95% CI -1.2 to 0.6), but insomnia symptoms improved modestly (P = 0.007).
+  funding_conflict: Some authors reported research support or consulting for pharmaceutical and diagnostics companies.
+  verified: true
+  notes: Read via the PubMed abstract.
+
+- id: reed-yoga-menqol-rct-2014
+  title: "Menopausal quality of life: RCT of yoga, exercise, and omega-3 supplements"
+  authors:
+    - Reed SD
+    - Guthrie KA
+    - Newton KM
+    - Anderson GL
+    - Booth-LaForce C
+    - Caan B
+    - Carpenter JS
+    - Cohen LS
+    - Dunn AL
+    - Ensrud KE
+    - Freeman EW
+    - Hunt JR
+    - Joffe H
+    - Larson JC
+    - Learman LA
+    - Rothenberg R
+    - Seguin RA
+    - Sherman KJ
+    - Sternfeld BS
+    - LaCroix AZ
+  publisher: American Journal of Obstetrics and Gynecology (MsFLASH network trial)
+  year: 2014
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/24215858/
+  doi: 10.1016/j.ajog.2013.11.016
+  accessed: 2026-11-15
+  population: 355 healthy, sedentary perimenopausal and postmenopausal women aged 40-62 with hot flashes
+  key_finding: Compared with usual activity, 12 weeks of yoga (weekly 90-minute class plus daily home practice) modestly improved menopause-related quality of life (total MENQOL -0.3 on a 1-8 scale), including the hot flash and sexuality domains; authors say the clinical significance is uncertain because the effect was modest.
+  funding_conflict: null
+  verified: true
+  notes: Read via the PubMed abstract.
+
+- id: cramer-yoga-menopause-metaanalysis-2018
+  title: Yoga for menopausal symptoms - A systematic review and meta-analysis
+  authors:
+    - Cramer H
+    - Peng W
+    - Lauche R
+  publisher: Maturitas
+  year: 2018
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/29452777/
+  doi: 10.1016/j.maturitas.2017.12.005
+  accessed: 2026-11-15
+  population: 13 randomized trials, 1,306 participants
+  key_finding: "Compared with no treatment, yoga reduced total, psychological, physical, vasomotor and urogenital menopause symptoms. Compared with other exercise, only hot flashes differed (small effect). Results were not robust to detection and attrition bias. No serious adverse events. Authors: effects comparable to other exercise."
+  funding_conflict: null
+  verified: true
+  notes: Read via the PubMed abstract.
+
+- id: guthrie-msflash-insomnia-pooled-2018
+  title: "Effects of Pharmacologic and Nonpharmacologic Interventions on Insomnia Symptoms and Self-reported Sleep Quality in Women With Hot Flashes: A Pooled Analysis of Individual Participant Data From Four MsFLASH Trials"
+  authors:
+    - Guthrie KA
+    - Larson JC
+    - Ensrud KE
+    - Anderson GL
+    - Carpenter JS
+    - Freeman EW
+    - Joffe H
+    - LaCroix AZ
+    - Manson JE
+    - Morin CM
+    - Newton KM
+    - Otte J
+    - Reed SD
+    - McCurry SM
+  publisher: Sleep
+  year: 2018
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/29165623/
+  doi: 10.1093/sleep/zsx190
+  accessed: 2026-11-15
+  population: 546 perimenopausal and postmenopausal women with insomnia symptoms and bothersome hot flashes, from 4 MsFLASH trials
+  key_finding: CBT for insomnia gave the largest drop in insomnia severity (-5.2 points vs. control). Exercise and venlafaxine gave about -2 points; yoga, escitalopram and estradiol gave comparably small decreases. Sleep quality improved significantly more than control with yoga, exercise, escitalopram, estradiol and venlafaxine (1.2-1.6 points), and most with CBT for insomnia (2.7 points).
+  funding_conflict: null
+  verified: true
+  notes: Read via the PubMed abstract.
+
+- id: nccih-yoga-effectiveness-safety-2023
+  title: "Yoga: Effectiveness and Safety"
+  authors: []
+  publisher: National Center for Complementary and Integrative Health (NIH)
+  year: 2023
+  type: patient_information
+  url: https://www.nccih.nih.gov/health/yoga-what-you-need-to-know
+  doi: null
+  accessed: 2026-11-15
+  population: General public
+  key_finding: Yoga is generally considered safe for healthy people; most injuries are sprains and strains and serious injuries are rare, but emergency-room-treated injury rates are higher at 65 and older. Beginners should avoid extreme poses such as headstands and shoulder stands; hot yoga carries risks of overheating and dehydration. Conditions that may need changes to practice include preexisting injuries, lower spine disease, severe high blood pressure, balance problems and glaucoma. For menopause symptoms yoga seems at least as effective as other exercise; it has helped sleep in multiple studies and may help stress and anxiety symptoms.
+  funding_conflict: null
+  verified: true
+  notes: Page last updated August 2023.
+
+- id: nccih-menopausal-symptoms-in-depth-2017
+  title: "Menopausal Symptoms: In Depth"
+  authors: []
+  publisher: National Center for Complementary and Integrative Health (NIH)
+  year: 2017
+  type: patient_information
+  url: https://www.nccih.nih.gov/health/menopausal-symptoms-in-depth
+  doi: null
+  accessed: 2026-11-15
+  population: Women with menopause symptoms (US)
+  key_finding: Phytoestrogens, herbs and other dietary supplements haven't been clearly shown to relieve menopause symptoms; supplements may have side effects or interact with drugs, and little is known about their long-term safety. Soy and red clover isoflavone studies had inconsistent results; flaxseed was no better than placebo. Phytoestrogens appear safe short term but long-term safety isn't established, and because they may act like estrogen they may not be safe for women who shouldn't take estrogen. Dong quai may interact with warfarin; kava has been linked to severe liver disease; DHEA may cause liver damage even short term. AACE guidelines caution that women with a personal or strong family history of blood clots, cardiovascular disease, or breast, uterine or ovarian cancer should not use soy-based treatments. 'Natural' does not always mean 'safe', and 'standardized', 'verified' or 'certified' on a label does not necessarily mean product quality or consistency.
+  funding_conflict: null
+  verified: true
+  notes: "Page says 'Last Updated: May 2017', so the guideline summaries on it predate The Menopause Society 2023 statement. Read in full."
+
+- id: nccih-soy-2025
+  title: "Soy: Usefulness and Safety"
+  authors: []
+  publisher: National Center for Complementary and Integrative Health (NIH)
+  year: 2025
+  type: patient_information
+  url: https://www.nccih.nih.gov/health/soy
+  doi: null
+  accessed: 2026-11-15
+  population: Adults using soy foods or supplements (US)
+  key_finding: Soy supplements may contain soy protein or isoflavones (compounds similar in structure to estrogen). Soy isoflavone supplements or soy protein may help reduce the frequency and severity of hot flashes, but the effect may be small and results have not been completely consistent. Soy isoflavones probably benefit bone density in postmenopausal women. Soy supplements have not been shown to reduce breast cancer risk. Concentrated isoflavone extracts have been used safely in studies for up to 6 months (soy protein up to 16 weeks). Side effects may include bloating, constipation, diarrhea and nausea. High-tyramine soy products (such as tofu and soy sauce) taken with MAOI antidepressants have caused dangerously high blood pressure. Some people are allergic to soy. Supplements are not approved by FDA before sale.
+  funding_conflict: null
+  verified: true
+  notes: "Page says 'Last Updated: April 2025'. Read in full."
+
+- id: taku-soy-isoflavones-hot-flash-metaanalysis-2012
+  title: "Extracted or synthesized soybean isoflavones reduce menopausal hot flash frequency and severity: systematic review and meta-analysis of randomized controlled trials"
+  authors:
+    - Taku K
+    - Melby MK
+    - Kronenberg F
+    - Kurzer MS
+    - Messina M
+  publisher: Menopause
+  year: 2012
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/22433977/
+  doi: 10.1097/gme.0b013e3182410159
+  accessed: 2026-11-15
+  population: Perimenopausal and postmenopausal women in double-blind RCTs of soy isoflavone supplements vs placebo (19 trials reviewed; 13 pooled for frequency, 9 for severity)
+  key_finding: Soy isoflavones (median 54 mg a day, aglycone equivalents) taken for 6 weeks to 12 months reduced hot flash frequency by 20.6% (95% CI -28.38 to -12.86) and severity by 26.2% (95% CI -42.23 to -10.15) more than placebo. Results varied a lot between trials (I2 = 67% for frequency, 86% for severity). Supplements with more than 18.8 mg of genistein were more than twice as potent at reducing frequency as lower-genistein supplements. Authors call for more studies on dose, form, baseline hot flash frequency and duration.
+  funding_conflict: "Not reviewed: the abstract has no disclosure statement. Check the full text's author disclosures when merging."
+  verified: true
+  notes: Read via the PubMed abstract (NCBI E-utilities efetch).
+
+- id: acs-breast-cancer-recurrence-diet-2026
+  title: Can I Lower My Risk of Breast Cancer Progressing or Coming Back?
+  authors: []
+  publisher: American Cancer Society
+  year: 2026
+  type: patient_information
+  url: https://www.cancer.org/cancer/types/breast-cancer/living-as-a-breast-cancer-survivor/can-i-lower-my-risk-of-breast-cancer-progressing-or-coming-back.html
+  doi: null
+  accessed: 2026-11-15
+  population: Breast cancer survivors (US)
+  key_finding: Eating soy foods does not seem to pose a risk of breast cancer recurrence, and some studies suggest soy foods might lower that risk (more research needed). The evidence is not clear on soy or isoflavone supplements, which often contain much higher levels of isoflavones; talk to your healthcare team before taking them. No dietary or nutritional supplements have been shown to clearly help lower the risk of breast cancer progressing or coming back.
+  funding_conflict: null
+  verified: true
+  notes: "Page says 'Last Revised: July 17, 2026'."
+
+- id: barnard-wavs-vegan-soy-trial-2021
+  title: "The Women's Study for the Alleviation of Vasomotor Symptoms (WAVS): a randomized, controlled trial of a plant-based diet and whole soybeans for postmenopausal women"
+  authors:
+    - Barnard ND
+    - Kahleova H
+    - Holtz DN
+    - Del Aguila F
+    - Neola M
+    - Crosby LM
+    - Holubkov R
+  publisher: Menopause
+  year: 2021
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/34260478/
+  doi: 10.1097/GME.0000000000001812
+  accessed: 2026-11-15
+  population: 38 postmenopausal women with 2 or more hot flashes a day; 12-week randomized trial, low-fat vegan diet plus 1/2 cup (86 g) cooked soybeans daily vs no diet change
+  key_finding: Total hot flashes fell 79% with the diet and 49% in the control group (between-group P = 0.01); moderate-to-severe hot flashes fell 84% vs 42%. 59% (10/17) of the diet group became free of moderate-to-severe hot flashes.
+  funding_conflict: Run by the Physicians Committee for Responsible Medicine, a nonprofit that promotes plant-based diets; the lead author is its president and writes books on nutrition, and several authors were paid by it for the study.
+  verified: true
+  notes: Read via the PubMed abstract. Not blinded, no placebo diet, small.
+
+- id: barnard-vegan-soy-vms-rct-2023
+  title: "A dietary intervention for vasomotor symptoms of menopause: a randomized, controlled trial"
+  authors:
+    - Barnard ND
+    - Kahleova H
+    - Holtz DN
+    - Znayenko-Miller T
+    - Sutton M
+    - Holubkov R
+    - Zhao X
+    - Galandi S
+    - Setchell KDR
+  publisher: Menopause
+  year: 2023
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/36253903/
+  doi: 10.1097/GME.0000000000002080
+  accessed: 2026-11-15
+  population: 84 postmenopausal women with at least 2 moderate-to-severe hot flashes a day; 12-week randomized trial in two cohorts, low-fat vegan diet plus 1/2 cup (86 g) cooked soybeans daily vs no diet change
+  key_finding: Moderate-to-severe hot flashes fell 88% with the diet vs 34% in the control group (between-group P < 0.001). At 12 weeks, 50% of diet-group completers reported no moderate-to-severe hot flashes. Equol production status was not associated with the degree of improvement.
+  funding_conflict: Physicians Committee for Responsible Medicine (plant-based diet advocacy nonprofit) ran the study; lead author is its president and receives book royalties; several authors were paid by it for the study.
+  verified: true
+  notes: Read via the PubMed abstract. Unblinded comparison with usual diet, no placebo.
+
+- id: kroenke-whi-diet-weight-vms-2012
+  title: Effects of a dietary intervention and weight change on vasomotor symptoms in the Women's Health Initiative
+  authors:
+    - Kroenke CH
+    - Caan BJ
+    - Stefanick ML
+    - Anderson G
+    - Brzyski R
+    - Johnson KC
+    - LeBlanc E
+  publisher: Menopause
+  year: 2012
+  type: cohort
+  url: https://pubmed.ncbi.nlm.nih.gov/22781782/
+  doi: 10.1097/gme.0b013e31824f606e
+  accessed: 2026-11-15
+  population: 17,473 postmenopausal US women aged 50-79 in the WHI Dietary Modification trial not taking hormone therapy
+  key_finding: "Assignment to the low-fat diet with more fruit, vegetables and whole grains was linked to a modestly higher likelihood of hot flashes and night sweats going away (OR 1.14, 95% CI 1.01-1.28). Women who lost 10% or more of their body weight in the first year were more likely to have symptoms go away than women whose weight stayed the same (OR 1.56, 95% CI 1.21-2.02). Large weight loss (over 22 lb), but not dietary change, was related to moderate or severe symptoms going away. Authors: weight loss as part of a healthy diet may help eliminate hot flashes."
+  funding_conflict: Authors report no conflicts of interest.
+  verified: true
+  notes: Read via the PubMed abstract. Secondary analysis of a randomized diet trial; the weight-change findings are observational. 13 authors; first 7 listed.
+
+- id: herber-gast-diet-patterns-vms-2013
+  title: "Fruit, Mediterranean-style, and high-fat and -sugar diets are associated with the risk of night sweats and hot flushes in midlife: results from a prospective cohort study"
+  authors:
+    - Herber-Gast GC
+    - Mishra GD
+  publisher: American Journal of Clinical Nutrition
+  year: 2013
+  type: cohort
+  url: https://pubmed.ncbi.nlm.nih.gov/23553160/
+  doi: 10.3945/ajcn.112.049965
+  accessed: 2026-11-15
+  population: 6,040 Australian women with natural menopause (Australian Longitudinal Study on Women's Health), followed for 9 years
+  key_finding: Women in the top fifth for a fruit or Mediterranean-style eating pattern were less likely to report hot flashes and night sweats than those in the bottom fifth (adjusted OR 0.81 and 0.80). A high-fat, high-sugar pattern was linked to higher risk (OR 1.23).
+  funding_conflict: null
+  verified: true
+  notes: Read via the PubMed abstract. Observational; shows an association, not cause and effect.
+
+- id: nccih-omega3-2024
+  title: "Omega-3 Supplements: What You Need To Know"
+  authors: []
+  publisher: National Center for Complementary and Integrative Health (NIH)
+  year: 2024
+  type: patient_information
+  url: https://www.nccih.nih.gov/health/omega3-supplements-what-you-need-to-know
+  doi: null
+  accessed: 2026-11-15
+  population: Adults (US)
+  key_finding: "For some conditions the evidence for eating seafood is stronger than for omega-3 supplements. People with heart disease or high triglycerides may benefit from supplements; a 2020 review of 86 studies found more EPA and DHA slightly reduced coronary events and coronary death. It is uncertain whether omega-3 supplements help depression: a 2021 review of 35 studies found any effect may be too small to be meaningful, with low or very low quality evidence. The NIH DREAM study (535 people with moderate-to-severe dry eye, 1 year) found omega-3 supplements no more helpful than placebo. Side effects are usually mild: unpleasant taste, bad breath, bad-smelling sweat, headache, heartburn, nausea and diarrhea. Dietary Guidelines advise adults to eat 8 ounces or more of a variety of seafood a week."
+  funding_conflict: null
+  verified: true
+  notes: "Page says 'Last Updated: November 2024'. Does not discuss menopause or hot flashes."
+
+- id: ods-omega3-consumer-2022
+  title: "Omega-3 Fatty Acids: Fact Sheet for Consumers"
+  authors: []
+  publisher: National Institutes of Health, Office of Dietary Supplements
+  year: 2022
+  type: patient_information
+  url: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/
+  doi: null
+  accessed: 2026-11-15
+  population: General public (US)
+  key_finding: Recommended amounts exist only for ALA (1.1 g a day for women); recommended amounts of EPA and DHA have not been established. FDA recommends no more than 5 g a day of EPA and DHA combined from supplements. Side effects are usually mild (unpleasant taste, bad breath, heartburn, nausea, stomach discomfort, diarrhea, headache, smelly sweat). High doses may cause bleeding problems with warfarin or other anticoagulants. The American Heart Association recommends 1 to 2 servings of seafood a week, about 1 g a day of EPA plus DHA for people with heart disease, and does not recommend omega-3 supplements for people who do not have a high risk of cardiovascular disease. A large trial of 2,000 mg EPA plus 1,000 mg DHA daily for 1 year did not improve dry eye symptoms more than placebo. In RA, supplements may reduce pain-medication use, but it is unclear if they reduce joint pain, swelling or stiffness.
+  funding_conflict: null
+  verified: true
+  notes: "Page says 'Updated: July 18, 2022'. Direct fetch returns 403 (Cloudflare); read in full via a page-to-text fetcher."
+
+- id: dream-omega3-dry-eye-2018
+  title: n-3 Fatty Acid Supplementation for the Treatment of Dry Eye Disease
+  authors:
+    - Dry Eye Assessment and Management Study Research Group
+    - Asbell PA
+    - Maguire MG
+    - Pistilli M
+    - Ying GS
+    - Szczotka-Flynn LB
+    - Hardten DR
+    - Lin MC
+    - Shtein RM
+  publisher: New England Journal of Medicine
+  year: 2018
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/29652551/
+  doi: 10.1056/NEJMoa1709691
+  accessed: 2026-11-15
+  population: 535 adults with moderate-to-severe dry eye disease (349 omega-3, 186 olive oil placebo), 12 months
+  key_finding: 3,000 mg a day of fish-derived EPA and DHA for 12 months did not improve dry eye symptom scores more than an olive oil placebo (mean difference -1.9 points, 95% CI -5.0 to 1.1, P = 0.21), and no eye-surface measures differed. Adverse event rates were similar.
+  funding_conflict: Funded by the National Eye Institute, NIH.
+  verified: true
+  notes: Read via the PubMed abstract.
+
+- id: ods-calcium-consumer-2023
+  title: "Calcium: Fact Sheet for Consumers"
+  authors: []
+  publisher: National Institutes of Health, Office of Dietary Supplements
+  year: 2023
+  type: patient_information
+  url: https://ods.od.nih.gov/factsheets/Calcium-Consumer/
+  doi: null
+  accessed: 2026-11-15
+  population: General public (US)
+  key_finding: "Recommended intake: 1,200 mg a day for women 51-70 and adults 71+ (1,000 mg for adults 19-50). Upper limit from all sources: 2,000 mg a day for adults 51+. Food sources include milk, yogurt, cheese, canned sardines and salmon with bones, kale, broccoli, bok choy, and calcium-fortified juices, soy and almond drinks, some tofu and cereals. Calcium carbonate is absorbed best with food; calcium citrate is absorbed well with or without food and more easily by people with low stomach acid. Calcium is absorbed best in doses of 500 mg or less at one time. Supplements might cause gas, bloating and constipation. The body absorbs and retains less calcium after menopause. It is not clear whether calcium supplements help prevent fractures. Some studies suggest supplements might increase heart disease risk, but overall experts believe calcium intake does not affect heart disease risk. Interactions: dolutegravir (take 2 hours before or 6 hours after), levothyroxine (not absorbed well within 4 hours of calcium carbonate), lithium (high blood calcium), quinolone antibiotics (not absorbed well within 2 hours of calcium)."
+  funding_conflict: null
+  verified: true
+  notes: "Page says 'Updated: September 14, 2023'. Direct fetch returns 403 (Cloudflare); read in full via a page-to-text fetcher."
+
+- id: jackson-whi-calcium-vitamin-d-fractures-2006
+  title: Calcium plus vitamin D supplementation and the risk of fractures
+  authors:
+    - Jackson RD
+    - LaCroix AZ
+    - Gass M
+    - Wallace RB
+    - Robbins J
+    - Lewis CE
+    - Bassford T
+  publisher: New England Journal of Medicine
+  year: 2006
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/16481635/
+  doi: 10.1056/NEJMoa055218
+  accessed: 2026-11-15
+  population: 36,282 healthy postmenopausal US women aged 50-79 in the Women's Health Initiative, average follow-up 7 years
+  key_finding: "1,000 mg elemental calcium (as carbonate) plus 400 IU vitamin D3 daily vs placebo: hip bone density 1.06% higher; no significant reduction in hip fracture (HR 0.88, 95% CI 0.72-1.08), clinical spine fracture (HR 0.90) or total fractures (HR 0.96); kidney stones increased (HR 1.17, 95% CI 1.02-1.34). Among women who kept taking the pills, hip fracture HR was 0.71 (95% CI 0.52-0.97)."
+  funding_conflict: null
+  verified: true
+  notes: Read via the PubMed abstract. WHI Investigators group; first 7 authors listed.
+
+- id: uspstf-vitamin-d-calcium-falls-fractures-draft-2024
+  title: "Draft Recommendation Statement: Vitamin D, Calcium, or Combined Supplementation for the Primary Prevention of Falls and Fractures in Community-Dwelling Adults"
+  authors: []
+  publisher: US Preventive Services Task Force
+  year: 2024
+  type: guideline
+  url: https://www.uspreventiveservicestaskforce.org/uspstf/draft-recommendation/vitamin-d-calcium-combined-supplementation-primary-prevention-falls-fractures-communitydwelling-adults
+  doi: null
+  accessed: 2026-11-15
+  population: Community-dwelling postmenopausal women and men 60+ (not people with osteoporosis, prior osteoporotic fracture or vitamin D deficiency)
+  key_finding: "DRAFT (December 17, 2024): recommends against vitamin D with or without calcium for primary prevention of fractures, and against vitamin D for prevention of falls, in community-dwelling postmenopausal women and men 60+ (Grade D, moderate certainty of no net benefit), across a broad range of doses. Pooled hip fracture RR 0.99 (95% CI 0.86-1.13; 7 RCTs, 88,364 people). Kidney stones increased (RR 1.11, 95% CI 1.03-1.21; about 2 more per 1,000 people), a small harm. Adequate calcium intake still matters; recommended daily allowances for calcium range from 1,000 to 1,200 mg from all sources. When final it will replace the 2018 recommendation."
+  funding_conflict: null
+  verified: true
+  notes: Still marked draft on 2026-11-15; no final statement published. Do not present as final.
+
+- id: greendale-swan-bone-loss-fmp-2012
+  title: "Bone mineral density loss in relation to the final menstrual period in a multiethnic cohort: results from the Study of Women's Health Across the Nation (SWAN)"
+  authors:
+    - Greendale GA
+    - Sowers M
+    - Han W
+    - Huang MH
+    - Finkelstein JS
+    - et al.
+  publisher: Journal of Bone and Mineral Research
+  year: 2012
+  type: cohort
+  url: https://pubmed.ncbi.nlm.nih.gov/21976317/
+  doi: 10.1002/jbmr.534
+  accessed: 2026-11-15
+  population: 862 US women (242 African American, 384 white, 117 Chinese, 119 Japanese) followed from pre- or early perimenopause through their final menstrual period
+  key_finding: Bone loss began 1 year before the final menstrual period (FMP) and slowed, but did not stop, 2 years after it, at both the lumbar spine and femoral neck. Loss was fastest from 1 year before to 2 years after the FMP. Over the 10-year window, women lost 10.6% of lumbar spine BMD (7.38% during that 3-year window) and 9.1% at the femoral neck (5.8% during that window). Higher BMI and African American heritage were linked with slower loss; Japanese and Chinese ancestry with faster loss.
+  funding_conflict: null
+  verified: true
+  notes: Read via the PubMed abstract (NCBI E-utilities efetch) on 2026-11-15. PMCID PMC3378821.
+
+- id: niams-osteoporosis-2022
+  title: Osteoporosis
+  authors: []
+  publisher: National Institute of Arthritis and Musculoskeletal and Skin Diseases (NIH)
+  year: 2022
+  type: patient_information
+  url: https://www.niams.nih.gov/health-topics/osteoporosis
+  doi: null
+  accessed: 2026-11-15
+  population: General public (US)
+  key_finding: Osteoporosis is a bone disease in which bone mineral density and bone mass decrease, weakening bones and raising fracture risk. It is often called a silent disease because there are usually no symptoms until a bone breaks; spine fractures can cause severe back pain, loss of height or a stooped posture. Risk is higher in women and rises with age; low estrogen after menopause is a risk factor, along with small body size, family history, low calcium or vitamin D intake, some medical conditions and long-term medicines, inactivity, heavy drinking and smoking. Prevention steps include weight-bearing exercise, a diet rich in calcium and vitamin D, not smoking, limiting alcohol, and taking prescribed medicines.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed December 2022. Opened 2026-11-15.
+
+- id: niams-exercise-bone-health-2023
+  title: Exercise for Your Bone Health
+  authors: []
+  publisher: National Institute of Arthritis and Musculoskeletal and Skin Diseases (NIH)
+  year: 2023
+  type: patient_information
+  url: https://www.niams.nih.gov/health-topics/exercise-your-bone-health
+  doi: null
+  accessed: 2026-11-15
+  population: General public (US)
+  key_finding: Weight-bearing exercise (brisk walking, jogging, racket sports, stair climbing, dancing) makes bones work harder; resistance training (weight machines, free weights, resistance bands, pushups) makes muscles work harder; balance training (tai chi, walking backward, step-ups, lunges) is especially important for older adults. People with osteoporosis, low bone density or other physical limits should talk to a health care provider before starting an exercise program.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed May 2023. Opened 2026-11-15.
+
+- id: medlineplus-calcium-diet
+  title: "Calcium in diet: MedlinePlus Medical Encyclopedia"
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2025
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/002412.htm
+  doi: null
+  accessed: 2026-11-15
+  population: General public (US)
+  key_finding: "Recommended calcium: 1,000 mg a day for women 19 to 50 and 1,200 mg a day for women 51 and older. For adults over 50, up to 2,000 mg a day is considered safe. Dairy is the best source; leafy greens, canned salmon and sardines with soft bones, almonds and fortified foods also supply calcium. Calcium is absorbed best in amounts of no more than 500 mg at a time; calcium carbonate is absorbed better with food, calcium citrate with or without food. Higher calcium intake over a long period raises the risk of kidney stones in some people."
+  funding_conflict: null
+  verified: true
+  notes: Review date 1/21/2025, editorial update 08/12/2025. Opened 2026-11-15.
+
+- id: medlineplus-osteoporosis
+  title: "Osteoporosis: MedlinePlus Medical Encyclopedia"
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2025
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/000360.htm
+  doi: null
+  accessed: 2026-11-15
+  population: General public (US)
+  key_finding: "About one half of all women over 50 will have a fracture of the hip, wrist or spine in their lifetime. Causes of bone loss include the drop in estrogen at menopause. There are no symptoms in the early stages; many people have a fracture before learning they have it. A DEXA scan is a low-radiation x-ray that usually measures the spine and hip, used to diagnose osteoporosis, predict fracture risk and check how well treatment works. Medicines include bisphosphonates (the main medicines for postmenopausal women, by mouth or IV), denosumab, teriparatide or abaloparatide, romosozumab, raloxifene and calcitonin. Recommended exercise: weight-bearing exercise at least 30 minutes three times a week, free weights or bands, balance exercises such as tai chi; avoid exercise with a risk of falling. Women 51 to 70: 1,200 mg calcium and 400 to 800 IU vitamin D a day; use supplements only to make up a shortfall from diet. Quit smoking, limit alcohol, and prevent falls (remove throw rugs, night lights, grab bars, eye checks, low-heeled shoes)."
+  funding_conflict: null
+  verified: true
+  notes: Review date 1/28/2025. Opened 2026-11-15. The page notes some expert groups are unsure the benefits of these calcium and vitamin D amounts outweigh the risks.
+
+- id: acog-heavy-menstrual-bleeding-faq
+  title: Heavy Menstrual Bleeding (FAQ193)
+  authors:
+    - American College of Obstetricians and Gynecologists
+  publisher: American College of Obstetricians and Gynecologists
+  year: 2021
+  type: patient_information
+  url: https://www.acog.org/womens-health/faqs/heavy-menstrual-bleeding
+  doi: null
+  accessed: 2026-11-15
+  population: General public (US)
+  key_finding: "Heavy menstrual bleeding is very common (about one third of women seek treatment) but not normal. Signs: bleeding more than 7 days; soaking one or more pads or tampons every hour for several hours in a row; needing more than one pad at a time; changing pads or tampons during the night; clots as big as a quarter or larger. It can lead to iron-deficiency anemia. Causes include fibroids, polyps, adenomyosis, irregular ovulation (the uterine lining can become too thick; common in puberty and perimenopause), bleeding disorders, blood thinners and aspirin, the copper IUD, endometriosis and, sometimes, endometrial cancer. Evaluation may include a pregnancy test, ultrasound, hysteroscopy, endometrial biopsy, sonohysterography or MRI; track several cycles before the visit. Treatments: hormonal birth control methods, hormone therapy for heavy bleeding in perimenopause (weighing its risks), GnRH agonists short term, tranexamic acid tablets taken at the start of each period, NSAIDs such as ibuprofen, and procedures including endometrial ablation (birth control still needed afterward until menopause) and hysterectomy."
+  funding_conflict: null
+  verified: true
+  notes: Last updated May 2021, last reviewed May 2026. Opened 2026-11-15.
+
+- id: nice-ng112-recurrent-uti
+  title: "Urinary tract infection (recurrent): antimicrobial prescribing (NG112), Recommendations"
+  authors: []
+  publisher: National Institute for Health and Care Excellence (UK)
+  year: 2024
+  type: guideline
+  url: https://www.nice.org.uk/guidance/ng112/chapter/Recommendations
+  doi: null
+  accessed: 2026-11-15
+  population: Adults and children with recurrent UTI (UK)
+  key_finding: Recurrent UTI in adults is 2 or more UTIs in 6 months or 3 or more in 12 months. Give advice on behavioural and personal hygiene measures and self-care. For people in perimenopause or after menopause, consider vaginal estrogen for recurrent UTI if behavioural measures alone are not effective or not appropriate; discuss that serious side effects are very rare and only a minimal amount is absorbed into the bloodstream; review within 12 months (1.2.1 to 1.2.3, 2018 amended 2024). Consider single-dose antibiotic prophylaxis only if behavioural measures and vaginal estrogen are not effective or not appropriate. Consider methenamine hippurate as an alternative to daily antibiotic prophylaxis; review within 6 months. Some people may wish to try D-mannose (evidence from one study of 200 ml of 1% solution daily) or cranberry products (evidence of benefit is uncertain, and there is no evidence of benefit for older women); advise about the sugar content.
+  funding_conflict: null
+  verified: true
+  notes: Published 2018, recommendations amended 2024. UK guidance; vaginal estrogen for this use was off-label in the UK in December 2024. Opened 2026-11-15 (fetched page text).
+
+- id: perrotta-cochrane-estrogens-recurrent-uti-2008
+  title: Oestrogens for preventing recurrent urinary tract infection in postmenopausal women
+  authors:
+    - Perrotta C
+    - Aznar M
+    - Mejia R
+    - Albert X
+    - Ng CW
+  publisher: Cochrane Database of Systematic Reviews
+  year: 2008
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/18425910/
+  doi: 10.1002/14651858.CD005131.pub2
+  accessed: 2026-11-15
+  population: 9 RCTs, 3,345 postmenopausal women with recurrent UTI
+  key_finding: Oral estrogens did not reduce UTIs compared with placebo (4 studies, 2,798 women; RR 1.08, 95% CI 0.88 to 1.33). Vaginal estrogens reduced the number of women with UTIs versus placebo in two small studies (RR 0.25, 95% CI 0.13 to 0.50; and RR 0.64, 95% CI 0.47 to 0.86). Versus antibiotics, results were mixed (vaginal cream better in one study, antibiotics better than vaginal pessaries in another). Side effects of vaginal estrogen included breast tenderness, vaginal bleeding or spotting, discharge, vaginal irritation, burning and itching. Benefit varied with the type of estrogen and treatment length.
+  funding_conflict: None declared.
+  verified: true
+  notes: Read via the PubMed abstract (NCBI E-utilities efetch) on 2026-11-15. Last search February 2007, so newer trials are not included.
+
+- id: williams-cochrane-cranberries-uti-2023
+  title: Cranberries for preventing urinary tract infections
+  authors:
+    - Williams G
+    - Hahn D
+    - Stephens JH
+    - Craig JC
+    - Hodson EM
+  publisher: Cochrane Database of Systematic Reviews
+  year: 2023
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/37068952/
+  doi: 10.1002/14651858.CD001321.pub6
+  accessed: 2026-11-15
+  population: 50 RCTs, 8,857 participants
+  key_finding: Cranberry products probably reduced symptomatic, culture-verified UTIs in women with recurrent UTIs (8 studies, 1,555 participants; RR 0.74, 95% CI 0.55 to 0.99; moderate certainty). Low-certainty evidence suggests little or no benefit in elderly people in institutions, pregnant women or adults with bladder-emptying problems. Compared with antibiotics, cranberry may make little or no difference (2 studies, 385 participants; RR 1.03). No clear difference between juice and tablets or between doses. Gastrointestinal side effects probably do not differ from placebo or no treatment.
+  funding_conflict: Authors declared no relevant interests.
+  verified: true
+  notes: Read via the PubMed abstract (NCBI E-utilities efetch) on 2026-11-15. PubMed lists a later update (CD001321.pub7, November 2023); the pub6 figures are cited here.
+
+- id: medlineplus-uti-adults
+  title: "Urinary tract infection - adults: MedlinePlus Medical Encyclopedia"
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2026
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/000521.htm
+  doi: null
+  accessed: 2026-11-15
+  population: General public (US)
+  key_finding: "Women get UTIs more often than men and are more likely to get one after sexual activity; menopause also increases the risk. Bladder infection symptoms: cloudy or bloody urine, pain or burning when peeing, pressure or cramping in the lower belly or back, a strong need to pee often, low-grade fever in some people. Kidney infection symptoms: chills and shaking, fever above 101°F (38.3°C), pain in the side, back or groin, nausea and vomiting, and mental changes or confusion (in older people these may be the only signs). Contact a provider right away for signs of a possible kidney infection (back or side pain, chills, fever, vomiting) and if symptoms return shortly after antibiotics. For repeated bladder infections a provider may suggest a single antibiotic dose after sex, a 3 to 5 day course to keep at home, or a daily preventive dose. After menopause, estrogen cream around the vagina may reduce infections. Bladder symptoms usually ease within 24 to 48 hours of starting treatment."
+  funding_conflict: null
+  verified: true
+  notes: Review date 7/22/2026. Opened 2026-11-15.
+
+- id: davis-global-consensus-testosterone-women-2019
+  title: Global Consensus Position Statement on the Use of Testosterone Therapy for Women
+  authors:
+    - Davis SR
+    - Baber R
+    - Panay N
+    - Bitzer J
+    - Perez SC
+    - et al.
+  publisher: Journal of Clinical Endocrinology & Metabolism
+  year: 2019
+  type: position_statement
+  url: https://pubmed.ncbi.nlm.nih.gov/31498871/
+  doi: 10.1210/jc.2019-01603
+  accessed: 2026-11-15
+  population: Postmenopausal women (endorsed by the International Menopause Society, The Endocrine Society, The North American Menopause Society and other societies)
+  key_finding: "The only evidence-based indication for testosterone in women is postmenopausal women diagnosed with hypoactive sexual desire disorder (HSDD) after a full biopsychosocial assessment. At doses that approximate premenopausal levels it increases satisfying sexual events by an average of one per month above placebo and improves desire, arousal, orgasm, pleasure and sexual distress (Level I, Grade A). Measure total testosterone before starting and 3 to 6 weeks after; check every 6 months for overuse; stop if no benefit by 6 months. Side effects at these doses: mild increases in acne and body or facial hair in some women, not hair loss, clitoral enlargement or voice change. Oral testosterone worsens cholesterol and is not recommended; non-oral (transdermal) forms showed no short-term lipid harm. Pellets, injections and compounded products are not recommended. Insufficient data for any other symptom, for cognition, bone density at 12 months, or long-term breast or heart safety. In most countries it is prescribed off-label, using male products at adjusted doses."
+  funding_conflict: Several panel members report industry funding and honoraria (listed in the paper).
+  verified: true
+  notes: Abstract has no text; recommendations read in the full text via Europe PMC (PMC6821450) on 2026-11-15.
+
+- id: medlineplus-sexual-problems-women
+  title: Sexual Problems in Women
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2026
+  type: patient_information
+  url: https://medlineplus.gov/sexualproblemsinwomen.html
+  doi: null
+  accessed: 2026-11-15
+  population: General public (US)
+  key_finding: Problems that keep a woman from enjoying sex include lack of sexual desire, trouble becoming aroused, lack of orgasm and painful sex. Physical causes may include diabetes, heart disease, nerve disorders or hormone problems, and some drugs can affect desire and function. Psychological causes may include work stress, anxiety, depression, relationship concerns or past sexual trauma. Occasional problems are common; if problems last more than a few months or cause distress for you or your partner, see your health care provider.
+  funding_conflict: null
+  verified: true
+  notes: Health topic summary page. Opened 2026-11-15.
+
+- id: dailymed-addyi-label-2025
+  title: ADDYI (flibanserin) tablets, prescribing information
+  authors: []
+  publisher: DailyMed, US National Library of Medicine (FDA-approved labeling)
+  year: 2025
+  type: regulator_label
+  url: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3819daf3-e935-2c53-c527-e1d57922f394
+  doi: null
+  accessed: 2026-11-15
+  population: Women under 65 with acquired, generalized hypoactive sexual desire disorder
+  key_finding: "Indicated for women less than 65 years of age with acquired, generalized HSDD (low sexual desire causing marked distress or interpersonal difficulty) that is not due to a co-existing medical or psychiatric condition, relationship problems, or the effects of a medicine or drug. Not indicated in men or to enhance sexual performance. Boxed warning: alcohol close in time raises the risk of severe low blood pressure and fainting (wait at least 2 hours after 1 or 2 drinks before the bedtime dose; skip the dose after 3 or more drinks); contraindicated with moderate or strong CYP3A4 inhibitors. Most common side effects: dizziness, sleepiness, nausea, fatigue, insomnia and dry mouth."
+  funding_conflict: null
+  verified: true
+  notes: Label version published Dec 23, 2025 on DailyMed; read via the DailyMed SPL service on 2026-11-15.
+
+- id: dailymed-vyleesi-label-2026
+  title: VYLEESI (bremelanotide injection), prescribing information
+  authors: []
+  publisher: DailyMed, US National Library of Medicine (FDA-approved labeling)
+  year: 2026
+  type: regulator_label
+  url: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f1d0c1b5-2f39-4bad-a6a4-0066e3ad5dcf
+  doi: null
+  accessed: 2026-11-15
+  population: Premenopausal women with acquired, generalized hypoactive sexual desire disorder
+  key_finding: "Indicated for premenopausal women with acquired, generalized HSDD. Not indicated for HSDD in postmenopausal women or in men, or to enhance sexual performance. Most common side effects (over 4%): nausea, flushing, injection site reactions, headache and vomiting."
+  funding_conflict: null
+  verified: true
+  notes: Label version published Nov 09, 2026 on DailyMed; read via the DailyMed SPL service on 2026-11-15.
+
+- id: guttuso-gabapentin-hot-flashes-rct-2003
+  title: "Gabapentin's effects on hot flashes in postmenopausal women: a randomized controlled trial"
+  authors:
+    - Guttuso T Jr
+    - Kurlan R
+    - McDermott MP
+    - Kieburtz K
+  publisher: Obstetrics & Gynecology
+  year: 2003
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/12576259/
+  doi: 10.1016/s0029-7844(02)02712-6
+  accessed: 2026-11-15
+  population: 59 postmenopausal women with 7 or more hot flashes a day (12-week double-blind phase, then 5-week open-label phase)
+  key_finding: After 12 weeks, gabapentin 900 mg a day reduced hot flash frequency by 45% and composite score by 54% from baseline, versus 29% and 31% for placebo. 50.0% on gabapentin reported at least one adverse event versus 27.6% on placebo; 13% versus 3% withdrew because of adverse events. Open-label doses up to 2,700 mg a day were associated with 54% and 67% reductions.
+  funding_conflict: null
+  verified: true
+  notes: Abstract read via NCBI E-utilities on 2026-11-15. Small single-center trial; placebo response was large.
+
+- id: pandya-gabapentin-breast-cancer-rct-2005
+  title: "Gabapentin for hot flashes in 420 women with breast cancer: a randomised double-blind placebo-controlled trial"
+  authors:
+    - Pandya KJ
+    - Morrow GR
+    - Roscoe JA
+    - Zhao H
+    - Hickok JT
+    - et al.
+  publisher: The Lancet
+  year: 2005
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/16139656/
+  doi: 10.1016/S0140-6736(05)67215-7
+  accessed: 2026-11-15
+  population: 420 women with breast cancer having 2 or more hot flashes a day, randomized to placebo, gabapentin 300 mg/day or 900 mg/day for 8 weeks
+  key_finding: Hot flash severity score fell 21% (week 4) and 15% (week 8) with placebo, 33% and 31% with 300 mg/day, and 49% and 46% with 900 mg/day. Only the 900 mg/day dose significantly reduced hot flash frequency and severity; 300 mg/day was not effective.
+  funding_conflict: null
+  verified: true
+  notes: Abstract read via NCBI E-utilities on 2026-11-15. PMC1627210.
+
+- id: reddy-gabapentin-estrogen-rct-2006
+  title: "Gabapentin, estrogen, and placebo for treating hot flushes: a randomized controlled trial"
+  authors:
+    - Reddy SY
+    - Warner H
+    - Guttuso T Jr
+    - Messing S
+    - DiGrazio W
+    - et al.
+  publisher: Obstetrics & Gynecology
+  year: 2006
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/16816054/
+  doi: 10.1097/01.AOG.0000222383.43913.ed
+  accessed: 2026-11-15
+  population: 60 postmenopausal women with moderate to severe hot flushes, randomized to conjugated estrogens 0.625 mg/day, gabapentin titrated to 2,400 mg/day, or placebo for 12 weeks
+  key_finding: Hot flush composite score fell 72% with estrogen, 71% with gabapentin and 54% with placebo at week 12; estrogen and gabapentin did not differ significantly. A headache, dizziness and disorientation cluster appeared more often with gabapentin (estimated number needed to harm about 4).
+  funding_conflict: null
+  verified: true
+  notes: Abstract read via NCBI E-utilities on 2026-11-15. Small trial (20 per arm).
+
+- id: dailymed-neurontin-label-2026
+  title: "NEURONTIN (gabapentin) capsules, tablets and oral solution: prescribing information and Medication Guide"
+  authors: []
+  publisher: Viatris Specialty LLC, via DailyMed (US National Library of Medicine)
+  year: 2026
+  type: regulator_label
+  url: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=97935fd9-1d4a-43b6-a5d9-de994591187b
+  doi: null
+  accessed: 2026-11-15
+  population: US prescribing label for gabapentin
+  key_finding: "Indicated for postherpetic neuralgia in adults and as adjunctive therapy for partial onset seizures; not labeled for hot flashes. In postherpetic neuralgia trials, dizziness 28% vs 8% placebo, somnolence 21% vs 5%, peripheral edema 8% vs 2%, weight gain 2% vs 0%; in adult epilepsy add-on trials, increased weight 3% vs 2%. Warnings: serious, life-threatening or fatal respiratory depression with opioids or other CNS depressants or underlying respiratory impairment; suicidal thoughts or actions in about 1 in 500 people; DRESS, anaphylaxis and angioedema; dizziness and somnolence with possible driving impairment; misuse and abuse reported (mostly in people with a history of polysubstance abuse); withdrawal symptoms after stopping, usually within 48 hours; reduce or stop gradually over at least 1 week. Maalox-type antacid cut gabapentin bioavailability by about 20%; take gabapentin at least 2 hours after. Alcohol and other sedating medicines can worsen sleepiness and dizziness. Doses are adjusted for reduced kidney function, more common in elderly patients."
+  funding_conflict: Manufacturer label.
+  verified: true
+  notes: SPL version dated Aug 6, 2026 on DailyMed; text downloaded via the DailyMed v2 API on 2026-11-15.
+
+- id: leon-ferre-oxybutynin-rct-2020
+  title: "Oxybutynin vs Placebo for Hot Flashes in Women With or Without Breast Cancer: A Randomized, Double-Blind Clinical Trial (ACCRU SC-1603)"
+  authors:
+    - Leon-Ferre RA
+    - Novotny PJ
+    - Wolfe EG
+    - Faubion SS
+    - Ruddy KJ
+    - et al.
+  publisher: JNCI Cancer Spectrum
+  year: 2020
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/32337497/
+  doi: 10.1093/jncics/pkz088
+  accessed: 2026-11-15
+  population: 150 women with or without breast cancer, 28 or more hot flashes a week, not candidates for estrogen; 65% on tamoxifen or an aromatase inhibitor; mean age 57
+  key_finding: Over 6 weeks, oxybutynin 5 mg twice daily and 2.5 mg twice daily reduced the weekly hot flash score (-16.9 and -10.6 vs -5.7 placebo) and hot flash frequency more than placebo, and improved most hot flash interference measures and overall quality of life. Both doses caused more side effects than placebo, particularly dry mouth, difficulty urinating and abdominal pain; most were grade 1 or 2, with no difference in discontinuation because of adverse effects.
+  funding_conflict: null
+  verified: true
+  notes: Abstract read via NCBI E-utilities on 2026-11-15. Epub Oct 2019; issue 2020. PMC7050158.
+
+- id: simon-oxybutynin-er-vms-rct-2016
+  title: "Extended-release oxybutynin therapy for vasomotor symptoms in women: a randomized clinical trial"
+  authors:
+    - Simon JA
+    - Gaines T
+    - LaGuardia KD
+  publisher: Menopause
+  year: 2016
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/27760081/
+  doi: 10.1097/GME.0000000000000773
+  accessed: 2026-11-15
+  population: 148 naturally postmenopausal women with at least 7 moderate-to-severe vasomotor symptoms a day, randomized to oxybutynin 15 mg extended-release once daily or placebo for 12 weeks (phase 2)
+  key_finding: Frequency of moderate-to-severe vasomotor symptoms fell by 9.48 vs 4.69 episodes a day at week 12, with significant differences at all weeks of treatment; severity fell 1.27 vs 0.30 points (0-3 scale). 73% vs 26.1% rated symptoms much better. Sleep quality and sleep disturbance improved (Pittsburgh Sleep Quality Index). Dry mouth in 52.1% vs 5.3%, leading to discontinuation in 6.8% of oxybutynin users.
+  funding_conflict: null
+  verified: true
+  notes: Abstract read via NCBI E-utilities on 2026-11-15.
+
+- id: dailymed-oxybutynin-label-2026
+  title: "Oxybutynin chloride tablets: prescribing information"
+  authors: []
+  publisher: Rising Pharma Holdings, via DailyMed (US National Library of Medicine)
+  year: 2026
+  type: regulator_label
+  url: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9578b6b8-5b9d-4263-9142-39b2c7216b85
+  doi: null
+  accessed: 2026-11-15
+  population: US prescribing label for immediate-release oxybutynin chloride
+  key_finding: "Indicated for symptoms of bladder instability (urgency, frequency, urinary leakage, urge incontinence, dysuria); not labeled for hot flashes. Contraindicated with urinary retention, gastric retention and other severe decreased GI motility, and uncontrolled narrow-angle glaucoma. Caution in frail elderly, hepatic or renal impairment, myasthenia gravis, GERD or bisphosphonate use, ulcerative colitis, and preexisting dementia treated with cholinesterase inhibitors. Warns of angioedema that can obstruct the airway (sometimes after the first dose), CNS anticholinergic effects (hallucinations, agitation, confusion, somnolence; monitor especially in the first months or after a dose increase), heat prostration (fever and heat stroke from decreased sweating) in high temperatures, and alcohol enhancing drowsiness. In trials of 5-20 mg/day: dry mouth 71.4%, dizziness 16.6%, constipation 15.1%, somnolence 14.0%, nausea 11.6%, blurred vision 9.6%, urinary hesitation 8.5%. Lower starting dose suggested for the frail elderly. Use with other anticholinergics may increase side effects."
+  funding_conflict: Manufacturer (generic) label.
+  verified: true
+  notes: SPL dated Aug 7, 2026 on DailyMed; text downloaded via the DailyMed v2 API on 2026-11-15. Decreased sweating listed among postmarketing reactions.
+
+- id: coupland-anticholinergic-dementia-2019
+  title: "Anticholinergic Drug Exposure and the Risk of Dementia: A Nested Case-Control Study"
+  authors:
+    - Coupland CAC
+    - Hill T
+    - Dening T
+    - Morriss R
+    - Moore M
+    - Hippisley-Cox J
+  publisher: JAMA Internal Medicine
+  year: 2019
+  type: cohort
+  url: https://pubmed.ncbi.nlm.nih.gov/31233095/
+  doi: 10.1001/jamainternmed.2019.0677
+  accessed: 2026-11-15
+  population: 58,769 patients with dementia and 225,574 matched controls aged 55 and older in English general practices (QResearch); 63% women, mean age 82
+  key_finding: Dementia odds rose with cumulative anticholinergic exposure, from adjusted OR 1.06 (lowest) to 1.49 (more than 1,095 standardized daily doses). For bladder antimuscarinic drugs at the highest exposure, adjusted OR 1.65 (95% CI 1.56-1.75). Associations were stronger in cases diagnosed before age 80.
+  funding_conflict: Two authors reported personal fees from ClinRisk Ltd outside the submitted work.
+  verified: true
+  notes: "Abstract read via NCBI E-utilities on 2026-11-15. Observational: shows association, not causation."
+
+- id: nhs-vaginal-oestrogen-about-2023
+  title: About vaginal oestrogen
+  authors: []
+  publisher: NHS (UK)
+  year: 2023
+  type: patient_information
+  url: https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/vaginal-oestrogen/about-vaginal-oestrogen/
+  doi: null
+  accessed: 2026-11-15
+  population: General public (UK) considering vaginal oestrogen
+  key_finding: Vaginal oestrogen is a local HRT that treats vaginal dryness and irritation but not other menopause symptoms such as hot flushes, mood swings or insomnia. Comes as a tablet, pessary, cream, gel or ring. Little of the medicine gets into the rest of the body, so a progestogen is not needed. Common early side effects include headache, abdominal or vaginal pain and bleeding, which normally improve in the first few months. It can take up to 3 months to work fully. It does not have the same risks as other types of HRT because the dose is low.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 27 January 2023 (next review was due 27 January 2026). Downloaded and read in full on 2026-11-15. UK spelling on the page.
+
+- id: nhs-vaginal-oestrogen-how-to-use-2023
+  title: How and when to use vaginal oestrogen
+  authors: []
+  publisher: NHS (UK)
+  year: 2023
+  type: patient_information
+  url: https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/vaginal-oestrogen/how-and-when-to-use-vaginal-oestrogen/
+  doi: null
+  accessed: 2026-11-15
+  population: General public (UK) using vaginal oestrogen
+  key_finding: "Doses by product: vaginal tablets 1 a day for 2 weeks then twice a week; ring left in for 3 months; gel and pessaries daily for 3 weeks then twice a week; estriol cream daily for up to 4 weeks then reduced; Ovesse cream daily for 2 weeks then twice a week. Never insert 2 doses at once or an extra dose to make up a missed one. HRT is usually taken 2 to 5 years but there is no set limit; speak to your doctor at least once a year. Some oestrogen creams and gels can damage condoms and diaphragms."
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 27 January 2023. Downloaded and read in full on 2026-11-15. UK products.
+
+- id: nhs-vaginal-oestrogen-common-questions-2023
+  title: Common questions about vaginal oestrogen
+  authors: []
+  publisher: NHS (UK)
+  year: 2023
+  type: patient_information
+  url: https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/vaginal-oestrogen/common-questions-about-vaginal-oestrogen/
+  doi: null
+  accessed: 2026-11-15
+  population: General public (UK) using vaginal oestrogen
+  key_finding: It can take up to 3 months to work fully; if you do not feel better after 3 months, speak to your doctor. Risks of breast cancer and blood clots are lower for vaginal oestrogen than other types of HRT. If you stop, symptoms might come back. Prasterone pessaries are an alternative. No good evidence that oestrogen makes you put on weight. Oestrogen is not a contraceptive, and some oestrogen creams and gels can damage condoms and diaphragms.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 27 January 2023. Downloaded and read in full on 2026-11-15.
+
+- id: nhs-vaginal-oestrogen-side-effects-2023
+  title: Side effects of vaginal oestrogen
+  authors: []
+  publisher: NHS (UK)
+  year: 2023
+  type: patient_information
+  url: https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/vaginal-oestrogen/side-effects-of-vaginal-oestrogen/
+  doi: null
+  accessed: 2026-11-15
+  population: General public (UK) using vaginal oestrogen
+  key_finding: "Common side effects (more than 1 in 100): headache, unexpected vaginal bleeding (common in the first 3 to 6 months; talk to a doctor about heavy or unexpected bleeding after 6 months), vaginal discomfort or itchiness, urinary tract or vaginal infection, abdominal pain. Serious side effects are rare: see a doctor about breast changes or changes in vaginal bleeding; call a doctor or 111 for pain, redness or swelling in one leg (possible DVT); call 999 for chest pain with breathlessness or stroke signs (difficulty speaking, weakness in an arm or leg, face drooping), and for signs of anaphylaxis."
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 27 January 2023. Downloaded and read in full on 2026-11-15. UK emergency numbers; site pages give US numbers first.
+
+- id: dailymed-vagifem-label
+  title: "VAGIFEM (estradiol vaginal inserts): prescribing information"
+  authors: []
+  publisher: Novo Nordisk, via DailyMed (US National Library of Medicine)
+  year: 2025
+  type: regulator_label
+  url: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e5ad3cf6-dd96-4e64-af21-c1eee38d0b88
+  doi: null
+  accessed: 2026-11-15
+  population: US prescribing label for estradiol 10 mcg vaginal inserts
+  key_finding: "Indicated for atrophic vaginitis due to menopause. Dosing: 1 insert intravaginally daily for 2 weeks, then 1 insert twice weekly (for example Tuesday and Friday). In a 12-month placebo-controlled trial of 309 women, adverse reactions at 5% or more and above placebo with Vagifem 10 mcg vs placebo: back pain 7% vs 2%, diarrhea 5% vs 0, vulvovaginal mycotic infection 8% vs 3%, vulvovaginal pruritus 8% vs 2%."
+  funding_conflict: Manufacturer label.
+  verified: true
+  notes: DailyMed version published Feb 12, 2025; it still shows the older class boxed warning (the FDA approved boxed-warning removals for some products in Feb 2026). Used only for dosing and trial side effects.
+
+- id: dailymed-estring-label
+  title: "ESTRING (estradiol vaginal system): prescribing information"
+  authors: []
+  publisher: Pfizer, via DailyMed (US National Library of Medicine)
+  year: 2026
+  type: regulator_label
+  url: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=110b9865-5a07-4d45-b560-e89947f12600
+  doi: null
+  accessed: 2026-11-15
+  population: US prescribing label for the low-dose estradiol vaginal ring
+  key_finding: A ring containing 2 mg estradiol that releases about 7.5 mcg a day for 90 days; worn continuously for 3 months, then removed and replaced if therapy continues. Indicated for moderate to severe symptoms of vulvar and vaginal atrophy due to menopause.
+  funding_conflict: Manufacturer label.
+  verified: true
+  notes: DailyMed version dated Apr 27, 2026; downloaded via the DailyMed v2 API on 2026-11-15.
+
+- id: islam-testosterone-women-metaanalysis-2019
+  title: "Safety and efficacy of testosterone for women: a systematic review and meta-analysis of randomised controlled trial data"
+  authors:
+    - Islam RM
+    - Bell RJ
+    - Green S
+    - Page MJ
+    - Davis SR
+  publisher: The Lancet Diabetes & Endocrinology
+  year: 2019
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/31353194/
+  doi: 10.1016/S2213-8587(19)30189-5
+  accessed: 2026-11-15
+  population: 36 blinded randomized trials (46 reports) of at least 12 weeks, 8,480 participants
+  key_finding: In postmenopausal women, testosterone vs placebo or comparator increased satisfactory sexual event frequency (mean difference 0.85 a month), desire, pleasure, arousal, orgasm, responsiveness and self-image, and reduced sexual concerns and distress. Oral testosterone raised LDL-cholesterol and lowered total cholesterol, HDL and triglycerides; non-oral forms did not. Overall weight increased. No effects on body composition, musculoskeletal variables or cognition (few women contributed data). More acne and hair growth; no serious adverse events recorded. Long-term safety needs study.
+  funding_conflict: Funded by the Australian National Health and Medical Research Council. Senior author Davis reports industry honoraria and consultancies (see Global Consensus statement).
+  verified: true
+  notes: Abstract read via NCBI E-utilities on 2026-11-15.
+
+- id: parish-isswsh-testosterone-guideline-2021
+  title: International Society for the Study of Women's Sexual Health Clinical Practice Guideline for the Use of Systemic Testosterone for Hypoactive Sexual Desire Disorder in Women
+  authors:
+    - Parish SJ
+    - Simon JA
+    - Davis SR
+    - Giraldi A
+    - Goldstein I
+    - et al.
+  publisher: The Journal of Sexual Medicine
+  year: 2021
+  type: guideline
+  url: https://pubmed.ncbi.nlm.nih.gov/33814355/
+  doi: 10.1016/j.jsxm.2020.10.009
+  accessed: 2026-11-15
+  population: Women with hypoactive sexual desire disorder
+  key_finding: Systemic transdermal testosterone is recommended for women with HSDD not mainly caused by modifiable factors or comorbidities. Research supports a moderate benefit; no serious adverse events with physiologic use, but long-term safety is not established. A total testosterone level should not be used to diagnose HSDD, only as a baseline for monitoring. Government-approved male transdermal products can be used cautiously at female doses, with levels kept in the premenopausal range. Compounded products cannot be recommended. Testosterone is not approved for women by most regulators, and off-label use needs informed consent.
+  funding_conflict: Guideline panel; individual disclosures in the paper not reviewed.
+  verified: true
+  notes: Abstract read via NCBI E-utilities on 2026-11-15.
+
+- id: fda-testosterone-menopause-workshop-2026
+  title: "FDA Public Meeting: Testosterone Use in Menopausal Women (September 17, 2026)"
+  authors: []
+  publisher: U.S. Food and Drug Administration, Office of Women's Health and CDER
+  year: 2026
+  type: regulator_statement
+  url: https://www.fda.gov/consumers/womens-health-events/fda-public-meeting-testosterone-use-menopausal-women-09172026
+  doi: null
+  accessed: 2026-11-15
+  population: "US: testosterone therapy in menopausal women"
+  key_finding: Event page says that despite growing off-label use of testosterone therapy in menopausal women, critical knowledge gaps remain, including the role of testosterone in sexual function, cognition, mood and musculoskeletal health, measurement challenges, and the absence of long-term safety data, especially on cardiovascular and breast cancer risks. Docket FDA-2026-N-5479, comments due October 19, 2026.
+  funding_conflict: null
+  verified: true
+  notes: Opened via WebFetch on 2026-11-15. The page itself does not state approval status; no outcome or decision had been published on it.
+
+- id: smith-batur-androgen-therapy-ccf-2021
+  title: The role of androgen therapy in female sexual health
+  authors:
+    - Smith T
+    - Batur P
+  publisher: Cleveland Clinic Consult QD (abridged from the Cleveland Clinic Journal of Medicine)
+  year: 2021
+  type: other
+  url: https://consultqd.clevelandclinic.org/the-role-of-androgen-therapy-in-female-sexual-health
+  doi: null
+  accessed: 2026-11-15
+  population: Clinicians caring for women with low sexual desire (US)
+  key_finding: States that no testosterone formulation for women has been approved by the US FDA. Describes short-term safety and efficacy from randomized trials; in the 52-week APHRODITE testosterone patch study the most common adverse events were application-site reaction, acne, breast pain, headache and hirsutism.
+  funding_conflict: null
+  verified: true
+  notes: Published April 6, 2021; opened via WebFetch on 2026-11-15. Clinician-facing article, not a guideline; cited only for US approval status.
+
+- id: nhs-menopause-treatment-2026
+  title: Treatment for menopause and perimenopause
+  authors: []
+  publisher: NHS (UK)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/conditions/menopause/treatment/
+  doi: null
+  accessed: 2026-11-15
+  population: General public (UK) with menopause or perimenopause symptoms
+  key_finding: Testosterone gel or cream can help to improve low libido for some; there are many reasons for low libido around menopause; you may be able to get testosterone on prescription from a menopause specialist. Vaginal oestrogen is used as a cream or pessary for vaginal dryness, soreness or urinary symptoms. Clonidine or an antidepressant may be suggested for hot flushes if CBT does not help.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 19 May 2026, next review due 19 May 2029. Opened via WebFetch on 2026-11-15.
+
+- id: greendale-swan-cognition-2009
+  title: Effects of the menopause transition and hormone use on cognitive performance in midlife women
+  authors:
+    - Greendale GA
+    - Huang MH
+    - Wight RG
+    - Seeman T
+    - Luetters C
+    - Avis NE
+    - Johnston J
+    - Karlamangla AS
+  publisher: Neurology
+  year: 2009
+  type: cohort
+  url: https://pubmed.ncbi.nlm.nih.gov/19470968/
+  doi: 10.1212/WNL.0b013e3181a71193
+  accessed: 2026-11-15
+  population: 2,362 midlife women in the Study of Women's Health Across the Nation (SWAN), followed for 4 years with repeated tests of processing speed, verbal memory and working memory
+  key_finding: Premenopausal, early perimenopausal and postmenopausal women improved with repeated testing of processing speed, but late perimenopausal women did not; delayed verbal recall improved in premenopause and postmenopause but not in early or late perimenopause. The authors conclude perimenopause was associated with a decrement in cognitive performance (women not learning as well as before), that improvement rebounded to premenopausal levels in postmenopause, and that transition-related cognitive difficulties may be time-limited. Hormone use started before the final period was associated with better scores, and use started after it with poorer scores (observational).
+  funding_conflict: null
+  verified: true
+  notes: Abstract read via NCBI E-utilities efetch on 2026-11-15. Observational cohort; the hormone-use findings are associations, not trial results.
+
+- id: mccurry-msflash-cbti-2016
+  title: "Telephone-Based Cognitive Behavioral Therapy for Insomnia in Perimenopausal and Postmenopausal Women With Vasomotor Symptoms: A MsFLASH Randomized Clinical Trial"
+  authors:
+    - McCurry SM
+    - Guthrie KA
+    - Morin CM
+    - Woods NF
+    - Landis CA
+    - Ensrud KE
+    - Larson JC
+    - Joffe H
+    - Cohen LS
+    - Hunt JR
+    - Newton KM
+    - Otte JL
+    - Reed SD
+    - Sternfeld B
+    - Tinker LF
+    - LaCroix AZ
+  publisher: JAMA Internal Medicine
+  year: 2016
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/27213646/
+  doi: 10.1001/jamainternmed.2016.1795
+  accessed: 2026-11-15
+  population: 106 perimenopausal or postmenopausal women aged 40-65 in Washington State with moderate insomnia symptoms and 2 or more daily hot flashes
+  key_finding: Six telephone sessions of CBT for insomnia over 8 weeks (sleep restriction, stimulus control, sleep hygiene, cognitive restructuring) versus menopause education. At 8 weeks Insomnia Severity Index scores fell 9.9 points with CBT-I versus 4.7 with education (difference 5.2 points); sleep quality also improved more. At 24 weeks, 37 of 44 women (84%) in the CBT-I group were in the no-insomnia range versus 16 of 37 (43%) with education. Hot flash frequency did not differ between groups, but hot flash interference fell more with CBT-I.
+  funding_conflict: "Two authors report industry consulting fees or grants (Morin: Merck, Novartis; Joffe: Merck, NeRRe, SAGE, Mitsubishi Tanabe)."
+  verified: true
+  notes: Abstract read via NCBI E-utilities efetch on 2026-11-15. Single-site randomized trial.
+
+- id: evernow-faq-2026
+  title: Evernow FAQ (Evernow)
+  authors: []
+  publisher: Evernow
+  year: 2026
+  type: other
+  url: https://www.evernow.com/faq
+  doi: null
+  accessed: 2026-11-15
+  population: Prospective Evernow patients (US)
+  key_finding: "Self-reported by Evernow: available in all 50 states plus D.C. Insurance coverage from major national commercial plans including UnitedHealthcare, Aetna, Anthem and Blue Cross Blue Shield; does not currently support Medicare or Medicaid plans; offers insurance coverage on all video visits, regardless of plan type. Membership: $49/month month-to-month, $129 for 3 months ($43/month) or $420 for 12 months ($35/month); membership fees are not insurance-covered but can be HSA/FSA eligible; includes 24/7 secure messaging with optional insurance-covered video visits, prescriptions, automated refills and the care platform. Pay-per-visit: if eligible you pay your standard copay and deductible; self-pay fee $150 per visit. Medications can go to your preferred local pharmacy or Evernow partner pharmacies (GoGo Meds, Art of Medicine); some cash-pay-only medications come from its delivery pharmacy. Lab tests required only for select medications. Video visits often available within 24 hours; messages often answered within a day. Clinicians described as specially trained in perimenopause and menopause and following ACOG and Menopause Society guidelines. Can prescribe hormone therapy, GLP-1 weight-loss medicines, hair loss treatment, prescription skincare, vaginal wellness and anxiety medicines."
+  funding_conflict: Self-reported by the company being described.
+  verified: true
+  notes: Read via WebFetch on 2026-11-15. Page footer shows only a copyright year; no last-updated date. Quote prices as 'listed on Evernow's FAQ, November 2026'. The FAQ does not cover cancellation.
+
+- id: evernow-membership-vs-ppv-2025
+  title: "Finding the right menopause care for you: Evernow Membership vs. Pay-per-visit (Evernow)"
+  authors: []
+  publisher: Evernow
+  year: 2025
+  type: other
+  url: https://evernow.com/learn/evernow-membership-vs-pay-per-visit
+  doi: null
+  accessed: 2026-11-15
+  population: Prospective Evernow patients (US)
+  key_finding: "Self-reported by Evernow (article dated February 28, 2025): pay-per-visit includes a 20-minute consult with a menopause-trained clinician plus 90 days of access to a personalized care plan and insurance-eligible medications; insurance-covered care with most major plans (coverage varies by plan), or $150 per visit out of pocket. Membership includes ongoing personalized care, 24/7 secure messaging and optional insurance-covered visits, with prescriptions and automated refills for the whole membership."
+  funding_conflict: Self-reported by the company being described.
+  verified: true
+  notes: Read via WebFetch on 2026-11-15. The article does not state the membership price; use evernow-faq-2026 for prices.

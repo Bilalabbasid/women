@@ -22,5 +22,5 @@ describe('byline in structured data', () => {
     const ld = contentPageLd(page!, store) as Record<string, unknown>;
     expect(ld.author).toMatchObject({ '@type': 'Organization', name: 'MenoVerdict editorial team' });
     expect(ld.reviewedBy).toBeUndefined();
-  });
+  }, 30_000); // loads every content page
 });

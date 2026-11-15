@@ -1,7 +1,7 @@
 ---
 title: Surgical menopause
-seo_title: "Surgical Menopause: What to Expect"
-meta_description: "What happens when both ovaries are removed (bilateral oophorectomy), why symptoms start abruptly, and evidence-graded hormonal and non-hormonal care."
+seo_title: "Surgical menopause: symptoms, HRT and what to expect"
+meta_description: "Surgical menopause starts when both ovaries are removed, and symptoms can begin soon after. See why it feels stronger, long-term risks and how HRT fits."
 cluster: groups
 primary_keyword: surgical menopause
 slug: surgical-menopause
@@ -18,13 +18,23 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Expanded: what surgical menopause is, symptoms and how soon they start, how long it lasts, long-term health risks, HRT after surgery (including BRCA), testosterone, options when hormones aren't advised; removed an uncited endometriosis progestogen claim and an uncited days-or-weeks timing", material: true }
   - { date: "2026-11-06", summary: "Published clinical guide on surgical menopause", material: true }
 evidence_grade: strong
 claims:
   - id: nams-hrt-efficacy-bone
     text: "Hormone therapy is the most effective treatment for vasomotor symptoms and genitourinary syndrome of menopause and prevents bone loss and fracture."
+    sources: [nams-2022-hormone-therapy]
+  - id: nams-bo-abrupt-severe
+    text: "Removing both ovaries causes a much more abrupt loss of estrogen and progesterone than natural menopause, plus a significant fall in testosterone; hot flashes and other estrogen-deficiency symptoms are more frequent and more severe after oophorectomy."
+    sources: [nams-2022-hormone-therapy]
+  - id: nams-bo-et-until-52
+    text: "Unless there are contraindications, estrogen therapy is indicated after removal of both ovaries before the average age of menopause, and hormone therapy is recommended at least until about age 52."
+    sources: [nams-2022-hormone-therapy]
+  - id: nams-brca-short-term-ht
+    text: "Short-term hormone therapy appears safe in women with BRCA1 or BRCA2 variants who have risk-reducing removal of the ovaries before the average age of menopause."
     sources: [nams-2022-hormone-therapy]
   - id: fda-estrogen-alone-uterus
     text: "In FDA labeling for menopausal hormone therapy, the endometrial cancer boxed warning applies to systemic estrogen-alone products (because unopposed systemic estrogen increases endometrial cancer risk in women with a uterus)."
@@ -35,33 +45,78 @@ claims:
 safety_flags: [urgent_symptoms, cancer_history]
 cta_profile: specialist_group
 hub: /groups/
-sources: [nams-2022-hormone-therapy, fda-mht-labeling-request-2025, jmir-online-menopause-information-2025, nams-2023-nonhormone-therapy]
-related: [/groups/, /treatments/hormone-therapy/, /postmenopause/bone-health/, /tools/treatment-questions/]
+sources: [nams-2022-hormone-therapy, fda-mht-labeling-request-2025, jmir-online-menopause-information-2025, nams-2023-nonhormone-therapy, cleveland-clinic-menopause-after-hysterectomy-2025, owh-early-premature-menopause-2026, nhs-types-of-hrt, nhs-early-menopause]
+related: [/groups/, /groups/hysterectomy-ovaries-retained/, /treatments/hormone-therapy/, /postmenopause/bone-health/, /tools/treatment-questions/]
 faq:
   - q: Is a hysterectomy the same as surgical menopause?
-    a: Only if both ovaries are removed (bilateral oophorectomy) at the same time. Removing the uterus alone stops menstrual periods, but if one or both ovaries remain, they continue producing hormones until menopause occurs later.
-  - q: Why are hot flashes often more intense after surgical menopause?
-    a: Natural perimenopause involves a gradual transition over several years, whereas removing both ovaries causes an overnight drop in estradiol, progesterone, and ovarian testosterone.
+    a: Only if both ovaries come out too. Removing the uterus alone ends periods, but ovaries that stay keep making hormones, so most people don't go through menopause straight after the operation.
+  - q: Why are hot flashes often worse after surgical menopause?
+    a: Natural menopause lets hormone levels fall over several years. Removing both ovaries drops estrogen and progesterone at once, and testosterone falls too, so symptoms tend to come on faster and harder.
+  - q: How long should I take HRT after surgical menopause?
+    a: If your ovaries were removed before the usual age of menopause, The Menopause Society recommends hormone therapy at least until about age 52, unless there's a medical reason not to. After that, you and your doctor can review whether to continue.
+  - q: Can I take HRT after my ovaries were removed because of a BRCA variant?
+    a: For many women, yes. The Menopause Society says short-term hormone therapy appears safe after risk-reducing ovary removal before the average age of menopause, based on observational studies. Discuss your own history, including any past cancer, with your care team.
 ---
 
-**Surgical menopause** occurs when both ovaries are removed surgically (**bilateral oophorectomy**), with or without a hysterectomy. Unlike natural [perimenopause](/perimenopause/) — where hormone levels shift over several years — surgical menopause causes an immediate drop in ovarian estrogen, progesterone, and androgen production.
+Surgical menopause happens when both ovaries are removed, so hormone levels drop suddenly instead of over several years [@nams-2022-hormone-therapy]. Hot flashes and other symptoms can start soon after the operation and are often stronger than in natural menopause [@cleveland-clinic-menopause-after-hysterectomy-2025]. If it happens before about age 52, hormone therapy is recommended unless there's a reason to avoid it [@nams-2022-hormone-therapy].
 
-In a 2025 JMIR study of 627 people seeking menopause information (including 69 in surgical menopause), respondents reported that online resources rarely distinguished sudden surgical menopause from natural midlife menopause [@jmir-online-menopause-information-2025].
+## What is surgical menopause?
 
-## Key differences in symptoms and treatment planning
+Surgical menopause is menopause caused by an operation to remove both ovaries (**bilateral oophorectomy**), with or without removing the uterus. It cuts off estrogen and progesterone far more abruptly than natural [perimenopause](/perimenopause/), and it also brings a big drop in testosterone that doesn't happen in natural menopause [@nams-2022-hormone-therapy].
 
-1. **Abrupt symptom onset:** [Hot flashes](/symptoms/hot-flashes/), [night sweats](/symptoms/night-sweats/), sleep disruption, and [vaginal dryness](/symptoms/vaginal-dryness/) can begin within days or weeks of surgery and are often more severe than in natural menopause.
-2. **Bone and cardiovascular protection:** When oophorectomy takes place before age 45 (and especially before age 40), systemic [hormone therapy](/treatments/hormone-therapy/) is usually recommended at least until the average age of natural menopause to prevent rapid [bone loss](/postmenopause/bone-health/), unless contraindicated (for example, by a hormone-sensitive cancer) [@nams-2022-hormone-therapy].
-3. **Estrogen-alone vs combined HRT:** In women who have also had a total hysterectomy (no uterus), systemic estrogen can typically be given without a progestogen (the FDA boxed warning for endometrial cancer applies to unopposed systemic estrogen in people with an intact uterus [@fda-mht-labeling-request-2025]), though clinicians may still include progestogen in specific histories such as endometriosis.
-4. **When hormones are contraindicated:** If ovary removal was performed because of a hormone-sensitive cancer, Level I [non-hormonal treatments](/treatments/nonhormonal/) [@nams-2023-nonhormone-therapy] and evidence-graded strategies in our [Does It Work? directory](/does-it-work/) can be planned with your oncology team.
+A hysterectomy on its own is different. If you keep your ovaries, you typically won't go through menopause after the operation, although a small number of people get symptoms because surgery can affect blood flow to an ovary [@cleveland-clinic-menopause-after-hysterectomy-2025]. See [hysterectomy with ovaries retained](/groups/hysterectomy-ovaries-retained/).
+
+When surgery happens before 45, it also counts as [early menopause](/groups/early-menopause/), and before 40 as premature menopause [@owh-early-premature-menopause-2026].
+
+## What are the symptoms of surgical menopause?
+
+The symptoms are the same as natural menopause but can be more severe [@cleveland-clinic-menopause-after-hysterectomy-2025]. The Menopause Society notes that hot flashes and other low-estrogen symptoms are more frequent and more severe after oophorectomy, with a major effect on quality of life [@nams-2022-hormone-therapy]. Common ones include:
+
+- **[Hot flashes](/symptoms/hot-flashes/) and [night sweats](/symptoms/night-sweats/)**, which can break up sleep [@nams-2022-hormone-therapy]
+- **[Vaginal dryness](/symptoms/vaginal-dryness/) and bladder changes** [@nams-2022-hormone-therapy]
+- **[Lower sex drive](/symptoms/low-libido/) and other sexual problems** [@nams-2022-hormone-therapy]
+- **Mood changes and trouble thinking clearly** [@nams-2022-hormone-therapy]
+
+### How soon after surgery do symptoms start?
+
+Symptoms may start very soon after the operation, rather than building slowly [@cleveland-clinic-menopause-after-hysterectomy-2025]. That's why it helps to agree a plan for symptoms before you leave the hospital.
+
+## How long does surgical menopause last?
+
+How long symptoms last varies from person to person. A doctor can't predict it, and blood tests won't tell you when symptoms will stop [@cleveland-clinic-menopause-after-hysterectomy-2025]. You don't have to wait it out: hormone therapy is the most effective treatment for hot flashes and vaginal symptoms [@nams-2022-hormone-therapy].
+
+## What are the long-term health risks?
+
+Losing estrogen early affects more than symptoms. In pooled studies, oophorectomy is linked with higher risks of heart disease, problems with thinking and dementia, low bone density and sleep problems, with some evidence of more fractures [@nams-2022-hormone-therapy]. Years without estrogen raise the risk of bone loss, heart disease and diabetes [@owh-early-premature-menopause-2026]. See [bone health](/postmenopause/bone-health/) and [heart health](/postmenopause/heart-health/).
+
+## Should you take HRT after surgical menopause?
+
+For most people whose ovaries are removed before the average age of menopause, yes, unless there's a medical reason not to. The Menopause Society says estrogen therapy is indicated in this situation and recommends hormone therapy at least until about age 52 [@nams-2022-hormone-therapy]. Starting estrogen early reduces hot flashes, vaginal symptoms, osteoporosis and fractures, and likely heart disease and death from any cause [@nams-2022-hormone-therapy]. For hot flashes, the evidence grade is :grade{id="mht-vms"}. Replacing hormones matters because menopause before 45 raises the chance of bone and heart problems [@nhs-early-menopause].
+
+- **If you've also had a hysterectomy**: estrogen-only HRT is usually recommended [@nhs-types-of-hrt]. The FDA's endometrial cancer warning applies to systemic estrogen-alone products because estrogen alone raises the risk of endometrial cancer in people who still have a uterus [@fda-mht-labeling-request-2025].
+- **If you still have your uterus**: you need a progestogen with estrogen to protect the lining [@nams-2022-hormone-therapy].
+- **Younger women**: the combined birth control pill is an option for some healthy younger women [@nams-2022-hormone-therapy].
+- **If sex drive is a concern**: estrogen through the skin may be preferred over pills, because pills lower the amount of free testosterone [@nams-2022-hormone-therapy]. See [testosterone for women](/treatments/hormone-therapy/testosterone/).
+
+### What about HRT after ovary removal for BRCA?
+
+Short-term hormone therapy appears safe for women with BRCA1 or BRCA2 variants who have their ovaries removed to lower cancer risk before the average age of menopause [@nams-2022-hormone-therapy]. This evidence comes from observational studies, so talk it through with your care team [@nams-2022-hormone-therapy].
+
+### What if hormones aren't safe for you?
+
+If your ovaries were removed because of a hormone-sensitive cancer, your oncology team may advise against hormone therapy. Non-hormone options recommended for hot flashes include CBT, clinical hypnosis, certain antidepressants (SSRIs and SNRIs), gabapentin and fezolinetant [@nams-2023-nonhormone-therapy]. See [non-hormonal treatments](/treatments/nonhormonal/) and [breast cancer survivors](/groups/breast-cancer-survivors/). Before trying an over-the-counter remedy, check its evidence in our [Does It Work? directory](/does-it-work/), since The Menopause Society doesn't recommend supplements or herbal remedies for hot flashes [@nams-2023-nonhormone-therapy].
+
+## Finding information that fits
+
+Many people find general menopause advice doesn't fit their situation. In a 2025 survey of 627 people looking for menopause information online, 69 of them in surgical menopause, participants said information on medical or surgical menopause was hard to find [@jmir-online-menopause-information-2025].
 
 ## Questions to ask before or after surgery
 
 Add these to your printable sheet in the [treatment conversation builder](/tools/treatment-questions/):
 
 :::questions
-- Will my surgery remove one or both ovaries, and can we have a symptom and bone-protection plan ready before discharge?
-- Am I a candidate for systemic estrogen therapy after surgery, and do I need a progestogen given my surgical history?
-- When should we schedule a follow-up to review vasomotor symptoms, sleep, sexual function, and bone density?
+- Will the operation remove one or both ovaries, and can we have a plan for symptoms and bone health before I go home?
+- Is estrogen therapy right for me after surgery, and do I need a progestogen?
+- How long should I plan to stay on hormone therapy, and when should we check my bone density?
+- If hormones aren't safe for me, which non-hormone options would you suggest?
 :::
-

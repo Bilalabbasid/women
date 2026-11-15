@@ -71,6 +71,8 @@ export const TOOL_ISLAND_IDS = [
   'does-it-work-checker',
   'treatment-questions',
   '12-month-counter',
+  'menopause-age-calculator',
+  'hrt-prepayment-certificate-calculator',
 ];
 
 export type ContentIslandPart =

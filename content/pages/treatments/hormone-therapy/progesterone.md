@@ -1,12 +1,12 @@
 ---
 title: "Progesterone and progestogens in HRT"
-seo_title: "Progesterone for menopause: when you need it with estrogen"
-meta_description: "With a uterus, estrogen needs a progestogen, such as micronized progesterone, to protect the womb lining. How it's taken, side effects, and safety."
+seo_title: "Progesterone in HRT: when you need it, and Utrogestan"
+meta_description: "With a uterus, estrogen needs a progestogen such as micronized progesterone (Utrogestan in the UK, Prometrium in the US). How to take it, side effects, safety."
 cluster: treatments
 primary_keyword: progesterone in hrt
 slug: progesterone
 page_type: treatment
-secondary_keywords: [micronized progesterone, progestogen hrt, progesterone for menopause, do i need progesterone with estrogen]
+secondary_keywords: [micronized progesterone, progestogen hrt, progesterone for menopause, do i need progesterone with estrogen, utrogestan, how to take utrogestan]
 search_intent: informational
 funnel_stage: evaluating
 symptom_tags: [hot-flashes]
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-11"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Added a Utrogestan section from the NHS and emc leaflet: what it is (UK micronized progesterone; Prometrium in the US), the three schedules, taking it at bedtime away from food, bleeding, side effects, soya/peanut allergy, generic versions, and England's HRT prepayment certificate; peanut-allergy FAQ now covers Utrogestan", material: true }
   - { date: "2026-11-11", summary: "Rebuilt around common questions: do I need progesterone with estrogen (with womb cancer numbers per 1,000), after hysterectomy or with vaginal estrogen, what micronized progesterone is, progesterone vs progestin, ways to take it, side effects, sleep and hot flashes, and what's known on safety", material: true }
   - { date: "2026-11-06", summary: "Published explainer on progesterone and progestogens in HRT", material: true }
 evidence_grade: strong
@@ -41,10 +42,19 @@ claims:
   - id: prometrium-label-dosing-safety
     text: "The Prometrium label states the capsules contain micronized progesterone in peanut oil, are indicated to prevent endometrial hyperplasia in postmenopausal women with a uterus taking estrogen, are given as 200 mg at bedtime for 12 days per 28-day cycle for that use, and may cause transient dizziness and drowsiness."
     sources: [prometrium-prescribing-information]
+  - id: nhs-utrogestan-dosing
+    text: "The NHS says Utrogestan is usually taken as 2 capsules (200mg) once a day on days 15 to 26 of a 28-day HRT cycle, or 1 capsule (100mg) on days 1 to 25 if periods stopped 6 to 12 months or more ago, or sometimes every day, at bedtime at least 2 hours after food."
+    sources: [nhs-utrogestan-2023]
+  - id: utrogestan-soya-peanut
+    text: "The Utrogestan 100mg leaflet says the capsules contain soybean lecithin and should not be used by people allergic to peanut or soya."
+    sources: [emc-utrogestan-pil-2024]
+  - id: hrt-ppc-england
+    text: "In England, prescription items cost £9.90 each and the HRT prescription prepayment certificate costs £19.80 for 12 months of unlimited qualifying HRT items, including Utrogestan; prescriptions are free in Scotland, Wales and Northern Ireland."
+    sources: [nhsbsa-hrt-ppc-medicines, nhs-prescription-prepayment-certificate-2023, commons-library-prescription-charges-england-2026]
 safety_flags: []
 cta_profile: hrt_evaluating
 hub: /treatments/hormone-therapy/
-sources: [nice-ng23-recommendations, nice-ng23-hrt-discussion-aid-2024, nams-2022-hormone-therapy, nhs-types-of-hrt, nhs-hrt-side-effects-2023, owh-menopause-treatment-2026, prometrium-prescribing-information]
+sources: [nice-ng23-recommendations, nice-ng23-hrt-discussion-aid-2024, nams-2022-hormone-therapy, nhs-types-of-hrt, nhs-hrt-side-effects-2023, owh-menopause-treatment-2026, prometrium-prescribing-information, nhs-utrogestan-2023, emc-utrogestan-pil-2024, nhsbsa-hrt-ppc-medicines, nhs-prescription-prepayment-certificate-2023, commons-library-prescription-charges-england-2026]
 related: [/treatments/hormone-therapy/, /treatments/hormone-therapy/estrogen/, /treatments/hormone-therapy/types/, /treatments/hormone-therapy/breast-cancer-risk/, /treatments/hormone-therapy/bioidentical-vs-compounded/, /tools/treatment-questions/]
 faq:
   - q: Can I take progesterone on its own for menopause symptoms?
@@ -54,10 +64,10 @@ faq:
   - q: Can a hormonal IUD replace progesterone pills?
     a: "Sometimes. NICE lists an intrauterine system as one way to give the progestogen in HRT, and the NHS says the Mirena coil may be suitable. In the US, The Menopause Society notes this use is off-label, with limited trial data."
   - q: Can people with a peanut allergy take micronized progesterone?
-    a: "Not the capsules that contain peanut oil. The Prometrium label says the capsules contain peanut oil and should not be used by people allergic to peanuts. Ask your prescriber about other progestogen options."
+    a: "Check the brand. The US Prometrium label says its capsules contain peanut oil and should not be used by people allergic to peanuts, and the UK Utrogestan leaflet says not to use it if you're allergic to peanut or soya. Ask your prescriber about other progestogen options."
 ---
 
-If you take estrogen and still have a uterus, you also need a progestogen (progesterone or a similar medicine), because estrogen alone raises the risk of cancer of the womb lining [@owh-menopause-treatment-2026; @nice-ng23-recommendations]. Micronized progesterone is the form identical to your body's own, usually taken as a capsule at bedtime [@nams-2022-hormone-therapy; @prometrium-prescribing-information].
+If you take estrogen and still have a uterus, you also need a progestogen (progesterone or a similar medicine), because estrogen alone raises the risk of cancer of the womb lining [@owh-menopause-treatment-2026; @nice-ng23-recommendations]. Micronized progesterone (Utrogestan in the UK, Prometrium in the US) is the form identical to your body's own, usually taken as a capsule at bedtime [@nams-2022-hormone-therapy; @nhs-utrogestan-2023; @prometrium-prescribing-information].
 
 ## Do I need progesterone with estrogen?
 
@@ -89,6 +99,34 @@ That makes it "bioidentical" in the plain sense, but it is not the same as compo
 ### Progesterone vs. progestin: what's the difference?
 
 "Progestogen" is the umbrella term; progesterone is the natural hormone, and progestins are synthetic versions. The Menopause Society lists medroxyprogesterone acetate, levonorgestrel and norethindrone acetate as synthetic progestins, and micronized progesterone as structurally identical to the body's progesterone [@nams-2022-hormone-therapy]. All three are commonly used with estrogen to protect the womb lining, and the dose needed depends on the progestogen's strength and the estrogen dose [@nams-2022-hormone-therapy].
+
+## Utrogestan: the UK brand of micronized progesterone
+
+Utrogestan is a UK brand of micronized progesterone capsules, the same kind of medicine sold in the US as Prometrium, and it is taken with estrogen to protect the womb lining [@nhs-utrogestan-2023; @emc-utrogestan-pil-2024; @prometrium-prescribing-information]. The NHS says its progesterone comes from plants and is identical to the hormone your ovaries make [@nhs-utrogestan-2023]. It's prescription-only, and the 100 mg capsules for HRT are swallowed [@nhs-utrogestan-2023; @emc-utrogestan-pil-2024].
+
+### How do you take Utrogestan?
+
+At bedtime, at least 2 hours after eating, swallowed whole with water [@nhs-utrogestan-2023]. The leaflet says not to take it with food [@emc-utrogestan-pil-2024]. Your prescriber chooses the schedule; the NHS describes three [@nhs-utrogestan-2023]:
+
+- **2 capsules (200 mg) on days 15 to 26**: Of each 28-day cycle, while you still have periods. Expect a few days of bleeding after each course [@nhs-utrogestan-2023].
+- **1 capsule (100 mg) on days 1 to 25**: May be suggested once you've had no period for 6 to 12 months or more. Bleeding may be lighter or absent [@nhs-utrogestan-2023].
+- **Every day**: Sometimes advised when it's fine not to have a period. Bleeding usually stops once your body adjusts [@nhs-utrogestan-2023].
+
+If you forget a dose, take it when you remember unless it's nearly time for the next one; never double up [@nhs-utrogestan-2023]. Can you take it in the morning? The NHS and the leaflet both say bedtime, partly because it can make you sleepy or dizzy, so ask your prescriber before changing the time [@nhs-utrogestan-2023; @emc-utrogestan-pil-2024]. Utrogestan vaginal capsules exist, but the NHS says they're only used in fertility treatment, not HRT [@nhs-utrogestan-2023].
+
+### Utrogestan side effects
+
+The NHS lists changes in periods or spotting, headaches, breast tenderness, feeling tired or dizzy, and mood changes as common, and says they often improve as your body gets used to it [@nhs-utrogestan-2023]. The leaflet also lists weight changes, trouble sleeping, and stomach swelling or pain among common effects (up to 1 in 10 people) [@emc-utrogestan-pil-2024]. On weight, the NHS says there's no good evidence that Utrogestan makes you put on weight [@nhs-utrogestan-2023].
+
+Spotting is common for the first 3 to 6 months; talk to your doctor about heavy or unexpected bleeding after 6 months [@nhs-utrogestan-2023]. The capsules contain soybean lecithin, and the leaflet says not to use them if you're allergic to peanut or soya [@emc-utrogestan-pil-2024].
+
+### Is generic micronized progesterone the same as Utrogestan?
+
+Both contain micronized progesterone, and England's HRT prepayment certificate covers Utrogestan and generic "progesterone micronised" 100 mg and 200 mg capsules [@nhsbsa-hrt-ppc-medicines]. We haven't found an official source comparing specific generic brands, so ask your pharmacist if your capsules look different. The NHS says to speak to a doctor or pharmacist if your usual brand is out of stock [@nhs-utrogestan-2023].
+
+### How much does Utrogestan cost in the UK?
+
+In England, each prescription item usually costs £9.90, and an HRT prescription prepayment certificate costs £19.80 for 12 months of unlimited qualifying HRT items, including Utrogestan [@nhsbsa-hrt-ppc-medicines; @nhs-prescription-prepayment-certificate-2023]. Prescriptions are free in Scotland, Wales and Northern Ireland [@commons-library-prescription-charges-england-2026]. To see whether it would save you money, try our [HRT prepayment certificate calculator](/tools/hrt-prepayment-certificate-calculator/).
 
 ## How is progesterone taken in HRT?
 

@@ -1,7 +1,7 @@
 ---
 title: "Does ashwagandha help menopause symptoms?"
-seo_title: "Ashwagandha for Menopause: What the Evidence Shows"
-meta_description: "What small randomized trials found about ashwagandha for perimenopause and menopause symptoms, why the evidence is still limited, and the liver, thyroid and medication concerns to know first."
+seo_title: "Ashwagandha for menopause: what the evidence shows"
+meta_description: "Small trials found ashwagandha eased menopause symptoms more than placebo, but the evidence is limited. The liver, thyroid and medication concerns to know."
 cluster: does-it-work
 primary_keyword: ashwagandha menopause
 slug: ashwagandha
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-08"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Shortened the meta description and put the SEO title in sentence case", material: false }
   - { date: "2026-11-08", summary: "Added three newer small trials, NIH safety information (liver, thyroid, interactions, pregnancy), doses used in studies, and a when-to-see-a-doctor section; removed unsourced claims", material: true }
   - { date: "2026-11-07", summary: "Published evidence verdict on ashwagandha for perimenopause symptoms", material: true }
 evidence_grade: limited

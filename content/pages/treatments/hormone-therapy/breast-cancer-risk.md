@@ -18,8 +18,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-11"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Added a link to the soy isoflavones evidence review", material: false }
   - { date: "2026-11-11", summary: "Rebuilt around common questions: does HRT cause breast cancer, NICE's cases per 1,000 women in a cited table, estrogen-only vs combined (including the WHI trial), progestogen type, risk after stopping, vaginal estrogen, risk of dying, history of breast cancer, screening; removed an uncited list of risk factors", material: true }
   - { date: "2026-11-06", summary: "Published evidence guide on HRT and breast cancer risk", material: true }
 evidence_grade: strong
@@ -114,7 +115,7 @@ That is why NICE advises that people at high risk of breast cancer get informati
 
 Usually not: the American Cancer Society says doctors generally do not recommend hormone therapy after breast cancer, though there can be exceptions [@acs-mht-after-breast-cancer-2025]. The risk is clearly raised after hormone receptor-positive cancer; after receptor-negative cancer it is less clear, and some doctors may consider it if non-hormonal treatments have not helped [@acs-mht-after-breast-cancer-2025].
 
-NICE advises stopping systemic HRT if breast cancer is diagnosed [@nice-ng23-recommendations]. Options for symptoms are covered in our guide for [breast cancer survivors](/groups/breast-cancer-survivors/).
+NICE advises stopping systemic HRT if breast cancer is diagnosed [@nice-ng23-recommendations]. Options for symptoms are covered in our guide for [breast cancer survivors](/groups/breast-cancer-survivors/). Before trying a plant-estrogen supplement instead, see what trials found on [soy isoflavones for hot flashes](/does-it-work/soy-isoflavones/).
 
 ## Did the FDA label change remove the breast cancer risk?
 

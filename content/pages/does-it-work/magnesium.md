@@ -1,7 +1,7 @@
 ---
 title: "Does magnesium help menopause sleep and symptoms?"
-seo_title: Does magnesium help menopause sleep and symptoms
-meta_description: "Does magnesium help menopause sleep or hot flashes? What randomized trials found, how supplement forms differ, the upper limit, drug interactions, and who should be careful."
+seo_title: "Magnesium for menopause: does it help sleep or hot flashes?"
+meta_description: "Does magnesium help menopause sleep or hot flashes? What trials found, how forms differ, the upper limit, drug interactions and who should be careful."
 cluster: does-it-work
 primary_keyword: magnesium menopause
 slug: magnesium
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-08"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Shortened the meta description and made the SEO title lead with the search words", material: false }
   - { date: "2026-11-08", summary: "Plain-language short answer; added sleep meta-analysis and magnesium hot flash trial, rebuilt forms and safety sections from the NIH fact sheet (fixed antibiotic timing), added urgent box; removed unsourced form, food and timing claims", material: true }
   - { date: "2026-11-06", summary: "First evidence review of magnesium supplementation in menopause", material: true }
   - { date: "2026-11-07", summary: "Removed claims and figures we couldn't match to a source (sleep trials, muscle cramps, magnesium oxide absorption); grades now from the grade registry", material: true }

@@ -1,12 +1,12 @@
 ---
-title: "How to find a menopause specialist"
-seo_title: "Find a certified menopause practitioner or specialist"
-meta_description: "A certified menopause practitioner (MSCP) has passed The Menopause Society's exam. How to find one by zip code or telehealth, get a referral, and when it helps."
+title: "How to find a menopause specialist near you"
+seo_title: "Find a Menopause Society certified practitioner near you"
+meta_description: "Find a menopause specialist near you in The Menopause Society's zip code directory. What a Menopause Society Certified Practitioner (MSCP) is, referrals, costs."
 cluster: care
 primary_keyword: how to find a menopause specialist
 slug: find-a-menopause-specialist
 page_type: guide
-secondary_keywords: [menopause society certified practitioner, menopause doctor, perimenopause referral, menopause specialist referral]
+secondary_keywords: [menopause society certified practitioner, certified menopause practitioner, menopause specialist near me, menopause doctor, perimenopause referral, menopause specialist referral]
 search_intent: informational
 funnel_stage: evaluating
 symptom_tags: []
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-11"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Semrush pass: new 'How to find a menopause specialist near you' section first, 'What is a Menopause Society Certified Practitioner?' heading with how clinicians earn the MSCP, new sections on cost and insurance and on what a menopause specialist is called; title and description target certified practitioner and near-me searches", material: true }
   - { date: "2026-11-11", summary: "Added 'What is a certified menopause practitioner?' answer (who can earn MSCP, renewal, former NCMP name); title and description lead with certified menopause practitioner", material: true }
   - { date: "2026-11-09", summary: "Added question headings on getting a referral, whether your plan needs one, using The Menopause Society directory, when a specialist matters and choosing a clinician; added a labeled UK note on GP referral; new FAQs", material: true }
   - { date: "2026-11-08", summary: "Plain short answer; removed an unsourced claim about gaps in medical training; softened telehealth wording", material: false }
@@ -28,6 +29,9 @@ claims:
   - id: mscp-credential-definition
     text: "The Menopause Society Certified Practitioner (MSCP) credential is awarded to licensed healthcare professionals who pass a competency examination demonstrating expertise in midlife women's health; it is valid for 3 years, renewable by re-examination or continuing education credits."
     sources: [menopause-society-choosing-practitioner]
+  - id: mscp-exam-eligibility
+    text: "All licensed healthcare professionals are eligible to take The Menopause Society's MSCP competency exam, which was developed in 2002, is offered by live remote proctoring in 1-month windows in March, June, September and November, and costs $400 for Society members and $725 for nonmembers."
+    sources: [menopause-society-mscp-exam-2026]
   - id: mscp-directory-scope
     text: "The Menopause Society maintains a searchable directory of Society members and MSCPs who asked to be listed and are accepting new patients, searchable by zip code (US), country, or telehealth by US state; it flags MSCP holders and is not an endorsement."
     sources: [menopause-society-choosing-practitioner, menopause-society-practitioner-directory]
@@ -43,7 +47,7 @@ claims:
 safety_flags: []
 cta_profile: care_access
 hub: /care/
-sources: [menopause-society-choosing-practitioner, menopause-society-practitioner-directory, nice-ng23-recommendations, healthcare-gov-referral-glossary, healthcare-gov-plan-types, menopause-society-name-change-2023]
+sources: [menopause-society-choosing-practitioner, menopause-society-practitioner-directory, menopause-society-mscp-exam-2026, nice-ng23-recommendations, healthcare-gov-referral-glossary, healthcare-gov-plan-types, menopause-society-name-change-2023]
 related: [/care/, /care/when-your-doctor-dismisses-you/, /care/insurance/, /treatments/hormone-therapy/is-it-right-for-me/, /tools/treatment-questions/]
 faq:
   - q: Do I need a referral to see a menopause specialist?
@@ -56,7 +60,37 @@ faq:
     a: "Yes, in many cases. The Menopause Society's directory lets you search for clinicians who offer telehealth in your US state, and some telehealth services focus on menopause care."
 ---
 
-A menopause specialist is a clinician with extra, tested training in menopause care, such as a Menopause Society Certified Practitioner (MSCP) [@menopause-society-choosing-practitioner]. Ask your primary care doctor for a referral, or search The Menopause Society's directory by zip code [@menopause-society-practitioner-directory]. Specialist help matters most when hormone therapy may not be safe for you [@nice-ng23-recommendations].
+A menopause specialist is a clinician with extra, tested training in menopause care, such as a Menopause Society Certified Practitioner (MSCP) [@menopause-society-choosing-practitioner]. To find one near you, search The Menopause Society's directory by zip code, or ask your primary care doctor for a referral [@menopause-society-practitioner-directory]. Specialist help matters most when hormone therapy may not be safe for you [@nice-ng23-recommendations].
+
+## How to find a menopause specialist near you
+
+The most direct way to find a menopause specialist near you is The Menopause Society's "Find a Menopause Practitioner" directory: enter your US zip code to see listed clinicians, and check which ones hold the MSCP credential [@menopause-society-practitioner-directory; @menopause-society-choosing-practitioner]. You can also ask your primary care doctor or OB/GYN for a referral, or search the directory for telehealth by US state [@menopause-society-practitioner-directory].
+
+- **Search by location**: the directory searches by zip code in the US, or by country elsewhere [@menopause-society-practitioner-directory]
+- **Look for "MSCP"**: listings show who holds the credential [@menopause-society-choosing-practitioner]
+- **No one nearby?** Search the directory's telehealth option for clinicians licensed in your state [@menopause-society-practitioner-directory]. A local clinician can still handle in-person exams and tests.
+- **Check coverage before booking**: call the number on your insurance card to ask whether the clinician is in network and whether you need a referral (see below)
+
+A few things to know about the directory:
+
+- **It isn't complete**: it lists only Society members and MSCPs who asked to be included, and leaves out those not accepting new patients [@menopause-society-practitioner-directory]
+- **It isn't an endorsement**: the Society says it does not recommend the clinicians listed [@menopause-society-practitioner-directory]
+- **Not everyone listed is an MSCP**: listings include MDs, DOs, nurse practitioners, physician assistants, nurse midwives, pharmacists, nurses, physical therapists and social workers, so check each listing's credential if that matters to you [@menopause-society-choosing-practitioner]
+
+## What is a Menopause Society Certified Practitioner (MSCP)?
+
+A Menopause Society Certified Practitioner (MSCP) is a licensed clinician who has passed The Menopause Society's exam on midlife women's health [@menopause-society-choosing-practitioner]. Before the Society renamed itself in 2023, the same credential was called NAMS Certified Menopause Practitioner (NCMP) [@menopause-society-name-change-2023]. Any licensed healthcare professional can take the exam, so an MSCP may be a doctor, nurse practitioner, physician assistant or another type of clinician [@menopause-society-choosing-practitioner; @menopause-society-mscp-exam-2026].
+
+- **It must be renewed**: the credential lasts **3 years**, then is renewed by a new exam or continuing education [@menopause-society-choosing-practitioner]. So a current MSCP has kept up with the field, not just passed a test once.
+- **How to find one**: use the directory described above, which flags MSCP holders [@menopause-society-choosing-practitioner]
+
+### How does a clinician become a certified menopause practitioner?
+
+A licensed healthcare professional applies to The Menopause Society, sends a copy of a current license, and passes its competency exam [@menopause-society-mscp-exam-2026]. The Society created the exam in 2002 to set standards for menopause practice and help women find knowledgeable clinicians [@menopause-society-mscp-exam-2026]. It's taken online with a live proctor (or at a test center) in testing windows in March, June, September and November, and costs $400 for Society members or $725 for nonmembers [@menopause-society-mscp-exam-2026].
+
+## What kind of doctor is a menopause specialist?
+
+"Menopause specialist" isn't one medical specialty with its own title. The closest thing to a standard is the MSCP credential, which any licensed healthcare professional can earn by passing the Society's exam [@menopause-society-choosing-practitioner; @menopause-society-mscp-exam-2026]. Clinicians in the Society's directory include MDs, DOs, nurse practitioners, physician assistants and nurse midwives, among others [@menopause-society-choosing-practitioner].
 
 ## How do I get a referral to a menopause specialist?
 
@@ -78,25 +112,13 @@ It depends on your plan type. In many HMOs, you need a referral before you can g
 - **PPO**: lets you see doctors outside the network without a referral, for an extra cost
 - **EPO**: covers only doctors and specialists in the plan's network
 
-Call the number on your insurance card and ask whether you need a referral, and whether the specialist you've found is in network. Our [insurance and menopause care guide](/care/insurance/) covers what else to ask.
+Call the number on your insurance card and ask whether you need a referral, and whether the specialist you've found is in network.
 
-## How do I find a certified menopause practitioner?
+## How much does a menopause specialist cost?
 
-Use The Menopause Society's "Find a Menopause Practitioner" directory, which you can search by US zip code, by country, or for telehealth by US state [@menopause-society-practitioner-directory]. Listings show which clinicians hold the MSCP credential [@menopause-society-choosing-practitioner].
+There's no standard price: what you pay depends mostly on your insurance, including whether the clinician is in your plan's network and whether you have a referral your plan requires [@healthcare-gov-plan-types; @healthcare-gov-referral-glossary]. Out-of-network care may cost extra or not be covered at all, depending on the plan type [@healthcare-gov-plan-types].
 
-A few things to know about the directory:
-
-- **It isn't complete**: it lists only Society members and MSCPs who asked to be included, and leaves out those not accepting new patients [@menopause-society-practitioner-directory]
-- **It isn't an endorsement**: the Society says it does not recommend the clinicians listed [@menopause-society-practitioner-directory]
-- **Not everyone listed is an MSCP**: listings include MDs, DOs, nurse practitioners, physician assistants, nurse midwives, pharmacists, nurses, physical therapists and social workers, so check each listing's credential if that matters to you [@menopause-society-choosing-practitioner]
-
-## What is a certified menopause practitioner (MSCP)?
-
-A certified menopause practitioner is a licensed clinician who has passed The Menopause Society's exam on midlife women's health and holds its MSCP credential, short for **Menopause Society Certified Practitioner** [@menopause-society-choosing-practitioner]. Any licensed healthcare professional can sit the exam, so an MSCP may be a doctor, nurse practitioner, physician assistant or another type of clinician [@menopause-society-choosing-practitioner].
-
-- **It must be renewed**: the credential lasts **3 years**, then is renewed by a new exam or continuing education [@menopause-society-choosing-practitioner]. So a current MSCP has kept up with the field, not just passed a test once.
-- **"NCMP" is the older name**: before the Society's name change in 2023, the same credential was called NAMS Certified Menopause Practitioner (NCMP) [@menopause-society-name-change-2023]
-- **How to find one**: use the Society's directory described above, which flags MSCP holders [@menopause-society-choosing-practitioner]
+The Menopause Society suggests checking whether a clinician accepts commercial insurance or Medicare when you choose [@menopause-society-choosing-practitioner]. If you'll pay yourself, ask the clinic for its self-pay visit price before booking. Our [insurance and menopause care guide](/care/insurance/) covers what to ask your plan, and our [menopause telehealth comparison](/compare/) covers what each service says it offers.
 
 ## When does a specialist matter most?
 
@@ -111,8 +133,6 @@ If your situation is straightforward, a well-informed primary care doctor or OB/
 ## How do I choose a menopause clinician?
 
 Pick someone you can get to, who takes your insurance, and who listens. The Menopause Society suggests weighing location, whether they accept commercial insurance or Medicare, whether they offer telemedicine, and their specialty [@menopause-society-choosing-practitioner]. It also suggests looking for someone who listens to your concerns, answers your questions, and respects your decisions [@menopause-society-choosing-practitioner].
-
-If no specialist is nearby, the directory's telehealth search can help [@menopause-society-practitioner-directory]. Our [menopause telehealth comparison](/compare/) covers what each service says it offers. A local clinician can still handle in-person exams and tests.
 
 ## If you're in the UK
 

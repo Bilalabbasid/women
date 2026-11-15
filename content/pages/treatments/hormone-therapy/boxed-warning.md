@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Added a link to the black cohosh evidence review", material: false }
   - { date: "2026-11-09", summary: "Rewrote the opening to state what changed and when; added a product-type table, a 'has my label changed' section, an 'is HRT safe now' answer, FAQs, and the FDA patch supply update", material: true }
   - { date: "2026-11-08", summary: "Corrected what was removed and kept to match FDA wording (box removed for all product types except systemic estrogen-alone), fixed the 2003 history, added critiques and sourced warning signs; removed unsourced claims", material: true }
   - { date: "2026-11-06", summary: "First comprehensive explainer on the 2025-2026 FDA MHT labeling actions", material: true }
@@ -116,7 +117,7 @@ This fits The Menopause Society's 2022 position. For women under 60 or within 10
 
 ## Is HRT safe now that the warning is gone?
 
-Not for everyone. Removing the box changed how risks are presented, not the risks themselves: heart disease and breast cancer information stays in the label, and risks are greater for women who start later or further from menopause [@fda-hrt-consumer-update-2026; @menopause-society-fda-comment-2025]. Hormone therapy is still the most effective treatment for hot flashes [@nams-2022-hormone-therapy], and its evidence for them is graded :grade{id="mht-vms"} on our scale. For more on the risks that stay in the label, see [HRT and breast cancer risk](/treatments/hormone-therapy/breast-cancer-risk/) and [HRT and blood clot risk](/treatments/hormone-therapy/blood-clot-risk/).
+Not for everyone. Removing the box changed how risks are presented, not the risks themselves: heart disease and breast cancer information stays in the label, and risks are greater for women who start later or further from menopause [@fda-hrt-consumer-update-2026; @menopause-society-fda-comment-2025]. Hormone therapy is still the most effective treatment for hot flashes [@nams-2022-hormone-therapy], and its evidence for them is graded :grade{id="mht-vms"} on our scale. For comparison, see the evidence on a common herbal alternative, [black cohosh for hot flashes](/does-it-work/black-cohosh/). For more on the risks that stay in the label, see [HRT and breast cancer risk](/treatments/hormone-therapy/breast-cancer-risk/) and [HRT and blood clot risk](/treatments/hormone-therapy/blood-clot-risk/).
 
 ## Not everyone agrees with the change
 

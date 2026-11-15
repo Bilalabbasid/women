@@ -1,7 +1,7 @@
 ---
 title: "Cooling your bed: fans, sheets, and climate systems compared"
-seo_title: "Do Cooling Products Help Hot Flashes?"
-meta_description: "Do cooling products help night sweats? What the research says about fans, breathable bedding and bed cooling systems, how they compare, and when night sweats need a doctor."
+seo_title: "Cooling products for hot flashes: do they help?"
+meta_description: "Do cooling products help night sweats? What research says about fans, breathable bedding and bed cooling systems, and when night sweats need a doctor."
 cluster: does-it-work
 primary_keyword: cooling products for hot flashes
 slug: cooling-products
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-08"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Shortened the meta description and made the SEO title lead with the search words, in sentence case", material: false }
   - { date: "2026-11-08", summary: "Rewrote in plain words around what the cooling studies found; added a sourced 'try' box of cooling steps and a sourced when-to-see-a-doctor list; removed unsourced cost, suitability and relief claims", material: true }
   - { date: "2026-11-06", summary: "Initial publication comparing passive bedding, fans, and active convective bed climate systems", material: true }
   - { date: "2026-11-07", summary: "Grade corrected from Moderate to Comfort only: The Menopause Society (2023) does not recommend cooling as a treatment for hot flashes; it can still make nights more comfortable", material: true }

@@ -1,12 +1,12 @@
 ---
 title: "SSRIs and SNRIs for hot flashes: which antidepressants work"
-seo_title: "SSRIs for hot flashes: which work, and where Zoloft fits"
-meta_description: "Low-dose paroxetine is FDA-approved for hot flashes; escitalopram and venlafaxine work too. Sertraline (Zoloft) hasn't shown clear benefit. Tamoxifen tips too."
+seo_title: "SSRIs for hot flashes: which work best, and which don't"
+meta_description: "Low-dose paroxetine is the only SSRI FDA-approved for hot flashes; escitalopram, citalopram and venlafaxine work too. Zoloft hasn't shown clear benefit."
 cluster: treatments
 primary_keyword: ssri for hot flashes
 slug: ssris-snris
 page_type: treatment
-secondary_keywords: [paroxetine hot flashes, venlafaxine hot flashes, zoloft for hot flashes, antidepressants for hot flashes]
+secondary_keywords: [ssri hot flashes, best ssri for menopause, paroxetine hot flashes, venlafaxine hot flashes, zoloft for hot flashes, antidepressants for hot flashes]
 search_intent: informational
 funnel_stage: evaluating
 symptom_tags: [hot-flashes, night-sweats]
@@ -18,8 +18,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-11"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Semrush pass: added 'What is the best SSRI for menopause?' with a direct answer for hot flashes, tamoxifen and depression; SSRI wording in the opening and headings; FAQ now answers whether SSRIs cause hot flashes or night sweats; sharper title and description", material: true }
   - { date: "2026-11-11", summary: "Rewritten around what people search: which antidepressants work (sourced table), whether sertraline (Zoloft) helps, paroxetine and the FDA-approved 7.5 mg capsule, how fast they work, side effects, who should avoid them, UK vs US guidance, the tamoxifen choice, and a sourced crisis box; new FAQs", material: true }
   - { date: "2026-11-06", summary: "Published evidence guide on SSRIs and SNRIs for hot flashes", material: true }
 evidence_grade: strong
@@ -42,7 +43,7 @@ claims:
 safety_flags: [medication_interactions]
 cta_profile: nonhormonal_evaluating
 hub: /treatments/nonhormonal/
-sources: [nams-2023-nonhormone-therapy, brisdelle-prescribing-information, nci-pdq-hot-flashes-hp, aafp-ssri-snri-vms-2022, nhs-sertraline, nice-ng23-recommendations, nhs-night-sweats, nimh-depression-booklet, lifeline-988, nhs-urgent-help-mental-health]
+sources: [nams-2023-nonhormone-therapy, brisdelle-prescribing-information, owh-menopause-treatment-2026, maki-perimenopausal-depression-guidelines-2018, nci-pdq-hot-flashes-hp, aafp-ssri-snri-vms-2022, nhs-sertraline, nice-ng23-recommendations, nhs-night-sweats, nimh-depression-booklet, lifeline-988, nhs-urgent-help-mental-health]
 related: [/treatments/nonhormonal/, /treatments/nonhormonal/gabapentin/, /groups/breast-cancer-survivors/, /symptoms/hot-flashes/, /tools/treatment-questions/]
 faq:
   - q: Do antidepressants help hot flashes even if you're not depressed?
@@ -53,15 +54,15 @@ faq:
     a: "Low-dose paroxetine for hot flashes did not cause weight gain or lower sex drive in studies. Other antidepressants can: weight gain is listed as a common side effect of sertraline, for example."
   - q: Are antidepressants as good as HRT for hot flashes?
     a: "Not quite. Hormone therapy is still the most effective treatment. In one trial, estradiol cut hot flashes by 2.3 more a day than placebo, against 1.8 more a day for venlafaxine."
-  - q: Can antidepressants cause night sweats?
-    a: "Yes. Some antidepressants are a known cause of night sweats, so tell your clinician if sweating starts or gets worse after a new medicine or a dose change."
+  - q: Can SSRIs cause hot flashes or night sweats?
+    a: "They can cause sweating at night: the NHS lists some antidepressants as a known cause of night sweats. Tell your clinician if sweating starts or gets worse after a new medicine or a dose change."
 ---
 
-Some antidepressants, taken at low doses, ease hot flashes even if you aren't depressed. Low-dose paroxetine (Brisdelle) is FDA-approved for hot flashes, and escitalopram, citalopram, venlafaxine and desvenlafaxine also worked in large trials [@brisdelle-prescribing-information; @nams-2023-nonhormone-therapy]. Sertraline (Zoloft) and fluoxetine (Prozac) haven't shown a clear benefit [@nams-2023-nonhormone-therapy].
+Some SSRI and SNRI antidepressants, taken at low doses, ease hot flashes even if you aren't depressed. Low-dose paroxetine (Brisdelle) is FDA-approved for hot flashes, and escitalopram, citalopram, venlafaxine and desvenlafaxine also worked in large trials [@brisdelle-prescribing-information; @nams-2023-nonhormone-therapy]. Sertraline (Zoloft) and fluoxetine (Prozac) haven't shown a clear benefit [@nams-2023-nonhormone-therapy].
 
 These medicines are SSRIs (selective serotonin reuptake inhibitors) and SNRIs (serotonin-norepinephrine reuptake inhibitors). The Menopause Society recommends them for hot flashes and night sweats: :grade{id="ssri-snri-vms"} [@nams-2023-nonhormone-therapy]. In trials, they cut hot flashes by 25% to 69%, and hormone therapy is still the most effective treatment [@nams-2023-nonhormone-therapy].
 
-## Which antidepressants work for hot flashes?
+## Which SSRIs and SNRIs work for hot flashes?
 
 Five have good trial evidence: paroxetine, escitalopram, citalopram, venlafaxine and desvenlafaxine each reduced hot flashes in large, double-blind trials [@nams-2023-nonhormone-therapy]. Duloxetine helped in smaller studies, while sertraline and fluoxetine did not do clearly better than placebo [@nams-2023-nonhormone-therapy]. There are no trials comparing them head to head [@aafp-ssri-snri-vms-2022].
 
@@ -75,6 +76,15 @@ Five have good trial evidence: paroxetine, escitalopram, citalopram, venlafaxine
 | Duloxetine (Cymbalta) | Reduced hot flashes in smaller studies [@nams-2023-nonhormone-therapy] | Not covered by The Menopause Society's tamoxifen advice [@nams-2023-nonhormone-therapy] |
 | Sertraline (Zoloft) | Small, non-significant trend; not recommended [@nams-2023-nonhormone-therapy] | Not on the safer list [@nams-2023-nonhormone-therapy] |
 | Fluoxetine (Prozac) | Small, non-significant trend; not recommended [@nams-2023-nonhormone-therapy] | Most likely to interfere, with paroxetine [@nams-2023-nonhormone-therapy] |
+
+## What is the best SSRI for menopause?
+
+There's no single best SSRI for menopause, because no trials have compared them head to head [@aafp-ssri-snri-vms-2022]. The right pick depends on what you're treating and what else you take:
+
+- **For hot flashes**: Low-dose paroxetine (7.5 mg) is the only SSRI that is FDA-approved for hot flashes, and paroxetine gave the largest drop in hot flashes in one review [@owh-menopause-treatment-2026; @brisdelle-prescribing-information; @aafp-ssri-snri-vms-2022].
+- **If you take tamoxifen**: The Menopause Society lists escitalopram, citalopram, venlafaxine and desvenlafaxine as safer choices than paroxetine or fluoxetine [@nams-2023-nonhormone-therapy].
+- **If you're also depressed**: Antidepressants and talk therapy are first-line treatments for depression around perimenopause, and the choice of medicine is made with your prescriber [@maki-perimenopausal-depression-guidelines-2018]. See [depression in menopause](/symptoms/depression/).
+- **Sertraline (Zoloft) or fluoxetine (Prozac)**: These haven't clearly beaten placebo for hot flashes [@nams-2023-nonhormone-therapy].
 
 ## Does Zoloft (sertraline) help hot flashes?
 

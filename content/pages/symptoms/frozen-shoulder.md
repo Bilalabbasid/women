@@ -1,7 +1,7 @@
 ---
 title: "Frozen shoulder and menopause"
 seo_title: "Frozen shoulder and menopause: what's known"
-meta_description: "Frozen shoulder is most common at 40 to 60 and in women, but menopause isn't a proven cause. What studies show on HRT, how long it lasts, and when to see a doctor."
+meta_description: "Frozen shoulder is most common at ages 40 to 60, but menopause isn't a proven cause. What studies show on HRT, how long it lasts, and when to see a doctor."
 cluster: symptoms
 primary_keyword: frozen shoulder menopause
 slug: frozen-shoulder
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Shortened the meta description", material: false }
   - { date: "2026-11-09", summary: "Sourced what is and isn't known about frozen shoulder and menopause, plus symptoms, stages, how long it lasts, treatments, home care and when to see a doctor; removed unsourced treatment and timeline claims", material: true }
   - { date: "2026-11-07", summary: "Published evidence guide on frozen shoulder and menopause", material: true }
 evidence_grade: per_option

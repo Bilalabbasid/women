@@ -18,8 +18,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-11"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Added a link to the black cohosh evidence review", material: false }
   - { date: "2026-11-11", summary: "Rebuilt around common questions: does HRT cause clots, a cited patch vs pill vs vaginal comparison table, a sourced box of clot and stroke warning signs, who is at higher risk, HRT after a clot, stroke numbers per 1,000 women, and whether the type of estrogen or progestogen matters", material: true }
   - { date: "2026-11-06", summary: "Published evidence guide on HRT and blood clot (VTE) and stroke risk", material: true }
 evidence_grade: strong
@@ -104,7 +105,7 @@ More in [who HRT may suit, and who needs specialist advice](/treatments/hormone-
 
 It needs a specialist decision, and some products rule it out. The label for one oral progesterone capsule, for example, lists an active or past DVT or pulmonary embolism as a reason not to use it [@prometrium-prescribing-information]. NICE advises that people at high clot risk see a hematologist before HRT is considered at all [@nice-ng23-recommendations].
 
-For people at increased risk who do go ahead, the NHS says patches, spray or gel are usually advised instead of tablets [@nhs-hrt-benefits-risks-2023]. Non-hormonal treatments are another option; see our [non-hormonal treatments overview](/treatments/nonhormonal/).
+For people at increased risk who do go ahead, the NHS says patches, spray or gel are usually advised instead of tablets [@nhs-hrt-benefits-risks-2023]. Non-hormonal treatments are another option; see our [non-hormonal treatments overview](/treatments/nonhormonal/). If you're considering an herbal remedy instead, see [whether black cohosh works for hot flashes](/does-it-work/black-cohosh/).
 
 ## Does HRT raise stroke risk?
 

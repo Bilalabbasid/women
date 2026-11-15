@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-06"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Added a link to the treatment evidence checker", material: false }
   - { date: "2026-11-07", summary: "Removed an entry with no source; added a source to each entry", material: true }
   - { date: "2026-11-06", summary: "Launch of the public evidence change log", material: true }
 evidence_grade: null
@@ -31,6 +32,8 @@ related: [/evidence/how-we-grade/, /treatments/hormone-therapy/boxed-warning/, /
 ---
 
 This page lists the regulatory actions, guideline changes and corrections that changed what this site says. Each entry names its source and the pages it affected. The newest is first.
+
+To see where the evidence for each treatment stands today, use the [menopause treatment evidence checker](/tools/does-it-work-checker/).
 
 ## 2026
 

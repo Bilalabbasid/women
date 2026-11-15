@@ -1,7 +1,7 @@
 ---
 title: Weight gain and belly fat in menopause
 seo_title: "Menopause weight gain & belly fat: why it happens"
-meta_description: "How body composition shifts toward belly fat and away from muscle in perimenopause and menopause, what strength training does, and why supplements aren't recommended."
+meta_description: "Menopause changes your body's makeup more than the scale: more belly fat, less muscle. What strength training does, and why supplements aren't recommended."
 cluster: symptoms
 primary_keyword: menopause weight gain
 slug: weight-gain
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-08"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Shortened the meta description and led it with the direct answer", material: false }
   - { date: "2026-11-08", summary: "Quick answer; body-composition claims now cited to SWAN, Lovejoy and IMS review; unsourced sleep and dieting claims removed; added self-care box and when-to-see-a-doctor section", material: true }
   - { date: "2026-11-06", summary: "Published evidence guide on menopause weight gain and body composition", material: true }
 evidence_grade: per_option

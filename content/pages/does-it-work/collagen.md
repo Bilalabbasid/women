@@ -1,7 +1,7 @@
 ---
 title: "Does collagen work for menopause skin and joints?"
-seo_title: "Collagen for Menopause: What the Evidence Shows"
-meta_description: "What a 2023 meta-analysis of 26 trials found about oral collagen and skin, why that evidence isn't menopause-specific, and the joint/bone claims it doesn't cover."
+seo_title: "Collagen for menopause: what the evidence shows"
+meta_description: "What a meta-analysis of 26 trials found on oral collagen for skin, why it isn't menopause-specific, and the joint and bone claims it doesn't cover."
 cluster: does-it-work
 primary_keyword: collagen menopause
 slug: collagen
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-07"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Shortened the meta description and put the SEO title in sentence case", material: false }
   - { date: "2026-11-07", summary: "Published evidence verdict on collagen for menopause-related skin and joint changes", material: true }
 evidence_grade: limited
 claims:

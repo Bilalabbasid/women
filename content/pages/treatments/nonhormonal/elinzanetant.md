@@ -1,12 +1,12 @@
 ---
 title: Lynkuet (elinzanetant)
-seo_title: "Lynkuet (elinzanetant): dosing, side effects and FDA label"
-meta_description: "Lynkuet (elinzanetant) is two 60 mg capsules once a day at bedtime, FDA-approved in 2025 for menopause hot flashes. Missed doses, side effects and interactions."
+seo_title: "Lynkuet side effects, dosing and cost: FDA label guide"
+meta_description: "Lynkuet side effects are mostly headache, tiredness, dizziness and sleepiness. How to take it, its $782 retail price (Nov 2026) and Lynkuet vs Veozah."
 cluster: treatments
 primary_keyword: lynkuet
 slug: elinzanetant
 page_type: treatment
-secondary_keywords: [elinzanetant, lynkuet dosing, veozah vs lynkuet, lynkuet side effects, lynkuet fda]
+secondary_keywords: [elinzanetant, lynkuet side effects, lynkuet dosing, lynkuet cost, veozah vs lynkuet, lynkuet fda, lynquet]
 search_intent: informational
 funnel_stage: evaluating
 symptom_tags: [hot-flashes, night-sweats]
@@ -18,8 +18,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-11"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Semrush pass: added who makes it, a cost and insurance section (GoodRx prices dated Nov 14, 2026, no generic), a direct answer to whether Lynkuet is better than Veozah, a note on sleep, the Lynquet spelling, and a sharper title and description", material: true }
   - { date: "2026-11-11", summary: "Search pass 2: dosing section reworked as 'How is Lynkuet taken? Dose and timing' from the FDA label (bedtime dose, missed doses, tests before starting, when the 60 mg dose applies), a missed-dose FAQ, and a sharper title and description", material: true }
   - { date: "2026-11-09", summary: "Led with the FDA approval and indication; added a Lynkuet side effects section (common with label percentages, serious warnings), a cited table of FDA-approved hot flash medicines and their indications, and FAQs on onset, weight, driving and age", material: true }
   - { date: "2026-11-08", summary: "Rebuilt from the FDA label: trial results, labeled dose and interactions, warnings (drowsiness, liver, pregnancy, seizure), side effects, Veozah comparison, when-to-get-help section, plain-language short answer", material: true }
@@ -41,13 +42,16 @@ claims:
   - id: fda-approved-vms-medicines
     text: "FDA-approved medicines for moderate to severe menopausal hot flashes include hormone therapy and three non-hormonal medicines: low-dose paroxetine 7.5 mg (Brisdelle), fezolinetant (Veozah) and elinzanetant (Lynkuet); other SSRIs, SNRIs and gabapentin are not FDA-approved for this use."
     sources: [owh-menopause-treatment-2026, premarin-prescribing-information, brisdelle-prescribing-information, veozah-prescribing-information, lynkuet-prescribing-information, nams-2023-nonhormone-therapy]
+  - id: lynkuet-retail-price-2026
+    text: "As of November 14, 2026, GoodRx listed a retail price of $781.98 for a carton of 60 Lynkuet 60 mg capsules (a 30-day supply at the labeled dose), with coupon prices from $615.08; Lynkuet is available only as a brand-name drug."
+    sources: [goodrx-lynkuet-prices-2026-11-14, lynkuet-prescribing-information]
   - id: nams-nonhormone-context
     text: "The Menopause Society (2023) recommends neurokinin receptor blockade (such as fezolinetant), SSRIs/SNRIs, gabapentin, and CBT as Level I non-hormonal treatments for vasomotor symptoms."
     sources: [nams-2023-nonhormone-therapy]
 safety_flags: [medication_interactions, pregnancy, urgent_symptoms]
 cta_profile: nonhormonal_evaluating
 hub: /treatments/nonhormonal/
-sources: [lynkuet-prescribing-information, lynkuet-approval-bayer-2025, nams-2023-nonhormone-therapy, veozah-prescribing-information, owh-menopause-treatment-2026, premarin-prescribing-information, brisdelle-prescribing-information]
+sources: [lynkuet-prescribing-information, lynkuet-approval-bayer-2025, nams-2023-nonhormone-therapy, veozah-prescribing-information, owh-menopause-treatment-2026, premarin-prescribing-information, brisdelle-prescribing-information, goodrx-lynkuet-prices-2026-11-14, medicare-how-drug-plans-work, nice-ta1143-fezolinetant-2026]
 related: [/treatments/nonhormonal/, /treatments/nonhormonal/fezolinetant/, /treatments/hormone-therapy/, /symptoms/hot-flashes/, /tools/treatment-questions/]
 faq:
   - q: How is Lynkuet (elinzanetant) different from Veozah (fezolinetant)?
@@ -64,11 +68,11 @@ faq:
     a: The label says too few women over 65 were in the trials to know whether they respond differently from younger women. Women in the main trials were 40 to 65 years old.
 ---
 
-**Lynkuet (elinzanetant)** is a non-hormonal capsule the FDA approved in October 2025 to treat moderate to severe hot flashes and night sweats caused by menopause [@lynkuet-prescribing-information; @lynkuet-approval-bayer-2025]. Its most common side effects are headache, tiredness, dizziness and sleepiness, and it must not be used in pregnancy [@lynkuet-prescribing-information]. Hormone therapy is still the most effective treatment for hot flashes [@nams-2023-nonhormone-therapy].
+**Lynkuet (elinzanetant)**, sometimes spelled Lynquet, is a non-hormonal capsule the FDA approved in October 2025 to treat moderate to severe hot flashes and night sweats caused by menopause [@lynkuet-prescribing-information; @lynkuet-approval-bayer-2025]. Its most common side effects are headache, tiredness, dizziness and sleepiness, and it must not be used in pregnancy [@lynkuet-prescribing-information]. Hormone therapy is still the most effective treatment for hot flashes [@nams-2023-nonhormone-therapy].
 
 ## When did the FDA approve Lynkuet, and for what?
 
-The FDA approved Lynkuet on October 24, 2025, to treat moderate to severe vasomotor symptoms (hot flashes and night sweats) due to menopause [@lynkuet-approval-bayer-2025; @lynkuet-prescribing-information]. That is its only approved use [@lynkuet-prescribing-information]. It became the third non-hormonal medicine the FDA has approved for menopausal hot flashes, after low-dose paroxetine and fezolinetant [@owh-menopause-treatment-2026; @nams-2023-nonhormone-therapy].
+The FDA approved Lynkuet on October 24, 2025, to treat moderate to severe vasomotor symptoms (hot flashes and night sweats) due to menopause [@lynkuet-approval-bayer-2025; @lynkuet-prescribing-information]. That is its only approved use, and it is made by Bayer [@lynkuet-prescribing-information]. It became the third non-hormonal medicine the FDA has approved for menopausal hot flashes, after low-dose paroxetine and fezolinetant [@owh-menopause-treatment-2026; @nams-2023-nonhormone-therapy].
 
 The approval rested on three trials. Two 12-week trials in 796 women tested whether it works, and safety was studied in 1,420 women in total, including a trial lasting up to 52 weeks [@lynkuet-prescribing-information].
 
@@ -137,6 +141,13 @@ Lynkuet is broken down by a liver enzyme (CYP3A4), so medicines and foods that a
 
 Tell your prescriber and pharmacist about every prescription, over-the-counter medicine and supplement you take. Your prescriber decides whether Lynkuet suits you and at what dose.
 
+## How much does Lynkuet cost, and is it covered by insurance?
+
+Without insurance, a carton of 60 Lynkuet capsules, a 30-day supply at the labeled dose, had a retail price of $781.98, with GoodRx coupon prices from $615.08, as of November 14, 2026 [@goodrx-lynkuet-prices-2026-11-14; @lynkuet-prescribing-information]. There is no generic: Lynkuet is sold only under its brand name [@goodrx-lynkuet-prices-2026-11-14]. Prices change often, so check before you fill a prescription.
+
+- **Insurance and Medicare**: Coverage depends on your plan's list of covered drugs (formulary). With a Medicare drug plan, you or your prescriber can ask for an exception if it isn't covered, with a statement from the prescriber explaining the medical reason [@medicare-how-drug-plans-work].
+- **Manufacturer programs**: GoodRx lists a Bayer copay savings card, with its own terms, and a Bayer patient assistance program that gives the medicine at no charge to people who qualify [@goodrx-lynkuet-prices-2026-11-14].
+
 ## Which medicines are FDA-approved for hot flashes?
 
 Hormone therapy and three non-hormonal medicines, low-dose paroxetine (Brisdelle), fezolinetant (Veozah) and elinzanetant (Lynkuet), are FDA-approved to treat moderate to severe menopausal hot flashes [@owh-menopause-treatment-2026]. Their labels differ in what else they treat and what they warn about:
@@ -150,9 +161,9 @@ Hormone therapy and three non-hormonal medicines, low-dose paroxetine (Brisdelle
 
 Other medicines that can ease hot flashes, such as other SSRIs and SNRIs, gabapentin and oxybutynin, are not FDA-approved for this use, though guidelines recommend several of them [@owh-menopause-treatment-2026; @nams-2023-nonhormone-therapy]. Paroxetine can make tamoxifen less effective, which matters after breast cancer [@nams-2023-nonhormone-therapy]. For hormone options, see [hormone therapy for menopause](/treatments/hormone-therapy/) and [the FDA boxed warning change](/treatments/hormone-therapy/boxed-warning/).
 
-## Lynkuet vs. Veozah at a glance
+## Is Lynkuet better than Veozah?
 
-Both drugs are non-hormonal pills for moderate to severe menopausal hot flashes, but their labels differ in important ways. Side effect rates from different drugs' trials can't be compared directly [@veozah-prescribing-information].
+Nobody knows yet, because no trial has compared them head to head. Veozah hasn't been directly compared with other non-hormonal treatments [@nice-ta1143-fezolinetant-2026], and side effect rates from different drugs' trials can't be compared directly [@veozah-prescribing-information]. Both are non-hormonal pills for moderate to severe menopausal hot flashes, but their labels differ in ways that may matter for you:
 
 | Feature | Lynkuet (elinzanetant) | Veozah (fezolinetant) |
 |---|---|---|
@@ -165,7 +176,7 @@ Both drugs are non-hormonal pills for moderate to severe menopausal hot flashes,
 
 ## Where it fits among treatment options
 
-On our scale, elinzanetant for hot flashes and night sweats is graded :grade{id="elinzanetant-vms"}. When The Menopause Society published its 2023 nonhormone statement, elinzanetant was still in development. The statement noted early trials found it worked better than placebo within 2 weeks [@nams-2023-nonhormone-therapy].
+On our scale, elinzanetant for hot flashes and night sweats is graded :grade{id="elinzanetant-vms"}. When The Menopause Society published its 2023 nonhormone statement, elinzanetant was still in development. The statement noted early trials found it worked better than placebo within 2 weeks [@nams-2023-nonhormone-therapy]. Early research also suggests drugs of this type may help night waking and sleep quality, though the Lynkuet label makes no sleep claim [@nams-2023-nonhormone-therapy; @lynkuet-prescribing-information].
 
 That statement recommends CBT, clinical hypnosis, certain SSRIs and SNRIs, gabapentin and fezolinetant for hot flashes, at Level I. It also says hormone therapy remains the most effective treatment, and that non-hormonal options matter for people who can't or prefer not to use hormones [@nams-2023-nonhormone-therapy]. Compare them all in our [non-hormonal treatments guide](/treatments/nonhormonal/).
 

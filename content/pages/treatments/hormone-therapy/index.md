@@ -1,7 +1,7 @@
 ---
 title: Hormone therapy (HRT) for menopause
-seo_title: "HRT for menopause: benefits, risks and the 2026 FDA label"
-meta_description: "HRT is the most effective treatment for hot flashes and helps prevent bone loss. Who it suits, risks on the 2026 FDA label, main types, and how to start."
+seo_title: "Hormone replacement therapy: benefits, risks, how to start"
+meta_description: "Hormone replacement therapy is the most effective treatment for hot flashes. Benefits, risks on the 2026 FDA label, types, cost, and how to get HRT near you."
 cluster: treatments
 primary_keyword: hormone replacement therapy
 slug: hormone-therapy
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Title and first H2 lead with hormone replacement therapy; added how to get HRT near you (primary care or OB-GYN, Menopause Society directory, telehealth, referrals), what HRT costs, when to start, and an FAQ on getting HRT online", material: true }
   - { date: "2026-11-09", summary: "Rebuilt as a plain-English HRT overview answering common questions: what HRT is, who it helps, safety, types and forms, side effects, how long it takes to work, how long to stay on it, who shouldn't take it, and how to start", material: true }
   - { date: "2026-11-08", summary: "Rewrote around the 2025-2026 FDA label changes and the risks that remain (endometrial, blood clots, stroke, breast cancer), with cited contraindications and sourced clot and stroke warning signs", material: true }
   - { date: "2026-11-06", summary: "Published hormone therapy (HRT) sub-hub", material: true }
@@ -54,11 +55,20 @@ claims:
   - id: hrt-contraindications
     text: "The Menopause Society lists contraindications to oral and transdermal hormone therapy as unexplained vaginal bleeding, liver disease, prior estrogen-sensitive cancer including breast cancer, prior coronary heart disease, stroke, heart attack or VTE, and personal history or inherited high risk of thromboembolic disease."
     sources: [nams-2022-hormone-therapy]
+  - id: hrt-access-directory
+    text: "The Menopause Society's directory lists Society members and Menopause Society Certified Practitioners (MSCP) who asked to be listed and are accepting new patients, searchable by US zip code or by telehealth in a US state, and is not an endorsement; the MSCP credential is given to licensed clinicians who pass an exam on midlife women's health."
+    sources: [menopause-society-practitioner-directory, menopause-society-choosing-practitioner]
+  - id: hrt-cost-goodrx-2026
+    text: "In November 2026, GoodRx average US retail (non-insurance) prices were $19.94 to $47.05 for 90 generic estradiol tablets and $37.13 to $68.95 for 4 once-weekly estradiol patches."
+    sources: [goodrx-estradiol-prices-2026-11-08]
+  - id: nhs-when-to-start-hrt
+    text: "The NHS says you do not need to wait until symptoms are severe or periods stop completely to consider HRT, and that people with early or premature menopause are usually advised to take HRT until at least age 51."
+    sources: [nhs-when-to-take-hrt]
 safety_flags: [urgent_symptoms, cancer_history, bleeding]
 cta_profile: hrt_evaluating
 hub: /treatments/
-sources: [nams-2022-hormone-therapy, fda-mht-labeling-request-2025, fda-mht-labeling-changes-2026, menopause-society-fda-comment-2025, ims-statement-boxed-warning-2025, public-citizen-mht-labels-2026, nice-ng23-recommendations, nhs-types-of-hrt, cdc-blood-clots-about-2025, cdc-stroke-signs-2026]
-related: [/treatments/, /treatments/hormone-therapy/types/, /treatments/hormone-therapy/boxed-warning/, /treatments/hormone-therapy/vaginal-estrogen/, /tools/treatment-questions/]
+sources: [nams-2022-hormone-therapy, fda-mht-labeling-request-2025, fda-mht-labeling-changes-2026, menopause-society-fda-comment-2025, ims-statement-boxed-warning-2025, public-citizen-mht-labels-2026, nice-ng23-recommendations, nhs-types-of-hrt, cdc-blood-clots-about-2025, cdc-stroke-signs-2026, nhs-when-to-take-hrt, midi-health-own-site-2026, alloy-own-site-2026, menopause-society-practitioner-directory, menopause-society-choosing-practitioner, healthcare-gov-referral-glossary, healthcare-gov-plan-types, healthcare-gov-prescription-medications, goodrx-estradiol-prices-2026-11-08, fda-estradiol-patch-availability-2026]
+related: [/treatments/, /care/find-a-menopause-specialist/, /treatments/hormone-therapy/types/, /treatments/hormone-therapy/boxed-warning/, /treatments/hormone-therapy/vaginal-estrogen/, /tools/treatment-questions/]
 faq:
   - q: What is the difference between systemic HRT and low-dose vaginal estrogen?
     a: Systemic hormone therapy (pills, patches, gels, sprays, or a systemic vaginal ring) travels through the bloodstream to treat hot flashes, night sweats, and bone loss. Low-dose vaginal estrogen treats vaginal and urinary symptoms, with only a small amount absorbed into the blood.
@@ -68,13 +78,15 @@ faq:
     a: No. In 2025 and 2026 the FDA removed heart disease, breast cancer, and probable dementia language from the boxed warning, but whole-body estrogen-alone products keep a boxed warning for endometrial cancer, and whole-body product labels keep heart and breast cancer information in their warnings.
   - q: Does HRT cause weight gain?
     a: Weight gain is listed among possible side effects, but in the studies The Menopause Society reviewed, estrogen plus progestogen either had no effect on weight or was linked with less weight gain than no treatment. Midlife weight gain happens with or without HRT.
+  - q: Can I get HRT online?
+    a: "Often, yes. The Menopause Society's directory lets you search for practitioners who offer telehealth in your US state, and some online menopause clinics prescribe HRT after a video visit or a written medical intake. Prices and insurance rules differ from clinic to clinic."
 ---
 
 Hormone replacement therapy (HRT) is prescription estrogen, with a progestogen added if you still have a uterus. It is the most effective treatment for hot flashes and night sweats, and it helps prevent bone loss [@nams-2022-hormone-therapy; @nice-ng23-recommendations]. For healthy people who start before 60 or within 10 years of menopause, benefits generally outweigh risks [@nams-2022-hormone-therapy].
 
-Doctors also call it menopausal hormone therapy (MHT). On our scale, its evidence for [hot flashes](/symptoms/hot-flashes/) and [night sweats](/symptoms/night-sweats/) is graded :grade{id="mht-vms"}. This page covers what HRT is, who it helps, its benefits and risks under the current FDA labels, the main types, who shouldn't take it, and how to start.
+Doctors also call it menopausal hormone therapy (MHT). On our scale, its evidence for [hot flashes](/symptoms/hot-flashes/) and [night sweats](/symptoms/night-sweats/) is graded :grade{id="mht-vms"}. This page covers what HRT is, who it helps, its benefits and risks under the current FDA labels, the main types, who shouldn't take it, what it costs, and how to get it near you.
 
-## What is HRT?
+## What is hormone replacement therapy?
 
 HRT is medicine that tops up estrogen to ease menopause symptoms, given with a progestogen (progesterone or a similar hormone) if you have a uterus, because estrogen alone can cause overgrowth of the uterine lining and raise the risk of cancer there [@nams-2022-hormone-therapy; @nice-ng23-recommendations]. It is used by people with a uterus and by people who have had a hysterectomy, in different combinations.
 
@@ -84,7 +96,7 @@ HRT is medicine that tops up estrogen to ease menopause symptoms, given with a p
 
 ## Who does HRT help?
 
-HRT mainly helps people with bothersome hot flashes or night sweats, and the FDA approves it as a first-line treatment for moderate to severe hot flashes [@nams-2022-hormone-therapy]. The Menopause Society lists four FDA-approved uses [@nams-2022-hormone-therapy]:
+Hormone therapy mainly helps women and others in menopause who have bothersome hot flashes (hot flushes in the UK) or night sweats, and the FDA approves it as a first-line treatment for moderate to severe hot flashes [@nams-2022-hormone-therapy]. The Menopause Society lists four FDA-approved uses [@nams-2022-hormone-therapy]:
 
 - **Hot flashes and night sweats**: Moderate to severe symptoms. No other medicine or alternative therapy has been found to give more relief [@nams-2022-hormone-therapy].
 - **Preventing bone loss**: HRT prevents bone loss and, in a large trial, reduced fractures. It is approved to prevent osteoporosis, not to treat it; other medicines are preferred once osteoporosis is diagnosed [@nams-2022-hormone-therapy]. See [bone health after menopause](/postmenopause/bone-health/).
@@ -163,7 +175,10 @@ You start HRT by talking with a doctor, nurse practitioner or other prescriber, 
 
 - **Before the visit**: Note which symptoms bother you most, and any past cancer, blood clot, stroke, heart disease or liver disease, since these change whether HRT is suitable [@nams-2022-hormone-therapy].
 - **After you start**: Expect a review at about 3 months, then yearly [@nice-ng23-recommendations].
-- **Cost and access**: Prices vary by product and plan; see [how much HRT costs](/care/hrt-cost/), [insurance coverage](/care/insurance/), and our [menopause telehealth comparison](/compare/) if you're considering online care.
+
+### When should you start HRT?
+
+You can talk to a clinician about HRT as soon as menopause symptoms bother you; the NHS says you don't need to wait until symptoms are severe or your periods have stopped [@nhs-when-to-take-hrt]. The balance of benefits and risks is most favorable when systemic HRT is started before 60 or within 10 years of menopause [@nams-2022-hormone-therapy]. People with early or premature menopause are usually advised to take HRT until at least age 51 [@nhs-when-to-take-hrt].
 
 Our [treatment conversation builder](/tools/treatment-questions/) prints a question sheet to take with you.
 
@@ -174,6 +189,23 @@ Our [treatment conversation builder](/tools/treatment-questions/) prints a quest
 - How soon should I expect my symptoms to improve, and when will we review it?
 - When should we talk about lowering the dose or stopping?
 :::
+
+## How to get HRT near you
+
+HRT is a prescription medicine, so you need a clinician who can prescribe it: in person near you, or by telehealth [@nams-2022-hormone-therapy; @menopause-society-practitioner-directory]. These are the usual routes.
+
+- **Your primary care clinician or OB-GYN**: This is the usual first stop. If you have an HMO or POS plan, you may need a referral from your primary care doctor before the plan pays for a specialist visit [@healthcare-gov-referral-glossary; @healthcare-gov-plan-types].
+- **A certified menopause practitioner**: The Menopause Society Certified Practitioner (MSCP) credential goes to licensed clinicians, such as doctors, nurse practitioners and physician assistants, who pass an exam on midlife women's health [@menopause-society-choosing-practitioner]. The Society's free directory lets you search by US zip code; it lists only practitioners who asked to be included and are taking new patients, and it is not an endorsement [@menopause-society-practitioner-directory]. Our guide to [finding a menopause specialist](/care/find-a-menopause-specialist/) walks through it.
+- **Telehealth**: The same directory can search for practitioners who offer telehealth in your US state [@menopause-society-practitioner-directory]. Some online menopause companies prescribe HRT after a video visit or a written medical intake, according to the companies themselves [@midi-health-own-site-2026; @alloy-own-site-2026]. Our [menopause telehealth comparison](/compare/) sets out their prices and insurance rules.
+
+If you're in the UK: the NHS suggests talking to a GP about starting HRT [@nhs-when-to-take-hrt].
+
+### How much does HRT cost?
+
+Without insurance, the price depends mostly on the form and dose. In November 2026, GoodRx's average US retail prices were $19.94 to $47.05 for 90 generic estradiol tablets and $37.13 to $68.95 for 4 once-weekly estradiol patches (about 4 weeks) [@goodrx-estradiol-prices-2026-11-08]. If you have a uterus, a progestogen adds to the cost, and so do visit fees; see [how much HRT costs](/care/hrt-cost/) for gels, vaginal products and progesterone.
+
+- **With insurance**: Drugs on your plan's drug list (formulary) usually cost less. If the HRT you're prescribed isn't covered, your clinician can ask the plan for an exception, and you can appeal a denial [@healthcare-gov-prescription-medications]. More in [does insurance cover HRT?](/care/insurance/).
+- **If your pharmacy is out of patches**: In September 2026 the FDA said some people were having trouble getting their usual estradiol patches because demand rose after the 2025 label changes, and that it was working with the six patch makers to increase supply [@fda-estradiol-patch-availability-2026]. Ask your pharmacist or prescriber about other strengths, brands or forms.
 
 ## Guides in this section
 

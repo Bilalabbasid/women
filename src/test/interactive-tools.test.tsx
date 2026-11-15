@@ -14,13 +14,15 @@ import { TreatmentQuestionsBuilder } from '@/components/tools/treatment-question
 import { TwelveMonthCounter, calculateTwelveMonthWindow } from '@/components/tools/twelve-month-counter';
 
 describe('tool logic registry', () => {
-  it('loads all 6 expected tools with zero schema or file errors', () => {
+  it('loads all 8 expected tools with zero schema or file errors', () => {
     const { tools, errors } = loadToolLogic();
     expect(errors).toEqual([]);
     const ids = tools.map((t) => t.logic.id).sort();
     expect(ids).toEqual([
       '12-month-counter',
       'does-it-work-checker',
+      'hrt-prepayment-certificate-calculator',
+      'menopause-age-calculator',
       'stage-guide',
       'symptom-tracker',
       'symptoms-checklist',

@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Added a link to the black cohosh evidence review", material: false }
   - { date: "2026-11-09", summary: "Added a sourced, topic-by-topic list of HRT questions (suitability, type, risks, side effects, duration, alternatives, cost); removed unsourced appointment-length and blood-test claims; rewrote the 'too young' section", material: true }
   - { date: "2026-11-06", summary: "First comprehensive appointment question guide", material: true }
 evidence_grade: strong
@@ -121,7 +122,7 @@ The FDA has approved three nonhormone medicines for moderate to severe hot flash
 - Would CBT or clinical hypnosis be worth trying for my hot flashes or sleep?
 - If I take fezolinetant, how will we check my liver?
 
-See [non-hormonal treatments for hot flashes](/treatments/nonhormonal/).
+See [non-hormonal treatments for hot flashes](/treatments/nonhormonal/), and if you're curious about supplements, [what the evidence says on black cohosh](/does-it-work/black-cohosh/).
 
 ### What will it cost?
 

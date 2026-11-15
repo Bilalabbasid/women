@@ -1,7 +1,7 @@
 ---
 title: "Bloating in perimenopause"
 seo_title: "Perimenopause bloating: causes and what helps"
-meta_description: "Bloating is common in perimenopause. See the likely causes, simple steps that ease it, and signs that need a doctor, such as bloating that lasts 2 weeks or more."
+meta_description: "Bloating is common in perimenopause. The likely causes, simple steps that ease it, and when to see a doctor, such as bloating that lasts 2 weeks or more."
 cluster: symptoms
 primary_keyword: menopause bloating
 slug: bloating
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Shortened the meta description", material: false }
   - { date: "2026-11-09", summary: "Answers common perimenopause bloating questions (why, other causes, what helps, ovarian cancer signs, when to see a doctor) with NHS, NIH and CDC sources; self-care box; removed unsourced causes", material: true }
   - { date: "2026-11-06", summary: "Published evidence guide on bloating in perimenopause", material: true }
 evidence_grade: per_option

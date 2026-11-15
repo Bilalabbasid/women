@@ -5016,3 +5016,615 @@
   funding_conflict: null
   verified: true
   notes: Cross-sectional survey with a low response rate; 2017 data. Use as evidence of a training gap, not a current national figure.
+
+- id: fda-home-menopause-test
+  title: Menopause (home use tests)
+  authors: []
+  publisher: U.S. Food and Drug Administration
+  year: 2018
+  type: regulator_statement
+  url: https://www.fda.gov/medical-devices/home-use-tests/menopause
+  doi: null
+  accessed: 2026-11-15
+  population: General public (US) considering home menopause test kits
+  key_finding: "Home menopause test kits measure follicle stimulating hormone (FSH) in urine. They are qualitative: they show whether FSH is elevated, not whether you are definitely in menopause or perimenopause. They detect FSH accurately about 9 out of 10 times, but the test does not detect menopause or perimenopause. With age, FSH may rise and fall during the cycle; while hormone levels change, the ovaries continue to release eggs and pregnancy is still possible. Results depend on using first morning urine, drinking large amounts of water before the test, and using or recently stopping oral or patch contraceptives, hormone replacement therapy or estrogen supplements. Some home tests are identical to the one a doctor uses, but doctors would not use the test by itself; they use medical history, physical exam and other laboratory tests. A positive test indicates you may be in a stage of menopause; see a doctor if positive or if you have symptoms. Do not stop contraceptives based on results. A negative test does not mean you have not reached menopause. Do not use these tests to decide whether you are fertile or can become pregnant."
+  funding_conflict: null
+  verified: true
+  notes: Page says 'Content current as of 09/27/2018'. Read in full (raw HTML via curl) on 2026-11-15.
+
+- id: medlineplus-fsh-blood-test
+  title: "Follicle-stimulating hormone (FSH) blood test: MedlinePlus Medical Encyclopedia"
+  authors: []
+  publisher: MedlinePlus (U.S. National Library of Medicine)
+  year: 2025
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/003710.htm
+  doi: null
+  accessed: 2026-11-15
+  population: General public (US)
+  key_finding: "Normal FSH values for females: before puberty 0 to 4.0 mIU/mL; during puberty 0.3 to 10.0 mIU/mL; while still menstruating 4.7 to 21.5 mIU/mL; after menopause 25.8 to 134.8 mIU/mL. Normal value ranges may vary slightly among different labs. In women, the test helps evaluate menopause, polycystic ovary syndrome, ovarian cysts, abnormal bleeding and fertility problems. Women of childbearing age may be asked to have the test on certain days of the menstrual cycle. High FSH can occur during or after menopause (including premature menopause), during hormone therapy, with certain pituitary tumors, or with Turner syndrome."
+  funding_conflict: null
+  verified: true
+  notes: Review date 8/18/2025. The page lists the still-menstruating range as 4.7 to 21.5 mIU/mL and 4.5 to 21.5 IU/L; use the mIU/mL figures. Read via WebFetch on 2026-11-15.
+
+- id: nhs-early-menopause
+  title: Early or premature menopause
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2025
+  type: patient_information
+  url: https://www.nhs.uk/conditions/early-menopause/
+  doi: null
+  accessed: 2026-11-15
+  population: General public (UK)
+  key_finding: Early menopause is when regular periods stop before 45; premature menopause is before 40. See a GP if you think you have menopause symptoms. If you're under 45 and having menopause symptoms, a GP may sometimes do blood tests. Main treatments are the combined contraceptive pill or HRT; replacing hormones matters if menopause starts before 45 because of a higher chance of bone and heart problems.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 11 March 2025, next review due 11 March 2028. Read in full (raw HTML via curl) on 2026-11-15.
+
+- id: owh-menopause-basics-2026
+  title: Menopause basics
+  authors: []
+  publisher: Office on Women's Health, U.S. Department of Health and Human Services
+  year: 2026
+  type: patient_information
+  url: https://womenshealth.gov/menopause/menopause-basics
+  doi: null
+  accessed: 2026-11-15
+  population: General public (US)
+  key_finding: The transition into menopause usually happens between ages 45 and 55; the average age of menopause in the US is 52. Perimenopause usually begins in the mid- to late 40s and lasts about four years on average, but can last up to 10 years leading into menopause. Hot flashes and night sweats last 7 to 12 years on average, and longer for some women.
+  funding_conflict: null
+  verified: true
+  notes: Page last updated October 19, 2026. Read via Firecrawl (live fetch) on 2026-11-15.
+
+- id: mckinlay-mwhs-menopause-transition-1992
+  title: The normal menopause transition
+  authors:
+    - McKinlay SM
+    - Brambilla DJ
+    - Posner JG
+  publisher: Maturitas
+  year: 1992
+  type: cohort
+  url: https://pubmed.ncbi.nlm.nih.gov/1565019/
+  doi: 10.1016/0378-5122(92)90003-m
+  accessed: 2026-11-15
+  population: "Massachusetts Women's Health Study: about 2,570 women aged 45 to 55 in 1982 who were still menstruating and had not had a hysterectomy or ovary removal, followed for 5 years (subset of 1,178 premenopausal at baseline)"
+  key_finding: Median age at natural menopause was 51.3 years, with a median difference of 1.8 years between current smokers and non-smokers. Median age at the start of perimenopause was 47.5 years. The perimenopausal transition lasted an estimated nearly 4 years. Smokers tended to have an earlier and a shorter perimenopause. Women with longer perimenopause transitions had the highest rate of doctor visits. Symptom reporting rose in perimenopause and fell again in postmenopause, suggesting the link with symptoms is transitory.
+  funding_conflict: null
+  verified: true
+  notes: Abstract read via NCBI E-utilities efetch (PMID 1565019) on 2026-11-15. Republished in Maturitas 2008;61(1-2):4-16. Older US cohort; the transition length here runs to the last period, not to 12 months after it.
+
+- id: freeman-poas-long-term-hot-flashes-2014
+  title: "Risk of long-term hot flashes after natural menopause: evidence from the Penn Ovarian Aging Study cohort"
+  authors:
+    - Freeman EW
+    - Sammel MD
+    - Sanders RJ
+  publisher: Menopause
+  year: 2014
+  type: cohort
+  url: https://pubmed.ncbi.nlm.nih.gov/24473530/
+  doi: 10.1097/GME.0000000000000196
+  accessed: 2026-11-15
+  population: 255 women in Philadelphia who were premenopausal at baseline and reached natural menopause within 16 years of annual follow-up (Penn Ovarian Aging Study)
+  key_finding: Moderate or severe hot flashes became more common each year before menopause and peaked at 46% in the first 2 years after the final period. They declined slowly and did not return to premenopausal levels until 9 years after the final period. Mean duration of moderate/severe hot flashes after the final period was 4.6 years (4.9 years for any hot flashes). One third of women observed 10 or more years after menopause still had moderate/severe hot flashes. African-American women and obese white women had higher risks than nonobese white women; higher anxiety was a risk factor and more education was protective.
+  funding_conflict: No conflicts declared by the other authors (per the abstract's conflict statement).
+  verified: true
+  notes: Abstract read via NCBI E-utilities efetch (PMID 24473530, PMC4574289) on 2026-11-15.
+
+- id: gartoulla-vms-women-60-65-2015
+  title: Moderate to severe vasomotor and sexual symptoms remain problematic for women aged 60 to 65 years
+  authors:
+    - Gartoulla P
+    - Worsley R
+    - Bell RJ
+    - Davis SR
+  publisher: Menopause
+  year: 2015
+  type: cohort
+  url: https://pubmed.ncbi.nlm.nih.gov/30358730/
+  doi: 10.1097/GME.0000000000000383
+  accessed: 2026-11-15
+  population: Cross-sectional questionnaire study of 2,020 women aged 40 to 65 living independently across Australia (October 2013 to March 2014)
+  key_finding: "Prevalence of moderate to severe hot flashes and night sweats: 2.8% in premenopausal women, 17.1% in perimenopausal women, 28.5% in postmenopausal women younger than 55, 15.1% in postmenopausal women aged 55 to 59, and 6.5% in postmenopausal women aged 60 to 65. Smoking and a BMI of 25 to 29.9 were linked to more symptoms; education beyond high school to fewer. Use of effective prescription therapy was low."
+  funding_conflict: null
+  verified: true
+  notes: Cross-sectional survey (type set to cohort as the closest registry type; it is not a longitudinal study). Originally Menopause 2015;22(7):694-701; abstract read via its 2018 republication (PMID 30358730, Menopause 2018;25(11):1331-1338) with NCBI E-utilities on 2026-11-15.
+
+- id: cleveland-clinic-menopause-after-hysterectomy-2025
+  title: Do You Go Through Menopause After a Hysterectomy?
+  authors:
+    - Cleveland Clinic Health Essentials (with Pelin Batur, MD)
+  publisher: Cleveland Clinic
+  year: 2025
+  type: patient_information
+  url: https://health.clevelandclinic.org/menopause-after-hysterectomy
+  doi: null
+  accessed: 2026-11-15
+  population: General public (US) who have had or are considering a hysterectomy
+  key_finding: If you still have your ovaries, you typically won't go through menopause after a hysterectomy, though a small number of people may have symptoms because surgery can affect blood flow to an ovary. If both ovaries are removed (oophorectomy), menopause symptoms may start very soon after surgery; they are the same symptoms as natural menopause but may be more severe. A doctor can't predict how long hot flashes or other symptoms will last because it varies, and blood tests won't tell you when symptoms will go away.
+  funding_conflict: Cleveland Clinic is a nonprofit health system; the site carries advertising.
+  verified: true
+  notes: Article dated February 5, 2025. Read via WebFetch on 2026-11-15. It also says many people feel better within one to two years and a small number have symptoms for life, and that 'studies show' most symptoms go away within seven to 10 years on average, without naming the studies; not cited for those figures.
+
+- id: medlineplus-fsh-test-2023
+  title: Follicle-stimulating hormone (FSH) levels test
+  authors: []
+  publisher: MedlinePlus (U.S. National Library of Medicine)
+  year: 2023
+  type: patient_information
+  url: https://medlineplus.gov/lab-tests/follicle-stimulating-hormone-fsh-levels-test/
+  doi: null
+  accessed: 2026-11-15
+  population: General public (US)
+  key_finding: Menopause usually happens around age 50 and perimenopause usually starts around 45. If you are 45 or older, FSH testing usually isn't needed because high FSH is a normal sign of perimenopause and menopause; an FSH test with other hormone tests may be needed for premature menopause (age 40 or younger), early menopause (before 45), or symptoms that may be menopause when the cause isn't clear. Conditions linked to high FSH include primary ovarian insufficiency, polycystic ovary syndrome, thyroid or adrenal disorders and Turner syndrome. Home urine FSH kits can only find higher than normal FSH levels and should not be used to check whether you can become pregnant.
+  funding_conflict: null
+  verified: true
+  notes: Last updated December 4, 2023.
+
+- id: golezar-poi-early-menopause-prevalence-2019
+  title: "The global prevalence of primary ovarian insufficiency and early menopause: a meta-analysis"
+  authors:
+    - Golezar S
+    - Ramezani Tehrani F
+    - Khazaei S
+    - Ebadi A
+    - Keshavarz Z
+  publisher: Climacteric
+  year: 2019
+  type: systematic_review
+  url: https://pubmed.ncbi.nlm.nih.gov/30829083/
+  doi: 10.1080/13697137.2019.1574738
+  accessed: 2026-11-15
+  population: 31 studies (English-language, published 1980-2017) reporting prevalence of POI or early menopause in women worldwide
+  key_finding: Pooled prevalence was 3.7% (95% CI 3.1 to 4.3) for primary ovarian insufficiency and 12.2% (95% CI 10.5 to 14) for early menopause. POI prevalence was higher in medium and low Human Development Index countries; the prevalence trend did not change over time.
+  funding_conflict: null
+  verified: true
+  notes: Read via PubMed abstract (NCBI E-utilities efetch). Abstract does not restate the age cut-offs used for POI and early menopause.
+
+- id: goodrx-veozah-prices-2026-11-14
+  title: Veozah 2026 prices, coupons & savings tips
+  authors: []
+  publisher: GoodRx
+  year: 2026
+  type: other
+  url: https://www.goodrx.com/veozah
+  doi: null
+  accessed: 2026-11-15
+  population: N/A - US retail drug pricing data
+  key_finding: "Page states GoodRx coupon prices last updated 11/14/26. Veozah 45 mg, 30 tablets: retail price $700.44; GoodRx price $484.75 (lowest listed; pharmacy prices ranged up to about $650). Says 'There are currently no generic alternatives for Veozah' and it 'is covered by some Medicare and insurance plans, but some pharmacy coupons or cash prices may be lower.' Lists a manufacturer copay offer (sponsored by Astellas: may pay $0 for the first month and as little as $30 per monthly refill, commercial insurance only) and an Astellas patient assistance program."
+  funding_conflict: GoodRx sells discount coupons and a paid membership; the manufacturer offer text on the page is sponsored by Astellas. Only the listed retail price, generic status and coverage statement are used.
+  verified: true
+  notes: Read via a page scrape on 2026-11-15 (prices dated 11/14/26). Prices change often; re-check before reuse.
+
+- id: veozah-savings-program-terms-2026
+  title: VEOZAH Savings Program - eligibility restrictions, terms and conditions
+  authors: []
+  publisher: Astellas Pharma US (program administered by McKesson)
+  year: 2026
+  type: brand_funded
+  url: https://www.veozahsavings.com/
+  doi: null
+  accessed: 2026-11-15
+  population: US patients with commercial prescription insurance and a Veozah prescription
+  key_finding: The program is for eligible patients with commercial prescription insurance. Annual maximum copay assistance of up to $4,000 per calendar year, after which the patient pays the remaining out-of-pocket costs. Not valid for patients whose prescription claims are paid in whole or in part by any state or federal government program, including Medicaid, Medicare, Medigap, DoD, VA and TRICARE. Not valid for cash-paying patients. Valid only in the 50 US states, Washington DC and Puerto Rico. Astellas may reduce or end assistance if the patient's plan does not approve the Veozah claim.
+  funding_conflict: Manufacturer's own savings program terms.
+  verified: true
+  notes: veozahsavings.com redirects to activatethecard.com/8083. Used only for who is and isn't eligible and the annual cap; no copay amounts are cited from this page.
+
+- id: nice-ta1143-fezolinetant-2026
+  title: Fezolinetant for treating moderate to severe vasomotor symptoms associated with menopause (TA1143)
+  authors: []
+  publisher: National Institute for Health and Care Excellence (NICE)
+  year: 2026
+  type: guideline
+  url: https://www.nice.org.uk/guidance/ta1143/chapter/1-Recommendation
+  doi: null
+  accessed: 2026-11-15
+  population: People in England with moderate to severe menopausal vasomotor symptoms for whom HRT is unsuitable
+  key_finding: Published 31 March 2026. Fezolinetant (Veoza) can be used as an option to treat moderate to severe vasomotor symptoms associated with menopause when hormone replacement therapy is unsuitable. It must be funded in the NHS in England for this population, if considered the most suitable option, within 90 days of publication. Usual treatment is HRT. Trial evidence shows fezolinetant reduces the frequency and severity of moderate to severe vasomotor symptoms compared with placebo; it has not been directly compared with non-hormonal treatments, and indirect comparisons suggest it may have similar effectiveness to them, but this is uncertain.
+  funding_conflict: null
+  verified: true
+  notes: Read the Recommendation chapter on 2026-11-15.
+
+- id: lederman-skylight1-2023
+  title: "Fezolinetant for treatment of moderate-to-severe vasomotor symptoms associated with menopause (SKYLIGHT 1): a phase 3 randomised controlled study"
+  authors:
+    - Lederman S
+    - Ottery FD
+    - Cano A
+    - Santoro N
+    - Shapiro M
+    - Stute P
+    - Thurston RC
+    - English M
+    - Franklin C
+    - Lee M
+    - Neal-Perry G
+  publisher: The Lancet
+  year: 2023
+  type: rct
+  url: https://pubmed.ncbi.nlm.nih.gov/36924778/
+  doi: 10.1016/S0140-6736(23)00085-5
+  accessed: 2026-11-15
+  population: Women aged 40-65 with an average of 7 or more moderate to severe hot flashes a day (527 randomized to placebo, fezolinetant 30 mg or 45 mg; 97 sites in North America and Europe)
+  key_finding: Fezolinetant 30 mg and 45 mg significantly reduced the frequency and severity of vasomotor symptoms versus placebo at weeks 4 and 12 (45 mg frequency difference -2.07 at week 4 and -2.55 at week 12). Improvements in frequency and severity were observed after 1 week and maintained over 52 weeks. Liver enzyme elevations were rare and generally asymptomatic and transient.
+  funding_conflict: Funded by Astellas Pharma (manufacturer); several authors are Astellas employees or consultants.
+  verified: true
+  notes: Abstract read via NCBI E-utilities efetch on 2026-11-15.
+
+- id: goodrx-lynkuet-prices-2026-11-14
+  title: Lynkuet 2026 prices, coupons & savings tips
+  authors: []
+  publisher: GoodRx
+  year: 2026
+  type: other
+  url: https://www.goodrx.com/lynkuet
+  doi: null
+  accessed: 2026-11-15
+  population: N/A - US retail drug pricing data
+  key_finding: "Page states GoodRx coupon prices last updated 11/14/26. Lynkuet, 1 carton of 60 capsules of 60 mg: retail price $781.98; GoodRx price $615.08. Says 'Lynkuet is only available as a brand name drug.' Lists a manufacturer copay savings card (sponsored by Bayer; terms and conditions apply) and a Bayer patient assistance program that provides the medicine at no charge to eligible patients."
+  funding_conflict: GoodRx sells discount coupons and a paid membership; the savings card text is sponsored by Bayer. Only the retail price, brand-only status and the existence of the two manufacturer programs are used.
+  verified: true
+  notes: Read via a page scrape on 2026-11-15 (prices dated 11/14/26). At the labeled dose of two capsules a day, 60 capsules is a 30-day supply.
+
+- id: menopause-society-mscp-exam-2026
+  title: How to Earn an MSCP Credential (Certification Examination)
+  authors: []
+  publisher: The Menopause Society
+  year: 2026
+  type: other
+  url: https://menopause.org/professional-resources/mscp-certification
+  doi: null
+  accessed: 2026-11-15
+  population: Licensed healthcare professionals seeking the MSCP credential
+  key_finding: "The Menopause Society developed its competency examination in 2002 to set standards for menopause practice and help women find clinicians who could provide optimal menopause care; those who pass earn the Menopause Society Certified Practitioner (MSCP) credential. All licensed healthcare professionals are eligible and must submit a copy of a current license. The exam is taken by live remote proctoring (or at a test center for an extra fee) during 1-month windows in March, June, September and November. Fees: $400 for Society members, $725 for nonmembers. There is no study guide, and the Society does not endorse prep courses."
+  funding_conflict: Issued by the organization that runs the credential.
+  verified: true
+  notes: Page modified 2026-10-12; read via a page scrape on 2026-11-15.
+
+- id: nhs-oestrogen-medicine-2026
+  title: Oestrogen tablets, patches, gel and spray
+  authors: []
+  publisher: NHS (UK)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/medicines/oestrogen-tablets-patches-gel-and-spray/
+  doi: null
+  accessed: 2026-11-15
+  population: General public (UK) using oestrogen HRT
+  key_finding: "Common brands: Oestrogel, Evorel, Sandrena, Lenzetto, Estradot, Progynova. Prescription only; comes as tablets, patches, gel and spray; if you still have a womb you also need a progestogen. Patches: stick below the waist, such as thigh or bottom, not near the breasts or on cuts, spots or irritated skin; usually changed once or twice a week depending on brand; if a patch falls off, replace it and keep to the usual change days; start a new pack with no break; if you forget to change a patch, change it as soon as you remember and keep the same change days. Gel: once a day to clean dry skin, not the same area 2 days in a row, not near breasts or genitals (shoulders, outer arms, inner thighs or lower body), wait at least 1 hour before washing the area, up to 5 minutes to dry; do not let others, especially children, touch the area before it is dry. Missed gel/spray/tablet dose: use if more than 12 hours until next dose, otherwise skip; do not double. Common side effects: headaches, breast pain or tenderness, skin irritation where patches are stuck, unexpected vaginal bleeding or spotting or heavier periods. Rare serious side effects: DVT or pulmonary embolism, jaundice, stroke, anaphylaxis (call 999 for suspected pulmonary embolism, stroke or anaphylaxis). GP should review after the first 3 months; stopping may bring symptoms back."
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 23 October 2026, next review due 23 October 2029. Read in full via direct download on 2026-11-15. UK spelling (oestrogen) on the page.
+
+- id: nhs-hrt-medicines-2026
+  title: Hormone replacement therapy (HRT) medicines hub
+  authors: []
+  publisher: NHS (UK)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/
+  doi: null
+  accessed: 2026-11-15
+  population: General public (UK) considering HRT
+  key_finding: "Lists NHS medicine pages with brand names. Oestrogen tablets, patches, gel and spray: brands include Estradot, Evorel, FemSeven, Lenzetto, Oestrogel, Progynova, Sandrena. Continuous combined HRT (for when your periods have stopped): brands include Evorel Conti, Femoston Conti, FemSeven Conti, Kliofem, Kliovance. Sequential combined HRT (for when you still have periods): brands include Elleste Duet, Evorel Sequi, Femoston, FemSeven Sequi, Novofem. Also has a separate page for Utrogestan (micronised progesterone)."
+  funding_conflict: null
+  verified: true
+  notes: Hub/index page; no review date shown in the downloaded content. Brand names are listed as examples, not recommendations.
+
+- id: nhs-utrogestan-2023
+  title: Utrogestan (micronised progesterone)
+  authors: []
+  publisher: NHS (UK)
+  year: 2023
+  type: patient_information
+  url: https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/utrogestan-micronised-progesterone/
+  doi: null
+  accessed: 2026-11-15
+  population: General public (UK) taking Utrogestan as part of combined HRT
+  key_finding: "About: Utrogestan contains progesterone identical to the hormone the body produces; taken with oestrogen as combined HRT if you still have a womb; prescription only; capsules you swallow; vaginal capsules are only used in fertility treatment (IVF); HRT can take up to 3 months to fully improve symptoms. How and when: usual dose 2 capsules (200mg) once a day on days 15 to 26 of a 28-day cycle with a few days of bleeding after; if no period for 6 to 12 months or more, 1 capsule (100mg) on days 1 to 25; sometimes every day; less or no bleeding on days 1 to 25, usually none once used to daily use; take at bedtime at least 2 hours after food, swallow whole with water; missed dose: take when remembered unless nearly time for next dose, do not double. Side effects: changes in periods or spotting (common in first 3 to 6 months; talk to a doctor about heavy or unexpected bleeding after 6 months), headaches, breast pain or tenderness, feeling tired or dizzy, mood changes; also nausea, mild rash or itchy skin, acne. Common questions: progesterone comes from plants; no one type of HRT suits everyone; speak to a doctor or pharmacist if a brand is unavailable because of supply shortages; an HRT prepayment certificate covers all HRT prescriptions for a year for a small fee; no good evidence Utrogestan makes you put on weight; it is not contraception."
+  funding_conflict: null
+  verified: true
+  notes: "Subpages read 2026-11-15: about-utrogestan/, who-can-and-cannot-take-utrogestan/, how-and-when-to-take-utrogestan/, side-effects-of-utrogestan/, common-questions-about-utrogestan/ (all under the URL above). Last reviewed 5 January 2023 (next review was due 5 January 2026)."
+
+- id: emc-oestrogel-pil-2026
+  title: "Oestrogel Pump-Pack 750 micrograms/actuation gel: patient information leaflet"
+  authors: []
+  publisher: Besins Healthcare (via electronic medicines compendium, emc)
+  year: 2026
+  type: regulator_label
+  url: https://www.medicines.org.uk/emc/product/353/pil
+  doi: null
+  accessed: 2026-11-15
+  population: Postmenopausal women using Oestrogel (UK)
+  key_finding: "Oestrogel contains estradiol (each pump of 1.25 g gel contains 750 micrograms); used to relieve symptoms after menopause and to prevent osteoporosis when other medicines are not suitable; prescribed with a separate progestogen if you still have a womb. Apply once a day; usual dose 2 pumps (pump pack lasts 4 weeks; 4 pumps lasts 2 weeks); discard the first dose from a new pump; spread over the outer arm and shoulder of both arms or the mid-inner thigh of both legs; not on or near the breasts or genital area; leave to dry 5 minutes before covering; wash hands after; do not wash the skin or apply other skin products for at least 1 hour; avoid close skin contact with a partner for 1 hour; do not let others, especially children, touch the area. Missed dose: apply if more than 12 hours until next dose, otherwise skip; do not double. Contains alcohol and is flammable until dry. Common side effects (up to 1 in 10): headache, nausea, abdominal pain, breast pain, painful periods, heavier or longer periods, abnormal or irregular bleeding, white or yellow vaginal discharge, weight change."
+  funding_conflict: Manufacturer-issued leaflet (regulator-approved text)
+  verified: true
+  notes: Read from the PDF (https://www.medicines.org.uk/emc/files/pil.353.pdf); leaflet last revised September 2026; updated on emc 1 Oct 2026.
+
+- id: emc-evorel-pil-2025
+  title: "Evorel 25, 50, 75 and 100 Patches: patient information leaflet"
+  authors: []
+  publisher: Theramex (via electronic medicines compendium, emc)
+  year: 2025
+  type: regulator_label
+  url: https://www.medicines.org.uk/emc/product/10927/pil
+  doi: null
+  accessed: 2026-11-15
+  population: Women using Evorel estradiol patches (UK)
+  key_finding: "Evorel contains estradiol, spread evenly in each patch and passing slowly through the skin; 4 strengths (Evorel 25, 50, 75, 100); the highest dose is 100 micrograms of estradiol a day (Evorel 100). Change twice a week on the same two days (one patch on for 3 days, the next for 4); start a new pack with no break. Stick on a hairless area below the waist (most prefer thigh or bottom); not on or near breasts, cuts, spots or irritated skin; no cream, moisturiser or talc first; not the same area twice in a row; not under elasticated areas or tight waistbands; apply to clean, dry, cool skin; press with the palm for at least 10 seconds. If a patch falls off, apply a new one and keep the original change days; after a bath or shower wait until skin cools. If you forget, change as soon as you remember; some bleeding or spotting may occur. Bath, shower, swim and exercise as normal; do not scrub hard; keep patch out of direct sunlight. Fold used patches sticky side together, keep from children and pets, do not flush. Very common: irritated, itchy skin and rash where the patch is applied; common: red, puffy skin at the site, breast pain, headache, dizziness, nausea or stomach pain, breakthrough bleeding, weight gain."
+  funding_conflict: Manufacturer-issued leaflet (regulator-approved text)
+  verified: true
+  notes: Leaflet last revised March 2025; updated on emc 16 May 2025. Same leaflet covers Evorel 25, 50, 75 and 100. Product code PL 49105/0006.
+
+- id: emc-utrogestan-pil-2024
+  title: "Utrogestan 100mg Capsules: patient information leaflet"
+  authors: []
+  publisher: Besins Healthcare (via electronic medicines compendium, emc)
+  year: 2024
+  type: regulator_label
+  url: https://www.medicines.org.uk/emc/product/352/pil
+  doi: null
+  accessed: 2026-11-15
+  population: Women with a womb taking Utrogestan with estrogen as HRT (UK)
+  key_finding: "Utrogestan contains progesterone and is used with an estrogen as HRT, only in women who still have a womb; not a contraceptive. Recommended dose 200 mg daily at bedtime for 12 days in the last half of each cycle (days 15 to 26), or 100 mg at bedtime on days 1 to 25. Take by mouth, swallow whole with water, at bedtime, not with food. May cause sleepiness or dizziness; taking it at bedtime can reduce these effects. Contains soybean lecithin: do not use if allergic to peanut or soya. Common side effects (up to 1 in 10): weight changes, insomnia, feeling tired or dizzy, headaches, abdominal swelling or pain, nausea, itching, irregular bleeding, breast pain or tenderness, missing periods. Other ingredients include sunflower oil."
+  funding_conflict: Manufacturer-issued leaflet (regulator-approved text)
+  verified: true
+  notes: Read from the PDF (https://www.medicines.org.uk/emc/files/pil.352.pdf); leaflet last revised November 2024; updated on emc 18 Feb 2025.
+
+- id: nhs-prescription-prepayment-certificate-2023
+  title: Save money with a prescription prepayment certificate (PPC)
+  authors: []
+  publisher: NHS (UK)
+  year: 2023
+  type: patient_information
+  url: https://www.nhs.uk/nhs-services/prescriptions/save-money-with-a-prescription-prepayment-certificate-ppc/
+  doi: null
+  accessed: 2026-11-15
+  population: People in England who pay NHS prescription charges
+  key_finding: Prescription charges are per item. A hormone replacement therapy (HRT) PPC costs £19.80 and saves money if you need more than 2 prescribed qualifying HRT items in a year; it covers an unlimited number of some HRT medicines for 12 months, including if prescribed for something other than menopause symptoms. A 3-month PPC costs £32.05 and a 12-month PPC £114.50. Some pharmacies can sell the HRT PPC.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 27 November 2023 (next review due 27 November 2026); figures checked live on 2026-11-15. Single item charge (£9.90) is on https://www.nhs.uk/nhs-services/prescriptions/nhs-prescription-charges/.
+
+- id: commons-library-prescription-charges-england-2026
+  title: NHS prescription charges in England (Research Briefing CBP-10671)
+  authors: []
+  publisher: House of Commons Library (UK Parliament)
+  year: 2026
+  type: other
+  url: https://commonslibrary.parliament.uk/research-briefings/cbp-10671/
+  doi: null
+  accessed: 2026-11-15
+  population: People in the UK paying for NHS prescriptions
+  key_finding: From 1 May 2024 the prescription charge in England is £9.90 per item, frozen at that level in April 2025 (freeze also applies to PPCs). Prescriptions are free of charge in Scotland, Wales and Northern Ireland. The HRT PPC, launched April 2023, costs £19.80 per year and gives unlimited qualifying HRT items on prescription; it saves money if a person receives more than two qualifying HRT items in a year. People aged 60 or over get free prescriptions in England.
+  funding_conflict: null
+  verified: true
+  notes: Published 21 August 2026. Parliamentary research briefing, not legal advice.
+
+- id: fda-menopause-medicines-help-you
+  title: "Menopause: Medicines to Help You"
+  authors: []
+  publisher: U.S. Food and Drug Administration
+  year: 2019
+  type: patient_information
+  url: https://www.fda.gov/consumers/free-publications-women/menopause-medicines-help-you
+  doi: null
+  accessed: 2026-11-15
+  population: US women considering medicines for menopause symptoms
+  key_finding: "FDA consumer list of menopause hormone medicines (content current as of 08/22/2019). Estrogen-only medicines include estradiol (pill, patch, gel, skin spray, skin cream emulsion, vaginal cream, vaginal tablet, vaginal insert), estradiol acetate (pill, vaginal ring), estradiol valerate (injection), conjugated estrogens (pill, vaginal cream, injection), synthetic conjugated estrogens (pill), esterified estrogens (pill) and estropipate (pill, vaginal cream); one estradiol patch (Menostar) is only used to prevent osteoporosis. Progestin-only medicines: micronized progesterone (Prometrium, pill) and medroxyprogesterone acetate (Provera, pill). Combination estrogen-progestin medicines: estradiol/norethindrone acetate (pill, patch), estradiol/levonorgestrel (patch), estradiol/drospirenone (pill), ethinyl estradiol/norethindrone acetate (pill), estradiol/norgestimate (pill), conjugated estrogens/medroxyprogesterone (pill). Also lists conjugated estrogens/bazedoxifene (Duavee, pill). States that women who still have a uterus need to take a progestin to prevent endometrial cancer, and that the drug and risk information may change."
+  funding_conflict: null
+  verified: true
+  notes: Opened 2026-11-15. The list dates from 2019 and names brands, some of which may no longer be marketed; use it for ingredient and form categories, not for current availability. Drugs@FDA is the current source for approved products.
+
+- id: cleveland-clinic-night-sweats-2026
+  title: "Night Sweats: Menopause, Other Causes & Treatment"
+  authors: []
+  publisher: Cleveland Clinic
+  year: 2026
+  type: patient_information
+  url: https://my.clevelandclinic.org/health/symptoms/16562-night-sweats
+  doi: null
+  accessed: 2026-11-15
+  population: General public (US)
+  key_finding: "Night sweats happen more often in women because of changes in estrogen and progesterone, which help the body control its temperature. During a night sweat you may feel a sudden wave of heat, especially in the neck, chest and upper body, then feel cold when the sweating stops. Hormonal causes: perimenopause and menopause (common); pregnancy, with sweating that may continue for a few weeks after birth; and the menstrual cycle (estrogen drops before a period; night sweats are a less common PMS symptom). Other causes: bacterial and viral infections such as flu or COVID-19; overactive thyroid, endocrine tumors and diabetes; sleep disorders such as sleep apnea; cancers such as leukemia and lymphoma, and some cancer treatments; anxiety, panic disorder, alcohol and other substances, and constant stress; many medicines (including blood pressure medicines, antidepressants, some migraine medicines, pain relievers, breast cancer treatments and steroids); and hyperhidrosis. There is some evidence vitamin B12 deficiency can lead to night sweats, but a nutritional deficiency alone rarely causes them. See a provider if night sweats disrupt your sleep; if you are close to 50 and waking up drenched, menopause is likely the cause, but only a provider can diagnose it."
+  funding_conflict: null
+  verified: true
+  notes: Page says 'Medically Reviewed. Last updated on 04/28/2026.' Read in full via Firecrawl scrape on 2026-11-15. Cleveland Clinic is a nonprofit academic medical center whose site carries advertising.
+
+- id: menopause-society-glossary-2026
+  title: Menopause definitions (patient education glossary)
+  authors: []
+  publisher: The Menopause Society
+  year: 2026
+  type: patient_information
+  url: https://menopause.org/patient-education/menopause-glossary
+  doi: null
+  accessed: 2026-11-15
+  population: General public (US)
+  key_finding: Premenopause is the span of time from puberty (onset of menstrual periods) to perimenopause. Perimenopause begins with the onset of menstrual cycle changes and other menopause-related symptoms and extends through menopause (the last menstrual period) to 1 year after menopause; it is experienced only with spontaneous (natural) menopause, not induced menopause, and is also called the menopause transition. Menopause is the final menstrual period, confirmed after 12 consecutive months without a period, and marks the permanent end of menstruation and fertility. Postmenopause is the span of time after menopause. Spontaneous (natural) menopause occurs, on average, at age 52. Induced menopause occurs when both ovaries are surgically removed or permanently damaged by cancer treatments.
+  funding_conflict: The Menopause Society is a nonprofit professional society; the glossary page shows no funding statement.
+  verified: true
+  notes: Page titled 'Menopause Definitions'; no publication or update date shown (copyright 2026). Opened via WebFetch on 2026-11-15.
+
+- id: nhs-menopause-overview
+  title: Menopause
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/conditions/menopause/
+  doi: null
+  accessed: 2026-11-15
+  population: General public (UK)
+  key_finding: Menopause is when periods change and eventually stop because of lower hormone levels. It usually affects women between 45 and 55 but it can happen earlier.
+  funding_conflict: null
+  verified: true
+  notes: Opened 2026-11-15. No review date shown in the fetched text. The page gives no UK average age.
+
+- id: nhsbsa-hrt-ppc
+  title: NHS Hormone Replacement Therapy Prescription Prepayment Certificate (HRT PPC)
+  authors: []
+  publisher: NHS Business Services Authority
+  year: 2026
+  type: regulator_statement
+  url: https://www.nhsbsa.nhs.uk/help-nhs-prescription-costs/nhs-hormone-replacement-therapy-prescription-prepayment-certificate-hrt-ppc
+  doi: null
+  accessed: 2026-11-15
+  population: People who pay NHS prescription charges in England
+  key_finding: The HRT PPC costs a one-off £19.80, the cost of two single prescription items at £9.90 each. It covers an unlimited number of certain HRT medicines for 12 months, regardless of why they are prescribed, and is valid on the day it expires. It does not cover all HRT medicines; if you also get other prescriptions, a 3 or 12 month PPC that covers all NHS prescriptions may save more. Buy online (certificate emailed, printed or downloaded) or at some pharmacies; help line 0300 330 2089. The start date can be up to one calendar month before or after the purchase date. To claim back a charge paid while waiting, get an FP57 refund form when you pay (you cannot get one later) and apply within 3 months; the HRT PPC must cover the date paid and the medicine. HRT PPCs are not refundable, even if your circumstances change. Says an HRT PPC could save money if you pay for NHS prescribed HRT medicine 3 or more times in 12 months.
+  funding_conflict: null
+  verified: true
+  notes: "Opened 2026-11-15. No last-updated date shown. Buy service: https://health-charge-exemptions.nhsbsa.nhs.uk/buy-hrt-ppc/start"
+
+- id: nhsbsa-hrt-ppc-medicines
+  title: Medicines covered by the HRT PPC
+  authors: []
+  publisher: NHS Business Services Authority
+  year: 2026
+  type: regulator_statement
+  url: https://www.nhsbsa.nhs.uk/help-nhs-prescription-costs/nhs-hormone-replacement-therapy-prescription-prepayment-certificate-hrt-ppc/medicines-covered-hrt-ppc
+  doi: null
+  accessed: 2026-11-15
+  population: People who pay NHS prescription charges in England
+  key_finding: The HRT PPC only covers HRT medicines that are also licensed to treat the menopause in the UK, so some HRT medicines are not listed; medicines not on the list are not covered. The list includes estradiol gels, patches, tablets and spray (for example Oestrogel, Evorel and Evorel Gel, Sandrena, Elleste Solo and Duet, Estradot, Estraderm MX, Progynova TS, Lenzetto, Zumenon), micronised progesterone (Utrogestan and generic 100mg and 200mg capsules), vaginal estrogens (for example Vagifem, Vagirux, Gina, Estring, Blissel, Imvaggis, Ovesse, generic estriol), Intrarosa, tibolone (Livial), and Mirena, which is a free contraceptive so no charge applies. Testosterone is not on the list. Generic versions are covered if the generic name is on the prescription. The list is subject to change; check with a GP or pharmacist.
+  funding_conflict: null
+  verified: true
+  notes: Last updated 1 July 2026 (Evorel Gel added). new-sources-s5.yaml has the same list as nhsbsa-hrt-ppc-medicines-2026 under the longer alias URL; the lead may merge the two ids.
+
+- id: nhsbsa-ppc
+  title: NHS Prescription Prepayment Certificates (PPCs)
+  authors: []
+  publisher: NHS Business Services Authority
+  year: 2026
+  type: regulator_statement
+  url: https://www.nhsbsa.nhs.uk/help-nhs-prescription-costs/nhs-prescription-prepayment-certificates-ppcs
+  doi: null
+  accessed: 2026-11-15
+  population: People who pay NHS prescription charges in England
+  key_finding: "A PPC covers all your NHS prescriptions for a set price: £32.05 for 3 months or £114.50 for 12 months. The 12-month PPC can be paid in 10 monthly Direct Debit instalments (not at pharmacies). You will save money if you need more than 3 items in 3 months, or 11 items in 12 months. To reclaim a charge, get an FP57 when you pay and apply within 3 months. If you become entitled to free prescriptions while your PPC is valid, you may get a refund."
+  funding_conflict: null
+  verified: true
+  notes: Opened 2026-11-15. No last-updated date shown.
+
+- id: nhsbsa-free-prescriptions
+  title: Free NHS prescriptions
+  authors: []
+  publisher: NHS Business Services Authority
+  year: 2026
+  type: regulator_statement
+  url: https://www.nhsbsa.nhs.uk/help-nhs-prescription-costs/free-nhs-prescriptions
+  doi: null
+  accessed: 2026-11-15
+  population: People in England
+  key_finding: You get free NHS prescriptions in England if you are under 16; 16, 17 or 18 and in full-time education; 60 or over; get Universal Credit with take-home pay under the limit, or Pension Credit Guarantee Credit; are pregnant or had a baby in the last 12 months with a valid maternity exemption certificate; have a valid medical exemption certificate; have an HC2 certificate (NHS Low Income Scheme); or have a valid war pension exemption certificate (for your accepted disability). Some items are always free, including contraceptives and medication given to hospital inpatients.
+  funding_conflict: null
+  verified: true
+  notes: Opened 2026-11-15. No last-updated date shown.
+
+- id: govuk-get-a-ppc
+  title: Get a prescription prepayment certificate
+  authors: []
+  publisher: GOV.UK
+  year: 2026
+  type: regulator_statement
+  url: https://www.gov.uk/get-a-ppc
+  doi: null
+  accessed: 2026-11-15
+  population: People in England
+  key_finding: You can only get a PPC if you live in England. A prescription costs £9.90 per item. A PPC costs £32.05 for 3 months or £114.50 for 12 months. If you will buy 4 or more prescriptions in 3 months, or 12 or more in 12 months, it may be cheaper to buy a PPC.
+  funding_conflict: null
+  verified: true
+  notes: Opened 2026-11-15.
+
+- id: govuk-get-a-ppc-hrt
+  title: "Get a prescription prepayment certificate: if you've been prescribed hormone replacement therapy (HRT)"
+  authors: []
+  publisher: GOV.UK
+  year: 2026
+  type: regulator_statement
+  url: https://www.gov.uk/get-a-ppc/hrt-ppc
+  doi: null
+  accessed: 2026-11-15
+  population: People in England
+  key_finding: The HRT PPC costs £19.80 for 12 months and covers all your eligible HRT prescriptions for that period, with no limit on the number of HRT items. You'll save money if you are going to buy more than 2 prescription items in 12 months. It does not cover other prescriptions; you may save more with a standard 3 or 12 month PPC if you need 4 or more items in 3 months with at least 2 not eligible HRT medication, or 12 or more items in 12 months with at least 10 not eligible HRT medication.
+  funding_conflict: null
+  verified: true
+  notes: Opened 2026-11-15.
+
+- id: govuk-prescription-charges-frozen-2026
+  title: Chancellor freezes charges to keep prescriptions under a tenner
+  authors: []
+  publisher: GOV.UK (HM Treasury and Department of Health and Social Care)
+  year: 2025
+  type: regulator_statement
+  url: https://www.gov.uk/government/news/chancellor-freezes-charges-to-keep-prescriptions-under-a-tenner
+  doi: null
+  accessed: 2026-11-15
+  population: People in England
+  key_finding: The cost of a single prescription will be frozen at £9.90, and 3-month and annual prescription prepayment certificates are frozen for 2026/27. Around 89% of prescriptions in England are already dispensed free of charge.
+  funding_conflict: null
+  verified: true
+  notes: Published 21 November 2025. Does not list the PPC prices or the HRT PPC; those come from NHSBSA and GOV.UK get-a-ppc.
+
+- id: nhs-ppc-save-money
+  title: Save money with a prescription prepayment certificate (PPC)
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2023
+  type: patient_information
+  url: https://www.nhs.uk/nhs-services/prescriptions/save-money-with-a-prescription-prepayment-certificate-ppc/
+  doi: null
+  accessed: 2026-11-15
+  population: People in England
+  key_finding: A 3-month PPC costs £32.05 and a 12-month PPC £114.50. Prescription charges are for each item, not each prescription. The HRT PPC costs £19.80 and covers an unlimited number of some HRT medicines for 12 months, even if prescribed for something other than menopause. Buy online from NHSBSA, by phone on 0300 330 1341, or at some pharmacies (3-month PPC and HRT PPC). The certificate starts on the day you apply unless you ask for another date, which must be within 1 month before or after the date of your application. Ask for an FP57 receipt if you pay while waiting for a PPC.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 27 November 2023 (next review due 27 November 2026); prices shown match the 2026/27 frozen charges.
+
+- id: nhsinform-prescription-charges
+  title: Prescription charges and exemptions
+  authors: []
+  publisher: NHS inform (Scottish Government)
+  year: 2026
+  type: patient_information
+  url: https://www.nhsinform.scot/care-support-and-rights/nhs-services/pharmacy/prescription-charges-and-exemptions/
+  doi: null
+  accessed: 2026-11-15
+  population: People in Scotland
+  key_finding: Prescriptions in Scotland are free. Prescription forms from Wales, Northern Ireland and the Isle of Man are dispensed free in Scotland; prescription forms from England are charged at the English rate of £9.90 per item unless you are entitled to free prescriptions in England.
+  funding_conflict: null
+  verified: true
+  notes: Last updated 10 November 2026.
+
+- id: gov-wales-free-prescriptions
+  title: Free prescriptions
+  authors: []
+  publisher: Welsh Government
+  year: 2020
+  type: regulator_statement
+  url: https://www.gov.wales/free-prescriptions
+  doi: null
+  accessed: 2026-11-15
+  population: People in Wales
+  key_finding: If you are registered with a GP in Wales you are entitled to free prescriptions from a pharmacist in Wales. If you live in Wales but are registered with a GP in England you will be issued with an entitlement card, which you show at the pharmacy.
+  funding_conflict: null
+  verified: true
+  notes: Last updated 18 September 2020.
+
+- id: nidirect-help-health-costs
+  title: Help with health costs
+  authors: []
+  publisher: nidirect (Northern Ireland government)
+  year: 2026
+  type: regulator_statement
+  url: https://www.nidirect.gov.uk/articles/help-health-costs
+  doi: null
+  accessed: 2026-11-15
+  population: People in Northern Ireland
+  key_finding: All prescriptions dispensed in Northern Ireland are free of charge for everyone. This includes medication, wigs and surgical appliances.
+  funding_conflict: null
+  verified: true
+  notes: Opened 2026-11-15.

@@ -6,9 +6,11 @@ import {
   CalendarClock,
   Check,
   Compass,
+  Hourglass,
   ListChecks,
   MessageCircleQuestion,
   NotebookPen,
+  PoundSterling,
   Scale,
 } from 'lucide-react';
 
@@ -76,6 +78,26 @@ export const TOOL_HEROES: Record<string, ToolHeroConfig> = {
       'Log a new period to restart it',
       'See when bleeding needs checking',
       'Dates stay on this device',
+    ],
+  },
+  '/tools/menopause-age-calculator/': {
+    Icon: Hourglass,
+    cta: 'Check my age context',
+    features: [
+      'Where your age sits in the 45 to 55 range',
+      'Your 12-month date from your last period',
+      'Sourced notes on what is linked to earlier menopause',
+      'No prediction, nothing saved',
+    ],
+  },
+  '/tools/hrt-prepayment-certificate-calculator/': {
+    Icon: PoundSterling,
+    cta: 'Compare the costs',
+    features: [
+      'HRT PPC vs paying per item',
+      'Includes your other prescriptions',
+      'Official 2026/27 England prices',
+      'Free in Scotland, Wales and NI',
     ],
   },
 };

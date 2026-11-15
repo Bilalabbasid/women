@@ -1,0 +1,65 @@
+# Tool logic: menopause age calculator (context, not a prediction).
+# Clinician review covers this description AND the code files listed under `code`.
+
+id: menopause-age-calculator
+name: Menopause age calculator
+guide_url: /tools/menopause-age-calculator/
+app_paths: []
+
+status: draft
+reviewer: null
+reviewed_at: null
+approved_hash: null
+
+code:
+  - src/components/tools/menopause-age-calculator.tsx
+  - src/lib/tools/menopause-age.ts
+
+purpose: >-
+  Places the reader's age against the typical age range for menopause (45 to 55,
+  MedlinePlus and NHS) and the sourced US averages, dates the 12-month mark from
+  her last period, and returns sourced context notes on factors linked to earlier
+  menopause. It never predicts an individual menopause age.
+
+inputs:
+  - Age in years, or birth year (age then shown as approximate)
+  - "Whether periods have stopped: no; yes, with the first day of the last period; or can't tell because of hormonal contraception, a hormonal IUD, a hysterectomy, or ablation/another treatment"
+  - Optional age her mother reached menopause
+  - Optional smoking status (never, past, current)
+  - Optional history of chemotherapy or pelvic radiation, or surgery to remove both ovaries
+
+computes:
+  - "Age from the inputs (birth year: current year minus birth year, accepted only for ages 18 to 100)"
+  - "Age band: under 40, 40 to 44, 45 to 55, over 55"
+  - "Years until 45, or years past 55, or 'in range'"
+  - "The 12-month date (same calendar date one year after the last period), days remaining, and whether it has passed"
+  - "Which sourced context notes apply to the answers given"
+
+shows:
+  - Her age, the 45 to 55 range, and years to or past the range
+  - The three averages as each source reports them (NIA 52, ACOG 51 for the last period, US survey 49.9 for natural menopause)
+  - The 12-month date with a link to the 12-month counter
+  - "'See a doctor' notes when periods have stopped under 40 (premature menopause, POI per NICE NG23) or at 40 to 44 (early menopause)"
+  - Context notes on family history, smoking, cancer treatment, ovary removal, and why hormonal contraception or hysterectomy hide the 12-month sign
+  - A reminder that any bleeding after 12 months without a period should be checked
+  - Links to the stage guide, perimenopause age and average age of menopause guides
+
+never:
+  - Predict, estimate or adjust a personal menopause age
+  - Turn the mother's age, smoking or any other factor into a number of years
+  - Diagnose menopause, premature ovarian insufficiency or any condition
+  - Advise stopping contraception or starting any treatment
+  - Store or send any input; show commercial content
+
+limits:
+  - The 45 to 55 range and the averages describe groups of people, not one person
+  - The 12-month rule applies to natural periods; hormonal contraception, a hormonal IUD, hysterectomy or ablation hide it
+  - Ages worked out from a birth year can be one year out
+
+urgent_triggers: []
+sources: [medlineplus-menopause-2026, nhs-menopause-overview, nia-what-is-menopause, acog-perimenopausal-bleeding-faq, appiah-menopause-age-trends-2021, owh-early-premature-menopause-2026, nice-ng23-recommendations, nhs-early-menopause, mayo-perimenopause-symptoms-causes-2026, nhs-postmenopausal-bleeding, straw-10-2012]
+
+privacy: >-
+  Stateless. Answers live only in the page's memory while it is open: nothing is
+  written to IndexedDB, localStorage or cookies, and nothing is sent to a server,
+  analytics or partners. Closing or reloading the page clears every answer.

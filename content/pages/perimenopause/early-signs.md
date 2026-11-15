@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-08"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Added a link to the magnesium evidence review", material: false }
   - { date: "2026-11-08", summary: "Tied cycle-change signs to STRAW+10 and NICE NG23 as written, added a sourced when-to-see-a-doctor section (heavy bleeding, symptoms under 40), removed unsourced mechanisms and symptoms", material: true }
   - { date: "2026-11-06", summary: "First comprehensive evidence guide to early perimenopause signs", material: true }
 evidence_grade: strong
@@ -62,7 +63,7 @@ Perimenopause ends 12 months after your final period [@straw-10-2012]. If you've
 Besides changes to your cycle, the NHS and the UK NICE menopause guideline list these symptoms [@nhs-menopause-symptoms; @nice-ng23-recommendations]:
 
 - **Hot flashes and night sweats**: Sudden heat in the face, neck and chest, or sweating at night [@nhs-menopause-symptoms]. See [hot flashes](/symptoms/hot-flashes/).
-- **Sleep problems**: Trouble getting to sleep or staying asleep [@nhs-menopause-symptoms]. See [waking at 3 a.m.](/symptoms/waking-at-3am/) and [insomnia](/symptoms/insomnia/).
+- **Sleep problems**: Trouble getting to sleep or staying asleep [@nhs-menopause-symptoms]. See [waking at 3 a.m.](/symptoms/waking-at-3am/), [insomnia](/symptoms/insomnia/) and [whether magnesium helps menopause sleep](/does-it-work/magnesium/).
 - **Mood changes**: Mood swings, low mood or depression [@nhs-menopause-symptoms; @nice-ng23-recommendations]. See [irritability](/symptoms/irritability/).
 - **Memory and concentration**: Problems with memory, concentration or "brain fog" [@nhs-menopause-symptoms]. See [brain fog](/symptoms/brain-fog/).
 - **Muscle aches and joint pain**: Listed by both the NHS and NICE [@nhs-menopause-symptoms; @nice-ng23-recommendations]. See [joint and muscle pain](/symptoms/joint-pain/).

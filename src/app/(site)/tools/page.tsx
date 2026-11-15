@@ -19,6 +19,8 @@ const SHORT_NAMES: Record<string, string> = {
   '/tools/does-it-work-checker/': 'Evidence checker',
   '/tools/treatment-questions/': 'Question builder',
   '/tools/12-month-counter/': '12-month counter',
+  '/tools/menopause-age-calculator/': 'Menopause age calculator',
+  '/tools/hrt-prepayment-certificate-calculator/': 'HRT PPC calculator (UK)',
 };
 
 export const metadata: Metadata = buildMetadata({
@@ -50,6 +52,11 @@ const GROUPS: Array<{ id: string; heading: string; intro: string; tools: Array<{
         useWhen: 'Your periods have stopped: count the days to the 12-month mark and see when bleeding needs checking.',
         gives: 'The date you reach 12 months without a period',
       },
+      {
+        url: '/tools/menopause-age-calculator/',
+        useWhen: 'Wondering when menopause might come: see where your age sits against the typical range, with sourced context.',
+        gives: 'Your age against the 45 to 55 range, and your 12-month date',
+      },
     ],
   },
   {
@@ -79,6 +86,11 @@ const GROUPS: Array<{ id: string; heading: string; intro: string; tools: Array<{
         useWhen: 'Choose your priorities and print a list of questions to ask about HRT and other options.',
         gives: 'A printable question sheet and a 10-minute appointment kit',
       },
+      {
+        url: '/tools/hrt-prepayment-certificate-calculator/',
+        useWhen: 'You pay for HRT prescriptions in England: compare the HRT PPC, a standard PPC and paying per item.',
+        gives: 'The cheapest way to pay for a year, and the saving',
+      },
     ],
   },
 ];
@@ -91,6 +103,8 @@ const CHOOSER: Array<{ q: string; url: string }> = [
   { q: 'What should I ask about HRT?', url: '/tools/treatment-questions/' },
   { q: 'Does a treatment or supplement actually work?', url: '/tools/does-it-work-checker/' },
   { q: 'Have I reached menopause yet?', url: '/tools/12-month-counter/' },
+  { q: 'When will I go through menopause?', url: '/tools/menopause-age-calculator/' },
+  { q: 'Is an HRT prepayment certificate worth it? (England)', url: '/tools/hrt-prepayment-certificate-calculator/' },
 ];
 
 /** Shown on the page and mirrored in FAQPage structured data. */
@@ -192,8 +206,9 @@ export default function ToolsHub() {
               Free menopause and perimenopause tools
             </h1>
             <p className="mt-4 max-w-[var(--measure)] text-[length:var(--fs-lead)] leading-relaxed text-[var(--ink-muted)]">
-              Six free tools to help you notice patterns and prepare for appointments. They run in your browser with
-              no account, what you enter stays on your device, and they never diagnose or prescribe.
+              Free tools to help you notice patterns, understand timing and costs, and prepare for appointments. They
+              run in your browser with no account, what you enter stays on your device, and they never diagnose or
+              prescribe.
             </p>
             <div className="no-print mt-6 flex flex-wrap items-center gap-x-4 gap-y-3">
               {trackerLive && (
@@ -295,8 +310,9 @@ export default function ToolsHub() {
             How these tools store what you enter
           </h2>
           <p>
-            Everything you tick, type or log is saved in this browser on this device, so it&apos;s still there when you
-            come back, with no account. You can save dated copies, reopen or delete them, and export a backup file.
+            The two calculators save nothing: your answers vanish when you close the page. Everything you tick, type
+            or log in the other tools is saved in this browser on this device, so it&apos;s still there when you come
+            back, with no account. You can save dated copies, reopen or delete them, and export a backup file.
             Nothing is sent to us, to analytics or to advertisers. Because the data lives only in this browser,
             clearing your browser data, using a private window or switching device means it won&apos;t be there, so
             export a backup now and then.

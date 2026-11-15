@@ -1,7 +1,7 @@
 ---
-title: "What age does perimenopause start?"
-seo_title: "Can perimenopause start at 44? Typical ages"
-meta_description: "Yes, 44 is a common age for perimenopause to start. See the typical age range, what counts as early (40 to 44) or premature (under 40), and what to do next."
+title: "When does perimenopause start? Typical age range"
+seo_title: "When does perimenopause start? Typical age and signs"
+meta_description: "Perimenopause usually starts in your mid-40s but can begin in your mid-30s. See the typical age range, if 44 is normal, what counts as early and when it ends."
 cluster: perimenopause
 primary_keyword: perimenopause age
 slug: age
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Targeted 'when does perimenopause start' and 'perimenopause age': new direct-answer opening and H2, sharper title and description, new section on what age perimenopause ends, FAQ on starting at 40", material: true }
   - { date: "2026-11-09", summary: "Answered 'can perimenopause start at 44' directly; added a source table for typical ages, early (40 to 44) and premature (under 40) definitions, causes of earlier onset and what to do if it starts early", material: true }
   - { date: "2026-11-06", summary: "Published guide on typical perimenopause and menopause age", material: true }
 evidence_grade: strong
@@ -33,8 +34,8 @@ claims:
     text: "In the STRAW+10 framework, early menopausal transition (the start of perimenopause) is marked by a persistent difference of 7 days or more in consecutive cycle lengths, not by a specific age."
     sources: [straw-10-2012]
   - id: perimenopause-onset-40s
-    text: "Signs of perimenopause such as irregular periods often start sometime in the 40s, though some people notice changes in their 30s or as late as their 50s; ACOG says it usually begins in the mid-40s."
-    sources: [mayo-perimenopause-symptoms-causes-2026, acog-perimenopausal-bleeding-faq]
+    text: "Perimenopause usually starts in the mid-40s but may begin as early as the mid-30s or as late as the mid-50s; signs such as irregular periods often start sometime in the 40s."
+    sources: [cleveland-clinic-perimenopause, mayo-perimenopause-symptoms-causes-2026, acog-perimenopausal-bleeding-faq]
   - id: owh-early-premature-definitions
     text: "Menopause between ages 40 and 44 is early menopause; menopause before 40 is premature menopause, also called primary ovarian insufficiency (POI)."
     sources: [owh-early-premature-menopause-2026]
@@ -44,11 +45,13 @@ claims:
 safety_flags: []
 cta_profile: learn_stage
 hub: /perimenopause/
-sources: [appiah-menopause-age-trends-2021, straw-10-2012, nice-ng23-recommendations, mayo-perimenopause-symptoms-causes-2026, acog-perimenopausal-bleeding-faq, nia-what-is-menopause, owh-early-premature-menopause-2026]
+sources: [appiah-menopause-age-trends-2021, cleveland-clinic-perimenopause, straw-10-2012, nice-ng23-recommendations, mayo-perimenopause-symptoms-causes-2026, acog-perimenopausal-bleeding-faq, nia-what-is-menopause, owh-early-premature-menopause-2026]
 related: [/perimenopause/, /perimenopause/vs-menopause/, /perimenopause/in-your-30s/, /perimenopause/stages/, /tools/stage-guide/, /groups/early-menopause/]
 faq:
   - q: Is 44 too early for perimenopause?
     a: "No. Signs of perimenopause, such as irregular periods, often start sometime in the 40s, and ACOG says it usually begins in the mid-40s. Starting at 44 is well within the usual range."
+  - q: Can perimenopause start at 40?
+    a: "Yes. Forty is earlier than average but within the normal range: Cleveland Clinic says perimenopause can begin as early as the mid-30s. Menopause between 40 and 44 counts as early menopause, so if your periods stop or become irregular before 45, tell your clinician."
   - q: Can perimenopause start at 35?
     a: "It can. Mayo Clinic notes that some people notice changes as early as their 30s. If periods stop or become irregular before 45, tell your clinician, because blood tests are most useful for checking early changes before age 40."
   - q: Will I start perimenopause at the same age as my mother?
@@ -59,17 +62,21 @@ faq:
     a: "Not a reliable one for most people. UK guidance says that at 45 or over, perimenopause is identified from new hot flashes or night sweats plus cycle changes, without blood tests. Under 40, blood tests have a bigger role in checking for premature ovarian insufficiency."
 ---
 
-Yes, perimenopause can start at 44, and that's a very common time for it: most people notice the first changes, such as irregular periods, sometime in their 40s [@mayo-perimenopause-symptoms-causes-2026]. It's defined by changes in your cycle, not a birthday, so some people start in their 30s and others in their 50s [@mayo-perimenopause-symptoms-causes-2026].
+Perimenopause usually starts in your mid-40s, but it can begin as early as your mid-30s or as late as your mid-50s [@cleveland-clinic-perimenopause]. It's defined by changes in your cycle, not a birthday, and most people notice the first changes, such as irregular periods, sometime in their 40s, so starting at 44 is very common [@mayo-perimenopause-symptoms-causes-2026].
+
+## When does perimenopause start?
+
+Perimenopause starts when your cycle begins to change, which for most people happens in their 40s, most often in the mid-40s [@mayo-perimenopause-symptoms-causes-2026; @acog-perimenopausal-bleeding-faq]. Cleveland Clinic says it can begin as early as the mid-30s or as late as the mid-50s, and the National Institute on Aging says most women begin the transition between 45 and 55 [@cleveland-clinic-perimenopause; @nia-what-is-menopause].
+
+The first sign is usually a change in your cycle. In the clinical STRAW+10 staging system, perimenopause begins when your cycle lengths start to differ by 7 days or more from one cycle to the next, and keep doing so [@straw-10-2012]. Hot flashes (hot flushes in the UK), night sweats or sleep changes may come along with it.
 
 ## Can perimenopause start at 44?
 
 Yes. Starting perimenopause at 44 is normal and sits right in the usual window. Mayo Clinic says signs often appear sometime in the 40s, and the American College of Obstetricians and Gynecologists (ACOG) says perimenopause usually begins in the mid-40s and may run from about 45 to 55, though timing varies from person to person [@mayo-perimenopause-symptoms-causes-2026; @acog-perimenopausal-bleeding-faq].
 
-The first sign is usually a change in your cycle. In the clinical STRAW+10 staging system, perimenopause begins when your cycle lengths start to differ by 7 days or more from one cycle to the next, and keep doing so [@straw-10-2012]. Hot flashes, night sweats or sleep changes may come along with it.
-
 From 45, UK guidance says clinicians can identify perimenopause from new hot flashes or night sweats plus any change in your cycle, without blood tests [@nice-ng23-recommendations]. Between 40 and 45, the same guidance says a follicle-stimulating hormone (FSH) blood test may be considered to confirm menopause in people with symptoms and cycle changes [@nice-ng23-recommendations]. See [is there a blood test for perimenopause?](/perimenopause/blood-tests/) for what testing can and can't show.
 
-## What is the average age perimenopause starts?
+## What is the average perimenopause age?
 
 There's no single agreed average age for the start of perimenopause, because it begins gradually and is defined by cycle changes. The sources below agree it usually starts in the 40s, with menopause itself (12 months without a period) typically arriving around 50.
 
@@ -85,6 +92,12 @@ The survey counted only natural menopause, as reported by the women themselves [
 ## How long does perimenopause last?
 
 Perimenopause usually lasts several years, but the length varies a lot. The late stage, when gaps between periods reach 60 days or more, lasts 1 to 3 years on average [@straw-10-2012]. The National Institute on Aging says menopause-related symptoms can last between 2 and 8 years [@nia-what-is-menopause]. For more detail, see [how long perimenopause lasts](/perimenopause/how-long/).
+
+## What age does perimenopause end?
+
+Perimenopause ends 12 months after your final period, so it usually ends in your early 50s [@straw-10-2012; @acog-perimenopausal-bleeding-faq]. ACOG says the average age of the last period in the US is 51, and perimenopause often runs from about 45 to 55 [@acog-perimenopausal-bleeding-faq]. With a final period at 51, perimenopause would end at about 52.
+
+A sign you're nearing the end is going 60 days or more between periods: that marks late perimenopause, which lasts 1 to 3 years on average [@straw-10-2012]. You only know your final period was the last one once a full year has passed without another [@nia-what-is-menopause]. See the [average age of menopause](/menopause/age/) for what comes next.
 
 ## What counts as early or premature menopause?
 

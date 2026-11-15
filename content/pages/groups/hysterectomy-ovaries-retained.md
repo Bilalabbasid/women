@@ -1,7 +1,7 @@
 ---
 title: "Hysterectomy with ovaries retained"
-seo_title: "Hysterectomy, Ovaries Kept: What Happens Next"
-meta_description: "If your uterus was removed but your ovaries stayed, periods stop but menopause doesn't happen right away. What the research says about timing, and what to track."
+seo_title: "Hysterectomy with ovaries retained: what happens next"
+meta_description: "If your uterus was removed but your ovaries stayed, periods stop but menopause doesn't come right away. What research says about timing, and what to track."
 cluster: groups
 primary_keyword: hysterectomy ovaries retained
 slug: hysterectomy-ovaries-retained
@@ -18,8 +18,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-07"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Shortened the meta description and made the SEO title lead with the search words, in sentence case", material: false }
   - { date: "2026-11-07", summary: "Published guide on hysterectomy with ovarian conservation and the conflicting research on menopause timing", material: true }
 evidence_grade: limited
 claims:

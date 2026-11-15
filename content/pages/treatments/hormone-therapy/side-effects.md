@@ -6,7 +6,7 @@ cluster: treatments
 primary_keyword: hrt side effects
 slug: side-effects
 page_type: treatment
-secondary_keywords: [hrt side effects first months, how long do hrt side effects last]
+secondary_keywords: [hrt side effects first months, how long do hrt side effects last, side effects of hrt patches, side effects of stopping hrt]
 search_intent: informational
 funnel_stage: evaluating
 symptom_tags: [hot-flashes, breast-tenderness]
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-11"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Added answers to common UK questions: side effects of HRT patches and gel (skin reactions, from the NHS and Evorel and Oestrogel leaflets) and what happens when you stop HRT", material: true }
   - { date: "2026-11-11", summary: "Rebuilt around common questions: most common side effects (cited estrogen vs progestogen table), how long they last, bleeding, what helps if they don't settle, weight gain, serious risks, and a sourced box of clot and stroke warning signs; sourced the previously uncited list of common effects", material: true }
   - { date: "2026-11-06", summary: "Published guide on HRT side effects and the standard review schedule", material: true }
 evidence_grade: strong
@@ -38,10 +39,13 @@ claims:
   - id: nhs-side-effects-timeline
     text: "The NHS says HRT side effects usually improve over time and often go away after a few weeks, advises carrying on for at least 3 months if possible, and says to speak to a GP if side effects are severe or last longer than 3 months; bleeding usually settles within 6 months."
     sources: [nhs-hrt-side-effects-2023]
+  - id: patch-gel-skin-effects
+    text: "The NHS lists skin irritation where patches are stuck as a common side effect of estrogen; the Evorel leaflet lists irritated, itchy skin and rash at the patch site as very common, and the Oestrogel leaflet says its alcohol content may cause a burning feeling on damaged skin."
+    sources: [nhs-oestrogen-medicine-2026, emc-evorel-pil-2025, emc-oestrogel-pil-2026]
 safety_flags: [bleeding]
 cta_profile: hrt_evaluating
 hub: /treatments/hormone-therapy/
-sources: [nice-ng23-recommendations, nams-2022-hormone-therapy, nhs-hrt-side-effects-2023, prometrium-prescribing-information, cdc-blood-clots-about-2025, medlineplus-chest-pain, cdc-stroke-signs-2026, nhs-dvt-2026]
+sources: [nice-ng23-recommendations, nams-2022-hormone-therapy, nhs-hrt-side-effects-2023, prometrium-prescribing-information, cdc-blood-clots-about-2025, medlineplus-chest-pain, cdc-stroke-signs-2026, nhs-dvt-2026, nhs-oestrogen-medicine-2026, emc-evorel-pil-2025, emc-oestrogel-pil-2026, nhs-when-to-take-hrt]
 related: [/treatments/hormone-therapy/, /treatments/hormone-therapy/starting-and-stopping/, /treatments/hormone-therapy/patch-vs-pill/, /treatments/hormone-therapy/blood-clot-risk/, /postmenopause/bleeding/, /tools/symptom-tracker/]
 faq:
   - q: Should I stop HRT if I get side effects?
@@ -52,6 +56,8 @@ faq:
     a: "Both are listed by the NHS: acne as a possible progestogen side effect, and hair loss as a possible estrogen side effect. Tell your clinician if either bothers you, since changing the dose or type of HRT is one option."
   - q: How long does HRT take to work?
     a: "Often a few weeks, sometimes longer. The Menopause Society notes that lower doses may take 6 to 8 weeks to relieve symptoms, and NICE schedules the first review at 3 months to check how well treatment is working."
+  - q: Are there side effects when you stop HRT?
+    a: "The main one is that menopause symptoms may come back for a while. The NHS says you can stop suddenly, but usually recommends reducing the dose gradually over 3 to 6 months, which makes this less likely, and to see a GP if symptoms return and don't settle after 3 months."
 ---
 
 The most common HRT side effects are breast tenderness, headaches, nausea, bloating and irregular bleeding or spotting [@nams-2022-hormone-therapy; @nhs-hrt-side-effects-2023]. They usually fade within a few weeks to 3 months, and bleeding usually settles within 6 months [@nhs-hrt-side-effects-2023]. NICE recommends a check-up at 3 months to review how you're getting on [@nice-ng23-recommendations].
@@ -82,6 +88,15 @@ Most HRT side effects are temporary: the NHS says they usually improve over time
 
 - **Bleeding**: Usually settles within 6 months of starting [@nhs-hrt-side-effects-2023]. NICE says bleeding is common in the first 6 months of HRT [@nice-ng23-recommendations].
 - **After a change of dose or product**: Bleeding is also common in the 3 months after any change [@nice-ng23-recommendations].
+
+## What are the side effects of HRT patches and gel?
+
+Patches and gels can cause the same estrogen side effects as tablets, plus skin reactions where you apply them: the NHS lists skin irritation where patches are stuck as a common side effect [@nhs-oestrogen-medicine-2026].
+
+- **Patches**: The Evorel leaflet lists irritated, itchy skin and rash at the patch site as very common (more than 1 in 10 users), and red, puffy skin there as common [@emc-evorel-pil-2025]. It advises not using the same spot twice in a row [@emc-evorel-pil-2025].
+- **Gel**: The Oestrogel leaflet says its alcohol content may cause a burning feeling on damaged skin, so it should go on unbroken skin [@emc-oestrogel-pil-2026]. The NHS advises not using the same area 2 days in a row [@nhs-oestrogen-medicine-2026].
+
+More on using patches in our guide to [HRT patches and patch vs. pill](/treatments/hormone-therapy/patch-vs-pill/).
 
 ## Is bleeding on HRT normal?
 

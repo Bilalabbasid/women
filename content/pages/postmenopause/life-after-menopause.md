@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-11"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Added a link to the strength training evidence review", material: false }
   - { date: "2026-11-11", summary: "Rewrote around what happens after menopause: what eases and what doesn't (table), how long postmenopause lasts, hot flashes, vaginal dryness, bones and heart, weight, mood, pregnancy and screening; every claim now cited", material: true }
   - { date: "2026-11-07", summary: "Published orientation guide on life after menopause, tying together symptom timeline and long-term priorities", material: true }
 evidence_grade: strong
@@ -100,7 +101,7 @@ The same low estrogen makes bladder urgency and repeat UTIs more likely [@owh-me
 Bone loss speeds up after menopause and the risk of heart disease rises, so both need attention for the long term [@owh-menopause-and-your-health-2026]. What the evidence supports:
 
 - **Bone density test**: the US Preventive Services Task Force recommends osteoporosis screening for all women 65 and over, and for postmenopausal women under 65 who are at higher risk of fractures [@uspstf-osteoporosis-screening-2025].
-- **Strength and impact training**: :grade{id="strength-training-bone"}. In the LIFTMOR trial, 8 months of supervised twice-weekly training improved spine and hip bone density in postmenopausal women with low bone mass [@liftmor-trial-bone-density].
+- **Strength and impact training**: :grade{id="strength-training-bone"}. In the LIFTMOR trial, 8 months of supervised twice-weekly training improved spine and hip bone density in postmenopausal women with low bone mass [@liftmor-trial-bone-density]. More in [what the science shows on strength training](/does-it-work/exercise/).
 - **Hormone therapy**: it helps prevent bone loss, but it is not recommended to prevent heart disease or stroke [@owh-menopause-and-your-health-2026].
 - **Everyday habits**: being active, not smoking and getting enough calcium from food all help [@owh-menopause-and-your-health-2026].
 

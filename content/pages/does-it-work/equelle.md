@@ -1,7 +1,7 @@
 ---
 title: "Does Equelle work for hot flashes?"
-seo_title: "Equelle for Hot Flashes: What the Trial Found"
-meta_description: "Equelle's S-equol ingredient has one real placebo-controlled trial behind it, with a genuinely positive result. What it found, and why one trial isn't final proof."
+seo_title: "Does Equelle work for hot flashes? What the trial found"
+meta_description: "Equelle's ingredient, S-equol, has one placebo-controlled trial with a positive result for hot flashes. What it found, and why one trial isn't final proof."
 cluster: does-it-work
 primary_keyword: does equelle work
 slug: equelle
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-07"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Shortened the meta description and made the SEO title lead with the search words, in sentence case", material: false }
   - { date: "2026-11-07", summary: "Published evidence verdict on Equelle's S-equol ingredient for hot flashes", material: true }
   - { date: "2026-11-07", summary: "Equol-producer figure corrected to the Menopause Society's (about 35% of North American women)", material: true }
 evidence_grade: limited

@@ -1,0 +1,62 @@
+# Tool logic: UK HRT prescription prepayment certificate (PPC) calculator.
+# Clinician review covers this description AND the code files listed under `code`.
+
+id: hrt-prepayment-certificate-calculator
+name: HRT prepayment certificate calculator
+guide_url: /tools/hrt-prepayment-certificate-calculator/
+app_paths: []
+
+status: draft
+reviewer: null
+reviewed_at: null
+approved_hash: null
+
+code:
+  - src/components/tools/hrt-ppc-calculator.tsx
+  - src/lib/tools/hrt-ppc.ts
+
+purpose: >-
+  Compares, for one year in England, paying the NHS prescription charge per item,
+  the HRT prescription prepayment certificate (HRT PPC), and the standard 3- and
+  12-month PPCs, using official 2026/27 prices held in one constant with the date
+  they were checked, and shows the cheapest option and the saving. Tells readers
+  in Scotland, Wales and Northern Ireland that prescriptions are free there, and
+  exempt readers that they pay nothing.
+
+inputs:
+  - "UK nation where prescriptions are collected: England, Scotland, Wales or Northern Ireland"
+  - "England only: whether she already gets free prescriptions (60+, medical exemption certificate, HC2, etc.)"
+  - "England only: HRT items paid for, per month or per year (each medicine each time it is dispensed)"
+  - "England only, optional: other (non-HRT) prescription items per year"
+
+computes:
+  - "HRT items per year (monthly figure x 12)"
+  - "Paying per item: (HRT + other items) x £9.90"
+  - "HRT PPC: £19.80 + other items x £9.90"
+  - "12-month PPC: £114.50; 3-month PPCs for a year: 4 x £32.05 (shown, never counted as cheapest)"
+  - "Cheapest option (ties listed together) and the saving against paying per item"
+
+shows:
+  - "Free-nation message for Scotland, Wales and Northern Ireland: no certificate needed"
+  - "Exempt message: nothing to pay, no PPC needed"
+  - Yearly cost of each option, the cheapest, and the saving
+  - That the HRT PPC covers only HRT medicines on the NHSBSA list (linked), that a 12-month PPC covers HRT too, that Mirena has no charge, and that HRT PPCs are not refundable
+  - Every price with the charge year, checked date and official source links
+
+never:
+  - Recommend a specific HRT medicine, dose or brand
+  - Tell her whether she is exempt (it links to the official list instead)
+  - Store or send any input; show commercial content
+
+limits:
+  - Prices are England 2026/27 figures, checked 2026-11-15; they change when the government sets new charges
+  - Whether a medicine is on the HRT PPC list must be checked on the NHSBSA list or with a pharmacist
+  - It assumes a steady number of items across the year; a short burst of other items may suit a 3-month PPC
+
+urgent_triggers: []
+sources: [nhsbsa-hrt-ppc, nhsbsa-hrt-ppc-medicines, nhsbsa-ppc, nhsbsa-free-prescriptions, govuk-get-a-ppc, govuk-get-a-ppc-hrt, govuk-prescription-charges-frozen-2026, nhs-ppc-save-money, nhsinform-prescription-charges, gov-wales-free-prescriptions, nidirect-help-health-costs]
+
+privacy: >-
+  Stateless. Answers live only in the page's memory while it is open: nothing is
+  written to IndexedDB, localStorage or cookies, and nothing is sent to a server,
+  analytics or partners. Closing or reloading the page clears every answer.

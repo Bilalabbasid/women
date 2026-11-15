@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-08"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Added a link to the vaginal estrogen guide", material: false }
   - { date: "2026-11-08", summary: "Removed an unsourced 'up to 80%' figure and an '8 to 12 weeks' timeline; training details, bladder training and caffeine advice now match NICE NG123; removed a biofeedback-device suggestion; plain short answer", material: true }
   - { date: "2026-11-06", summary: "Initial publication covering stress vs urge incontinence and pelvic floor rehabilitation", material: true }
   - { date: "2026-11-07", summary: "Removed an unsourced 'up to 50%' figure; replaced with NICE guidance on checking technique", material: true }
@@ -80,7 +81,7 @@ If sudden urgency is your main problem, NICE recommends these steps [@nice-ng123
 
 ### 3. Local vaginal estrogen
 
-NICE recommends offering vaginal estrogen to women who have overactive bladder symptoms along with vaginal or urinary symptoms of menopause, but not hormone therapy taken by mouth or patch to treat leaks [@nice-ng123-urinary-incontinence]. Low-dose vaginal estrogen is an effective treatment for the genitourinary syndrome of menopause [@nams-2020-gsm]. Ask your doctor whether it suits you.
+NICE recommends offering vaginal estrogen to women who have overactive bladder symptoms along with vaginal or urinary symptoms of menopause, but not hormone therapy taken by mouth or patch to treat leaks [@nice-ng123-urinary-incontinence]. Low-dose vaginal estrogen is an effective treatment for the genitourinary syndrome of menopause [@nams-2020-gsm]. Ask your doctor whether it suits you, and see [how low-dose vaginal estrogen is used](/treatments/hormone-therapy/vaginal-estrogen/).
 
 ## When to see a doctor
 

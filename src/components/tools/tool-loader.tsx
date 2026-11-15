@@ -12,6 +12,8 @@ const StageGuide = dynamic(() => import('./stage-guide').then((m) => m.StageGuid
 const DoesItWorkChecker = dynamic(() => import('./does-it-work-checker').then((m) => m.DoesItWorkChecker));
 const TreatmentQuestionsBuilder = dynamic(() => import('./treatment-questions').then((m) => m.TreatmentQuestionsBuilder));
 const TwelveMonthCounter = dynamic(() => import('./twelve-month-counter').then((m) => m.TwelveMonthCounter));
+const MenopauseAgeCalculator = dynamic(() => import('./menopause-age-calculator').then((m) => m.MenopauseAgeCalculator));
+const HrtPpcCalculator = dynamic(() => import('./hrt-ppc-calculator').then((m) => m.HrtPpcCalculator));
 
 export function ToolLoader({ id, liveUrls, trackerLive }: { id: string; liveUrls: string[]; trackerLive: boolean }) {
   switch (id) {
@@ -25,6 +27,10 @@ export function ToolLoader({ id, liveUrls, trackerLive }: { id: string; liveUrls
       return <TreatmentQuestionsBuilder />;
     case '12-month-counter':
       return <TwelveMonthCounter />;
+    case 'menopause-age-calculator':
+      return <MenopauseAgeCalculator />;
+    case 'hrt-prepayment-certificate-calculator':
+      return <HrtPpcCalculator />;
     default:
       return null;
   }

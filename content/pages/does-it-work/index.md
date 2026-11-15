@@ -1,7 +1,7 @@
 ---
 title: "Do menopause supplements and remedies work? Our verdicts"
-seo_title: "Do menopause supplements work? 25 remedies graded"
-meta_description: "Mostly not for hot flashes: no over-the-counter supplement is recommended by The Menopause Society. 25 remedies graded, from black cohosh to probiotics."
+seo_title: "Perimenopause and menopause supplements: 25 graded"
+meta_description: "Most perimenopause and menopause supplements don't work for hot flashes. 25 remedies graded on the evidence, from black cohosh to probiotics, plus safety."
 cluster: does-it-work
 primary_keyword: do menopause supplements work
 slug: does-it-work
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-11"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Keyword pass for perimenopause and menopause supplements: first sentence and seo_title name both, new sections on the best menopause supplements and whether perimenopause supplements work (Cochrane, ashwagandha trial, USPSTF on premenopausal women), 2 new FAQs; grades unchanged", material: true }
   - { date: "2026-11-11", summary: "Search snippet: seo_title names the 25 graded remedies; meta description leads with the direct answer", material: false }
   - { date: "2026-11-09", summary: "Search pass: direct short answer, verdicts grouped from strongest to weakest evidence with registry grades, and new sections on safety, regulation, placebo effects and what works better", material: true }
   - { date: "2026-11-08", summary: "Sweep: plainer opening answer, cited guideline levels, removed uncited trial counts from link descriptions", material: false }
@@ -52,17 +53,21 @@ faq:
     a: "No. By law, the FDA does not approve dietary supplements or their labels before they go on sale. The company selling a supplement is responsible for its safety and for backing up what the label says."
   - q: Can menopause supplements interact with my medicines?
     a: "Yes, some can. Evening primrose oil, for example, may raise bleeding risk with blood thinners. Tell your doctor or pharmacist about every supplement you take, especially if you take prescription medicines."
+  - q: What is the best supplement for menopause?
+    a: "There isn't a best one for hot flashes, because no supplement has strong evidence for them. Of the supplements we grade, probiotics have the best evidence, and only for bone density after menopause."
+  - q: Do perimenopause supplements work?
+    a: "Not reliably for hot flashes. A large review of plant estrogen supplement trials, which included women in perimenopause, found no clear proof they reduce hot flashes or night sweats. One small ashwagandha trial in perimenopausal women was positive, but one trial isn't proof."
   - q: What works better than supplements for hot flashes?
     a: "Hormone therapy is the most effective treatment for hot flashes. For people who can't or don't want to take hormones, The Menopause Society recommends CBT, clinical hypnosis, certain antidepressants, gabapentin and fezolinetant."
 ---
 
-Mostly not, at least for hot flashes. The Menopause Society does not recommend any over-the-counter supplement or herbal remedy for hot flashes and night sweats (Levels I–II) [@nams-2023-nonhormone-therapy]. A few have some evidence for narrower uses, such as probiotics for bone density, and hormone therapy remains the most effective treatment for hot flashes [@wang-probiotics-bone-health-metaanalysis-2024; @nams-2022-hormone-therapy].
+Most perimenopause and menopause supplements don't hold up for hot flashes (hot flushes in the UK). The Menopause Society does not recommend any over-the-counter supplement or herbal remedy for hot flashes and night sweats (Levels I–II) [@nams-2023-nonhormone-therapy]. A few have some evidence for narrower uses, such as probiotics for bone density, and hormone therapy remains the most effective treatment for hot flashes [@wang-probiotics-bone-health-metaanalysis-2024; @nams-2022-hormone-therapy].
 
 This is our directory of full verdicts: one page per supplement or remedy, each graded from randomized controlled trials (RCTs), systematic reviews and medical society guidelines. To compare treatments side by side, filtered by symptom and grade, use the [evidence checker tool](/tools/does-it-work-checker/) instead.
 
-## Which menopause supplements actually work?
+## What are the best menopause supplements?
 
-Very few, and none of them for hot flashes with strong evidence. Below, our verdicts are grouped from the strongest evidence to the weakest. Each grade applies only to the use named, so a remedy that fails for hot flashes may still be graded separately for something else.
+There is no "best" supplement for hot flashes, because none has strong evidence for them; the supplements with the best evidence help narrower things, such as probiotics for bone density after menopause [@nams-2023-nonhormone-therapy; @wang-probiotics-bone-health-metaanalysis-2024]. So which menopause supplements actually work? Very few. Below, our verdicts are grouped from the strongest evidence to the weakest. Each grade applies only to the use named, so a remedy that fails for hot flashes may still be graded separately for something else.
 
 ### Where the evidence is strongest
 
@@ -98,6 +103,16 @@ Very few, and none of them for hot flashes with strong evidence. Below, our verd
 - **[Cooling products](/does-it-work/cooling-products/)**: :grade{id="cooling-comfort"} for comfort at night, and :grade{id="cooling-vms"} as a treatment for hot flashes.
 - **[Paced breathing](/does-it-work/paced-breathing/)**: :grade{id="paced-breathing-vms"} for hot flashes (Level I) [@nams-2023-nonhormone-therapy].
 - **[Diet changes](/does-it-work/diet/)**, **[acupuncture](/does-it-work/acupuncture/)** and **[yoga](/does-it-work/yoga/)**: :grade{id="diet-vms"}, :grade{id="acupuncture-vms"} and :grade{id="yoga-vms"} respectively for hot flashes [@nams-2023-nonhormone-therapy].
+
+## Do perimenopause supplements work?
+
+Not reliably for hot flashes. A large Cochrane review of plant estrogen (phytoestrogen) supplements, whose 43 trials included women in perimenopause as well as after menopause, found no conclusive evidence that they reduce hot flashes or night sweats [@lethaby-cochrane-phytoestrogens-2013]. Multi-ingredient "hormone balance" supplements are among the remedies The Menopause Society doesn't recommend [@nams-2023-nonhormone-therapy].
+
+- **Ashwagandha**: :grade{id="ashwagandha"}. A trial run specifically in perimenopause: in 100 perimenopausal women, 8 weeks of ashwagandha root extract lowered menopause symptom scores compared with placebo [@gopal-ashwagandha-perimenopause-2021]. One trial is a start, not proof. See [ashwagandha](/does-it-work/ashwagandha/).
+- **Vitamin D and calcium**: for women who haven't reached menopause yet, the US Preventive Services Task Force found too little evidence to say whether these supplements prevent fractures at any dose [@uspstf-vitamin-d-calcium-fractures-2018]. See [vitamin D](/does-it-work/vitamin-d/).
+- **Magnesium**: :grade{id="magnesium-vms"} for hot flashes, which falls under the supplements The Menopause Society doesn't recommend [@nams-2023-nonhormone-therapy]. See [magnesium](/does-it-work/magnesium/) for what the sleep evidence shows.
+
+Hot flashes also ease on a placebo in trials (see below), so a good month on a supplement doesn't show it worked [@lethaby-cochrane-phytoestrogens-2013]. If you're not sure whether your symptoms are perimenopause, see [early signs of perimenopause](/perimenopause/early-signs/).
 
 ## Are menopause supplements safe?
 

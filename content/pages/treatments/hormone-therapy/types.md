@@ -1,7 +1,7 @@
 ---
-title: "Types of HRT"
-seo_title: "Types of HRT: systemic vs vaginal, estrogen-only vs combined"
-meta_description: "Estrogen-only HRT is for people without a uterus; combined HRT protects the uterine lining. Compare systemic vs vaginal HRT and pill, patch, gel, spray, ring."
+title: "Types of HRT and the main HRT medications"
+seo_title: "Types of HRT medication: names, forms and how they differ"
+meta_description: "HRT medications include estrogen (estradiol and others), progestogens and combined products. See FDA-approved types and forms: pill, patch, gel, spray, ring."
 cluster: treatments
 primary_keyword: types of hrt
 slug: types
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-09"
+updated_at: "2026-11-15"
 change_log:
+  - { date: "2026-11-15", summary: "Added a cited table of the main FDA-listed HRT medications (estrogens, progestogens, combined products) with their forms, a note on non-hormone prescription options, and an FAQ on estradiol; title leads with HRT medication", material: true }
   - { date: "2026-11-09", summary: "Rebuilt around common questions: systemic vs vaginal HRT, who gets estrogen-only vs combined, sequential vs continuous, a cited table of forms (pill, patch, gel, spray, ring), which type is best, and bioidentical options", material: true }
   - { date: "2026-11-06", summary: "Published overview guide on the types of HRT", material: true }
 evidence_grade: strong
@@ -38,12 +39,20 @@ claims:
   - id: nice-lowest-effective-dose
     text: "NICE NG23 recommends using the lowest effective dosage for anyone choosing to take HRT."
     sources: [nice-ng23-recommendations]
+  - id: fda-hrt-medicine-list
+    text: "FDA's consumer list of menopause hormone medicines includes estrogen-only medicines (estradiol, estradiol acetate, estradiol valerate, conjugated and synthetic conjugated estrogens, esterified estrogens, estropipate) as pills, patches, gels, sprays, skin cream, vaginal creams, tablets and rings, and injections; progestin-only medicines (micronized progesterone, medroxyprogesterone acetate); combination estrogen-progestin pills and patches; and conjugated estrogens with bazedoxifene."
+    sources: [fda-menopause-medicines-help-you]
+  - id: fda-nonhormone-vms-medicines
+    text: "The FDA has approved three nonhormone medicines for moderate to severe hot flashes: low-dose paroxetine, fezolinetant and elinzanetant."
+    sources: [owh-menopause-treatment-2026]
 safety_flags: []
 cta_profile: hrt_evaluating
 hub: /treatments/hormone-therapy/
-sources: [nice-ng23-recommendations, nams-2022-hormone-therapy, nhs-types-of-hrt]
-related: [/treatments/hormone-therapy/, /treatments/hormone-therapy/patch-vs-pill/, /treatments/hormone-therapy/vaginal-estrogen/, /treatments/hormone-therapy/is-it-right-for-me/, /tools/treatment-questions/]
+sources: [nice-ng23-recommendations, nams-2022-hormone-therapy, nhs-types-of-hrt, fda-menopause-medicines-help-you, prometrium-prescribing-information, goodrx-estradiol-prices-2026-11-08, owh-menopause-treatment-2026]
+related: [/treatments/hormone-therapy/, /treatments/hormone-therapy/estrogen/, /treatments/hormone-therapy/patch-vs-pill/, /treatments/hormone-therapy/vaginal-estrogen/, /treatments/hormone-therapy/is-it-right-for-me/, /tools/treatment-questions/]
 faq:
+  - q: Is estradiol a type of HRT?
+    a: "Yes. Estradiol is identical to the main estrogen the ovaries make, and it is the estrogen in many FDA-approved HRT medicines, sold as pills, patches, gels, sprays and vaginal products."
   - q: What's the difference between combined and estrogen-only HRT?
     a: "Combined HRT contains estrogen and a progestogen and is offered to people who still have a uterus, because the progestogen protects the uterine lining. Estrogen-only HRT is offered to people who have had a total hysterectomy, since there's no lining left to protect."
   - q: What's the difference between sequential and continuous combined HRT?
@@ -54,7 +63,7 @@ faq:
     a: "Yes. NICE advises offering vaginal estrogen for vaginal and urinary symptoms to people with these symptoms, including people who are already on systemic HRT."
 ---
 
-There are two main types of HRT: combined HRT (estrogen plus a progestogen) for people who still have a uterus, and estrogen-only HRT for people who have had a total hysterectomy [@nice-ng23-recommendations]. Either works through the whole body (systemic), while low-dose vaginal estrogen is a separate local treatment for vaginal and urinary symptoms [@nice-ng23-recommendations; @nams-2022-hormone-therapy].
+There are two main types of HRT medication: combined HRT (estrogen plus a progestogen) for people who still have a uterus, and estrogen-only HRT for people who have had a total hysterectomy [@nice-ng23-recommendations]. Either works through the whole body (systemic), while low-dose vaginal estrogen is a separate local treatment for vaginal and urinary symptoms [@nice-ng23-recommendations; @nams-2022-hormone-therapy].
 
 ## What are the main types of HRT?
 
@@ -64,6 +73,31 @@ HRT is grouped by which hormones it contains and where they act. Whether you hav
 - **Estrogen-only HRT**: For people who have had a total hysterectomy, taken every day [@nice-ng23-recommendations; @nhs-types-of-hrt].
 - **Estrogen with bazedoxifene**: A combination product (a tissue-selective estrogen complex) that protects the uterine lining without a progestogen [@nams-2022-hormone-therapy].
 - **Low-dose vaginal estrogen**: A local treatment for vaginal dryness, painful sex and urinary symptoms, rather than whole-body HRT [@nams-2022-hormone-therapy]. Its evidence for these symptoms is graded :grade{id="vaginal-estrogen-gsm"} on our scale.
+
+## HRT medications: the main FDA-approved medicines
+
+HRT medications are estrogens, progestogens, or products that combine them, and each comes in one or more forms such as a pill, patch, gel or vaginal product [@fda-menopause-medicines-help-you]. FDA's consumer list groups them like this (UK guidance spells estrogen "oestrogen") [@fda-menopause-medicines-help-you; @nhs-types-of-hrt]:
+
+| Medicine (generic name) | What it is | Forms on FDA's list | Brand names on FDA's list |
+| --- | --- | --- | --- |
+| **Estradiol** | Estrogen [@fda-menopause-medicines-help-you] | Pill, skin patch, gel, skin spray, skin cream, vaginal cream, vaginal tablet, vaginal insert [@fda-menopause-medicines-help-you] | Alora, Climara, Divigel, Estrace, EstroGel, Evamist, Vagifem, Vivelle-Dot, Estring, among others [@fda-menopause-medicines-help-you] |
+| **Estradiol acetate** | Estrogen [@fda-menopause-medicines-help-you] | Pill, vaginal ring [@fda-menopause-medicines-help-you] | Femtrace, Femring [@fda-menopause-medicines-help-you] |
+| **Estradiol valerate** | Estrogen [@fda-menopause-medicines-help-you] | Injection [@fda-menopause-medicines-help-you] | Delestrogen [@fda-menopause-medicines-help-you] |
+| **Conjugated estrogens** | Estrogen [@fda-menopause-medicines-help-you] | Pill, vaginal cream, injection [@fda-menopause-medicines-help-you] | Premarin [@fda-menopause-medicines-help-you] |
+| **Synthetic conjugated estrogens, esterified estrogens, estropipate** | Estrogen [@fda-menopause-medicines-help-you] | Pill; estropipate also as a vaginal cream [@fda-menopause-medicines-help-you] | Cenestin, Enjuvia, Menest, Ogen [@fda-menopause-medicines-help-you] |
+| **Micronized progesterone** | Progestogen [@fda-menopause-medicines-help-you] | Capsule taken by mouth [@fda-menopause-medicines-help-you; @prometrium-prescribing-information] | Prometrium [@fda-menopause-medicines-help-you] |
+| **Medroxyprogesterone acetate** | Progestogen (progestin) [@fda-menopause-medicines-help-you] | Pill [@fda-menopause-medicines-help-you] | Provera [@fda-menopause-medicines-help-you] |
+| **Estradiol + norethindrone acetate** | Combined [@fda-menopause-medicines-help-you] | Pill, skin patch [@fda-menopause-medicines-help-you] | Activella, CombiPatch [@fda-menopause-medicines-help-you] |
+| **Estradiol + levonorgestrel** | Combined [@fda-menopause-medicines-help-you] | Skin patch [@fda-menopause-medicines-help-you] | Climara Pro [@fda-menopause-medicines-help-you] |
+| **Conjugated estrogens + medroxyprogesterone acetate** | Combined [@fda-menopause-medicines-help-you] | Pill [@fda-menopause-medicines-help-you] | Prempro [@fda-menopause-medicines-help-you] |
+| **Estradiol + drospirenone, ethinyl estradiol + norethindrone acetate, estradiol + norgestimate** | Combined [@fda-menopause-medicines-help-you] | Pill [@fda-menopause-medicines-help-you] | Angeliq, Femhrt, Prefest [@fda-menopause-medicines-help-you] |
+| **Conjugated estrogens + bazedoxifene** | Estrogen with a lining protector that is not a progestogen [@fda-menopause-medicines-help-you] | Pill [@fda-menopause-medicines-help-you] | Duavee [@fda-menopause-medicines-help-you] |
+
+Brand names are shown so you can recognize a prescription, not as recommendations. FDA's list was last updated in 2019, so some brands may no longer be sold, and estradiol is available in several generic as well as brand versions [@fda-menopause-medicines-help-you; @goodrx-estradiol-prices-2026-11-08]. One estradiol patch on the list, Menostar, is used only to prevent bone loss, not for hot flashes [@fda-menopause-medicines-help-you]. Testosterone is covered separately in [testosterone for women in menopause](/treatments/hormone-therapy/testosterone/).
+
+### Are there non-hormone prescription medicines?
+
+Yes. The FDA has approved three nonhormone medicines for moderate to severe hot flashes: low-dose paroxetine, fezolinetant and elinzanetant [@owh-menopause-treatment-2026]. They are not HRT; our [non-hormonal treatments](/treatments/nonhormonal/) section compares them.
 
 ## What is systemic HRT?
 

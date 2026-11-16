@@ -2844,6 +2844,39 @@
   notes: Last reviewed 26 February 2026. Also has a symptom-to-cause table
     (osteoarthritis, rheumatoid arthritis, bursitis, gout, septic arthritis,
     sprains).
+- id: wright-musculoskeletal-syndrome-menopause-2024
+  title: The musculoskeletal syndrome of menopause
+  authors:
+    - Wright VJ
+    - Schwartzman JD
+    - Itinoche R
+    - Wittstein J
+  publisher: Climacteric
+  year: 2024
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/39077777/
+  doi: 10.1080/13697137.2024.2380363
+  accessed: 2026-11-16
+  population: Women in the menopause transition (narrative review of published literature)
+  key_finding: "Estimates that more than 70% of women experience musculoskeletal symptoms and 25% are disabled by them through the transition from perimenopause to postmenopause. Proposes the term musculoskeletal syndrome of menopause for the estrogen-related collection of joint pain (arthralgia), loss of muscle mass, loss of bone density and progression of osteoarthritis, among others."
+  funding_conflict: null
+  verified: true
+  notes: "Abstract read on PubMed. Narrative review, not a trial; the prevalence figures are drawn from earlier studies. Climacteric 2024;27(5):466-472."
+- id: harvard-musculoskeletal-syndrome-menopause-2026
+  title: "Musculoskeletal syndrome of menopause: When menopause makes you ache all over"
+  authors:
+    - Salamon M
+  publisher: Harvard Health Publishing
+  year: 2026
+  type: patient_information
+  url: https://www.health.harvard.edu/womens-health/musculoskeletal-syndrome-of-menopause-when-menopause-makes-you-ache-all-over
+  doi: null
+  accessed: 2026-11-16
+  population: General public (US)
+  key_finding: "Estrogen receptors are found in joints, ligaments, tendons and bones, so falling estrogen at midlife can affect the whole musculoskeletal system, reducing muscle mass and bone density and causing body aches. The pain can move around or stay in certain joints such as the shoulder, and, unlike fibromyalgia, it tends to improve with hormone therapy, according to the internist interviewed. Many clinicians do not yet use the term."
+  funding_conflict: null
+  verified: true
+  notes: "Published 5 June 2026; reviewed by Deborah Gomez Kwolek, MD. Expert commentary, not new research."
 - id: medlineplus-joint-pain
   title: "Joint pain: MedlinePlus Medical Encyclopedia"
   authors: []

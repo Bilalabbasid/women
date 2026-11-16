@@ -1,6 +1,6 @@
 ---
 title: "Does dong quai work for hot flashes?"
-seo_title: "Dong Quai for Hot Flashes: What the Trial Found"
+seo_title: "Dong quai for menopause: does it help hot flashes?"
 meta_description: "Why a placebo-controlled trial found dong quai, used alone, no better than placebo for menopause symptoms, and what has stronger evidence instead."
 cluster: does-it-work
 primary_keyword: dong quai menopause

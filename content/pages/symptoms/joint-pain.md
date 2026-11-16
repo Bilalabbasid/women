@@ -1,12 +1,12 @@
 ---
 title: Joint and muscle pain in menopause
-seo_title: "Menopause joint & muscle pain: causes & what helps"
-meta_description: "Why aching joints and morning stiffness are recognized menopause symptoms (NICE NG23), what else to rule out, and how exercise and treatment help."
+seo_title: "Menopause joint pain: why your joints ache & what helps"
+meta_description: "Yes, menopause can cause joint pain: over 70% of women get muscle or joint symptoms as estrogen falls. Why joints ache, what to rule out, what helps."
 cluster: symptoms
 primary_keyword: menopause joint pain
 slug: joint-pain
 page_type: symptom
-secondary_keywords: [menopause muscle aches, perimenopause joint pain, menopause stiffness]
+secondary_keywords: [menopause muscle aches, perimenopause joint pain, menopause stiffness, menopause body aches, musculoskeletal syndrome of menopause]
 search_intent: informational
 funnel_stage: worried
 symptom_tags: [joint-pain]
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-08"
+updated_at: "2026-11-16"
 change_log:
+  - { date: "2026-11-16", summary: "Answered the searches this page appears for: why joints hurt in menopause, whether perimenopause causes stiffness, the musculoskeletal syndrome of menopause, symptoms that come with it and how to treat it", material: true }
   - { date: "2026-11-08", summary: "Added WHI estrogen trial results, sourced causes to rule out, and a sourced when-to-see-a-doctor section with red flags; removed unsourced claims", material: true }
   - { date: "2026-11-06", summary: "Published clinical guide on joint and muscle pain in menopause", material: true }
 evidence_grade: per_option
@@ -32,15 +33,25 @@ claims:
   - id: liftmor-strength-function
     text: "Supervised high-intensity resistance and impact training (LIFTMOR trial) significantly improved bone mineral density, muscle strength, and functional performance in postmenopausal women."
     sources: [liftmor-trial-bone-density]
+  - id: msm-prevalence
+    text: "A 2024 Climacteric review estimated that more than 70% of women experience musculoskeletal symptoms and 25% are disabled by them through the menopause transition, and proposed the term musculoskeletal syndrome of menopause."
+    sources: [wright-musculoskeletal-syndrome-menopause-2024]
+  - id: estrogen-receptors-joints
+    text: "Estrogen receptors are found in joints, ligaments, tendons and bones, so falling estrogen can affect the whole musculoskeletal system."
+    sources: [harvard-musculoskeletal-syndrome-menopause-2026]
   - id: nams-hrt-overview
     text: "Hormone therapy treats menopause symptoms and prevents bone loss and fracture in women under 60 or within 10 years of menopause onset."
     sources: [nams-2022-hormone-therapy]
 safety_flags: [urgent_symptoms]
 cta_profile: musculoskeletal
 hub: /symptoms/
-sources: [nice-ng23-recommendations, nhs-menopause-symptoms, chlebowski-whi-estrogen-joint-symptoms-2013, liftmor-trial-bone-density, nams-2022-hormone-therapy, medlineplus-joint-pain, medlineplus-hypothyroidism, nhs-joint-pain]
+sources: [nice-ng23-recommendations, nhs-menopause-symptoms, wright-musculoskeletal-syndrome-menopause-2024, harvard-musculoskeletal-syndrome-menopause-2026, chlebowski-whi-estrogen-joint-symptoms-2013, liftmor-trial-bone-density, nams-2022-hormone-therapy, medlineplus-joint-pain, medlineplus-hypothyroidism, nhs-joint-pain]
 related: [/symptoms/, /does-it-work/exercise/, /postmenopause/bone-health/, /tools/symptoms-checklist/]
 faq:
+  - q: Is joint pain a normal part of menopause?
+    a: "It is common: a 2024 review estimated that more than 70% of women get muscle or joint symptoms during the menopause transition, and about 1 in 4 find them disabling. Common doesn't mean you have to put up with it, and it doesn't rule out arthritis or thyroid problems, so pain that is new, lasting or getting worse is worth checking."
+  - q: Does HRT help menopause joint pain?
+    a: "It may help a little. In a large trial, women taking estrogen reported joint pain slightly less often than women on placebo (76.3% vs 79.2% after a year). If you are considering HRT for hot flashes or bone protection, a possible small benefit for aches is worth mentioning to your doctor."
   - q: Can menopause really cause aching joints and stiffness?
     a: Yes. The UK NICE menopause guideline (NG23) lists musculoskeletal symptoms, such as joint and muscle pain, among the symptoms of perimenopause and menopause, and the NHS lists muscle aches and joint pains too. Other causes, such as arthritis or an underactive thyroid, can look similar, so new or lasting pain is worth checking.
   - q: When should joint pain be checked for something other than menopause?
@@ -51,9 +62,30 @@ Yes, aching joints and muscles can be part of perimenopause and menopause: UK gu
 
 The UK NICE menopause guideline (NG23) groups joint and muscle pain under "musculoskeletal symptoms," alongside hot flashes and mood changes [@nice-ng23-recommendations]. Learn more about [perimenopause](/perimenopause/) and [menopause](/menopause/).
 
+## Why do joints hurt during menopause?
+
+Estrogen does more than control periods. Its receptors are found in joints, ligaments, tendons and bones, so as estrogen falls at midlife the whole musculoskeletal system can feel it: muscle mass and bone density drop, and many women notice new aches [@harvard-musculoskeletal-syndrome-menopause-2026]. In 2024, doctors writing in the journal *Climacteric* proposed a name for this group of symptoms, the **musculoskeletal syndrome of menopause**. It covers joint pain, loss of muscle, loss of bone density and faster progression of osteoarthritis [@wright-musculoskeletal-syndrome-menopause-2024].
+
+The NHS lists joint pains as a symptom of perimenopause as well as menopause, so aches can begin while you still have periods [@nhs-menopause-symptoms].
+
+## Can perimenopause cause joint stiffness?
+
+Yes. Joint stiffness and muscle aches are listed among perimenopause and menopause symptoms by the NHS and the UK NICE guideline [@nhs-menopause-symptoms; @nice-ng23-recommendations]. The pain can move from place to place or settle in particular joints, such as a shoulder [@harvard-musculoskeletal-syndrome-menopause-2026].
+
+Stiffness that lasts more than 30 minutes after you get up is a reason to see a doctor, because it can point to inflammatory arthritis rather than menopause alone [@nhs-joint-pain].
+
+## What other symptoms come with menopause joint pain?
+
+Joint pain often turns up alongside other changes of the same transition [@wright-musculoskeletal-syndrome-menopause-2024; @nhs-menopause-symptoms]:
+
+- **Muscle aches and loss of muscle strength**, which makes joints work harder.
+- **Bone loss**, which raises the risk of osteoporosis over time. See [bone health after menopause](/postmenopause/bone-health/).
+- **Frozen shoulder and tendon problems**. See [frozen shoulder](/symptoms/frozen-shoulder/).
+- **Poor sleep and night sweats**, which can make any pain feel worse. See [menopause fatigue](/symptoms/fatigue/).
+
 ## How common is joint pain after menopause?
 
-Very common. In a large US trial of postmenopausal women who had had a hysterectomy (surgery to remove the uterus), about **77%** reported some joint pain and about **40%** reported joint swelling when they joined [@chlebowski-whi-estrogen-joint-symptoms-2013]. That doesn't mean menopause caused all of it. Arthritis and other conditions also become more common in midlife, which is why new or lasting pain is worth checking.
+Very common. A 2024 review estimated that more than 70% of women get muscle or joint symptoms during the menopause transition, and about 25% are disabled by them [@wright-musculoskeletal-syndrome-menopause-2024]. In a large US trial of postmenopausal women who had had a hysterectomy (surgery to remove the uterus), about **77%** reported some joint pain and about **40%** reported joint swelling when they joined [@chlebowski-whi-estrogen-joint-symptoms-2013]. That doesn't mean menopause caused all of it. Arthritis and other conditions also become more common in midlife, which is why new or lasting pain is worth checking.
 
 ## What else can cause joint pain
 
@@ -67,7 +99,10 @@ Joint pain has many possible causes, and most are common and treatable. A doctor
 
 Shoulder stiffness that slowly limits how far you can move your arm may be [frozen shoulder](/symptoms/frozen-shoulder/).
 
-## What helps
+## How to treat menopause joint pain
+
+Most women do best with a mix of everyday joint care, regular strength exercise and, for some, hormone therapy.
+
 
 :::try
 1. Rest the sore joint if you can, but don't stop moving it completely.

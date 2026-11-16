@@ -10,15 +10,15 @@ const CONSENT_PAINT_SCRIPT = "try{if(localStorage.getItem('" + CONSENT_KEY + "')
 
 /*
  * Two families, self-hosted and subset by next/font (no request to Google at
- * runtime). Newsreader for headings (optical sizes keep big heads crisp and small
- * ones sturdy); Atkinson Hyperlegible Next for body text, designed for readers
+ * runtime). Newsreader for headings, without its optical-size axis: that axis more
+ * than doubled the files (about 280 KB down to 120 KB for both styles) and slowed
+ * mobile Speed Index; Atkinson Hyperlegible Next for body text, designed for readers
  * with low or changing vision. Only the body face is preloaded (it carries LCP
  * text); headings swap in.
  */
 const serif = Newsreader({
   subsets: ['latin'],
   style: ['normal', 'italic'],
-  axes: ['opsz'],
   display: 'swap',
   variable: '--font-newsreader',
   preload: false,

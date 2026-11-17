@@ -49,7 +49,8 @@ export interface VerdictData {
 
 /** "**Our verdict: Not supported by clinical guidelines for hot flashes.**" → the sentence after the colon. */
 export function extractVerdict(body: string): string | null {
-  const m = body.match(/^\s*\*\*Our verdict:\s*([\s\S]+?)\*\*\s*$/m);
+  // One line only: a later bold line (such as an "at a glance" label) must not be swallowed.
+  const m = body.match(/^[ \t]*\*\*Our verdict:[ \t]*([^\n]+?)\*\*[ \t]*$/m);
   if (!m) return null;
   const s = m[1].replace(/\s+/g, ' ').trim();
   return s ? s.charAt(0).toUpperCase() + s.slice(1) : null;

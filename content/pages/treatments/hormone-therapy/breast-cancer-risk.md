@@ -1,12 +1,12 @@
 ---
 title: "HRT and breast cancer risk, in absolute numbers"
-seo_title: "Does HRT cause breast cancer? The risk in real numbers"
-meta_description: "Combined HRT slightly raises breast cancer risk; estrogen-only, little or not at all. See cases per 1,000 women, risk after stopping, and vaginal estrogen."
+seo_title: "HRT breast cancer risk: how big is it, per 1,000 women"
+meta_description: "Combined HRT for 5 years from 50 adds about 20 breast cancers per 1,000 women by 69; estrogen-only adds 10. Type, duration and stopping explained."
 cluster: treatments
 primary_keyword: hrt breast cancer risk
 slug: breast-cancer-risk
 page_type: treatment
-secondary_keywords: [does hrt cause breast cancer, estrogen only vs combined hrt breast cancer risk]
+secondary_keywords: [does hrt cause breast cancer, estrogen only vs combined hrt breast cancer risk, hrt breast cancer risk per 1000 women, breast cancer risk after stopping hrt, does vaginal estrogen increase breast cancer risk]
 search_intent: informational
 funnel_stage: evaluating
 symptom_tags: [hot-flashes]
@@ -18,8 +18,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-15"
+updated_at: "2026-11-17"
 change_log:
+  - { date: "2026-11-17", summary: "Title leads with HRT breast cancer risk and the size of it; description opens with NICE's extra cases per 1,000 women; added an at-a-glance summary of combined vs estrogen-only HRT, the numbers, vaginal estrogen, risk after stopping and the FDA label change", material: true }
   - { date: "2026-11-15", summary: "Added a link to the soy isoflavones evidence review", material: false }
   - { date: "2026-11-11", summary: "Rebuilt around common questions: does HRT cause breast cancer, NICE's cases per 1,000 women in a cited table, estrogen-only vs combined (including the WHI trial), progestogen type, risk after stopping, vaginal estrogen, risk of dying, history of breast cancer, screening; removed an uncited list of risk factors", material: true }
   - { date: "2026-11-06", summary: "Published evidence guide on HRT and breast cancer risk", material: true }
@@ -63,6 +64,15 @@ faq:
 ---
 
 Combined HRT (estrogen plus a progestogen) slightly raises breast cancer risk, and the rise grows the longer you take it; estrogen-only HRT raises it very little or not at all [@nice-ng23-recommendations]. In NICE's estimates, 5 years of combined HRT from age 50 means about 20 extra breast cancers per 1,000 women by age 69 [@nice-ng23-hrt-discussion-aid-2024].
+
+**HRT and breast cancer at a glance**
+
+- **Combined HRT**: Estrogen plus a progestogen slightly raises breast cancer risk, and the rise grows the longer you take it [@nice-ng23-recommendations].
+- **In numbers**: Of 1,000 women, 59 develop breast cancer between 50 and 69 without HRT, 79 after 5 years of combined HRT from 50, and 69 after 5 years of estrogen-only HRT [@nice-ng23-hrt-discussion-aid-2024].
+- **Estrogen-only HRT**: Very little or no increase in risk, but it is only offered after a total hysterectomy [@nice-ng23-recommendations].
+- **Vaginal estrogen**: A large 2019 analysis found extra risk with every type of hormone therapy except vaginal estrogen [@collaborative-group-mht-breast-cancer-2019].
+- **After stopping**: The extra risk from combined HRT falls once you stop but lasts at least 10 years [@nice-ng23-recommendations].
+- **The FDA label change**: Breast cancer came out of the boxed warning, but the risk stays in the label's Warnings and Precautions section [@fda-hrt-consumer-update-2026].
 
 ## Does HRT cause breast cancer?
 

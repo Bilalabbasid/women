@@ -1,12 +1,12 @@
 ---
 title: "What to expect year by year in perimenopause"
-seo_title: "Perimenopause Year by Year: What Changes When"
-meta_description: "What actually changes year by year through perimenopause and into postmenopause, based on long-term SWAN study data on body composition, mood, and more."
+seo_title: "Perimenopause year by year: what changes in weight and mood"
+meta_description: "Weight doesn't speed up in perimenopause, but fat gain doubles and muscle declines until 2 years past the last period. Low mood is likelier afterward."
 cluster: perimenopause
 primary_keyword: perimenopause year by year
 slug: year-by-year
 page_type: guide
-secondary_keywords: [what to expect each year of perimenopause, menopause timeline symptoms]
+secondary_keywords: [what to expect each year of perimenopause, menopause timeline symptoms, perimenopause weight gain timeline, does weight gain speed up in perimenopause]
 search_intent: informational
 funnel_stage: learn
 symptom_tags: [weight-gain, depression, irregular-periods]
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-07"
+updated_at: "2026-11-17"
 change_log:
+  - { date: "2026-11-17", summary: "Sentence-case title naming the two things that change (weight and mood); description opens with the main finding; added an at-a-glance timeline of what changes before, during and after the transition", material: true }
   - { date: "2026-11-07", summary: "Published year-by-year guide using SWAN longitudinal data on body composition and depression risk relative to the final period", material: true }
 evidence_grade: strong
 claims:
@@ -41,6 +42,15 @@ faq:
 ---
 
 Perimenopause isn't one uniform experience that simply "happens" and then ends — different things change on different timelines, and some patterns genuinely surprise people. Here's an honest breakdown using long-term tracking data, rather than a generic "symptoms worsen then improve" story.
+
+**Perimenopause year by year at a glance**
+
+- **Before the transition**: Weight, fat and lean (muscle) mass all rise at a steady pace [@greendale-swan-body-composition-2019].
+- **When the transition starts**: The rate of fat gain doubles and muscle mass starts to fall, but overall weight keeps rising at the same steady rate, with no speed-up [@greendale-swan-body-composition-2019].
+- **Up to 2 years after your last period**: Fat gain and muscle loss carry on, then level off; weight gain flattens out once the transition ends [@greendale-swan-body-composition-2019].
+- **Mood during perimenopause**: The odds of high depressive symptoms were not significantly different from before the transition [@kravitz-swan-postmenopause-depression-2022].
+- **Mood after menopause**: The odds of high depressive symptoms were higher than before the transition (OR 1.49) in 1,551 women followed for a median of 19 years [@kravitz-swan-postmenopause-depression-2022].
+- **Best predictor of later mood**: Your own pattern of depressive symptoms in the years before your final period [@kravitz-swan-postmenopause-depression-2022].
 
 For how the stages are actually defined by your cycle pattern, see our [stages of perimenopause](/perimenopause/stages/) guide — this page focuses on what changes over calendar time instead.
 

@@ -1,12 +1,12 @@
 ---
 title: Perimenopause and menopause symptoms
-seo_title: Perimenopause and menopause symptoms guide
-meta_description: "An evidence-based directory of physical and cognitive symptoms during perimenopause and menopause, with what helps and when to get checked."
+seo_title: "Perimenopause and menopause symptoms list: 36 explained"
+meta_description: "The main signs: period changes, hot flashes, night sweats, vaginal dryness, mood changes, aches and low sex drive. 36 symptoms explained, with what helps."
 cluster: symptoms
 primary_keyword: menopause symptoms list
 slug: symptoms
 page_type: hub
-secondary_keywords: [perimenopause symptoms, menopause symptoms, signs of perimenopause]
+secondary_keywords: [perimenopause symptoms, menopause symptoms, signs of perimenopause, perimenopause symptoms list, signs of menopause]
 search_intent: informational
 funnel_stage: learn
 symptom_tags: [hot-flashes, night-sweats, irregular-periods, insomnia, brain-fog, joint-pain, vaginal-dryness]
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-08"
+updated_at: "2026-11-17"
 change_log:
+  - { date: "2026-11-17", summary: "Title now leads with the symptoms list and says how many symptoms are covered; description names the main symptoms; added an at-a-glance summary of the main and other common symptoms, how long they last, whether you need a blood test, when to see a doctor and what helps hot flashes most", material: true }
   - { date: "2026-11-08", summary: "Plain short answer listing the core symptoms NICE names; blood-test line now matches NICE; plainer wording; US spelling", material: true }
   - { date: "2026-11-06", summary: "Initial launch of the symptoms directory", material: true }
   - { date: "2026-11-06", summary: "Linked 10 new symptom pages and added a specialist-situations section", material: true }
@@ -32,11 +33,20 @@ claims:
 safety_flags: [urgent_symptoms]
 cta_profile: learn_stage
 hub: null
-sources: [nice-ng23-recommendations]
+sources: [nice-ng23-recommendations, nhs-menopause-symptoms, nams-2022-hormone-therapy]
 related: [/symptoms/vaginal-dryness/, /symptoms/incontinence/, /care/menopause-books/, /tools/symptoms-checklist/]
 ---
 
 The main symptoms of perimenopause and menopause are changes to your periods, hot flashes and night sweats, vaginal dryness, mood changes, joint and muscle aches, and low sex drive [@nice-ng23-recommendations]. They range from mild to severe and can last a short or long time [@nice-ng23-recommendations]. Keeping a simple symptom log is a good first step.
+
+**Menopause symptoms at a glance**
+
+- **The main ones**: [Period changes](/perimenopause/irregular-periods/), [hot flashes](/symptoms/hot-flashes/) and [night sweats](/symptoms/night-sweats/), [vaginal dryness](/symptoms/vaginal-dryness/), mood changes, [joint and muscle aches](/symptoms/joint-pain/), and [low sex drive](/symptoms/low-libido/) [@nice-ng23-recommendations].
+- **Also common**: [Trouble sleeping](/symptoms/insomnia/), problems with [memory](/symptoms/memory-problems/) or concentration, [palpitations](/symptoms/heart-palpitations/), and headaches or [migraines](/symptoms/migraines/) that are worse than usual [@nhs-menopause-symptoms].
+- **How long they last**: Usually 7 to 9 years, sometimes longer, and they can change over that time [@nhs-menopause-symptoms]. See [how long menopause symptoms last](/menopause/how-long-symptoms-last/).
+- **Do you need a blood test?**: Usually not if you're 45 or over: NICE says perimenopause and menopause are recognized from symptoms and period changes [@nice-ng23-recommendations]. Try the [symptoms checklist](/tools/symptoms-checklist/).
+- **When to see a doctor**: If you have palpitations, your periods are getting heavier rather than lighter, or you have any bleeding after 12 months without a period [@nhs-menopause-symptoms].
+- **What helps hot flashes most**: Hormone therapy is the most effective treatment for hot flashes and night sweats [@nams-2022-hormone-therapy]. Compare [treatment options](/treatments/).
 
 This guide groups symptoms by type, sums up what the research shows, and points to next steps.
 

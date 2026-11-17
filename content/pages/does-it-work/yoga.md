@@ -1,12 +1,12 @@
 ---
 title: "Does yoga help menopause symptoms?"
-seo_title: "Yoga for menopause: what it helps and what it doesn't"
-meta_description: "Yoga didn't cut hot flashes in the largest trial but modestly helped sleep and quality of life. What studies found, safety tips and better options."
+seo_title: "Yoga for menopause: does it help hot flashes or sleep?"
+meta_description: "In the largest trial, 12 weeks of yoga didn't cut hot flashes but slightly helped sleep and quality of life. What trials found, safety, better options."
 cluster: does-it-work
 primary_keyword: yoga for menopause
 slug: yoga
 page_type: does_it_work
-secondary_keywords: [yoga hot flashes]
+secondary_keywords: [yoga hot flashes, does yoga help menopause, yoga for menopause sleep, does yoga help hot flashes]
 search_intent: informational
 funnel_stage: sceptical
 symptom_tags: [hot-flashes, anxiety, insomnia]
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-15"
+updated_at: "2026-11-17"
 change_log:
+  - { date: "2026-11-17", summary: "Title asks the question readers search for, whether yoga helps hot flashes or sleep; description gives the trial result first; added an at-a-glance summary of hot flashes, sleep, stress, yoga vs. other exercise, how much was tested and safety", material: true }
   - { date: "2026-11-15", summary: "Expanded: verdict from the grade registry, a cited table of the main yoga trials and review, sleep, mood and stress, yoga vs. other exercise, amount studied, safety, comparison with proven hot flash options, when to see a doctor and new FAQs; sourced the benefit claims", material: true }
   - { date: "2026-11-06", summary: "Published evidence verdict on yoga for menopause symptoms", material: true }
 evidence_grade: not_supported
@@ -52,6 +53,15 @@ faq:
 ---
 
 **Our verdict:** :grade{id="yoga-vms"}. In the largest trial, yoga did not reduce hot flashes, though it modestly improved sleep and day-to-day quality of life [@newton-yoga-vms-rct-2014; @reed-yoga-menqol-rct-2014]. The Menopause Society does not recommend yoga for hot flashes; hormone therapy is the most effective treatment for them [@nams-2023-nonhormone-therapy; @nams-2022-hormone-therapy].
+
+**Yoga for menopause at a glance**
+
+- **Hot flashes**: No change in the largest trial: in a 12-week study of 249 women, those who did yoga had as many hot flashes as those who carried on as usual, and found them just as bothersome [@newton-yoga-vms-rct-2014]. The Menopause Society does not recommend yoga for hot flashes (Level II) [@nams-2023-nonhormone-therapy].
+- **Sleep**: Insomnia symptoms improved slightly in that trial; in pooled data from four trials, CBT for insomnia helped most [@newton-yoga-vms-rct-2014; @guthrie-msflash-insomnia-pooled-2018].
+- **Stress and mood**: Reviews found benefits for stress in healthy adults and for anxiety symptoms [@nccih-yoga-effectiveness-safety-2023].
+- **Better than other exercise?**: Not clearly; a 2018 review found broadly similar effects [@cramer-yoga-menopause-metaanalysis-2018].
+- **How much was tested**: One 90-minute class a week for 12 weeks, plus daily practice at home [@newton-yoga-vms-rct-2014].
+- **Is it safe?**: Generally, yes. Beginners should skip extreme poses such as headstands, and hot yoga can cause overheating and dehydration [@nccih-yoga-effectiveness-safety-2023].
 
 ## Does yoga help menopause symptoms?
 

@@ -1,12 +1,12 @@
 ---
 title: "How we check the evidence behind our menopause guides"
-seo_title: "Evidence-based menopause guide: how we grade evidence"
-meta_description: "How this evidence-based menopause guide works: where every claim comes from, how treatments are graded, and where to start on symptoms, HRT and other options."
+seo_title: "Evidence-based menopause guide: every claim sourced, no ads"
+meta_description: "Every medical claim links to a published source we read, and each treatment gets a plain evidence grade, with no ads. Start with HRT, symptoms or remedies."
 cluster: evidence
 primary_keyword: menopause evidence checker
 slug: evidence
 page_type: evidence
-secondary_keywords: [evidence-based menopause guide, evidence-based menopause advice]
+secondary_keywords: [evidence-based menopause guide, evidence-based menopause advice, evidence-based menopause information]
 search_intent: navigational
 funnel_stage: learn
 symptom_tags: []
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-11"
+updated_at: "2026-11-17"
 change_log:
+  - { date: "2026-11-17", summary: "Title says what makes the guide evidence-based (every claim sourced, no ads); description answers how it works; added an at-a-glance summary of sourcing, grades, funding, review status and where to start", material: true }
   - { date: "2026-11-11", summary: "Explained in plain words where our information comes from, how grades work (with live examples), what we don't do, and linked the main guides", material: true }
   - { date: "2026-11-06", summary: "Initial evidence hub publication", material: true }
   - { date: "2026-11-06", summary: "Added link to new products-we-won't-recommend page", material: true }
@@ -32,6 +33,15 @@ related: [/evidence/how-we-grade/, /evidence/updates/, /evidence/products-we-won
 ---
 
 MenoVerdict is a free menopause guide where every medical claim links to a published source that we opened and read. Medicine labels and medical society guidelines count most, and small or brand-funded studies count least. Each treatment gets a plain-language evidence grade, and no doctor has checked our pages yet.
+
+**This guide at a glance**
+
+- **Every claim is sourced**: Each medical statement links to a published source, listed under References on that page. Browse them all on [our sources page](/evidence/sources/).
+- **Strongest sources count most**: Medicine labels and medical society guidelines come first; small, preprint and brand-funded studies come last. See [how we grade evidence](/evidence/how-we-grade/).
+- **Plain-language grades**: Each grade covers one treatment for one use, from strong evidence to harm concern. Hormone therapy for hot flashes, for example, is graded :grade{id="mht-vms"} [@nams-2022-hormone-therapy].
+- **No ads or sponsors**: Nobody pays to be mentioned or graded. See [how MenoVerdict is funded](/about/how-we-make-money/).
+- **No doctor's sign-off yet**: If a doctor checks a page, their name, credentials and the date will appear on it. See [our medical review process](/evidence/medical-review/).
+- **Where to start**: [Hormone therapy (HRT)](/treatments/hormone-therapy/), [symptoms A to Z](/symptoms/), or [Does it work?](/does-it-work/) for supplements and remedies.
 
 ## What "evidence-based" means on this site
 

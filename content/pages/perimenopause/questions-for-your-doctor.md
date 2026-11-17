@@ -1,12 +1,12 @@
 ---
 title: "What to ask your doctor about perimenopause"
-seo_title: "Questions to ask your doctor about HRT"
-meta_description: "A ready list of questions to ask your doctor about HRT: whether it suits you, which type, your risks, side effects, how long to take it, and other options."
+seo_title: "24 questions to ask your doctor about HRT and perimenopause"
+meta_description: "Ask first if HRT suits your age and health: benefits usually outweigh risks under 60 or within 10 years of menopause. Then type, risks, side effects, cost."
 cluster: perimenopause
 primary_keyword: questions to ask doctor about perimenopause
 slug: questions-for-your-doctor
 page_type: guide
-secondary_keywords: [perimenopause appointment questions, doctor appointment menopause questions]
+secondary_keywords: [perimenopause appointment questions, doctor appointment menopause questions, questions to ask your doctor about hrt, questions to ask about hormone replacement therapy]
 search_intent: informational
 funnel_stage: evaluating
 symptom_tags: [irregular-periods, hot-flashes, night-sweats, insomnia, brain-fog]
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-15"
+updated_at: "2026-11-17"
 change_log:
+  - { date: "2026-11-17", summary: "Title gives the number of questions (24) and covers both HRT and perimenopause; description opens with the first question to ask and why; added an at-a-glance list of the key HRT questions", material: true }
   - { date: "2026-11-15", summary: "Added a link to the black cohosh evidence review", material: false }
   - { date: "2026-11-09", summary: "Added a sourced, topic-by-topic list of HRT questions (suitability, type, risks, side effects, duration, alternatives, cost); removed unsourced appointment-length and blood-test claims; rewrote the 'too young' section", material: true }
   - { date: "2026-11-06", summary: "First comprehensive appointment question guide", material: true }
@@ -58,6 +59,15 @@ faq:
 ---
 
 The most useful questions about hormone therapy (HRT) cover whether it suits your health history, which type fits you, your personal risks, what side effects to expect, and how long you'd take it. Bring a short symptom log and your period dates. Guidance says HRT's balance of benefits and risks is most favorable when started before 60 or within 10 years of menopause [@nams-2022-hormone-therapy].
+
+**Questions to ask about HRT at a glance**
+
+- **Ask first**: "Is HRT right for me, given my age, time since my last period and health history?" For people under 60 or within 10 years of menopause with no reason to avoid it, benefits generally outweigh risks [@nams-2022-hormone-therapy].
+- **Which type**: If you have a uterus, estrogen needs a progestogen to protect its lining; ask whether a patch or gel suits you better than a pill, since some forms of estrogen may carry a higher clot risk [@owh-menopause-treatment-2026; @nice-ng23-recommendations].
+- **Your risks**: Ask about your own risk of blood clots, stroke and breast cancer, which depends on your age, health history and the type, dose and form you use [@owh-menopause-treatment-2026].
+- **Side effects**: Bleeding is common in the first 6 months, or within 3 months of a change in dose or type; ask which bleeding should make you call [@nice-ng23-recommendations].
+- **How long**: There is no single time limit; ask how often you will review it together [@owh-menopause-treatment-2026].
+- **If HRT isn't for you**: Ask about the three FDA-approved nonhormone medicines (low-dose paroxetine, fezolinetant and elinzanetant), CBT or clinical hypnosis [@owh-menopause-treatment-2026].
 
 ## Questions to ask your doctor about HRT
 

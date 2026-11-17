@@ -1,7 +1,7 @@
 ---
 title: "12 months without a period: menopause counter"
-seo_title: "Reached menopause? Count your 12 months without a period"
-meta_description: "You reach menopause after 12 months in a row with no period. Count the days from your last period, restart if one returns, and see when bleeding needs a check."
+seo_title: "12 months without a period: is it menopause? Free counter"
+meta_description: "Menopause is 12 months in a row with no period, if you're not on hormonal birth control. Count the days, restart if one returns, know when to get checked."
 cluster: tools
 primary_keyword: 12 months no period menopause
 slug: 12-month-counter
@@ -19,8 +19,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-11"
+updated_at: "2026-11-17"
 change_log:
+  - { date: "2026-11-17", summary: "Title leads with 12 months without a period and the question people ask; description adds the hormonal birth control caveat; no answer box so the counter stays at the top", material: true }
   - { date: "2026-11-11", summary: "Plainer short answer, new sections on how you know you've reached menopause (incl. when blood tests are used) and what happens after 12 months, sharper title and description", material: true }
   - { date: "2026-11-06", summary: "Published interactive 12-month counter with postmenopausal bleeding safety trigger", material: true }
   - { date: "2026-11-06", summary: "Added how the count is calculated with a worked example, when the rule doesn't apply, why it can't predict menopause age, a saved period log and new FAQs", material: true }

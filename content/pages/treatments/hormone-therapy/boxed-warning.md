@@ -1,12 +1,12 @@
 ---
 title: "The FDA HRT boxed warning change, explained"
-seo_title: "HRT black box warning removed: what the FDA changed"
-meta_description: "The FDA removed heart disease, breast cancer, and dementia from the HRT boxed warning in 2026. See which products changed, what warnings stay, and why."
+seo_title: "HRT black box warning removed: what changed, what stays"
+meta_description: "The FDA cut heart disease, breast cancer and dementia from the HRT black box warning. Whole-body estrogen-only HRT keeps a uterine cancer box. What stays."
 cluster: treatments
 primary_keyword: hrt black box warning removed
 slug: boxed-warning
 page_type: treatment
-secondary_keywords: [fda hrt label change, hrt boxed warning, hrt black box warning 2026]
+secondary_keywords: [fda hrt label change, hrt boxed warning, hrt black box warning 2026, fda removes black box warning on hrt, does vaginal estrogen still have a black box warning, is hrt safe now]
 search_intent: informational
 funnel_stage: evaluating
 symptom_tags: [hot-flashes, night-sweats]
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-15"
+updated_at: "2026-11-17"
 change_log:
+  - { date: "2026-11-17", summary: "Title says what changed and what stays; description opens with the answer; added an at-a-glance summary of what was removed, when, which products keep a boxed warning, which risks stay on the label, and whether HRT is safe now", material: true }
   - { date: "2026-11-15", summary: "Added a link to the black cohosh evidence review", material: false }
   - { date: "2026-11-09", summary: "Rewrote the opening to state what changed and when; added a product-type table, a 'has my label changed' section, an 'is HRT safe now' answer, FAQs, and the FDA patch supply update", material: true }
   - { date: "2026-11-08", summary: "Corrected what was removed and kept to match FDA wording (box removed for all product types except systemic estrogen-alone), fixed the 2003 history, added critiques and sourced warning signs; removed unsourced claims", material: true }
@@ -57,6 +58,15 @@ faq:
 ---
 
 The FDA is removing heart disease, breast cancer, and probable dementia from the boxed ("black box") warning on hormone therapy labels. It asked for the change on November 10, 2025, and approved the first six new labels on February 12, 2026 [@fda-mht-labeling-request-2025; @fda-mht-labeling-changes-2026]. Whole-body estrogen-only products keep a boxed warning about uterine cancer [@hhs-mht-fact-sheet-2025].
+
+**The HRT boxed warning change at a glance**
+
+- **What was removed**: Heart disease, breast cancer and probable dementia language came out of the boxed warning on hormone therapy labels [@fda-mht-labeling-request-2025; @fda-mht-labeling-changes-2026].
+- **When**: The FDA asked for the change on November 10, 2025, and approved the first six updated labels on February 12, 2026 [@fda-mht-labeling-request-2025; @fda-mht-labeling-changes-2026].
+- **Who keeps a box**: Only whole-body estrogen-alone products, for endometrial (uterine) cancer; combined, progestogen-alone and vaginal estrogen products lose it [@fda-mht-labeling-request-2025; @hhs-mht-fact-sheet-2025; @public-citizen-mht-labels-2026].
+- **Risks still on the label**: Heart disease and breast cancer stay in the Warnings and Precautions section of whole-body products, just not in the box [@fda-hrt-consumer-update-2026; @fda-mht-labeling-request-2025].
+- **Has your label changed?**: Maybe not yet. By February 2026, 29 companies had submitted changes, and the FDA approves them product by product [@fda-mht-labeling-changes-2026].
+- **Is HRT safe now?**: The risks themselves didn't change, and they are greater for women who start later or further from menopause [@fda-hrt-consumer-update-2026; @menopause-society-fda-comment-2025].
 
 ## What changed on the HRT label?
 

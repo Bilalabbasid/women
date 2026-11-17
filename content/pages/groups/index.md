@@ -1,12 +1,12 @@
 ---
 title: Menopause in specific situations
-seo_title: "Types of menopause: early, premature, surgical, induced"
-meta_description: "Types of menopause: natural, early (before 45), premature or POI (before 40), surgical and induced by cancer treatment, with a guide for each situation."
+seo_title: "4 types of menopause: natural, early, premature, induced"
+meta_description: "There are 4 types of menopause: natural (52 on average in the US), early (before 45), premature or POI (before 40), and induced by surgery or cancer care."
 cluster: groups
 primary_keyword: types of menopause
 slug: groups
 page_type: hub
-secondary_keywords: [induced menopause]
+secondary_keywords: [induced menopause, different types of menopause, what are the types of menopause]
 search_intent: informational
 funnel_stage: learn
 symptom_tags: [hot-flashes, night-sweats, vaginal-dryness]
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-15"
+updated_at: "2026-11-17"
 change_log:
+  - { date: "2026-11-17", summary: "Title leads with the 4 types of menopause; description gives each type's age or cause; added an at-a-glance box matching each situation (early, before 40, ovaries removed, ovaries kept, chemotherapy, breast cancer) to its guide", material: true }
   - { date: "2026-11-15", summary: "Expanded hub: answers what the types of menopause are, early menopause vs POI, whether a hysterectomy causes menopause, why early or sudden menopause needs different care, and options when hormones aren't suitable; one-line guide to every page; 4 new FAQs", material: true }
   - { date: "2026-11-06", summary: "Published specialist groups hub", material: true }
   - { date: "2026-11-06", summary: "Added link to new early menopause guide", material: true }
@@ -65,6 +66,15 @@ faq:
 ---
 
 Menopause can be natural, early (before 45), premature (before 40, also called premature ovarian insufficiency or POI), or induced, when surgery or cancer treatment stops the ovaries working [@nhs-early-menopause; @menopause-society-glossary-2026]. If yours started early or suddenly, the advice on hormones and long-term health is different.
+
+**Types of menopause at a glance**
+
+- **Periods stopped before 45**: That's early menopause. Replacing hormones matters, and HRT is usually advised until at least 51 [@nhs-early-menopause; @nhs-when-to-take-hrt]. See [early menopause](/groups/early-menopause/).
+- **Periods stopped before 40**: That's premature menopause, or premature ovarian insufficiency (POI) [@nhs-early-menopause; @nice-ng23]. See [POI](/groups/premature-ovarian-insufficiency/).
+- **Both ovaries removed**: That's surgical menopause. Symptoms can start very soon after the operation and may be more severe than in natural menopause [@cleveland-clinic-menopause-after-hysterectomy-2025]. See [surgical menopause](/groups/surgical-menopause/).
+- **Hysterectomy, ovaries kept**: Your periods stop, but you typically won't go through menopause after the operation [@cleveland-clinic-menopause-after-hysterectomy-2025]. See [hysterectomy with ovaries retained](/groups/hysterectomy-ovaries-retained/).
+- **After chemotherapy**: In studies of young cancer survivors, the share whose periods stopped ranged from 0% to 83%, depending on the drugs and age [@overbeek-chemotherapy-ovarian-function-2017]. See [chemotherapy-induced menopause](/groups/chemotherapy-induced-menopause/).
+- **After breast cancer**: Doctors generally don't recommend menopausal hormone therapy, especially after hormone receptor-positive cancer [@acs-mht-after-breast-cancer-2025]. See [menopause after breast cancer](/groups/breast-cancer-survivors/).
 
 Most menopause articles assume a gradual change in your late 40s or early 50s. In a 2025 survey of 627 people looking for menopause information online, a frequent complaint was how little trustworthy guidance exists for medical, early or surgical menopause [@jmir-online-menopause-information-2025]. This section fills that gap.
 

@@ -1,12 +1,12 @@
 ---
 title: Migraines and menopause
-seo_title: "Menopause migraines: why they worsen, and HRT with aura"
-meta_description: "Migraines often worsen in perimenopause and ease after menopause, but aura tends to persist. Whether HRT helps or hurts, why the route matters, and treatments."
+seo_title: "Menopause migraines: do they stop, and is HRT safe?"
+meta_description: "Migraines often worsen in perimenopause and ease after menopause; aura tends to persist. Why a low-strength estrogen patch or gel looks safer than pills."
 cluster: symptoms
 primary_keyword: menopause migraines
 slug: migraines
 page_type: symptom
-secondary_keywords: [perimenopause migraines, hrt and migraine, hrt and migraines]
+secondary_keywords: [perimenopause migraines, hrt and migraine, hrt and migraines, do migraines stop after menopause, hrt and migraine with aura]
 search_intent: informational
 funnel_stage: worried
 symptom_tags: [migraines, headaches]
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-11"
+updated_at: "2026-11-17"
 change_log:
+  - { date: "2026-11-17", summary: "Title asks the two questions readers search for, whether migraines stop and whether HRT is safe; description says why a low-strength estrogen patch or gel looks safer than pills; added an at-a-glance summary of perimenopause, after menopause, HRT, aura and stroke risk, treatments and emergency signs", material: true }
   - { date: "2026-11-11", summary: "Search snippet: seo_title leads with menopause migraines; meta description answers whether they worsen or ease and notes aura", material: false }
   - { date: "2026-11-09", summary: "Question-led sections on worsening in perimenopause, whether migraines stop after menopause, whether HRT makes migraine better or worse, HRT safety with aura, and treatments; added 2015 systematic review; urgent box now sourced", material: true }
   - { date: "2026-11-06", summary: "Published evidence guide on migraines and menopause, including HRT and aura", material: true }
@@ -58,6 +59,15 @@ faq:
 ---
 
 Migraines often get worse in perimenopause, when estrogen and progesterone rise and fall unevenly, and many women find they ease after menopause [@korn-bernstein-migraine-menopause-2026; @ripa-migraine-menopausal-women-review-2015]. If you're considering HRT, estrogen through the skin at a low dose appears safer for migraine than pills [@korn-bernstein-migraine-menopause-2026].
+
+**Migraines in menopause at a glance**
+
+- **In perimenopause**: Often worse, because uneven estrogen and progesterone levels can make attacks more frequent and less predictable [@korn-bernstein-migraine-menopause-2026].
+- **Do they stop after menopause?**: Migraine without aura often improves, but migraine with aura tends to continue [@korn-bernstein-migraine-menopause-2026]. Improvement is less likely after surgical menopause [@ripa-migraine-menopausal-women-review-2015].
+- **Does HRT help or hurt?**: Estrogen pills, especially at higher doses, may make migraine worse; low-dose estrogen through the skin (patch or gel) appears safer and better tolerated [@korn-bernstein-migraine-menopause-2026].
+- **If you get aura**: Migraine with aura on its own raises the risk of ischemic stroke, so HRT needs a personal risk check; for women under 60 the starting risk of stroke is very low [@korn-bernstein-migraine-menopause-2026; @nice-ng23-recommendations].
+- **Treatments**: Standard migraine medicines still apply, and newer options (CGRP antibodies, gepants and ditans) don't narrow blood vessels [@korn-bernstein-migraine-menopause-2026].
+- **Call 911**: For a sudden, severe headache with no known cause, or a headache with sudden numbness or weakness on one side, confusion, or trouble speaking or seeing [@cdc-stroke-signs-2026].
 
 ## Do migraines get worse in perimenopause?
 

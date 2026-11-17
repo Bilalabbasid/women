@@ -1,12 +1,12 @@
 ---
 title: Surgical menopause
-seo_title: "Surgical menopause: symptoms, HRT and what to expect"
-meta_description: "Surgical menopause starts when both ovaries are removed, and symptoms can begin soon after. See why it feels stronger, long-term risks and how HRT fits."
+seo_title: "Surgical menopause: symptoms, why they hit harder, and HRT"
+meta_description: "Removing both ovaries brings sudden menopause, with symptoms that can start soon after surgery and be more severe. Before about 52, HRT is usually advised."
 cluster: groups
 primary_keyword: surgical menopause
 slug: surgical-menopause
 page_type: group
-secondary_keywords: [menopause after oophorectomy, surgical menopause symptoms]
+secondary_keywords: [menopause after oophorectomy, surgical menopause symptoms, surgical menopause HRT, is surgical menopause worse, how long does surgical menopause last]
 search_intent: informational
 funnel_stage: worried
 symptom_tags: [hot-flashes, night-sweats, vaginal-dryness, low-libido]
@@ -18,8 +18,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-15"
+updated_at: "2026-11-17"
 change_log:
+  - { date: "2026-11-17", summary: "Title answers why symptoms hit harder after both ovaries are removed; description gives the timing and the HRT-to-about-52 advice; added an at-a-glance summary of what it is, when symptoms start, why they're worse, HRT, long-term risks and non-hormone options", material: true }
   - { date: "2026-11-15", summary: "Expanded: what surgical menopause is, symptoms and how soon they start, how long it lasts, long-term health risks, HRT after surgery (including BRCA), testosterone, options when hormones aren't advised; removed an uncited endometriosis progestogen claim and an uncited days-or-weeks timing", material: true }
   - { date: "2026-11-06", summary: "Published clinical guide on surgical menopause", material: true }
 evidence_grade: strong
@@ -59,6 +60,15 @@ faq:
 ---
 
 Surgical menopause happens when both ovaries are removed, so hormone levels drop suddenly instead of over several years [@nams-2022-hormone-therapy]. Hot flashes and other symptoms can start soon after the operation and are often stronger than in natural menopause [@cleveland-clinic-menopause-after-hysterectomy-2025]. If it happens before about age 52, hormone therapy is recommended unless there's a reason to avoid it [@nams-2022-hormone-therapy].
+
+**Surgical menopause at a glance**
+
+- **What causes it**: Removing both ovaries (bilateral oophorectomy). A hysterectomy that keeps your ovaries typically doesn't cause menopause [@nams-2022-hormone-therapy; @cleveland-clinic-menopause-after-hysterectomy-2025].
+- **When symptoms start**: Very soon after the operation, rather than building slowly over years [@cleveland-clinic-menopause-after-hysterectomy-2025].
+- **Why they hit harder**: Estrogen and progesterone drop at once and testosterone falls too, so hot flashes and other symptoms are more frequent and more severe [@nams-2022-hormone-therapy].
+- **HRT after surgery**: If your ovaries are removed before the average age of menopause, The Menopause Society recommends hormone therapy at least until about age 52, unless there's a medical reason not to [@nams-2022-hormone-therapy].
+- **Long-term risks**: Ovary removal is linked with higher risks of heart disease, problems with thinking and dementia, low bone density and sleep problems [@nams-2022-hormone-therapy].
+- **If hormones aren't safe**: Non-hormone options for hot flashes include CBT, clinical hypnosis, certain antidepressants, gabapentin and fezolinetant [@nams-2023-nonhormone-therapy].
 
 ## What is surgical menopause?
 

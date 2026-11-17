@@ -1,12 +1,12 @@
 ---
 title: "Starting and stopping HRT"
-seo_title: "When to stop HRT, how to start, and whether to taper"
-meta_description: "There's no set age to stop HRT: it depends on your benefits, risks and wishes. Plus how to start, the first 3 months, tapering vs stopping and what comes next."
+seo_title: "When to stop HRT: no age limit, tapering, and what happens"
+meta_description: "There's no set age to stop HRT, and no need to stop at 65. NHS advice is usually to taper over 3 to 6 months. What happens after, and how to start."
 cluster: treatments
 primary_keyword: stopping hrt
 slug: starting-and-stopping
 page_type: treatment
-secondary_keywords: [starting hrt, coming off hrt]
+secondary_keywords: [starting hrt, coming off hrt, when to stop hrt, how to come off hrt, do you have to stop hrt at 65, tapering off hrt, what happens when you stop hrt]
 search_intent: informational
 funnel_stage: evaluating
 symptom_tags: [hot-flashes]
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-11"
+updated_at: "2026-11-17"
 change_log:
+  - { date: "2026-11-17", summary: "Title and description lead with when to stop HRT (no set age, no need to stop at 65) and tapering; added an at-a-glance summary of when to stop, age 60 or 65, tapering vs stopping at once, what happens after, restarting, and stopping after a breast cancer diagnosis", material: true }
   - { date: "2026-11-11", summary: "Added a 'When should you stop HRT?' section with a direct answer and the main reasons to review stopping; added NHS guidance on tapering over 3 to 6 months; sharper title and description", material: true }
   - { date: "2026-11-09", summary: "Rebuilt around common questions: how to start, blood tests, the first 3 months, how long to stay on HRT, tapering vs stopping suddenly, what happens after stopping, restarting; added a safety section and FAQs", material: true }
   - { date: "2026-11-06", summary: "Published guide on starting and stopping HRT", material: true }
@@ -68,6 +69,15 @@ faq:
 ---
 
 To start HRT, you need a prescriber who weighs your symptoms and health history; guidelines then suggest the lowest dose that works and a check-in at 3 months [@nice-ng23-recommendations]. To stop, you can taper down or stop at once. Tapering may slow symptoms coming back at first, but makes no difference in the longer term [@nice-ng23-recommendations].
+
+**Stopping HRT at a glance**
+
+- **When to stop**: There's no set age or date; it depends on your own balance of benefits and risks and on your preferences [@nams-2022-hormone-therapy; @nhs-when-to-take-hrt].
+- **At 60 or 65**: HRT doesn't need to be routinely stopped at 60 or 65; longer use comes with regular reviews [@nams-2022-hormone-therapy].
+- **Taper or stop at once**: Both are options. Tapering may slow symptoms coming back at first, with no difference in the longer term [@nice-ng23-recommendations], and the NHS usually recommends reducing the dose over 3 to 6 months [@nhs-when-to-take-hrt].
+- **After you stop**: Hot flashes come back in about half of women, and bone density falls back to pre-treatment levels within 1 to 2 years [@nams-2022-hormone-therapy].
+- **Restarting**: NICE recommends discussing restarting if symptoms come back [@nice-ng23-recommendations].
+- **When stopping isn't a choice**: NICE recommends stopping whole-body HRT if you're diagnosed with breast cancer [@nice-ng23-recommendations].
 
 ## How do you start HRT?
 

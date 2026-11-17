@@ -1,12 +1,12 @@
 ---
 title: Weight gain and belly fat in menopause
-seo_title: "Menopause weight gain & belly fat: why it happens"
-meta_description: "Menopause changes your body's makeup more than the scale: more belly fat, less muscle. What strength training does, and why supplements aren't recommended."
+seo_title: "Menopause weight gain and belly fat: why, and what helps"
+meta_description: "Menopause may not speed up weight gain, but fat gain doubles and moves to the belly as muscle shrinks. What strength training does, and what doesn't."
 cluster: symptoms
 primary_keyword: menopause weight gain
 slug: weight-gain
 page_type: symptom
-secondary_keywords: [menopause belly fat, perimenopause weight gain]
+secondary_keywords: [menopause belly fat, perimenopause weight gain, menopause belly, visceral fat menopause]
 search_intent: informational
 funnel_stage: worried
 symptom_tags: [weight-gain]
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-15"
+updated_at: "2026-11-17"
 change_log:
+  - { date: "2026-11-17", summary: "Title names both weight gain and belly fat and promises the why and what helps; description says fat gain doubles and moves to the belly; added an at-a-glance summary of what changes, when, why it matters, what helps and what doesn't", material: true }
   - { date: "2026-11-15", summary: "Shortened the meta description and led it with the direct answer", material: false }
   - { date: "2026-11-08", summary: "Quick answer; body-composition claims now cited to SWAN, Lovejoy and IMS review; unsourced sleep and dieting claims removed; added self-care box and when-to-see-a-doctor section", material: true }
   - { date: "2026-11-06", summary: "Published evidence guide on menopause weight gain and body composition", material: true }
@@ -57,6 +58,15 @@ faq:
 ---
 
 Menopause doesn't seem to speed up weight gain on the scale, but it does change your body's makeup: fat builds faster, muscle starts to shrink, and more fat settles around the belly [@greendale-swan-body-composition-2019; @davis-ims-weight-gain-menopause-2012]. Strength and impact training has good evidence for building strength and bone [@liftmor-trial-bone-density]. A doctor can also check for other causes, such as an underactive thyroid [@nhs-underactive-thyroid-symptoms].
+
+**Menopause weight gain at a glance**
+
+- **Does menopause cause weight gain?**: Not on the scale, it seems: in the SWAN study, total weight kept rising at the same steady rate, but the rate of fat gain doubled and muscle began to shrink [@greendale-swan-body-composition-2019].
+- **Why the belly**: In a 4-year study, only women who went through menopause had a clear rise in deep belly (visceral) fat [@lovejoy-visceral-fat-menopause-2008].
+- **When it happens**: The changes start as the menopause transition begins and level off about 2 years after the final period [@greendale-swan-body-composition-2019].
+- **Why it matters**: Extra weight at midlife is linked to a higher risk of heart disease and metabolic disease such as type 2 diabetes [@davis-ims-weight-gain-menopause-2012].
+- **What helps**: Strength and impact training improved bone density and strength in the LIFTMOR trial, which didn't measure weight [@liftmor-trial-bone-density]; activity also tends to fall around menopause, so keep moving [@lovejoy-visceral-fat-menopause-2008].
+- **What doesn't**: The Menopause Society does not recommend over-the-counter supplements or herbal remedies for menopause symptoms [@nams-2023-nonhormone-therapy].
 
 ## What changes in your body
 

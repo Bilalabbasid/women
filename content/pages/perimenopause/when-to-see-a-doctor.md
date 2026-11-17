@@ -1,12 +1,12 @@
 ---
 title: "When to see a doctor about perimenopause"
-seo_title: "When to see a doctor in perimenopause: periods and red flags"
-meta_description: "See a doctor if symptoms bother you, or periods come under 21 days apart, last over 7 days or are very heavy. Plus urgent signs, referrals and what to bring."
+seo_title: "When to see a doctor for perimenopause, and when it's urgent"
+meta_description: "See a doctor if symptoms bother you, periods come under 21 days apart, last over 7 days or are very heavy, or you bleed after 12 months without one."
 cluster: perimenopause
 primary_keyword: when to see a doctor for perimenopause
 slug: when-to-see-a-doctor
 page_type: guide
-secondary_keywords: [perimenopause doctor visit]
+secondary_keywords: [perimenopause doctor visit, when to see a doctor about perimenopause, what doctor to see for perimenopause, perimenopause red flags]
 search_intent: informational
 funnel_stage: worried
 symptom_tags: [bleeding]
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-11"
+updated_at: "2026-11-17"
 change_log:
+  - { date: "2026-11-17", summary: "Title uses the exact search wording and says the page covers urgent signs; description adds bleeding after 12 months without a period; added an at-a-glance list of when to book, when to get checked and when to get help now", material: true }
   - { date: "2026-11-11", summary: "Search snippet: seo_title and meta description now give the period changes that need a doctor and mention urgent signs", material: false }
   - { date: "2026-11-09", summary: "Rebuilt around the questions people ask: reasons to book, irregular periods, urgent signs with US numbers, which doctor, when to ask for a specialist referral, what to bring; corrected heavy-bleeding citations", material: true }
   - { date: "2026-11-06", summary: "Published guide on when to see a doctor about perimenopause symptoms", material: true }
@@ -56,6 +57,15 @@ faq:
 ---
 
 See a doctor if perimenopause symptoms bother you or affect daily life, or if your bleeding changes in certain ways, such as bleeding between periods or after sex [@mayo-perimenopause-symptoms-causes-2026; @acog-perimenopausal-bleeding-faq]. Most symptoms aren't urgent, but any bleeding after 12 months without a period always needs checking [@nhs-postmenopausal-bleeding].
+
+**When to see a doctor at a glance**
+
+- **Book a routine visit**: When any perimenopause symptom bothers you or gets in the way of daily life [@mayo-perimenopause-symptoms-causes-2026].
+- **Period changes to get checked**: Very heavy bleeding, bleeding for more than 7 days, bleeding between periods or after sex, or periods usually less than 21 days apart [@mayo-perimenopause-symptoms-causes-2026; @acog-perimenopausal-bleeding-faq].
+- **Periods changing before 45**: Tell your clinician if they stop or become irregular before 45 [@owh-early-premature-menopause-2026].
+- **Always get checked**: Any bleeding after 12 months without a period, even a small amount or once [@nhs-postmenopausal-bleeding].
+- **Get help right away**: Soaking through one or more pads or tampons every hour for several hours, crushing or squeezing chest pain or chest pressure (call 911), or thoughts of suicide (call or text 988) [@cdc-heavy-menstrual-bleeding; @medlineplus-chest-pain; @lifeline-988].
+- **Who to see**: Your primary care clinician or an ob-gyn; ask for a menopause specialist referral if treatment hasn't helped [@acog-perimenopausal-bleeding-faq; @nice-ng23-recommendations].
 
 ## When should I see a doctor about perimenopause?
 

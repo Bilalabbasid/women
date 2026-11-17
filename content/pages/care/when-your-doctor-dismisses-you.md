@@ -1,12 +1,12 @@
 ---
 title: "What to do if your doctor dismisses your menopause symptoms"
-seo_title: "Doctor dismissing menopause symptoms or refusing HRT?"
-meta_description: "If a doctor dismisses your menopause symptoms or won't prescribe HRT: what to say, the reasons that really rule HRT out, and how to get a second opinion."
+seo_title: "Doctor dismissing menopause symptoms? What to say and ask"
+meta_description: "Ask if menopause was considered and what rules HRT out: guidance says offer it for hot flashes unless there's a reason not to. What to say and next steps."
 cluster: care
 primary_keyword: doctor dismissing menopause symptoms
 slug: when-your-doctor-dismisses-you
 page_type: guide
-secondary_keywords: [doctor will not prescribe hrt, what to do if doctor won't prescribe hrt, second opinion menopause]
+secondary_keywords: [doctor will not prescribe hrt, what to do if doctor won't prescribe hrt, second opinion menopause, what to say if doctor dismisses menopause symptoms, can a doctor refuse to prescribe hrt]
 search_intent: informational
 funnel_stage: evaluating
 symptom_tags: []
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-11"
+updated_at: "2026-11-17"
 change_log:
+  - { date: "2026-11-17", summary: "Title leads with the exact search and promises what to say; description opens with the two questions to ask and what guidance says; added an at-a-glance summary of what to ask, the real reasons to avoid HRT, blood tests and second opinions", material: true }
   - { date: "2026-11-11", summary: "Rewritten around what people search: why doctors dismiss menopause symptoms (sourced training-gap survey), what to say, what to do if a doctor won't prescribe HRT (the reasons that do rule it out, age and timing, the FDA label change), whether you need a blood test, second opinions and specialists; a misread survey statistic removed; new FAQs", material: true }
   - { date: "2026-11-06", summary: "Published guide on what to do when a doctor dismisses menopause symptoms", material: true }
 evidence_grade: strong
@@ -57,6 +58,15 @@ faq:
 ---
 
 If a doctor brushes off your menopause symptoms, ask directly whether perimenopause or menopause has been considered, and what specifically rules out treatment. Guidelines say care should be tailored to you, and that HRT should be offered for hot flashes unless there's a reason not to [@nice-ng23-recommendations; @nams-2022-hormone-therapy]. If you still get no clear answer, a second opinion is reasonable.
+
+**Doctor dismissing your symptoms at a glance**
+
+- **What to ask**: "Could this be perimenopause or menopause?" and "What specifically about my health history makes you cautious about HRT?" UK guidance says care should be tailored to you and adapted as symptoms change [@nice-ng23-recommendations].
+- **What guidance says**: UK guidance says to offer HRT for hot flashes and night sweats; for healthy women under 60 or within 10 years of their last period, The Menopause Society says benefits generally outweigh risks [@nice-ng23-recommendations; @nams-2022-hormone-therapy].
+- **Real reasons to avoid HRT**: Unexplained vaginal bleeding, liver disease, a past estrogen-sensitive cancer, past heart disease, stroke, heart attack or blood clot, or a high inherited risk of clots [@nams-2022-hormone-therapy].
+- **Blood test?**: Usually not needed if you're 45 or older and otherwise healthy; recent hot flashes or sweats plus period changes are enough [@nice-ng23-recommendations].
+- **Why it happens**: In a 2017 survey of US doctors in training, only about 7% felt well prepared to manage menopause [@kling-resident-menopause-knowledge-2019].
+- **Second opinion**: Ask for a referral, or search The Menopause Society's directory by US zip code or for telehealth in your state [@nice-ng23-recommendations; @menopause-society-practitioner-directory].
 
 Feeling brushed off is frustrating, and it doesn't mean your symptoms don't matter. Below: why it happens, the words to use, and what to do if HRT is refused.
 

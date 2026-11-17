@@ -1,12 +1,12 @@
 ---
 title: "HRT and blood clot risk"
-seo_title: "HRT blood clot risk: patch vs pill, and warning signs"
-meta_description: "HRT pills raise blood clot risk; patches, gels and sprays don't appear to. Compare routes, see stroke numbers, and learn the signs that need urgent care."
+seo_title: "HRT blood clot risk: why pills raise it and patches don't"
+meta_description: "HRT pills raise blood clot risk (about 1.6 times the odds in a UK study); NICE says patches, gels and sprays don't. Stroke numbers and warning signs."
 cluster: treatments
 primary_keyword: hrt blood clot risk
 slug: blood-clot-risk
 page_type: treatment
-secondary_keywords: [hrt stroke risk, transdermal hrt clot risk, patch vs pill clot risk, blood clot symptoms on hrt]
+secondary_keywords: [hrt stroke risk, transdermal hrt clot risk, patch vs pill clot risk, blood clot symptoms on hrt, does hrt cause blood clots, hrt patch blood clot risk, can you take hrt after a blood clot]
 search_intent: informational
 funnel_stage: evaluating
 symptom_tags: [hot-flashes]
@@ -18,8 +18,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-15"
+updated_at: "2026-11-17"
 change_log:
+  - { date: "2026-11-17", summary: "Title and description lead with the answer (pills raise clot risk, patches, gels and sprays don't, per NICE); added an at-a-glance summary covering pills, skin forms, how rare clots are, stroke numbers, who is at higher risk and warning signs", material: true }
   - { date: "2026-11-15", summary: "Added a link to the black cohosh evidence review", material: false }
   - { date: "2026-11-11", summary: "Rebuilt around common questions: does HRT cause clots, a cited patch vs pill vs vaginal comparison table, a sourced box of clot and stroke warning signs, who is at higher risk, HRT after a clot, stroke numbers per 1,000 women, and whether the type of estrogen or progestogen matters", material: true }
   - { date: "2026-11-06", summary: "Published evidence guide on HRT and blood clot (VTE) and stroke risk", material: true }
@@ -58,6 +59,15 @@ faq:
 ---
 
 HRT pills (estrogen taken by mouth) raise the risk of blood clots in the veins, while HRT patches, gels and sprays do not appear to [@nice-ng23-recommendations; @nhs-hrt-benefits-risks-2023]. If you are at higher risk of clots, NICE advises considering HRT through the skin rather than tablets [@nice-ng23-recommendations].
+
+**HRT and blood clots at a glance**
+
+- **Pills**: Oral estrogen raises the risk of clots in the veins; in a large UK study, about 1.6 times the odds of a clot [@nice-ng23-recommendations; @vinogradova-hrt-vte-2019].
+- **Patches, gels and sprays**: NICE says clot risk is not raised with HRT through the skin [@nice-ng23-recommendations].
+- **How rare**: The Menopause Society calls the extra clot risk with HRT rare, and the NHS says the risk with tablets is still very low [@nams-2022-hormone-therapy; @nhs-hrt-benefits-risks-2023].
+- **Stroke**: NICE estimates about 3 strokes per 1,000 women aged 50 to 54 over 5 years without HRT, about 4 with oral estrogen-only HRT, and similar numbers to no HRT with HRT through the skin [@nice-ng23-hrt-discussion-aid-2024].
+- **Higher risk**: For people at increased clot risk, such as a BMI over 30, NICE advises considering HRT through the skin; with a strong family history or an inherited clotting condition, it advises seeing a hematologist first [@nice-ng23-recommendations].
+- **Warning signs**: Pain, swelling, warmth or redness in one leg or arm, or sudden breathlessness or chest pain if a clot reaches the lungs; see the urgent signs below [@cdc-blood-clots-about-2025].
 
 ## Does HRT cause blood clots?
 

@@ -1,12 +1,12 @@
 ---
 title: Hormone therapy (HRT) for menopause
-seo_title: "Hormone replacement therapy: benefits, risks, how to start"
-meta_description: "Hormone replacement therapy is the most effective treatment for hot flashes. Benefits, risks on the 2026 FDA label, types, cost, and how to get HRT near you."
+seo_title: "Hormone therapy (HRT) for menopause: is it safe in 2026?"
+meta_description: "Hormone replacement therapy (HRT) is the top hot flash treatment. Who it suits, the real risks after the 2026 FDA label change, types, cost, how to start."
 cluster: treatments
 primary_keyword: hormone replacement therapy
 slug: hormone-therapy
 page_type: hub
-secondary_keywords: [HRT, menopausal hormone therapy, MHT]
+secondary_keywords: [hormone therapy, hormone therapy for women, HRT for menopause, HRT, menopausal hormone therapy, MHT]
 search_intent: informational
 funnel_stage: evaluating
 symptom_tags: [hot-flashes, night-sweats]
@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-15"
+updated_at: "2026-11-17"
 change_log:
+  - { date: "2026-11-17", summary: "Title leads with hormone therapy (HRT) and the question readers ask most, whether it is safe; added an at-a-glance summary of who it suits, how fast it works, the main risks and cost", material: true }
   - { date: "2026-11-15", summary: "Title and first H2 lead with hormone replacement therapy; added how to get HRT near you (primary care or OB-GYN, Menopause Society directory, telehealth, referrals), what HRT costs, when to start, and an FAQ on getting HRT online", material: true }
   - { date: "2026-11-09", summary: "Rebuilt as a plain-English HRT overview answering common questions: what HRT is, who it helps, safety, types and forms, side effects, how long it takes to work, how long to stay on it, who shouldn't take it, and how to start", material: true }
   - { date: "2026-11-08", summary: "Rewrote around the 2025-2026 FDA label changes and the risks that remain (endometrial, blood clots, stroke, breast cancer), with cited contraindications and sourced clot and stroke warning signs", material: true }
@@ -83,6 +84,15 @@ faq:
 ---
 
 Hormone replacement therapy (HRT) is prescription estrogen, with a progestogen added if you still have a uterus. It is the most effective treatment for hot flashes and night sweats, and it helps prevent bone loss [@nams-2022-hormone-therapy; @nice-ng23-recommendations]. For healthy people who start before 60 or within 10 years of menopause, benefits generally outweigh risks [@nams-2022-hormone-therapy].
+
+**Hormone therapy at a glance**
+
+- **Who it suits**: Healthy people under 60, or within 10 years of their last period, with bothersome hot flashes or night sweats [@nams-2022-hormone-therapy].
+- **Is it safe?**: For that group, The Menopause Society says the benefits outweigh the risks, with fewer than 10 extra cases per 10,000 women a year [@nams-2022-hormone-therapy].
+- **Main risks that remain**: A rare rise in blood clots and stroke (NICE says pills raise clot risk but patches and gels don't), cancer of the uterine lining if estrogen is taken without a progestogen, and a small rise in breast cancer risk with combined HRT [@nice-ng23-recommendations; @nams-2022-hormone-therapy].
+- **What changed in 2026**: The FDA took heart disease, breast cancer and dementia out of the boxed warning; the risks are still described in the label [@fda-mht-labeling-request-2025; @fda-mht-labeling-changes-2026].
+- **How fast it works**: Lower doses may take 6 to 8 weeks for full relief; NICE advises a review at 3 months [@nams-2022-hormone-therapy; @nice-ng23-recommendations].
+- **Cost without insurance**: About $20 to $47 for 90 generic estradiol tablets, or $37 to $69 for 4 weekly patches (GoodRx, November 2026) [@goodrx-estradiol-prices-2026-11-08].
 
 Doctors also call it menopausal hormone therapy (MHT). On our scale, its evidence for [hot flashes](/symptoms/hot-flashes/) and [night sweats](/symptoms/night-sweats/) is graded :grade{id="mht-vms"}. This page covers what HRT is, who it helps, its benefits and risks under the current FDA labels, the main types, who shouldn't take it, what it costs, and how to get it near you.
 

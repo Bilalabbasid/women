@@ -61,7 +61,7 @@ safety_flags: [urgent_symptoms, crisis]
 cta_profile: mood
 hub: /symptoms/
 sources: [nice-ng23-recommendations, nia-sleep-problems-menopause, baker-sleep-menopausal-transition-review-2018, de-zambotti-hot-flashes-sleep-2014, neda-stepan-vms-mood-systematic-review-2026, kravitz-swan-postmenopause-depression-2022, nia-hot-flashes-what-can-i-do, nimh-generalized-anxiety-disorder, nhs-overactive-thyroid-symptoms, nams-2023-nonhormone-therapy, nams-2022-hormone-therapy, nhs-heart-palpitations, lifeline-988, nhs-urgent-help-mental-health, samaritans-contact]
-related: [/symptoms/, /symptoms/insomnia/, /symptoms/hot-flashes/, /symptoms/heart-palpitations/, /symptoms/panic-attacks/, /tools/symptom-tracker/]
+related: [/symptoms/, /symptoms/mood-swings/, /symptoms/insomnia/, /symptoms/hot-flashes/, /symptoms/heart-palpitations/, /symptoms/panic-attacks/, /tools/symptom-tracker/]
 faq:
   - q: Can perimenopause cause sudden anxiety if I have never been an anxious person?
     a: "It can be part of the picture. UK guidance lists mood changes among the symptoms linked to menopause, and studies suggest anxiety is somewhat more common in women with more hot flashes and night sweats, though that evidence is weak. Other things, such as an overactive thyroid, can also cause new anxiety, so it is worth getting checked."

@@ -57,7 +57,7 @@ banned_phrase_overrides:
   - { phrase: "hormone balance", reason: "Quoted in scare-quotes to debunk the marketing claim, directing readers to our evidence directory instead." }
 hub: /symptoms/
 sources: [maki-perimenopausal-depression-guidelines-2018, nice-ng23-recommendations, nimh-depression-booklet, nhs-menopause-symptoms, neda-stepan-vms-mood-systematic-review-2026, kravitz-swan-postmenopause-depression-2022, nams-2023-nonhormone-therapy, lifeline-988, nhs-urgent-help-mental-health, samaritans-contact]
-related: [/symptoms/, /symptoms/anxiety/, /symptoms/irritability/, /treatments/hormone-therapy/, /tools/symptom-tracker/, /does-it-work/]
+related: [/symptoms/, /symptoms/mood-swings/, /symptoms/anxiety/, /symptoms/irritability/, /treatments/hormone-therapy/, /tools/symptom-tracker/, /does-it-work/]
 faq:
   - q: Is perimenopause depression different from depression at other times of life?
     a: "The symptoms can look the same. UK guidance separates depressive symptoms that start alongside other menopause symptoms, where HRT or menopause-specific CBT may help, from depression that meets full diagnostic criteria, which should be treated with standard depression care alongside menopause care."

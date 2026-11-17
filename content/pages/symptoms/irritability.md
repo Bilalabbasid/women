@@ -41,7 +41,7 @@ banned_phrase_overrides:
   - { phrase: "hormone balance", reason: "Quoted in scare-quotes to debunk the marketing claim, directing readers to our evidence directory instead." }
 hub: /symptoms/
 sources: [nice-ng23-recommendations, neda-stepan-vms-mood-systematic-review-2026, nams-2023-nonhormone-therapy]
-related: [/symptoms/, /symptoms/anxiety/, /symptoms/depression/, /symptoms/insomnia/, /tools/symptom-tracker/, /does-it-work/]
+related: [/symptoms/, /symptoms/mood-swings/, /symptoms/anxiety/, /symptoms/depression/, /symptoms/insomnia/, /tools/symptom-tracker/, /does-it-work/]
 faq:
   - q: Is it normal to feel suddenly angry or on edge in perimenopause, even over small things?
     a: "Many women describe a short fuse or a loss of patience that feels out of character during perimenopause. NICE guideline NG23 lists effects on mood among the core symptoms of menopause, and poor sleep from night sweats commonly makes irritability worse."

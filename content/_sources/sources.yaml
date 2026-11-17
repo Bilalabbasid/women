@@ -2877,6 +2877,48 @@
   funding_conflict: null
   verified: true
   notes: "Published 5 June 2026; reviewed by Deborah Gomez Kwolek, MD. Expert commentary, not new research."
+- id: bromberger-swan-mood-symptoms-2003
+  title: Persistent mood symptoms in a multiethnic community cohort of pre- and perimenopausal women
+  authors:
+    - Bromberger JT
+    - Assmann SF
+    - Avis NE
+    - Schocken M
+    - Kravitz HM
+    - Cordal A
+  publisher: American Journal of Epidemiology
+  year: 2003
+  type: cohort
+  url: https://pubmed.ncbi.nlm.nih.gov/12915500/
+  doi: 10.1093/aje/kwg155
+  accessed: 2026-11-18
+  population: 3,302 pre- and early perimenopausal women aged 42 to 52 in the Study of Women's Health Across the Nation (SWAN), an ethnically diverse US community cohort
+  key_finding: "Rates of persistent mood symptoms were higher among early perimenopausal women (14.9% to 18.4%) than premenopausal women (8% to 12%). After adjusting for major covariates and confounders, early perimenopausal women had higher odds of irritability, nervousness and frequent mood changes, but not of feeling blue. The effect of early perimenopause on overall dysphoric mood was greatest among women who had not finished high school."
+  funding_conflict: null
+  verified: true
+  notes: "Abstract read via NCBI E-utilities efetch (PMID 12915500). Baseline (1995-1997) cross-sectional analysis of SWAN."
+- id: bromberger-swan-psychologic-distress-2001
+  title: "Psychologic distress and natural menopause: a multiethnic community study"
+  authors:
+    - Bromberger JT
+    - Meyer PM
+    - Kravitz HM
+    - Sommer B
+    - Cordal A
+    - Powell L
+    - Ganz PA
+    - Sutton-Tyrrell K
+  publisher: American Journal of Public Health
+  year: 2001
+  type: cohort
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1446800/
+  doi: 10.2105/ajph.91.9.1435
+  accessed: 2026-11-18
+  population: 16,065 US women aged 40 to 55 (African American, White, Chinese, Hispanic and Japanese) in the SWAN screening survey
+  key_finding: "Psychologic distress (feeling tense, depressed and irritable in the previous 2 weeks) was most common in early perimenopause (28.9%) and least common in premenopause (20.9%) and postmenopause (22%). Early perimenopausal women had a higher risk of distress than premenopausal women, with and without adjustment for vasomotor and sleep symptoms and other factors."
+  funding_conflict: null
+  verified: true
+  notes: "Abstract read on PubMed Central (PMID 11527777). Cross-sectional; menopause stage was defined by menstrual regularity in the previous year."
 - id: medlineplus-joint-pain
   title: "Joint pain: MedlinePlus Medical Encyclopedia"
   authors: []
@@ -5001,7 +5043,7 @@
   doi: null
   accessed: 2026-11-11
   population: General public (UK)
-  key_finding: "To help with hot flushes and night sweats: wear lightweight clothing, keep your bedroom cool at night, take a cool shower, use a fan or have a cold drink, reduce stress, avoid or reduce triggers such as spicy food, caffeine, hot drinks, smoking and alcohol, exercise regularly and keep to a healthy weight. CBT can also help manage hot flushes."
+  key_finding: "It's common to have mood swings, low mood and anxiety around the time of the menopause and perimenopause; to ease mood changes, try to get as much rest as you can, exercise regularly and do relaxing activities, and CBT can help with low mood, anxiety and sleep problems. Looking after your wellbeing includes plenty of rest with regular sleep routines. To help with hot flushes and night sweats: wear lightweight clothing, keep your bedroom cool at night, take a cool shower, use a fan or have a cold drink, reduce stress, avoid or reduce triggers such as spicy food, caffeine, hot drinks, smoking and alcohol, exercise regularly and keep to a healthy weight. CBT can also help manage hot flushes."
   funding_conflict: null
   verified: true
   notes: Page last reviewed 19 May 2026. UK patient guidance.
@@ -6878,7 +6920,7 @@
   doi: null
   accessed: 2026-11-15
   population: General public (UK) with menopause or perimenopause symptoms
-  key_finding: Testosterone gel or cream can help to improve low libido for some; there are many reasons for low libido around menopause; you may be able to get testosterone on prescription from a menopause specialist. Vaginal oestrogen is used as a cream or pessary for vaginal dryness, soreness or urinary symptoms. Clonidine or an antidepressant may be suggested for hot flushes if CBT does not help.
+  key_finding: If HRT does not work, cannot be taken or is not wanted, people with low mood, depression or anxiety caused by perimenopause or menopause may be offered antidepressants. Testosterone gel or cream can help to improve low libido for some; there are many reasons for low libido around menopause; you may be able to get testosterone on prescription from a menopause specialist. Vaginal oestrogen is used as a cream or pessary for vaginal dryness, soreness or urinary symptoms. Clonidine or an antidepressant may be suggested for hot flushes if CBT does not help.
   funding_conflict: null
   verified: true
   notes: Page last reviewed 19 May 2026, next review due 19 May 2029. Opened via WebFetch on 2026-11-15.

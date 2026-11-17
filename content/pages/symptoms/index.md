@@ -1,7 +1,7 @@
 ---
 title: Perimenopause and menopause symptoms
-seo_title: "Perimenopause and menopause symptoms list: 36 explained"
-meta_description: "The main signs: period changes, hot flashes, night sweats, vaginal dryness, mood changes, aches and low sex drive. 36 symptoms explained, with what helps."
+seo_title: "Perimenopause and menopause symptoms list: 37 explained"
+meta_description: "The main signs: period changes, hot flashes, night sweats, vaginal dryness, mood changes, aches and low sex drive. 37 symptoms explained, with what helps."
 cluster: symptoms
 primary_keyword: menopause symptoms list
 slug: symptoms
@@ -33,7 +33,7 @@ claims:
 safety_flags: [urgent_symptoms]
 cta_profile: learn_stage
 hub: null
-sources: [nice-ng23-recommendations, nhs-menopause-symptoms, nams-2022-hormone-therapy]
+sources: [bromberger-swan-mood-symptoms-2003, nice-ng23-recommendations, nhs-menopause-symptoms, nams-2022-hormone-therapy]
 related: [/symptoms/vaginal-dryness/, /symptoms/incontinence/, /care/menopause-books/, /tools/symptoms-checklist/]
 ---
 
@@ -41,7 +41,7 @@ The main symptoms of perimenopause and menopause are changes to your periods, ho
 
 **Menopause symptoms at a glance**
 
-- **The main ones**: [Period changes](/perimenopause/irregular-periods/), [hot flashes](/symptoms/hot-flashes/) and [night sweats](/symptoms/night-sweats/), [vaginal dryness](/symptoms/vaginal-dryness/), mood changes, [joint and muscle aches](/symptoms/joint-pain/), and [low sex drive](/symptoms/low-libido/) [@nice-ng23-recommendations].
+- **The main ones**: [Period changes](/perimenopause/irregular-periods/), [hot flashes](/symptoms/hot-flashes/) and [night sweats](/symptoms/night-sweats/), [vaginal dryness](/symptoms/vaginal-dryness/), [mood changes](/symptoms/mood-swings/), [joint and muscle aches](/symptoms/joint-pain/), and [low sex drive](/symptoms/low-libido/) [@nice-ng23-recommendations].
 - **Also common**: [Trouble sleeping](/symptoms/insomnia/), problems with [memory](/symptoms/memory-problems/) or concentration, [palpitations](/symptoms/heart-palpitations/), and headaches or [migraines](/symptoms/migraines/) that are worse than usual [@nhs-menopause-symptoms].
 - **How long they last**: Usually 7 to 9 years, sometimes longer, and they can change over that time [@nhs-menopause-symptoms]. See [how long menopause symptoms last](/menopause/how-long-symptoms-last/).
 - **Do you need a blood test?**: Usually not if you're 45 or over: NICE says perimenopause and menopause are recognized from symptoms and period changes [@nice-ng23-recommendations]. Try the [symptoms checklist](/tools/symptoms-checklist/).
@@ -71,6 +71,7 @@ Sleep problems in perimenopause can come from night-time hot flashes, insomnia, 
 
 Changing hormone levels can affect mood, focus, and memory:
 
+- **[Mood swings](/symptoms/mood-swings/)**: frequent ups and downs, often with irritability or nervousness, most common in early perimenopause [@bromberger-swan-mood-symptoms-2003].
 - **[Menopause brain fog](/symptoms/brain-fog/)** and **[memory problems](/symptoms/memory-problems/)**: momentary lapses in word recall, concentration challenges, and memory slips — and what the research says about whether this signals anything more serious.
 - **[Irritability and rage](/symptoms/irritability/)**: rapid mood fluctuations that feel uncharacteristic or disproportionate.
 - **[Menopause anxiety](/symptoms/anxiety/)** and **[panic attacks](/symptoms/panic-attacks/)**: unexplained surges of apprehension, nervous tension, or panic-like sensations, and how to tell them apart from a cardiac or vasomotor event.

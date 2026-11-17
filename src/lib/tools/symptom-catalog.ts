@@ -59,6 +59,7 @@ export const SYMPTOM_CATALOG: CatalogGroup[] = [
       { id: 'anxiety', label: 'Anxiety or feeling on edge', url: S('anxiety'), trackerId: 'anxiety_rush' },
       { id: 'panic-attacks', label: 'Panic attacks', url: S('panic-attacks') },
       { id: 'depression', label: 'Low mood', url: S('depression'), trackerId: 'low_mood', triggerId: 'low_mood' },
+      { id: 'mood-swings', label: 'Mood swings', url: S('mood-swings') },
       { id: 'irritability', label: 'Irritability or rage', url: S('irritability'), trackerId: 'irritability' },
       { id: 'brain-fog', label: 'Brain fog or trouble concentrating', url: S('brain-fog'), trackerId: 'brain_fog' },
       { id: 'memory-problems', label: 'Forgetfulness or trouble finding words', url: S('memory-problems'), trackerId: 'word_recall' },

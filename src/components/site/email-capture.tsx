@@ -61,9 +61,9 @@ function ConsentBox({ id, checked, onChange }: { id: string; checked: boolean; o
 function FormError() {
   return (
     <p role="alert" className="field-error">
-      {FORM_ERROR.split('contact@menoverdict.com')[0]}
-      <a href="mailto:contact@menoverdict.com" className="font-semibold underline">
-        contact@menoverdict.com
+      {FORM_ERROR.split('menoverdict@gmail.com')[0]}
+      <a href="mailto:menoverdict@gmail.com" className="font-semibold underline">
+        menoverdict@gmail.com
       </a>
     </p>
   );
@@ -131,7 +131,7 @@ export function EmailCapture({
   );
 }
 
-/** Contact form on /contact/: goes to the same inbox as writing to contact@menoverdict.com. */
+/** Contact form on /contact/: goes to the same inbox as writing to menoverdict@gmail.com. */
 export function ContactForm() {
   const { state, submit } = useFormSubmit('contact');
   const [email, setEmail] = useState('');

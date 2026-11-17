@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-07"
+updated_at: "2026-11-18"
 change_log:
+  - { date: "2026-11-18", summary: "Contact email is now menoverdict@gmail.com", material: true }
   - { date: "2026-11-06", summary: "Initial terms of service draft", material: true }
   - { date: "2026-11-07", summary: "Removed a reference to a not-yet-built server database; clarified that tools run entirely on-device and that we don't recommend specific doctors or products", material: true }
 evidence_grade: null
@@ -52,7 +53,7 @@ When you purchase the MenoVerdict Symptom Journal & Doctor Visit Toolkit or any 
 - **Personal-use licence:** You receive a non-exclusive, non-transferable licence for your own personal, individual use. You may print copies for yourself and use them on your personal devices.
 - **No resale or sharing:** You may not resell, redistribute, publicly post, upload to file-sharing networks, or share the digital file with others.
 - **Delivery by download:** Products are delivered immediately by electronic download links. Links remain active for 7 days and allow up to 10 downloads. You may request a replacement link anytime via our [download link recovery page](/shop/resend/).
-- **Digital sales final:** Because digital products are delivered electronically and available immediately upon payment, all sales are final and non-refundable once delivered, as described in our [refund policy](/refund-policy/). If the file fails to open, or if you experience any technical difficulties, email orders@menoverdict.com and our team will promptly provide a replacement link or assist you.
+- **Digital sales final:** Because digital products are delivered electronically and available immediately upon payment, all sales are final and non-refundable once delivered, as described in our [refund policy](/refund-policy/). If the file fails to open, or if you experience any technical difficulties, email menoverdict@gmail.com and our team will promptly provide a replacement link or assist you.
 
 ## 5. Disclaimers and limitation of liability
 

@@ -9,7 +9,7 @@ whole file before changing anything.
   TypeScript, Tailwind, vitest, content as Markdown in `content/pages/**.md` with strict zod
   frontmatter (`src/lib/content/schema.ts`).
 - Vercel does not auto-deploy this branch; the owner deploys manually after you push.
-- Owner: Umer. Contact address on the site: contact@menoverdict.com.
+- Owner: Umer. Contact address on the site: menoverdict@gmail.com.
 
 ## 0. First: repair node_modules
 A worktree cleanup deleted part of `node_modules` (`.bin` is gone). Run, from the repo root:
@@ -169,7 +169,7 @@ asks for an email. Logic lives in `src/lib/tools/stage-quiz.ts`, the component s
 ## 6. [NEED FROM UMER] (owner decisions/inputs; never make these up)
 - Vercel env: `RESEND_API_KEY`, `FORMS_NOTIFY_TO`, `FORMS_NOTIFY_FROM` (e.g. forms@menoverdict.com), and the
   DNS records Resend shows for menoverdict.com (MX + SPF TXT on `send`, DKIM TXT at `resend._domainkey`,
-  optional `_dmarc`). Until set, both forms show "Something went wrong — email us at contact@menoverdict.com".
+  optional `_dmarc`). Until set, both forms show "Something went wrong — email us at menoverdict@gmail.com".
 - `GSC_VERIFICATION` (Search Console HTML-tag code).
 - Data controller name for the privacy page.
 - Grade decisions: magnesium-for-sleep is "Limited" but its source may not support it; minoxidil set to

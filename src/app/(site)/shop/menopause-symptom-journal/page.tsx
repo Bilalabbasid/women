@@ -55,7 +55,7 @@ const FAQS: Array<{ q: string; a: string }> = [
   },
   {
     q: 'Can I get a refund?',
-    a: "Because it is an instant digital download, all sales are final. If the file won't download, open or print, email orders@menoverdict.com and we will fix it or send a working copy.",
+    a: "Because it is an instant digital download, all sales are final. If the file won't download, open or print, email menoverdict@gmail.com and we will fix it or send a working copy.",
   },
   {
     q: 'I live outside the US. Will it work for me?',

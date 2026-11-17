@@ -33,7 +33,7 @@ Important Notes:
 • If you have any questions or need help opening your PDF, reply directly to this email or visit https://menoverdict.com/contact/.
 
 Refund Policy:
-If the file doesn't download or open, or you're unhappy with it, email us within 14 days for a full refund.
+Because this is an instant digital download, all sales are final. If the file won't download, open or print, email menoverdict@gmail.com and we'll fix it or send you a working copy.
 
 Warmly,
 The MenoVerdict Team
@@ -49,6 +49,8 @@ https://menoverdict.com`;
       body: JSON.stringify({
         from,
         to: [params.toEmail],
+        // Replies go to the inbox we actually read, whatever domain the receipt is sent from.
+        reply_to: 'menoverdict@gmail.com',
         subject,
         text,
       }),

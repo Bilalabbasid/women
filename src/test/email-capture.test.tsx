@@ -39,7 +39,7 @@ describe('EmailCapture', () => {
     fireEvent.change(screen.getByLabelText(/email address/i), { target: { value: 'reader@example.com' } });
     fireEvent.click(screen.getByLabelText(CONSENT_TEXT));
     fireEvent.click(screen.getByRole('button', { name: /notify me/i }));
-    await waitFor(() => expect(screen.getByRole('alert')).toHaveTextContent('Something went wrong — email us at contact@menoverdict.com'));
+    await waitFor(() => expect(screen.getByRole('alert')).toHaveTextContent('Something went wrong — email us at menoverdict@gmail.com'));
     expect(screen.queryByText(/you're on the list/i)).not.toBeInTheDocument();
   });
 

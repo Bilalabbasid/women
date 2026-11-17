@@ -6,7 +6,7 @@
 export const FORM_TYPES = ['newsletter', 'contact'] as const;
 export type FormType = (typeof FORM_TYPES)[number];
 
-export const FORM_ERROR = 'Something went wrong — email us at contact@menoverdict.com';
+export const FORM_ERROR = 'Something went wrong — email us at menoverdict@gmail.com';
 export const CONSENT_TEXT =
   'I agree MenoVerdict can email me about new tools and launches. Unsubscribe any time by replying.';
 export const NEWSLETTER_TITLE = 'Get notified when we launch new tools';

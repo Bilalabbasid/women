@@ -99,7 +99,7 @@ describe('POST /api/subscribe', () => {
     const { POST } = await import('@/app/api/subscribe/route');
     const res = await POST(req(ok));
     expect(res.status).toBe(503);
-    expect((await res.json()).error).toBe('Something went wrong — email us at contact@menoverdict.com');
+    expect((await res.json()).error).toBe('Something went wrong — email us at menoverdict@gmail.com');
   });
 
   it('limits each address to 5 submissions per 10 minutes', async () => {

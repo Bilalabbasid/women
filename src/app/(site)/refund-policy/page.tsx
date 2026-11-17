@@ -54,7 +54,7 @@ export default function RefundPolicyPage() {
           </p>
           <ul className="list-disc pl-5 text-sm text-[var(--ink-muted)] space-y-1">
             <li>If your download link expires or is lost, you can generate a fresh link anytime using our <Link href="/shop/resend/" className="underline font-medium text-[var(--ink)]">link recovery page</Link>.</li>
-            <li>If the file is damaged, fails to download, or will not open on your device, contact us at <a href="mailto:orders@menoverdict.com" className="underline font-medium text-[var(--ink)]">orders@menoverdict.com</a> and we will immediately provide a direct replacement.</li>
+            <li>If the file is damaged, fails to download, or will not open on your device, contact us at <a href="mailto:menoverdict@gmail.com" className="underline font-medium text-[var(--ink)]">menoverdict@gmail.com</a> and we will immediately provide a direct replacement.</li>
             <li>If you need assistance using the PDF with tablet apps (e.g., GoodNotes, Notability) or printing at home, our support team will help guide you through the setup.</li>
           </ul>
         </section>
@@ -62,14 +62,14 @@ export default function RefundPolicyPage() {
         <section className="space-y-3">
           <h2 className="text-xl font-serif font-bold text-[var(--ink)]">Duplicate or accidental charges</h2>
           <p className="text-sm text-[var(--ink-muted)] leading-relaxed">
-            If you were accidentally billed more than once for the same order due to a technical glitch or network interruption during checkout, contact <a href="mailto:orders@menoverdict.com" className="underline font-medium text-[var(--ink)]">orders@menoverdict.com</a> with your transaction details. Any duplicate charge will be promptly reversed.
+            If you were accidentally billed more than once for the same order due to a technical glitch or network interruption during checkout, contact <a href="mailto:menoverdict@gmail.com" className="underline font-medium text-[var(--ink)]">menoverdict@gmail.com</a> with your transaction details. Any duplicate charge will be promptly reversed.
           </p>
         </section>
 
         <section className="space-y-3">
           <h2 className="text-xl font-serif font-bold text-[var(--ink)]">Contact us</h2>
           <p className="text-sm text-[var(--ink-muted)] leading-relaxed">
-            For any order questions, receipt requests, or technical assistance, email <a href="mailto:orders@menoverdict.com" className="underline font-medium text-[var(--ink)]">orders@menoverdict.com</a> or use our <Link href="/about/" className="underline font-medium text-[var(--ink)]">contact page</Link>. We respond to order queries within 24 hours.
+            For any order questions, receipt requests, or technical assistance, email <a href="mailto:menoverdict@gmail.com" className="underline font-medium text-[var(--ink)]">menoverdict@gmail.com</a> or use our <Link href="/about/" className="underline font-medium text-[var(--ink)]">contact page</Link>. We respond to order queries within 24 hours.
           </p>
         </section>
       </div>

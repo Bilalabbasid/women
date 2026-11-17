@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-08"
+updated_at: "2026-11-18"
 change_log:
+  - { date: "2026-11-18", summary: "Contact email is now menoverdict@gmail.com", material: true }
   - { date: "2026-11-08", summary: "Crisis lines: US first (911, 988 call or text), UK numbers on their own line", material: false }
   - { date: "2026-11-06", summary: "Published MenoVerdict contact and corrections intake guide", material: true }
   - { date: "2026-11-07", summary: "Consolidated to the one real mailbox (contact@menoverdict.com) instead of listing two addresses that were never set up", material: true }
@@ -43,7 +44,7 @@ We welcome questions about our sources, requests for corrections, accessibility 
 
 ## How to reach us
 
-Every inquiry below goes to the same mailbox: **`contact@menoverdict.com`**.
+Every inquiry below goes to the same mailbox: **`menoverdict@gmail.com`**.
 
 - **Editorial corrections and source inquiries:** Please include the page URL and the specific claim or citation you're writing about. We review every factual query against our [editorial policy](/evidence/editorial-policy/) and log confirmed fixes on our [corrections and updates page](/evidence/updates/).
 - **Privacy and data rights:** By default, your entries in our [symptom tracker](/tools/symptom-tracker/) and [symptoms checklist](/tools/symptoms-checklist/) live only in your own browser on your device, so we cannot see or access them. You can export or delete them at any time directly inside the tool. Read our [privacy policy](/privacy/) for details.

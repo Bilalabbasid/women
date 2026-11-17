@@ -17,8 +17,9 @@ review_due: null
 status: published
 author: editorial-team
 reviewer: null
-updated_at: "2026-11-07"
+updated_at: "2026-11-18"
 change_log:
+  - { date: "2026-11-18", summary: "Contact email is now menoverdict@gmail.com", material: true }
   - { date: "2026-11-06", summary: "Legal draft for UK GDPR special category, GDPR, and US health privacy", material: true }
   - { date: "2026-11-07", summary: "Rewrote to describe the site as it actually works today (no accounts, no server, nothing stored by us) instead of a planned server-sync system that was never built", material: true }
   - { date: "2026-11-07", summary: "Set out exactly what is and is not collected, US and UK rights, form handling via Resend, and host logs", material: true }
@@ -57,7 +58,7 @@ If you fill in one of our forms (for example, to hear about new tools, to join a
 - **How:** it's sent as a single email to our own inbox through Resend, an email delivery service. We don't store it in a database, file or spreadsheet. Resend may keep a record of delivered emails for a short period, under its own privacy policy.
 - **Spam protection:** to limit each connection to 5 submissions in 10 minutes, the server keeps a scrambled (hashed) form of your IP address in memory for up to 10 minutes. It isn't written down or sent anywhere, and it's gone when the server restarts.
 - **What we use it for:** only what you asked for, such as telling you about a new tool. We don't send newsletters or sales sequences.
-- **Deleting it:** reply to any email from us, or write to `contact@menoverdict.com`, and we'll delete it.
+- **Deleting it:** reply to any email from us, or write to `menoverdict@gmail.com`, and we'll delete it.
 
 ## Purchases: digital products in our shop
 
@@ -66,7 +67,7 @@ When you purchase a digital product (such as the Symptom Journal & Doctor Visit 
 - **Why:** to fulfill your order, deliver your secure download link, send your email receipt, and verify refund requests.
 - **Payment processing:** payments are processed securely by our payment provider, Whop. We never see, receive, or store your credit card numbers, CVVs, or full billing addresses. Whop handles payment processing in compliance with PCI-DSS standards under its own privacy policy.
 - **How long order records are kept:** we retain basic order and transaction records for accounting, legal, and tax compliance purposes for up to 7 years.
-- **Requesting deletion:** you may request deletion of your order records by emailing `orders@menoverdict.com` or `contact@menoverdict.com`. Note that statutory tax retention obligations may require us to preserve financial transaction logs.
+- **Requesting deletion:** you may request deletion of your order records by emailing `menoverdict@gmail.com`. Note that statutory tax retention obligations may require us to preserve financial transaction logs.
 
 ## We don't sell or share your personal information
 
@@ -82,7 +83,7 @@ Some pages link to other websites, such as telehealth services and research publ
 
 ## Your rights
 
-Wherever you live, you can ask us what personal information we hold about you (at most, an email address you sent us) and ask us to delete it. Email `contact@menoverdict.com`.
+Wherever you live, you can ask us what personal information we hold about you (at most, an email address you sent us) and ask us to delete it. Email `menoverdict@gmail.com`.
 
 **If you're in the UK:** you have rights under UK data protection law, including access and erasure, and you can complain to the Information Commissioner's Office (ICO). The data controller is **[DATA CONTROLLER NAME: to be added]**.
 

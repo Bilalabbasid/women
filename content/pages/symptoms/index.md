@@ -1,7 +1,7 @@
 ---
 title: Perimenopause and menopause symptoms
-seo_title: "Perimenopause and menopause symptoms list: 37 explained"
-meta_description: "The main signs: period changes, hot flashes, night sweats, vaginal dryness, mood changes, aches and low sex drive. 37 symptoms explained, with what helps."
+seo_title: "Perimenopause and menopause symptoms list: 42 explained"
+meta_description: "The main signs: period changes, hot flashes, night sweats, vaginal dryness, mood changes, aches and low sex drive. 42 symptoms explained, with what helps."
 cluster: symptoms
 primary_keyword: menopause symptoms list
 slug: symptoms
@@ -57,6 +57,7 @@ Hot flashes and night sweats happen when the brain's temperature control becomes
 - **[Hot flashes (vasomotor symptoms)](/symptoms/hot-flashes/)**: sudden waves of heat, flushed skin, and a fast heartbeat.
 - **[Night sweats and waking at night](/symptoms/night-sweats/)**: waking up soaked in sweat, often followed by chills.
 - **[Heart palpitations in perimenopause](/symptoms/heart-palpitations/)**: a pounding or fluttering heartbeat, sometimes around hot flashes, and when palpitations are an emergency.
+- **[Cold flashes and chills](/symptoms/cold-flashes/)**: feeling cold or shivery, often as a hot flash ends, and the other causes of chills worth ruling out.
 - **[Body odor changes](/symptoms/body-odor/)**: how increased sweating from hot flashes and night sweats likely connects to changes in body odor, and what the direct evidence gap actually looks like.
 
 ## Sleep and energy changes
@@ -90,10 +91,13 @@ Estrogen affects many tissues, including joints, skin, the vagina, and the bladd
 - **[Weight gain and belly fat in menopause](/symptoms/weight-gain/)**: why body composition shifts toward abdominal fat and how resistance training protects muscle and bone.
 - **[Bloating](/symptoms/bloating/)**: digestive changes and a feeling of fullness, and what the evidence does (and doesn't yet) explain.
 - **[Digestive changes](/symptoms/digestive-changes/)**: constipation, altered bowel habits, and IBS flares, and when they need a doctor's check.
+- **[Nausea](/symptoms/nausea/)**: feeling sick in midlife, what is and isn't known about a menopause link, and when it needs urgent care.
 - **[Breast tenderness](/symptoms/breast-tenderness/)**: cyclical, non-cyclical, and chest-wall pain patterns, and which breast changes need a check.
 - **[Hair thinning](/symptoms/hair-thinning/)**, **[facial hair](/symptoms/facial-hair/)**, **[acne](/symptoms/acne/)**, and **[dry, itchy skin](/symptoms/dry-itchy-skin/)**: what's actually driven by estrogen loss, and what evidence-based options exist.
 - **[Dry eyes](/symptoms/dry-eyes/)** and **[burning mouth](/symptoms/burning-mouth/)**: two mucosal-dryness symptoms with real, studied hormone links.
 - **[Vaginal dryness (GSM)](/symptoms/vaginal-dryness/)**: thinner tissue, less natural moisture, and burning or irritation.
+- **[Vaginal discharge changes](/symptoms/vaginal-discharge/)**: what's normal as estrogen falls, and the colors, smells and symptoms that point to an infection.
+- **[Cramps](/symptoms/cramps/)** and **[spotting](/symptoms/spotting/)**: period-like cramps and light bleeding between periods in perimenopause, and why any bleeding after menopause needs checking.
 - **[Painful sex (dyspareunia)](/symptoms/painful-sex/)**: friction and discomfort during sex caused by thinner, drier vaginal tissue.
 - **[Low libido](/symptoms/low-libido/)**: a drop in sex drive that NICE guidance recognizes as a core menopause symptom in its own right.
 - **[Bladder urgency](/symptoms/bladder-urgency/)** and **[bladder leaks and incontinence](/symptoms/incontinence/)**: leaks when you cough or sneeze, and sudden urges, linked to a weaker urethra and pelvic floor.

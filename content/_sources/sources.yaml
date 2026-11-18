@@ -1848,18 +1848,7 @@
   doi: 10.1016/j.maturitas.2025.108715
   accessed: 2026-11-07
   population: Women with a history of endometriosis, peri- or postmenopausal
-  key_finding: Endometriosis or its treatment may cause spontaneous
-    early/premature or surgically induced menopause, and is associated with
-    increased risk of cardiovascular disease, ovarian/breast/thyroid cancer, and
-    osteoporosis. Continuous combined MHT may be safer than other forms
-    (including after hysterectomy) since it may reduce the risk of recurrence or
-    malignant transformation of residual endometriosis tissue; estrogen-only MHT
-    should be avoided even after hysterectomy in this group. Neurokinin-3
-    receptor antagonists are a non-hormonal alternative for vasomotor symptoms;
-    antiresorptive/anabolic therapy plus calcium and vitamin D for bone
-    protection. Surgery is preferred for symptomatic postmenopausal
-    endometriosis. Herbal preparations are advised against (uncertain efficacy,
-    some contain estrogenic compounds).
+  key_finding: "Endometriosis or its treatment may cause spontaneous early/premature or surgically induced menopause, and is associated with increased risk of cardiovascular disease, ovarian/breast/thyroid cancer, and osteoporosis. Continuous combined MHT may be safer than other forms (including after hysterectomy) since it may reduce the risk of recurrence or malignant transformation of residual endometriosis tissue; estrogen-only MHT should be avoided even after hysterectomy in this group. Neurokinin-3 receptor antagonists are a non-hormonal alternative for vasomotor symptoms; antiresorptive/anabolic therapy plus calcium and vitamin D for bone protection. Surgery is preferred for symptomatic postmenopausal endometriosis. Herbal preparations are advised against (uncertain efficacy, some contain estrogenic compounds). Endometriosis problems may persist or develop after the menopause."
   funding_conflict: Guideline panel of 18 authors; several disclose industry
     consultancy, speaker fees, or grant funding from multiple different
     companies (Astellas, Bayer, Gedeon Richter, Besins, and others) - typical
@@ -2404,14 +2393,7 @@
   doi: null
   accessed: 2026-11-08
   population: Adults with moderate to severe vasomotor symptoms due to menopause
-  key_finding: "Indicated for moderate to severe vasomotor symptoms due to
-    menopause. No boxed warning. Warnings and precautions: 5.1 CNS depressant
-    effect and daytime impairment (sleepiness and other nervous system effects
-    in 11.9% vs 3.5% on placebo; avoid driving or hazardous activities until
-    effects resolve); 5.2 hepatic transaminase elevations (baseline liver
-    bloodwork; do not start if transaminases or total bilirubin are 2 or more
-    times the upper limit of normal; repeat at 3 months); 5.3 risk of pregnancy
-    loss (contraindicated in pregnancy); 5.4 risk of seizure."
+  key_finding: "Indicated for moderate to severe vasomotor symptoms due to menopause. No boxed warning. Warnings and precautions: 5.1 CNS depressant effect and daytime impairment (sleepiness and other nervous system effects in 11.9% vs 3.5% on placebo; avoid driving or hazardous activities until effects resolve); 5.2 hepatic transaminase elevations (baseline liver bloodwork; do not start if transaminases or total bilirubin are 2 or more times the upper limit of normal; repeat at 3 months); 5.3 risk of pregnancy loss (contraindicated in pregnancy); 5.4 risk of seizure. Common adverse reactions (2% or more and greater than placebo, OASIS 1 and 2, first 12 weeks): headache, fatigue, gastroesophageal reflux disease, dizziness, nausea and somnolence. Section 5.2: stop LYNKUET and seek medical attention for signs that may suggest liver injury (new onset fatigue, decreased appetite, nausea, vomiting, pruritus, jaundice, pale feces, dark urine or abdominal pain)."
   funding_conflict: Manufacturer-issued label (FDA-approved text)
   verified: true
   notes: "Label text reads 'Revised: 8/2026'. Duplicate of g7's entry; dedupe on
@@ -2807,15 +2789,7 @@
   doi: null
   accessed: 2026-11-08
   population: General public (UK)
-  key_finding: Periods may happen more often or less often, and bleeding may get
-    heavier or lighter. Other symptoms include hot flushes and night sweats,
-    trouble getting to sleep or staying asleep, mood swings, low mood or
-    depression, problems with memory or concentration, palpitations, headaches
-    and migraines worse than usual, muscle aches and joint pains, vaginal
-    dryness, more UTIs and reduced sex drive. Contact a GP if you think you have
-    symptoms and want to know your options, have palpitations, are bleeding more
-    (not less) than before, or have any bleeding after 12 months without a
-    period.
+  key_finding: "Periods may happen more often or less often, and bleeding may get heavier or lighter. Other symptoms include hot flushes and night sweats, trouble getting to sleep or staying asleep, mood swings, low mood or depression, problems with memory or concentration, palpitations, headaches and migraines worse than usual, muscle aches and joint pains, vaginal dryness, more UTIs and reduced sex drive. Contact a GP if you think you have symptoms and want to know your options, have palpitations, are bleeding more (not less) than before, or have any bleeding after 12 months without a period. See a GP for postmenopausal bleeding even if it only happened once, is only a small amount of blood, spotting, or pink or brown discharge, comes with no other symptoms, or you are not sure if it is blood; it is not usually serious but can be a sign of cancer."
   funding_conflict: null
   verified: true
   notes: Last reviewed 19 May 2026. The page does not give an age threshold (such
@@ -3720,7 +3694,7 @@
   doi: null
   accessed: 2026-11-09
   population: Women with moderate to severe vasomotor symptoms associated with menopause
-  key_finding: "Indicated for the treatment of moderate to severe vasomotor symptoms (VMS) associated with menopause. Limitation of use: not indicated for the treatment of any psychiatric condition. Dose: 7.5 mg once daily at bedtime. Boxed warning: suicidal thoughts and behaviors (SSRIs increased the risk in pediatric and young adult patients)."
+  key_finding: "Indicated for the treatment of moderate to severe vasomotor symptoms (VMS) associated with menopause. Limitation of use: not indicated for the treatment of any psychiatric condition. Dose: 7.5 mg once daily at bedtime. Boxed warning: suicidal thoughts and behaviors (SSRIs increased the risk in pediatric and young adult patients). Most common adverse reactions (2% or more) in clinical trials: headache, fatigue, and nausea/vomiting; nausea/vomiting 4.3% vs 2.3% on placebo (Table 1)."
   funding_conflict: Manufacturer-issued label (FDA-approved text)
   verified: true
   notes: "Label text reads 'Revised: 4/2025'. 'Initial U.S. Approval: 1992' on the label refers to paroxetine generally, not the 7.5 mg hot-flash product, so it is not used as an approval date. Doses are for reference only."
@@ -7008,3 +6982,690 @@
   funding_conflict: Self-reported by the company being described.
   verified: true
   notes: Read via WebFetch on 2026-11-15. The article does not state the membership price; use evernow-faq-2026 for prices.
+
+- id: nhs-period-pain-2026
+  title: Period pain
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/symptoms/period-pain/
+  doi: null
+  accessed: 2026-11-18
+  population: General public (UK)
+  key_finding: "Period pain can be painful cramps in the tummy that spread to the back and thighs, or a sharp pain or dull ache, and usually lasts up to 3 days. It happens when the womb tightens during a period and is often a normal part of the menstrual cycle. Sometimes it is caused by a condition such as endometriosis, adenomyosis, fibroids or pelvic inflammatory disease; an IUD can also cause period pain, particularly in the first 3 to 6 months. To ease it: a warm bath or shower, a heat pad or hot water bottle on the tummy, massage, gentle exercise like yoga, swimming, walking or cycling, and painkillers like paracetamol or ibuprofen; cutting down on alcohol and not smoking may also help. Ask for an urgent GP appointment or get help from NHS 111 if pelvic pain or period pain is severe or worse than usual and painkillers have not helped. See a GP if periods become more painful, heavier or irregular, period pain stops usual daily activities, you have pain during sex or when peeing or pooing, you bleed between periods, you notice a change in how much you pee or poo, have a swollen tummy, loss of appetite or are losing weight without trying. A GP may recommend anti-inflammatory medicines (naproxen, flurbiprofen, mefenamic acid), a TENS machine, or contraception such as the pill, implant or injection, and may arrange an ultrasound scan or refer to a gynaecologist."
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 18 March 2026; next review due 18 March 2029. The old /conditions/period-pain/ URL redirects here.
+
+- id: nhs-pelvic-pain-2025
+  title: Pelvic pain
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2025
+  type: patient_information
+  url: https://www.nhs.uk/symptoms/pelvic-pain/
+  doi: null
+  accessed: 2026-11-18
+  population: General public (UK)
+  key_finding: Pelvic pain is felt in the lower part of the tummy and can include a cramping or throbbing pain that comes and goes, or a dull or heavy ache or feeling of pressure. Common causes include constipation or irritable bowel syndrome, urinary tract infections and sexually transmitted infections; in women, period pain and conditions such as an ovarian cyst or endometriosis. Rarely it could be something more serious, such as an ectopic pregnancy, womb cancer, ovarian cancer or pelvic inflammatory disease. Do not self-diagnose. See a GP if pelvic pain comes and goes or does not go away, with bloating that comes and goes or does not go away, weight loss without trying, feeling full quickly or no appetite, or constipation or diarrhoea that does not go away. Get help from NHS 111 urgently if you have pelvic pain and difficulty peeing or pooing, blood in pee or poo, unusual discharge, fluid or bleeding from the vagina, pain when peeing or needing to pee more, a very high temperature or feeling hot, cold or shivery, vomiting and diarrhoea or feeling sick, or you are or may be pregnant. Call 999 or go to A&E if you have pelvic pain and it is severe, getting worse or hurts when you move or touch the area, you feel faint, dizzy or lightheaded or pass out, have pain in the tip of your shoulder, difficulty breathing, heavy bleeding from the vagina, or suddenly feel confused.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 24 November 2025; next review due 24 November 2028.
+
+- id: medlineplus-painful-menstrual-periods
+  title: "Painful menstrual periods: MedlinePlus Medical Encyclopedia"
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2026
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/003150.htm
+  doi: null
+  accessed: 2026-11-18
+  population: General public (US)
+  key_finding: Painful periods (dysmenorrhea) are crampy lower abdominal pain that can be sharp or aching and come and go; back or leg pain may also be present. Some pain during a period is normal, but a large amount of pain is not. Secondary dysmenorrhea is menstrual pain that develops later in women who have had normal periods and is often related to problems in the uterus or other pelvic organs, such as endometriosis, fibroids, a copper IUD, pelvic inflammatory disease, PMS, sexually transmitted infection, and stress and anxiety. Contact your provider right away for increased or foul-smelling vaginal discharge, fever and pelvic pain, or sudden or severe pain, especially if your period is more than 1 week late and you have been sexually active. Also contact your provider if treatments do not relieve your pain after 3 months, you have pain and had an IUD placed more than 3 months ago, you pass blood clots or have other symptoms with the pain, or your pain occurs at times other than menstruation, begins more than 5 days before your period, or continues after your period is over. Tests may include a complete blood count, cultures for sexually transmitted infections, pelvic ultrasound and laparoscopy.
+  funding_conflict: null
+  verified: true
+  notes: Review date 5/29/2026.
+
+- id: acog-dysmenorrhea-faq
+  title: "Dysmenorrhea: Painful Periods (FAQ046)"
+  authors:
+    - American College of Obstetricians and Gynecologists
+  publisher: American College of Obstetricians and Gynecologists
+  year: 2020
+  type: patient_information
+  url: https://www.acog.org/womens-health/faqs/dysmenorrhea-painful-periods
+  doi: null
+  accessed: 2026-11-18
+  population: General public (US)
+  key_finding: "More than half of women who menstruate have some pain for 1 to 2 days each month; severe pain can come with diarrhea, nausea, vomiting, headache and dizziness. Primary dysmenorrhea is cramping pain before or during a period caused by prostaglandins made in the lining of the uterus, which cause the muscles and blood vessels of the uterus to contract; prostaglandin levels are high on the first day of a period and fall as bleeding continues, which is why pain tends to lessen after the first few days. In many women with primary dysmenorrhea, periods become less painful as they get older. Secondary dysmenorrhea is caused by a disorder in the reproductive organs; the pain tends to get worse over time, often lasts longer than normal cramps, may begin a few days before a period and may not go away after it ends. Causes include endometriosis, fibroids (fibroids in the wall of the uterus can cause pain; small fibroids usually do not), adenomyosis (more common in older women who have had children) and conditions such as Crohn's disease and urinary disorders that flare during a period. An ultrasound may be done when pain is not relieved with medications. NSAIDs such as ibuprofen and naproxen reduce prostaglandins and make cramps less severe; they work best taken at the first sign of a period or pain, usually for 1 or 2 days; women with bleeding disorders, asthma, aspirin allergy, liver damage, stomach disorders or ulcers should not take NSAIDs. Hormonal birth control and the hormonal IUD can treat painful periods. Vitamin B1 or magnesium may be helpful, but not enough research has been done to recommend them. At home: exercise most days, heat (warm bath, heating pad or hot water bottle), enough sleep, and relaxation such as meditation or yoga."
+  funding_conflict: null
+  verified: true
+  notes: Last updated December 2020, last reviewed January 2022.
+
+- id: nhs-ovarian-cyst
+  title: "Ovarian cyst: overview"
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2023
+  type: patient_information
+  url: https://www.nhs.uk/conditions/ovarian-cyst/
+  doi: null
+  accessed: 2026-11-18
+  population: General public (UK)
+  key_finding: Ovarian cysts are very common and do not usually cause symptoms; most go away in a few months without treatment. A cyst usually only causes symptoms if it splits, is very large or twists; symptoms can include pelvic pain ranging from a dull, heavy sensation to a sudden, severe and sharp pain, pain during sex, difficulty emptying the bowels, a frequent need to urinate, changes to periods, bloating and a swollen tummy, and feeling very full after eating a little. Ask for an urgent GP appointment or get help from NHS 111 for sudden, severe pelvic pain, or tummy pain with nausea or vomiting. The vast majority of ovarian cysts are non-cancerous, but cancerous cysts are more common after the menopause; if you are postmenopausal there is a slightly higher risk of ovarian cancer and regular ultrasound scans and blood tests are usually recommended over the course of a year to monitor the cyst.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 21 June 2023; its stated next review date (21 June 2026) has passed, but the page was live and unchanged in substance when opened.
+
+- id: nhs-fibroids-2026
+  title: Fibroids
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/conditions/fibroids/
+  doi: null
+  accessed: 2026-11-18
+  population: General public (UK)
+  key_finding: Fibroids are common, non-cancerous growths in or around the womb that mainly affect women who have not been through the menopause. They do not always cause symptoms; symptoms may include heavy or painful periods, stomach pain, lower back pain, bladder symptoms, problems pooing, and pain during sex. See a GP if you have symptoms, they affect everyday life, or painkillers are not helping. Diagnosis is usually by ultrasound scan. Treatments include painkillers such as ibuprofen, naproxen or diclofenac, tranexamic acid or hormone medicine for heavy bleeding, and surgery or uterine artery embolisation if medicine does not help. You are more likely to get fibroids if you have not reached the menopause.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 17 March 2026; next review due 17 March 2029.
+
+- id: nhs-adenomyosis-2026
+  title: Adenomyosis
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/conditions/adenomyosis/
+  doi: null
+  accessed: 2026-11-18
+  population: General public (UK)
+  key_finding: Adenomyosis is where the lining of the womb starts growing into the muscle in the wall of the womb. Symptoms usually affect women over the age of 35 and include painful periods (the pain may be severe and stop usual activities) and heavy periods, plus pelvic pain, bloating or heaviness in the tummy, and pain during or after sex, which can happen any time in the menstrual cycle. Some people have no symptoms. Ask for an urgent GP appointment or get help from NHS 111 if pelvic or period pain is severe or worse than usual and painkillers have not helped; see a GP if periods become more painful, heavier or irregular. Symptoms can be similar to endometriosis, fibroids, polyps and endometrial hyperplasia; tests include ultrasound and MRI. Treatments include the hormonal IUS, other hormonal contraception, NSAIDs and tranexamic acid, uterine artery embolisation or hysterectomy. Heat, a TENS machine and painkillers like paracetamol or ibuprofen can ease the pain. It is more likely if you have given birth or have endometriosis.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 14 October 2026; next review due 14 October 2029.
+
+- id: nhs-ovulation-pain-2026
+  title: Ovulation pain
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/symptoms/ovulation-pain/
+  doi: null
+  accessed: 2026-11-18
+  population: General public (UK)
+  key_finding: Ovulation pain is common, happens about 14 days before a period, feels like a dull pain or sharp sudden twinges, lasts from a few minutes to 1 or 2 days, and affects one side of the tummy at a time; there may be a little vaginal bleeding or discharge. Conditions that can cause similar pain include endometriosis, ovarian cysts, some sexually transmitted infections, scar tissue from surgery, and ectopic pregnancy. Always get medical advice for tummy pain that does not get better after painkillers or keeps coming back; ask for an urgent GP appointment or get help from NHS 111 if the pain is severe and painkillers have not helped, it keeps coming back, or you think you may be pregnant.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 17 July 2026. The old /conditions/ovulation-pain/ URL redirects here.
+
+- id: callan-seattle-abdominal-pain-2019
+  title: "Abdominal pain during the menopause transition and early postmenopause: observations from the Seattle Midlife Women's Health Study"
+  authors:
+    - Callan NGL
+    - Mitchell ES
+    - Heitkemper MM
+    - Woods NF
+  publisher: Women's Midlife Health
+  year: 2019
+  type: cohort
+  url: https://pubmed.ncbi.nlm.nih.gov/31388434/
+  doi: 10.1186/s40695-019-0046-5
+  accessed: 2026-11-18
+  population: Subset of 508 women aged 35 to 55 in the Seattle Midlife Women's Health Study, followed with annual questionnaires, health diaries and menstrual calendars from 1990 to 2013, some with first-morning urine hormone assays
+  key_finding: In a multivariate model, increasing age and higher estrone glucuronide (an estrogen metabolite) were associated with lower abdominal pain severity during the menopause transition and early postmenopause, and anxiety with higher severity. Menopause transition stage, perceived stress, tension, testosterone and stress biomarkers were not associated with abdominal pain severity. The authors say these factors need further research.
+  funding_conflict: Authors declare no competing interests.
+  verified: true
+  notes: PMID 31388434, PMCID PMC6679532. Abstract read via NCBI efetch on 2026-11-18. Measured abdominal pain generally, not period cramps specifically.
+
+- id: abdullayev-bcs70-menstrual-symptoms-2026
+  title: "Associations between physical activity, sleep patterns and diet quality and menstrual health symptoms in midlife: evidence from the 1970 British Cohort Study"
+  authors:
+    - Abdullayev K
+    - Mitchell JJ
+    - Blodgett JM
+  publisher: BMC Women's Health
+  year: 2026
+  type: cohort
+  url: https://pubmed.ncbi.nlm.nih.gov/42192416/
+  doi: 10.1186/s12905-026-04533-9
+  accessed: 2026-11-18
+  population: 2,109 women aged 46 in the 1970 British Cohort Study, with accelerometer-measured activity and sleep
+  key_finding: At age 46, 44.1% reported painful periods, 51.8% heavy periods and 49.5% PMS. In adjusted models, women in the lowest quartile of moderate-to-vigorous physical activity had higher odds of painful periods (OR 1.35, 95% CI 1.01 to 1.80), and those in the lowest quartile of sleep regularity had higher odds of painful periods (OR 1.43, 95% CI 1.08 to 1.91). Cross-sectional; the authors say causal relationships still need to be explored.
+  funding_conflict: Authors declare no competing interests.
+  verified: true
+  notes: PMID 42192416, PMCID PMC13386675. Abstract read via NCBI efetch on 2026-11-18. Self-reported symptoms; menopause stage of participants not given in the abstract.
+
+- id: nhs-bleeding-between-periods-after-sex-2024
+  title: Vaginal bleeding between periods or after sex
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2024
+  type: patient_information
+  url: https://www.nhs.uk/symptoms/vaginal-bleeding-between-periods-or-after-sex/
+  doi: null
+  accessed: 2026-11-18
+  population: General public (UK)
+  key_finding: "Bleeding from the vagina between periods or after sex can have a lot of different causes; it's not usually serious, but always get it checked by a doctor. See a GP or go to a sexual health clinic if you're bleeding between periods or after sex. Ask for an urgent GP appointment or get help from NHS 111 if you have recently missed a period, have unusual vaginal bleeding, and have pain anywhere in your tummy, including pelvic pain: this could be a sign of an ectopic pregnancy. Common causes of bleeding between periods include hormonal contraception such as the contraceptive pill, small growths in and around the womb such as polyps or fibroids, and STIs such as chlamydia. Causes of bleeding after sex include changes to the surface of the cervix (cervical ectropion), small growths on the cervix (polyps), vaginal dryness and STIs such as chlamydia. Bleeding between periods or after sex can sometimes be a sign of cancer. Implantation bleeding can happen at the start of pregnancy. Tests may include a pregnancy test, a blood test, an STI test (urine test or vaginal swab) and an examination of the vagina and cervix; if further tests are needed you may be referred for an ultrasound scan, colposcopy or hysteroscopy."
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 13 August 2024, next review due 13 August 2027. Read in full on 2026-11-18. UK guidance; urgent numbers are UK (111).
+
+- id: paramsothy-swan-bleeding-patterns-2014
+  title: "Bleeding patterns during the menopausal transition in the multi-ethnic Study of Women's Health Across the Nation (SWAN): a prospective cohort study"
+  authors:
+    - Paramsothy P
+    - Harlow SD
+    - Greendale GA
+    - Gold EB
+    - Crawford SL
+    - Elliott MR
+    - Lisabeth LD
+    - Randolph JF Jr
+  publisher: BJOG
+  year: 2014
+  type: cohort
+  url: https://pubmed.ncbi.nlm.nih.gov/24735184/
+  doi: 10.1111/1471-0528.12768
+  accessed: 2026-11-18
+  population: 1,320 midlife African-American, white, Chinese and Japanese women in the SWAN Menstrual Calendar Substudy (southeastern Michigan, northern California and Los Angeles), daily menstrual calendars 1996 to 2006
+  key_finding: At least three occurrences of menses of 10 or more days were reported by 77.7% (95% CI 56.7 to 93.2) of women, of 6 or more days of spotting by 66.8% (95% CI 55.2 to 78.0), and of 3 or more days of heavy bleeding by 34.5% (95% CI 30.2 to 39.2) during the menopausal transition. Prolonged menses, 6+ days of spotting and 3+ days of heavy bleeding were associated with menopausal transition stage, uterine fibroids, hormone use and ethnicity. The authors say the data give clinicians and women information about the expected frequency of prolonged and heavy bleeding and spotting during the menopausal transition.
+  funding_conflict: null
+  verified: true
+  notes: PubMed abstract (PMID 24735184) read on 2026-11-18. The abstract does not say whether spotting days were between periods or next to a period, so do not use it to say spotting between periods is normal. NIH-funded; authors report no conflict of interest.
+
+- id: nhs-blood-in-urine-2026
+  title: Blood in urine
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/symptoms/blood-in-urine/
+  doi: null
+  accessed: 2026-11-18
+  population: General public (UK)
+  key_finding: Blood in urine is not usually anything serious, but it's important to get medical help; get it checked even if there's only a small amount or you're not sure it's blood. Ask for an urgent GP appointment or get help from NHS 111 if you have or think you may have blood in your pee. Blood in your pee may be bright pink, red or dark brown, and must be checked because it can be a sign of cancer. Blood in pee could come from anywhere in the urinary tract; a UTI (burning pain when peeing, needing to pee often, smelly or cloudy pee) is one possible cause. It may not be blood in your pee if you are bleeding from your bottom instead, it's happening during your period, or you're bleeding from your vagina between periods; beetroot and some medicines can also colour pee.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 25 September 2026, next review due 25 September 2029. Read in full on 2026-11-18. UK guidance.
+
+- id: nhs-piles-2026
+  title: Piles (haemorrhoids)
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/conditions/piles-haemorrhoids/
+  doi: null
+  accessed: 2026-11-18
+  population: General public (UK)
+  key_finding: Piles are lumps inside and around the bottom (anus) that often get better on their own after a few days. Symptoms include bright red blood after you poo, an itchy anus, mucus on toilet paper after wiping, lumps and pain around the anus. Ask for an urgent GP appointment or get help from NHS 111 if you have piles and painless bleeding from the bottom, a very high temperature or pus leaking from piles. Go to A&E or call 999 if you have piles and are bleeding non-stop, there is a lot of blood or large clots, or you are in severe pain. Constipation, pushing too hard when pooing, heavy lifting, pregnancy, getting older and being overweight make piles more likely.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 1 April 2026, next review due 1 April 2029. Read in full on 2026-11-18. UK guidance; emergency numbers are UK.
+
+- id: nhs-vaginal-discharge-2024
+  title: Vaginal discharge
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2024
+  type: patient_information
+  url: https://www.nhs.uk/symptoms/vaginal-discharge/
+  doi: null
+  accessed: 2026-11-18
+  population: General public (UK)
+  key_finding: "Vaginal discharge is normal; it is a fluid or mucus that keeps the vagina clean and moist and protects it from infection, and you can get it at any age. It is not usually anything to worry about if it does not have a strong or unpleasant smell, is clear or white, is thick and sticky, or is slippery and wet. The amount varies; it is usually heavier during pregnancy, if you're sexually active or if you're using birth control, and often clearer, wetter and more noticeable around ovulation. A change in smell, colour or texture might be a sign of infection, but do not self-diagnose. Possible causes: fishy smell, bacterial vaginosis; thick and white like cottage cheese, thrush; green, yellow or frothy, trichomoniasis; with pelvic pain or bleeding, chlamydia or gonorrhoea; with blisters or sores, genital herpes. Get help from NHS 111 if discharge changes colour, smell or texture, you produce more than usual, you feel itchy or sore, you bleed between periods or after sex, you get pain when peeing, or you get pelvic pain. Sexual health clinics can also help. Wash the skin around the vagina gently with warm water and mild, non-perfumed soap; do not use perfumed soaps or gels, deodorants or scented hygiene wipes, and do not douche."
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 15 February 2024, next review due 15 February 2027. Read in full on 2026-11-18. UK guidance; does not mention menopause.
+
+- id: medlineplus-vaginal-itching-discharge-2025
+  title: "Vaginal itching and discharge - adult and adolescent: MedlinePlus Medical Encyclopedia"
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2025
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/003158.htm
+  doi: null
+  accessed: 2026-11-18
+  population: General public (US)
+  key_finding: "Discharge may be thick, pasty or thin; clear, cloudy, bloody, white, yellow or green; odorless or with a bad odor. Glands in the cervix and vaginal walls normally produce clear mucus, which may turn white or yellow when exposed to air; the amount varies during the menstrual cycle because of changing hormone levels, and ovulation, pregnancy and sexual excitement can increase it. Abnormal discharge means abnormal amount, color (brown, green), consistency or odor. Causes include sexually transmitted infections (chlamydia, gonorrhea, trichomoniasis), vaginal yeast infection, bacterial vaginosis (gray discharge and fishy odor), menopause and low estrogen levels (atrophic vaginitis), a forgotten tampon or foreign body (foul odor), and chemicals in detergents, fabric softeners, feminine sprays, ointments, creams, douches and contraceptive foams, jellies or creams; less common causes include cancer of the vulva, cervix, vagina, uterus or fallopian tubes and skin conditions such as desquamative vaginitis and lichen planus. Home care: avoid douching, hygiene sprays, fragrances or powders; wear loose clothes and cotton underwear; practice safer sex and use condoms. Contact your provider right away if you have fever or pain in your pelvis or belly area or may have been exposed to an STI; also contact a provider for a sudden change in amount, color, odor or consistency, itching, redness and swelling, blisters or sores, burning with urination, or symptoms that get worse or last longer than 1 week despite home care."
+  funding_conflict: null
+  verified: true
+  notes: Review date 8/18/2025 (A.D.A.M.). Read in full on 2026-11-18. The page's first contact item is simply "You have vaginal discharge"; the page is not cited for that line.
+
+- id: medlineplus-vaginal-dryness-2025
+  title: "Vaginal dryness: MedlinePlus Medical Encyclopedia"
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2025
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/000892.htm
+  doi: null
+  accessed: 2026-11-18
+  population: General public (US)
+  key_finding: Atrophic vaginitis is caused by a decrease in estrogen. Estrogen keeps vaginal tissues lubricated and healthy; normally the lining of the vagina makes a clear, lubricating fluid. If estrogen levels drop, the tissues gradually shrink and become thinner, causing dryness and inflammation; estrogen levels normally drop after menopause. Symptoms include burning on urination, light bleeding after intercourse, painful intercourse, slight vaginal discharge, and vaginal soreness, itching or burning. Vaginal discharge may be tested to check for other causes. Lubricants and vaginal moisturizing creams can be bought without prescription; prescription vaginal estrogen (cream, tablet, suppository or ring) can work well. Vaginal dryness can make yeast or bacterial infections of the vagina more likely and increase the risk of urinary tract infections.
+  funding_conflict: null
+  verified: true
+  notes: Review date 7/3/2025 (A.D.A.M.). Read in full on 2026-11-18.
+
+- id: acog-vaginitis-faq-2025
+  title: Vaginitis (FAQ028)
+  authors:
+    - American College of Obstetricians and Gynecologists
+  publisher: American College of Obstetricians and Gynecologists
+  year: 2025
+  type: patient_information
+  url: https://www.acog.org/womens-health/faqs/vaginitis
+  doi: null
+  accessed: 2026-11-18
+  population: General public (US)
+  key_finding: "Vaginitis may cause itching, burning, a bad odor or a large amount of discharge; common types are yeast infections, bacterial vaginosis, trichomoniasis and atrophic vaginitis, and treatment depends on the cause. Factors that change the vagina's normal balance include antibiotics, hormone changes in pregnancy, breastfeeding or menopause, douching, spermicides, sex and infection. Diagnosis uses a sample of discharge; do not use vaginal medications for at least 3 days before the visit and do not douche, have sex or use spermicides before it. Yeast infection: itching and burning of the vulva; discharge may be white, lumpy and odorless, or unchanged; diabetes raises risk; over-the-counter treatment may delay the right diagnosis if the problem is something else, and a first episode of vaginal symptoms should be seen by an ob-gyn. BV: main symptom is increased discharge with a strong fishy odor, usually thin and dark or dull gray, possibly greenish; treated with antibiotics such as metronidazole or clindamycin; often recurs. Trichomoniasis is an STI caused by a parasite; yellow-gray or green discharge that may smell fishy, with burning, irritation, redness and swelling; treated with metronidazole and partners must be treated. Atrophic vaginitis is not caused by infection but can cause vaginal discharge and irritation; around menopause it is called genitourinary syndrome of menopause; symptoms include dryness, itching, burning, abnormal discharge and pain during sex; it is treated with estrogen applied inside the vagina."
+  funding_conflict: null
+  verified: true
+  notes: Last updated December 2025, last reviewed May 2025. Read in full on 2026-11-18.
+
+- id: cleveland-clinic-vaginal-discharge-2026
+  title: Vaginal Discharge
+  authors: []
+  publisher: Cleveland Clinic
+  year: 2026
+  type: patient_information
+  url: https://my.clevelandclinic.org/health/symptoms/4719-vaginal-discharge
+  doi: null
+  accessed: 2026-11-18
+  population: General public (US)
+  key_finding: "Normal discharge is clear, milky white or off-white and may have a mild odor; it can be watery, sticky, gooey, thick or pasty, and its thickness may change through the cycle. Dark yellow, brown, green or grey discharge may mean there's a problem. Yellow, grey or green may suggest a bacterial infection or STI; brown or red-tinged discharge that is not your period may indicate a problem; white discharge that is chunky or itchy may be an infection. When discharge isn't normal, the most common causes are yeast infection and bacterial vaginosis; STIs can also change it (trichomoniasis: green, yellow or gray and bubbly or frothy; gonorrhea and chlamydia: cloudy, yellow or green). Non-infection causes include ovulation (extra slippery and wet), hormonal changes such as the menstrual cycle, hormonal birth control, breastfeeding and menopause, and irritation from detergents, soaps, lubricants and condoms. Douching can upset the natural balance and lead to infection."
+  funding_conflict: null
+  verified: true
+  notes: Last updated 29 January 2026. Read in full on 2026-11-18. Hospital patient-information page that carries advertising.
+
+- id: nhs-bacterial-vaginosis-2026
+  title: Bacterial vaginosis
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/conditions/bacterial-vaginosis/
+  doi: null
+  accessed: 2026-11-18
+  population: General public (UK)
+  key_finding: "BV is a common cause of unusual discharge, caused by an imbalance of bacteria in the vagina; it is not classed as an STI, but sex can trigger it or pass it on. Symptoms: unusual discharge with a strong fishy smell, particularly after sex, and a change in colour and consistency, such as becoming greyish-white, thin and watery. Half of women with BV have no symptoms, and it does not usually cause soreness or itching. A GP or sexual health clinic will want to confirm BV and rule out an STI; it is usually treated with antibiotic tablets, gels or creams, and it commonly comes back, usually within a few months. You're more likely to get it if you're sexually active, have a new partner, have an IUD or use perfumed products in or around the vagina. BV increases the risk of getting an STI. Use water and plain soap; do not use perfumed soaps, bubble bath, vaginal deodorants, washes or douches."
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 19 June 2026, next review due 19 June 2029. Read in full on 2026-11-18.
+
+- id: nhs-thrush-2023
+  title: Thrush in men and women
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2023
+  type: patient_information
+  url: https://www.nhs.uk/conditions/thrush-in-men-and-women/
+  doi: null
+  accessed: 2026-11-18
+  population: General public (UK)
+  key_finding: "Thrush is a common yeast infection, usually harmless but uncomfortable, and not classed as an STI. Symptoms in women: white vaginal discharge (often like cottage cheese) that does not usually smell, itching and irritation around the vulva and vagina, and soreness and stinging during sex or when peeing. See a GP if you have symptoms for the first time, are under 16 or over 60, get it more than 4 times in 12 months, treatment has not worked, you are pregnant or breastfeeding, or you have a weakened immune system. Treated with antifungal medicine; should clear up within 7 to 14 days. Thrush can develop if your skin is irritated or damaged, you're taking antibiotics, you have poorly controlled diabetes, you have a weakened immune system, you're having hormone replacement therapy (HRT) or you're pregnant. Antifungal creams can damage condoms and diaphragms."
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 28 July 2023, next review was due 28 July 2026. Read in full on 2026-11-18.
+
+- id: nhs-womb-cancer-symptoms-2024
+  title: "Womb (uterus) cancer: symptoms"
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2024
+  type: patient_information
+  url: https://www.nhs.uk/conditions/womb-cancer/symptoms/
+  doi: null
+  accessed: 2026-11-18
+  population: General public (UK)
+  key_finding: Main symptoms of womb cancer can include bleeding or spotting from the vagina after the menopause, heavy periods that are unusual for you, vaginal bleeding between periods, and a change to your vaginal discharge. See a GP if you have any symptoms. These symptoms are common and can be caused by many different conditions; having them does not definitely mean you have womb cancer, but do not wait to contact a GP, because finding cancer early can make it easier to treat.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 29 October 2024, next review due 29 October 2027. Read in full on 2026-11-18.
+
+- id: nhs-cervical-cancer-symptoms-2024
+  title: Symptoms of cervical cancer
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2024
+  type: patient_information
+  url: https://www.nhs.uk/conditions/cervical-cancer/symptoms/
+  doi: null
+  accessed: 2026-11-18
+  population: General public (UK)
+  key_finding: Symptoms of cervical cancer include vaginal bleeding that's unusual for you (including during or after sex, between periods or after the menopause), changes to your vaginal discharge, pain during sex, and pain in the lower back, pelvis or lower tummy. See a GP if you have any symptoms. These symptoms are very common and can be caused by many different conditions; having them does not definitely mean you have cervical cancer.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 4 September 2024, next review due 4 September 2027. Read in full on 2026-11-18.
+
+- id: van-gerwen-bv-postmenopausal-2023
+  title: Bacterial Vaginosis in Postmenopausal Women
+  authors:
+    - Van Gerwen OT
+    - Smith SE
+    - Muzny CA
+  publisher: Current Infectious Disease Reports
+  year: 2023
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/37601955/
+  doi: 10.1007/s11908-022-00794-1
+  accessed: 2026-11-18
+  population: Postmenopausal women (narrative review)
+  key_finding: The estrogen-deficient postmenopausal state results in an elevated vaginal pH and depletion of vaginal lactobacilli. BV prevalence has been found to range between 2% and 57% among postmenopausal women by Amsel and Nugent criteria, likely an over-estimate because these criteria were validated only in premenopausal women, so diagnosis is difficult after menopause. The authors' expert opinion is that menopausal women with characteristic vaginal symptoms and an elevated vaginal pH should first be treated for estrogen deficiency before a diagnosis of BV is considered.
+  funding_conflict: Two authors report research grants, consulting or honoraria from diagnostics and pharmaceutical companies (including Abbott Molecular, Gilead, Scynexis, Lupin, Cepheid); one reports none.
+  verified: true
+  notes: Narrative review with expert opinion, not a systematic review. PMID 37601955, PMC10438897. Abstract read via PubMed efetch on 2026-11-18.
+
+- id: mayo-hot-flashes-symptoms-2026
+  title: "Hot flashes: Symptoms and causes"
+  authors:
+    - Mayo Clinic Staff
+  publisher: Mayo Clinic
+  year: 2026
+  type: patient_information
+  url: https://www.mayoclinic.org/diseases-conditions/hot-flashes/symptoms-causes/syc-20352790
+  doi: null
+  accessed: 2026-11-18
+  population: General public (US)
+  key_finding: A hot flash is a sudden feeling of warmth in the upper body, most often the face, neck and chest, and can cause sweating. Some people might feel chilled after a hot flash because of loss of body heat. Listed hot flash symptoms include a sudden feeling of warmth spreading through the chest, neck and face, flushed and blotchy skin, fast heartbeat, sweating mostly on the upper body, feeling chilled as the hot flash lets up, and anxiety. Night sweats are hot flashes that happen at night; they may wake you from sleep.
+  funding_conflict: null
+  verified: true
+  notes: Page publish date 3 September 2026. Read via Firecrawl scrape (direct quotes) on 2026-11-18; WebFetch returned 403.
+
+- id: freedman-thermoneutral-zone-1999
+  title: Reduced thermoregulatory null zone in postmenopausal women with hot flashes
+  authors:
+    - Freedman RR
+    - Krell W
+  publisher: American Journal of Obstetrics and Gynecology
+  year: 1999
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/10411797/
+  doi: 10.1016/s0002-9378(99)70437-0
+  accessed: 2026-11-18
+  population: 12 postmenopausal women with hot flashes and 8 without (US, laboratory study)
+  key_finding: "Most menopausal hot flashes are preceded by small rises in core body temperature. The temperature zone between the threshold for sweating and the threshold for shivering was significantly smaller in women with hot flashes than in women without them (rectal temperature 0.0 vs 0.4 degrees C; mean body temperature 0.8 vs 1.5 degrees C). Women with symptoms also sweated more. Conclusion: hot flashes may be triggered by small rises in body temperature acting within a reduced thermoneutral zone."
+  funding_conflict: null
+  verified: true
+  notes: Abstract read via PubMed efetch on 2026-11-18. Small laboratory study; it measured the shivering threshold by body cooling, not chills after hot flashes.
+
+- id: melby-chilliness-japan-2007
+  title: "Chilliness: a vasomotor symptom in Japan"
+  authors:
+    - Melby MK
+  publisher: Menopause
+  year: 2007
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/17538512/
+  doi: 10.1097/gme.0b013e31804ffd81
+  accessed: 2026-11-18
+  population: Healthy Japanese women aged 45 to 55 in Kyoto and Fukushima prefectures (cross-sectional; sample size not given in the abstract)
+  key_finding: Chilliness (hiesho) was reported by 29.3% of participants, compared with 3.0% to 22.1% for hot flushes. Chilliness prevalence differed significantly between premenopausal women and the other menopausal status groups and correlated with other estrogen-influenced symptoms. The author concludes chilliness seems to be a more important vasomotor symptom than hot flushes and sweats in Japanese women.
+  funding_conflict: null
+  verified: true
+  notes: Abstract read via PubMed efetch on 2026-11-18. Cross-sectional, one country; findings may reflect Japanese symptom concepts and diet.
+
+- id: terauchi-chilliness-anxiety-2020
+  title: Chilliness in Japanese middle-aged women is associated with anxiety and low n-3 fatty acid intake
+  authors:
+    - Terauchi M
+    - Odai T
+    - Hirose A
+    - Kato K
+    - Miyasaka N
+  publisher: Climacteric
+  year: 2020
+  type: small_study
+  url: https://pubmed.ncbi.nlm.nih.gov/31512534/
+  doi: 10.1080/13697137.2019.1653841
+  accessed: 2026-11-18
+  population: 475 Japanese women aged 40 to 65 at their first visit to a menopause clinic program (cross-sectional)
+  key_finding: Severe chilliness was found in 28.4% of women. It was not related to age, menopausal status, body mass index or body fat percentage. Anxiety score was the only background characteristic independently associated with severe chilliness (adjusted OR 1.09 per point). Lower n-3 fatty acid intake was also associated with severe chilliness.
+  funding_conflict: null
+  verified: true
+  notes: Abstract read via PubMed efetch on 2026-11-18. Clinic sample, cross-sectional; cannot show cause and effect.
+
+- id: haberland-vms-experiences-qualitative-2025
+  title: Qualitative exploration of women's experiences of vasomotor symptoms to support the content validity of patient-reported outcomes
+  authors:
+    - Haberland C
+    - Barclay M
+    - Whyman S
+    - Lehane A
+    - Gater A
+    - et al.
+  publisher: Journal of Patient-Reported Outcomes
+  year: 2025
+  type: brand_funded
+  url: https://pubmed.ncbi.nlm.nih.gov/40591096/
+  doi: 10.1186/s41687-025-00914-0
+  accessed: 2026-11-18
+  population: Literature review plus interviews with 20 US women with hot flashes (10 postmenopausal, 10 on breast cancer endocrine therapy)
+  key_finding: From the literature and interviews, 33 symptom concepts were identified, with key symptoms including sweating, cold sweats/chills and tiredness/fatigue.
+  funding_conflict: Authors are employees of Bayer AG (maker of elinzanetant) or Adelphi Values (consultancy).
+  verified: true
+  notes: Abstract read via PubMed efetch on 2026-11-18. Qualitative; does not give how many women have chills.
+
+- id: medlineplus-chills
+  title: "Chills: MedlinePlus Medical Encyclopedia"
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2025
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/003091.htm
+  doi: null
+  accessed: 2026-11-18
+  population: General public (US)
+  key_finding: Chills means feeling cold after being in a cold environment, or an episode of shivering with paleness and feeling cold. Chills are caused by rapid muscle contraction and relaxation, the body's way of producing heat when it feels cold, and often predict a coming fever or a rise in core body temperature. Causes include exposure to a cold environment and any infection. Do not bundle up in blankets if you have a high temperature, and do not use fans or air conditioners; these make chills worse and may make the fever rise. Contact a provider promptly for stiff neck or confusion; chills with a bad cough, shortness of breath, abdominal pain, or burning or frequent urination; a fever that stays above 103°F (39.4°C) after 1 to 2 hours of home treatment; or a fever that does not improve after 3 days or has lasted more than 5 days.
+  funding_conflict: null
+  verified: true
+  notes: Review date 1/1/2025. Read via WebFetch and Firecrawl direct quotes on 2026-11-18.
+
+- id: cdc-sepsis-about-2026
+  title: About Sepsis
+  authors: []
+  publisher: Centers for Disease Control and Prevention (CDC)
+  year: 2026
+  type: patient_information
+  url: https://www.cdc.gov/sepsis/about/index.html
+  doi: null
+  accessed: 2026-11-18
+  population: General public (US)
+  key_finding: Sepsis is the body's extreme response to an infection and a life-threatening medical emergency. Infections that lead to sepsis most often start in the gut, lungs, skin or urinary tract. Without fast treatment it can quickly lead to tissue damage, organ failure and death. Signs include clammy or sweaty skin; confusion or disorientation; extreme pain or discomfort; fever, shivering or feeling very cold; high heart rate or weak pulse; and shortness of breath.
+  funding_conflict: null
+  verified: true
+  notes: Reviewed August 17, 2026. Read via Firecrawl scrape (direct quotes) on 2026-11-18.
+
+- id: nhs-sepsis-2026
+  title: Sepsis
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/conditions/sepsis/
+  doi: null
+  accessed: 2026-11-18
+  population: General public (UK)
+  key_finding: Common symptoms of sepsis in adults include confusion or slurred speech, uncontrollable shivering, muscle pain, difficulty breathing, blue, pale, grey or blotchy skin, lips or tongue, a high or low temperature, and not peeing all day. Call 999 or go to A&E if an adult is breathing very fast; is confused, has slurred speech or is not making sense; has blue, pale or blotchy skin; has a very high or very low temperature, feels hot or cold to the touch, or is shivery; or has a rash that does not fade when pressed.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 14 May 2026. Read via Firecrawl scrape (direct quotes) on 2026-11-18.
+
+- id: nhlbi-anemia-symptoms
+  title: "Anemia: Symptoms"
+  authors: []
+  publisher: National Heart, Lung, and Blood Institute (NIH)
+  year: 2022
+  type: patient_information
+  url: https://www.nhlbi.nih.gov/health/anemia/symptoms
+  doi: null
+  accessed: 2026-11-18
+  population: General public (US)
+  key_finding: Mild anemia may cause no symptoms. General symptoms shared by many types of anemia include weakness, paleness, tiredness, chills, shortness of breath, headache, dizziness and fainting, bleeding, and jaundice.
+  funding_conflict: null
+  verified: true
+  notes: Last updated March 24, 2022. Read via Firecrawl scrape (direct quotes) on 2026-11-18.
+
+- id: nhs-panic-disorder
+  title: Panic disorder
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2023
+  type: patient_information
+  url: https://www.nhs.uk/mental-health/conditions/panic-disorder/
+  doi: null
+  accessed: 2026-11-18
+  population: General public (UK)
+  key_finding: Panic attack symptoms include a racing heartbeat, feeling faint, sweating, nausea, chest pain, shortness of breath, trembling, hot flushes, chills, shaky limbs, a choking sensation, dizziness, numbness or pins and needles, and a feeling of dread. Most panic attacks last between 5 and 20 minutes.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 22 August 2023. Read via Firecrawl scrape (direct quotes) on 2026-11-18.
+
+- id: nhs-feeling-sick-nausea
+  title: Feeling sick (nausea)
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2023
+  type: patient_information
+  url: https://www.nhs.uk/conditions/feeling-sick-nausea/
+  doi: null
+  accessed: 2026-11-18
+  population: General public (UK)
+  key_finding: "Self-help: get plenty of fresh air; distract yourself, for example with music or a film; take regular sips of a cold drink; drink ginger or peppermint tea; eat foods containing ginger, such as ginger biscuits; eat smaller, more frequent meals. Don't: eat or cook strong-smelling food; eat hot, fried or greasy food; eat too quickly; have a large drink with meals; lie down soon after eating; wear clothes tight around the waist or tummy. Possible causes by other symptoms: diarrhoea or vomiting (norovirus, food poisoning); headache and high temperature (an infection such as flu); heartburn or bloating after eating (acid reflux); headache and sensitivity to light or sound (migraine); dizziness (labyrinthitis or vertigo). Other causes: pregnancy (morning sickness), motion sickness, anxiety, alcohol, medicines and recent surgery. See a GP if you are feeling sick and do not feel better in a few days, or often feel sick (it keeps coming back); a GP may prescribe anti-sickness medicine if needed; call 111 for advice if you cannot see a GP. Call 999 if you suddenly feel sick with chest pain that feels tight or heavy, pain that spreads to your arms, back, neck or jaw, or shortness of breath: this could be a heart attack."
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 17 November 2023. Read via WebFetch on 2026-11-18. UK patient guidance; the page does not mention menopause.
+
+- id: nhs-diarrhoea-and-vomiting
+  title: Diarrhoea and vomiting
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2023
+  type: patient_information
+  url: https://www.nhs.uk/conditions/diarrhoea-and-vomiting/
+  doi: null
+  accessed: 2026-11-18
+  population: General public (UK), adults and children
+  key_finding: Vomiting usually stops in 1 or 2 days. A sign of dehydration is dark, smelly pee or peeing less than usual. Call 111 now if you keep being sick and cannot keep fluid down, still have signs of dehydration after using oral rehydration sachets, have bloody diarrhoea or bleeding from the bottom, or have diarrhoea for more than 7 days or vomiting for more than 2 days. Call 999 or go to A&E if you vomit blood or have vomit that looks like ground coffee, have green vomit (adults), may have swallowed something poisonous, have a stiff neck and pain when looking at bright lights, have a sudden, severe headache or a sudden, severe tummy ache, have blue, grey, pale or blotchy skin, lips or tongue, have severe difficulty breathing, or are confused or not responding as usual.
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 21 December 2023. Read via WebFetch on 2026-11-18. UK patient guidance.
+
+- id: medlineplus-nausea-vomiting-adults
+  title: "Nausea and vomiting - adults: MedlinePlus Medical Encyclopedia"
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2025
+  type: patient_information
+  url: https://medlineplus.gov/ency/article/003117.htm
+  doi: null
+  accessed: 2026-11-18
+  population: General public (US), adults
+  key_finding: Common causes of nausea and vomiting include food allergies, stomach or bowel infections, food poisoning, acid reflux (GERD), certain medicines and treatments (including diabetes or obesity medicines, chemotherapy and radiation), migraines, morning sickness, motion sickness, severe pain such as from kidney stones, heavy marijuana use and slowed stomach emptying. More serious causes include appendicitis, intestinal blockage, cancer or tumors, poisoning and stomach or small-intestine ulcers. Treatment depends on the cause and may include frequent sips of clear liquids and stopping a medicine that may be causing it. Call 911 or go to an emergency room if vomiting may be from poisoning, or if the vomit contains blood or dark, coffee-colored material. Contact a provider if you have vomited for more than 24 hours, cannot keep fluids down for 12 hours or more, have a headache or stiff neck, have not urinated in 8 hours or more, have severe stomach pain, or have vomited 3 or more times in one day.
+  funding_conflict: null
+  verified: true
+  notes: Review date 7/22/2025. Read via WebFetch on 2026-11-18. Page does not mention menopause.
+
+- id: nhs-signs-of-pregnancy
+  title: Signs and symptoms of pregnancy
+  authors: []
+  publisher: NHS (nhs.uk)
+  year: 2026
+  type: patient_information
+  url: https://www.nhs.uk/pregnancy/trying-for-a-baby/signs-and-symptoms-of-pregnancy/
+  doi: null
+  accessed: 2026-11-18
+  population: General public (UK)
+  key_finding: "Symptoms and early signs of pregnancy usually start when you're around 4 to 6 weeks pregnant. Early signs include a missed period, a bleed similar to a very light period, feeling extremely tired, sore breasts, needing to pee more often, constipation, more vaginal discharge, a metallic taste, sensitivity to certain smells, food cravings or loss of interest in foods, changes in mood, and feeling or being sick: vomiting and morning sickness can happen at any time of the day or night. If you think you might be pregnant, you can find out by doing a pregnancy test; tests are sold online, in pharmacies and some supermarkets, and may be free from a GP or sexual health service."
+  funding_conflict: null
+  verified: true
+  notes: Page last reviewed 31 July 2026. Read via WebFetch on 2026-11-18.
+
+- id: fda-veozah-liver-injury-2024
+  title: FDA adds warning about rare occurrence of serious liver injury with use of Veozah (fezolinetant) for hot flashes due to menopause
+  authors: []
+  publisher: U.S. Food and Drug Administration
+  year: 2024
+  type: regulator_statement
+  url: https://www.fda.gov/drugs/drug-safety-communications/fda-adds-warning-about-rare-occurrence-serious-liver-injury-use-veozah-fezolinetant-hot-flashes-due
+  doi: null
+  accessed: 2026-11-18
+  population: People taking Veozah (fezolinetant) for menopausal hot flashes
+  key_finding: "Drug Safety Communication of 12 September 2024, updated 16 December 2024 to add a Boxed Warning. Patients should stop taking Veozah immediately and contact the prescriber if they have signs and symptoms that suggest liver problems: feeling more tired than usual, nausea, vomiting, unusual itching, light-colored stools, yellowing of the eyes or skin (jaundice), dark urine, swelling in the abdomen, or pain in the right upper abdomen."
+  funding_conflict: null
+  verified: true
+  notes: Content current as of 04/03/2026. Old URL under /drug-safety-and-availability/ redirects here. Read via WebFetch on 2026-11-18.
+
+- id: shaw-gi-symptoms-menopause-scoping-review-2025
+  title: "The volume and characteristics of research on gastrointestinal symptoms in 'natural' peri- and postmenopause: A scoping review"
+  authors:
+    - Shaw N
+    - Abbott R
+    - Pettinger C
+  publisher: Women's Health (London)
+  year: 2025
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/41143477/
+  doi: 10.1177/17455057251387470
+  accessed: 2026-11-18
+  population: 122 studies (1981 to 2024) of GI symptoms in natural peri- and postmenopause; excluded surgical or medical menopause and people on hormone therapies
+  key_finding: Scoping review (maps research, does not summarise results). Of 122 included studies, constipation was the most studied symptom (58), nausea was studied in 19 (15.6%) and vomiting in only 4 (3.3%). The authors note GI symptoms are not acknowledged as key menopausal symptoms in international and UK guidelines, possibly because they are left out of common menopause symptom scales or because high-quality evidence is limited, and that reporting of the criteria for menopausal stage and GI symptom assessment was insufficient; they identify evidence gaps.
+  funding_conflict: null
+  verified: true
+  notes: Abstract read via PubMed efetch; nausea count (Table 3) and the guideline sentence read in the PMC full text (PMC12575958) via the BioC API on 2026-11-18. Authors declared no conflicts.
+
+- id: im-gi-symptoms-midlife-women-2021
+  title: "Gastrointestinal symptoms in four major racial/ethnic groups of midlife women: race/ethnicity and menopausal status"
+  authors:
+    - Im EO
+    - Kim G
+    - Choi M
+    - Chee W
+  publisher: Menopause
+  year: 2021
+  type: other
+  url: https://pubmed.ncbi.nlm.nih.gov/34873105/
+  doi: 10.1097/GME.0000000000001898
+  accessed: 2026-11-18
+  population: 1,051 women aged 40 to 60 from 2 US internet-based studies (Hispanic, non-Hispanic White, African American and Asian); excluded hysterectomy or bilateral oophorectomy and anyone who had taken steroids or hormones in the previous 3 months
+  key_finding: "Cross-sectional secondary analysis. 199 of 1,051 women (18.9%) reported nausea/vomiting (Table 2), ranging from 12.9% (non-Hispanic Asian) to 24.4% (non-Hispanic White). Pre-menopausal women had lower total numbers and severity scores of GI symptoms than peri- and postmenopausal women; nausea by menopausal status was not reported separately. Limitations: self-reported data, a selected (mostly married, employed, highly educated) sample, and a cross-sectional design that cannot show cause."
+  funding_conflict: null
+  verified: true
+  notes: Abstract via PubMed efetch; Table 2 figures, exclusions and limitations read in the PMC full text (PMC8795485) via the BioC API on 2026-11-18. No conflicts reported.
+
+- id: cleveland-clinic-hot-flashes-nausea-2023
+  title: Can Hot Flashes Cause Nausea?
+  authors: []
+  publisher: Cleveland Clinic (Health Essentials)
+  year: 2023
+  type: patient_information
+  url: https://health.clevelandclinic.org/hot-flashes-and-nausea
+  doi: null
+  accessed: 2026-11-18
+  population: General public (US)
+  key_finding: Nausea isn't really a symptom of hot flashes, but anxiety is, and nausea can be a symptom of anxiety, so a hot flash that makes you anxious could leave you feeling sick. Feeling nauseated with a hot flash is possible but very uncommon. If it happens regularly, see a healthcare provider to make sure nothing else is going on.
+  funding_conflict: null
+  verified: true
+  notes: Published 1 May 2023; expert quoted is an ob-gyn and certified menopause practitioner (not named on our pages). Expert-opinion article, not research. Read via WebFetch on 2026-11-18.
+
+- id: medlineplus-estrogen-druginfo
+  title: "Estrogen: MedlinePlus Drug Information"
+  authors: []
+  publisher: MedlinePlus, US National Library of Medicine (NIH)
+  year: 2026
+  type: patient_information
+  url: https://medlineplus.gov/druginfo/meds/a682922.html
+  doi: null
+  accessed: 2026-11-18
+  population: People taking estrogen tablets (US)
+  key_finding: Side effects to tell your doctor about if they are severe or do not go away include breast pain or tenderness; belly pain, upset stomach, gas, vomiting; weight gain or loss; leg cramps; and dizziness. Loss of appetite, belly pain and yellowing of the skin or eyes are listed among more serious side effects. Take with or without food.
+  funding_conflict: null
+  verified: true
+  notes: Last revised 05/15/2026. Read via WebFetch on 2026-11-18. Nausea is not listed as a separate word; "upset stomach" and "vomiting" are.

@@ -32,6 +32,8 @@ export const SYMPTOM_CATALOG: CatalogGroup[] = [
     items: [
       { id: 'irregular-periods', label: 'Periods coming closer together, further apart, or skipped', url: '/perimenopause/irregular-periods/', trackerId: 'cycle_irregular' },
       { id: 'heavy-periods', label: 'Heavier periods than usual', url: '/perimenopause/heavy-periods/', trackerId: 'heavy_flow', triggerId: 'heavy_flow' },
+      { id: 'spotting', label: 'Spotting or light bleeding between periods', url: S('spotting') },
+      { id: 'cramps', label: 'Period-like cramps', url: S('cramps') },
       { id: 'bleeding-after-menopause', label: 'Any bleeding after 12 months or more without a period', url: '/postmenopause/bleeding/', triggerId: 'postmenopausal_bleeding' },
     ],
   },
@@ -41,6 +43,7 @@ export const SYMPTOM_CATALOG: CatalogGroup[] = [
     items: [
       { id: 'hot-flashes', label: 'Hot flashes', url: S('hot-flashes'), trackerId: 'hot_flashes' },
       { id: 'night-sweats', label: 'Night sweats', url: S('night-sweats'), trackerId: 'night_sweats' },
+      { id: 'cold-flashes', label: 'Chills or cold flashes', url: S('cold-flashes') },
     ],
   },
   {
@@ -84,6 +87,7 @@ export const SYMPTOM_CATALOG: CatalogGroup[] = [
       { id: 'weight-gain', label: 'Weight gain, especially around the middle', url: S('weight-gain') },
       { id: 'bloating', label: 'Bloating', url: S('bloating') },
       { id: 'digestive-changes', label: 'Changes in digestion', url: S('digestive-changes') },
+      { id: 'nausea', label: 'Nausea or feeling sick', url: S('nausea') },
       { id: 'breast-tenderness', label: 'Sore or tender breasts', url: S('breast-tenderness') },
     ],
   },
@@ -92,6 +96,7 @@ export const SYMPTOM_CATALOG: CatalogGroup[] = [
     label: 'Vaginal, bladder and sexual health',
     items: [
       { id: 'vaginal-dryness', label: 'Vaginal dryness, itching or irritation', url: S('vaginal-dryness'), trackerId: 'vaginal_dryness' },
+      { id: 'vaginal-discharge', label: 'Changes in vaginal discharge', url: S('vaginal-discharge') },
       { id: 'painful-sex', label: 'Pain during sex', url: S('painful-sex') },
       { id: 'low-libido', label: 'Lower interest in sex', url: S('low-libido') },
       { id: 'bladder-urgency', label: 'Needing to pee urgently or more often', url: S('bladder-urgency'), trackerId: 'urinary_urgency' },
